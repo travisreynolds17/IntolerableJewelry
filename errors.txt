@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/labels/cassDate1.rpy", line 861: expected statement.
+    Notify("Cassandra is a simple girl at heart.")
+                                                  ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Sat Mar 28 16:09:01 2020

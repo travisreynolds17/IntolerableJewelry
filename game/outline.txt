@@ -1,0 +1,94 @@
+To-Do List.
+
+SCRIPT first draft
+
+    1. Write endings. We have several. They are:
+        - Tania sex ending -                            Done
+        = Lichelle sex ending -                         Done
+        - Bad end: Nobody freed, Entity wins
+        - Bad end: Only Kylie freed
+        - Common end: Entity severed
+            - Cass Freed
+            - Robin Freed
+            - Lichelle Freed
+            - Tania Freed
+            - Only Entity severed. Bad end.
+            Please note there's no sex in this game, only implied. Freed endings give the player a chance to undo something horrible that happened to each character. Robin's party thing, Cass's suicide attempt, (something lichelle).
+            - Super secret end lets you undo Tania's murder. Turns out Kylie did it herself between scene transitions.
+
+    2. Comb through script, insert severInput checks in appropriate places. There will be nine attempts.                Done
+
+    3. Insert hints regarding stringSever() function. 
+
+    4. Insert any hidden messages or easter eggs.
+
+    5. We want a complete story in the first draft.
+
+    6. Add a narrator. Someone besides Kylie's inner monologue. Mystery is who it might be.
+
+SCRIPT second draft
+
+    1. Clean up. Identify areas where more dialogue is needed. Note that Doki Doki probably has five times the dialogue you have so far.
+
+    2. Add scenes as necessary. To this point, do not alter the story in major ways.
+
+    3. Create flowchart mapping how labels connect to one another.
+
+    4. Finalize story and copy edit.
+
+    5. Once 4 is completed, determine show/hide/transform style for characters. Implement compelx transorms rather than just show and hide. It needs to feel organic.
+
+
+ATMOSPHERE
+
+    1. Compose / acquire appropriate music tracks. We will need:
+        - Intro / splash music
+        - Common "Everything's going fine" music. Consider the          reggae loop from DDLC.
+        - Character music. A normal and a dark common version for each.
+        - sad music.
+        - dread music.
+        - things are looking up music
+        - add to this list as stuff comes to you.
+
+    2. Acquire sound effects. This will be a pain in the ass. Go royalty free or even look into purchasing a CHEAP sound library.
+
+    3. Keep a runnin list of what each soundfile is called and who to credit if applicable. SAME goes for if we grab some royalty free music tracks to lighten the load.
+
+    4. Choose color scheme, adjust GUI.
+
+ART
+
+    1. Character art. No choice but to do this yourself, somehow. Base models, facial expressions, a few poses.
+    2. CG screens: Big splash screens for major events and/or endings.
+    3. Intro screen art.
+    4. Backgrounds. You might get away with tracing or photomanipulating the pexels backgrounds, at least at first. Your writing is really the important part, right?
+    5. Any displayables that will layer onto the game. I.E. if each character has a special item or something. 
+
+Post-op
+
+    1. Design the credits. 
+
+
+Thoughts:
+    I wish I had help. A partner in this would be awesome, but I can't trust anybody outside my limited friend circle, and my limited circle are busy and/or have no game-design chops.
+
+
+
+
+useful blocks:
+
+#---------------------------------------------------------
+
+    call severInput
+
+#---------------------------------------------------------
+
+beginning of each 2nd date. near end of common3 afte sophie goes to bathroom. multiple in common4 as entity speaks. one right after sophie shocked.
+
+
+
+##CURRENT TODO CURRENT TODO##
+
+Figure out how common end works. There's nothing climactic about this. We need to have some kind of character choice, some stake. Something that delivers the end. 
+
+The entity's too nebulous. It needs to be physical, somehow.

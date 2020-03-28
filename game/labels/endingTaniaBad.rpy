@@ -1,0 +1,43 @@
+label endingTaniaBad:
+    #in which Tania drags Sophie to bedside and fills her with needles to try to get kylie back and David can be seen on video screen being dragged down the hall and tossed in an incinerator or something
+    t "Sophie."
+    s "Yeah?"
+    t "I have to tell you something important."
+    t "Would you come over to me? The real me, not, not Mortimer."
+    "I can't help but oblige. I can't get too close to her because of all the wires, but within arm's reach anyway."
+    "Her eyes open again, gazing blandly."
+    t "I'm sorry, Sophie."
+    s "For what?"
+    t "I love Kylie. I love her courage, how moved she was when she saw my body nailed to the dressing room door."
+    "A tear glitters on her lashes."
+    #This next part is meant to be fragmented. Change it if testing shows it to be too weird
+    "I'm not sure when the little robot rolled up to my feet, but I suppose"
+    "Even now, as my legs give way beneath my body"
+    "That I can guess when the needle pierced my skin"
+    "and as I crumple to the ground"
+    "I feel a strange"
+    "sense"
+    "of understanding"
+    "and even forgiveness"
+    t "I'm sorry Sophie, I truly am."
+    "Will I be aware?"
+    "They're already slicing through my clothes, a dozen robotic orbs"
+    "floating."
+    "Threading me with needles and wires. I "
+    "feel nothing."
+    t "I want my Kylie back...! I WANT HER BACK!"
+    "Okay. It's okay Tania. You can have her."
+    t "Even if I have to dig her out of your disgusting meat body!"
+    "That's alright."
+    "It is pretty gross isn't it"
+    "Even if that's how it has to be"
+    "I know now, lying on a cot next to Tania"
+    "I'm not alone"
+    "even in death"
+    pause 0.2
+    "oh"
+    "alone. What about..."
+    t "Don't worry."
+
+    python:
+        badEndings.push("David")
