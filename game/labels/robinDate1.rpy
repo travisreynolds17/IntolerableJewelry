@@ -14,16 +14,44 @@ label robinDate1:
 
     ki "The night passes in temporal nonexistence."
 
+    $chat.addmessage(fizz, "Edgy.")
+
     ki "I thought it would sound cool when I thought of the phrase, but I guess it's douchier than all that."
+
+    $chat.addmessage(bar, "I kind of like that she's a dork.")
 
     s "Whoops. I think the game devs left a comment in."
 
     ki "The morning and afternoon faded together. I had a few meetings with staff of the show and we shot some B roll of me going about my morning ritual."
 
+    $chat.addmessage(shub, "was wonderin how the episodes of this show seem so short. hard to fill 45 minutes without B roll.")
+    
     ki "I guess it'll be dubbed over with the interview I did about Cassandra. I don't have time to think about last night now, though, because in a very short time there's an Eastern Bloc Goth Dream Girl in my future."
+
+    $chat.addmessage(fizz, "B roll?")
+
+    $chat.addmessage(crab, "its like background footage people talk over.")
 
     ki "Speaking of Robin... what should I wear on our date? I wish I had a better idea of where we were going."
 
+    $chat.addmessage(crab, "Like you know how a news story on TV has an interview, then like a shot of traffic and people walking from the neck down happens.")
+
+    s "Hey guys. Wow, crab, you know your stuff! So what should we wear this time?"
+
+    s "I think Robin's a dark-minded lady. A little dangerous."
+
+    s "She's got that sexy-dangerous thing going."
+
+    python:
+        newComments = [
+            [bar, "I'd hit it, if I were pixels."],
+            [elsa, "It could be a front, though. A black dress might also feel too matchy-matchy."],
+            [shub, "go nekkid"],
+            [crab, "pantsuit doesn't work for a bad bitch like Robin"],
+            [cake, "fluck a pantsuit in general"]
+        ]
+        chat.bulkMessage(newComments, 0.33)
+        
     menu:
 
         ki "So, I think Robin might like ..."
