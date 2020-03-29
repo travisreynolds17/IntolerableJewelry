@@ -38,7 +38,9 @@ label robinDate1:
 
     s "Hey guys. Wow, crab, you know your stuff! So what should we wear this time?"
 
-    s "I think Robin's a dark-minded lady. A little dangerous."
+    $chat.addmessage(liv, "That dress. :) Yum yum.")
+
+    s "I think Robin's a dark-minded lady. A little scary."
 
     s "She's got that sexy-dangerous thing going."
 
@@ -57,15 +59,25 @@ label robinDate1:
         ki "So, I think Robin might like ..."
 
         "Little Black Dress":
-            ki "It's fairly obvious Robin's color is black. Still, I wonder if she'd rather I contrast? Oh well."
+            $chat.addmessage(elsa, "I hope we don't come across too desparate.")
+            ki "It's fairly obvious Robin's color preference is black. Still, I wonder if she'd rather I contrast? Oh well."
+            $outfitCurrent = "Dress"
+            $outfitBlackDress += 1
 
-        "Jeans and Tank":
-            ki "Robin is super refined. Maybe I should try something to complement rather than copy."
+        "Jeans and Tee":
+            ki "Robin is super refined. Let's try a yin and yang thing."
+            s "I can get behind that."
+            $outfitCurrent = "Jeans"
+            $outfitJeans += 1
 
-        "Floral and Cap":
-            ki "Opposites attract, right?"
+        "Pantsuit":
+            ki "Robin might respect a power move, right? Perhaps?"
+            $outfitCurrent = "Pantsuit"
+            $outfitPantsuit += 1
 
     #endchoice
+
+    $chat.addmessage(bar, "Solid choice.")
 
     ki "Okay, nerves. Pack your bags and let's go."
     
@@ -75,21 +87,33 @@ label robinDate1:
 
     t "Hello again, Kylie. Ooh, you look cute!"
 
+    $chat.addmessage(elsa, "Tania's always got our back, it looks like")
+
     k "I hope so."
 
     show t disap
 
     t "You sound discouraged?"
 
+    $chat.addmessage(shub, "it's gonna come out that we can date Tania, rigt?")
+
     k "Not really. Last night was just pretty heavy."
+
+    $chat.addmessage(cake, "Shub, you gettin into this bro")
 
     show t speak
 
     t "It'll be easier for you tonight. Cassandra has a lot going for her but all that typing and screen reading can be draining."
 
+    $chat.addmessage(elsa, "Sophie can prob relate to that dealing with us. Reading, playing AND speaking.")
+
     k "You think it'll be easier? Because if I'm honest, Robin kind of scares me."
 
-    t "She's all edges, isn't she? Don't get wrapped up in her aura though. Play along with her spooky chick thing a little bit and she'll open up to you."
+    $chat.addmessage(bar, "She's a multi-tasking muthaflucka, muthaflucka.")
+
+    t "She's all edges, isn't she? Don't get wrapped up in her aura. Play along with her spooky chick thing a little bit and she'll open up to you."
+
+    $chat.addmessage(liv, "You're such a poet, TwixtBar!")
 
     ki "I wonder what that entails."
 
@@ -99,19 +123,19 @@ label robinDate1:
 
     t "Oh, you're perfectly safe. Don't you worry about a thing!"
 
+    $chat.addmessage(crab, "TwixtBar, you're next it seems.")
+
     s "Tania being all suspicious."
 
+    $chat.addmessage(bar, "Yeah no")
+
     k "Where do you think Robin's going to take me? I feel so damn unprepared."
-
-    #let's talk about Robin's date. I just don't see her being all that interested in all this. Why is she here?
-
-    #where is her date? Maybe the playhouse? What is her character? What if we went with hear, speak, see no evil thing? Nah. lame. 
-
-    # she wanted to act, but she freezes on stage. So she went into business and looks from the outside in.
 
     show t speak
 
     t "I mean, I know where she's taking you because we need to know in advance to get permission to film."
+
+    $chat.addmessage(liv, "... you all think poorly of me.")
 
     k "But you won't tell me."
 
@@ -119,15 +143,25 @@ label robinDate1:
 
     t "Nope! Sorry, we need your reaction to be authentic. Aren't you excited about it, though?"
 
+    $chat.addmessage(elsa, "You all should stop being mean to Liv.")
+
     t "I mean, you've seen her. She's --"
 
     k "-- otherworldly."
+
+    $chat.addmessage(shub, "We're just being assholes, ElsaLater, no harm meant.")
 
     ki "Tania pauses a little at that, as if considering whether to agree."
 
     show t listen
 
     t "That's a good way to put it. I know she's intimidating but I think mostly it's just because she's so tall."
+
+    $chat.addmessage(bar, "I'm married, first off, and second off, I never accept private chat requests. Sorry Liv.")
+
+    $chat.addmessage(liv, "I forgive you.")
+
+
 
     k "Could be. Should I bring something to stand on for our date?"
 
@@ -139,21 +173,49 @@ label robinDate1:
 
     ki "I'm actually blushing. Well played, Tania."
 
+    $chat.addmessage(crab, "drama hours in this chat")
+
     k "I don't know yet. Maybe."
 
     t "I'm rooting for ya!"
 
     scene bg black with fade
 
-    
+    $chat.addmessage(cake, "Hey Liv.")
+    $chat.addmessage(liv, "Yes poundCake?")
 
     ki "Like before, the car ride is uneventful. Tania sits in the back with me, smiling my way every so often but mostly looks in her phone."
 
     ki "I find myself taking a little time to consider her. She's the master of ceremonies for this strange, time-crunched dating show. She's attractive, but apparently not at all interested in participating."
 
+    $chat.addmessage(cake, "is your name actually Liv? Or like, Olivia. Or something else.")
+
     ki "I wonder if that's a contractual thing or if she's just off limits somewhow?"
 
+    $chat.addmessage(liv, "My name is Oblivion.")
+
     ki "Either way, I spend the rest of the ride looking out the window and wondering what the hell I'm going to have to say to Robin."
+
+    python:
+        newComments = [
+            [bar, "Like hell."],
+            [elsa, "Your handle?"],
+            [shub, "edgelord?"],
+            [fizz, "Really?"],
+            [liv, "Yes. But I like Liv."]
+        
+        ]
+        chat.bulkMessage(newComments, 0.7)
+    
+    s "Wait, Liv, are you for real? Your real legal name is Oblivion."
+
+    $chat.addmessage(liv, "Yes. Oblivion Leibniz.")
+
+    s "That's crazy."
+
+    $chat.addmessage(fizz, "I think it's a great name.")
+
+    s "Let's not dwell too much, though. Let's move on!"
 
     scene bg playhouse far with fade
 
@@ -161,15 +223,23 @@ label robinDate1:
 
     show t speak with dissolve
 
-    t "Yup. This here is Ganymead Performaing Arts Center."
+    t "Yup. This here is Ganymead Performing Arts Center."
 
     k "Why is 'Ganymede' spelled wrong?"
 
+    $chat.addmessage(bar, "They spelled Ganyme-- yes, that.")
+
     t "There's a bar at the back of the theater for after parties. Mead, you know."
+
+    $chat.addmessage(elsa, "I'm on the fence. Is that cute or cringe?")
 
     k "Oh."
 
     ki "I still don't get it."
+
+    $chat.addmessage(crab, "It's stupid.")
+    $chat.addmessage(shub, "it great")
+    $chat.addmessage(cake, "dunno")
 
     s "Portmanteaus are cute, though!"
 
@@ -183,11 +253,20 @@ label robinDate1:
 
     t "Like a bat."
 
+    $chat.addmessage(liv, "No spoilers, but poor Robin doesn't mean anything by being so spooky :(")
+
     k "Like a bat, yes. Gotcha."
+
+    $chat.addmessage(elsa, "Liv, you've finished this game before right?")
+
+
+
 
     show t happy
 
     t "You really are a ball of nerves. Breathe, girl. Remember, the worst thing that can happen is you still get paid at the end."
+
+    $chat.addmessage(liv, "I know how it ends ;)")
 
     k "I guess I--"
 
@@ -196,9 +275,14 @@ label robinDate1:
 
     pause 0.5
 
+    $chat.addmessage(fizz, "Jesus! I turn my head for one second get flippin' jumpscared.")
+    $chat.addmessage(shub, "lol")
+
     k "What the fu--"
 
     t "Lights, yes, the lights went out! We're a TV show, remember, uh, Kylie."
+
+    $chat.addmessage(bar, "dancin in the dark")
 
     k "Is this supposed to be happening?"
 
@@ -206,19 +290,24 @@ label robinDate1:
 
     k "Tania?"
 
-    pause 1.5
+    pause 1
+    $chat.addmessage(elsa, "Spooky. Liv, hold me.")
 
     ki "I knew it. I knew this was a setup. I knew --"
+    $chat.addmessage(liv, "Yes please :)")
+
+    $chat.addmessage(beav, "HELL YEAH")
 
     play sound "sounds/Lights Out.mp3" 
     scene bg playhouse near
     
-
     r "You seem unsettled draga mea."
 
     show r with dissolve
 
     ki "Her voice pours through the dark as it recedes, musical and so, so close."
+
+    $chat.addmessage(crab, "This some rasslin' B.S. right here")
 
     k "Jesus Christ, Robin! What in the world made you think this was a good idea for a date?"
 
@@ -226,21 +315,35 @@ label robinDate1:
 
     r "Is your blood not pumping?"
 
+    $chat.addmessage(cake, "last tiem I scared the hell out of a date it did not end in cuffing.")
     pause 0.5
 
     ki "It is. My face is flushed, I feel hot. I'm not scared. I'm not because I could smell her perfume before the lights came up."
 
+    $chat.addmessage(fizz, "Or cuffs in general, right?")
+
     ki "And it's comforting. I don't know what it is, but the scent puts me at ease."
 
-    s "Bet it smells like chloroform."
+    $chat.addmessage(elsa, "Sophie I need to brb")
+
+    s "Bet it smells like chloroform. Oh, Elsa, you're fine. We're playing at our own pace here."
+    
+    $chat.addmessage(shub, "private chat, eh?")
+    $chat.addmessage(elsa, "Shut up, Shub, I'll bring back Bong if I find him.")
 
     k "I... you have my heart racing, for sure."
+
+    $chat.addmessage(cake, "take pics")
 
     show r shy
 
     r "I apologize papillon. Stagecraft is my life, and so I thought I might show you just a bit."
 
+    
+
     ki "Her voice thrills me. It's at once dangerous and comfortable, and I can't place it for the life of me."
+
+    $chat.addmessage(beav, "Y'know, Egg's been awful quiet too.")
 
     k "What does draga mea mean?"
 
@@ -248,25 +351,39 @@ label robinDate1:
 
     r "It means I am fond of you, Kylie."
 
+    $chat.addmessage(fizz, "Hang on.")
+
     k "We just met."
 
     r "Are you sure?"
+
+    $chat.addmessage(crab, "hangin low bruv")
 
     k "Uh, yes?"
 
     r "Mm. Perhaps I'm mistaken my dear, but I feel as though we've been acquainted for quite some time."
 
+    $chat.addmessage(cake, "lol")
+
     ki "Wha?"
 
     s "You said it, Kylie."
+
+    $chat.addmessage(elsa, "she really is gorgeous wow")
 
     show r happy
 
     r "Come, come. We should have our dinner, don't you think?"
 
+    $chat.addmessage(shub, "What kinda chat is she sending?")
+
     k "Oh, uh, sure. Where are we going?"
 
+    $chat.addmessage(elsa, "her eyes are haunting and she's just wow")
+
     r "Right here."
+
+    $chat.addmessage(beav, "You paying for that chat by the minute?")
 
     ki "That's it. She's going to cook me."
 
@@ -274,17 +391,32 @@ label robinDate1:
 
     ki "At least that's what I think. Robin turns and beckons to me, carelessly, as if she's only here in my imagination."
 
+    $chat.addmessage(fizz, "Yeah I just read back in the chat a ways and Egg really hasn't said a thing for a while.")
+
     ki "Conscious of the camera crew wavering around us, I follow her down the auditorium walkway and to the stage stairs, noticing the smoothness of her steps, the way her hair seems to sway in slow motion."
+
+    $chat.addmessage(sophie, "Chat currently paused. Feel free to hang around, it's temporary!")
+    pause
 
     ki "She really is otherworldly."
 
     s "I feel like the game wants me to pick Robin. What do you think, chat?"
 
-    #chats
+    s "Wow, what did I miss? Elsa and Liv vanished for a private chat?"
+
+    s "I feel like my stream became a meet-cute parlor. Ha!"
+
+    pause 1.0
+
+    s "Nothing? Oh. Oh! Sorry, I must've paused the chat by accident. Sorry!"
+
+    $chat.addmessage(beav, "That's what I think, anway.")
 
     show r speak with dissolve
 
     r "I hope you don't mind, I turned down Tania's offer to pay for our meal."
+
+    $chat.addmessage(fizz, "That's probably what's happening.")
 
     ki "At center stage there's a table set, ringed with gentle candlelight."
 

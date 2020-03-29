@@ -64,6 +64,7 @@ label cassDate1:
     k "Hi, um, Cassandra! Um, how, um... okay."
 
     $chat.addmessage(bar, "so eloqent")
+    pause 0.1
     $chat.addmessage(bar, "*eloquent")
 
     ki "She's smiling. I didn't see that yesterday. Meanwhile, she produces a cellphone from her pocket and shows the screen to me; there's a note app with several entries. Looks like she came prepared."
@@ -85,6 +86,37 @@ label cassDate1:
     $chat.addmessage(bar, "ill have a manhattan")
 
     ki "There's a difference in her prepared text and what she types on the fly. It must be exhausting to type out everything she has to say."
+
+    pause 0.7
+
+    c "< By the way... >"
+
+    if outfitCurrent = "Dress":
+        c "< You're braver than me to come out in a dress so revealing. >"
+        s "Oh, crap."
+        k "... oh."
+        ki "Cassandra's eyes widen a little bit. She waves a hand, frantically."
+        c "< No it's cute. I just mean you must be confident. >"
+        ki "... well, I WAS confident anyway."
+        s "We screwed up, guys. Maybe?"
+
+    if outfitCurrent = "Jeans":
+        c "< A teddy bear shirt, eh? >"
+        s "Dangit. I think we might've messed up."
+        k "Yeah... they  only gave me a few options."
+        c "< I love it. >"
+        k "What?"
+        s "What?"
+        c "< What can I say? I'm a rock star, but I like cute things. That shirt is cute and you're cute in it.>"
+        pause 0.5
+        k "... thank you!"
+
+    if outfitCurrent = "Pantsuit":
+        c "< Nice suit. >"
+        s "Yeah, in hindsight, seems like a bad choice for a rock star."
+        k "You don't like it."
+        c "< I just feel under dressed compared to you. >"
+        ki "... should've seen that one coming."
 
     menu:
 
@@ -711,7 +743,7 @@ label cassDate1:
     ki "The coarse, leathery trail snakes unevenly around her neck, roughly to the base of her skull. There are larger patches here and there, almost like... like, I don't know what."
 
     $chat.addmessage(crab, "let's not talk about that, like if my ass is being the mature one in the room you know it's bad")
-    
+
     k "What..."
 
     $chat.addmessage(fizz, "Ignore this, Sophie")
@@ -877,7 +909,6 @@ label cassDate1:
 
             ki "Her smile is all I need."
 
-
     ki "The night was not what I thought it would be."
 
     $chat.addmessage(beav, "Seems like that ended quickly.")
@@ -912,7 +943,6 @@ label cassDate1:
 
     # collect chat history in appropriate variable.
     $getHistory(2)
-
 
     scene bg black with fade
 

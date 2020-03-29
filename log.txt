@@ -1,155 +1,3128 @@
-Sat Mar 28 20:45:17 2020
-Windows-7-6.1.7601-SP1
+Sun Mar 29 00:52:39 2020
+Windows-8-6.2.9200
 Ren'Py 7.3.5.606
  
 
-Bootstrap to the start of init.init took 0.16s
-Early init took 0.01s
-Loader init took 0.11s
-Loading error handling took 0.05s
-Loading script took 0.98s
-Loading save slot metadata. took 0.10s
-Loading persistent took 0.04s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.25s
-Loading analysis data took 0.17s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Travis\\AppData\\Roaming/RenPy/backups\\IntolerableJewelry':
-Dump and make backups. took 0.48s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 1.000000
-Creating interface object took 0.10s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.03s
-Save screen analysis took 0.16s
-Prepare screens took 0.16s
-Save pyanalysis. took 0.46s
-Save bytecode. took 0.15s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.07s
-Couldn't import angle renderer:
-Traceback (most recent call last):
-  File "C:\Users\Travis\Documents\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 1939, in make_draw
-    __import__(mod)
-ImportError: DLL load failed: The specified module could not be found.
-Unknown renderer: angle
+Bootstrap to the start of init.init took 0.05s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.40s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.01s
 
-primary display bounds: (0, 0, 1600, 900)
+File "game/labels/cassDate1.rpy", line 103: reached end of line when expecting ':'.
+    if outfitCurrent = "Jeans"
+                              ^
+
+File "game/labels/cassDate1.rpy", line 105: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    s "Dangit. I think we might've messed up.
+        k "Yeah... they  only gave me a few options."
+            ^
+        c "< I love it. >"
+        k "What?"
+        s "What?"
+        c "< What can I say? I'm a rock star, but I like cute things. That shirt is cute and you're cute in it.>"
+        pause 0.5
+        k "... thank you!"
+    
+        if outfitCurrent = "Pantsuit"
+        c "< Nice suit. >"
+        s "Yeah, in hindsight, seems like a bad choice for a rock star."
+        k "You don't like it."
+        c "< I just feel under dressed compared to you. >"
+        ki "... should've seen that one coming."
+    
+        menu:
+    
+            s "Whaddaya say, chat? Like if it were me, I'd want to be sober for sure, but..."
+    
+            "Have a drink":
+                k "I'll have a --"
+    
+                ki "You know, I shouldn't be drinking. Not now. Not when there are two other people to meet."
+    
+                k "I'd just like some cranberry juice if that's okay."
+    
+                $chat.addmessage(shub, "Pssh")
+                $chat.addmessage(cake, "weakesauce")
+    
+                s "Oh, come on! If you're gonna give me the choice, why shouldn't my choice matter?"
+    
+                $chat.addmessage(shub, "maybe it's like a life reclection")
+    
+                s "I mean... really!"
+    
+            "Just juice":
+                k "I wouldn't mind some cranberry juice."
+    
+                c "..."
+    
+                $chat.addmessage(egg, "oof, DISAPPOINTED")
+    
+                ki "Her smile exists in a way that barely makes sense to me. I wonder if I let her down just now."
+    
+        # end choice
+    
+        ki "There's a tablet mounted to the table, and Cassandra swipes at it a few times to place our drink orders. I don't see any food on the menu, so I suppose my earlier observation was accurate."
+    
+        $chat.addmessage(fizz, "Sophie, what's your favorite drink?")
+    
+        ki "The camera crew keeps its distance, far enough that I could probably forget about them after a few days of this."
+    
+        $chat.addmessage(elsa, "Yeah, Sophie! I like cosmos myself")
+        $chat.addmessage(shub, "sex on the beach, not a meme, for real")
+    
+        ki "Problem is, this is day one and I feel like a drama student who can't quite get her lines out."
+    
+        s "I'd be nervous if it were me. Cassandra's a star, after all."
+    
+        s "Oh, um, guys I would say my favorite drink is a negroni. Gin and vermouth, it's mature I guess."
+    
+        c "< It's a strange situation we're in. I want to tell you up front that I am serious about this. >"
+    
+        $chat.addmessage(elsa, "mmm classy")
+    
+        ki "I believe her, and still, I'm not sure how to interpret the message."
+    
+        k "I guess this is the part where we tell each other about, uh, each other?"
+    
+        $chat.addmessage(egg, " This is where I would fumble lol")
+    
+        ki "God, I'm an idiot."
+    
+        s "God, I'm adorable."
+    
+        $chat.addmessage(fizz, "You're both right")
+    
+        c "< It would have been easier if we were both drunk already. >"
+    
+        k "Maybe."
+    
+        pause 1.0
+    
+        k "Okay. So, uh, Cassandra. How'd you end up on the show?"
+    
+        $chat.addmessage(cake, "she's in the script lol")
+    
+        ki "Nicely done, self, a fully formed question!"
+    
+        $chat.addmessage(crab, "lol")
+    
+        c "< I am looking for inspiration. I guess I lost my voice somewhere along the way. >"
+    
+        ki "Is that... wait, is she talking about her --"
+    
+        $chat.addmessage(egg, "Metaphor")
+    
+        ki "Her smile broadens. It's going to be hard to tell when she's joking, isn't it?"
+    
+        s "My question is, how does the TV show know what she's saying?"
+    
+        $chat.addmessage(bar, "RIGHT?")
+    
+        ki "I chuckle, but I don't know if it's appropriate."
+    
+        c "< It was a joke. >"
+    
+        k "I, uh, I knew that!"
+    
+        $chat.addmessage(elsa, "Kylie's a ditz, isn't she")
+    
+        c "< My songs just aren't the same anymore, Kylie. I thought going on this show and meeting someone new in this weird pressure cooker of an environment might draw something out of me.> "
+    
+        ki "I suppose this is as good a time as ever to tell her that I..."
+    
+        $chat.addmessage(egg, "Don't like girls")
+    
+        k "I love your new stuff though."
+    
+        $chat.addmessage(fizz, "Huh. We've just been assuming Kylie likes women, though. What if she's faking?")
+    
+        ki "Her expression changes, then, as she accepts this new piece of information. I'm not sure if she hoped I'd be a fan, or hoped for the opposite."
+    
+        c "< So you know my work? >"
+    
+        k "I love your work. Intolerable Jewelry got me through the worst break-up of my life!"
+    
+        python:
+            newComments = [
+                [crab, "name drop"],
+                [fizz, "Had to say the title at some point"],
+                [elsa, "We did it guys!"],
+                [shub, "ROLL CREDITS"],
+                [cake, "that title is dumb"],
+                [liv, "I love the album tho"],
+                [bar, "liv you way too into this"],
+                [beav, "roll cred-- shit"]
+    
+            ]
+        $chat.bulkMessage(newComments, 0)
+    
+        s "So wait, if I'm a super fan doesn't that mean I should choose Cassandra? That doesn't seem fair to the others."
+    
+        $chat.addmessage(egg, "You would think")
+    
+        ki "Her smile falters a little bit. She's typing feverishly, and I wonder whether I've found a way to ruin everything already."
+    
+        $chat.addmessage(elsa, "God, maybe she really needed to meet someone who didn't know her.")
+    
+        c "< Writing it did the same for me. >"
+    
+        show c happy
+    
+        c "<I'm really happy to know you're a fan. I'm also really happy you're not asking for an autograph.>"
+    
+        $chat.addmessage(elsa, "There you go")
+    
+        $chat.addmessage(egg, "Yeah you right")
+    
+        ki "The thought had crossed my mind."
+    
+        k "I don't want to be a bothersome fangirl. I mean, I am, but not like, you know? Like that."
+    
+        $chat.addmessage(fizz, "I am a fan of yours, Sophie")
+    
+        c "< You're handling it well. >"
+    
+        $chat.addmessage(cake, "OBVIOUSLY")
+    
+        k "On the outside. Inside, I'm screaming like a teenager at one of your shows."
+    
+        show c flirty
+    
+        ki "I don't want to put her on guard, and it seems to be working. Her finger traces the edge of her phone, lightly, meaningfully."
+    
+        ki "The drinks arrive, and for a moment the interruption of a server derails our conversation. Cassandra downs a shot of tequila and makes a face, leaving two more shots on the table."
+    
+        $chat.addmessage(shub, "Cass BEASt yo")
+    
+        ki "I find myself wringing my hands lightly together. This is so much harder than it looked on TV. Magic of editing, I guess."
+    
+        pause 0.5
+        show c listen
+        pause 1.0
+    
+        c "< I didn't think it would be this hard.> "
+    
+        $chat.addmessage(egg, "not a word, Crablegs")
+    
+        k "I was thinking the same thing."
+    
+        $chat.addmessage(crab, "aww")
+    
+        c "< So... I have a question. >"
+    
+        $chat.addmessage(fizz, "lol")
+    
+        c "< I know you like my work. And I guess you wouldn't be on the show otherwise, but... you like girls, right? >"
+    
+        ki "The question strikes me as fully appropriate and adorably obvious."
+    
+        $chat.addmessage(shub, "Actually a resonable flucking question.")
+    
+        k "I..."
+    
+        ki "I guess someone should have asked this question already. It dawns on me, just now, that nobody ever asked me flat out if I... huh."
+    
+        $chat.addmessage(crab, "I like girls, Elsa")
+    
+        c "< Well, I do. >"
+    
+        $chat.addmessage(elsa, "Sucks for them.")
+    
+        ki "Her smile was bashful from the moment it poured across her lips. Now, it's downright vulnerable."
+    
+        k "I do, too."
+    
+        $chat.addmessage(cake, "lol roasted crablegs")
+    
+        c "< I always thought this show was fake. Really, I did. How's a person supposed to fall in love in two dates? >"
+    
+        k "I don't know."
+    
+        $chat.addmessage(beav, "Falling in love in two dates is easy. Just date me twice.")
+    
+        ki "It's easy for me. I know who she is, I've idolized her, even. To her, though, I'm just another face."
+    
+        $chat.addmessage(beav, "I'm turnin women into waterslideds")
+    
+        $chat.addmessage(liv, "Yes, you do! You're so charming, AngeredBeaver69.")
+    
+        ki "Cassandra slams another shot, easily, in a practiced way."
+    
+        $chat.addmessage(shub, "dafuq")
+    
+        c "< I have an idea, though. >"
+    
+        $chat.addmessage(egg, "boobs")
+    
+        k "Oh?"
+    
+        $chat.addmessage(bar, "Is this where we R as a society")
+    
+        c "< I rented a little studio, not too far from here. Would you like to be on my next album? >"
+    
+        s "Oh, wow! Chat, we're gonna be rock stars! Also, you guys raise some valid points. It's definitely a good idea to find out if Kylie likes girls before asking her to date three or four of them."
+    
+        k "Wait what."
+    
+        c "..."
+    
+        $chat.addmessage(cake, "Kan we even sing?")
+    
+        k "Really?"
+    
+        $chat.addmessage(egg, "I can sing")
+    
+        ki "She nods, her smile returning."
+    
+        $chat.addmessage(elsa, "Really, egg? Baritone?")
+    
+        k "Oh my god, yes!"
+    
+        k "Oh, I, but I can't play anything."
+    
+        $chat.addmessage(cake, "falsetto lol")
+    
+        $chat.addmessage(egg, "yis baritone")
+    
+        c "< That's no problem. I can teach you. >"
+    
+        k "I'm trying my best not to go full fangirl right now, you know that, right?"
+    
+        $chat.addmessage(cake, "OBVIOUSLY")
+    
+        c "< I appreciate it, too. >"
+    
+        c "< I'm hoping I can get you to like me for more than my discography.>"
+    
+        $chat.addmessage(bar, "what's so obvious at that")
+    
+        k "Oh trust me, you, and, uh... I mean... sorry, I'm a little tongue tied."
+    
+        c "< I can help with that. >"
+    
+        $chat.addmessage(cake, "
+DPI scale factor: 1.000000
+Interface start took 0.09s
+
+primary display bounds: (0, 0, 1360, 768)
 swap interval: 1 frames
 Windowed mode.
 Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
-Vendor: 'Intel'
-Renderer: 'Intel(R) HD Graphics'
-Version: '2.1.0 - Build 8.15.10.2189'
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 760/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 432.00'
 Display Info: None
+Fixed-function is blacklisted.
 Extensions:
     
-    GL_3DFX_texture_compression_FXT1
+    GL_AMD_multi_draw_indirect
+    GL_AMD_seamless_cubemap_per_texture
+    GL_ARB_ES2_compatibility
+    GL_ARB_ES3_1_compatibility
+    GL_ARB_ES3_2_compatibility
+    GL_ARB_ES3_compatibility
+    GL_ARB_arrays_of_arrays
+    GL_ARB_base_instance
+    GL_ARB_bindless_texture
+    GL_ARB_blend_func_extended
+    GL_ARB_buffer_storage
+    GL_ARB_clear_buffer_object
+    GL_ARB_clear_texture
+    GL_ARB_clip_control
     GL_ARB_color_buffer_float
+    GL_ARB_compatibility
+    GL_ARB_compressed_texture_pixel_storage
+    GL_ARB_compute_shader
+    GL_ARB_compute_variable_group_size
+    GL_ARB_conditional_render_inverted
+    GL_ARB_conservative_depth
+    GL_ARB_copy_buffer
+    GL_ARB_copy_image
+    GL_ARB_cull_distance
+    GL_ARB_debug_output
     GL_ARB_depth_buffer_float
+    GL_ARB_depth_clamp
     GL_ARB_depth_texture
+    GL_ARB_derivative_control
+    GL_ARB_direct_state_access
     GL_ARB_draw_buffers
+    GL_ARB_draw_buffers_blend
+    GL_ARB_draw_elements_base_vertex
+    GL_ARB_draw_indirect
     GL_ARB_draw_instanced
+    GL_ARB_enhanced_layouts
+    GL_ARB_explicit_attrib_location
+    GL_ARB_explicit_uniform_location
+    GL_ARB_fragment_coord_conventions
+    GL_ARB_fragment_layer_viewport
     GL_ARB_fragment_program
+    GL_ARB_fragment_program_shadow
     GL_ARB_fragment_shader
+    GL_ARB_framebuffer_no_attachments
+    GL_ARB_framebuffer_object
     GL_ARB_framebuffer_sRGB
+    GL_ARB_geometry_shader4
+    GL_ARB_get_program_binary
+    GL_ARB_get_texture_sub_image
+    GL_ARB_gl_spirv
+    GL_ARB_gpu_shader5
+    GL_ARB_gpu_shader_fp64
+    GL_ARB_gpu_shader_int64
     GL_ARB_half_float_pixel
     GL_ARB_half_float_vertex
+    GL_ARB_imaging
+    GL_ARB_indirect_parameters
+    GL_ARB_instanced_arrays
+    GL_ARB_internalformat_query
+    GL_ARB_internalformat_query2
+    GL_ARB_invalidate_subdata
+    GL_ARB_map_buffer_alignment
+    GL_ARB_map_buffer_range
+    GL_ARB_multi_bind
+    GL_ARB_multi_draw_indirect
+    GL_ARB_multisample
     GL_ARB_multitexture
     GL_ARB_occlusion_query
+    GL_ARB_occlusion_query2
+    GL_ARB_parallel_shader_compile
+    GL_ARB_pipeline_statistics_query
     GL_ARB_pixel_buffer_object
     GL_ARB_point_parameters
     GL_ARB_point_sprite
+    GL_ARB_polygon_offset_clamp
+    GL_ARB_program_interface_query
+    GL_ARB_provoking_vertex
+    GL_ARB_query_buffer_object
+    GL_ARB_robust_buffer_access_behavior
+    GL_ARB_robustness
+    GL_ARB_sample_shading
+    GL_ARB_sampler_objects
+    GL_ARB_seamless_cube_map
+    GL_ARB_seamless_cubemap_per_texture
+    GL_ARB_separate_shader_objects
+    GL_ARB_shader_atomic_counter_ops
+    GL_ARB_shader_atomic_counters
+    GL_ARB_shader_ballot
+    GL_ARB_shader_bit_encoding
+    GL_ARB_shader_clock
+    GL_ARB_shader_draw_parameters
+    GL_ARB_shader_group_vote
+    GL_ARB_shader_image_load_store
+    GL_ARB_shader_image_size
     GL_ARB_shader_objects
+    GL_ARB_shader_precision
+    GL_ARB_shader_storage_buffer_object
+    GL_ARB_shader_subroutine
+    GL_ARB_shader_texture_image_samples
+    GL_ARB_shader_texture_lod
     GL_ARB_shading_language_100
+    GL_ARB_shading_language_420pack
+    GL_ARB_shading_language_include
+    GL_ARB_shading_language_packing
     GL_ARB_shadow
+    GL_ARB_sparse_buffer
+    GL_ARB_sparse_texture
+    GL_ARB_spirv_extensions
+    GL_ARB_stencil_texturing
+    GL_ARB_sync
+    GL_ARB_tessellation_shader
+    GL_ARB_texture_barrier
     GL_ARB_texture_border_clamp
+    GL_ARB_texture_buffer_object
+    GL_ARB_texture_buffer_object_rgb32
+    GL_ARB_texture_buffer_range
     GL_ARB_texture_compression
+    GL_ARB_texture_compression_bptc
     GL_ARB_texture_compression_rgtc
     GL_ARB_texture_cube_map
+    GL_ARB_texture_cube_map_array
     GL_ARB_texture_env_add
     GL_ARB_texture_env_combine
     GL_ARB_texture_env_crossbar
     GL_ARB_texture_env_dot3
+    GL_ARB_texture_filter_anisotropic
     GL_ARB_texture_float
+    GL_ARB_texture_gather
+    GL_ARB_texture_mirror_clamp_to_edge
+    GL_ARB_texture_mirrored_repeat
+    GL_ARB_texture_multisample
     GL_ARB_texture_non_power_of_two
+    GL_ARB_texture_query_levels
+    GL_ARB_texture_query_lod
     GL_ARB_texture_rectangle
     GL_ARB_texture_rg
+    GL_ARB_texture_rgb10_a2ui
+    GL_ARB_texture_stencil8
+    GL_ARB_texture_storage
+    GL_ARB_texture_storage_multisample
+    GL_ARB_texture_swizzle
+    GL_ARB_texture_view
+    GL_ARB_timer_query
+    GL_ARB_transform_feedback2
+    GL_ARB_transform_feedback3
+    GL_ARB_transform_feedback_instanced
+    GL_ARB_transform_feedback_overflow_query
     GL_ARB_transpose_matrix
+    GL_ARB_uniform_buffer_object
+    GL_ARB_vertex_array_bgra
     GL_ARB_vertex_array_object
+    GL_ARB_vertex_attrib_64bit
+    GL_ARB_vertex_attrib_binding
     GL_ARB_vertex_buffer_object
     GL_ARB_vertex_program
     GL_ARB_vertex_shader
+    GL_ARB_vertex_type_10f_11f_11f_rev
+    GL_ARB_vertex_type_2_10_10_10_rev
+    GL_ARB_viewport_array
     GL_ARB_window_pos
-    GL_ATI_separate_stencil
+    GL_ATI_draw_buffers
+    GL_ATI_texture_float
+    GL_ATI_texture_mirror_once
+    GL_EXTX_framebuffer_mixed_formats
+    GL_EXT_Cg_shader
     GL_EXT_abgr
     GL_EXT_bgra
+    GL_EXT_bindable_uniform
     GL_EXT_blend_color
     GL_EXT_blend_equation_separate
     GL_EXT_blend_func_separate
     GL_EXT_blend_minmax
     GL_EXT_blend_subtract
-    GL_EXT_clip_volume_hint
     GL_EXT_compiled_vertex_array
+    GL_EXT_depth_bounds_test
+    GL_EXT_direct_state_access
     GL_EXT_draw_buffers2
+    GL_EXT_draw_instanced
     GL_EXT_draw_range_elements
     GL_EXT_fog_coord
     GL_EXT_framebuffer_blit
+    GL_EXT_framebuffer_multisample
+    GL_EXT_framebuffer_multisample_blit_scaled
     GL_EXT_framebuffer_object
+    GL_EXT_framebuffer_sRGB
+    GL_EXT_geometry_shader4
+    GL_EXT_gpu_program_parameters
+    GL_EXT_gpu_shader4
+    GL_EXT_import_sync_object
+    GL_EXT_memory_object
+    GL_EXT_memory_object_win32
     GL_EXT_multi_draw_arrays
     GL_EXT_packed_depth_stencil
     GL_EXT_packed_float
     GL_EXT_packed_pixels
+    GL_EXT_pixel_buffer_object
+    GL_EXT_point_parameters
+    GL_EXT_polygon_offset_clamp
+    GL_EXT_provoking_vertex
     GL_EXT_rescale_normal
     GL_EXT_secondary_color
+    GL_EXT_semaphore
+    GL_EXT_semaphore_win32
+    GL_EXT_separate_shader_objects
     GL_EXT_separate_specular_color
+    GL_EXT_shader_image_load_store
+    GL_EXT_shader_integer_mix
     GL_EXT_shadow_funcs
     GL_EXT_stencil_two_side
     GL_EXT_stencil_wrap
     GL_EXT_texture3D
+    GL_EXT_texture_array
+    GL_EXT_texture_buffer_object
+    GL_EXT_texture_compression_dxt1
+    GL_EXT_texture_compression_latc
+    GL_EXT_texture_compression_rgtc
     GL_EXT_texture_compression_s3tc
+    GL_EXT_texture_cube_map
     GL_EXT_texture_edge_clamp
     GL_EXT_texture_env_add
     GL_EXT_texture_env_combine
+    GL_EXT_texture_env_dot3
     GL_EXT_texture_filter_anisotropic
+    GL_EXT_texture_integer
+    GL_EXT_texture_lod
     GL_EXT_texture_lod_bias
-    GL_EXT_texture_rectangle
+    GL_EXT_texture_mirror_clamp
+    GL_EXT_texture_object
     GL_EXT_texture_sRGB
+    GL_EXT_texture_sRGB_R8
+    GL_EXT_texture_sRGB_decode
     GL_EXT_texture_shared_exponent
+    GL_EXT_texture_storage
     GL_EXT_texture_swizzle
-    GL_EXT_transform_feedback
+    GL_EXT_timer_query
+    GL_EXT_transform_feedback2
+    GL_EXT_vertex_array
+    GL_EXT_vertex_array_bgra
+    GL_EXT_vertex_attrib_64bit
+    GL_EXT_win32_keyed_mutex
+    GL_EXT_window_rectangles
+    GL_IBM_rasterpos_clip
     GL_IBM_texture_mirrored_repeat
+    GL_KHR_blend_equation_advanced
+    GL_KHR_context_flush_control
+    GL_KHR_debug
+    GL_KHR_no_error
+    GL_KHR_parallel_shader_compile
+    GL_KHR_robust_buffer_access_behavior
+    GL_KHR_robustness
+    GL_KTX_buffer_region
+    GL_NVX_conditional_render
+    GL_NVX_gpu_memory_info
+    GL_NVX_multigpu_info
+    GL_NVX_nvenc_interop
+    GL_NV_ES1_1_compatibility
+    GL_NV_ES3_1_compatibility
+    GL_NV_alpha_to_coverage_dither_control
+    GL_NV_bindless_multi_draw_indirect
+    GL_NV_bindless_multi_draw_indirect_count
+    GL_NV_bindless_texture
+    GL_NV_blend_equation_advanced
     GL_NV_blend_square
+    GL_NV_command_list
+    GL_NV_compute_program5
     GL_NV_conditional_render
+    GL_NV_copy_depth_to_color
+    GL_NV_copy_image
+    GL_NV_depth_buffer_float
+    GL_NV_depth_clamp
+    GL_NV_draw_texture
+    GL_NV_draw_vulkan_image
+    GL_NV_explicit_multisample
+    GL_NV_feature_query
+    GL_NV_fence
+    GL_NV_float_buffer
+    GL_NV_fog_distance
+    GL_NV_fragment_program
+    GL_NV_fragment_program2
+    GL_NV_fragment_program_option
+    GL_NV_framebuffer_multisample_coverage
+    GL_NV_geometry_shader4
+    GL_NV_gpu_program4
+    GL_NV_gpu_program4_1
+    GL_NV_gpu_program5
+    GL_NV_gpu_program5_mem_extended
+    GL_NV_gpu_program_fp64
+    GL_NV_gpu_shader5
+    GL_NV_half_float
+    GL_NV_internalformat_sample_query
+    GL_NV_light_max_exponent
+    GL_NV_multisample_coverage
+    GL_NV_multisample_filter_hint
+    GL_NV_occlusion_query
+    GL_NV_packed_depth_stencil
+    GL_NV_parameter_buffer_object
+    GL_NV_parameter_buffer_object2
+    GL_NV_path_rendering
+    GL_NV_pixel_data_range
+    GL_NV_point_sprite
+    GL_NV_primitive_restart
+    GL_NV_query_resource
+    GL_NV_query_resource_tag
+    GL_NV_register_combiners
+    GL_NV_register_combiners2
+    GL_NV_shader_atomic_counters
+    GL_NV_shader_atomic_float
+    GL_NV_shader_buffer_load
+    GL_NV_shader_storage_buffer_object
+    GL_NV_shader_thread_group
+    GL_NV_shader_thread_shuffle
     GL_NV_texgen_reflection
+    GL_NV_texture_barrier
+    GL_NV_texture_compression_vtc
+    GL_NV_texture_env_combine4
+    GL_NV_texture_multisample
+    GL_NV_texture_rectangle
+    GL_NV_texture_rectangle_compressed
+    GL_NV_texture_shader
+    GL_NV_texture_shader2
+    GL_NV_texture_shader3
+    GL_NV_transform_feedback
+    GL_NV_transform_feedback2
+    GL_NV_uniform_buffer_unified_memory
+    GL_NV_vertex_array_range
+    GL_NV_vertex_array_range2
+    GL_NV_vertex_attrib_integer_64bit
+    GL_NV_vertex_buffer_unified_memory
+    GL_NV_vertex_program
+    GL_NV_vertex_program1_1
+    GL_NV_vertex_program2
+    GL_NV_vertex_program2_option
+    GL_NV_vertex_program3
+    GL_OVR_multiview
+    GL_OVR_multiview2
+    GL_S3_s3tc
     GL_SGIS_generate_mipmap
-    GL_SGIS_texture_edge_clamp
     GL_SGIS_texture_lod
+    GL_SGIX_depth_texture
+    GL_SGIX_shadow
+    GL_SUN_slice_accum
     GL_WIN_swap_hint
-Number of texture units: 8
+    WGL_EXT_swap_control
+Number of texture units: 4
 Using shader environment.
-Using copy RTT.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
 Using gl renderer.
 Texture testing:
-- Hardware max texture size: 4096
+- Hardware max texture size: 16384
 - 64px textures work.
 - 128px textures work.
 - 256px textures work.
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 4.48600006104s
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 1.16600012779s
+Resetting cache.
+Bootstrap to the start of init.init took 35.36s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.33s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.01s
+
+File "game/labels/cassDate1.rpy", line 103: if statement expects a non-empty block.
+    if outfitCurrent = "Jeans":
+                               ^
+
+File "game/labels/cassDate1.rpy", line 105: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    s "Dangit. I think we might've messed up.
+        k "Yeah... they  only gave me a few options."
+            ^
+        c "< I love it. >"
+        k "What?"
+        s "What?"
+        c "< What can I say? I'm a rock star, but I like cute things. That shirt is cute and you're cute in it.>"
+        pause 0.5
+        k "... thank you!"
+    
+        if outfitCurrent = "Pantsuit":
+        c "< Nice suit. >"
+        s "Yeah, in hindsight, seems like a bad choice for a rock star."
+        k "You don't like it."
+        c "< I just feel under dressed compared to you. >"
+        ki "... should've seen that one coming."
+    
+        menu:
+    
+            s "Whaddaya say, chat? Like if it were me, I'd want to be sober for sure, but..."
+    
+            "Have a drink":
+                k "I'll have a --"
+    
+                ki "You know, I shouldn't be drinking. Not now. Not when there are two other people to meet."
+    
+                k "I'd just like some cranberry juice if that's okay."
+    
+                $chat.addmessage(shub, "Pssh")
+                $chat.addmessage(cake, "weakesauce")
+    
+                s "Oh, come on! If you're gonna give me the choice, why shouldn't my choice matter?"
+    
+                $chat.addmessage(shub, "maybe it's like a life reclection")
+    
+                s "I mean... really!"
+    
+            "Just juice":
+                k "I wouldn't mind some cranberry juice."
+    
+                c "..."
+    
+                $chat.addmessage(egg, "oof, DISAPPOINTED")
+    
+                ki "Her smile exists in a way that barely makes sense to me. I wonder if I let her down just now."
+    
+        # end choice
+    
+        ki "There's a tablet mounted to the table, and Cassandra swipes at it a few times to place our drink orders. I don't see any food on the menu, so I suppose my earlier observation was accurate."
+    
+        $chat.addmessage(fizz, "Sophie, what's your favorite drink?")
+    
+        ki "The camera crew keeps its distance, far enough that I could probably forget about them after a few days of this."
+    
+        $chat.addmessage(elsa, "Yeah, Sophie! I like cosmos myself")
+        $chat.addmessage(shub, "sex on the beach, not a meme, for real")
+    
+        ki "Problem is, this is day one and I feel like a drama student who can't quite get her lines out."
+    
+        s "I'd be nervous if it were me. Cassandra's a star, after all."
+    
+        s "Oh, um, guys I would say my favorite drink is a negroni. Gin and vermouth, it's mature I guess."
+    
+        c "< It's a strange situation we're in. I want to tell you up front that I am serious about this. >"
+    
+        $chat.addmessage(elsa, "mmm classy")
+    
+        ki "I believe her, and still, I'm not sure how to interpret the message."
+    
+        k "I guess this is the part where we tell each other about, uh, each other?"
+    
+        $chat.addmessage(egg, " This is where I would fumble lol")
+    
+        ki "God, I'm an idiot."
+    
+        s "God, I'm adorable."
+    
+        $chat.addmessage(fizz, "You're both right")
+    
+        c "< It would have been easier if we were both drunk already. >"
+    
+        k "Maybe."
+    
+        pause 1.0
+    
+        k "Okay. So, uh, Cassandra. How'd you end up on the show?"
+    
+        $chat.addmessage(cake, "she's in the script lol")
+    
+        ki "Nicely done, self, a fully formed question!"
+    
+        $chat.addmessage(crab, "lol")
+    
+        c "< I am looking for inspiration. I guess I lost my voice somewhere along the way. >"
+    
+        ki "Is that... wait, is she talking about her --"
+    
+        $chat.addmessage(egg, "Metaphor")
+    
+        ki "Her smile broadens. It's going to be hard to tell when she's joking, isn't it?"
+    
+        s "My question is, how does the TV show know what she's saying?"
+    
+        $chat.addmessage(bar, "RIGHT?")
+    
+        ki "I chuckle, but I don't know if it's appropriate."
+    
+        c "< It was a joke. >"
+    
+        k "I, uh, I knew that!"
+    
+        $chat.addmessage(elsa, "Kylie's a ditz, isn't she")
+    
+        c "< My songs just aren't the same anymore, Kylie. I thought going on this show and meeting someone new in this weird pressure cooker of an environment might draw something out of me.> "
+    
+        ki "I suppose this is as good a time as ever to tell her that I..."
+    
+        $chat.addmessage(egg, "Don't like girls")
+    
+        k "I love your new stuff though."
+    
+        $chat.addmessage(fizz, "Huh. We've just been assuming Kylie likes women, though. What if she's faking?")
+    
+        ki "Her expression changes, then, as she accepts this new piece of information. I'm not sure if she hoped I'd be a fan, or hoped for the opposite."
+    
+        c "< So you know my work? >"
+    
+        k "I love your work. Intolerable Jewelry got me through the worst break-up of my life!"
+    
+        python:
+            newComments = [
+                [crab, "name drop"],
+                [fizz, "Had to say the title at some point"],
+                [elsa, "We did it guys!"],
+                [shub, "ROLL CREDITS"],
+                [cake, "that title is dumb"],
+                [liv, "I love the album tho"],
+                [bar, "liv you way too into this"],
+                [beav, "roll cred-- shit"]
+    
+            ]
+        $chat.bulkMessage(newComments, 0)
+    
+        s "So wait, if I'm a super fan doesn't that mean I should choose Cassandra? That doesn't seem fair to the others."
+    
+        $chat.addmessage(egg, "You would think")
+    
+        ki "Her smile falters a little bit. She's typing feverishly, and I wonder whether I've found a way to ruin everything already."
+    
+        $chat.addmessage(elsa, "God, maybe she really needed to meet someone who didn't know her.")
+    
+        c "< Writing it did the same for me. >"
+    
+        show c happy
+    
+        c "<I'm really happy to know you're a fan. I'm also really happy you're not asking for an autograph.>"
+    
+        $chat.addmessage(elsa, "There you go")
+    
+        $chat.addmessage(egg, "Yeah you right")
+    
+        ki "The thought had crossed my mind."
+    
+        k "I don't want to be a bothersome fangirl. I mean, I am, but not like, you know? Like that."
+    
+        $chat.addmessage(fizz, "I am a fan of yours, Sophie")
+    
+        c "< You're handling it well. >"
+    
+        $chat.addmessage(cake, "OBVIOUSLY")
+    
+        k "On the outside. Inside, I'm screaming like a teenager at one of your shows."
+    
+        show c flirty
+    
+        ki "I don't want to put her on guard, and it seems to be working. Her finger traces the edge of her phone, lightly, meaningfully."
+    
+        ki "The drinks arrive, and for a moment the interruption of a server derails our conversation. Cassandra downs a shot of tequila and makes a face, leaving two more shots on the table."
+    
+        $chat.addmessage(shub, "Cass BEASt yo")
+    
+        ki "I find myself wringing my hands lightly together. This is so much harder than it looked on TV. Magic of editing, I guess."
+    
+        pause 0.5
+        show c listen
+        pause 1.0
+    
+        c "< I didn't think it would be this hard.> "
+    
+        $chat.addmessage(egg, "not a word, Crablegs")
+    
+        k "I was thinking the same thing."
+    
+        $chat.addmessage(crab, "aww")
+    
+        c "< So... I have a question. >"
+    
+        $chat.addmessage(fizz, "lol")
+    
+        c "< I know you like my work. And I guess you wouldn't be on the show otherwise, but... you like girls, right? >"
+    
+        ki "The question strikes me as fully appropriate and adorably obvious."
+    
+        $chat.addmessage(shub, "Actually a resonable flucking question.")
+    
+        k "I..."
+    
+        ki "I guess someone should have asked this question already. It dawns on me, just now, that nobody ever asked me flat out if I... huh."
+    
+        $chat.addmessage(crab, "I like girls, Elsa")
+    
+        c "< Well, I do. >"
+    
+        $chat.addmessage(elsa, "Sucks for them.")
+    
+        ki "Her smile was bashful from the moment it poured across her lips. Now, it's downright vulnerable."
+    
+        k "I do, too."
+    
+        $chat.addmessage(cake, "lol roasted crablegs")
+    
+        c "< I always thought this show was fake. Really, I did. How's a person supposed to fall in love in two dates? >"
+    
+        k "I don't know."
+    
+        $chat.addmessage(beav, "Falling in love in two dates is easy. Just date me twice.")
+    
+        ki "It's easy for me. I know who she is, I've idolized her, even. To her, though, I'm just another face."
+    
+        $chat.addmessage(beav, "I'm turnin women into waterslideds")
+    
+        $chat.addmessage(liv, "Yes, you do! You're so charming, AngeredBeaver69.")
+    
+        ki "Cassandra slams another shot, easily, in a practiced way."
+    
+        $chat.addmessage(shub, "dafuq")
+    
+        c "< I have an idea, though. >"
+    
+        $chat.addmessage(egg, "boobs")
+    
+        k "Oh?"
+    
+        $chat.addmessage(bar, "Is this where we R as a society")
+    
+        c "< I rented a little studio, not too far from here. Would you like to be on my next album? >"
+    
+        s "Oh, wow! Chat, we're gonna be rock stars! Also, you guys raise some valid points. It's definitely a good idea to find out if Kylie likes girls before asking her to date three or four of them."
+    
+        k "Wait what."
+    
+        c "..."
+    
+        $chat.addmessage(cake, "Kan we even sing?")
+    
+        k "Really?"
+    
+        $chat.addmessage(egg, "I can sing")
+    
+        ki "She nods, her smile returning."
+    
+        $chat.addmessage(elsa, "Really, egg? Baritone?")
+    
+        k "Oh my god, yes!"
+    
+        k "Oh, I, but I can't play anything."
+    
+        $chat.addmessage(cake, "falsetto lol")
+    
+        $chat.addmessage(egg, "yis baritone")
+    
+        c "< That's no problem. I can teach you. >"
+    
+        k "I'm trying my best not to go full fangirl right now, you know that, right?"
+    
+        $chat.addmessage(cake, "OBVIOUSLY")
+    
+        c "< I appreciate it, too. >"
+    
+        c "< I'm hoping I can get you to like me for more than my discography.>"
+    
+        $chat.addmessage(bar, "what's so obvious at that")
+    
+        k "Oh trust me, you, and, uh... I mean... sorry, I'm a little tongue tied."
+    
+        c "< I can help with that. >"
+    
+        $chat.addmessage(cake, "
+DPI scale factor: 1.000000
+Interface start took 0.06s
+
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 760/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 432.00'
+Display Info: None
+Fixed-function is blacklisted.
+Extensions:
+    
+    GL_AMD_multi_draw_indirect
+    GL_AMD_seamless_cubemap_per_texture
+    GL_ARB_ES2_compatibility
+    GL_ARB_ES3_1_compatibility
+    GL_ARB_ES3_2_compatibility
+    GL_ARB_ES3_compatibility
+    GL_ARB_arrays_of_arrays
+    GL_ARB_base_instance
+    GL_ARB_bindless_texture
+    GL_ARB_blend_func_extended
+    GL_ARB_buffer_storage
+    GL_ARB_clear_buffer_object
+    GL_ARB_clear_texture
+    GL_ARB_clip_control
+    GL_ARB_color_buffer_float
+    GL_ARB_compatibility
+    GL_ARB_compressed_texture_pixel_storage
+    GL_ARB_compute_shader
+    GL_ARB_compute_variable_group_size
+    GL_ARB_conditional_render_inverted
+    GL_ARB_conservative_depth
+    GL_ARB_copy_buffer
+    GL_ARB_copy_image
+    GL_ARB_cull_distance
+    GL_ARB_debug_output
+    GL_ARB_depth_buffer_float
+    GL_ARB_depth_clamp
+    GL_ARB_depth_texture
+    GL_ARB_derivative_control
+    GL_ARB_direct_state_access
+    GL_ARB_draw_buffers
+    GL_ARB_draw_buffers_blend
+    GL_ARB_draw_elements_base_vertex
+    GL_ARB_draw_indirect
+    GL_ARB_draw_instanced
+    GL_ARB_enhanced_layouts
+    GL_ARB_explicit_attrib_location
+    GL_ARB_explicit_uniform_location
+    GL_ARB_fragment_coord_conventions
+    GL_ARB_fragment_layer_viewport
+    GL_ARB_fragment_program
+    GL_ARB_fragment_program_shadow
+    GL_ARB_fragment_shader
+    GL_ARB_framebuffer_no_attachments
+    GL_ARB_framebuffer_object
+    GL_ARB_framebuffer_sRGB
+    GL_ARB_geometry_shader4
+    GL_ARB_get_program_binary
+    GL_ARB_get_texture_sub_image
+    GL_ARB_gl_spirv
+    GL_ARB_gpu_shader5
+    GL_ARB_gpu_shader_fp64
+    GL_ARB_gpu_shader_int64
+    GL_ARB_half_float_pixel
+    GL_ARB_half_float_vertex
+    GL_ARB_imaging
+    GL_ARB_indirect_parameters
+    GL_ARB_instanced_arrays
+    GL_ARB_internalformat_query
+    GL_ARB_internalformat_query2
+    GL_ARB_invalidate_subdata
+    GL_ARB_map_buffer_alignment
+    GL_ARB_map_buffer_range
+    GL_ARB_multi_bind
+    GL_ARB_multi_draw_indirect
+    GL_ARB_multisample
+    GL_ARB_multitexture
+    GL_ARB_occlusion_query
+    GL_ARB_occlusion_query2
+    GL_ARB_parallel_shader_compile
+    GL_ARB_pipeline_statistics_query
+    GL_ARB_pixel_buffer_object
+    GL_ARB_point_parameters
+    GL_ARB_point_sprite
+    GL_ARB_polygon_offset_clamp
+    GL_ARB_program_interface_query
+    GL_ARB_provoking_vertex
+    GL_ARB_query_buffer_object
+    GL_ARB_robust_buffer_access_behavior
+    GL_ARB_robustness
+    GL_ARB_sample_shading
+    GL_ARB_sampler_objects
+    GL_ARB_seamless_cube_map
+    GL_ARB_seamless_cubemap_per_texture
+    GL_ARB_separate_shader_objects
+    GL_ARB_shader_atomic_counter_ops
+    GL_ARB_shader_atomic_counters
+    GL_ARB_shader_ballot
+    GL_ARB_shader_bit_encoding
+    GL_ARB_shader_clock
+    GL_ARB_shader_draw_parameters
+    GL_ARB_shader_group_vote
+    GL_ARB_shader_image_load_store
+    GL_ARB_shader_image_size
+    GL_ARB_shader_objects
+    GL_ARB_shader_precision
+    GL_ARB_shader_storage_buffer_object
+    GL_ARB_shader_subroutine
+    GL_ARB_shader_texture_image_samples
+    GL_ARB_shader_texture_lod
+    GL_ARB_shading_language_100
+    GL_ARB_shading_language_420pack
+    GL_ARB_shading_language_include
+    GL_ARB_shading_language_packing
+    GL_ARB_shadow
+    GL_ARB_sparse_buffer
+    GL_ARB_sparse_texture
+    GL_ARB_spirv_extensions
+    GL_ARB_stencil_texturing
+    GL_ARB_sync
+    GL_ARB_tessellation_shader
+    GL_ARB_texture_barrier
+    GL_ARB_texture_border_clamp
+    GL_ARB_texture_buffer_object
+    GL_ARB_texture_buffer_object_rgb32
+    GL_ARB_texture_buffer_range
+    GL_ARB_texture_compression
+    GL_ARB_texture_compression_bptc
+    GL_ARB_texture_compression_rgtc
+    GL_ARB_texture_cube_map
+    GL_ARB_texture_cube_map_array
+    GL_ARB_texture_env_add
+    GL_ARB_texture_env_combine
+    GL_ARB_texture_env_crossbar
+    GL_ARB_texture_env_dot3
+    GL_ARB_texture_filter_anisotropic
+    GL_ARB_texture_float
+    GL_ARB_texture_gather
+    GL_ARB_texture_mirror_clamp_to_edge
+    GL_ARB_texture_mirrored_repeat
+    GL_ARB_texture_multisample
+    GL_ARB_texture_non_power_of_two
+    GL_ARB_texture_query_levels
+    GL_ARB_texture_query_lod
+    GL_ARB_texture_rectangle
+    GL_ARB_texture_rg
+    GL_ARB_texture_rgb10_a2ui
+    GL_ARB_texture_stencil8
+    GL_ARB_texture_storage
+    GL_ARB_texture_storage_multisample
+    GL_ARB_texture_swizzle
+    GL_ARB_texture_view
+    GL_ARB_timer_query
+    GL_ARB_transform_feedback2
+    GL_ARB_transform_feedback3
+    GL_ARB_transform_feedback_instanced
+    GL_ARB_transform_feedback_overflow_query
+    GL_ARB_transpose_matrix
+    GL_ARB_uniform_buffer_object
+    GL_ARB_vertex_array_bgra
+    GL_ARB_vertex_array_object
+    GL_ARB_vertex_attrib_64bit
+    GL_ARB_vertex_attrib_binding
+    GL_ARB_vertex_buffer_object
+    GL_ARB_vertex_program
+    GL_ARB_vertex_shader
+    GL_ARB_vertex_type_10f_11f_11f_rev
+    GL_ARB_vertex_type_2_10_10_10_rev
+    GL_ARB_viewport_array
+    GL_ARB_window_pos
+    GL_ATI_draw_buffers
+    GL_ATI_texture_float
+    GL_ATI_texture_mirror_once
+    GL_EXTX_framebuffer_mixed_formats
+    GL_EXT_Cg_shader
+    GL_EXT_abgr
+    GL_EXT_bgra
+    GL_EXT_bindable_uniform
+    GL_EXT_blend_color
+    GL_EXT_blend_equation_separate
+    GL_EXT_blend_func_separate
+    GL_EXT_blend_minmax
+    GL_EXT_blend_subtract
+    GL_EXT_compiled_vertex_array
+    GL_EXT_depth_bounds_test
+    GL_EXT_direct_state_access
+    GL_EXT_draw_buffers2
+    GL_EXT_draw_instanced
+    GL_EXT_draw_range_elements
+    GL_EXT_fog_coord
+    GL_EXT_framebuffer_blit
+    GL_EXT_framebuffer_multisample
+    GL_EXT_framebuffer_multisample_blit_scaled
+    GL_EXT_framebuffer_object
+    GL_EXT_framebuffer_sRGB
+    GL_EXT_geometry_shader4
+    GL_EXT_gpu_program_parameters
+    GL_EXT_gpu_shader4
+    GL_EXT_import_sync_object
+    GL_EXT_memory_object
+    GL_EXT_memory_object_win32
+    GL_EXT_multi_draw_arrays
+    GL_EXT_packed_depth_stencil
+    GL_EXT_packed_float
+    GL_EXT_packed_pixels
+    GL_EXT_pixel_buffer_object
+    GL_EXT_point_parameters
+    GL_EXT_polygon_offset_clamp
+    GL_EXT_provoking_vertex
+    GL_EXT_rescale_normal
+    GL_EXT_secondary_color
+    GL_EXT_semaphore
+    GL_EXT_semaphore_win32
+    GL_EXT_separate_shader_objects
+    GL_EXT_separate_specular_color
+    GL_EXT_shader_image_load_store
+    GL_EXT_shader_integer_mix
+    GL_EXT_shadow_funcs
+    GL_EXT_stencil_two_side
+    GL_EXT_stencil_wrap
+    GL_EXT_texture3D
+    GL_EXT_texture_array
+    GL_EXT_texture_buffer_object
+    GL_EXT_texture_compression_dxt1
+    GL_EXT_texture_compression_latc
+    GL_EXT_texture_compression_rgtc
+    GL_EXT_texture_compression_s3tc
+    GL_EXT_texture_cube_map
+    GL_EXT_texture_edge_clamp
+    GL_EXT_texture_env_add
+    GL_EXT_texture_env_combine
+    GL_EXT_texture_env_dot3
+    GL_EXT_texture_filter_anisotropic
+    GL_EXT_texture_integer
+    GL_EXT_texture_lod
+    GL_EXT_texture_lod_bias
+    GL_EXT_texture_mirror_clamp
+    GL_EXT_texture_object
+    GL_EXT_texture_sRGB
+    GL_EXT_texture_sRGB_R8
+    GL_EXT_texture_sRGB_decode
+    GL_EXT_texture_shared_exponent
+    GL_EXT_texture_storage
+    GL_EXT_texture_swizzle
+    GL_EXT_timer_query
+    GL_EXT_transform_feedback2
+    GL_EXT_vertex_array
+    GL_EXT_vertex_array_bgra
+    GL_EXT_vertex_attrib_64bit
+    GL_EXT_win32_keyed_mutex
+    GL_EXT_window_rectangles
+    GL_IBM_rasterpos_clip
+    GL_IBM_texture_mirrored_repeat
+    GL_KHR_blend_equation_advanced
+    GL_KHR_context_flush_control
+    GL_KHR_debug
+    GL_KHR_no_error
+    GL_KHR_parallel_shader_compile
+    GL_KHR_robust_buffer_access_behavior
+    GL_KHR_robustness
+    GL_KTX_buffer_region
+    GL_NVX_conditional_render
+    GL_NVX_gpu_memory_info
+    GL_NVX_multigpu_info
+    GL_NVX_nvenc_interop
+    GL_NV_ES1_1_compatibility
+    GL_NV_ES3_1_compatibility
+    GL_NV_alpha_to_coverage_dither_control
+    GL_NV_bindless_multi_draw_indirect
+    GL_NV_bindless_multi_draw_indirect_count
+    GL_NV_bindless_texture
+    GL_NV_blend_equation_advanced
+    GL_NV_blend_square
+    GL_NV_command_list
+    GL_NV_compute_program5
+    GL_NV_conditional_render
+    GL_NV_copy_depth_to_color
+    GL_NV_copy_image
+    GL_NV_depth_buffer_float
+    GL_NV_depth_clamp
+    GL_NV_draw_texture
+    GL_NV_draw_vulkan_image
+    GL_NV_explicit_multisample
+    GL_NV_feature_query
+    GL_NV_fence
+    GL_NV_float_buffer
+    GL_NV_fog_distance
+    GL_NV_fragment_program
+    GL_NV_fragment_program2
+    GL_NV_fragment_program_option
+    GL_NV_framebuffer_multisample_coverage
+    GL_NV_geometry_shader4
+    GL_NV_gpu_program4
+    GL_NV_gpu_program4_1
+    GL_NV_gpu_program5
+    GL_NV_gpu_program5_mem_extended
+    GL_NV_gpu_program_fp64
+    GL_NV_gpu_shader5
+    GL_NV_half_float
+    GL_NV_internalformat_sample_query
+    GL_NV_light_max_exponent
+    GL_NV_multisample_coverage
+    GL_NV_multisample_filter_hint
+    GL_NV_occlusion_query
+    GL_NV_packed_depth_stencil
+    GL_NV_parameter_buffer_object
+    GL_NV_parameter_buffer_object2
+    GL_NV_path_rendering
+    GL_NV_pixel_data_range
+    GL_NV_point_sprite
+    GL_NV_primitive_restart
+    GL_NV_query_resource
+    GL_NV_query_resource_tag
+    GL_NV_register_combiners
+    GL_NV_register_combiners2
+    GL_NV_shader_atomic_counters
+    GL_NV_shader_atomic_float
+    GL_NV_shader_buffer_load
+    GL_NV_shader_storage_buffer_object
+    GL_NV_shader_thread_group
+    GL_NV_shader_thread_shuffle
+    GL_NV_texgen_reflection
+    GL_NV_texture_barrier
+    GL_NV_texture_compression_vtc
+    GL_NV_texture_env_combine4
+    GL_NV_texture_multisample
+    GL_NV_texture_rectangle
+    GL_NV_texture_rectangle_compressed
+    GL_NV_texture_shader
+    GL_NV_texture_shader2
+    GL_NV_texture_shader3
+    GL_NV_transform_feedback
+    GL_NV_transform_feedback2
+    GL_NV_uniform_buffer_unified_memory
+    GL_NV_vertex_array_range
+    GL_NV_vertex_array_range2
+    GL_NV_vertex_attrib_integer_64bit
+    GL_NV_vertex_buffer_unified_memory
+    GL_NV_vertex_program
+    GL_NV_vertex_program1_1
+    GL_NV_vertex_program2
+    GL_NV_vertex_program2_option
+    GL_NV_vertex_program3
+    GL_OVR_multiview
+    GL_OVR_multiview2
+    GL_S3_s3tc
+    GL_SGIS_generate_mipmap
+    GL_SGIS_texture_lod
+    GL_SGIX_depth_texture
+    GL_SGIX_shadow
+    GL_SUN_slice_accum
+    GL_WIN_swap_hint
+    WGL_EXT_swap_control
+Number of texture units: 4
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 35.9349999428s
+Resetting cache.
+Bootstrap to the start of init.init took 40.32s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.36s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.01s
+
+File "game/labels/cassDate1.rpy", line 103: if statement expects a non-empty block.
+    if outfitCurrent = "Jeans":
+                               ^
+
+File "game/labels/cassDate1.rpy", line 105: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    s "Dangit. I think we might've messed up.
+        k "Yeah... they  only gave me a few options."
+            ^
+        c "< I love it. >"
+        k "What?"
+        s "What?"
+        c "< What can I say? I'm a rock star, but I like cute things. That shirt is cute and you're cute in it.>"
+        pause 0.5
+        k "... thank you!"
+    
+        if outfitCurrent = "Pantsuit":
+        c "< Nice suit. >"
+        s "Yeah, in hindsight, seems like a bad choice for a rock star."
+        k "You don't like it."
+        c "< I just feel under dressed compared to you. >"
+        ki "... should've seen that one coming."
+    
+        menu:
+    
+            s "Whaddaya say, chat? Like if it were me, I'd want to be sober for sure, but..."
+    
+            "Have a drink":
+                k "I'll have a --"
+    
+                ki "You know, I shouldn't be drinking. Not now. Not when there are two other people to meet."
+    
+                k "I'd just like some cranberry juice if that's okay."
+    
+                $chat.addmessage(shub, "Pssh")
+                $chat.addmessage(cake, "weakesauce")
+    
+                s "Oh, come on! If you're gonna give me the choice, why shouldn't my choice matter?"
+    
+                $chat.addmessage(shub, "maybe it's like a life reclection")
+    
+                s "I mean... really!"
+    
+            "Just juice":
+                k "I wouldn't mind some cranberry juice."
+    
+                c "..."
+    
+                $chat.addmessage(egg, "oof, DISAPPOINTED")
+    
+                ki "Her smile exists in a way that barely makes sense to me. I wonder if I let her down just now."
+    
+        # end choice
+    
+        ki "There's a tablet mounted to the table, and Cassandra swipes at it a few times to place our drink orders. I don't see any food on the menu, so I suppose my earlier observation was accurate."
+    
+        $chat.addmessage(fizz, "Sophie, what's your favorite drink?")
+    
+        ki "The camera crew keeps its distance, far enough that I could probably forget about them after a few days of this."
+    
+        $chat.addmessage(elsa, "Yeah, Sophie! I like cosmos myself")
+        $chat.addmessage(shub, "sex on the beach, not a meme, for real")
+    
+        ki "Problem is, this is day one and I feel like a drama student who can't quite get her lines out."
+    
+        s "I'd be nervous if it were me. Cassandra's a star, after all."
+    
+        s "Oh, um, guys I would say my favorite drink is a negroni. Gin and vermouth, it's mature I guess."
+    
+        c "< It's a strange situation we're in. I want to tell you up front that I am serious about this. >"
+    
+        $chat.addmessage(elsa, "mmm classy")
+    
+        ki "I believe her, and still, I'm not sure how to interpret the message."
+    
+        k "I guess this is the part where we tell each other about, uh, each other?"
+    
+        $chat.addmessage(egg, " This is where I would fumble lol")
+    
+        ki "God, I'm an idiot."
+    
+        s "God, I'm adorable."
+    
+        $chat.addmessage(fizz, "You're both right")
+    
+        c "< It would have been easier if we were both drunk already. >"
+    
+        k "Maybe."
+    
+        pause 1.0
+    
+        k "Okay. So, uh, Cassandra. How'd you end up on the show?"
+    
+        $chat.addmessage(cake, "she's in the script lol")
+    
+        ki "Nicely done, self, a fully formed question!"
+    
+        $chat.addmessage(crab, "lol")
+    
+        c "< I am looking for inspiration. I guess I lost my voice somewhere along the way. >"
+    
+        ki "Is that... wait, is she talking about her --"
+    
+        $chat.addmessage(egg, "Metaphor")
+    
+        ki "Her smile broadens. It's going to be hard to tell when she's joking, isn't it?"
+    
+        s "My question is, how does the TV show know what she's saying?"
+    
+        $chat.addmessage(bar, "RIGHT?")
+    
+        ki "I chuckle, but I don't know if it's appropriate."
+    
+        c "< It was a joke. >"
+    
+        k "I, uh, I knew that!"
+    
+        $chat.addmessage(elsa, "Kylie's a ditz, isn't she")
+    
+        c "< My songs just aren't the same anymore, Kylie. I thought going on this show and meeting someone new in this weird pressure cooker of an environment might draw something out of me.> "
+    
+        ki "I suppose this is as good a time as ever to tell her that I..."
+    
+        $chat.addmessage(egg, "Don't like girls")
+    
+        k "I love your new stuff though."
+    
+        $chat.addmessage(fizz, "Huh. We've just been assuming Kylie likes women, though. What if she's faking?")
+    
+        ki "Her expression changes, then, as she accepts this new piece of information. I'm not sure if she hoped I'd be a fan, or hoped for the opposite."
+    
+        c "< So you know my work? >"
+    
+        k "I love your work. Intolerable Jewelry got me through the worst break-up of my life!"
+    
+        python:
+            newComments = [
+                [crab, "name drop"],
+                [fizz, "Had to say the title at some point"],
+                [elsa, "We did it guys!"],
+                [shub, "ROLL CREDITS"],
+                [cake, "that title is dumb"],
+                [liv, "I love the album tho"],
+                [bar, "liv you way too into this"],
+                [beav, "roll cred-- shit"]
+    
+            ]
+        $chat.bulkMessage(newComments, 0)
+    
+        s "So wait, if I'm a super fan doesn't that mean I should choose Cassandra? That doesn't seem fair to the others."
+    
+        $chat.addmessage(egg, "You would think")
+    
+        ki "Her smile falters a little bit. She's typing feverishly, and I wonder whether I've found a way to ruin everything already."
+    
+        $chat.addmessage(elsa, "God, maybe she really needed to meet someone who didn't know her.")
+    
+        c "< Writing it did the same for me. >"
+    
+        show c happy
+    
+        c "<I'm really happy to know you're a fan. I'm also really happy you're not asking for an autograph.>"
+    
+        $chat.addmessage(elsa, "There you go")
+    
+        $chat.addmessage(egg, "Yeah you right")
+    
+        ki "The thought had crossed my mind."
+    
+        k "I don't want to be a bothersome fangirl. I mean, I am, but not like, you know? Like that."
+    
+        $chat.addmessage(fizz, "I am a fan of yours, Sophie")
+    
+        c "< You're handling it well. >"
+    
+        $chat.addmessage(cake, "OBVIOUSLY")
+    
+        k "On the outside. Inside, I'm screaming like a teenager at one of your shows."
+    
+        show c flirty
+    
+        ki "I don't want to put her on guard, and it seems to be working. Her finger traces the edge of her phone, lightly, meaningfully."
+    
+        ki "The drinks arrive, and for a moment the interruption of a server derails our conversation. Cassandra downs a shot of tequila and makes a face, leaving two more shots on the table."
+    
+        $chat.addmessage(shub, "Cass BEASt yo")
+    
+        ki "I find myself wringing my hands lightly together. This is so much harder than it looked on TV. Magic of editing, I guess."
+    
+        pause 0.5
+        show c listen
+        pause 1.0
+    
+        c "< I didn't think it would be this hard.> "
+    
+        $chat.addmessage(egg, "not a word, Crablegs")
+    
+        k "I was thinking the same thing."
+    
+        $chat.addmessage(crab, "aww")
+    
+        c "< So... I have a question. >"
+    
+        $chat.addmessage(fizz, "lol")
+    
+        c "< I know you like my work. And I guess you wouldn't be on the show otherwise, but... you like girls, right? >"
+    
+        ki "The question strikes me as fully appropriate and adorably obvious."
+    
+        $chat.addmessage(shub, "Actually a resonable flucking question.")
+    
+        k "I..."
+    
+        ki "I guess someone should have asked this question already. It dawns on me, just now, that nobody ever asked me flat out if I... huh."
+    
+        $chat.addmessage(crab, "I like girls, Elsa")
+    
+        c "< Well, I do. >"
+    
+        $chat.addmessage(elsa, "Sucks for them.")
+    
+        ki "Her smile was bashful from the moment it poured across her lips. Now, it's downright vulnerable."
+    
+        k "I do, too."
+    
+        $chat.addmessage(cake, "lol roasted crablegs")
+    
+        c "< I always thought this show was fake. Really, I did. How's a person supposed to fall in love in two dates? >"
+    
+        k "I don't know."
+    
+        $chat.addmessage(beav, "Falling in love in two dates is easy. Just date me twice.")
+    
+        ki "It's easy for me. I know who she is, I've idolized her, even. To her, though, I'm just another face."
+    
+        $chat.addmessage(beav, "I'm turnin women into waterslideds")
+    
+        $chat.addmessage(liv, "Yes, you do! You're so charming, AngeredBeaver69.")
+    
+        ki "Cassandra slams another shot, easily, in a practiced way."
+    
+        $chat.addmessage(shub, "dafuq")
+    
+        c "< I have an idea, though. >"
+    
+        $chat.addmessage(egg, "boobs")
+    
+        k "Oh?"
+    
+        $chat.addmessage(bar, "Is this where we R as a society")
+    
+        c "< I rented a little studio, not too far from here. Would you like to be on my next album? >"
+    
+        s "Oh, wow! Chat, we're gonna be rock stars! Also, you guys raise some valid points. It's definitely a good idea to find out if Kylie likes girls before asking her to date three or four of them."
+    
+        k "Wait what."
+    
+        c "..."
+    
+        $chat.addmessage(cake, "Kan we even sing?")
+    
+        k "Really?"
+    
+        $chat.addmessage(egg, "I can sing")
+    
+        ki "She nods, her smile returning."
+    
+        $chat.addmessage(elsa, "Really, egg? Baritone?")
+    
+        k "Oh my god, yes!"
+    
+        k "Oh, I, but I can't play anything."
+    
+        $chat.addmessage(cake, "falsetto lol")
+    
+        $chat.addmessage(egg, "yis baritone")
+    
+        c "< That's no problem. I can teach you. >"
+    
+        k "I'm trying my best not to go full fangirl right now, you know that, right?"
+    
+        $chat.addmessage(cake, "OBVIOUSLY")
+    
+        c "< I appreciate it, too. >"
+    
+        c "< I'm hoping I can get you to like me for more than my discography.>"
+    
+        $chat.addmessage(bar, "what's so obvious at that")
+    
+        k "Oh trust me, you, and, uh... I mean... sorry, I'm a little tongue tied."
+    
+        c "< I can help with that. >"
+    
+        $chat.addmessage(cake, "
+DPI scale factor: 1.000000
+Interface start took 0.06s
+
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 760/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 432.00'
+Display Info: None
+Fixed-function is blacklisted.
+Extensions:
+    
+    GL_AMD_multi_draw_indirect
+    GL_AMD_seamless_cubemap_per_texture
+    GL_ARB_ES2_compatibility
+    GL_ARB_ES3_1_compatibility
+    GL_ARB_ES3_2_compatibility
+    GL_ARB_ES3_compatibility
+    GL_ARB_arrays_of_arrays
+    GL_ARB_base_instance
+    GL_ARB_bindless_texture
+    GL_ARB_blend_func_extended
+    GL_ARB_buffer_storage
+    GL_ARB_clear_buffer_object
+    GL_ARB_clear_texture
+    GL_ARB_clip_control
+    GL_ARB_color_buffer_float
+    GL_ARB_compatibility
+    GL_ARB_compressed_texture_pixel_storage
+    GL_ARB_compute_shader
+    GL_ARB_compute_variable_group_size
+    GL_ARB_conditional_render_inverted
+    GL_ARB_conservative_depth
+    GL_ARB_copy_buffer
+    GL_ARB_copy_image
+    GL_ARB_cull_distance
+    GL_ARB_debug_output
+    GL_ARB_depth_buffer_float
+    GL_ARB_depth_clamp
+    GL_ARB_depth_texture
+    GL_ARB_derivative_control
+    GL_ARB_direct_state_access
+    GL_ARB_draw_buffers
+    GL_ARB_draw_buffers_blend
+    GL_ARB_draw_elements_base_vertex
+    GL_ARB_draw_indirect
+    GL_ARB_draw_instanced
+    GL_ARB_enhanced_layouts
+    GL_ARB_explicit_attrib_location
+    GL_ARB_explicit_uniform_location
+    GL_ARB_fragment_coord_conventions
+    GL_ARB_fragment_layer_viewport
+    GL_ARB_fragment_program
+    GL_ARB_fragment_program_shadow
+    GL_ARB_fragment_shader
+    GL_ARB_framebuffer_no_attachments
+    GL_ARB_framebuffer_object
+    GL_ARB_framebuffer_sRGB
+    GL_ARB_geometry_shader4
+    GL_ARB_get_program_binary
+    GL_ARB_get_texture_sub_image
+    GL_ARB_gl_spirv
+    GL_ARB_gpu_shader5
+    GL_ARB_gpu_shader_fp64
+    GL_ARB_gpu_shader_int64
+    GL_ARB_half_float_pixel
+    GL_ARB_half_float_vertex
+    GL_ARB_imaging
+    GL_ARB_indirect_parameters
+    GL_ARB_instanced_arrays
+    GL_ARB_internalformat_query
+    GL_ARB_internalformat_query2
+    GL_ARB_invalidate_subdata
+    GL_ARB_map_buffer_alignment
+    GL_ARB_map_buffer_range
+    GL_ARB_multi_bind
+    GL_ARB_multi_draw_indirect
+    GL_ARB_multisample
+    GL_ARB_multitexture
+    GL_ARB_occlusion_query
+    GL_ARB_occlusion_query2
+    GL_ARB_parallel_shader_compile
+    GL_ARB_pipeline_statistics_query
+    GL_ARB_pixel_buffer_object
+    GL_ARB_point_parameters
+    GL_ARB_point_sprite
+    GL_ARB_polygon_offset_clamp
+    GL_ARB_program_interface_query
+    GL_ARB_provoking_vertex
+    GL_ARB_query_buffer_object
+    GL_ARB_robust_buffer_access_behavior
+    GL_ARB_robustness
+    GL_ARB_sample_shading
+    GL_ARB_sampler_objects
+    GL_ARB_seamless_cube_map
+    GL_ARB_seamless_cubemap_per_texture
+    GL_ARB_separate_shader_objects
+    GL_ARB_shader_atomic_counter_ops
+    GL_ARB_shader_atomic_counters
+    GL_ARB_shader_ballot
+    GL_ARB_shader_bit_encoding
+    GL_ARB_shader_clock
+    GL_ARB_shader_draw_parameters
+    GL_ARB_shader_group_vote
+    GL_ARB_shader_image_load_store
+    GL_ARB_shader_image_size
+    GL_ARB_shader_objects
+    GL_ARB_shader_precision
+    GL_ARB_shader_storage_buffer_object
+    GL_ARB_shader_subroutine
+    GL_ARB_shader_texture_image_samples
+    GL_ARB_shader_texture_lod
+    GL_ARB_shading_language_100
+    GL_ARB_shading_language_420pack
+    GL_ARB_shading_language_include
+    GL_ARB_shading_language_packing
+    GL_ARB_shadow
+    GL_ARB_sparse_buffer
+    GL_ARB_sparse_texture
+    GL_ARB_spirv_extensions
+    GL_ARB_stencil_texturing
+    GL_ARB_sync
+    GL_ARB_tessellation_shader
+    GL_ARB_texture_barrier
+    GL_ARB_texture_border_clamp
+    GL_ARB_texture_buffer_object
+    GL_ARB_texture_buffer_object_rgb32
+    GL_ARB_texture_buffer_range
+    GL_ARB_texture_compression
+    GL_ARB_texture_compression_bptc
+    GL_ARB_texture_compression_rgtc
+    GL_ARB_texture_cube_map
+    GL_ARB_texture_cube_map_array
+    GL_ARB_texture_env_add
+    GL_ARB_texture_env_combine
+    GL_ARB_texture_env_crossbar
+    GL_ARB_texture_env_dot3
+    GL_ARB_texture_filter_anisotropic
+    GL_ARB_texture_float
+    GL_ARB_texture_gather
+    GL_ARB_texture_mirror_clamp_to_edge
+    GL_ARB_texture_mirrored_repeat
+    GL_ARB_texture_multisample
+    GL_ARB_texture_non_power_of_two
+    GL_ARB_texture_query_levels
+    GL_ARB_texture_query_lod
+    GL_ARB_texture_rectangle
+    GL_ARB_texture_rg
+    GL_ARB_texture_rgb10_a2ui
+    GL_ARB_texture_stencil8
+    GL_ARB_texture_storage
+    GL_ARB_texture_storage_multisample
+    GL_ARB_texture_swizzle
+    GL_ARB_texture_view
+    GL_ARB_timer_query
+    GL_ARB_transform_feedback2
+    GL_ARB_transform_feedback3
+    GL_ARB_transform_feedback_instanced
+    GL_ARB_transform_feedback_overflow_query
+    GL_ARB_transpose_matrix
+    GL_ARB_uniform_buffer_object
+    GL_ARB_vertex_array_bgra
+    GL_ARB_vertex_array_object
+    GL_ARB_vertex_attrib_64bit
+    GL_ARB_vertex_attrib_binding
+    GL_ARB_vertex_buffer_object
+    GL_ARB_vertex_program
+    GL_ARB_vertex_shader
+    GL_ARB_vertex_type_10f_11f_11f_rev
+    GL_ARB_vertex_type_2_10_10_10_rev
+    GL_ARB_viewport_array
+    GL_ARB_window_pos
+    GL_ATI_draw_buffers
+    GL_ATI_texture_float
+    GL_ATI_texture_mirror_once
+    GL_EXTX_framebuffer_mixed_formats
+    GL_EXT_Cg_shader
+    GL_EXT_abgr
+    GL_EXT_bgra
+    GL_EXT_bindable_uniform
+    GL_EXT_blend_color
+    GL_EXT_blend_equation_separate
+    GL_EXT_blend_func_separate
+    GL_EXT_blend_minmax
+    GL_EXT_blend_subtract
+    GL_EXT_compiled_vertex_array
+    GL_EXT_depth_bounds_test
+    GL_EXT_direct_state_access
+    GL_EXT_draw_buffers2
+    GL_EXT_draw_instanced
+    GL_EXT_draw_range_elements
+    GL_EXT_fog_coord
+    GL_EXT_framebuffer_blit
+    GL_EXT_framebuffer_multisample
+    GL_EXT_framebuffer_multisample_blit_scaled
+    GL_EXT_framebuffer_object
+    GL_EXT_framebuffer_sRGB
+    GL_EXT_geometry_shader4
+    GL_EXT_gpu_program_parameters
+    GL_EXT_gpu_shader4
+    GL_EXT_import_sync_object
+    GL_EXT_memory_object
+    GL_EXT_memory_object_win32
+    GL_EXT_multi_draw_arrays
+    GL_EXT_packed_depth_stencil
+    GL_EXT_packed_float
+    GL_EXT_packed_pixels
+    GL_EXT_pixel_buffer_object
+    GL_EXT_point_parameters
+    GL_EXT_polygon_offset_clamp
+    GL_EXT_provoking_vertex
+    GL_EXT_rescale_normal
+    GL_EXT_secondary_color
+    GL_EXT_semaphore
+    GL_EXT_semaphore_win32
+    GL_EXT_separate_shader_objects
+    GL_EXT_separate_specular_color
+    GL_EXT_shader_image_load_store
+    GL_EXT_shader_integer_mix
+    GL_EXT_shadow_funcs
+    GL_EXT_stencil_two_side
+    GL_EXT_stencil_wrap
+    GL_EXT_texture3D
+    GL_EXT_texture_array
+    GL_EXT_texture_buffer_object
+    GL_EXT_texture_compression_dxt1
+    GL_EXT_texture_compression_latc
+    GL_EXT_texture_compression_rgtc
+    GL_EXT_texture_compression_s3tc
+    GL_EXT_texture_cube_map
+    GL_EXT_texture_edge_clamp
+    GL_EXT_texture_env_add
+    GL_EXT_texture_env_combine
+    GL_EXT_texture_env_dot3
+    GL_EXT_texture_filter_anisotropic
+    GL_EXT_texture_integer
+    GL_EXT_texture_lod
+    GL_EXT_texture_lod_bias
+    GL_EXT_texture_mirror_clamp
+    GL_EXT_texture_object
+    GL_EXT_texture_sRGB
+    GL_EXT_texture_sRGB_R8
+    GL_EXT_texture_sRGB_decode
+    GL_EXT_texture_shared_exponent
+    GL_EXT_texture_storage
+    GL_EXT_texture_swizzle
+    GL_EXT_timer_query
+    GL_EXT_transform_feedback2
+    GL_EXT_vertex_array
+    GL_EXT_vertex_array_bgra
+    GL_EXT_vertex_attrib_64bit
+    GL_EXT_win32_keyed_mutex
+    GL_EXT_window_rectangles
+    GL_IBM_rasterpos_clip
+    GL_IBM_texture_mirrored_repeat
+    GL_KHR_blend_equation_advanced
+    GL_KHR_context_flush_control
+    GL_KHR_debug
+    GL_KHR_no_error
+    GL_KHR_parallel_shader_compile
+    GL_KHR_robust_buffer_access_behavior
+    GL_KHR_robustness
+    GL_KTX_buffer_region
+    GL_NVX_conditional_render
+    GL_NVX_gpu_memory_info
+    GL_NVX_multigpu_info
+    GL_NVX_nvenc_interop
+    GL_NV_ES1_1_compatibility
+    GL_NV_ES3_1_compatibility
+    GL_NV_alpha_to_coverage_dither_control
+    GL_NV_bindless_multi_draw_indirect
+    GL_NV_bindless_multi_draw_indirect_count
+    GL_NV_bindless_texture
+    GL_NV_blend_equation_advanced
+    GL_NV_blend_square
+    GL_NV_command_list
+    GL_NV_compute_program5
+    GL_NV_conditional_render
+    GL_NV_copy_depth_to_color
+    GL_NV_copy_image
+    GL_NV_depth_buffer_float
+    GL_NV_depth_clamp
+    GL_NV_draw_texture
+    GL_NV_draw_vulkan_image
+    GL_NV_explicit_multisample
+    GL_NV_feature_query
+    GL_NV_fence
+    GL_NV_float_buffer
+    GL_NV_fog_distance
+    GL_NV_fragment_program
+    GL_NV_fragment_program2
+    GL_NV_fragment_program_option
+    GL_NV_framebuffer_multisample_coverage
+    GL_NV_geometry_shader4
+    GL_NV_gpu_program4
+    GL_NV_gpu_program4_1
+    GL_NV_gpu_program5
+    GL_NV_gpu_program5_mem_extended
+    GL_NV_gpu_program_fp64
+    GL_NV_gpu_shader5
+    GL_NV_half_float
+    GL_NV_internalformat_sample_query
+    GL_NV_light_max_exponent
+    GL_NV_multisample_coverage
+    GL_NV_multisample_filter_hint
+    GL_NV_occlusion_query
+    GL_NV_packed_depth_stencil
+    GL_NV_parameter_buffer_object
+    GL_NV_parameter_buffer_object2
+    GL_NV_path_rendering
+    GL_NV_pixel_data_range
+    GL_NV_point_sprite
+    GL_NV_primitive_restart
+    GL_NV_query_resource
+    GL_NV_query_resource_tag
+    GL_NV_register_combiners
+    GL_NV_register_combiners2
+    GL_NV_shader_atomic_counters
+    GL_NV_shader_atomic_float
+    GL_NV_shader_buffer_load
+    GL_NV_shader_storage_buffer_object
+    GL_NV_shader_thread_group
+    GL_NV_shader_thread_shuffle
+    GL_NV_texgen_reflection
+    GL_NV_texture_barrier
+    GL_NV_texture_compression_vtc
+    GL_NV_texture_env_combine4
+    GL_NV_texture_multisample
+    GL_NV_texture_rectangle
+    GL_NV_texture_rectangle_compressed
+    GL_NV_texture_shader
+    GL_NV_texture_shader2
+    GL_NV_texture_shader3
+    GL_NV_transform_feedback
+    GL_NV_transform_feedback2
+    GL_NV_uniform_buffer_unified_memory
+    GL_NV_vertex_array_range
+    GL_NV_vertex_array_range2
+    GL_NV_vertex_attrib_integer_64bit
+    GL_NV_vertex_buffer_unified_memory
+    GL_NV_vertex_program
+    GL_NV_vertex_program1_1
+    GL_NV_vertex_program2
+    GL_NV_vertex_program2_option
+    GL_NV_vertex_program3
+    GL_OVR_multiview
+    GL_OVR_multiview2
+    GL_S3_s3tc
+    GL_SGIS_generate_mipmap
+    GL_SGIS_texture_lod
+    GL_SGIX_depth_texture
+    GL_SGIX_shadow
+    GL_SUN_slice_accum
+    GL_WIN_swap_hint
+    WGL_EXT_swap_control
+Number of texture units: 4
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 40.9249999523s
+The window was minimized.
+The window was restored.
+
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Resetting cache.
+Bootstrap to the start of init.init took 56.69s
+Early init took 0.00s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.34s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.01s
+
+File "game/labels/cassDate1.rpy", line 105: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    s "Dangit. I think we might've messed up.
+            k "Yeah... they  only gave me a few options."
+                ^
+            c "< I love it. >"
+            k "What?"
+            s "What?"
+            c "< What can I say? I'm a rock star, but I like cute things. That shirt is cute and you're cute in it.>"
+            pause 0.5
+            k "... thank you!"
+    
+        if outfitCurrent = "Pantsuit":
+            c "< Nice suit. >"
+            s "Yeah, in hindsight, seems like a bad choice for a rock star."
+            k "You don't like it."
+            c "< I just feel under dressed compared to you. >"
+            ki "... should've seen that one coming."
+    
+        menu:
+    
+            s "Whaddaya say, chat? Like if it were me, I'd want to be sober for sure, but..."
+    
+            "Have a drink":
+                k "I'll have a --"
+    
+                ki "You know, I shouldn't be drinking. Not now. Not when there are two other people to meet."
+    
+                k "I'd just like some cranberry juice if that's okay."
+    
+                $chat.addmessage(shub, "Pssh")
+                $chat.addmessage(cake, "weakesauce")
+    
+                s "Oh, come on! If you're gonna give me the choice, why shouldn't my choice matter?"
+    
+                $chat.addmessage(shub, "maybe it's like a life reclection")
+    
+                s "I mean... really!"
+    
+            "Just juice":
+                k "I wouldn't mind some cranberry juice."
+    
+                c "..."
+    
+                $chat.addmessage(egg, "oof, DISAPPOINTED")
+    
+                ki "Her smile exists in a way that barely makes sense to me. I wonder if I let her down just now."
+    
+        # end choice
+    
+        ki "There's a tablet mounted to the table, and Cassandra swipes at it a few times to place our drink orders. I don't see any food on the menu, so I suppose my earlier observation was accurate."
+    
+        $chat.addmessage(fizz, "Sophie, what's your favorite drink?")
+    
+        ki "The camera crew keeps its distance, far enough that I could probably forget about them after a few days of this."
+    
+        $chat.addmessage(elsa, "Yeah, Sophie! I like cosmos myself")
+        $chat.addmessage(shub, "sex on the beach, not a meme, for real")
+    
+        ki "Problem is, this is day one and I feel like a drama student who can't quite get her lines out."
+    
+        s "I'd be nervous if it were me. Cassandra's a star, after all."
+    
+        s "Oh, um, guys I would say my favorite drink is a negroni. Gin and vermouth, it's mature I guess."
+    
+        c "< It's a strange situation we're in. I want to tell you up front that I am serious about this. >"
+    
+        $chat.addmessage(elsa, "mmm classy")
+    
+        ki "I believe her, and still, I'm not sure how to interpret the message."
+    
+        k "I guess this is the part where we tell each other about, uh, each other?"
+    
+        $chat.addmessage(egg, " This is where I would fumble lol")
+    
+        ki "God, I'm an idiot."
+    
+        s "God, I'm adorable."
+    
+        $chat.addmessage(fizz, "You're both right")
+    
+        c "< It would have been easier if we were both drunk already. >"
+    
+        k "Maybe."
+    
+        pause 1.0
+    
+        k "Okay. So, uh, Cassandra. How'd you end up on the show?"
+    
+        $chat.addmessage(cake, "she's in the script lol")
+    
+        ki "Nicely done, self, a fully formed question!"
+    
+        $chat.addmessage(crab, "lol")
+    
+        c "< I am looking for inspiration. I guess I lost my voice somewhere along the way. >"
+    
+        ki "Is that... wait, is she talking about her --"
+    
+        $chat.addmessage(egg, "Metaphor")
+    
+        ki "Her smile broadens. It's going to be hard to tell when she's joking, isn't it?"
+    
+        s "My question is, how does the TV show know what she's saying?"
+    
+        $chat.addmessage(bar, "RIGHT?")
+    
+        ki "I chuckle, but I don't know if it's appropriate."
+    
+        c "< It was a joke. >"
+    
+        k "I, uh, I knew that!"
+    
+        $chat.addmessage(elsa, "Kylie's a ditz, isn't she")
+    
+        c "< My songs just aren't the same anymore, Kylie. I thought going on this show and meeting someone new in this weird pressure cooker of an environment might draw something out of me.> "
+    
+        ki "I suppose this is as good a time as ever to tell her that I..."
+    
+        $chat.addmessage(egg, "Don't like girls")
+    
+        k "I love your new stuff though."
+    
+        $chat.addmessage(fizz, "Huh. We've just been assuming Kylie likes women, though. What if she's faking?")
+    
+        ki "Her expression changes, then, as she accepts this new piece of information. I'm not sure if she hoped I'd be a fan, or hoped for the opposite."
+    
+        c "< So you know my work? >"
+    
+        k "I love your work. Intolerable Jewelry got me through the worst break-up of my life!"
+    
+        python:
+            newComments = [
+                [crab, "name drop"],
+                [fizz, "Had to say the title at some point"],
+                [elsa, "We did it guys!"],
+                [shub, "ROLL CREDITS"],
+                [cake, "that title is dumb"],
+                [liv, "I love the album tho"],
+                [bar, "liv you way too into this"],
+                [beav, "roll cred-- shit"]
+    
+            ]
+        $chat.bulkMessage(newComments, 0)
+    
+        s "So wait, if I'm a super fan doesn't that mean I should choose Cassandra? That doesn't seem fair to the others."
+    
+        $chat.addmessage(egg, "You would think")
+    
+        ki "Her smile falters a little bit. She's typing feverishly, and I wonder whether I've found a way to ruin everything already."
+    
+        $chat.addmessage(elsa, "God, maybe she really needed to meet someone who didn't know her.")
+    
+        c "< Writing it did the same for me. >"
+    
+        show c happy
+    
+        c "<I'm really happy to know you're a fan. I'm also really happy you're not asking for an autograph.>"
+    
+        $chat.addmessage(elsa, "There you go")
+    
+        $chat.addmessage(egg, "Yeah you right")
+    
+        ki "The thought had crossed my mind."
+    
+        k "I don't want to be a bothersome fangirl. I mean, I am, but not like, you know? Like that."
+    
+        $chat.addmessage(fizz, "I am a fan of yours, Sophie")
+    
+        c "< You're handling it well. >"
+    
+        $chat.addmessage(cake, "OBVIOUSLY")
+    
+        k "On the outside. Inside, I'm screaming like a teenager at one of your shows."
+    
+        show c flirty
+    
+        ki "I don't want to put her on guard, and it seems to be working. Her finger traces the edge of her phone, lightly, meaningfully."
+    
+        ki "The drinks arrive, and for a moment the interruption of a server derails our conversation. Cassandra downs a shot of tequila and makes a face, leaving two more shots on the table."
+    
+        $chat.addmessage(shub, "Cass BEASt yo")
+    
+        ki "I find myself wringing my hands lightly together. This is so much harder than it looked on TV. Magic of editing, I guess."
+    
+        pause 0.5
+        show c listen
+        pause 1.0
+    
+        c "< I didn't think it would be this hard.> "
+    
+        $chat.addmessage(egg, "not a word, Crablegs")
+    
+        k "I was thinking the same thing."
+    
+        $chat.addmessage(crab, "aww")
+    
+        c "< So... I have a question. >"
+    
+        $chat.addmessage(fizz, "lol")
+    
+        c "< I know you like my work. And I guess you wouldn't be on the show otherwise, but... you like girls, right? >"
+    
+        ki "The question strikes me as fully appropriate and adorably obvious."
+    
+        $chat.addmessage(shub, "Actually a resonable flucking question.")
+    
+        k "I..."
+    
+        ki "I guess someone should have asked this question already. It dawns on me, just now, that nobody ever asked me flat out if I... huh."
+    
+        $chat.addmessage(crab, "I like girls, Elsa")
+    
+        c "< Well, I do. >"
+    
+        $chat.addmessage(elsa, "Sucks for them.")
+    
+        ki "Her smile was bashful from the moment it poured across her lips. Now, it's downright vulnerable."
+    
+        k "I do, too."
+    
+        $chat.addmessage(cake, "lol roasted crablegs")
+    
+        c "< I always thought this show was fake. Really, I did. How's a person supposed to fall in love in two dates? >"
+    
+        k "I don't know."
+    
+        $chat.addmessage(beav, "Falling in love in two dates is easy. Just date me twice.")
+    
+        ki "It's easy for me. I know who she is, I've idolized her, even. To her, though, I'm just another face."
+    
+        $chat.addmessage(beav, "I'm turnin women into waterslideds")
+    
+        $chat.addmessage(liv, "Yes, you do! You're so charming, AngeredBeaver69.")
+    
+        ki "Cassandra slams another shot, easily, in a practiced way."
+    
+        $chat.addmessage(shub, "dafuq")
+    
+        c "< I have an idea, though. >"
+    
+        $chat.addmessage(egg, "boobs")
+    
+        k "Oh?"
+    
+        $chat.addmessage(bar, "Is this where we R as a society")
+    
+        c "< I rented a little studio, not too far from here. Would you like to be on my next album? >"
+    
+        s "Oh, wow! Chat, we're gonna be rock stars! Also, you guys raise some valid points. It's definitely a good idea to find out if Kylie likes girls before asking her to date three or four of them."
+    
+        k "Wait what."
+    
+        c "..."
+    
+        $chat.addmessage(cake, "Kan we even sing?")
+    
+        k "Really?"
+    
+        $chat.addmessage(egg, "I can sing")
+    
+        ki "She nods, her smile returning."
+    
+        $chat.addmessage(elsa, "Really, egg? Baritone?")
+    
+        k "Oh my god, yes!"
+    
+        k "Oh, I, but I can't play anything."
+    
+        $chat.addmessage(cake, "falsetto lol")
+    
+        $chat.addmessage(egg, "yis baritone")
+    
+        c "< That's no problem. I can teach you. >"
+    
+        k "I'm trying my best not to go full fangirl right now, you know that, right?"
+    
+        $chat.addmessage(cake, "OBVIOUSLY")
+    
+        c "< I appreciate it, too. >"
+    
+        c "< I'm hoping I can get you to like me for more than my discography.>"
+    
+        $chat.addmessage(bar, "what's so obvious at that")
+    
+        k "Oh trust me, you, and, uh... I mean... sorry, I'm a little tongue tied."
+    
+        c "< I can help with that. >"
+    
+        $chat.addmessage(cake, "
+DPI scale factor: 1.000000
+Interface start took 0.06s
+
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 760/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 432.00'
+Display Info: None
+Fixed-function is blacklisted.
+Extensions:
+    
+    GL_AMD_multi_draw_indirect
+    GL_AMD_seamless_cubemap_per_texture
+    GL_ARB_ES2_compatibility
+    GL_ARB_ES3_1_compatibility
+    GL_ARB_ES3_2_compatibility
+    GL_ARB_ES3_compatibility
+    GL_ARB_arrays_of_arrays
+    GL_ARB_base_instance
+    GL_ARB_bindless_texture
+    GL_ARB_blend_func_extended
+    GL_ARB_buffer_storage
+    GL_ARB_clear_buffer_object
+    GL_ARB_clear_texture
+    GL_ARB_clip_control
+    GL_ARB_color_buffer_float
+    GL_ARB_compatibility
+    GL_ARB_compressed_texture_pixel_storage
+    GL_ARB_compute_shader
+    GL_ARB_compute_variable_group_size
+    GL_ARB_conditional_render_inverted
+    GL_ARB_conservative_depth
+    GL_ARB_copy_buffer
+    GL_ARB_copy_image
+    GL_ARB_cull_distance
+    GL_ARB_debug_output
+    GL_ARB_depth_buffer_float
+    GL_ARB_depth_clamp
+    GL_ARB_depth_texture
+    GL_ARB_derivative_control
+    GL_ARB_direct_state_access
+    GL_ARB_draw_buffers
+    GL_ARB_draw_buffers_blend
+    GL_ARB_draw_elements_base_vertex
+    GL_ARB_draw_indirect
+    GL_ARB_draw_instanced
+    GL_ARB_enhanced_layouts
+    GL_ARB_explicit_attrib_location
+    GL_ARB_explicit_uniform_location
+    GL_ARB_fragment_coord_conventions
+    GL_ARB_fragment_layer_viewport
+    GL_ARB_fragment_program
+    GL_ARB_fragment_program_shadow
+    GL_ARB_fragment_shader
+    GL_ARB_framebuffer_no_attachments
+    GL_ARB_framebuffer_object
+    GL_ARB_framebuffer_sRGB
+    GL_ARB_geometry_shader4
+    GL_ARB_get_program_binary
+    GL_ARB_get_texture_sub_image
+    GL_ARB_gl_spirv
+    GL_ARB_gpu_shader5
+    GL_ARB_gpu_shader_fp64
+    GL_ARB_gpu_shader_int64
+    GL_ARB_half_float_pixel
+    GL_ARB_half_float_vertex
+    GL_ARB_imaging
+    GL_ARB_indirect_parameters
+    GL_ARB_instanced_arrays
+    GL_ARB_internalformat_query
+    GL_ARB_internalformat_query2
+    GL_ARB_invalidate_subdata
+    GL_ARB_map_buffer_alignment
+    GL_ARB_map_buffer_range
+    GL_ARB_multi_bind
+    GL_ARB_multi_draw_indirect
+    GL_ARB_multisample
+    GL_ARB_multitexture
+    GL_ARB_occlusion_query
+    GL_ARB_occlusion_query2
+    GL_ARB_parallel_shader_compile
+    GL_ARB_pipeline_statistics_query
+    GL_ARB_pixel_buffer_object
+    GL_ARB_point_parameters
+    GL_ARB_point_sprite
+    GL_ARB_polygon_offset_clamp
+    GL_ARB_program_interface_query
+    GL_ARB_provoking_vertex
+    GL_ARB_query_buffer_object
+    GL_ARB_robust_buffer_access_behavior
+    GL_ARB_robustness
+    GL_ARB_sample_shading
+    GL_ARB_sampler_objects
+    GL_ARB_seamless_cube_map
+    GL_ARB_seamless_cubemap_per_texture
+    GL_ARB_separate_shader_objects
+    GL_ARB_shader_atomic_counter_ops
+    GL_ARB_shader_atomic_counters
+    GL_ARB_shader_ballot
+    GL_ARB_shader_bit_encoding
+    GL_ARB_shader_clock
+    GL_ARB_shader_draw_parameters
+    GL_ARB_shader_group_vote
+    GL_ARB_shader_image_load_store
+    GL_ARB_shader_image_size
+    GL_ARB_shader_objects
+    GL_ARB_shader_precision
+    GL_ARB_shader_storage_buffer_object
+    GL_ARB_shader_subroutine
+    GL_ARB_shader_texture_image_samples
+    GL_ARB_shader_texture_lod
+    GL_ARB_shading_language_100
+    GL_ARB_shading_language_420pack
+    GL_ARB_shading_language_include
+    GL_ARB_shading_language_packing
+    GL_ARB_shadow
+    GL_ARB_sparse_buffer
+    GL_ARB_sparse_texture
+    GL_ARB_spirv_extensions
+    GL_ARB_stencil_texturing
+    GL_ARB_sync
+    GL_ARB_tessellation_shader
+    GL_ARB_texture_barrier
+    GL_ARB_texture_border_clamp
+    GL_ARB_texture_buffer_object
+    GL_ARB_texture_buffer_object_rgb32
+    GL_ARB_texture_buffer_range
+    GL_ARB_texture_compression
+    GL_ARB_texture_compression_bptc
+    GL_ARB_texture_compression_rgtc
+    GL_ARB_texture_cube_map
+    GL_ARB_texture_cube_map_array
+    GL_ARB_texture_env_add
+    GL_ARB_texture_env_combine
+    GL_ARB_texture_env_crossbar
+    GL_ARB_texture_env_dot3
+    GL_ARB_texture_filter_anisotropic
+    GL_ARB_texture_float
+    GL_ARB_texture_gather
+    GL_ARB_texture_mirror_clamp_to_edge
+    GL_ARB_texture_mirrored_repeat
+    GL_ARB_texture_multisample
+    GL_ARB_texture_non_power_of_two
+    GL_ARB_texture_query_levels
+    GL_ARB_texture_query_lod
+    GL_ARB_texture_rectangle
+    GL_ARB_texture_rg
+    GL_ARB_texture_rgb10_a2ui
+    GL_ARB_texture_stencil8
+    GL_ARB_texture_storage
+    GL_ARB_texture_storage_multisample
+    GL_ARB_texture_swizzle
+    GL_ARB_texture_view
+    GL_ARB_timer_query
+    GL_ARB_transform_feedback2
+    GL_ARB_transform_feedback3
+    GL_ARB_transform_feedback_instanced
+    GL_ARB_transform_feedback_overflow_query
+    GL_ARB_transpose_matrix
+    GL_ARB_uniform_buffer_object
+    GL_ARB_vertex_array_bgra
+    GL_ARB_vertex_array_object
+    GL_ARB_vertex_attrib_64bit
+    GL_ARB_vertex_attrib_binding
+    GL_ARB_vertex_buffer_object
+    GL_ARB_vertex_program
+    GL_ARB_vertex_shader
+    GL_ARB_vertex_type_10f_11f_11f_rev
+    GL_ARB_vertex_type_2_10_10_10_rev
+    GL_ARB_viewport_array
+    GL_ARB_window_pos
+    GL_ATI_draw_buffers
+    GL_ATI_texture_float
+    GL_ATI_texture_mirror_once
+    GL_EXTX_framebuffer_mixed_formats
+    GL_EXT_Cg_shader
+    GL_EXT_abgr
+    GL_EXT_bgra
+    GL_EXT_bindable_uniform
+    GL_EXT_blend_color
+    GL_EXT_blend_equation_separate
+    GL_EXT_blend_func_separate
+    GL_EXT_blend_minmax
+    GL_EXT_blend_subtract
+    GL_EXT_compiled_vertex_array
+    GL_EXT_depth_bounds_test
+    GL_EXT_direct_state_access
+    GL_EXT_draw_buffers2
+    GL_EXT_draw_instanced
+    GL_EXT_draw_range_elements
+    GL_EXT_fog_coord
+    GL_EXT_framebuffer_blit
+    GL_EXT_framebuffer_multisample
+    GL_EXT_framebuffer_multisample_blit_scaled
+    GL_EXT_framebuffer_object
+    GL_EXT_framebuffer_sRGB
+    GL_EXT_geometry_shader4
+    GL_EXT_gpu_program_parameters
+    GL_EXT_gpu_shader4
+    GL_EXT_import_sync_object
+    GL_EXT_memory_object
+    GL_EXT_memory_object_win32
+    GL_EXT_multi_draw_arrays
+    GL_EXT_packed_depth_stencil
+    GL_EXT_packed_float
+    GL_EXT_packed_pixels
+    GL_EXT_pixel_buffer_object
+    GL_EXT_point_parameters
+    GL_EXT_polygon_offset_clamp
+    GL_EXT_provoking_vertex
+    GL_EXT_rescale_normal
+    GL_EXT_secondary_color
+    GL_EXT_semaphore
+    GL_EXT_semaphore_win32
+    GL_EXT_separate_shader_objects
+    GL_EXT_separate_specular_color
+    GL_EXT_shader_image_load_store
+    GL_EXT_shader_integer_mix
+    GL_EXT_shadow_funcs
+    GL_EXT_stencil_two_side
+    GL_EXT_stencil_wrap
+    GL_EXT_texture3D
+    GL_EXT_texture_array
+    GL_EXT_texture_buffer_object
+    GL_EXT_texture_compression_dxt1
+    GL_EXT_texture_compression_latc
+    GL_EXT_texture_compression_rgtc
+    GL_EXT_texture_compression_s3tc
+    GL_EXT_texture_cube_map
+    GL_EXT_texture_edge_clamp
+    GL_EXT_texture_env_add
+    GL_EXT_texture_env_combine
+    GL_EXT_texture_env_dot3
+    GL_EXT_texture_filter_anisotropic
+    GL_EXT_texture_integer
+    GL_EXT_texture_lod
+    GL_EXT_texture_lod_bias
+    GL_EXT_texture_mirror_clamp
+    GL_EXT_texture_object
+    GL_EXT_texture_sRGB
+    GL_EXT_texture_sRGB_R8
+    GL_EXT_texture_sRGB_decode
+    GL_EXT_texture_shared_exponent
+    GL_EXT_texture_storage
+    GL_EXT_texture_swizzle
+    GL_EXT_timer_query
+    GL_EXT_transform_feedback2
+    GL_EXT_vertex_array
+    GL_EXT_vertex_array_bgra
+    GL_EXT_vertex_attrib_64bit
+    GL_EXT_win32_keyed_mutex
+    GL_EXT_window_rectangles
+    GL_IBM_rasterpos_clip
+    GL_IBM_texture_mirrored_repeat
+    GL_KHR_blend_equation_advanced
+    GL_KHR_context_flush_control
+    GL_KHR_debug
+    GL_KHR_no_error
+    GL_KHR_parallel_shader_compile
+    GL_KHR_robust_buffer_access_behavior
+    GL_KHR_robustness
+    GL_KTX_buffer_region
+    GL_NVX_conditional_render
+    GL_NVX_gpu_memory_info
+    GL_NVX_multigpu_info
+    GL_NVX_nvenc_interop
+    GL_NV_ES1_1_compatibility
+    GL_NV_ES3_1_compatibility
+    GL_NV_alpha_to_coverage_dither_control
+    GL_NV_bindless_multi_draw_indirect
+    GL_NV_bindless_multi_draw_indirect_count
+    GL_NV_bindless_texture
+    GL_NV_blend_equation_advanced
+    GL_NV_blend_square
+    GL_NV_command_list
+    GL_NV_compute_program5
+    GL_NV_conditional_render
+    GL_NV_copy_depth_to_color
+    GL_NV_copy_image
+    GL_NV_depth_buffer_float
+    GL_NV_depth_clamp
+    GL_NV_draw_texture
+    GL_NV_draw_vulkan_image
+    GL_NV_explicit_multisample
+    GL_NV_feature_query
+    GL_NV_fence
+    GL_NV_float_buffer
+    GL_NV_fog_distance
+    GL_NV_fragment_program
+    GL_NV_fragment_program2
+    GL_NV_fragment_program_option
+    GL_NV_framebuffer_multisample_coverage
+    GL_NV_geometry_shader4
+    GL_NV_gpu_program4
+    GL_NV_gpu_program4_1
+    GL_NV_gpu_program5
+    GL_NV_gpu_program5_mem_extended
+    GL_NV_gpu_program_fp64
+    GL_NV_gpu_shader5
+    GL_NV_half_float
+    GL_NV_internalformat_sample_query
+    GL_NV_light_max_exponent
+    GL_NV_multisample_coverage
+    GL_NV_multisample_filter_hint
+    GL_NV_occlusion_query
+    GL_NV_packed_depth_stencil
+    GL_NV_parameter_buffer_object
+    GL_NV_parameter_buffer_object2
+    GL_NV_path_rendering
+    GL_NV_pixel_data_range
+    GL_NV_point_sprite
+    GL_NV_primitive_restart
+    GL_NV_query_resource
+    GL_NV_query_resource_tag
+    GL_NV_register_combiners
+    GL_NV_register_combiners2
+    GL_NV_shader_atomic_counters
+    GL_NV_shader_atomic_float
+    GL_NV_shader_buffer_load
+    GL_NV_shader_storage_buffer_object
+    GL_NV_shader_thread_group
+    GL_NV_shader_thread_shuffle
+    GL_NV_texgen_reflection
+    GL_NV_texture_barrier
+    GL_NV_texture_compression_vtc
+    GL_NV_texture_env_combine4
+    GL_NV_texture_multisample
+    GL_NV_texture_rectangle
+    GL_NV_texture_rectangle_compressed
+    GL_NV_texture_shader
+    GL_NV_texture_shader2
+    GL_NV_texture_shader3
+    GL_NV_transform_feedback
+    GL_NV_transform_feedback2
+    GL_NV_uniform_buffer_unified_memory
+    GL_NV_vertex_array_range
+    GL_NV_vertex_array_range2
+    GL_NV_vertex_attrib_integer_64bit
+    GL_NV_vertex_buffer_unified_memory
+    GL_NV_vertex_program
+    GL_NV_vertex_program1_1
+    GL_NV_vertex_program2
+    GL_NV_vertex_program2_option
+    GL_NV_vertex_program3
+    GL_OVR_multiview
+    GL_OVR_multiview2
+    GL_S3_s3tc
+    GL_SGIS_generate_mipmap
+    GL_SGIS_texture_lod
+    GL_SGIX_depth_texture
+    GL_SGIX_shadow
+    GL_SUN_slice_accum
+    GL_WIN_swap_hint
+    WGL_EXT_swap_control
+Number of texture units: 4
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 57.2810001373s
+Resetting cache.
+Bootstrap to the start of init.init took 70.13s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.51s
+Loading save slot metadata. took 0.03s
+Loading persistent took 0.01s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.06s
+Loading analysis data took 0.06s
+Analyze and compile ATL took 0.00s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\John Dough\\AppData\\Roaming/RenPy/backups\\IntolerableJewelry':
+Dump and make backups. took 0.08s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+Creating interface object took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.01s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.06s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.06s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.03s
+
+primary display bounds: (0, 0, 1360, 768)
+swap interval: 1 frames
+Windowed mode.
+Screen sizes: virtual=(1280, 720) physical=(1184, 666) drawable=(1184, 666)
+Vendor: 'NVIDIA Corporation'
+Renderer: 'GeForce GTX 760/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 432.00'
+Display Info: None
+Fixed-function is blacklisted.
+Extensions:
+    
+    GL_AMD_multi_draw_indirect
+    GL_AMD_seamless_cubemap_per_texture
+    GL_ARB_ES2_compatibility
+    GL_ARB_ES3_1_compatibility
+    GL_ARB_ES3_2_compatibility
+    GL_ARB_ES3_compatibility
+    GL_ARB_arrays_of_arrays
+    GL_ARB_base_instance
+    GL_ARB_bindless_texture
+    GL_ARB_blend_func_extended
+    GL_ARB_buffer_storage
+    GL_ARB_clear_buffer_object
+    GL_ARB_clear_texture
+    GL_ARB_clip_control
+    GL_ARB_color_buffer_float
+    GL_ARB_compatibility
+    GL_ARB_compressed_texture_pixel_storage
+    GL_ARB_compute_shader
+    GL_ARB_compute_variable_group_size
+    GL_ARB_conditional_render_inverted
+    GL_ARB_conservative_depth
+    GL_ARB_copy_buffer
+    GL_ARB_copy_image
+    GL_ARB_cull_distance
+    GL_ARB_debug_output
+    GL_ARB_depth_buffer_float
+    GL_ARB_depth_clamp
+    GL_ARB_depth_texture
+    GL_ARB_derivative_control
+    GL_ARB_direct_state_access
+    GL_ARB_draw_buffers
+    GL_ARB_draw_buffers_blend
+    GL_ARB_draw_elements_base_vertex
+    GL_ARB_draw_indirect
+    GL_ARB_draw_instanced
+    GL_ARB_enhanced_layouts
+    GL_ARB_explicit_attrib_location
+    GL_ARB_explicit_uniform_location
+    GL_ARB_fragment_coord_conventions
+    GL_ARB_fragment_layer_viewport
+    GL_ARB_fragment_program
+    GL_ARB_fragment_program_shadow
+    GL_ARB_fragment_shader
+    GL_ARB_framebuffer_no_attachments
+    GL_ARB_framebuffer_object
+    GL_ARB_framebuffer_sRGB
+    GL_ARB_geometry_shader4
+    GL_ARB_get_program_binary
+    GL_ARB_get_texture_sub_image
+    GL_ARB_gl_spirv
+    GL_ARB_gpu_shader5
+    GL_ARB_gpu_shader_fp64
+    GL_ARB_gpu_shader_int64
+    GL_ARB_half_float_pixel
+    GL_ARB_half_float_vertex
+    GL_ARB_imaging
+    GL_ARB_indirect_parameters
+    GL_ARB_instanced_arrays
+    GL_ARB_internalformat_query
+    GL_ARB_internalformat_query2
+    GL_ARB_invalidate_subdata
+    GL_ARB_map_buffer_alignment
+    GL_ARB_map_buffer_range
+    GL_ARB_multi_bind
+    GL_ARB_multi_draw_indirect
+    GL_ARB_multisample
+    GL_ARB_multitexture
+    GL_ARB_occlusion_query
+    GL_ARB_occlusion_query2
+    GL_ARB_parallel_shader_compile
+    GL_ARB_pipeline_statistics_query
+    GL_ARB_pixel_buffer_object
+    GL_ARB_point_parameters
+    GL_ARB_point_sprite
+    GL_ARB_polygon_offset_clamp
+    GL_ARB_program_interface_query
+    GL_ARB_provoking_vertex
+    GL_ARB_query_buffer_object
+    GL_ARB_robust_buffer_access_behavior
+    GL_ARB_robustness
+    GL_ARB_sample_shading
+    GL_ARB_sampler_objects
+    GL_ARB_seamless_cube_map
+    GL_ARB_seamless_cubemap_per_texture
+    GL_ARB_separate_shader_objects
+    GL_ARB_shader_atomic_counter_ops
+    GL_ARB_shader_atomic_counters
+    GL_ARB_shader_ballot
+    GL_ARB_shader_bit_encoding
+    GL_ARB_shader_clock
+    GL_ARB_shader_draw_parameters
+    GL_ARB_shader_group_vote
+    GL_ARB_shader_image_load_store
+    GL_ARB_shader_image_size
+    GL_ARB_shader_objects
+    GL_ARB_shader_precision
+    GL_ARB_shader_storage_buffer_object
+    GL_ARB_shader_subroutine
+    GL_ARB_shader_texture_image_samples
+    GL_ARB_shader_texture_lod
+    GL_ARB_shading_language_100
+    GL_ARB_shading_language_420pack
+    GL_ARB_shading_language_include
+    GL_ARB_shading_language_packing
+    GL_ARB_shadow
+    GL_ARB_sparse_buffer
+    GL_ARB_sparse_texture
+    GL_ARB_spirv_extensions
+    GL_ARB_stencil_texturing
+    GL_ARB_sync
+    GL_ARB_tessellation_shader
+    GL_ARB_texture_barrier
+    GL_ARB_texture_border_clamp
+    GL_ARB_texture_buffer_object
+    GL_ARB_texture_buffer_object_rgb32
+    GL_ARB_texture_buffer_range
+    GL_ARB_texture_compression
+    GL_ARB_texture_compression_bptc
+    GL_ARB_texture_compression_rgtc
+    GL_ARB_texture_cube_map
+    GL_ARB_texture_cube_map_array
+    GL_ARB_texture_env_add
+    GL_ARB_texture_env_combine
+    GL_ARB_texture_env_crossbar
+    GL_ARB_texture_env_dot3
+    GL_ARB_texture_filter_anisotropic
+    GL_ARB_texture_float
+    GL_ARB_texture_gather
+    GL_ARB_texture_mirror_clamp_to_edge
+    GL_ARB_texture_mirrored_repeat
+    GL_ARB_texture_multisample
+    GL_ARB_texture_non_power_of_two
+    GL_ARB_texture_query_levels
+    GL_ARB_texture_query_lod
+    GL_ARB_texture_rectangle
+    GL_ARB_texture_rg
+    GL_ARB_texture_rgb10_a2ui
+    GL_ARB_texture_stencil8
+    GL_ARB_texture_storage
+    GL_ARB_texture_storage_multisample
+    GL_ARB_texture_swizzle
+    GL_ARB_texture_view
+    GL_ARB_timer_query
+    GL_ARB_transform_feedback2
+    GL_ARB_transform_feedback3
+    GL_ARB_transform_feedback_instanced
+    GL_ARB_transform_feedback_overflow_query
+    GL_ARB_transpose_matrix
+    GL_ARB_uniform_buffer_object
+    GL_ARB_vertex_array_bgra
+    GL_ARB_vertex_array_object
+    GL_ARB_vertex_attrib_64bit
+    GL_ARB_vertex_attrib_binding
+    GL_ARB_vertex_buffer_object
+    GL_ARB_vertex_program
+    GL_ARB_vertex_shader
+    GL_ARB_vertex_type_10f_11f_11f_rev
+    GL_ARB_vertex_type_2_10_10_10_rev
+    GL_ARB_viewport_array
+    GL_ARB_window_pos
+    GL_ATI_draw_buffers
+    GL_ATI_texture_float
+    GL_ATI_texture_mirror_once
+    GL_EXTX_framebuffer_mixed_formats
+    GL_EXT_Cg_shader
+    GL_EXT_abgr
+    GL_EXT_bgra
+    GL_EXT_bindable_uniform
+    GL_EXT_blend_color
+    GL_EXT_blend_equation_separate
+    GL_EXT_blend_func_separate
+    GL_EXT_blend_minmax
+    GL_EXT_blend_subtract
+    GL_EXT_compiled_vertex_array
+    GL_EXT_depth_bounds_test
+    GL_EXT_direct_state_access
+    GL_EXT_draw_buffers2
+    GL_EXT_draw_instanced
+    GL_EXT_draw_range_elements
+    GL_EXT_fog_coord
+    GL_EXT_framebuffer_blit
+    GL_EXT_framebuffer_multisample
+    GL_EXT_framebuffer_multisample_blit_scaled
+    GL_EXT_framebuffer_object
+    GL_EXT_framebuffer_sRGB
+    GL_EXT_geometry_shader4
+    GL_EXT_gpu_program_parameters
+    GL_EXT_gpu_shader4
+    GL_EXT_import_sync_object
+    GL_EXT_memory_object
+    GL_EXT_memory_object_win32
+    GL_EXT_multi_draw_arrays
+    GL_EXT_packed_depth_stencil
+    GL_EXT_packed_float
+    GL_EXT_packed_pixels
+    GL_EXT_pixel_buffer_object
+    GL_EXT_point_parameters
+    GL_EXT_polygon_offset_clamp
+    GL_EXT_provoking_vertex
+    GL_EXT_rescale_normal
+    GL_EXT_secondary_color
+    GL_EXT_semaphore
+    GL_EXT_semaphore_win32
+    GL_EXT_separate_shader_objects
+    GL_EXT_separate_specular_color
+    GL_EXT_shader_image_load_store
+    GL_EXT_shader_integer_mix
+    GL_EXT_shadow_funcs
+    GL_EXT_stencil_two_side
+    GL_EXT_stencil_wrap
+    GL_EXT_texture3D
+    GL_EXT_texture_array
+    GL_EXT_texture_buffer_object
+    GL_EXT_texture_compression_dxt1
+    GL_EXT_texture_compression_latc
+    GL_EXT_texture_compression_rgtc
+    GL_EXT_texture_compression_s3tc
+    GL_EXT_texture_cube_map
+    GL_EXT_texture_edge_clamp
+    GL_EXT_texture_env_add
+    GL_EXT_texture_env_combine
+    GL_EXT_texture_env_dot3
+    GL_EXT_texture_filter_anisotropic
+    GL_EXT_texture_integer
+    GL_EXT_texture_lod
+    GL_EXT_texture_lod_bias
+    GL_EXT_texture_mirror_clamp
+    GL_EXT_texture_object
+    GL_EXT_texture_sRGB
+    GL_EXT_texture_sRGB_R8
+    GL_EXT_texture_sRGB_decode
+    GL_EXT_texture_shared_exponent
+    GL_EXT_texture_storage
+    GL_EXT_texture_swizzle
+    GL_EXT_timer_query
+    GL_EXT_transform_feedback2
+    GL_EXT_vertex_array
+    GL_EXT_vertex_array_bgra
+    GL_EXT_vertex_attrib_64bit
+    GL_EXT_win32_keyed_mutex
+    GL_EXT_window_rectangles
+    GL_IBM_rasterpos_clip
+    GL_IBM_texture_mirrored_repeat
+    GL_KHR_blend_equation_advanced
+    GL_KHR_context_flush_control
+    GL_KHR_debug
+    GL_KHR_no_error
+    GL_KHR_parallel_shader_compile
+    GL_KHR_robust_buffer_access_behavior
+    GL_KHR_robustness
+    GL_KTX_buffer_region
+    GL_NVX_conditional_render
+    GL_NVX_gpu_memory_info
+    GL_NVX_multigpu_info
+    GL_NVX_nvenc_interop
+    GL_NV_ES1_1_compatibility
+    GL_NV_ES3_1_compatibility
+    GL_NV_alpha_to_coverage_dither_control
+    GL_NV_bindless_multi_draw_indirect
+    GL_NV_bindless_multi_draw_indirect_count
+    GL_NV_bindless_texture
+    GL_NV_blend_equation_advanced
+    GL_NV_blend_square
+    GL_NV_command_list
+    GL_NV_compute_program5
+    GL_NV_conditional_render
+    GL_NV_copy_depth_to_color
+    GL_NV_copy_image
+    GL_NV_depth_buffer_float
+    GL_NV_depth_clamp
+    GL_NV_draw_texture
+    GL_NV_draw_vulkan_image
+    GL_NV_explicit_multisample
+    GL_NV_feature_query
+    GL_NV_fence
+    GL_NV_float_buffer
+    GL_NV_fog_distance
+    GL_NV_fragment_program
+    GL_NV_fragment_program2
+    GL_NV_fragment_program_option
+    GL_NV_framebuffer_multisample_coverage
+    GL_NV_geometry_shader4
+    GL_NV_gpu_program4
+    GL_NV_gpu_program4_1
+    GL_NV_gpu_program5
+    GL_NV_gpu_program5_mem_extended
+    GL_NV_gpu_program_fp64
+    GL_NV_gpu_shader5
+    GL_NV_half_float
+    GL_NV_internalformat_sample_query
+    GL_NV_light_max_exponent
+    GL_NV_multisample_coverage
+    GL_NV_multisample_filter_hint
+    GL_NV_occlusion_query
+    GL_NV_packed_depth_stencil
+    GL_NV_parameter_buffer_object
+    GL_NV_parameter_buffer_object2
+    GL_NV_path_rendering
+    GL_NV_pixel_data_range
+    GL_NV_point_sprite
+    GL_NV_primitive_restart
+    GL_NV_query_resource
+    GL_NV_query_resource_tag
+    GL_NV_register_combiners
+    GL_NV_register_combiners2
+    GL_NV_shader_atomic_counters
+    GL_NV_shader_atomic_float
+    GL_NV_shader_buffer_load
+    GL_NV_shader_storage_buffer_object
+    GL_NV_shader_thread_group
+    GL_NV_shader_thread_shuffle
+    GL_NV_texgen_reflection
+    GL_NV_texture_barrier
+    GL_NV_texture_compression_vtc
+    GL_NV_texture_env_combine4
+    GL_NV_texture_multisample
+    GL_NV_texture_rectangle
+    GL_NV_texture_rectangle_compressed
+    GL_NV_texture_shader
+    GL_NV_texture_shader2
+    GL_NV_texture_shader3
+    GL_NV_transform_feedback
+    GL_NV_transform_feedback2
+    GL_NV_uniform_buffer_unified_memory
+    GL_NV_vertex_array_range
+    GL_NV_vertex_array_range2
+    GL_NV_vertex_attrib_integer_64bit
+    GL_NV_vertex_buffer_unified_memory
+    GL_NV_vertex_program
+    GL_NV_vertex_program1_1
+    GL_NV_vertex_program2
+    GL_NV_vertex_program2_option
+    GL_NV_vertex_program3
+    GL_OVR_multiview
+    GL_OVR_multiview2
+    GL_S3_s3tc
+    GL_SGIS_generate_mipmap
+    GL_SGIS_texture_lod
+    GL_SGIX_depth_texture
+    GL_SGIX_shadow
+    GL_SUN_slice_accum
+    GL_WIN_swap_hint
+    WGL_EXT_swap_control
+Number of texture units: 4
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 16384
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 71.2929999828s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.006000 seconds.
-- Frame drawn at 0.009000 seconds.
-- Frame drawn at 0.011000 seconds.
-- Frame drawn at 0.022000 seconds.
-- 0.022000 seconds to render 5 frames.
+- Frame drawn at 0.017667 seconds.
+- Frame drawn at 0.017667 seconds.
+- Frame drawn at 0.032667 seconds.
+- Frame drawn at 0.049667 seconds.
+- 0.049667 seconds to render 5 frames.

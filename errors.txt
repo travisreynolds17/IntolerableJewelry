@@ -2,9 +2,296 @@
 errors listed below, and try again.
 
 
-File "game/labels/cassDate1.rpy", line 861: expected statement.
-    Notify("Cassandra is a simple girl at heart.")
-                                                  ^
+File "game/labels/cassDate1.rpy", line 105: end of line expected.
+(Perhaps you left out a " at the end of the first line.)
+    s "Dangit. I think we might've messed up.
+            k "Yeah... they  only gave me a few options."
+                ^
+            c "< I love it. >"
+            k "What?"
+            s "What?"
+            c "< What can I say? I'm a rock star, but I like cute things. That shirt is cute and you're cute in it.>"
+            pause 0.5
+            k "... thank you!"
+    
+        if outfitCurrent = "Pantsuit":
+            c "< Nice suit. >"
+            s "Yeah, in hindsight, seems like a bad choice for a rock star."
+            k "You don't like it."
+            c "< I just feel under dressed compared to you. >"
+            ki "... should've seen that one coming."
+    
+        menu:
+    
+            s "Whaddaya say, chat? Like if it were me, I'd want to be sober for sure, but..."
+    
+            "Have a drink":
+                k "I'll have a --"
+    
+                ki "You know, I shouldn't be drinking. Not now. Not when there are two other people to meet."
+    
+                k "I'd just like some cranberry juice if that's okay."
+    
+                $chat.addmessage(shub, "Pssh")
+                $chat.addmessage(cake, "weakesauce")
+    
+                s "Oh, come on! If you're gonna give me the choice, why shouldn't my choice matter?"
+    
+                $chat.addmessage(shub, "maybe it's like a life reclection")
+    
+                s "I mean... really!"
+    
+            "Just juice":
+                k "I wouldn't mind some cranberry juice."
+    
+                c "..."
+    
+                $chat.addmessage(egg, "oof, DISAPPOINTED")
+    
+                ki "Her smile exists in a way that barely makes sense to me. I wonder if I let her down just now."
+    
+        # end choice
+    
+        ki "There's a tablet mounted to the table, and Cassandra swipes at it a few times to place our drink orders. I don't see any food on the menu, so I suppose my earlier observation was accurate."
+    
+        $chat.addmessage(fizz, "Sophie, what's your favorite drink?")
+    
+        ki "The camera crew keeps its distance, far enough that I could probably forget about them after a few days of this."
+    
+        $chat.addmessage(elsa, "Yeah, Sophie! I like cosmos myself")
+        $chat.addmessage(shub, "sex on the beach, not a meme, for real")
+    
+        ki "Problem is, this is day one and I feel like a drama student who can't quite get her lines out."
+    
+        s "I'd be nervous if it were me. Cassandra's a star, after all."
+    
+        s "Oh, um, guys I would say my favorite drink is a negroni. Gin and vermouth, it's mature I guess."
+    
+        c "< It's a strange situation we're in. I want to tell you up front that I am serious about this. >"
+    
+        $chat.addmessage(elsa, "mmm classy")
+    
+        ki "I believe her, and still, I'm not sure how to interpret the message."
+    
+        k "I guess this is the part where we tell each other about, uh, each other?"
+    
+        $chat.addmessage(egg, " This is where I would fumble lol")
+    
+        ki "God, I'm an idiot."
+    
+        s "God, I'm adorable."
+    
+        $chat.addmessage(fizz, "You're both right")
+    
+        c "< It would have been easier if we were both drunk already. >"
+    
+        k "Maybe."
+    
+        pause 1.0
+    
+        k "Okay. So, uh, Cassandra. How'd you end up on the show?"
+    
+        $chat.addmessage(cake, "she's in the script lol")
+    
+        ki "Nicely done, self, a fully formed question!"
+    
+        $chat.addmessage(crab, "lol")
+    
+        c "< I am looking for inspiration. I guess I lost my voice somewhere along the way. >"
+    
+        ki "Is that... wait, is she talking about her --"
+    
+        $chat.addmessage(egg, "Metaphor")
+    
+        ki "Her smile broadens. It's going to be hard to tell when she's joking, isn't it?"
+    
+        s "My question is, how does the TV show know what she's saying?"
+    
+        $chat.addmessage(bar, "RIGHT?")
+    
+        ki "I chuckle, but I don't know if it's appropriate."
+    
+        c "< It was a joke. >"
+    
+        k "I, uh, I knew that!"
+    
+        $chat.addmessage(elsa, "Kylie's a ditz, isn't she")
+    
+        c "< My songs just aren't the same anymore, Kylie. I thought going on this show and meeting someone new in this weird pressure cooker of an environment might draw something out of me.> "
+    
+        ki "I suppose this is as good a time as ever to tell her that I..."
+    
+        $chat.addmessage(egg, "Don't like girls")
+    
+        k "I love your new stuff though."
+    
+        $chat.addmessage(fizz, "Huh. We've just been assuming Kylie likes women, though. What if she's faking?")
+    
+        ki "Her expression changes, then, as she accepts this new piece of information. I'm not sure if she hoped I'd be a fan, or hoped for the opposite."
+    
+        c "< So you know my work? >"
+    
+        k "I love your work. Intolerable Jewelry got me through the worst break-up of my life!"
+    
+        python:
+            newComments = [
+                [crab, "name drop"],
+                [fizz, "Had to say the title at some point"],
+                [elsa, "We did it guys!"],
+                [shub, "ROLL CREDITS"],
+                [cake, "that title is dumb"],
+                [liv, "I love the album tho"],
+                [bar, "liv you way too into this"],
+                [beav, "roll cred-- shit"]
+    
+            ]
+        $chat.bulkMessage(newComments, 0)
+    
+        s "So wait, if I'm a super fan doesn't that mean I should choose Cassandra? That doesn't seem fair to the others."
+    
+        $chat.addmessage(egg, "You would think")
+    
+        ki "Her smile falters a little bit. She's typing feverishly, and I wonder whether I've found a way to ruin everything already."
+    
+        $chat.addmessage(elsa, "God, maybe she really needed to meet someone who didn't know her.")
+    
+        c "< Writing it did the same for me. >"
+    
+        show c happy
+    
+        c "<I'm really happy to know you're a fan. I'm also really happy you're not asking for an autograph.>"
+    
+        $chat.addmessage(elsa, "There you go")
+    
+        $chat.addmessage(egg, "Yeah you right")
+    
+        ki "The thought had crossed my mind."
+    
+        k "I don't want to be a bothersome fangirl. I mean, I am, but not like, you know? Like that."
+    
+        $chat.addmessage(fizz, "I am a fan of yours, Sophie")
+    
+        c "< You're handling it well. >"
+    
+        $chat.addmessage(cake, "OBVIOUSLY")
+    
+        k "On the outside. Inside, I'm screaming like a teenager at one of your shows."
+    
+        show c flirty
+    
+        ki "I don't want to put her on guard, and it seems to be working. Her finger traces the edge of her phone, lightly, meaningfully."
+    
+        ki "The drinks arrive, and for a moment the interruption of a server derails our conversation. Cassandra downs a shot of tequila and makes a face, leaving two more shots on the table."
+    
+        $chat.addmessage(shub, "Cass BEASt yo")
+    
+        ki "I find myself wringing my hands lightly together. This is so much harder than it looked on TV. Magic of editing, I guess."
+    
+        pause 0.5
+        show c listen
+        pause 1.0
+    
+        c "< I didn't think it would be this hard.> "
+    
+        $chat.addmessage(egg, "not a word, Crablegs")
+    
+        k "I was thinking the same thing."
+    
+        $chat.addmessage(crab, "aww")
+    
+        c "< So... I have a question. >"
+    
+        $chat.addmessage(fizz, "lol")
+    
+        c "< I know you like my work. And I guess you wouldn't be on the show otherwise, but... you like girls, right? >"
+    
+        ki "The question strikes me as fully appropriate and adorably obvious."
+    
+        $chat.addmessage(shub, "Actually a resonable flucking question.")
+    
+        k "I..."
+    
+        ki "I guess someone should have asked this question already. It dawns on me, just now, that nobody ever asked me flat out if I... huh."
+    
+        $chat.addmessage(crab, "I like girls, Elsa")
+    
+        c "< Well, I do. >"
+    
+        $chat.addmessage(elsa, "Sucks for them.")
+    
+        ki "Her smile was bashful from the moment it poured across her lips. Now, it's downright vulnerable."
+    
+        k "I do, too."
+    
+        $chat.addmessage(cake, "lol roasted crablegs")
+    
+        c "< I always thought this show was fake. Really, I did. How's a person supposed to fall in love in two dates? >"
+    
+        k "I don't know."
+    
+        $chat.addmessage(beav, "Falling in love in two dates is easy. Just date me twice.")
+    
+        ki "It's easy for me. I know who she is, I've idolized her, even. To her, though, I'm just another face."
+    
+        $chat.addmessage(beav, "I'm turnin women into waterslideds")
+    
+        $chat.addmessage(liv, "Yes, you do! You're so charming, AngeredBeaver69.")
+    
+        ki "Cassandra slams another shot, easily, in a practiced way."
+    
+        $chat.addmessage(shub, "dafuq")
+    
+        c "< I have an idea, though. >"
+    
+        $chat.addmessage(egg, "boobs")
+    
+        k "Oh?"
+    
+        $chat.addmessage(bar, "Is this where we R as a society")
+    
+        c "< I rented a little studio, not too far from here. Would you like to be on my next album? >"
+    
+        s "Oh, wow! Chat, we're gonna be rock stars! Also, you guys raise some valid points. It's definitely a good idea to find out if Kylie likes girls before asking her to date three or four of them."
+    
+        k "Wait what."
+    
+        c "..."
+    
+        $chat.addmessage(cake, "Kan we even sing?")
+    
+        k "Really?"
+    
+        $chat.addmessage(egg, "I can sing")
+    
+        ki "She nods, her smile returning."
+    
+        $chat.addmessage(elsa, "Really, egg? Baritone?")
+    
+        k "Oh my god, yes!"
+    
+        k "Oh, I, but I can't play anything."
+    
+        $chat.addmessage(cake, "falsetto lol")
+    
+        $chat.addmessage(egg, "yis baritone")
+    
+        c "< That's no problem. I can teach you. >"
+    
+        k "I'm trying my best not to go full fangirl right now, you know that, right?"
+    
+        $chat.addmessage(cake, "OBVIOUSLY")
+    
+        c "< I appreciate it, too. >"
+    
+        c "< I'm hoping I can get you to like me for more than my discography.>"
+    
+        $chat.addmessage(bar, "what's so obvious at that")
+    
+        k "Oh trust me, you, and, uh... I mean... sorry, I'm a little tongue tied."
+    
+        c "< I can help with that. >"
+    
+        $chat.addmessage(cake, "
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Mar 28 16:09:01 2020
+Sun Mar 29 00:53:36 2020

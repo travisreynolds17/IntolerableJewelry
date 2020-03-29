@@ -10,15 +10,7 @@ label common1:
     scene bg black with fade
     pause 1.0
 
-    # just a test
-    python:
-        loveCass = 3
-        loveLich = 2
-        loveRobin = 5
-        loveTania = 10
-        loveEntity = 0
-
-        # call a love check
+    
 
     show screen mainGameWindow
     show image splashTitle at alphaFade
@@ -253,8 +245,10 @@ label common1:
 
     $chat.addmessage(bar, "She's a deaf musician. Wow.")
     $chat.addmessage(bar, "I wonder if there are any of those in reality nowadays?")
+    pause 0.2
     $chat.addmessage(beav, "beethoven")
     $chat.addmessage(bar, "Nowadays.")
+    pause 0.7
     $chat.addmessage(crab, "Bae-thoven")
 
     t "Anyone out there able to read ASL? No? Our next Suitor is, and she's offered to help us out."
@@ -538,6 +532,8 @@ label common1:
 
     $chat.addmessage(egg, "we got a badass over here")
 
+    $renpy.notify("Not all decisions matter in the grand scheme of things.")
+
     s "I guess my answer here won't decide anything major yet, so I'm gonna say..."
 
     # choice
@@ -791,7 +787,7 @@ label common1:
                     [egg, "yup"]
 
                 ]
-                chat.bulkMessage(newComments, 0)
+                chat.bulkMessage(newComments, 0.6)
 
             k "No, no, I just... I dunno. I guess I want some excitement in my life before I settle into a cubicle somewhere."
             show t happy
@@ -888,7 +884,7 @@ label common1:
 
     pause 1.0
 
-    s "Oh, chat was busted? Well, we'll add that to the subscribe button. Is everything cool now?"
+    s "Oh, chat was busted? Well, we'll add that to the busted subscribe button. Is everything cool now?"
 
     $chat.addmessage(shub, "Aye!")
 
@@ -998,7 +994,7 @@ label common1:
 
 
         ]
-        chat.bulkMessage(newComments, 0.5)
+        chat.bulkMessage(newComments, 0.75)
 
     pause
 
@@ -1028,7 +1024,13 @@ label common1:
     $chat.addmessage(egg, "l0l")
     $chat.addmessage(bar, "nice")
 
-    ki "So I have a simple black dress with matching shoes for one date, a jeans and tank top combo for another, and then a smart blue pantsuit with emerald blouse."
+    ki "So I have a simple black dress with matching shoes for one date, a jeans and teddy bear tee for another, and then a smart blue pantsuit with emerald blouse."
+
+    ki "The dress is awfully revealing. It feels like a silky puddle of nothing in my hands."
+
+    ki "I like the jeans and bear shirt more than I want to admit, but it seems too casual. Laundry-day casual."
+
+    ki "The pantsuit is stylish, but I think a suit requires a certain power attitude. Not me, not in the least."
 
     s "So the game wants us to guess who might like which outfit?"
 
@@ -1048,20 +1050,27 @@ label common1:
 
     menu:
 
+
         ki "So, for Cassandra's date I should wear..."
 
         "Little Black Dress":
             ki "I think she might like something simple. She's a musician, and a successful one, so she might take us somewhere classy?"
             $chat.addmessage(liv, "Yay!")
+            $outfitCurrent = "Dress"
+            $outfitBlackDress += 1
 
-        "Jeans and Tank":
+        "Jeans and Tee":
             ki "She's a rock star, so I think she might like a punkish getup. I feel good about this."
             $chat.addmessage(crab, "Seems legit. Tear a whole in the jeans.")
             $chat.addmessage(fizz, "*hole.")
+            $outfitCurrent = "Jeans"
+            $outfitJeans += 1
 
         "Pantsuit":
             ki "Something modern and classy. Granted, I doubt it'll match Cassandra's style, but contrast is cute sometimes."
             $chat.addmessage(shub, "I'd kinda like to see that combo.")
+            $outfitCurrent = "Pantsuit"
+            $outfitPantsuit += 1
 
     # endchoice
 

@@ -195,8 +195,15 @@ label declarations:
         
         currentHistory = 0
 
+        #decision variables. I'm bad at organizing. 
+        #outfits. These guys are for a few scenes. I don't want to tie love points to this. Too arbitrary.
+        outfitBlackDress = 0
+        outfitJeans = 0
+        outfitPantsuit = 0
+        outfitCurrent = ""
 
-    init python:
+
+    #useful functions
 
         # functions to show and hide the primary in-game gui: sophie's stream window
         def hideGui():
