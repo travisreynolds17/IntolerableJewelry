@@ -10,7 +10,7 @@ label c5cassInterview:
             "Will we see each other again?" if cassDone[1] == False:
                 c "<Yeah. I think so.>"
 
-                c "<I've been through this five times and I've seen Robin twice. I'd say chances are good.>"
+                c "<I've been through this five times and I've seen Robin twice. I'd say chances are pretty good.>"
 
                 c "<I don't like to think about the ones I've only seen once. I guess I'm trying to think positively.>"
                 $cassDone[1] = True
