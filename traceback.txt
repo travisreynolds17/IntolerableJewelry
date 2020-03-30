@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/cassDate1.rpy", line 880, in script
-    $loveCheck()
-  File "game/labels/cassDate1.rpy", line 880, in <module>
-    $loveCheck()
-NameError: name 'loveCheck' is not defined
+  File "game/labels/lichDate.rpy", line 18, in script
+    python:
+  File "game/labels/lichDate.rpy", line 26, in <module>
+    bulkMessage(newComments, 0.7)
+NameError: name 'bulkMessage' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/cassDate1.rpy", line 880, in script
-    $loveCheck()
+  File "game/labels/lichDate.rpy", line 18, in script
+    python:
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/labels/cassDate1.rpy", line 880, in <module>
-    $loveCheck()
-NameError: name 'loveCheck' is not defined
+  File "game/labels/lichDate.rpy", line 26, in <module>
+    bulkMessage(newComments, 0.7)
+NameError: name 'bulkMessage' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Ganymead 1.0
-Sat Mar 28 16:27:15 2020
+Mon Mar 30 01:23:09 2020

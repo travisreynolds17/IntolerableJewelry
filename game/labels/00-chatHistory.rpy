@@ -53,10 +53,15 @@ label chatHistory:
 
         chatRecaps = [
             "I was nervous, but I met Cassandra, Robin, Tania, and Lichelle. Tania explained the process of One Week Waifu and reassured me about things after the show. I rested, and picked an outfit for my first date: the mysterious songstress, Cassandra Sanna.",
-            "Something about the Cass Date",
-            "Something about what happened at the studio.",
-            "Something about Robin's date and the lights.",
-            "Change of Plans",
+
+            "I met up with Cassandra at a bar, which I wasn't super hyped about. My hesitation vanished when I saw her, though. My musical idol, here in person. She offered me a spot on her upcoming album after I revealed my fangirl status. We headed straight off for her studio after that.",
+
+            "What a thrill! Being in my idol's studio was amazing. She even brought me into the recording booth! Underneath that choker, though, I discovered she's deeply scarred and using her voice even a little leaves her with blood in her mouth. She sang a song that reminds me too much of the past.",
+
+            "Tania took me to Robin's playhouse for our date. Robin wasted no time in unleashing her theatrics, shutting off the house lights and ? magically ? appearing right in front of me. It pissed Tania off to no end, but I kind of enjoyed it.",
+
+            "I still can't believe it. Robin revealed, through the power of French cuisine, that she and I met a long time ago, and that she is only 19! Blew my mind twice. Turns out I was her first paying customer in Paris all those years ago, and I guess I made an impression! Then she did some more magic, and then... then, she kissed me. In the dark, just like that. So confident, so... god, save me.",
+
             "Hold",
             "Hold",
             "Hold",
@@ -120,6 +125,7 @@ label chatHistory:
             i = scene
             histories[i].history = chat.history
             histories[i].seen = True
+            histories[i].recap = chatRecaps[i]
             chat.delmessages()
 
         def chatHistUpdate(scene):

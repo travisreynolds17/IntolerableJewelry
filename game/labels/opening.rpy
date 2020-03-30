@@ -62,7 +62,7 @@ label opening:
 
     "Neither do I."
 
-    "There's a woman moving among tables, coiffed and exotic, speaking briefly with each table. Must be the manager."
+    "There's a woman moving among tables, coiffed and exotic, speaking briefly with each table. Must be the manager. A thick, musical accent."
 
     "She's beautiful. That's something else I haven't told David."
 
@@ -70,7 +70,7 @@ label opening:
 
     s "I'm not giving up my work. You're already too jealous about it and I love doing it so-"
 
-    d "You love people online that call you a whore and wish you get HIV? Seriously?"
+    d "You love people online that call you a whore and wish you die of space herpes? Seriously?"
 
     "He's getting angry. I understand, so I'm going to forgive some of the brunt of this."
 

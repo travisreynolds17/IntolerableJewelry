@@ -71,6 +71,7 @@ label declarations:
     define splashTitle = Image("img/ingameSplash.png")
     define splashBRB = Image("img/ingameBRB.png")
     define chatHistoryBack = Image("img/chatHistoryBack.png")
+    define splashHorror = Image("img/flash horror 1.jpg")
 
     # --------------------------------------------------------------------------------------------
 
@@ -128,12 +129,12 @@ label declarations:
 
     transform summonSoph:
         on show:
-            xpos - 20
+            xpos - 200
             ypos lbtnY
             linear 0.2 xpos lbtnX
 
         on hide:
-            linear 0.2 xpos - 20
+            linear 0.2 xpos - 200
 
 
 

@@ -91,7 +91,7 @@ label cassDate1:
 
     c "< By the way... >"
 
-    if outfitCurrent = "Dress":
+    if outfitCurrent == "Dress":
         c "< You're braver than me to come out in a dress so revealing. >"
         s "Oh, crap."
         k "... oh."
@@ -100,7 +100,7 @@ label cassDate1:
         ki "... well, I WAS confident anyway."
         s "We screwed up, guys. Maybe?"
 
-    if outfitCurrent = "Jeans":
+    if outfitCurrent == "Jeans":
         c "< A teddy bear shirt, eh? >"
         s "Dangit. I think we might've messed up."
         k "Yeah... they  only gave me a few options."
@@ -111,7 +111,7 @@ label cassDate1:
         pause 0.5
         k "... thank you!"
 
-    if outfitCurrent = "Pantsuit":
+    if outfitCurrent == "Pantsuit":
         c "< Nice suit. >"
         s "Yeah, in hindsight, seems like a bad choice for a rock star."
         k "You don't like it."
@@ -242,7 +242,7 @@ label cassDate1:
             [beav, "roll cred-- shit"]
 
         ]
-    $chat.bulkMessage(newComments, 0)
+    $chat.bulkMessage(newComments, 0.6)
 
     s "So wait, if I'm a super fan doesn't that mean I should choose Cassandra? That doesn't seem fair to the others."
 
@@ -903,6 +903,7 @@ label cassDate1:
             $chat.addmessage(fizz, "Oh, looks like that was the right choice.")
 
             $loveCass += 1
+            $heldHands = True
 
         "Say goodnight":
             k "Goodnight Cassandra."
