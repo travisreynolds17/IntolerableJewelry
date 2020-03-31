@@ -410,11 +410,19 @@ label common3:
     $getHistory(sceneNum)
     $sceneNum = 9
     
-    $chat.addmessage(unkn, "Chat Purged")
 
     show image splashBRB at alphaFade
 
     pause 2.0
+
+    $hideGui()
+
+    hide image splashBRB at summonChat
+
+    pause 1.0
+
+    scene bg hallway:
+        alpha 0.3
 
     show t with dissolve
 
@@ -428,7 +436,7 @@ label common3:
 
     # ---------------------------------------------------------
 
-    $renpy.notify("You have to cut the strings that bind us.")
+    $renpy.notify("Cut the strings that bind us.")
 
     # ---------------------------------------------------------
 
@@ -436,90 +444,186 @@ label common3:
 
     scene bg hallway with dissolve
 
-    s "Back. So, let's speed through these dates and get back to where we were?"
+    pause 0.5
+
+    $showGui()
+
+    pause 0.5
+
+    s "Back. So, let's speed through these dates and get back to where we were?" 
+    
+    $chat.addmessage(fizz,"Ready!")
 
     scene bg dressing with dissolve
 
-    ki "The dressing room is clean and simple. I'd like to stretch out for a nap, actually. The nerves have taken it out of me."
+    ki "The dressing room is clean and simple. I'd like to stretch out for a nap, actually. The nerves have taken it out of me." 
+    
+    $chat.addmessage(cake,"pity that bed's for sleepin")
 
-    ki "There are some clothes in the closet and... I'm a little disappointed. They're all white sundresses, basically cut the same way."
+    ki "There are some clothes in the closet and... I'm a little disappointed. They're all white sundresses, basically cut the same way." 
+    
+    $chat.addmessage(cake,"another new thing.")
 
     pause 1.0
 
-    s "Hey! That's different, right? There were different outfits before."
+    s "Hey! That's different, right? There were different outfits before." 
+    
+    $chat.addmessage(crab,"there's been a bunch of new things, Sophie, you just missed 'em")
 
-    s "Gasp, dudes! Was the game supposed to crash? Is this part of the plan?"
+    s "Gasp, dudes! Was the game supposed to crash? Is this part of the plan?" 
+    
+    $chat.addmessage(elsa,"I think so")
 
     s "Oh, okay! Jeez, I wish they'd warned me a little bit. I just about said to hell with it and called it a night."
 
     scene bg black with dissolve
 
-    ki "An hour passes like nothing, like time somehow folded in on itself."
+    ki "An hour passes like nothing, like time somehow folded in on itself." 
+    
+    $chat.addmessage(liv,"I didn't want to ruin the surprise, it was hard to keep quiet :)")
 
     s "I know, right?"
 
-    ki "Dressed in the fluttery, pristine whites, I leap to my feet at the sound of a knock on the door."
+    ki "Dressed in the fluttery, pristine whites, I leap to my feet at the sound of a knock on the door." 
+    
+    $chat.addmessage(elsa,"From lil' black dress, suit, and punky chick to Sunday school.")
 
     show l with dissolve
 
-    l "Hey babe. You ready to go?"
+    l "Hey babe. You ready to go?" 
+    
+    $chat.addmessage(cake,"gasp it's Elle!")
 
     ki "To my surprise, Lichelle stands before me, a bright grin on her face."
 
-    k "Oh, uh, sure? I guess?"
+    k "Oh, uh, sure? I guess?" 
+    
+    $chat.addmessage(bar,"This is way different then.")
 
     l "You were expecting someone else."
 
+    s "So was I!" 
+    
+    $chat.addmessage(beav,"preach")
+
     k "Um... well, yeah. I thought Cassandra was first."
 
-    l "She is. Tania just rolled the hell out of her ankle about ten minutes ago, though, so I'm here to whisk you off to the bar or whatever."
+    l "She is. Tania just rolled the hell out of her ankle about twenty minutes ago, though, so I'm here to whisk you off to the bar or whatever." 
+    
+    $chat.addmessage(bar,"Tania no! I'll nurse you to health.")
 
     s "Huh. Poor Tania."
 
-    k "Oh. Well... is that okay?"
+    k "Oh. Well... is that okay?" 
+    
+    $chat.addmessage(fizz,"Sudden change of plans by the lady who no-showed last time.")
 
     l "Should be. Why?"
 
-    k "Well, I thought we weren't supposed to really talk until our date."
+    k "Well, I thought we weren't supposed to really talk until our date." 
 
-    l "You worried I'll try to get in your panties in the car?"
+    l "You worried I'll try to get in your panties in the car?" 
+    
+    $chat.addmessage(crab,"dude. she doesn't play")
 
     ki "Fire floods into my face."
 
     l "Haha! Don't worry babe, I'll wait my turn. Tania and I go way back and I know what she needs from the crew, so it makes sense that I go with."
 
-    k "Okay. Well, in that case, I'm ready whenever you are."
+    k "Okay. Well, uh, in that case, I'm ready whenever you are." 
+    
+    $chat.addmessage(elsa,"Kylie's flustered.")
 
     l "Cool. "
 
-    ki "But her eyes betray her words."
+    ki "But her eyes betray her words." 
+    
+    $chat.addmessage(liv,"My Elle is an apex predator :)")
 
     l "We going? Or you just gonna stand there and tempt me?"
 
-    k "T-tempt you?"
+    k "T-tempt you?" 
+    
+    $chat.addmessage(cake,"hot in here")
 
     pause 1.0
 
     show l happy
 
-    l "I'm just teasing. Get in the car, babe. At least give Cass and spooky-amazon a chance."
+    l "I'm just teasing. Get in the car, babe. At least give Cass and spooky-bitch a chance."
+
+    pause 0.5
 
     l "Based on the way you're breathing right now, it might already be too late."
 
     s "She's a no bullstuff kind of girl, guys."
 
-    k "... don't get ahead of yourself."
+    k "... don't get ahead of yourself." 
+    
+    $chat.addmessage(beav,"Kylie standing her ground")
 
     ki "I say this, knowing full well I'm on jellied legs, grateful for the wall behind me."
 
-    ki "Lichelle only smiles."
+    ki "Lichelle only smiles." 
+    
+    $chat.addmessage(cake,"lol Kylie likes chocolate too")
 
-    l "Let's go. Cass'll be waiting."
+    l "Let's go. Cass'll be waiting." 
+    
+    $chat.addmessage(fizz,"Don't be a racist, man.")
 
-    s "This show would have to be the worst experience ever. I'm exhausted just reading it."
+    s "This show would have to be the worst experience ever. I'm exhausted just reading it." 
+    
+    $chat.addmessage(cake,"Hey fizz, won't you stfu bro. Nothing racist about that.")
 
-    s "Just imagine being as thirsty as Kylie seems to be and having all these dream girl archetypes trying to woo you..."
+    s "Just imagine being as thirsty as Kylie seems to be and having all these dream girl archetypes trying to woo you..." 
+    
+    $chat.addmessage(fizz,"Calling a black woman chocolate is racist, full stop.")
 
-    s "... and also, to have to last through the whole week without acting on anything."
+    s "... and also, to have to last through the whole week without acting on anything." 
+    
+    $chat.addmessage(crab,"lol this gonna be good") 
+    
+    $chat.addmessage(elsa,"Not real comfortable with this.") 
 
+    pause 0.5
+
+    s "Hey guys, let's not fight in the chat." 
+    
+    $chat.addmessage(fizz,"How's it not racist to refer to someone as chocolate?") 
+    
+    $chat.addmessage(beav,"This kind of thing never ends well.")
+
+    pause 0.5 
+    
+    $chat.addmessage(cake,"1. chocolate is a color 2. it's a compliment 3. I'm black, shithead")
+
+    pause 1.5 
+    
+    $chat.addmessage(crab,"lolololololol") 
+    
+    $chat.addmessage(liv,"Right, right, skin color. Sigh. :( Let's not fight?")
+
+    s "Guys." 
+    
+    $chat.addmessage(fizz,"Just because you think it's okay doesn't")
+
+    pause 0.4
+
+    $getHistory(sceneNum) 
+    
+    $chat.addmessage(sophie,"Chat is paused temporarily!")
+
+    pause 0.5
+
+    s "I might cry. I might actually cry."
+
+    s "No more fighting! We're gonna go on a nice date with a nice girl and that's that."
+
+    scene bg black with fade 
+
+    pause 0.5
+
+    $hideGui()
+    
     jump cassDate2

@@ -1,60 +1,39 @@
-# 1. Subscribe Button                   SBBTN
-# 2. Bulk chatt add                     CHATT
-# 3. Hide/show Chat                     HSCH
-# 4. Hide/show GUI                      HGUI
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
 
-#--------------------------------------------------------------------------
-# SBBTN
-# pull in subscribe button. alter for other button messages
+	"add chat message": {
+		"prefix": "-addm",
+		"body": [
+			"\n\n\\$chat.addmessage(${1:speaker},\"${2:message}\")"
+		],
+		"description": "add chat message easily"
+	},
 
-#move button in from left
-show btn-subscribe at subscribeCenter with moveinleft
-        # dialog or pause
-#move button out
-show btn-subscribe at subscribeLeave with moveoutleft
+	"bulk messages": {
+		"prefix": "-bulkm",
+		"body": [
+			"\n\npython:\n\tnewComments = [\n\t\t[${1:speaker},\"${2:message}\"],\n\t\t[${3:speaker},\"${4:message}\"],\n\t\t[${5:speaker},\"${6:message}\"],\n\t\t[${7:speaker},\"${8:message}\"]\n\t]\n\n\t\\$chat.bulkMessage(newComments,${9:delay})"
+		],
+		"description": "Bulk messages"
+	},
 
-#--------------------------------------------------------------------------
-
-#2. Bulk chat add                                                               CHATT
-# between scenes, if we need to add several messages to chat, this snippet will be a little easier than typing $chat.addmessage over and over. I hope. add as many comments as you need.
-
-python:
-        newComments = [
-
-                [name, "message"],
-                [name, "message"]
-
-        ]
-        chat.bulkMessage(newComments)
-
-#3. Hide/show chat. For when Sophie manipulates the board.                      HSCH
-
-#to hide chat. Don't use if else because player can control chat.
-if chatIsOn:
-        hide screen chatterbox
-        $chatIsOn = False
-pause 1.0
-
-if chatIsOn == False:
-        show screen chatterbox
-        $chatIsOn = True
-pause 1.0
-
-#-------------------------------------------------------------------------------------------------
-
-# 4. Hide/show GUI. For when a full screen splash is needed.                    HGUI
-#hide
-hide screen mainGameWindow 
-hide screen loveScreen 
-hide screen chatterbox 
-$chatIsOn = False
-hide screen btnWindow 
-pause 2.0
-
-#show
-show screen mainGameWindow 
-show screen loveScreen 
-show screen chatterbox 
-$chatIsOn = True
-show screen btnWindow 
-pause 2.0
+	"show story screen": {
+		"prefix": "-story",
+		"body": [
+			"pause(0.5)\n\\$hideGui()\nscene bg ${1:screen} with fade\npause(${2:2.0})pause\nscene bg ${3:screen}\npause(${4:0.5})\n\\$showGui()\npause(${5:0.5})"
+		],
+		"description": "Hide Gui, show a creepy text screen, show gui again"
+	}
+}
