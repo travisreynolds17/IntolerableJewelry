@@ -17,7 +17,7 @@ label leftbuttonwindow:
             xysize(lbtnWidth, lbtnHeight)
             vbox:
                 button:
-                    text "Tips":
+                    text leftBtnTxt[0]:
                         xalign 0.5
                         yalign 0.5
                     xysize(lbtnWidth, lbtnHeight/3)
@@ -25,7 +25,7 @@ label leftbuttonwindow:
                     background "#444444"
 
                 button:
-                    text "Tips":
+                    text leftBtnTxt[1]:
                         xalign 0.5
                         yalign 0.5
                     
@@ -34,7 +34,7 @@ label leftbuttonwindow:
                     background "#111111"
 
                 button:
-                    text "Chat History":
+                    text leftBtnTxt[2]:
                         xalign 0.5
                         yalign 0.5
                     xysize(lbtnWidth, lbtnHeight/3)

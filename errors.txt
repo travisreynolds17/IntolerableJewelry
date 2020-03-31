@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/labels/realWorld1.rpy", line 53: expected 'image_name_component' not found.
-    show scene bg black with fade
-        ^
+File "game/labels/common2.rpy", line 454: expected statement.
+    chat.bulkMessage(newComments, "random")
+                                           ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Mar 30 01:18:39 2020
+Mon Mar 30 20:43:13 2020

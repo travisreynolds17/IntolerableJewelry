@@ -12,6 +12,8 @@ label chatwindow:
         chatWidth = 300
         chatHeight = 400
         chatPadding = 20
+        # sometimes we need to pause chat for repeated segments.
+        chatPause = False
 
 
         # integer to hold pixel position of left side of chat box relative to left of screen. Update these if you change gimp gui 
@@ -69,7 +71,8 @@ label chatwindow:
 
             #define a method by which a Message is appended (added) to the end of the chatlog.
             def addmessage(self, person, message):
-                self.history.append(Message(person, message +"\n"))
+                if chatPause == False:
+                    self.history.append(Message(person, message +"\n"))
                 
 
             # define a method by which the chatlog is cleared entirely. 
@@ -84,8 +87,11 @@ label chatwindow:
                 i = 0
                 for i in newComments:
                     self.history.append(Message(i[0], i[1] + "\n"))
+                    if delay == "random":
+                        suchRandom = renpy.random.randint(3,10)
+                        self.delay = suchRandom / 10
                     if self.delay > 0:
-                        renpy.pause(delay)
+                        renpy.pause(self.delay)
 
     ### Set a variable to infinity, to be used later. This part is to keep chat box showing newest chat at the bottom rather than forcing player to scroll.
         infyadjValue = float("inf")

@@ -72,6 +72,7 @@ label declarations:
     define splashBRB = Image("img/ingameBRB.png")
     define chatHistoryBack = Image("img/chatHistoryBack.png")
     define splashHorror = Image("img/flash horror 1.jpg")
+    define splashErrorTania = Image("img/ingameSplashErrorTania.png")
 
     # --------------------------------------------------------------------------------------------
 
@@ -164,9 +165,17 @@ label declarations:
         $severAll = False  # checks for all five primary good ending severs
         $severCodeBase = "stringSever"  # kill code for the being
         $severInput = "unknown"
-        $entityName = ""
+        $entityName = "Oblivion"
         $entityForgiven = False
         $entityForgiven = True
+
+        $sceneNum = 0
+
+        # Variables for left button menu
+        python:
+            leftBtnTxt = [
+                "Tips", "ComeFundMe", "History"
+            ]
 
         # regarding severance. Ending determined by severance.
         # sever all four girls but not the entity, sophie escapes but everyone dies and the entity lives on. Bad newsreel ending. sever the entity and none of the girls, everyone dies. Bad newsreel ending but entity dead. No need to severkylie. Sever the entity and some of the girls, good ending where whoever's left unsevered dies. sever all four girls and the entity, best ending where all girls meet together and Robin reveals she's the one who was giving out code hints, and tells you she voluntarily went into the code because she's dealt with cosmic entities before. If the girl you have at least 4 romance with survives, hook up IRL for a special exclusive scene.
@@ -177,7 +186,7 @@ label declarations:
         $which_girl_1 = ""  # common1, first choice of girls
         $groupThing = False  # in which girl choice, common1
         $which_girl_2 = ""  # TBD
-        $taniaEnd = False  # if we've seen the joke ending
+        $taniaEnd = 0  # if we've seen the joke ending
         $currentEnding = ""
         $badEndings = []  # holds which characters are getting a non-severed or bad ending. Bad ending label will check for each and display approprite clips
 

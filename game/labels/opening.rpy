@@ -64,7 +64,7 @@ label opening:
 
     "There's a woman moving among tables, coiffed and exotic, speaking briefly with each table. Must be the manager. A thick, musical accent."
 
-    "She's beautiful. That's something else I haven't told David."
+    "She's beautiful. I've seen her a hundred times. That's something else I haven't told David."
 
     d "Say something."
 
@@ -134,7 +134,7 @@ label opening:
 
     "Quietly, before I could stop them, those words tumble out."
 
-    d "Oh. So you're gay now?"
+    d "So you're gay now?"
 
     "He's angry. Forgive him. Shouldn't have been a smartass."
 
@@ -142,13 +142,15 @@ label opening:
 
     d "You know what? Fine."
     
-    d "Be a coke a d ct. Go righ ba k. I'm go na m v   t  f th hous  . You'll n  er have to wo  y ab  t    again."
+    d "Be a her in a d ct. Go righ ba k. I'm go na m v   t  f th hous  . You'll n  er have to wo  y ab  t    again."
 
     # she has a seizure
 
     "Oh. Oh no. No no no no no not now."
     
     "My arms pin themselves to my sides as my leg muscles lose all semblance of tension. There’s a sensation of impact when I hit the ground, but no accompanying pain."
+
+    "There's warmth on my tongue and lips."
     
     "Vaguely, I hear voices around me. Something moves me. It’s always the same. I’m falling. Falling, and falling, while the ghosts of whatever was around me slide from side to side."
     

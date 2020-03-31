@@ -218,9 +218,22 @@ label lichDate:
 
     # go ahead and grab chat history here, even though it's soon. No chat after this point until we get to a new label anyway
     $getHistory(5)
+    #go ahead and jump to TaniaEnd label with the choices, that way the game breaking can jump us back to this point rather than the beginning of the date.
 
+    jump taniaChoice
+
+label taniaChoice:
     while temp == False:
-        k "I should ask Tania..."
+        scene bg hallway with fade
+        show t listen
+
+        if taniaEnd == 1:
+            s "Right. Let's try this again."
+        elif taniaEnd >= 2:
+            s "I don't think we're getting anywhere if we keep trying to get with Tania here."
+        else:
+            k "I should ask Tania..."
+        
         menu:
 
             "Can I see Cassandra again?":
@@ -234,7 +247,7 @@ label lichDate:
                 $temp = True
                 jump common2
 
-            "Can I see Cassandra again?":
+            "Can I see Robin again?":
                 ki "I can still feel Robin's hooks in me. I have to see her."
                 k "If... if I wanted to see Robin again, would that-"
                 show t flirty
@@ -248,8 +261,9 @@ label lichDate:
                 $loveRobin += 1
                 jump common2
 
-            "Tania, go out with me?" if loveTania > 0 and taniaEnd == False:
-                s "You know what? She's been a trooper, and she could use a night out."
+            "Tania, go out with me?" if loveTania > 0:
+                if taniaEnd == 0:
+                    s "You know what? She's been a trooper, and she could use a night out."
                 ki "Now or never."
                 k "I want to have a date with you, Tania."
                 pause 1.0
@@ -260,7 +274,7 @@ label lichDate:
                 $renpy.notify("Tania has no time for frivolity. Take her seriously, or else.")
 
                 menu:
-                    "Because since I laid eyes on you, I wanted you.":
+                    "Because since I laid eyes on you, I wanted you." if taniaEnd <= 2:
                         k "Because I've wanted you since season two. If I'm being fully open and honest with you."
                         k "Your energy, your style, your..."
                         ki "God, why is this so hard?"
@@ -273,7 +287,8 @@ label lichDate:
                     "Because you're real.":
                         k "Because Robin and Cassandra seem like they're projecting a persona. You seem..."
                         k "Genuine."
-                        $loveTania += 1
+                        if taniaEnd == False:
+                            $loveTania += 1
                         pause 1.0
                         show t heartbroken with dissolve
                         
@@ -299,15 +314,17 @@ label lichDate:
 
                         pause 0.5
 
-                        t "So. What do you want to do?"
+                        t "So. What else do you want to do?"
 
 
                     "Because we have nothing else to do, why not?":
                         k "It's not like we have anything else to do."
                         show t disap
-                        t "You might not, but I have a hundred things to do. I'm sorry, Kylie."
-                        $taniaLove = 0
+                        t "I hope you don't think so little of me, Kylie."
+                        t "I'd be... I'd be more hurt than I'd tell you, if that was all you thought of me."
+                        
                         ki "Great job, self."
+                        s "I'm an asshole."
     # END CHOICE - No matter what, we should have jumped to anew label at this point
 
-    scene bg black with fade
+    
