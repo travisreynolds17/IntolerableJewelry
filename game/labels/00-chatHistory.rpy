@@ -42,7 +42,7 @@ label chatHistory:
             "New Faces *",
             "Elle, oh Elle",
             "My Heroine",
-            "Hold",
+            "Pieta",
             "Hold",
             "Hold",
             "Hold",
@@ -71,7 +71,8 @@ label chatHistory:
             "I wasn't expecting Lichelle to show up, but sadly my new buddy Tania is injured. I would've liked to talk with her more, you know? Tania makes me feel so comfortable.\nLichelle, though, is more than I was ready for, honestly. Everything about her is power, power, power. I won't lie, she... left me in a state. She could kill me, if she wanted to. I can feel it. It's so... god. I don't have words.\nDeep down, I want... god, save me.",
             
             "I met up with Cassandra at a bar, which I wasn't super hyped about. My hesitation vanished when I saw her, though. My musical idol, here in person.\nI learned some disappointing things, honestly. She's in so much pain. Her friend, my god. Maybe the love of her life killed herself and blamed Cassandra.\nHow can I ask someone suffering so deeply to love me? One-Week Waifu is just a dream. I wasn't happy about it, but we headed to her studio anyway.",
-            "Hold",
+            
+            "Well... in summary, I was hit in the head and KO'd by a trash can. My idol currently is in the hospital with alcohol poisoning. My new friend Tania is laid up with a busted ankle. And I rode home with a woman who tended to me like she'd known me forever. The way she plays with that cross necklace she wears burns me alive. I don't know if she's doing that intentionally, or if it's a tic, but it puts me on a breathless edge.",
             "Hold",
             "Hold",
             "Hold",

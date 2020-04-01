@@ -74,6 +74,11 @@ label declarations:
     define splashHorror = Image("img/flash horror 1.jpg")
     define splashErrorTania = Image("img/ingameSplashErrorTania.png")
 
+    # character images
+
+    define lblur = im.blur("chars/l.png", 1.5)
+
+
     # --------------------------------------------------------------------------------------------
 
     # TRANFORMS

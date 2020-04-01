@@ -1,23 +1,53 @@
 label robinDate2:
+
+    pause(0.5)
+    $hideGui()
+    scene bg screen with fade
+    pause 2.0
+    pause
+    scene bg black with fade
+    pause(1)
+    $showGui()
+    pause 0.5    
+    
     scene bg dressing with fade
 
-    s "~yawn~ Hey chat. I don't know how much longer I'm gonna play this."
+    s "~yawn~ Hey chat. I don't know how much longer I'm gonna play this." 
+    
+    $chat.addmessage(elsa,"Yes, Sophie, please stop!") 
+    
+    $chat.addmessage(beav,"prolly should take a night off")
 
-    s "Honestly, I'm getting tired and that was pretty unpleasant for a bit. Don't you think?"
+    s "Honestly, I'm getting tired and that was pretty unpleasant for a bit. Don't you think?" 
+    
+    $chat.addmessage(bar,"I think you need rest.") 
+    
+    $chat.addmessage(cake,"Get some water and sleep, baby girl.")
 
     #chat begs her to continue, oddly worded
+    pause 0.5
+    s "You guys are that into this, huh? You really want me to keep playing?"
 
-    s "You guys are that into this, huh?"
-
-    s "I guess I ~yawwwwn~ can stick it out a bit longer."
+    s "I guess I ~yawwwwn~ can stick it out a bit longer." 
+    
+    $chat.addmessage(elsa,"What? No!") 
+    
+    $chat.addmessage(bar,"uh?")
 
     s "I'm getting old, you guys."
 
-    #chat tells her she's young and hhot
+    #chat tells her she's young and hho
+    
+    
+    $chat.addmessage(beav,"sophie you scarin me")
 
-    s "Oh, shush, all'ya."
+    s "Oh, shush, all'ya, but thanks for calling me pretty, Egg."
 
-    ki "The night passes, beset by squads of nightmares."
+    ki "The night passes, beset by squads of nightmares." 
+    
+    $chat.addmessage(elsa,"Huh?")
+
+    $getHistory(12)
 
     ki "All I wanted to do was put the evening behind me, but it played in my mind. Over and over."
 

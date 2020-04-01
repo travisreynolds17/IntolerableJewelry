@@ -641,161 +641,238 @@ label cassDate2:
 
     #----------------------------------------------------------------------------------------------------
 
-    s "I sincerely hope they had a driver."
+    s "I sincerely hope they had a driver." 
 
-    ki "The studio is almost exactly what I would have expected. There's a drum kit, tons of wires and blinking lights that I guess are part of editing equipment."
+    ki "The studio is almost exactly what I would have expected. There's a drum kit, tons of wires and blinking lights that I guess are part of editing equipment." 
+    
+    $chat.addmessage(beav,"Cassandra drank at least eight shots in like five minutes. She dead.")
 
     ki "I'm no expert on music production, and I'm no expert on the odd foam mat and beer smell that permeates the walls and floor."
 
-    c "< Sorry about the mess. TBH I wasn't sure if I'd ask you to come here. >"
+    c "< Sorry about the mess. TBH I wasn't sure if I'd ask you to come here. >" 
+    
+    $chat.addmessage(bar,"I can do that")
 
     k "Oh? I kind of thought this was part of the plan from the start."
 
-    c "< I wanted to know if you were just in this for the sex. >"
+    c "< I wanted to know if you were just in this for the sex. >" 
+    
+    $chat.addmessage(beav,"yeah but she little. you probly like a regular size dude")
 
     k "Oh. Um. You're welcome?"
 
     ki "I can't help but notice how Cassandra walks as she leads me into the studio. I noticed at the bar, too, but she sort of flows from one long, considerate gaze to another."
 
-    ki "Her expression loses focus sometimes. It could be just because she's toasted, but I wonder, guiltily, if she's somewhere on the autism spectrum."
+    ki "Her expression loses focus sometimes. It could be just because she's drunk. I wonder, guiltily, if she's somewhere on the autism spectrum."
 
-    ki "Then I remember I don't know enough about it to decide one way or another."
+    ki "Then I remember I don't know enough about it to decide one way or another." 
+    
+    $chat.addmessage(bar,"Regular sized. lol. I'm a thicc boi, son")
 
     k "So, uh, Cassandra?"
 
-    c "... ?"
+    c "... ?" 
+    
+    $chat.addmessage(beav,"dis thicc dicc lol")
 
-    k "Which one do you play?"
+    k "Which one do you play?" 
+    
+    $chat.addmessage(liv,"Really? How thicc?")
 
     ki "She points to a beautifully finished seven-string guitar hanging from a mount on the wall. It has a marbled pattern, swirling in royal blue and aquamarine."
 
     pause 0.5
 
-    ki "She points, emphatically, to her phone screen."
+    ki "She points, emphatically, to her phone screen." 
+    
+    $chat.addmessage(cake,"quiet, thot")
 
     c "< I sing, too. >"
 
-    k "But you can't talk? I thought for sure you had a singer?"
+    k "But you can't talk? I thought for sure you had a singer?" 
+    
+    $chat.addmessage(liv,":(")
 
     ki "Her smile sours, just a bit."
 
-    c "< Don't say it out loud. >"
+    c "< Don't say it out loud. >" 
+    
+    $chat.addmessage(elsa,"You know, the mechanics of this don't make sense.")
 
     c "< I sing on all the albums, just not live. Marina used to sing for me on stage. >"
 
-    k "Oh."
+    k "Oh." 
+    
+    $chat.addmessage(elsa,"Like, wouldn't this Marina sound different from Cassandra?")
 
     s "Oh god."
 
-    c "< As far as the world knows, I'm just a guitar player and songwriter. >"
+    c "< As far as the world knows, I'm just a guitar player and songwriter. >" 
+    
+    $chat.addmessage(beav,"if they practice together all the time. sounds like they did all the things together")
 
     ki "This all feels so rushed. I've adored her music without even knowing what kind of person she might be. There's a camera crew around us, even in this small space."
 
-    ki "What if I talk? She's probably pretty powerful if she's a Quillboard top 10 artist, right? Suddenly I find myself cold, nervous."
+    ki "What if I talk? She's probably pretty powerful if she's a Quillboard top 10 artist, right? Suddenly I find myself cold, nervous." 
+    
+    $chat.addmessage(elsa, "Even so their voices should be different.")
 
     ki "Or is that excitement?"
 
-    k "Why would you trust me with a secret, though? We really only just met?"
+    k "Why would you trust me with a secret, though? We really only just met?" 
+    
+    $chat.addmessage(beav,"wish i coulda watched those rehearasals")
 
-    c "< I don't have time to earn your trust, so I have to buy it. >"
+    c "< I don't have time to earn your love, so I have to buy it. >"
 
-    s "... huh."
+    s "... huh." 
+    
+    $chat.addmessage(esla,"... that's the saddest thing I've ever heard.")
 
     s "That feels so much more empty than last time."
 
-    k "I promise, then."
+    k "I promise, then." 
+    
+    $chat.addmessage(cake,"poor everyone man. fluckin game took a dive ")
 
     ki "Cassandra's features focus. I thought she would smile, but..."
 
-    c "< Okay. Come with me into the recording booth? >"
+    c "< Okay. Come with me into the recording booth? >" 
+    
+    $chat.addmessage(elsa,"Liv, how depressing is this gonna get?")
 
     ki "As Cassandra moves to the booth, snagging a water bottle on the way, one of the camera crew picks up behind her. Only then does it occur to me that we're going to be on TV--"
 
-    c "!!!"
+    c "!!!" 
+    
+    $chat.addmessage(liv,"No spoilers ;)")
 
-    ki "-- but she wheels around then, a horrified expression on her face, and crumples to her knees."
+    ki "-- but she wheels around then, a horrified expression on her face, and crumples to her knees." 
+    
+    $chat.addmessage(bar,"oh no")
 
     ki "... and promptly begins to heave."
 
-    ki "The cameraman nearest her pauses, looks to Lichelle as if asking what to do next. She's been so quiet I forgot she was with us."
+    ki "The cameraman nearest her pauses, looks to Lichelle as if asking what to do next. She's been so quiet I forgot she was with us." 
+    
+    $chat.addmessage(beav,"she's paying for all those shots, now")
 
     ki "Lichelle, hanging back by the entrance, snatches up a trash can."
 
-    l "Kylie, here!"
+    l "Kylie, here!" 
+    
+    $chat.addmessage(cake,"Elle to the rescue")
 
     ki "I turn my head just in time to see the bin come flying at my face and-"
 
     # klonk sound
 
+    pause(0.5)
+    $hideGui()
+    scene bg story-7 with fade
+    pause 2.0
+    pause
     scene bg studio with fade
+    pause(0.5)
+    $showGui()
+    pause 0.5
 
     # woozy transition
 
-    s "This date has gone off the rails, guys."
+    s "This date has gone fully off the rails." 
+    
+    $chat.addmessage(cake,"KTFO baybay")
 
     # wooze
 
     ki "It's odd, what one notices when one has been clocked with a bin chucked by a professional MMA fighter."
 
-    ki "For example, I find myself busily studying a scratch mark in the wood flooring, wondering what on earth could have caused such a small, consistent fissure."
+    ki "For example, I find myself busily studying a scratch in the wood flooring, wondering what on earth could have caused such a small, consistent fissure." 
+    
+    $chat.addmessage(beav,"been there.")
 
     ki "And everyone around me sounds like they're underwater."
 
     ki "And there's something soft and warm under my head."
 
+    show lblur with dissolve
+
     l "Hey hey hey, welcome back."
 
-    show l happy
+    show l happy with dissolve
+    hide lblur with dissolve
 
-    l "I am so, so sorry for that! I really thought you had it, babe."
+    l "I am so, so sorry for that! I really thought you had it, babe." 
+    
+    $chat.addmessage(elsa,"She calls Kylie babe and I like that. I bet she has a deep, sexy voice.")
 
     ki "I find myself turning to lay flat, which probably is a bad idea, and realize that warm softness is Lichelle's lap."
 
     k "Clearly."
 
-    s "Should she have put my head there? I mean I'm probably concussed. Might not want to move my neck."
+    s "Should she have put my head there? I mean I'm probably concussed. Might not want to move my neck." 
+    
+    $chat.addmessage(bar,"Suspend disbelief Sophie. Even if you aren't talkin to us.")
 
     show l flirty
 
     l "You're okay, trust me. I've been KO'd more times than I can remember."
 
-    k "I don't think that's a good thing."
+    k "I don't think that's a good thing." 
+    
+    $chat.addmessage(cake,"lol")
 
     l "You're doing better than her."
 
-    ki "She nods toward Cassandra, lying on her side and groaning with the upright trash can next to her."
+    ki "She nods toward Cassandra. The songstress weeps softly, lying on her side and groaning, the upright trash can anchored next to her." 
+    
+    $chat.addmessage(unkn,"you need to know her name")
 
     ki "I feel like I should say something, but nothing comes to mind."
 
-    ki "Cassandra looks so defeated, lying there helpless and fully out of control."
+    ki "Cassandra looks so defeated, lying there helpless and fully out of control." 
+    
+    $chat.addmessage(elsa,"Sophie...")
 
     ki "Her choker lies next to her on the floor, gleaming elegantly, as if to contrast her."
 
     l "I guess her secret's out."
 
-    ki "At first I'm not sure what Lichelle means, but a moment of following her gaze snaps me entirely into reality."
+    ki "At first I'm not sure what Lichelle means, but a moment of following her gaze snaps me entirely into reality." 
+    
+    $chat.addmessage(beav,"not lookin forward to this")
 
     s "Here we are again, guys..."
 
-    ki "Cassandra's neck gleams pale and pretty, a vampire's dream."
+    ki "Cassandra's neck gleams pale and pretty, a vampire's dream." 
+    
+    $chat.addmessage(cake,"wha?")
 
-    ki "Except for her scars."
+    ki "Except for her scars." 
+    
+    $chat.addmessage(cake,"oh")
 
     ki "The coarse, leathery trail snakes unevenly around her neck, roughly to the base of her skull. There are larger patches here and there, almost like... like, I don't know what."
 
     k "What..."
 
-    ki "But she's weeping. She's weeping so musically, somehow, and her eyes are unfocused and she's just so damn different broken and I don't know how or why it happened but suddenly there are tears in my eyes and I don't know if it's her cries or the ligature marks on her neck or--"
+    ki "But she's weeping. She's weeping so musically, somehow, and her eyes are unfocused and she's just so damn broken and I don't know how or why it happened but suddenly there are tears in my eyes and I don't know if it's her cries or the ligature marks on her neck or--" 
+    
+    $chat.addmessage(elsa,"Kylie :(")
 
     l "Hey, hey. It's okay. It's okay."
 
     ki "Lichelle's fingers smooth my hair into even shocks. Even hazy as I am, I can't help but be aware of the power in her hands."
 
-    ki "The weeping ends."
+    ki "The weeping ends." 
+    
+    $chat.addmessage(bar,"it's sweet, but she probly does this all the time with bishes she KOs")
 
-    ki "The sobbing, it... it ended. She's looking at me, her eyes full of apologies. Yearning, longing, pleading."
+    ki "The sobbing, it... it ended. Cassandra's looking at me, her eyes full of apologies. Yearning, longing, pleading."
 
-    ki "I can only stare back. There's a gulf of something between us. I can't breathe."
+    ki "I can only stare back. There's a gulf of something between us. I can't breathe." 
+    
+    $chat.addmessage(elsa,"It's like the game's showing us what could have been")
 
     ki "Her eyes lift to Lichelle's, then lower to mine, pleading."
 
@@ -803,45 +880,67 @@ label cassDate2:
 
     pause 1.0
 
-    ki "I want this silence to end."
+    ki "I want this silence to end." 
+    
+    $chat.addmessage(fizz,"back")
 
     ki "Cassandra drags herself to a sitting position and claps the choker back around her neck. The movement is practiced and swift, and it yanks me out of my mesmerized state."
 
-    c "< I guess you have questions. >"
+    c "< I guess you have questions. >" 
+    
+    $chat.addmessage(liv,"Welcome back sweet boy :)")
 
     ki "Gently, Lichelle helps me sit up as well. The room pirouettes around me, but her grip on my shoulders holds me in place."
 
-    k "I just got dropped by a trash can and my hero is puking in a trash can six feet away."
+    k "I just got dropped by a trash can and my hero is puking in a trash can six feet away." 
+    
+    $chat.addmessage(elsa,"Sweet boy, eh.")
 
     k "And she smells like a horror movie."
 
-    ki "Cassandra's typing, but I'm having none of it."
+    ki "Cassandra's typing, but I'm having none of it." 
+    
+    $chat.addmessage(fizz,"Both of you shut up. Not here for you.")
 
     k "Who did that to your neck? What happened to you?"
 
-    ki "She stops typing."
+    ki "She stops typing." 
+    
+    $chat.addmessage(liv,"You were here for me a minute ago.")
 
-    c "N-no body. I did it to myself."
+    c "N-no body. I did it to myself." 
+    
+    $chat.addmessage(cake,"damn boi")
 
     s "Wait! No she didn't. She did not!"
 
-    ki "Her voice flows painfully, strained, as if something still squeezes her around the throat."
+    ki "Her voice flows painfully, strained, as if something still squeezes her around the throat." 
+    
+    $chat.addmessage(elsa,"Sophie I don't think you should go any further.")
 
     c "< Go back. Kylie. I'm sorry. This is stupid. I'm stupid. It's always like this. >"
 
-    ki "And just like that, she's doubled over again, pouring out her agony into the trash can."
+    ki "And just like that, she's doubled over again, pouring out her agony into the trash can." 
+    
+    $chat.addmessage(liv,"Don't underestimate Sophie. :)")
 
     l "Wow."
 
-    k "Cassandra... dammit, you're not supposed to be like this."
+    k "Cassandra... dammit, you're not supposed to be like this." 
+    
+    $chat.addmessage(elsa,"I'm not, I just... Liv, she's been through some things and I think this is bad for her.")
 
     l "I'll get her set up with a fluid IV. She'll be fine. I use them all the time to rehydrate after a weight cut."
 
-    k "That's real?"
+    k "That's real?" 
+    
+    $chat.addmessage(liv,"You care so much, Elsa")
 
     l "Yup. C'mon babe. I think Cass has been on TV enough today."
 
-    ki "I hate to leave her this way. I guess, at the end of the day, we sleep in our own beds."
+    ki "I hate to leave her this way. I guess, at the end of the day, we sleep in our own beds." 
+    
+    $chat.addmessage(elsa,"Shush.")
 
     ki "Still, this feels wrong. Dates don't end this way. Right?"
 
@@ -869,27 +968,39 @@ label cassDate2:
 
             ki "Not yet. Maybe not at all."
 
-            $loveCass -= 1
+            $renpy.notify("You can still save her")
 
-    ki "I wonder, briefly, whether Tania will be pleased or mortified by all this."
+    ki "I wonder, briefly, whether Tania will be pleased or mortified by all this." 
+    
+    $chat.addmessage(liv,"No, I mean it. You really care.")
 
     scene bg black with fade
 
     ki "Lichelle is silent during the ride home. She plays idly with her necklace, gazing out the window."
 
-    ki "On the way to the bar, I got the feeling Lichelle was trying to send signals to me. Small ones. Quick glances."
+    ki "On the way to the bar, I got the feeling Lichelle was trying to send signals to me. Small ones. Quick glances." 
+    
+    $chat.addmessage(cake,"Pretty obvious.")
 
     ki "Now, it feels like she's in a bubble."
 
-    ki "I can't help but wonder if the night went the way she wanted."
+    ki "I can't help but wonder if the night went the way she wanted." 
+    
+    $chat.addmessage(bar,"Yeah Elsa, are you her family or sumthin?")
 
     k "... you clonked me."
 
-    ki "Lichelle fingertips glide along the surface of the cross."
+    ki "Lichelle fingertips glide along the surface of the cross." 
+    
+    $chat.addmessage(elsa,"No. I don't want to talk about it.") 
+    
+    $chat.addmessage(liv,"I won't ask any more. I'm just so impressed with you, Elsa.")
 
     l "I did, babe."
 
-    k "I should probably go to a hospital."
+    k "I should probably go to a hospital." 
+    
+    $chat.addmessage(beav,"Like the idea that Elle sabotaged Cass by crackin' Kylie with a bin")
 
     l "Probably."
 
@@ -897,18 +1008,22 @@ label cassDate2:
 
     k "Did you mean to?"
 
-    l "Clonk you?"
+    l "Clonk you?" 
+    
+    $chat.addmessage(beav,"Toldja")
 
     k "Mm-hm."
 
-    l "Dunno."
+    l "Dunno." 
+    
+    $chat.addmessage(liv,"I think Lichelle meant to do it ;)")
 
     k "Why would you do that?"
 
     l "Do you think I did it on purpose?"
 
     menu:
-        s "I'm not sure guys."
+        ki "I don't know what to say..."
         "Yes":
             k "I do."
             pause 0.2
@@ -944,7 +1059,7 @@ label cassDate2:
             l "I have to pretend Robin gets a fair shot."
             s "She's so confident. Maybe it's just because I'm such a submissive myself, guys, but damn, Lichelle."
 
-
+    $getHistory(11)
     jump robinDate2
 
     # end cass date
