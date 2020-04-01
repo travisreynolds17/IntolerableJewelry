@@ -602,7 +602,7 @@ label common3:
     
     $chat.addmessage(crab,"lolololololol") 
     
-    $chat.addmessage(liv,"Right, right, skin color. Sigh. :( Let's not fight?")
+    $chat.addmessage(liv, "Right, right, skin color. :( Let's not fight?")
 
     s "Guys." 
     
@@ -619,8 +619,6 @@ label common3:
     s "I might cry. I might actually cry."
 
     s "No more fighting! We're gonna go on a nice date with a nice girl and that's that."
-
-    scene bg black with fade 
 
     pause 0.5
 

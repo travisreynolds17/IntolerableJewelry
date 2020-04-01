@@ -246,5 +246,13 @@ label declarations:
             renpy.hide_screen("historyDisplay")
             renpy.hide_screen("historySelect")
 
+        #create a custom function that takes a string and returns it in reverse
+
+        def reverseString(userInput):
+            #apparently this is the slice function, and it steps backward. fluckin python
+            return userInput[::-1]
+
+        
+
         
 

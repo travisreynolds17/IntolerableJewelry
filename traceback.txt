@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/common3.rpy", line 431, in script
-    $renpty.notify("You have to cut the strings that bind us.")
-  File "game/labels/common3.rpy", line 431, in <module>
-    $renpty.notify("You have to cut the strings that bind us.")
-NameError: name 'renpty' is not defined
+  File "game/labels/cassDate2.rpy", line 492, in script
+    c "< Hung herself. I found her the next day. She left a note on the floor under her. Blamed me. >"
+  File "game/labels/cassDate2.rpy", line 492, in <module>
+    c "< Hung herself. I found her the next day. She left a note on the floor under her. Blamed me. >"
+TypeError: getHistory() takes exactly 1 argument (0 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/common3.rpy", line 431, in script
-    $renpty.notify("You have to cut the strings that bind us.")
+  File "game/labels/cassDate2.rpy", line 492, in script
+    c "< Hung herself. I found her the next day. She left a note on the floor under her. Blamed me. >"
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/labels/common3.rpy", line 431, in <module>
-    $renpty.notify("You have to cut the strings that bind us.")
-NameError: name 'renpty' is not defined
+  File "game/labels/cassDate2.rpy", line 492, in <module>
+    c "< Hung herself. I found her the next day. She left a note on the floor under her. Blamed me. >"
+TypeError: getHistory() takes exactly 1 argument (0 given)
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Ganymead 1.0
-Tue Mar 31 00:48:23 2020
+Tue Mar 31 22:03:27 2020

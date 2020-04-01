@@ -32,7 +32,7 @@
 	"show story screen": {
 		"prefix": "-story",
 		"body": [
-			"pause(0.5)\n\\$hideGui()\nscene bg ${1:screen} with fade\npause(${2:2.0})pause\nscene bg ${3:screen}\npause(${4:0.5})\n\\$showGui()\npause(${5:0.5})"
+			"pause(0.5)\n\\$hideGui()\nscene bg ${1:screen} with fade\npause ${2:2.0}\npause\nscene bg ${3:screen}\npause(${4:0.5})\n\\$showGui()\npause ${5:0.5}"
 		],
 		"description": "Hide Gui, show a creepy text screen, show gui again"
 	}

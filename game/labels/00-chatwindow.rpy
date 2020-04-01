@@ -93,6 +93,18 @@ label chatwindow:
                     if self.delay > 0:
                         renpy.pause(self.delay)
 
+            #function to append a message to chatHistory in one continuous line
+            # think of speed and modulus as numerator and denominator. Renpy pause, even at time 0, pauses for a bit. The lower modulus, the faster the text.
+            def addLinearMessage(self, speaker, string, speed, modulus):
+                self.string = string
+                self.history.append(Message(speaker, ""))
+                count = 0
+                for i in string:
+                    chat.history[-1].message += i
+                    count += 1
+                    if count % modulus == 0:
+                        renpy.pause(speed)
+
     ### Set a variable to infinity, to be used later. This part is to keep chat box showing newest chat at the bottom rather than forcing player to scroll.
         infyadjValue = float("inf")
         ### Create a ui.adjustment object and assign it to a variable so that we can reference it later. 
