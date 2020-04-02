@@ -2,7 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Snippets/Snippets.rpy", line 2: Tab characters are not allowed in Ren'Py scripts.
+File "game/labels/00-chatwindow.rpy", line 149: u'background' is not a keyword argument or valid child for the vbox statement.
+    background horrorChat
+              ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Apr 01 00:10:24 2020
+Wed Apr 01 23:24:48 2020

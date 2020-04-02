@@ -74,9 +74,7 @@ label declarations:
     define splashHorror = Image("img/flash horror 1.jpg")
     define splashErrorTania = Image("img/ingameSplashErrorTania.png")
 
-    # character images
 
-    define lblur = im.blur("chars/l.png", 1.5)
 
 
     # --------------------------------------------------------------------------------------------
@@ -142,6 +140,17 @@ label declarations:
         on hide:
             linear 0.2 xpos - 200
 
+    transform summonChatHorror:
+        xpos chatXPos ypos chatYPos
+        alpha 0
+        on show:
+            linear 0.2 alpha 0.15
+            linear 0.2 alpha 0.075
+            repeat
+        on hide:
+            xalign 0.5 yalign 0.5
+            linear 0.5 zoom 10
+
 
 
         
@@ -206,6 +215,7 @@ label declarations:
         loveBarsZorder = loveZorder + 1
         chatzorder = loveBarsZorder + 1
         historyzorder = loveBarsZorder + 1
+        horrorZorder = historyzorder + 1
         #current position of history objects
         
         currentHistory = 0
@@ -216,6 +226,10 @@ label declarations:
         outfitJeans = 0
         outfitPantsuit = 0
         outfitCurrent = ""
+
+        #variables to show that cover chat window
+        horrorChat = ""
+        horrorTwixt = [Image("img/twixtNorm.png"), Image("img/twixtNorm1.png"), Image("img/twixtNorm2.png")]
 
 
     #useful functions

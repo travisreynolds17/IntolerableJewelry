@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/cassDate2.rpy", line 492, in script
-    c "< Hung herself. I found her the next day. She left a note on the floor under her. Blamed me. >"
-  File "game/labels/cassDate2.rpy", line 492, in <module>
-    c "< Hung herself. I found her the next day. She left a note on the floor under her. Blamed me. >"
-TypeError: getHistory() takes exactly 1 argument (0 given)
+  File "game/labels/00-declarations.rpy", line 209, in script
+    #current position of history objects
+  File "game/labels/00-declarations.rpy", line 218, in <module>
+    outfitCurrent = ""
+NameError: name 'historyZorder' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/cassDate2.rpy", line 492, in script
-    c "< Hung herself. I found her the next day. She left a note on the floor under her. Blamed me. >"
+  File "game/labels/00-declarations.rpy", line 209, in script
+    #current position of history objects
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/labels/cassDate2.rpy", line 492, in <module>
-    c "< Hung herself. I found her the next day. She left a note on the floor under her. Blamed me. >"
-TypeError: getHistory() takes exactly 1 argument (0 given)
+  File "game/labels/00-declarations.rpy", line 218, in <module>
+    outfitCurrent = ""
+NameError: name 'historyZorder' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
-Ganymead 1.0
-Tue Mar 31 22:03:27 2020
+ 
+Wed Apr 01 23:26:00 2020

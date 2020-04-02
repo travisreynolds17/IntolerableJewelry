@@ -727,7 +727,7 @@ label cassDate2:
 
     s "... huh." 
     
-    $chat.addmessage(esla,"... that's the saddest thing I've ever heard.")
+    $chat.addmessage(elsa,"... that's the saddest thing I've ever heard.")
 
     s "That feels so much more empty than last time."
 
@@ -772,10 +772,10 @@ label cassDate2:
     scene bg story-7 with fade
     pause 2.0
     pause
-    scene bg studio with fade
+    scene bg black with fade:
     pause(0.5)
     $showGui()
-    pause 0.5
+    
 
     # woozy transition
 
@@ -795,12 +795,16 @@ label cassDate2:
 
     ki "And there's something soft and warm under my head."
 
-    show lblur with dissolve
+    show l:
+        alpha 0
+        linear 0.5 alpha 0.5
+        linear 0.5 alpha 0.5
+        linear 0.5 alpha 0
+        repeat
 
     l "Hey hey hey, welcome back."
 
-    show l happy with dissolve
-    hide lblur with dissolve
+    
 
     l "I am so, so sorry for that! I really thought you had it, babe." 
     
@@ -808,9 +812,14 @@ label cassDate2:
 
     ki "I find myself turning to lay flat, which probably is a bad idea, and realize that warm softness is Lichelle's lap."
 
+    show l:
+        linear 0.5 alpha 1.0
+
     k "Clearly."
 
-    s "Should she have put my head there? I mean I'm probably concussed. Might not want to move my neck." 
+    s "Should she have put my head there? I mean I'm probably concussed. Might not want to move my neck."
+
+    scene bg studio with dissolve
     
     $chat.addmessage(bar,"Suspend disbelief Sophie. Even if you aren't talkin to us.")
 
@@ -988,9 +997,11 @@ label cassDate2:
     
     $chat.addmessage(bar,"Yeah Elsa, are you her family or sumthin?")
 
-    k "... you clonked me."
+    pause 0.2
 
-    ki "Lichelle fingertips glide along the surface of the cross." 
+    k "... you clonked me, Elle."
+
+    ki "Lichelle's fingertips glide along the surface of the cross." 
     
     $chat.addmessage(elsa,"No. I don't want to talk about it.") 
     
@@ -1024,7 +1035,7 @@ label cassDate2:
 
     menu:
         ki "I don't know what to say..."
-        "Yes":
+        "I think you wanted to hurt me":
             k "I do."
             pause 0.2
             l "Why?"
@@ -1039,7 +1050,7 @@ label cassDate2:
             ki "But she doesn't ask if I want her to hurt me."
             pause 0.5
             s "Wow. Maybe I'm just susceptible to stuff like this, but wow."
-        "No":
+        "No, I don't":
             k "I don't."
             pause 0.2
             l "Why?"
@@ -1059,7 +1070,19 @@ label cassDate2:
             l "I have to pretend Robin gets a fair shot."
             s "She's so confident. Maybe it's just because I'm such a submissive myself, guys, but damn, Lichelle."
 
-    $getHistory(11)
-    jump robinDate2
+    $getHistory(11) 
+    
+    show image splashBRB at alphaFade
+    
+    pause(0.5)
+    $hideGui()
+    scene bg story-8 with fade
+    pause 2.0
+    pause
+    scene bg bar with fade
+    pause(0.5)
+    
+    
+    jump realWorld3
 
     # end cass date
