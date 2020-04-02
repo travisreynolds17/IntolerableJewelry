@@ -766,23 +766,27 @@ label robinDate2:
 
     show r sad
 
-    r "And yet. It is difficult to reach Paris without skills. Income. And I at thirteen had none." 
+    r "I have lived by my knives, my love."
+    
+    r "In the homes of the men who took me in."
     
     $chat.addmessage(fizz,"you waited for her, and you're the one who sold her that shit")
 
-    r "Only these alien features that drew the eyes of men and women from Belgrade to Zagreb. From Venice to Zurich. At last, to Paris." 
+    r "I leveraged these alien features that drew the eyes of men and women from Belgrade to Zagreb. From Venice to Zurich. At last, to Paris." 
     
     $chat.addmessage(elsa,"David that's impossible")
 
     s "I'm shaking. She's practiced this speech. Nobody talks like this."
 
-    r "But I had skills, my love." 
+    r "These knives belonged in a kitchen, Kylie. My cooking was meant to overjoy, the richness of coq au vin, the simple pleasure of pomme frites." 
     
     $chat.addmessage(liv,"And why is that, my Elsa? Help him understand.")
 
-    r "And I had my father's switchblade."
+    r "Not the liquid stupidity of l'héroïne." 
+    
+    $chat.addmessage(cake,"you guys hearing Robin right now? she's deep in it.")
 
-    r "They helped me make it to Paris." 
+    r "Except... ratatouille couldn't get me to Paris." 
     
     $chat.addmessage(elsa,"That girl's dead, David.")
 
@@ -800,11 +804,13 @@ label robinDate2:
     
     $chat.addmessage(elsa,"She died. She was in my support group, too.")
 
+    pause 0.5
+
     k "For what I did to you."
 
     show r heartbroken
 
-    r "No, papillon, you saved me. You gave me purpose again. You were kind to me!" 
+    r "No, papillon, you saved me. You gave me purpose. You were kind to me!" 
     
     $chat.addmessage(beav,"Support for what?")
 
@@ -826,11 +832,13 @@ label robinDate2:
 
     s "... she's broken."
 
+    r "Have... I grown too old? Too ugly?"
+
     k "You're ... you're scaring me." 
     
     $chat.addmessage(cake,"The hell?")
 
-    r "Oh? Because I searched for you?"
+    r "I would have killed time itself then, to stay the way you wanted me!"
 
     k "Because the way you're looking at me makes me feel like you're going to hurt me."
 
@@ -848,9 +856,13 @@ label robinDate2:
     
     $chat.addmessage(elsa,"Who ARE you?")
 
-    ki "My heart hurts from hammering in my chest. My arms and legs hang like noodles. She lowers herself to me, kneeling so close I can smell her lipstick, tart and chemical." 
+    pause 0.5
+
+    r "When you held me, shielded me. You let me weep, you let me bleed. You never judgmed my weakness."
+
+    ki "My heart hurts from hammering in my chest. My arms and legs hang like earthworms. She lowers herself to me, kneeling so close I can smell her lipstick, tart and chemical." 
     
-    $chat.addmessage(liv,"Oblivion. :) I'll tell you more privately. Don't worry baby, I'll make it hotter than last time. x0x0")
+    $chat.addmessage(liv,"Oblivion. :) I'll tell you more privately. Promise me you'll finish yourself this time, too ;). x0x0")
 
     show l angry at left
     show r listen at right
@@ -880,31 +892,130 @@ label robinDate2:
     
     $chat.addmessage(cake,"huh? sophie's chatting?")
 
-    l "Kylie. Let's jee tee eff oh."
+
+    l "Kylie. I'ma leave this to you, babe."
+
+    k "What?"
+
+    l "Do I beat this chick's ass or what?" 
+    
+    $chat.addmessage(sophie,"CHAT feverish, signs of SEPSIS")
+
+    $renpy.notify("Robin is far more dangerous than she lets on, babe.")
 
     menu:
-        k "What should I do..?"
-        "Go with Lichelle":
-            k "O-okay."
+        k "Huh? I don't... what...?"
+        "Fuck Her Up, Lichelle":
 
-            show r heartbroken at right
+            ki "Robin seems... shorter, suddenly."
 
-            r "You're leaving me again?"
+            r "You're making an inadvisable choice, Lichelle."
 
-            show l speak at left
+            pause 0.1
 
-            l "Dude, she's not obligated to you."
+            ki "Menacing."
 
-            ki "I'm not sure how I feel that Lichelle's speaking for me. I don't know her all that well."
+            ki "I've made my decision."
 
-            ki "And I don't need a knight to save me."
+            k "... help me Elle!"
 
-            ki "Stil... it's kind of nice."
+            l "Gladly."
 
-            $loveLichelle -= 1
+            ki "In a flash, Lichelle's overshirt is flung to the floor."
+
+            ki "The first steps she takes toward Robin are just... steps."
+
+            ki "Then, a gallop. A bouncing boxer's step."
+
+            ki "I don't even know if Robin knows how to fight."
+
+            pause 0.1
+
+            ki "It wouldn't have mattered anyway."
+
+            ki "It only takes one punch. One feinted jab disguising a left cross."
+
+            pause 0.1
+
+            ki "A murderball, right down the center."
+
+            scene bg black
+
+            pause 0.4
+
+            # find a way to display dialogue of gutteral noise on both sides
+
+            # scene - image of Robin slashing Lichelle
+            pause 0.4
+
+            #scene - black
+
+            ki "It was never supposed to be like this."
+
+            scene bg playhouse with fade
+
+            k "LICHELLE!"
+
+            r "..."
+
+            ki "I don't know where the butterfly knife came from."
+
+            $chat.addmessage(liv,"Robin! You did it. :) You did so well.")
+
+            l "... gghhhk..." 
             
+            $chat.addmessage(liv,"You made a difficult choice, Kylie. :) So Proud!")
+            
+            pause 0.1
 
-        "Robin needs me, doesn't she?":
+            ki "Somehow, Robin is wrapped around Lichelle like a spider, the blade edge gleaming milky against her sienna skin."
+
+            r "Kylie. I have not taken her life."
+
+            pause 0.1
+
+            r "I will. If you desire it."
+
+            s "No, no. No."
+
+            $renpy.notify("Override. Menu: 'Kill Her', 'Spare Her' removed. $SparedElle = True")
+
+            r "For you, draga mea, I spare her. Lichelle, certainly you despise me."
+
+            ki "Robin maintains the blade's touch on Lichelle's neck as she unfolds, flowing to a safe distance."
+
+            l "... yeah no shit..."
+
+            r "Understand this was a consequence of your choice. Should you attempt reprisal, next time, I will carve you to the bone."
+
+            ki "Her tone lacks music."
+
+            s "Louisa, you cut me..."
+
+            k "Robin! Disappear. Just disappear!"
+
+            show r heartbroken
+
+            r "Kylie?"
+
+            k "DISAPPEAR!!!"
+
+            pause 0.5
+
+            show r disap 
+
+            pause 0.5
+
+            show r sad
+
+            pause 0.5
+
+            #lights out
+
+            $loveLichelle+=1
+            $fuckUpRobin = True
+
+        "Don't you dare touch Robin!":
             k "... Robin's right, though."
 
             show l disap at left
@@ -936,15 +1047,17 @@ label robinDate2:
 
             r "I never received a single coin for our lovemaking, putain."
 
+            s "Maybe Robin didn't. Someone did."
+
             ki "I don't speak French, but I'm positive Robin isn't being as sweet as the words flowing from those dark lips."
 
             k "... I have to make it up to her, Lichelle."
 
-            l "The hell you do. Did you not notice the giant brick of coke on the table?"
+            l "The hell you do. Did you not notice the giant brick of H on the table?"
 
             show r happy at right
 
-            r "It's flour."
+            r "It's sugar."
 
             show l disap at left
 
@@ -954,7 +1067,21 @@ label robinDate2:
 
             show l angry at left
 
-            l "Kylie, don't let her bullshit get to you!"
+            k "... ha."
+
+            pause 0.5
+
+            k "Ahaahahahaa! Robin. Robin!"
+
+            s "I broke."
+
+            k "How beautiful. How perfect!"
+
+            ki "And Robin only smiles."
+
+            ki "Lichelle relaxes."
+
+            ki "If I hadn't been looking directly at Robin, I wouldn't have noticed her sliding the butterfly knife back into her sash."
 
             
             $loveRobin += 1
@@ -1004,7 +1131,7 @@ label robinDate2:
 
     ki "A whisper."
 
-    r "{alpha=0.5}I still have the blade.{/alpha}"
+    r "{alpha=0.5}I still have my father's blade.{/alpha}"
 
     # sound effect of lights
     play sound "sounds/Lights Out.mp3"
@@ -1022,25 +1149,37 @@ label robinDate2:
 
     l "Alright, gloves off. Robin, I know you can hear me!"
 
-    l "Next time I see you, you're getting smacked up!"
+    l "Next time I see you, you're getting smacked up!" 
+    
+    $chat.addmessage(fizz,"Elsa. Don't you leave with that... that thing!")
 
     show l speak
 
+    pause 0.5
+
     l "Hey Kylie, you good? She's a psycho, I swear."
+
+    pause 0.5
 
     l "Oh. You have, uh, something on your neck."
 
-    ki "My fingers easily find the tiny red ribbon flowing from the side of my neck, but I rub off a little and look at my fingertips anyway."
+    ki "My fingers easily find the tiny red ribbon flowing from the side of my neck, but I rub off a little and look at my fingertips anyway." 
+    
+    $chat.addmessage(elsa,"Why not? You did.")
 
     ki "My heart's fluttering. It doesn't hurt, not at all."
 
     k "I'm okay."
 
-    l "Is that blood?"
+    l "Is that blood?" 
+    
+    $chat.addmessage(fizz, "What happened to that girl?")
 
     k "I... I don't know what I'm feeling right now."
 
-    ki "I ... I think I want more. The rush, the rush engulfs me."
+    ki "I ... I think I want more. The rush, the rush engulfs me." 
+    
+    $chat.addmessage(elsa,"Why do you care?")
 
     k "That was some date."
 
@@ -1048,7 +1187,9 @@ label robinDate2:
 
     l "That wasn't a date. That was a horror movie."
 
-    k "I get the feeling Robin isn't much for small talk."
+    k "I get the feeling Robin isn't much for small talk." 
+    
+    $chat.addmessage(liv,"Pleeeease Elsa I'm waiting for you :)")
 
     l "Obviously not, she-"
 
@@ -1060,7 +1201,9 @@ label robinDate2:
 
     l "God dammit, Robin!"
 
-    ki "The lights are gone. My heart races again. Is she back? I brace for some sensation against my skin, terrified it will come and never come in the same instant."
+    ki "The lights are gone. My heart races again. Is she back? I brace for some sensation against my skin, terrified it will come and never come in the same instant." 
+    
+    $chat.addmessage(elsa,"She drowned. In the fountain.")
 
     pause 1.0
 
@@ -1072,7 +1215,9 @@ label robinDate2:
 
     pause 1.0
 
-    ki "It was just a knick. She could have split me from ear to ear if she wanted, couldn't she?"
+    ki "It was just a knick. She could have split me from ear to ear if she wanted, couldn't she?" 
+    
+    $chat.addmessage(fizz,"What? When?")
 
     pause 1.0
 
@@ -1080,7 +1225,9 @@ label robinDate2:
 
     l "Gah! FUCK!"
 
-    r "Goodnight, my darlings."
+    r "Goodnight, my darlings." 
+    
+    $chat.addmessage(elsa,"Last week. She had so much junk in her system she was gonna be dead anyway.")
 
     ki "Her voice flows from somewhere far away, echoing lightly."
 
@@ -1095,37 +1242,51 @@ label robinDate2:
 
     k "Oh my god, Lichelle!"
 
-    s "Holy shit."
+    s "Holy shit." 
+    
+    $chat.addmessage(elsa,"Not that you give a shit.")
 
     ki "She's staring at me, her eyes wide with shock and pain. There's a slash of blood across her chest, shallow, but running in a neat flowing path."
 
     l "I'm gonna fucking kill you bitch! I swear to god!"
 
-    k "Are you okay? Should we call the police?"
+    k "Are you okay? Should we call the police?" 
+    
+    $chat.addmessage(fizz,"Look, I didn't know.")
 
     l "You better hope they find you before I do!"
 
     ki "The camera crew moves in, right on cue, and Lichelle to my great surprise doesn't front kick one of them into oblivion."
 
-    ki "Rather she lets a slow breath out and allows them to film her. Her chest rises and falls, heavily."
+    ki "Rather she lets a slow breath out and allows them to film her. Her chest rises and falls, heavily." 
+    
+    $chat.addmessage(elsa,"It's always a perfect excuse, isn't it. Not to know.")
 
     ki "One of the straps of her tank top is cut through."
 
     k "Lichelle. You're okay?"
 
-    ki "She nods."
+    ki "She nods." 
+    
+    $chat.addmessage(cake,"What do you do, Elsa?")
 
     l "Yeah. She ruined my top."
 
-    k "That's what you're worried about?"
+    k "That's what you're worried about?" 
+    
+    $chat.addmessage(elsa,"I run St. Agatha's Revelation.")
 
-    ki "Sighing, Lichelle dabs a finger in the darkening red running down her chest."
+    ki "Sighing, Lichelle dabs a finger in the darkening red running down her chest." 
+    
+    $chat.addmessage(beav,"And that is?")
 
     l "It's a theatre prop. Fake blood. She put it on you, too."
 
     k "Oh."
 
-    ki "Except the burning pain tattooing my neck begs to differ."
+    ki "Except the burning pain tattooing my neck begs to differ." 
+    
+    $chat.addmessage(elsa,"It's a mission here in R13:14-15. We're a rehabilitation program for addicts of all types.")
 
     show l shy
     # up close if possible
@@ -1133,7 +1294,7 @@ label robinDate2:
     if loveLichelle == 4:
         # note you have to pick her both times at first roundup and agree with her on both second-play dates.
 
-        k "L-lichele?"
+        k "Elle?"
 
         ki "She's staring at me now, eyes full of purpose."
 
@@ -1161,11 +1322,17 @@ label robinDate2:
 
     scene bg black with dissolve
 
-    ki "The car ride home lasts an eternal instant. Cassandra's humbled sobbing echoes in between fits of Robin's laughter in the pitch black."
+    ki "The car ride home lasts an eternal instant. Cassandra's humbled sobbing echoes in between fits of Robin's cold laughter in the pitch black." 
+    
+    $chat.addmessage(beav,"Heroin?")
 
     ki "These two nights wrestle for dominance in my mind. The show has faded into an afterthought."
 
-    ki "I look to Lichelle, sitting with her flannel shirt buttoned over the sticky theatre blood."
+    ki "I look to Lichelle, sitting with her flannel shirt buttoned over the sticky theatre blood." 
+    
+    $chat.addmessage(elsa,"Yeah.") 
+    
+    $chat.addmessage(liv,"Elsa, I'm starting without you ;)")
 
     s "~yaaawn~"
 
@@ -1174,6 +1341,7 @@ label robinDate2:
 
         ki "She's been the one constant over these few days."
 
+        $renpy.notify("Don't give in to base needs. Not when you've come so far!")
         ki "Streetlights paint her features brightly, then vanish, then paint once more."
 
         k "Hey, Lichelle..."
@@ -1181,9 +1349,13 @@ label robinDate2:
         show l listen with dissolve
         l "Hm?"
 
+
         ki "Her expression is so far away. She's so fearsome in her way that this vulnerability captivates me in the darkness."
 
+        $renpy.notify("give in, babe. You need me.")
+
         s "Wow. I can't believe Kylie's thinking about anything other than running the ~yawn~ hell away."
+
 
         menu:
             ki "Should I..."
@@ -1202,21 +1374,32 @@ label robinDate2:
 
     l "So I'm gonna go get a shower and try not to go kick Robin's ass. You might want to lock your door tonight."
 
-    k "You think she's really dangerous, though?"
+    k "You think she's really dangerous, though?" 
+    
+    $chat.addmessage(fizz,"That's not the place I took Sophie.")
 
     show l disap
 
-    l "She splashed us with fake blood, but I think she was sending a message. Showing us what she could have done if she wanted."
+    if fuckUpRobin:
+        l "Babe, I fight professionally. She coulda killed me. I know I went in angry."
+        l "I messed up."
+        l "But she was like a god damned ghost. If you wanna know if I think she's dangerous, the answer is hell yes she's dangerous."
+    else:
+        l "She splashed us with fake blood, but I think she was sending a message. Showing us what she could have done if she wanted."
 
     show l listen
 
     l "... are you okay?"
 
-    k "I'm fine. I've never had anything like that happen before."
+    k "I'm fine. I've never had anything like that happen before." 
+    
+    $chat.addmessage(elsa,"I know. Louisa met her at Michael of Le Sabre and they got close.")
 
     show l speak
 
-    l "Christ, I hope not. I mean, we're a TV show and no one's ever pulled a stunt like that."
+    l "Christ, I hope not. I mean, we're a TV show and no one's ever pulled a stunt like that." 
+    
+    $chat.addmessage(elsa,"Louisa brought her to our program because Le Sabre was corrupt.")
 
     k "I didn't expect it. I didn't expect her to know me. Or for her to be ... that girl."
 
