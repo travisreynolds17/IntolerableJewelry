@@ -28,6 +28,7 @@ label chatHistory:
         selectedChat = 0
         # holds value of currently selected history
         selectedHistory = ""
+        selectedTitle = ""
 
         # list of collected histories.
         histories = []
@@ -132,12 +133,14 @@ label chatHistory:
             i = scene
             histories[i].history = chat.history
             histories[i].seen = True
-            histories[i].recap = chatRecaps[i]
+       
             chat.delmessages()
 
         def chatHistUpdate(scene):
             # selectedHistory refers to the currently active history, i.e., you have clicked scene 1 and now scene 1's chat log is stored in selectedHistory
             chatHistory.history = histories[scene].history
+           
+
 
     # should chat history take up full screen or no? Maybe not. That's a lot of horizontal text. Use your chatbox code to create functions for acquiring and displaying chat text.
 
@@ -156,7 +159,6 @@ label chatHistory:
                 xpos 800
                 viewport id "chatHistory":
                     mousewheel True
-                    # side area not working here, works in chatbox though. sidearea(0,0, histWidth, histHeight)
                     yinitial 0.0
                     scrollbars "vertical"
                     # side area determines how text is placed in the box
@@ -200,5 +202,6 @@ label chatHistory:
                     xsize histBoxWidth
                     ysize histBoxHeight
 
+    # define a screen that holds the chat recaps.
 
-# to do. Chat history is defaulting to scene 1. (not zero). Is not updating when scene zero button is clicked.
+

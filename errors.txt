@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/labels/00-chatwindow.rpy", line 149: u'background' is not a keyword argument or valid child for the vbox statement.
-    background horrorChat
-              ^
+File "game/labels/common4.rpy", line 135: expected statement.
+    i += 1
+      ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Apr 01 23:24:48 2020
+Fri Apr 03 00:08:56 2020

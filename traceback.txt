@@ -1,26 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/00-declarations.rpy", line 209, in script
-    #current position of history objects
-  File "game/labels/00-declarations.rpy", line 218, in <module>
-    outfitCurrent = ""
-NameError: name 'historyZorder' is not defined
+  File "game/labels/common4.rpy", line 125, in script
+    show text toPost[0]:
+  File "game/labels/common4.rpy", line 125, in <module>
+    show text toPost[0]:
+  File "game/labels/00-declarations.rpy", line 283, in randomXY
+    
+IndexError: list assignment index out of range
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/00-declarations.rpy", line 209, in script
-    #current position of history objects
+  File "game/labels/common4.rpy", line 125, in script
+    show text toPost[0]:
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/labels/00-declarations.rpy", line 218, in <module>
-    outfitCurrent = ""
-NameError: name 'historyZorder' is not defined
+  File "game/labels/common4.rpy", line 125, in <module>
+    show text toPost[0]:
+  File "game/labels/00-declarations.rpy", line 283, in randomXY
+    
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 731, in do_mutation
+    return method(self, *args, **kwargs)
+IndexError: list assignment index out of range
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
- 
-Wed Apr 01 23:26:00 2020
+Ganymead 1.0
+Thu Apr 02 23:40:06 2020

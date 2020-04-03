@@ -151,7 +151,10 @@ label declarations:
             xalign 0.5 yalign 0.5
             linear 0.5 zoom 10
 
-
+    transform summonRecaps:
+        xalign 0.5 yalign 0.5
+        ypos -100
+        linear 0.5 ypos 100
 
         
 
@@ -259,11 +262,13 @@ label declarations:
             renpy.show_screen("chatHistory")
             renpy.show_screen("historyDisplay")
             renpy.show_screen("historySelect")
+        
 
         def hideChatHistory():
             renpy.hide_screen("chatHistory")
             renpy.hide_screen("historyDisplay")
             renpy.hide_screen("historySelect")
+     
 
         #create a custom function that takes a string and returns it in reverse
 
@@ -271,7 +276,16 @@ label declarations:
             #apparently this is the slice function, and it steps backward. fluckin python
             return userInput[::-1]
 
-        
+        # return a random x,y coordinate in this game's range. Note: the range is shortened by pixels each direction to account for zoom and RtoL text
+        def randomXY():
+            temp = []
+
+            temp.append(renpy.random.randint(200, 1080))
+            temp.append(renpy.random.randint(100, 600))
+
+            return temp
+
+      
 
         
-
+  

@@ -518,7 +518,7 @@ label robinDate2:
 
     pause 0.3
 
-    $getHistory(12)
+    $getHistory(13)
 
     show screen chatHorror
 
@@ -1012,10 +1012,11 @@ label robinDate2:
 
             #lights out
 
-            $loveLichelle+=1
+            $loveLich+=1
             $fuckUpRobin = True
 
         "Don't you dare touch Robin!":
+            $fuckUpRobin = False
             k "... Robin's right, though."
 
             show l disap at left
@@ -1291,7 +1292,7 @@ label robinDate2:
     show l shy
     # up close if possible
 
-    if loveLichelle == 4:
+    if loveLich == 4:
         # note you have to pick her both times at first roundup and agree with her on both second-play dates.
 
         k "Elle?"
@@ -1336,7 +1337,7 @@ label robinDate2:
 
     s "~yaaawn~"
 
-    if loveLichelle == 4:
+    if loveLich == 4:
         # option for love scene ending with Lichelle
 
         ki "She's been the one constant over these few days."
@@ -1381,8 +1382,9 @@ label robinDate2:
     show l disap
 
     if fuckUpRobin:
-        l "Babe, I fight professionally. She coulda killed me. I know I went in angry."
+        l "Babe, I fight professionally. She coulda killed me."
         l "I messed up."
+        k "You seem awfully calm about that, Elle."
         l "But she was like a god damned ghost. If you wanna know if I think she's dangerous, the answer is hell yes she's dangerous."
     else:
         l "She splashed us with fake blood, but I think she was sending a message. Showing us what she could have done if she wanted."
@@ -1405,33 +1407,47 @@ label robinDate2:
 
     l "I just wonder how many people were hiding in there. No way she moved that table on her own and did all that stuff from the stage."
 
-    k "I have no idea."
+    k "I have no idea." 
+    
+    $chat.addmessage(beav,"Corrupt?")
 
-    ki "It's hard to think, even now. I feel drained, like all of my energy has been spent dissecting those few minutes in the dark."
+    ki "It's hard to think, even now. I feel drained, like all of my energy has been spent dissecting those few minutes in the dark." 
+    
+    $chat.addmessage(elsa,"Louisa used to say everyone there was either selling jewelry or wearing it.")
 
     s "... you're all frickin' nuts."
 
     show l speak
 
-    l "Get some sleep. Hey, it's you and me tomorrow."
+    l "Get some sleep. Hey, it's you and me tomorrow." 
+    
+    $chat.addmessage(fizz,"Jewelry. Meaning heroin.")
 
     k "Yeah."
 
-    ki "So, so tired."
+    ki "So, so tired." 
+    
+    $chat.addmessage(elsa,"Yeah. Usually. Sometimes other things.")
 
     k "Please don't let it be a disaster. If we just get fast food and watch TV I'll be just fine."
 
     show l happy
 
-    l "Don't worry babe. Tomorrow's gonna be nothing like the last two days for you."
+    l "Don't worry babe. Tomorrow's gonna be nothing like the last two days for you." 
+    
+    $chat.addmessage(beav,"and You were looking after Louisa, too?")
 
     scene bg dressing with dissolve
 
-    ki "I don't even have time to consider much more. I didn't even intend to flop directly on the bed and drag a pillow under my head. It just kind of happened."
+    ki "I don't even have time to consider much more. I didn't even intend to flop directly on the bed and drag a pillow under my head. It just kind of happened." 
+    
+    $chat.addmessage(elsa,"Louisa was my sister. She was recovering, you know? She was.")
 
     ki "The knick on my neck burns a little still."
 
-    ki "I have a date with Lichelle tomorrow and yet, somehow, I feel so very alone."
+    ki "I have a date with Lichelle tomorrow and yet, somehow, I feel so very alone." 
+    
+    $chat.addmessage(fizz,"I owe you so many apologies, Elsa. I'm so sorry. I had no idea.")
 
     ki "Maybe Tania will have something to tell me when she gets back."
 
@@ -1439,35 +1455,52 @@ label robinDate2:
 
     pause 1.0
 
-    s "... guys. I need to pee, but I don't wanna get up."
+    s "... guys. I need to pee, but I don't wanna get up." 
+    
+    $chat.addmessage(elsa,"Yeah. Thanks. Thank you.")
 
     s "Sophie's a sleepy girl. I just don't feel like getting up."
 
+    pause 0.5
+
     s "... so we might as well go on."
-    # chat chats. One odd thing happens.
-
-    show placeholder at right
-    pause 0.1
-    hide placeholder
-
-    pause 2.0
 
     scene bg black with fade
 
-    s "So, who do you guys think between Cassandra and Robin?"
+    s "So, who do you guys think between Cassandra and Robin?" 
+    
+    $chat.addmessage(cake,"Elsa, you still at Sophie's place? damn cops ever gonna show?")
 
     s "I'm stuck. I feel like Cassandra's all pure and real, and then Robin's all dark and theatrical. Like, how much of what Robin's saying is an act?"
 
-    s "But then, maybe Cassandra isn't really all pure and it's just Robin being all evil that makes me think that."
+    s "But then, maybe Cassandra isn't really all pure and it's just Robin being all evil that makes me think that." 
+    
+    $chat.addmessage(elsa,"I'm here, yeah. I can hear her talking. She's not answering the door.")
 
-    s "That story about her dad's knife. She's killed someone, maybe."
+    s "That story about her dad's knife. She's killed someone, maybe." 
+    
+    $chat.addmessage(liv,"Definitely :) Elsa, I know how to get Sophie to answer the door.")
 
     s "Then again, I don't know if I believe her story. It's way too convenient for her to show up here if she and Kylie have that kind of history."
 
     # chat
 
-    s "Well, anyway, we have one more date to go! Let's go get us a tomboy."
+    s "Well, anyway, we have one more date to go! Let's go get us a tomboy." 
+    
+    $chat.addmessage(liv,"Come back to me, you won't regret it. :)")
 
     pause 1.0
+
+    $getHistory(14)
+
+    pause(0.5)
+    $hideGui()
+    scene bg load-run with fade
+    pause 2.0
+    pause
+    scene bg dressing
+    pause(0.5)
+    $showGui()
+    pause 0.5
 
     jump common4
