@@ -61,7 +61,7 @@ label declarations:
     # hair tone / name tone
 
     define m = Character("Mortimer")
-    define o = Character("Oblivion")
+    define o = Character("Oblivion", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf"")
     define girls = Character("Cass, Lichelle & Robin")
 
     # define a = Character("Ashley")
@@ -156,7 +156,13 @@ label declarations:
         ypos -100
         linear 0.5 ypos 100
 
-        
+    transform textFloatCenter:
+        on show:
+            xpos 0.5 ypos 0.5 alpha 0.0
+            linear 1.0 alpha 1.0
+        on hide:
+            alpha 1.0
+            linear 1.0 alpha 0.0
 
 # -------------------------------------------------------------------------------------------------
 
@@ -284,6 +290,16 @@ label declarations:
             temp.append(renpy.random.randint(100, 600))
 
             return temp
+
+        # a function that takes a list of strings and shows each one, applying the specified transformation to each sequentially with delay seconds between iterations DOES NOT WORK YET
+
+        def transformList(strings, transform, random):
+            for i in strings:
+                if random:
+                    temp = randomXY()
+                renpy.show(i, at_list = [transform])
+                
+            
 
       
 

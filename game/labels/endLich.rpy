@@ -48,7 +48,7 @@ label endLich:
 
     l "You don't have to-"
 
-    k "I'm also scared you won't was that goop off properly."
+    k "I'm also scared you won't wash that goop off properly."
 
     show l shy
 
@@ -96,7 +96,7 @@ label endLich:
 
     ki "The door's barely closed behind us before her arms are around me."
 
-    ki "It doesn't matter that both of us are colored with blood. Sort of."
+    ki "It doesn't matter that both of us are stained with blood. Sort of."
 
     s "~yawn~"
 

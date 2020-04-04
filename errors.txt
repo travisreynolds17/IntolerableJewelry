@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/labels/common4.rpy", line 135: expected statement.
-    i += 1
-      ^
+File "game/labels/common4.rpy", line 429: end of line expected.
+    l "Watch!" - 
+               ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Apr 03 00:08:56 2020
+Fri Apr 03 14:45:10 2020
