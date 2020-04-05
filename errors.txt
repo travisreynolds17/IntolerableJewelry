@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/labels/common4.rpy", line 429: end of line expected.
-    l "Watch!" - 
-               ^
+File "game/labels/00-biographies.rpy", line 198: invalid syntax
+        global person.triviaPointer
+                      ^
+    
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Apr 03 14:45:10 2020
+Sun Apr 05 17:07:26 2020

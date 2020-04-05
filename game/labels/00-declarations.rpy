@@ -61,7 +61,7 @@ label declarations:
     # hair tone / name tone
 
     define m = Character("Mortimer")
-    define o = Character("Oblivion", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf"")
+    define o = Character("Oblivion", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf")
     define girls = Character("Cass, Lichelle & Robin")
 
     # define a = Character("Ashley")
@@ -194,12 +194,7 @@ label declarations:
 
         $sceneNum = 0
 
-        # Variables for left button menu
-        python:
-            leftBtnTxt = [
-                "Tips", "ComeFundMe", "History"
-            ]
-
+        
         # regarding severance. Ending determined by severance.
         # sever all four girls but not the entity, sophie escapes but everyone dies and the entity lives on. Bad newsreel ending. sever the entity and none of the girls, everyone dies. Bad newsreel ending but entity dead. No need to severkylie. Sever the entity and some of the girls, good ending where whoever's left unsevered dies. sever all four girls and the entity, best ending where all girls meet together and Robin reveals she's the one who was giving out code hints, and tells you she voluntarily went into the code because she's dealt with cosmic entities before. If the girl you have at least 4 romance with survives, hook up IRL for a special exclusive scene.
         # bonus. If at any point you try to sever Kylie, special ending where Sophie wakes up in a hospital bed surrounded by the Unstrung versions of the girls. Bad end. Bonus ending if you try to sever god, the game crashes. Will get one chance each time

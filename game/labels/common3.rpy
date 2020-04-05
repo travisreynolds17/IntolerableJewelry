@@ -2,7 +2,7 @@ label common3:
     # repeats end of common1, with some stuff changed. Some cleanup:
     # update left window button from come fund me to input request
     $chat.delmessages()
-    $leftBtnTxt[1] = "Input"
+    $leftBtnTxt[1] = "Function"
 
     # set current scene for chat history purposes
     $sceneNum = 8
