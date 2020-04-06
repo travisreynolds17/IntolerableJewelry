@@ -7,17 +7,25 @@ label biographies:
         class Biography:
             def __init__(self, char, pic, bio, age, color, trivia):
                 self.char = char
-                #note: pic is either a pre-defined portrait variables or an image path. 
+                # note: pic is either a pre-defined portrait variables or an image path.
                 self.pic = pic
                 self.bio = bio
                 self.selected = False
                 self.age = 0
-                self.color = ""
-                self.trivia = []
+                self.color = color
+                self.trivia = trivia
                 self.triviaPointer = 0
-                self.level = 0 # biography level determines which type of bio we get. 0 is for before meeting girls. 1 is before first dates.  2 is before second dates. 3 is during the revelation.
+                # biography level determines which type of bio we get. 0 is for before meeting girls. 1 is before first dates.  2 is before second dates. 3 is during the revelation.
+                self.level = 0
 
-        
+            def tPointerChange(self, amount):
+                self.triviaPointer += amount
+
+            def tPointerSet(self, amount):
+                self.triviaPointer = amount
+
+            def levelUp(self):
+                self.level += 1
 
         # the different biographies are meant to be displayed as a character
 
@@ -39,7 +47,7 @@ label biographies:
             "Cassandra's favorite exercise is the kettlebell swing.",
             "Cass loves pro wrestling, and her favorite move is the shooting star press.",
             "When she was 20 Cass briefly trained to be a pro-wrestling referee.",
-            "Cassandra declined a guest appearance on two popular singing competition programs, calling them, 'glittery, self-worshipping karaoke'"
+            "Cassandra declined a guest appearance on two popular singing competition programs, calling them  'glittery, self-worshipping karaoke'",
             "She wanted to wrestle, but wasn't comfortable showing as much skin as the local promotion wanted.",
             "She was disowned by her parents when she announced her intention to marry Marina",
             "Cassandra's favorite road snack is banana chips.",
@@ -107,7 +115,7 @@ label biographies:
             "You were good to her. You protected her from your friends.",
             "But she was like you. An addict, Sophie. Recovering, but still sick.",
             "And it's your fault she died."
-            
+
         ]
 
         altCassTrivia = [
@@ -132,7 +140,7 @@ label biographies:
             "And Louisa sat on the fountain, her veins overflowing with jewelry.",
             "You gave her the jewelry, Sophie.",
             "She passed out into the fountain. You know, it doesn't take long to drown.",
-            "But you tried to save her. But you couldn't pull her out.", 
+            "But you tried to save her. But you couldn't pull her out.",
             "Lichelle mistook it for a fight, you know. You can still smell her warm skin from when she choked you unconscious, can't you?",
             "It was Cassandra who pulled Louisa out of the fountain.",
             "Cassandra who had been stalking you two for weeks.",
@@ -175,56 +183,79 @@ label biographies:
 
         ]
 
-        #define default bios. Do this at end so bio variables will be in place
-        cassBio = Biography("Cassandra Sanna", "img/cassBio.png", "", 22, "Ultramarine", [])
-        lichBio = Biography("Lichelle Carpenter", "", "", 25, "Carmine Red", [])
+        # define default bios. Do this at end so bio variables will be in place
+        cassBio = Biography("Cassandra Sanna", "img/cassBio.png",
+                            "", 22, "Ultramarine", cassTrivia)
+        lichBio = Biography("Lichelle Carpenter", "",
+                            "", 25, "Carmine Red", [])
         robinBio = Biography("Robin Godfrey", "", "", 24, "Royal Purple", [])
-        livBio = Biography("Oblivion Leibniz", "", "", "R13:14-15", "China White", "Oblivion is known by many names, but prefers 'Liv'. She loves you more than anyone ever could.")
-        taniaBio = Biography("Tania van der Waal", "", "", 26, "Tuscan Sun", [])
+        livBio = Biography("Oblivion Leibniz", "", "", "R13:14-15", "China White",
+                           "Oblivion is known by many names, but prefers 'Liv'. She loves you more than anyone ever could.")
+        taniaBio = Biography("Tania van der Waal", "",
+                             "", 26, "Tuscan Sun", [])
 
         allBios = [cassBio, lichBio, robinBio, livBio, taniaBio]
 
-        #=============SCREEMS======================================================================================================
+        # =============SCREEMS======================================================================================================
 
         bioBlockWd = 300
         bioBlockHt = 500
-        bioBlockPointer = 0 # holds which bio block is currently highlighted. May not need.
-        currentTrivia = "" #holds trivia to be shown at center screen or somewhere else later
-        currentBio = "" #holds bio to be showed in full-screen biography frame
+        # holds which bio block is currently highlighted. May not need.
+        bioBlockPointer = 0
+        currentTrivia = 0  # holds trivia to be shown at center screen or somewhere else later
+        currentBio = ""  # holds bio to be showed in full-screen biography frame
+        onScreen = False
+        displayTrivia = ""
 
         bioBlocks = []
 
-        def showTrivia(person, direction):
-            global person.triviaPointer
-            currentTrivia = person.trivia[triviaPointer]
-            renpy.show(currentTrivia, center)
-            if direction == "plus":
-                person.triviaPointer += 1
-            else:
-                person.triviaPointer -= 1
+        def showTrivia(personID, change):
+            global currentTrivia
+            global onScreen
+            global displayTrivia
+
+            person = allBios[personID]
+            # if a trivia on screen already, hide it
+            if onScreen == True:
+                renpy.hide(currentTrivia)
+
+            limit = len(person.trivia)
+
+            currentTrivia = person.trivia[person.triviaPointer]
+            onScreen = True
+
+            displayTrivia = currentTrivia
+            # iterate trivia pointer
+            allBios[personID].tPointerChange(change)
+
+            if person.triviaPointer >= limit:
+                allBios[personID].tPointerSet(0)
+
+            if person.triviaPointer < 0:
+                allBios[personID].tPointerSet(limit - 1)
 
         def closeBioScreen():
             currentTrivia = 0
             for i in allBios:
                 i.triviaPointer = 0
-            #close all screens. Maybe in a list with a for loop?
+            # close all screens. Maybe in a list with a for loop?
 
         def summonBio(person):
             currentBio = person
             renpy.show_screen()
 
-        
-                
     #--------------- screens and transforms
+
+    default bioScreenBack = Image("img/menu-bios.png")
 
     transform bio1:
         xpos 400 ypos 120 alpha 0.0
         linear 0.8 alpha 1.0
 
-
     screen biographies:
+        add bioScreenBack
         modal True
-        #cassandra
+        # cassandra
         fixed at bio1:
             text cassBio.char:
                 xalign 0.1
@@ -232,20 +263,33 @@ label biographies:
             image cassBio.pic:
                 xalign 0.8
                 yalign 0.8
+            # buttonBox
             hbox:
                 xalign 0.1
                 yalign 0.8
                 button:
-                    #placeholder, use icons later
+                    # placeholder, use icons later
                     text "B"
-                    action Function(showTrivia, cassBio, "minus")
+                    xysize(30, 20)
+                    action Function(showTrivia, 0, -1)
                 text "Trivia"
                 button:
                     text "F"
-                    action Function(showTrivia, cassBio, "plus")
+                    xysize(30, 20)
+                    action Function(showTrivia, 0, 1)
                 button:
                     text "Bio"
-                    action Function(summonBio, cassBio)
+                    xysize(30, 20)
+                    action Function(summonBio, 0)
+
+        # trivia display section
+        hbox at alphaFade:
+            for i in displayTrivia:
+                hbox:
+
+                    text i:
+                        xpos 270
+                        ypos 340
 
     screen showBio:
 
