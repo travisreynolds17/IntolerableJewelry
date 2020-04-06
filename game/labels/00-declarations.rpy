@@ -293,6 +293,14 @@ label declarations:
                 if random:
                     temp = randomXY()
                 renpy.show(i, at_list = [transform])
+
+
+        # function to construct and initialize multiple arrays. Takes a list of lists, a range, and a value to append in 
+        def buildArrays(arrayList, range, value):
+            #note, range does not include final digit 
+            for i in arrayList:
+                for k in range(0, range):
+                i.append(value)
                 
             
 

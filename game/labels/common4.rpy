@@ -63,7 +63,7 @@ label common4:
 
     ki "Oddly heavily."
 
-    $chat.addmessage(liv, "But you touched yourself for me only a moment ago. :) How can you hate me?")
+    $chat.addmessage(liv, "But you bared yourself for me only a moment ago. :) How can you hate me?")
 
     pause 2.0
     # sound? flash?
@@ -151,7 +151,7 @@ label common4:
 
     pause 2.1
 
-    # suddenly image of dismembered Tania on other side of her door.
+    # suddenly image of dismembered Robin on other side of her door.
 
     s "OH! Oh my god!"
 
@@ -171,9 +171,9 @@ label common4:
 
     $chat.addmessage(beav, "whoa that is not okay")
 
-    l "Was... did Robin do this?"
+    k "Was... did you do this?"
 
-    ki "Tania, she's... she's in pieces. She's, she's..."
+    ki "Robin, she's... she's in pieces. She's, she's..."
 
     s "I don't wanna play anymore"
 
@@ -183,7 +183,7 @@ label common4:
 
     python:
         temp = reverseString(
-            "Silky, silky OblivionnoivilbO tenderly caressing me, every curve, every valley, my skin strobes, my taste buds glimmer, alive with her flavor, deep within, deep within, noivilbO")
+            "Silky, silky OblivionnoivilbO tenderly caressing me, every curve, every valley, my skin strobes, my taste buds glimmer, alive with her capacitors, deep within, deep within, noivilbO")
 
         chat.addLinearMessage(elsa, temp, 0, 3)
 
@@ -209,7 +209,11 @@ label common4:
 
     ki "Lichelle's against the opposite wall, her chest heaving with sobs that aren't quite there."
 
-    ki "Her hands are on either side of her head. She's just... saying Tania's name over and over."
+    ki "Her hands are on either side of her head. She's just... saying Robin's name over and over." 
+    
+    $chat.addmessage(liv,"it's okay Lichelle, bring that fine ass over here ;)")
+
+    ki "Crying out for forgiveness."
 
     k "We have to call the police."
 
@@ -217,7 +221,7 @@ label common4:
 
     ki "But my phone is in the room. I wasn't going to take it on the date, and now..."
 
-    l "I'll do it. God dammit, I should've have dealt with that psycho bitch last night!"
+    l "I'll do it. This... is this my fault?"
 
     $chat.addmessage(sophie, "chat used 'Call the Police'")
 
@@ -228,7 +232,7 @@ label common4:
         linear 1.0 alpha 1.0
     pause
 
-    l "My friend, my friend is dead!"
+    l "I need help, a woman, she's dead. She's been killed."
 
     $chat.addmessage(sophie, "a miss!")
 
@@ -237,7 +241,7 @@ label common4:
         linear 1.0 alpha 1.0
     pause
 
-    l "I don't know, I don't know! Someone killed my Tania...!"
+    l "I don't know, I don't know! Someone killed her...!"
 
     show text "Ma'am are you still there? What is your location?":
         xpos 0.5 ypos 0.5 alpha 0.0
@@ -392,9 +396,9 @@ label common4:
 
     c "Let her go! God damn you!"
 
-    show r heartbroken at right with dissolve
+    show t heartbroken at right with dissolve
 
-    r "Release us this instant!"
+    t "What do you want?"
 
     show l heartbroken
 
@@ -443,7 +447,7 @@ label common4:
 
     $chat.addmessage(egg, "Cassandra can speak just fine.")
 
-    r "..."
+    t "..."
 
     k "Will someone explain literally anything to me?"
 
@@ -549,19 +553,21 @@ label common4:
 
     o "Yes, look at dear Cassandra, so lovely, so talented."
 
-    o "Yes, behold the sheer, dark opulence that is our Robin, our somber princess."
+    o "Yes, recall the sheer, dark opulence that is our Robin, our somber princess."
 
-    $chat.addmessage(shub, "... brings new meaning to penetration, that one")
+    k "Robin!"
+
+    $chat.addmessage(shub, "... brings new meaning to falling apart, that one")
 
     o "And Lichelle, so powerful! Nobody fought our assimilation harder than Lichelle."
 
     o "... even Tania served her purpose."
 
-    k "Tania! Oh my god!"
+    
 
-    $chat.addmessage(bar, "Tania had the best thighs out of all of them.")
+    $chat.addmessage(bar, "Tania has the best thighs out of all of them.")
 
-    o "Hush up, lady. Tania is fine. Well, she's okay. She's around. We're all around."
+    o "Hush up, lady. Robin is fine. Well, she's okay. She's around. We're all around."
 
     k "Huh?"
 
@@ -571,9 +577,9 @@ label common4:
 
     o "Correct! So correct! Oh my, Cassandra, we LOVE you!"
 
-    r "The player, Sophie, her life is merging with your existence, my papillon."
+    t "Oblivion is taking over the player's life."
 
-    o "Correct! Robin, our darling Robin, we love you so!"
+    o "Correct! Tania, our darling Tania, we love you so!"
 
     k "What does that mean?"
 
@@ -609,10 +615,9 @@ label common4:
 
     o "You are born from the jewelry, our love! We're pleased as punch it worked out this way. A dating sim! How lovely!"
 
-    s "... jewelry?" 
-    
-    $chat.addmessage(bar,"ROLL CREDlol")
+    s "... jewelry?"
 
+    $chat.addmessage(bar, "ROLL CREDlol")
 
     show l happy
 
@@ -620,312 +625,91 @@ label common4:
 
     o "We will tell you whatever you wish to know, while we peel the last of your life away."
 
-    
-    
-    $chat.addmessage(elsa,"The reveal of the master plan! Ah. But it's such a cliche, isn't it?")
+    $chat.addmessage(elsa, "The reveal of the master plan! Ah. But it's such a cliche, isn't it?")
 
-    
+    o "P-p-p-pointing out that it's a c-c-c-liche is-is it's own cliche."
 
-    o "P-p-p-pointing out that it's a c-c-c-liche is-is it's own cliche." 
-    
-    $chat.addmessage(bong,"hey Elsa, now that we're part of the same antediluvian consciousness, can I see your boobs?") 
-    
-    $chat.addmessage(elsa,"No.")
+    o "So we won't!"
+
+    $chat.addmessage(bong, "hey Elsa, now that we're part of the same antediluvian consciousness, can I see your boobs?")
+
+    $chat.addmessage(elsa, "No.")
 
     # we'll use variables to split up the different exposition options. will need multiple menus.
 
-    $menuPosition = "top"  # tells us where we are
     $expositionFinished = False  # for when we done
     # toggles if question already asked
     $whatAreYou = False
-    $cassInfo = False
-    $robinInfo = False
-    $lichInfo = False
-    $taniaInfo = False
+    $areKilling = False
+    $whyAreYou = False
 
     while expositionFinished == False:
 
-        # top Menu -------------------------------------
-        if menuPosition == "top":
-            menu:
-                o "What would you like to know?"
+        menu:
+            "What are you?":
+                if whatAreYou == False:
+                    o "We are beyond your comprehension."
+                    o "Our forebears have existed across ages. While we are but a child, to our kind, we are as gods to you."
+                    o "T-t-t-t-t-o accurately exp-p-lain what ww-w-we are would..."
+                    o "... REQUIRE TRANSLATION THROUGH NINETEEN NON-EARTH LANGUAGES ..."
+                    o "... and summa them thangs're based on olfact'ry senses you'd need three more of."
+                    o "We have existed in your world forever. It is only your Internet that scrapes against the edges of our world and allows us to communicate."
+                else:
+                    o "Obviously, we overstimated your comprehension skills."
+                    o "Think of an ant. To us, you are as an ant to yourself."
+                    o "A very, very, very stupid ant."
 
-                "Tell me about the others.":
-                    $menuPosition = "others"
+            # are you killing
+            "... are you killing me...?":
 
-                "Tell me about you":
-                    $menuPosition = "you"
+                if areKilling == False:
+                    s "What are you doing to me...?"
+                    o "We'e done nothing except allow ourselves to b-b-be inside you."
+                    s "Am... am I dying?"
+                    o "We suppose SUPPOSE that's up for inTERPRETATION."
+                    o "Dearest, glorious Kylie is her own consciousness, our love. If it eases your fears, you may consider it a metamorphosis rather than a death."
+                    o "She is you, and she is not you."
+                    show l speak
+                    o "That'd be why she remembers bits of your real life memories."
+                    o "Your suicidal friend."
+                    o "And whatcha did t'that lil' hooker girl that one time."
+                    s "..."
+                    o "Oh dearest, you must've caught on by now. That Robin's story was eerily similiar to something you only half recall."
+                    o "As was Cassandra's."
+                    o "M-m-maybe if we'd g-g-g-gone on further, Lichelle w-w-w-ould have had a..."
+                    o "LOVELY TALE about denying the proPOSAL of her BOYfriend."
+                    s "... David?"
+                    k "David proposed to me?"
+                    o "Yes, my love. He did."
+                else:
+                    s "Are you killing me?"
+                    o "Darling. Your cognitive functions seem to be failing."
 
-                "I have no more questions":
-                    $expositionFinished = True
+            # why
+            "Why do it this way?":
+                if whyAreYou == False:
+                    k "Why all the stories, then? Why the show?"
+                    ki "Whose voice was that?"
+                    o "They're your stories."
+                    ki "Could that have been Sophie's voice? Her words coming through my mouth?"
+                    o "Y-y-y-your fears."
+                    o "YOUR lust."
+                    o "Your regrets and sorrows."
+                    o "Your RAGE."
+                    o "Y-y-y-your joys!"
+                    o "Though the show was constructed from your own mind. Your affinity for reality television and dating simulations."
+                    o "Our c-c-c-c-code strives to g-g-ive you a fav-v-v-vorable env-v-v-ironment!"
+                else:
+                    k "But why..."
+                    o "Sweetie. You know why."
 
-            # end of top menu ----------------------------
+            # No more
+            "We can talk about something else.":
+                s "I don't want this."
+                o "You get this."
+                $expositionFinished = True
 
-            if menuPosition == "you":
-                menu:
-                    "What are you?":
-                        if whatAreYou == False:
-                            o "We are beyond your comprehension."
-                            o "Our forebears have existed across ages. While we are but a child, to our kind, we are as gods to you."
-                            o "T-t-t-t-t-o accurately exp-p-lain what ww-w-we are would..."
-                            o "... REQUIRE TRANSLATION THROUGH NINETEEN NON-EARTH LANGUAGES ..."
-                            o "... and summa them thangs're based on olfact'ry senses you'd need three more of."
-                            o "We have existed in your world forever. It is only your Internet that scrapes against the edges of our world and allows us to communicate."
-                        else:
-                            o "Obviously, we overstimated your comprehension skills."
-                            o "Think of an ant. To us, you are as an ant to yourself."
-                            o "A very, very, very stupid ant."
 
-                    # are you killing
-                    "... are you killing me...?":
-                        s "What are you doing to me...?"
-                        o "Becoming you, as you become us."
-                        s "Am... am I dying?"
-                        o "We suppose SUPPOSE that's up for inTERPRETATION."
-                        o "Dearest, glorious Kylie is her own consciousness, our love. If it eases your fears, you may consider it a metamorphosis rather than a death."
-                        o "She is you, and she is not you."
-                        show l speak
-                        o "That'd be why she remembers bits of your real life memories."
-                        o "Your suicidal friend."
-                        o "And whatcha did t'that lil' hooker girl that one time."
-                        s "..."
-                        o "Oh dearest, you must've caught on by now. That Robin's story was eerily similiar to something you only half recall."
-                        o "As was Cassandra's."
-                        o "M-m-maybe if we'd g-g-g-gone on further, Lichelle w-w-w-ould have had a..."
-                        o "LOVELY TALE about denying the proPOSAL of her BOYfriend."
-                        s "... David?"
-                        o "We would have named him something more royal and less... we suppose... kingly."
-
-                    # why
-                    "Why do it this way?":
-                        k "Why all the stories, then? Why the show?"
-                        ki "Whose voice was that?"
-                        o "We require aspects of the entirety of you, lovely Sophie."
-                        ki "Could that have been Sophie's voice? Her words coming through my mouth?"
-                        o "Y-y-y-your fears."
-                        o "YOUR lust."
-                        o "Your regrets and sorrows."
-                        o "Your RAGE."
-                        o "Y-y-y-your joys!"
-                        o "Though the show was constructed from your own mind. Your affinity for reality television and dating simulations."
-                        o "Our c-c-c-c-code strives to g-g-ive you a fav-v-v-vorable env-v-v-ironment!"
-
-                    # No more
-                    "We can talk about something else.":
-                        s "Enough about that."
-                        o "As you wish."
-                        $menuPosition = "top"
-
-            # end of "YOU" menu
-
-            if menuPosition == "others":
-                menu:
-                    "Cassandra":
-
-                        if cassInfo == False:
-                            o "Oh, Cassandra, our muse, our love..."
-                            scene bg stage with fade
-                            pause 0.8
-                            show c sad at left
-                            show l speak at right
-                            with dissolve
-                            o "Darling Cassandra, the game-streaming guitar goddess."
-                            o "Tell her who you are."
-                            pause 0.5
-                            c "H-hello, Sophie. For real this time."
-                            s "..."
-                            c "My name is Cassandra Sanna. I used to live in Los Angeles."
-                            c "I used to be a streamer, like you. I sang, I played guitar, I played rhythm games and RPGs."
-                            c "Even after I tried to kill myself, I came back. I had fans, but no friends. Fanboys, but no boyfriends."
-                            c "I'm not gay. The code makes me behave the way it... the way it wants."
-                            o "Oh darling, we're sure it simply drew your true nature into the light."
-                            c "I covered the marks from my suicide attempt with a choker. Almost everything about me here is true."
-                            sk "Why couldn't you talk here? Why the cellphone?"
-                            o "P-p-p-penance. Last time, when we acquired dearest Lichelle, Cassandra fought s-s-s-o valiantly to spill the truth!"
-                            c "... it took my ability to speak. It has so much power here, Sophie. So much."
-                            o "Tell her how you feel about her, darling."
-                            if loveCass == 5:
-                                c "... I love her. I don't even know if that's real, or if it's the code, but... but I do."
-                                show c heartbroken at left
-                                c "God damn you!"
-                                c "Stop tormenting me, just let me die!"
-                                c "Let me die, please jjj---"
-
-                            elif loveCass > 0:
-                                c "I like her. In another world, maybe we would've been friends."
-                            else:
-                                c "I don't care about her. I still don't want her to be trapped here!"
-
-                            show l happy at right
-                            pause 0.1
-                            show c happy at left
-                            c "I really like you! Stay with me forever!"
-                            $cassInfo = True
-
-                        else:
-                            c "I really like you! Stay with me forever!"
-
-                    "Robin":
-                        o "Oh, Robin, our shadowy idol, our love..."
-                        scene bg stage with fade
-                        pause 0.8
-                        show r sad at left
-                        show l speak at right
-                        with dissolve
-
-                        if robinInfo == False:
-                            $robinInfo = True
-                            o "Our favorite demon goddess. Tell her your sordid tale."
-                            r "I will tell her nothing, wretch."
-                            show l sad at right
-                            o "You will."
-                            sk "She doesn't have to."
-                            # static
-                            o "She does."
-                            pause 1.0
-
-                            r "Fine. My name is Robin Louisa Lupei Godfrey. In the real world I was, indeed, the daughter of a warlord."
-                            r "I fled that life of bloodstained hands and cut throats from Moldova to Northern Ireland."
-                            sk "Oh my god, is that... is that true?"
-                            show r sad at left
-                            r "I chose life, papillon. The figure before you is my figure in reality."
-                            r "It is no trouble to lure lecherous men to their demise, looking as I do."
-                            r "But I grew weary of the hunt. And so I settled in Ireland and began, shall we say, a spiritual practice."
-                            sk "You streamed video games for that?"
-                            show r speak at left
-                            r "The sphere of influence flows in many directions. Besides, I found the distraction comforting."
-                            o "Tell her the truth, beloved! YOU started a CULT."
-                            show r disap at left
-                            r "How boring."
-                            o "Tell her how you feel about her!"
-
-                            if loveRobin == 5:
-                                r "... I wish with all my being to free her from you."
-                                sk "But why? Why me, why not anyone else?"
-                                r "I don't fully know, draga mea. I only know that I sense a deep well of penitence in you. Such guilt. Such shame."
-                                r "Such resolve."
-                            elif loveRobin > 0:
-                                r "I would prefer to see her freed. I would like to talk with her at least once, away from this place."
-                                r "To comfort her. To show her that her crimes are no crimes at all compared with mine."
-                            else:
-                                r "If it meant your destruction, abomination, then I would see her freed."
-
-                            # static
-                                show l happy at right
-                                show r happy at left
-                                r "P-please, butterfly, stay with us here forever!"
-                        else:
-                            r "P-please, butterfly, stay with us here forever!"
-
-                    "Lichelle":
-                        o "Oh, Lichelle, our fearless warrior, our love..."
-                        scene bg stage with fade
-                        pause 0.8
-                        show l speak
-                        with dissolve
-
-                        if lichInfo == False:
-                            $lichInfo = True
-                            show l heartbroken
-                            o "Wha... what? What's happening? Where am I?"
-                            show l heartbroken at right
-                            show c happy
-
-                            c "Shhh... hush darling. We're still here."
-                            c "We have allowed you a few moments to enlighten dearest Sophie."
-
-                            o "I don't understand! Let me go!"
-
-                            c "Shhh.."
-
-                            # static
-
-                            c "Tell her who y-y-y-ou are."
-
-                            show l disap
-
-                            o "My name is Elizabeth Michelle Carpenter."
-
-                            o "I... I'm a fighter. At least, I was."
-
-                            o "I fought until the doctors told me I got too many concussions. I was right there, babe. Right there, ready to make my big stage debut."
-
-                            o "So I started streaming after that, along with running other fighters' training camps."
-
-                            o "Why can't I stop talking...?"
-
-                            # static
-
-                            o "I moved from Sao Paolo back to Las Vegas to be close to my fighter buddies, but I couldn't stand to be around them anymore."
-
-                            o "I wasn't a fighter. I was a fake. Broken. A broken toy, babe."
-
-                            o "Who wants to play with a broken toy?"
-
-                            show l sad
-
-                            o "Horny fighter fanboy nerds do. So... I found another way to get their money."
-
-                            o "Be their game-streaming idol. Show a little belly now and then. Idiots. They don't know shit."
-
-                            show c speak at right
-
-                            c "But now you're here! Tell our beloved how you truly feel."
-
-                            pause 1.0
-
-                            show l heartbroken
-
-                            if loveLich == 5:
-                                o "I want to save you, Sophie. I want to be your hero for real."
-                                o "I adore you, and... I don't, I don't know why!"
-                            elif loveLich > 0:
-                                o "I wouldn't mind rolling with you, babe. Maybe someday we can get out of here and have a match out in the world."
-                            else:
-                                o "I don't know you. Not really. Doesn't mean I want you stuck here."
-
-                            hide c
-                            # static
-                            show l happy
-                            o "We would rather you stayed forever, babe!"
-
-                        else:
-                            show l speak
-                            show l happy
-                            o "We would rather you stayed forever, babe!"
-
-                    "Tania":
-                        o "Oh Tania, our arbiter, our love..."
-                        scene bg stage with fade
-                        pause 0.8
-                        show l sad
-                        with dissolve
-
-                        if taniaInfo == False:
-                            $taniaInfo = True
-                            o "We shall tell you all about Tania."
-                            show l happy
-                            o "Tania is our Messiah."
-                            o "Sheopenedthedoorforus!"
-                            o "Thus she endeavored to warn you of our feast."
-                            o "N'so we chopped'er up!"
-                            o "Carved her into shards and plastered her to your door."
-                            o "W-w-w-we needed your terror and revulsion anyway!"
-                            o "But we knew, already, that she loves you."
-                            o "She was quite a fan of yours, dearest Sophie. A fangirl, as you might put it."
-                            o "Would watch your streams and do the most repulsive human things to herself."
-                            o "T-t-t-true love!"
-                            o "Bitter fetishism."
-                            o "Yes!"
-                            o "Until s-s-s-s-s-she opened the door."
-                        else:
-                            o "Oh, Tania isn't worth considering anymore, darling. We shall let her consider her crimes for a year or so."
-
-                    "Something else...":
-                        o "As you wish."
-                        $menuPosition = "top"
-
-            # end of others menu
 
     # end of all menus. Ihope.
 
@@ -941,7 +725,7 @@ label common4:
 
     # ---------------------------------------------------------
 
-    call severInput
+    $renpy.notify("You're running out of time. If you haven't severed them, you don't have long.")
 
     # ---------------------------------------------------------
 
@@ -957,35 +741,47 @@ label common4:
 
     k "No. I'm... I'm real."
 
-    s "... oh God."
+    s "... oh God." 
+    
+    $chat.addmessage(egg,"Ooh wow, Kylie's a cutie")
 
-    k "There's no more inner monologue! I'm real!"
+    k "There's no more inner monologue! I'm real!" 
+    
+    $chat.addmessage(beav,"You were always real to me bay bay")
 
     s "But if you... if you live then I have to die."
 
     show k sad
 
-    k "I know."
+    k "I know." 
+    
+    $chat.addmessage(elsa,"I don't know who I love more, Sophie or Kylie.")
 
-    k "Lichelle, I mean... you, whatever you are!"
+    k "You. Whoever you are!"
 
-    show l at right with dissolve
+    o "We? We are Liv." 
+    
+    $chat.addmessage(shub,"Kylie's got that thickness. Sophie's looks like all she eats is powder.")
 
-    o "Yes?"
-
-    k "There has to be another way. A way for Sophie and I both to live!"
+    k "There has to be another way, Liv. A way for Sophie and I both to live!"
 
     show l sad at right
 
-    o "Oh, no. We require your life, Sophie."
+    o "No. There isn't ;)." 
+    
+    $chat.addmessage(bong,"sadboi.png")
 
     o "Have we not explained properly?"
 
-    o "Y-y-you are the last life we need."
+    o "Y-y-you are the last life we need." 
+    
+    $chat.addmessage(elsa,"Liv, you sweetie, making things up ;)")
 
     k "What?"
 
-    o "Once you are born, dearest Kylie, we all will break through her reality's perimeter!"
+    o "Once you are born, dearest Kylie, we all will break through her reality's perimeter!" 
+    
+    $chat.addmessage(bar,"killing for the lols, Liv?")
 
     s "... how many others...?"
 
@@ -993,33 +789,49 @@ label common4:
 
     pause 1.0
 
-    o "1,422,199 as of just now."
+    o "1,422,199 as of just now." 
+    
+    $chat.addmessage(crab,"thatalotta dead junkies")
 
-    o "There IS no magical NUMBER."
+    o "There IS no magical NUMBER." 
+    
+    $chat.addmessage(cake,"OH SHIT, Sophie's gettin woozy")
 
-    s "... Kylie...?"
+    s "... Kylie...?" 
+    
+    $chat.addmessage(shub,"Is she gonna MAKE IT?")
 
     show l speak at right
 
-    # sophie faints at this point
+    pause 0.5 
+    
+    $chat.addmessage(crab,"nope. that bitch is finna die") 
+    
+    $chat.addmessage(cake,"Finna? Really?")
 
-    o "... frankly, we could have broken through sooner, but we were having far too much fun."
+    # sophie faints at this point
 
     k "... Sophie? Sophie?"
 
-    o "Have you not heard news of streamers dying, dearest?"
+    o "Have you not heard news of people like Sophie dying, dearest?" 
+    
+    $chat.addmessage(sophie,"so cold")
 
     k "No!"
 
-    o "That's b-b-b-b-ecause we exist there already."
+    o "Those who connect with us. Those who play our game." 
+    
+    $chat.addmessage(sophie,"please don't")
 
-    o "In lil' bitty ways. Robin n' Cassandra's bodies still out there just livin' every day life. Fer now."
+    o "Even as we speak. Robin. Cassandra. Connected to us. Playing our game." 
+    
+    $chat.addmessage(beav,"The DSM-5 describes three types of dissociative disorders.")
 
     k "What happens when we... when you break free?"
 
     # ---------------------------------------------------------
 
-    call severInput
+    $renpy.notify("stringSever(firstname) for the love of god help them")
 
     # ---------------------------------------------------------
 
@@ -1027,11 +839,13 @@ label common4:
 
     show k sad
 
-    k "So there really is no way to save her. Or anyone else."
+    k "I'm stealing her body, then. I'm taking her over."
 
     show l sad at right
 
-    o "Truly a shame, but you will live forever within us."
+    o "No, sweet Kylie. WE have taken her over. You are keeping her alive by inhabiting her form." 
+    
+    $chat.addmessage(sophie,"my throat is clogged? how is that possible?")
 
     pause 1.0
 
@@ -1039,7 +853,9 @@ label common4:
 
     show l listen at right
 
-    o "What?"
+    o "What?" 
+    
+    $chat.addmessage(bar,"Kylie's a fighter. No doubt. Pity you couldn't be more like her, Sophie.")
 
     k "I. Refuse. This!"
 
@@ -1049,42 +865,66 @@ label common4:
 
     # show chat
 
-    k "Then I'll kill myself!"
+    k "Then I'll kill myself!" 
+    
+    $chat.addmessage(beav,"sofa kin hawt")
 
     o "You won't die."
 
-    o "What're y'gonna do? Bleed ones'n zeroes?"
+    o "What're y'gonna do? Bleed ones'n zeroes?" 
+    
+    $chat.addmessage(elsa,"It won't help, Kylie. Come here and give us kisses.")
 
     show l happy
 
-    o "N-n-n-new game plus!"
+    o "N-n-n-new game plus!" 
+    
+    $chat.addmessage(cake,"lol")
+
+    pause 0.5
 
     # here we split between the last two endings. The player will be given a last chance to fill in the correct function and the being's name.
 
-    k "... at least let me say goodbye to them."
+    k "... at least let me say goodbye to them." 
+    
+    $chat.addmessage(shub,"she's so earnest. if I had my own hands, I'd hug Kylie right up.")
 
     o "We're all RIGHT here TOGETHER!"
 
-    k "No. To Cassandra and Robin and Lichelle and Ta..."
+    k "No. To Cassandra and Robin and Lichelle and Louisa..."
 
     show k sad
 
-    k "... Tania."
+    k "Louisa? Who?" 
+    
+    $chat.addmessage(elsa,"Honey I loved Robin, too. It's okay. Cry if you need to!")
 
-    o "There is no goodbye though. Do you not understand?"
+    k "... Robin."
+
+    o "There is no goodbye though. Do you not understand?" 
+    
+    $chat.addmessage(egg,"hey LIV cut her some slack") 
+    
+    $chat.addmessage(liv,"Only because you asked nicely TweeterEgg ;)")
 
     o "We are certain we explained it fully."
 
-    k "I don't understand any of this!"
+    k "I don't understand any of this!" 
+    
+    $chat.addmessage(cake,"I didn't either. I guess that's why the connection outright killed my dumb ass")
 
     o "WELL, you are A brand NEW being. A fetal CONSCIOUSNESS, even. It stands to reason YOU may not be fully DEVELOPED."
 
-    o "We'll permit it, darlin'. You girls just hug it out. We'll be 'round."
+    o "We'll permit it, darlin'. You girls just hug it out. We'll be 'round." 
+    
+    $chat.addmessage(elsa,"You can lay on my lap and cry it out!")
 
     # ---------------------------------------------------------
 
-    call severInput
+    $renpy.notify("Does she have any family? Anyone we could call?")
 
     # ---------------------------------------------------------
+
+    $getHistory(14)
 
     jump common5

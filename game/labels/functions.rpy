@@ -115,10 +115,7 @@ label buildArrays:
 
     python:
         i = 0
-        cassDone = []
-        robinDone = []
-        taniaDone = []
-        lichDone = []
+        
 
         while i < 6:
             cassDone.append(False)
@@ -127,5 +124,5 @@ label buildArrays:
             lichDone.append(False)
 
             i += 1
-
+    
 #=====================================================================

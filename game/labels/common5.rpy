@@ -5,81 +5,131 @@ label common5:
 
     pause 1.0
 
+    pause(0.5)
+    $hideGui()
+    scene bg load-god with fade
+    pause 1.0
+    pause
+    scene bg screen
+    pause(0.5)
+    $showGui()
+    pause 0.5
+
     "There's a shift, only barely perceptible, as the entity releases its control of Lichelle."
 
     "It isn't dramatic, nor could it be taken as a clear indication of anything, but it's enough to put Kylie a little bit at ease."
 
+    
+    
+    $chat.addmessage(crab,"Who's voice is that?")
+
     k "You okay?"
 
-    "Cassandra and Robin, who had been hanging back for most of the exchange between Kylie and Lichelle, flank the fighter and take gentle hold of her shoulders."
+    "Cassandra and Tania flank the fighter and take gentle hold of her shoulders."
+
+    $renpy.notify("She can't be gone.")
 
     l "... I'm good. I guess."
 
-    c "< Glad to hear it. >"
+    c "< Glad to hear it. >" 
 
-    r "You'll grow accustomed to its presence in time."
+    t "I hate to say it, but you'll get used to Oblivion the more you're around her."
 
     pause 0.4
 
-    r "Assuming it allows us more time."
+    t "Assuming she allows us more time."
 
-    k "Is there anything we can do to get out of this?"
+    k "Is there anything we can do to get out of this?" 
+    
+    $chat.addmessage(elsa,"There's nothing we can really do.")
 
     "Three sets of eyes gaze back at Kylie, forlorn, hopeless, and fiercely annoyed."
 
-    r "Have you not seen opportunities?"
+    t "I tried to tell you. I'm the only one with the power to do it."
+
+    $renpy.notify("I didR13:14-15 no more time. You have to make a decision!")
 
     "Kylie pauses, wringing her hands, keenly aware of them being her own hands now."
 
-    k "I don't know."
+    k "I don't know."  
+    
+    $chat.addmessage(bar,"There's no way she could. Don't blame Kylie for Sophie's choices.")
 
     c "< It's too late now. Whatever's decided is decided. >"
 
-    k "What are you talking about?"
+    "Tania sighs, a quiet, empty sigh."
 
-    r "It always does this. This is its pattern, papillon. It selects a handful of us for each of these simulations."
+    t "Something's interfering with my messages anyway. I'm sorry, Kylie. This isn't your fault."
+    
+    $chat.addmessage(shub,"right? Kylie is the best of all of us.")
 
-    c "< And always Tania. >"
+    k "What are you talking about?" 
+    
+    $chat.addmessage(liv,"She's so great. :)")
 
-    r "It murders Tania. Iterates and expands the flaws of two. Controls one."
+    t "This is what happens when you play this game. Robin dies. You lose sight of yourself." 
+    
+    $chat.addmessage(elsa,"Hey Liv, you're cheating! You're not supposed to be listening right now.")
+
+    c "< And always Robin. >" 
+    
+    $chat.addmessage(liv,"Oopsie! Naughty me ;)")
+
+    t "It lets Robin die. Iterates and expands the flaws of two. Controls one."
 
     c "<Then, leaves a final gathering like this one where it gives its speeches and lets us be alone for a while.>"
 
-    l "So just like last time, then?"
+    l "So just like last time, then?" 
+    
+    $chat.addmessage(bong,"elle's getting it now")
 
     k "What happens? What's like last time?"
 
     pause 1.0
 
-    "Cassandra and Robin exchange glances, as if silently debating which parent should deliver the bad news."
+    "Cassandra and Tania exchange glances, as if silently debating which parent should deliver the bad news."
 
-    r "Dissolution."
+    r "Dissolution." 
+    
+    $chat.addmessage(bar,"More like recycling, honestly.")
 
     "An anxious thrill prickles the back of Kylie's neck. She's unsure if that feeling is her own, or how long she's known what it felt like."
 
-    r "Here, we are only objects of code. Frighteningly complex objects, of course, fully realized autonomous beings."
+    t "Here, we are only objects of intelligence. Frighteningly complex objects, of course, fully realized autonomous beings."
 
-    "Her accent drips thickly from each word. Kylie is certain Robin would have made a wonderful mad scientist in another universe."
+    "There's no hiding the excitement in Tania's tone. Kylie is certain she would have made a wonderful mad scientist in another universe." 
+    
+    $chat.addmessage(cake,"maybe she already is")
 
     "The idea brings with it the realization that another universe might well be around the corner."
 
-    k "If we're just code, what is she?"
+    k "If we're just code, what is she?" 
+    
+    $chat.addmessage(liv,"I'm Oblivion, silly.")
 
     c "< I don't know. >"
 
     l "Me either babe."
 
-    k "Robin?"
+    k "Tania?" 
+    
+    $chat.addmessage(egg,"liivvvvv")
 
     pause 1.0
 
-    r "I'm sorry my loves. I may have been part of the entity the longest, but I have no insight into its nature."
+    t "I'm sorry everyone. I might know Liv best of all of us, but even I don't know the nature of her."
 
-    r "... Kylie."
+    t "... Kylie." 
+    
+    $chat.addmessage(liv,"Sorry, sorry, I just love you all so much I can't help but peek ;)")
 
-    k "Hm?"
+    k "Hm?" 
+    
+    $chat.addmessage(bong,"I got something for you to peek at Liv :D")
 
-    r "I'm sorry for cutting you."
+    t "I'm sorry for misleading you." 
+    
+    $chat.addmessage(liv,"ooh, private message lol ;)")
 
     c "<I'm sorry for puking on you.>"
 
@@ -87,15 +137,21 @@ label common5:
 
     l "I don't think I have anything to be sorry about, but goddamn, I'm sorry, too."
 
-    r "We won't have much more time."
+    t "We won't have much more time."
 
     c "<Kylie. If you have anything else you want to know, or say, you'd better do it now.>"
 
     # Last chance to talk with the girls. Maybe a last chance to raise relationsthip points?
 
-    $interviewed = False
-    #build arrays to control which question asked
-    call buildArrays
+    python:
+        interviewed = False
+        cassDone = []
+        robinDone = []
+        taniaDone = []
+        lichDone = []
+        allDone = [cassDone, robinDone, taniaDone, lichDone]
+        #build arrays to control which question asked
+        buildArrays(allDone, 6, False)
 
     #=============================================
     # LOOP for final discussion menu and submenus
@@ -108,11 +164,11 @@ label common5:
 
             "Cassandra":
                 call c5cassInterview
-            "Robin":
+            "Robin...":
                 call c5robinInterview
             "Lichelle":
                 call c5lichInterview
-            "... but, Tania..." if taniaDone[0] == False:
+            "Tania" if taniaDone[0] == False:
                 call c5taniaInterview
             "I've said all I need to say.":
                 $interviewed = True
@@ -123,7 +179,7 @@ label common5:
     scene bg stage with fade
 
     show c at left
-    show r 
+    show t 
     show l at right
     with dissolve
 

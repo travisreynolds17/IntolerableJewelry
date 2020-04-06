@@ -80,13 +80,13 @@ label c5cassInterview:
 
                 k "I just don't understand any of this!"
 
-                c "<I don't think any of us do. Only the Entity knows what's going on.>"
+                c "<I don't think any of us do. Only Liv knows what's going on.>"
 
                 k "I have to tell you something else."
 
                 c "<This is the time to do it, Kylie. I'll listen to whatever you have to say.>"
 
-                k "I think I'm glad the Entity did this."
+                k "I think I'm glad Liv did this."
 
                 c "<Wait, really?>"
 
@@ -124,7 +124,7 @@ label c5cassInterview:
                 
                 k "..."
                 
-                c "<Kylie, I told you before. I'm straight. I was straight before, it's just that the game warps us while we're inside it.>"
+                c "<Kylie. I'm straight. I was straight before, it's just that the game warps us while we're inside it.>"
 
                 c "< But listen. If I were like that, I think I'd like dating you. I don't even know if that makes sense.>"
 
@@ -133,18 +133,22 @@ label c5cassInterview:
                 c "< Friends?>"
 
                 k "Friends."
+
+                
+                
+                $chat.addmessage(liv,"Imagine your first broken heart to be among the first emotions you ever get to feel. Oh, Kylie. :(")
                 
                 $cassDone[3] = True
 
             "How are you doing, though?" if cassDone[4] == False:
                 c "<I'm nervous, I guess. I always am.>"
-                c "<Like, I worry that someday the Entity will get bored. Or maybe this time it's telling the truth.>"
+                c "<I don't know if you noticed, but we're all more or less here because of our association with Robin.>"
 
-                k "This time?"
+                k "Really?"
 
-                c "<It always says this is the last time. It just needs one more life, whatever.>"
+                c "<She's the center point. We're like a Venn diagram of failure.>"
 
-                c "<Maybe this time it's right.>"
+                c "<I guess Oblivion might be the centerpiece, though.>"
 
                 k "... that's pretty awful, though."
 
@@ -159,7 +163,7 @@ label c5cassInterview:
             "Are we really stuck here? Is any of this real?" if cassDone[5] == False:
                 c "<Data not found.>"
                 k "Oh my god, what?"
-                c "<I'm kidding. Look, you might want to ask Robin more about that. If you believe anything she says, she's been through this a lot. Like... a lot.>"
+                c "<I'm kidding. Look, you might want to ask Tania more about that. If you believe anything she says, she's been through this a lot. Like... a lot.>"
                 k "So there's no way out, then."
                 c "< Probably not. If we're just code, what are we supposed to do against something that manipulates code around it?>"
                 c "<Cheer up. Some of the game worlds are pretty great. There was a kart racing game that was a lot of fun.>"
