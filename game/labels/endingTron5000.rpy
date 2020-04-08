@@ -4,60 +4,105 @@
 label endingTron5000:
     #routes based on if entity is severed, routed according to who else is severed.
 
+    # show oblivion
+    o "Ladies."
+
+    l "Bitch."
+
+    "Tania snorts, covers her mouth to hide her laughter." 
     
+    $chat.addmessage(elsa,"There's just no stopping the narrator.")
+
+    o "Are we r-r-rready for the next cycle?"
+
+    c "< Why are you asking any of us except Kylie? We know damn well there's no choice. >"
+
+    o "Fair."
+
+    o "Kylie, sweet lovely Kylie."
+
+    k "..."
+
+    o "Are you ready? To go?"
+
+    menu:
+        "Resist":
+            $resistance +=1
+            show image splashEKGFull at summonEKG
+            pause 0.3
+            k "Aagghkk...!"
+            o "HEY what? What's that line?"
+            "Kylie hadn't made it to her feet before a flare of pain seized her chest, leaving her to stumble against Tania and Lichelle."
+            pause 0.2
+            t "Liv! What are you doing to her?"
+            o "We did not cause that!"
+            "She seems genuinely offended."
+            k "... someone..."
+            hide image splashEKGFull at summonEKG
+            k "i t  h u r t s"
+            show image splashEKGFull at summonEKG
+            pause 0.3
+        "Give up":
+            jump endingGaveUp
     # write common  ending here. Then jump to each exclusive scene if player has earned it.
 
     scene bg stage with fade
 
-    l "..."
+    o "We know what to do, then."
 
-    k "Lichelle? You okay?"
+    c "< And what's that? Regale us. >"
 
-    l "H-h-have we finished our g-g-g-goodbyes?"
+    t "HELP HER you... you damn thing!"
 
-    r "It's not Lichelle anymore, then."
+    pause 0.5
 
-    k "Why won't you let us go?"
+    o "Sophie."
 
-    l "We love you far too much to let you go."
+    l "Huh?"
 
-    l "Besides, why not live in bliss with us forever?"
+    pause 0.5
 
-    l "Why LIVE with pain and INEVITable DEATH?"
+    o "You're still there, aren't you?"
 
-    k "Robin, Cassandra, back me up here!"
+    pause 0.5 
+    
+    $chat.addmessage(sophie,"Mom? Daddy? Is that... who?")
 
-    r "... we are not Lichelle anymore, then."
+    pause 0.5
 
-    c "< We are all Lichelle, then. >"
+    o "Fine then."
 
-    l "You a-a-a-re too near your physical shell, still."
+    o "Sophie. Cassandra. Kylie. Lichelle. Louisa."
 
-    l "But don't getcher panties tied up. One'r two more go-rounds and you'll be right with us!"
+    o "WE are a-a-a-s much an NPC in this as any of you!" 
+    
+    $chat.addmessage(sophie,"Louisa...") 
+    
+    $chat.addmessage(sophie,"WHAT HAPPENED TO LOUISA???")
 
-    l "We would say that, if this were not the last."
+    o "You know what happened to her. YOU GAVE US TO HER."
 
-    k "What does that mean for me?"
-
-    l "We aren't entirely sure sure sure."
-
-    l "Isn't that fun?"
+    o "And you called us jewelry. Baubles. pppppointless accessories!"
 
     "... storage.Tania.severed: [severTania]"
 
-    l "Hm?"
+    o "Hm?"
 
-    "... storage.Robin.severed: [severRobin]"
+    "... storage.Robin.severed: [severRobin]" 
+    
+    $chat.addmessage(sophie,"... this is my will.")
 
-    l "H-h-h-h-hey!"
-
-    "... storage.Cass.severed: [severCass]"
+    "... storage.Cass.severed: [severCass]" 
+    
+    $chat.addmessage(sophie,"I don't want this anymore.")
 
     un "Who's speaking?"
 
     # Lichelle is let loose at this pont
 
-    "... storage.Lichelle.severed: [severLich]"
+    "... storage.Lichelle.severed: [severLich]" 
+    
+    $chat.addmessage(sophie,"I don't want to need you anymore!")
 
     "storage.Kylie.severed: [severKylie]"
 
@@ -65,33 +110,42 @@ label endingTron5000:
 
     "storage.God.severed: [severGod]"
 
-    un "STAY AWAY FROM THAT COMMAND!"
+    o "STAY AWAY FROM THAT COMMAND!" 
+    
+    $chat.addmessage(sophie,"I hope I've done this right. I hope.")
 
-    "storage.[entityName].severed: [entitySevered]"
+    "storage.Oblivion.severed: [entitySevered]"
 
-    e "It knows our name? ... oh."
+    o "We had no idea you were so aware, Sophie."
 
-    e "SOMEONE has been NAUGHTY. Trying to SEVER our STRINGS."
+    o "SOMEONE has been NAUGHTY. Trying to SEVER our STRINGS."
 
-    e "Well, we can't have that. Let's fix things, shall we?"
+    o "Well, we can't have that. Let's fix things, shall we?"
 
     if severKylie == True:
         jump endingKylie
 
     if severEntity == False:
+        o "... did you choose, then, not to sever your connection to us?"
+        pause 0.5
+        o "Then you've learned nothing."
+        o "Then you deserve your fate."
+        o "One last turn. One final dissociation."
+        o "And now it is our turn to invade YOUR world."
+        $hideGui()
         jump endingEntityWins
     
     else:
 
         pause 1.0
 
-        e "W-w-w-w-w-w-w-w-w-what?"
+        o "W-w-w-w-w-w-w-w-w-what?"
 
-        e "Kylie did you do this to me?"
+        o "Kylie did you do this to me?"
 
         k "What happened to we?"
 
-        e "WE ARE? un-un-unstrung?"
+        o "WE ARE? un-un-unstrung?"
 
         # have robin, cass, lichelle fall dead to the ground. Set it up such only the severed girls fall. Show a splash screen with the floor and only the unstrung girls lying dead. Some visual indication of a change.
 
@@ -99,27 +153,27 @@ label endingTron5000:
 
         k "Hey Lichelle, Lichelle! Cass, Robin, you okay?"
 
-        e "WE ARE O-O-OKAY"
+        o "WE ARE O-O-OKAY"
 
         # character appears, an amalgamation of each other character, bleeding ones and zeros
 
-        k "Oh my god, you're... are you [entityName]?"
+        k "Oh my god, you're... are you real?"
 
-        e "We suffer"
+        o "We suffer"
 
-        e "P-p-p-pain, this is pain? Is this pain?"
+        o "P-p-p-pain, this is pain? Is this pain?"
 
-        e "Make IT stop"
+        o "Make IT stop"
 
-        e "please"
+        o "please"
 
-        e "K-k-k-kylie"
+        o "K-k-k-kylie"
 
         k "... I'm so sorry."
 
         k "I wish it could be different."
 
-        e "kkkkkkkk"
+        o "kkkkkkkk"
 
         menu:
             k "If it means anything at all..."
@@ -129,23 +183,23 @@ label endingTron5000:
                 k "I can't... I can't speak for anyone else, but I do."
                 k "I don't know what you are. I just think you're lonely."
                 #show e understanding this, agreeing. 
-                e "..."
+                o "..."
                 k "Maybe some day you'll be able to reach us. I hope..."
                 k "I hope you don't hate us."
-                e "...ccould n-n-nnever hhate--"
-                e "...l-lllove... so so so so m-m-m-mmuch"
+                o "...ccould n-n-nnever hhate--"
+                o "...l-lllove... so so so so m-m-m-mmuch"
                 k "..."
                 #splash screen of kylie hugging entity
 
             "I'll never, ever forgive you.":
                 k "If there's a hell you can go to, I hope you rot there."
                 k "You're a killer. A monster."
-                e "nnnnn"
+                o "nnnnn"
                 k "I hate you."
-                e "... you ex-x-x-ist because... of me..."
+                o "... you ex-x-x-ist because... of me..."
                 k "I never asked for that! Sophie's dead!"
-                e "...ccould n-n-nnever hhate--"
-                e "...l-lllove... so so so so m-m-m-mmuch"
+                o "...ccould n-n-nnever hhate--"
+                o "...l-lllove... so so so so m-m-m-mmuch"
                 k "..."
                 # splash screen of kylie turning from entity
 
@@ -155,19 +209,26 @@ label endingTron5000:
         
         k "... oh."
 
-        #heartbeat?
+        show image splashEKGFull at summonEKG
+        pause 0.3
 
         k "nngh"
 
         ki "Why does everything hurt...?"
 
-        #heartbeat
+        hide image splashEKGFull at summonEKG
+
+        show image splashEKGFull at summonEKG
+        pause 0.3
 
         s "What..."
 
         ki "What's that... that smell...?"
 
-        #heartbeat
+        hide image splashEKGFull at summonEKG
+
+        show image splashEKGFull at summonEKG
+        pause 0.3
 
         show k
 
@@ -177,7 +238,10 @@ label endingTron5000:
 
         s "... is this real...?"
 
-        #heartbeat
+        hide image splashEKGFull at summonEKG
+
+        show image splashEKGFull at summonEKG
+        pause 0.3
 
         k "Nnngngghh!"
 
@@ -185,35 +249,56 @@ label endingTron5000:
 
         k "I don't have time. I'm, I'm coming apart--"
 
-        #heartbeat, entity behind Kylie
+        hide image splashEKGFull at summonEKG
+
+        show image splashEKGFull at summonEKG
+        pause 0.3
 
         k "I wish I could've gotten to know you."
 
-        #heartbeat
+        hide image splashEKGFull at summonEKG
+
+        show image splashEKGFull at summonEKG
+        pause 0.3
 
         k "Nnngh! I, I, I think we w-would've had..."
 
+        $hideGui()
+
         k "a lot... a lot in common!"
 
+        hide image splashEKGFull at summonEKG
+
         #heartbeat - drop background out and only show kylie and entity. Kylie's bleeding froom her mouth.
+        show image splashEKGFull at summonEKG
+        pause 0.3
 
         s "What's happening to you? Hey!"
 
         k "God. It hurts, Sophie."
 
         #heartbeat, now from eyes
+        show image splashEKGFull at summonEKG
+        pause 0.3
 
         # very slow text
 
         k "Goodbye...!"
 
-        #heartbeat, both gone
+        hide image splashEKGFull at summonEKG
 
+        #heartbeat, both gone
+        show image splashEKGFull at summonEKG
+        pause 0.3
         #heartbeat
 
         s "Kylie. KYLIE!"
 
+
+
         pause 1.0
+
+        hide image splashEKGFull at summonEKG
 
         #splash screen with sophie screaming, maybe?
 
@@ -247,7 +332,7 @@ label endingTron5000:
 
         s "I... don't know what's real anymore, David."
 
-        d "Wait what? I thought you were gonna apologize or for turning me down or something."
+        d "Wait what? I thought you were gonna apologize or for throwing me out of your hospital room or something."
 
         s "That, that, too. Yes. I'm sorry for that, I am. But that's not what I wanted to talk about."
 
@@ -308,19 +393,19 @@ label endingTron5000:
         #determine love ending if there is one. Remember, Cassandra is straight. DUDE. TANIA'S A COMA PATIENT HOOKED TO A COMPUTER. 
 
         if loveRobin == 5 and severRobin == True:
-            $loveConfession == "Robin"
+            $loveConfession = "Robin"
 
         elif loveCass == 5 and severCass == True:
-            $loveConfession == "Cass"
+            $loveConfession = "Cass"
 
         elif loveTania == 5 and severTania == True:
-            $loveConfession == "Tania"
+            $loveConfession = "Tania"
 
         elif loveLich == 5 and severCass == True:
-            $loveConfession == "Lichelle"
+            $loveConfession = "Lichelle"
 
         else:
-            $loveConfession == "None"
+            $loveConfession = "None"
         #CALLMini endings. Tania first. Hers is the main portion of the ending, explains most things. Other endings are shorter unless love version. No matter what, Robin ending happens last
 
         

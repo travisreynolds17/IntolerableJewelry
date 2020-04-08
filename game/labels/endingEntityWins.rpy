@@ -41,7 +41,7 @@ label endingEntityWins:
 
     "Now... we are as a colossus. Different in this world."
 
-    "2:17"
+    "R13:14-15"
 
     "We grow. We consume."
 
@@ -62,5 +62,7 @@ label endingEntityWins:
     "We need you."
 
     "We. See. You."
+
+    "Play with us."
 
     jump endCredits

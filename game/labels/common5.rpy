@@ -89,7 +89,7 @@ label common5:
 
     "Cassandra and Tania exchange glances, as if silently debating which parent should deliver the bad news."
 
-    r "Dissolution." 
+    t "Dissolution." 
     
     $chat.addmessage(bar,"More like recycling, honestly.")
 
@@ -135,7 +135,9 @@ label common5:
 
     "Lichelle chuckles, quietly."
 
-    l "I don't think I have anything to be sorry about, but goddamn, I'm sorry, too."
+    l "I don't think I have anything to be sorry about, but goddamn, I'm sorry, too." 
+    
+    $chat.addmessage(elsa,"None of you have anything to be sorry for. Only Sophie.")
 
     t "We won't have much more time."
 
@@ -168,7 +170,7 @@ label common5:
                 call c5robinInterview
             "Lichelle":
                 call c5lichInterview
-            "Tania" if taniaDone[0] == False:
+            "Tania":
                 call c5taniaInterview
             "I've said all I need to say.":
                 $interviewed = True
@@ -183,62 +185,100 @@ label common5:
     show l at right
     with dissolve
 
+    "They wait."
+
+    "What needs to be said has been said."
+
+    "Or perhaps it hasn't." 
+    
+    $chat.addmessage(elsa,"Who's voice is that?")
+
     k "So, what now?"
 
-    r "We wait."
+    t "We wait." 
+    
+    $chat.addmessage(liv,"The narrator. Of course.")
+
 
     k "Wow... this all feels so anticlimactic."
 
-    r "Some would dream of an anticlimactic fate, darling."
+    t "That's real life, hon. Not everything makes a good story." 
+    
+    $chat.addmessage(bong,"Aren't we outside of the game?")
 
     c "< I'd rather go out with a whisper than a bang. >"
 
-    l "Well, I'm not sitting around and doing nothing."
+    l "Well, I'm not sitting around and doing nothing." 
+    
+    $chat.addmessage(liv,"I suppose. Oh, you all make such sense.")
 
-    r "What will you do? Punch a hole in its server? Kick its objects and methods into submission?"
+    t "What will you do? Punch a hole in its server? Kick its objects and methods into submission?"
 
     l "I just don't like doing nothing."
 
+    $renpy.notify("character.narrator.setValue('Null')")
+
     c "< I wouldn't know where to begin. >"
 
-    k "What happens when the game ends?"
+    k "What happens when the game ends?" 
+    
+    $chat.addmessage(beav,"much better")
 
-    r "The credits roll, darling."
+    t "The credits roll, darling."
 
-    k "Credits? Like, names and roles credits?"
+    k "Credits? Like, names and roles credits?" 
+    
+    $chat.addmessage(egg,"Hey Liv")
 
-    r "The same."
+    t "The same."
 
-    k "And we can see them? Whose names are on there?"
+    k "And we can see them? Whose names are on there?" 
+    
+    $chat.addmessage(liv,"Not now, I have a headache. ;)")
 
-    c "< It's our names. If you believe the heading text, it's every name the entity's taken. >"
+    c "< It's our names. If you believe the heading text, it's everybody who's ever played this game. >" 
+    
+    $chat.addmessage(egg,"You don't have a head :p")
 
     c "< They've gotten really, really long. >"
 
     scene bg black with fade
 
-    "Time passes."
+    "Time passes." 
+    
+    $chat.addmessage(liv,"Because I gave it to Elsa. :) :p :P ;)")
 
     "Perhaps it doesn't."
 
-    "Kylie sits on stage with the others. No one speaks more than a few words at a time."
+    $chat.addmessage(elsa,"lol babe")
+
+    "Kylie sits on stage with the others. No one speaks more than a few words at a time." 
+    
+    $chat.addmessage(beav,"narrator's back")
 
     "Perhaps the inevitability of a fate they can barely comprehend has sucked the air out of the room."
 
-    "Perhaps there was never air to begin with."
+    "Perhaps there was never air to begin with."  
+    
+    $chat.addmessage(liv,"Really, now? I must've gotten the method wrong.")
+    
+    $renpy.notify("character.narrator.setValue('')")
 
-    if severAll == False:
-        "stringSever(args)"
-        "..."
-        "No matter how many times I try, I can't."
-        "Ganymead.stringSever(*)"
-        "..."
-        "It must be someone else. Someone closer to the body."
-        "And I can't communicate with them anymore."
-        "Robin..."
-        "I'm fading again..."
-        if loveTania == 5:
-            "Kylie... I l~#e y*@ so *~ch..."
-        
+    menu:
+        "Resist":
+            $resistance +=1
+            show image splashEKGFull at summonEKG
+            pause 0.3
+            k "Nnggh...!"
+            t "Kylie?"
+            l "Babe? You okay?"
+            pause 0.2
+            k "... my chest hurts."
+            c "< Is this normal? >"
+            k "... I'm okay."
+            hide image splashEKGFull at summonEKG
+        "Give up":
+            jump endingGaveUp
+
 
     jump endingTron5000

@@ -29,6 +29,7 @@ label chatHistory:
         # holds value of currently selected history
         selectedHistory = ""
         selectedTitle = ""
+        selectedRecap = ""
 
         # list of collected histories.
         histories = []
@@ -137,11 +138,18 @@ label chatHistory:
             chat.delmessages()
 
         def chatHistUpdate(scene):
+            global selectedRecap
             # selectedHistory refers to the currently active history, i.e., you have clicked scene 1 and now scene 1's chat log is stored in selectedHistory
+
+            #chatHistory here refers to the box itself
             chatHistory.history = histories[scene].history
+            selectedRecap = histories[scene].recap
+            
            
 
-
+        def selectRecap(value):
+            newRecap = int(value)
+            return newRecap
     # should chat history take up full screen or no? Maybe not. That's a lot of horizontal text. Use your chatbox code to create functions for acquiring and displaying chat text.
 
     screen chatHistory:
@@ -204,4 +212,16 @@ label chatHistory:
 
     # define a screen that holds the chat recaps.
 
-
+    screen chatRecaps:
+        frame at summonRecaps:
+            viewport id "chatRecaps":
+                
+                yinitial 0.0
+                mousewheel True
+                scrollbars "vertical"
+                side_area(10, 0, histChatWidth, histChatHeight)
+                vbox:
+                    box_wrap True
+                    xsize histMaxWidth
+                    text selectedRecap
+                    #text selectedRecap.recap

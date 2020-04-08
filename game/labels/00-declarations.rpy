@@ -73,6 +73,8 @@ label declarations:
     define chatHistoryBack = Image("img/chatHistoryBack.png")
     define splashHorror = Image("img/flash horror 1.jpg")
     define splashErrorTania = Image("img/ingameSplashErrorTania.png")
+    define splashEKGFull = Image("img/splashEKG.png")
+    define splashEKGFlat = Image("img/splashEKGFlat.png")
 
 
 
@@ -154,7 +156,7 @@ label declarations:
     transform summonRecaps:
         xalign 0.5 yalign 0.5
         ypos -100
-        linear 0.5 ypos 100
+        linear 0.5 ypos 300
 
     transform textFloatCenter:
         on show:
@@ -163,6 +165,14 @@ label declarations:
         on hide:
             alpha 1.0
             linear 1.0 alpha 0.0
+
+    transform summonEKG:
+        on show:
+            alpha 0.0
+            linear 0.3 alpha 1.0
+            linear 2.0 alpha 0.0
+        on hide:
+            linear 0.3 alpha 0.0
 
 # -------------------------------------------------------------------------------------------------
 
@@ -193,6 +203,8 @@ label declarations:
         $entityForgiven = True
 
         $sceneNum = 0
+        #Resistance. near end game the player will get a chance to push back a little
+        $resistance = 0
 
         
         # regarding severance. Ending determined by severance.
@@ -263,12 +275,14 @@ label declarations:
             renpy.show_screen("chatHistory")
             renpy.show_screen("historyDisplay")
             renpy.show_screen("historySelect")
+            renpy.show_screen("chatRecaps")
         
 
         def hideChatHistory():
             renpy.hide_screen("chatHistory")
             renpy.hide_screen("historyDisplay")
             renpy.hide_screen("historySelect")
+            renpy.hide_screen("chatRecaps")
      
 
         #create a custom function that takes a string and returns it in reverse
@@ -296,11 +310,11 @@ label declarations:
 
 
         # function to construct and initialize multiple arrays. Takes a list of lists, a range, and a value to append in 
-        def buildArrays(arrayList, range, value):
+        def buildArrays(arrayList, max, value):
             #note, range does not include final digit 
             for i in arrayList:
-                for k in range(0, range):
-                i.append(value)
+                for k in range(0, max):
+                    i.append(value)
                 
             
 

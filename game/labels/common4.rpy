@@ -151,7 +151,7 @@ label common4:
 
     pause 2.1
 
-    # suddenly image of dismembered Robin on other side of her door.
+    # suddenly image of drowned Robin on other side of her door.
 
     s "OH! Oh my god!"
 
@@ -173,7 +173,7 @@ label common4:
 
     k "Was... did you do this?"
 
-    ki "Robin, she's... she's in pieces. She's, she's..."
+    ki "Robin, she's... she's, she's she's. She's, she's..."
 
     s "I don't wanna play anymore"
 
@@ -195,11 +195,15 @@ label common4:
 
     k "I didn't, I didn't see anything!"
 
+    ki "She's cold. Her skin, her skin has gone blue. There's a trail of water emanating from down the hall."
+
+    ki "Her hair splays a soaked halo around her face."
+
     l "Oh my god, oh my god!"
 
     $chat.addmessage(beav, "it's like life's pressures lifted all at once")
 
-    k "I didn't! I just opened the door! Look at me, Lichelle!"
+    k "I didn't see! I just opened the door! Look at me, Lichelle!"
 
     ki "She does, her eyes sparkling, her dark skin somehow pallid."
 
@@ -463,7 +467,7 @@ label common4:
 
     r "You're becoming like us, papillon."
 
-    $chat.addmessage(bong, "like the look of Robin bound on the floor tho ;)")
+    $chat.addmessage(bong, "like the look of Cass bound on the floor tho ;)")
 
     k "Like you?"
 
@@ -549,7 +553,7 @@ label common4:
 
     o "You know all of us, angel."
 
-    $chat.addmessage(elsa, "Oh, looks I leveled up :p")
+    $chat.addmessage(elsa, "Oh, looks like I leveled up :p")
 
     o "Yes, look at dear Cassandra, so lovely, so talented."
 
@@ -557,7 +561,7 @@ label common4:
 
     k "Robin!"
 
-    $chat.addmessage(shub, "... brings new meaning to falling apart, that one")
+    $chat.addmessage(shub, "... brings new meaning to getting wet, that one")
 
     o "And Lichelle, so powerful! Nobody fought our assimilation harder than Lichelle."
 
@@ -654,6 +658,7 @@ label common4:
                     o "... REQUIRE TRANSLATION THROUGH NINETEEN NON-EARTH LANGUAGES ..."
                     o "... and summa them thangs're based on olfact'ry senses you'd need three more of."
                     o "We have existed in your world forever. It is only your Internet that scrapes against the edges of our world and allows us to communicate."
+                    $whatAreYou = True
                 else:
                     o "Obviously, we overstimated your comprehension skills."
                     o "Think of an ant. To us, you are as an ant to yourself."
@@ -681,6 +686,7 @@ label common4:
                     s "... David?"
                     k "David proposed to me?"
                     o "Yes, my love. He did."
+                    $areKilling = True
                 else:
                     s "Are you killing me?"
                     o "Darling. Your cognitive functions seem to be failing."
@@ -699,6 +705,7 @@ label common4:
                     o "Y-y-y-your joys!"
                     o "Though the show was constructed from your own mind. Your affinity for reality television and dating simulations."
                     o "Our c-c-c-c-code strives to g-g-ive you a fav-v-v-vorable env-v-v-ironment!"
+                    $whyAreYou = True
                 else:
                     k "But why..."
                     o "Sweetie. You know why."
@@ -717,7 +724,7 @@ label common4:
 
     show l happy with dissolve
 
-    sk "I don't want this."
+    sk "I don't accept you!"
 
     o "No one ever does at first. We promise you will understand once we have fully assimilated you!"
 
@@ -737,7 +744,11 @@ label common4:
 
     s "No, you're just me!"
 
+    pause 0.5
+
     show k with dissolve
+
+    pause 0.5
 
     k "No. I'm... I'm real."
 
@@ -891,7 +902,7 @@ label common4:
 
     o "We're all RIGHT here TOGETHER!"
 
-    k "No. To Cassandra and Robin and Lichelle and Louisa..."
+    k "No. To Cassandra and Tania and Lichelle and Louisa..."
 
     show k sad
 

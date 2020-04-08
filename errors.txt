@@ -2,9 +2,45 @@
 errors listed below, and try again.
 
 
-File "game/labels/00-biographies.rpy", line 250: expected statement.
-    bioScreenBack = Image("img/menu-bios.png")
-                  ^
+File "game/labels/endingGaveUp.rpy", line 75: end of line expected.
+    hide screen chatterbox at summonChat
+                           ^
+
+File "game/labels/endingTron5000.rpy", line 213: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    pause 0.3
+    ^
+
+File "game/labels/endingTron5000.rpy", line 220: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    pause 0.3
+    ^
+
+File "game/labels/endingTron5000.rpy", line 227: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    pause 0.3
+    ^
+
+File "game/labels/endingTron5000.rpy", line 238: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    pause 0.3
+    ^
+
+File "game/labels/endingTron5000.rpy", line 247: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    pause 0.3
+    ^
+
+File "game/labels/endingTron5000.rpy", line 252: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    pause 0.3
+    ^
+
+File "game/labels/endingTron5000.rpy", line 262: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    pause 0.3
+    ^
+
+File "game/labels/endingTron5000.rpy", line 270: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    pause 0.3
+    ^
+
+File "game/labels/endingTron5000.rpy", line 278: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
+    pause 0.3
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Apr 05 21:22:38 2020
+Tue Apr 07 12:48:37 2020
