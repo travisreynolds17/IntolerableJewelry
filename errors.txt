@@ -2,45 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/labels/endingGaveUp.rpy", line 75: end of line expected.
-    hide screen chatterbox at summonChat
-                           ^
-
-File "game/labels/endingTron5000.rpy", line 213: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    pause 0.3
-    ^
-
-File "game/labels/endingTron5000.rpy", line 220: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    pause 0.3
-    ^
-
-File "game/labels/endingTron5000.rpy", line 227: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    pause 0.3
-    ^
-
-File "game/labels/endingTron5000.rpy", line 238: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    pause 0.3
-    ^
-
-File "game/labels/endingTron5000.rpy", line 247: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    pause 0.3
-    ^
-
-File "game/labels/endingTron5000.rpy", line 252: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    pause 0.3
-    ^
-
-File "game/labels/endingTron5000.rpy", line 262: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    pause 0.3
-    ^
-
-File "game/labels/endingTron5000.rpy", line 270: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    pause 0.3
-    ^
-
-File "game/labels/endingTron5000.rpy", line 278: Line is indented, but the preceding show statement statement does not expect a block. Please check this line's indentation.
-    pause 0.3
-    ^
+File "game/labels/00-chatHistory.rpy", line 183: for expects a non-empty block.
+    for i in chatHistory.history:
+                                 ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Apr 07 12:48:37 2020
+Wed Apr 08 23:46:06 2020

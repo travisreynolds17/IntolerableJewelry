@@ -42,7 +42,7 @@ label leftbuttonwindow:
                     xysize(lbtnWidth, lbtnHeight/3)
                     
                     background "#777777"
-                    action Function(getHistory,12)
+                    action Function(getAllHistories)
 
                 button:
                     text leftBtnTxt[2]:

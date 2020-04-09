@@ -1,26 +1,31 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/common5.rpy", line 223, in script
-    k "What happens when the game ends?"
-  File "game/labels/00-chatHistory.rpy", line 215, in execute
-    ypos 300
-  File "game/labels/00-chatHistory.rpy", line 215, in execute
-    ypos 300
-  File "game/labels/00-chatHistory.rpy", line 216, in execute
-    mousewheel True
-  File "game/labels/00-chatHistory.rpy", line 217, in execute
-    scrollbars "vertical"
-  File "game/labels/00-chatHistory.rpy", line 223, in execute
-    text histories[selectedRecap].recap
-  File "game/labels/00-chatHistory.rpy", line 226, in execute
-Exception: Cannot display 12 as text.
+  File "game/labels/common5.rpy", line 251, in script
+    "Perhaps it doesn't."
+  File "game/labels/00-chatHistory.rpy", line 165, in execute
+    screen historyDisplay:
+  File "game/labels/00-chatHistory.rpy", line 165, in execute
+    screen historyDisplay:
+  File "game/labels/00-chatHistory.rpy", line 166, in execute
+    hbox at alphaFade:
+  File "game/labels/00-chatHistory.rpy", line 168, in execute
+    frame:
+  File "game/labels/00-chatHistory.rpy", line 171, in execute
+    viewport id "chatHistory":
+  File "game/labels/00-chatHistory.rpy", line 178, in execute
+    vbox:
+  File "game/labels/00-chatHistory.rpy", line 183, in execute
+    for i in chatHistory.history:
+  File "game/labels/00-chatHistory.rpy", line 184, in execute
+    text i.person:
+AttributeError: 'unicode' object has no attribute 'person'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/common5.rpy", line 223, in script
-    k "What happens when the game ends?"
+  File "game/labels/common5.rpy", line 251, in script
+    "Perhaps it doesn't."
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
@@ -51,22 +56,26 @@ Full traceback:
     self.update()
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
     self.screen.function(**self.scope)
-  File "game/labels/00-chatHistory.rpy", line 215, in execute
-    ypos 300
-  File "game/labels/00-chatHistory.rpy", line 215, in execute
-    ypos 300
-  File "game/labels/00-chatHistory.rpy", line 216, in execute
-    mousewheel True
-  File "game/labels/00-chatHistory.rpy", line 217, in execute
-    scrollbars "vertical"
-  File "game/labels/00-chatHistory.rpy", line 223, in execute
-    text histories[selectedRecap].recap
-  File "game/labels/00-chatHistory.rpy", line 226, in execute
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\text\text.py", line 1471, in __init__
-    raise Exception("Cannot display {0!r} as text.".format(i))
-Exception: Cannot display 12 as text.
+  File "game/labels/00-chatHistory.rpy", line 165, in execute
+    screen historyDisplay:
+  File "game/labels/00-chatHistory.rpy", line 165, in execute
+    screen historyDisplay:
+  File "game/labels/00-chatHistory.rpy", line 166, in execute
+    hbox at alphaFade:
+  File "game/labels/00-chatHistory.rpy", line 168, in execute
+    frame:
+  File "game/labels/00-chatHistory.rpy", line 171, in execute
+    viewport id "chatHistory":
+  File "game/labels/00-chatHistory.rpy", line 178, in execute
+    vbox:
+  File "game/labels/00-chatHistory.rpy", line 183, in execute
+    for i in chatHistory.history:
+  File "game/labels/00-chatHistory.rpy", line 184, in execute
+    text i.person:
+  File "<screen language>", line 184, in <module>
+AttributeError: 'unicode' object has no attribute 'person'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Ganymead 1.0
-Tue Apr 07 23:52:59 2020
+Wed Apr 08 23:45:14 2020

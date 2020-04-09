@@ -65,15 +65,15 @@ label chatHistory:
             "I still can't believe it. Robin revealed, through the power of French cuisine, that she and I met a long time ago, and that she is only 19! Blew my mind twice. Turns out I was her first paying customer in Paris all those years ago, and I guess I made an impression! Then she did some more magic, and then... then, she kissed me. In the dark, just like that. So confident, so... god, save me.",
 
             "I overslept, to be awoken by a frantic Tania at the door. Not only was it 5 p.m., but I hadn't even showered yet. And then, Lichelle ghosted us. I couldn't believe it. Why go through all this effort just to go truant? Poor Tania's blood pressure was through the roof, and I had a decision to make.",
-            
+
             "I've never been bold. Ever. Something about today, though, brought out my courage and I asked Tania to go out with me instead of Lichelle. She seemed unwilling before, but today she agreed! And... we didn't actually make it to a date. My bedroom was right there, so... \nWe made love for hours. For a minute, it felt like just sex. Raw, animalistic sex. I guess both of us were pent up. But then, I felt her pressed against my back, our arms interlaced, and I felt safe. Something like that. \nI turned in her arms and kissed her forehead, and asked her why she was crying. I guess she'd been doing this for so long, orchestrating other people's love lives, that she'd never taken time to pursue her own. \nWe never got married. Neither of us felt like bringing legal documents into it. We never needed to. Maybe I was the first Waifu on the show to do it, but I found a love in Tania that would last a lifetime. It wasn't always easy. Sometimes she hated me. Still, long after the fires of our sex life had gone from ravenous flames to carefully-tended embers, our communication and understanding burned brighter and brighter. \nTania. My only Suitor. I love you, now and forever.",
-            
+
             "I was nervous, but I met Cassandra, Robin, Tania, and Lichelle. Tania explained the process of One Week Waifu and reassured me about things after the show. I rested, and picked an outfit for my first date: the mysterious songstress, Cassandra Sanna.",
 
             "I wasn't expecting Lichelle to show up, but sadly my new buddy Tania is injured. I would've liked to talk with her more, you know? Tania makes me feel so comfortable.\nLichelle, though, is more than I was ready for, honestly. Everything about her is power, power, power. I won't lie, she... left me in a state. She could kill me, if she wanted to. I can feel it. It's so... god. I don't have words.\nDeep down, I want... god, save me.",
-            
+
             "I met up with Cassandra at a bar, which I wasn't super hyped about. My hesitation vanished when I saw her, though. My musical idol, here in person.\nI learned some disappointing things, honestly. She's in so much pain. Her friend, my god. Maybe the love of her life killed herself and blamed Cassandra.\nHow can I ask someone suffering so deeply to love me? One-Week Waifu is just a dream. I wasn't happy about it, but we headed to her studio anyway.",
-            
+
             "Well... in summary, I was hit in the head and KO'd by a trash can. My idol currently is in the hospital with alcohol poisoning. My new friend Tania is laid up with a busted ankle. And I rode home with a woman who tended to me like she'd known me forever.\nThe way she plays with that cross necklace she wears burns me alive. I don't know if she's doing that intentionally, or if it's a tic, but it puts me on a breathless edge.",
 
             "It's impossible to prepare for Robin. It really is.",
@@ -134,18 +134,21 @@ label chatHistory:
             i = scene
             histories[i].history = chat.history
             histories[i].seen = True
-       
+
             chat.delmessages()
+
+        def getAllHistories():
+            #test function to fill out recap and titles section
+            for i in histories:
+                i.seen = True
 
         def chatHistUpdate(scene):
             global selectedRecap
             # selectedHistory refers to the currently active history, i.e., you have clicked scene 1 and now scene 1's chat log is stored in selectedHistory
 
-            #chatHistory here refers to the box itself
+            # chatHistory here refers to the box itself
             chatHistory.history = histories[scene].history
             selectedRecap = histories[scene].recap
-            
-           
 
         def selectRecap(value):
             newRecap = int(value)
@@ -171,19 +174,20 @@ label chatHistory:
                     scrollbars "vertical"
                     # side area determines how text is placed in the box
                     side_area(10, 0, histChatWidth, histChatHeight)
-                    
+
                     vbox:
                         box_wrap True
                         xsize histMaxWidth
 
                         # histories is a list of stored chat history object.
                         for i in chatHistory.history:
-                            text i.person:
-                                font nameFont
-                                color i.color
+                            text "FUCK"
+                            # text i.person:
+                            #     font nameFont
+                            #     color i.color
 
-                            text i.message:
-                                font messageFont
+                            # text i.message:
+                            #     font messageFont
 
     # this screen needs multiple windows. Let's do this with one screen, shall we? A vbox on the left with history number clickable boxes to change which chat displayed, the chat itself on the right, (or even in the middle of a few columns of scenes) and an exit button upper right. must not allow story underneath to continue if clicked.
 
@@ -215,7 +219,7 @@ label chatHistory:
     screen chatRecaps:
         frame at summonRecaps:
             viewport id "chatRecaps":
-                
+
                 yinitial 0.0
                 mousewheel True
                 scrollbars "vertical"
@@ -224,4 +228,4 @@ label chatHistory:
                     box_wrap True
                     xsize histMaxWidth
                     text selectedRecap
-                    #text selectedRecap.recap
+                    # text selectedRecap.recap
