@@ -131,7 +131,7 @@ label c5robinInterview:
 
                     "Why is she so cold? Her clothes are... damp?"
 
-                    r "At last, oh my R13:14-15, at last."
+                    r "At last, oh my R/BG13:14-15, at last."
 
                     "Out of the corner of her eye, Kylie notices Cassandra and Lichelle smiling, Cassandra sadly, Lichelle excitedly."
 
@@ -171,7 +171,7 @@ label c5robinInterview:
                     $robinDone[4] = True
 
                 "Are we really stuck here? Is any of this real?" if robinDone[5] == False:
-                    r "R13:14-15"
+                    r "R/BG13:14-15"
                     $robinDone[5] = True
 
                 "Can you give me a minute?":

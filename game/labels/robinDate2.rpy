@@ -326,7 +326,7 @@ label robinDate2:
 
     l "You smell like lavender and I want to just..." 
     
-    $chat.addmessage(elsa,"I'm coming over, Sophie. I'll be there in R13:14-15--")
+    $chat.addmessage(elsa,"I'm coming over, Sophie. I'll be there in R/BG13:14-15--")
 
     show l flirty
 
@@ -528,7 +528,7 @@ label robinDate2:
 
     r "Was I wrong, papillon?"
 
-    ki "A chip of ice races along my bloodstream. On the platter there sits R13:14-15." 
+    ki "A chip of ice races along my bloodstream. On the platter there sits R/BG13:14-15." 
 
     ki "A... a band. Thick rubber. The syringe. It's speckled red."
     
@@ -1287,7 +1287,7 @@ label robinDate2:
 
     ki "Except the burning pain tattooing my neck begs to differ." 
     
-    $chat.addmessage(elsa,"It's a mission here in R13:14-15. We're a rehabilitation program for addicts of all types.")
+    $chat.addmessage(elsa,"It's a mission here in R/BG13:14-15. We're a rehabilitation program for addicts of all types.")
 
     show l shy
     # up close if possible
@@ -1483,9 +1483,6 @@ label robinDate2:
 
     s "Then again, I don't know if I believe her story. It's way too convenient for her to show up here if she and Kylie have that kind of history."
 
-    # chat
-
-    s "Well, anyway, we have one more date to go! Let's go get us a tomboy." 
     
     $chat.addmessage(liv,"Come back to me, you won't regret it. :)")
 

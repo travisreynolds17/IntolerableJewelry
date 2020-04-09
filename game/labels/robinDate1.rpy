@@ -1004,7 +1004,7 @@ label robinDate1:
 
     k "I have no idea."
 
-    $chat.addmessage(unkn, "R13:14-15")
+    $chat.addmessage(unkn, "R/BG13:14-15")
 
     ki "It's hard to think, even now. I feel drained, like all of my energy has been spent dissecting those few minutes in the dark."
 

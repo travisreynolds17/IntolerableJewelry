@@ -41,7 +41,7 @@ label endingEntityWins:
 
     "Now... we are as a colossus. Different in this world."
 
-    "R13:14-15"
+    "R/BG13:14-15"
 
     "We grow. We consume."
 

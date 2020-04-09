@@ -77,7 +77,7 @@ label cassDate1:
 
     ki "I wonder if the way she writes mimics the way she would have spoken."
 
-    $chat.addmessage(unkn, "R13:14-15")
+    $chat.addmessage(unkn, "R/BG13:14-15")
 
     k "No, no, it's fine! Tania told me a little about how we could communicate and it actually sounds kind of fun, and, uh... yeah."
 
@@ -856,7 +856,7 @@ label cassDate1:
 
     c "< Is that okay? It's fine if not. >"
 
-    $chat.addmessage(unkn, "R13:14-15. ")
+    $chat.addmessage(unkn, "R/BG13:14-15. ")
 
     k "Hey. Are you okay?"
 

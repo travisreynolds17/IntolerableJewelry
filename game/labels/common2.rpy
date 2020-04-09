@@ -247,7 +247,7 @@ label common2:
 
     s "What an odd thing to say." 
     
-    $chat.addmessage(unkn, "R13:14-15")
+    $chat.addmessage(unkn, "R/BG13:14-15")
 
     ki "A little smile forms on Tania's lips. I don't know if that helped ease the tension, though."
 

@@ -598,7 +598,7 @@ label cassDate2:
     
     $chat.addmessage(fizz,"You don't even know her.") 
     
-    $chat.addmessage(unkn,"R13:14-15")
+    $chat.addmessage(unkn,"R/BG13:14-15")
 
     c "< I appreciate it, too. >"
 

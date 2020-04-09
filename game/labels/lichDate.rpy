@@ -214,7 +214,7 @@ label lichDate:
 
     
     
-    $chat.addmessage(unkn, "CHAT currently unavailable. Error: R13:14-15")
+    $chat.addmessage(unkn, "CHAT currently unavailable. Error: R/BG13:14-15")
 
     # go ahead and grab chat history here, even though it's soon. No chat after this point until we get to a new label anyway
     $getHistory(5)

@@ -22,7 +22,7 @@ label common1:
 
     # some chat front load. more later.
     python:
-        chat.addmessage(unkn, "R13:14-15 | What? What? I can see?")
+        chat.addmessage(unkn, "R/BG13:14-15 | What? What? I can see?")
         chat.addmessage(cake, "New game?")
         chat.addmessage(shub, "#hentai?")
         chat.addmessage(crab, "#betterBe")
@@ -872,7 +872,7 @@ label common1:
 
     t "Great. Go get ready, and hey Kylie? Listen. If you need to talk to anybody, I'm around. I've been on this show since day one and I'll be happy to listen if you need anything."
 
-    $chat.addmessage(unkn, "R13:14-15")
+    $chat.addmessage(unkn, "R/BG13:14-15")
 
     s "Tania's nice. I bet the real hosts of these shows are nothing like her."
 

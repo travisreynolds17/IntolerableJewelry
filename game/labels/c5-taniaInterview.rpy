@@ -300,7 +300,7 @@ label c5taniaInterview:
                 $taniaDone[4] = True
 
             "Are we really stuck here? Is any of this real?" if taniaDone[5] == False:
-                t "R13:14-15"
+                t "R/BG13:14-15"
                 $taniaDone[5] = True
 
             "Can you give me a minute?":

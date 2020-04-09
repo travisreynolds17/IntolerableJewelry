@@ -47,7 +47,7 @@ label common5:
 
     t "I tried to tell you. I'm the only one with the power to do it."
 
-    $renpy.notify("I didR13:14-15 no more time. You have to make a decision!")
+    $renpy.notify("I didR/BG13:14-15 no more time. You have to make a decision!")
 
     "Kylie pauses, wringing her hands, keenly aware of them being her own hands now."
 
@@ -263,6 +263,10 @@ label common5:
     $chat.addmessage(liv,"Really, now? I must've gotten the method wrong.")
     
     $renpy.notify("character.narrator.setValue('')")
+
+    "..."
+
+    $getHistory(16)
 
     menu:
         "Resist":
