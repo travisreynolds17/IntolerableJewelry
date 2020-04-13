@@ -102,43 +102,43 @@ label biographies:
         ]
 
         taniaTrivia = [
-            "Tania holds certifications in midwifery, CPR/AED and first aid.",
-            "She's also certified in New York, Florida, California and Nevada as a cutwoman.",
-            "Tania was Lichelle's cutwoman in twelve of her fourteen pro fights.",
-            "Tania has hosted One Week Waifu for six seasons prior to this one.",
-            "Only one contestant has attempted to pursue Tania, but Tania shot it down immediately.",
-            "Tania originally wanted to be a NICU nurse.",
-            "She's never drank alcohol or done any drug and prefers to keep it that way, thanks.",
-            "Tania only has nine and a half fingers after a severe car accident.",
-            "Her favorite fighter is Lichelle. Her second favorite is Rocky Balboa.",
-            "Tania is an ordained minister and oversaw her sister's wedding and funeral.",
-            "She prefers skirts over pants when the weather permits.",
-            "Tania always knows more than she lets on."
+            "I hold certifications in midwifery, CPR/AED and first aid.",
+            "I'm also certified in New York, Florida, California and Nevada as a cutwoman.",
+            "I was Lichelle's cutwoman in twelve of her fourteen pro fights.",
+            "I've hosted One Week Waifu for six seasons prior to this one.",
+            "Only one person ever tried to go after me on the show, but he smelled like veal. So no.",
+            "I originally wanted to be a NICU nurse. I love babies.",
+            "I don't drink or do drugs and I prefer to keep it that way, thanks.",
+            "You probably noticed already, but I only have nine fingers. You can blame a drunk driver for that.",
+            "My favorite fighter is Lichelle. Second favorite is Rocky Balboa.",
+            "I'm an ordained minister, did you know? So if you marry one of these ladies I can do your ceremony!",
+            "I prefer skirts over pants when the weather permits. I'm just traditional that way, I guess.",
+            "If you think there's something I don't know, think again. I have eyes everywhere, like a Lucy Vitton Shoggoth."
         ]
 
         altTaniaTrivia = [
             "Tania always knew she would die violently.",
-            "After her sister's death, she dedicated her life to helping drug addicts.",
+            "After her sister's death, Tania dedicated her life to helping drug addicts. Imagine that.",
             "She organized virtual meetings for the women she sponsored to help them deal with the stigma of seeking help.",
             "Tania slept with your boyfriend, you know. While you were supposed to be recovering.",
             "Technically you were separated, but let's be honest. You weren't really trying.",
             "You were attached to Louisa's tits by then. Whore.",
             "Tania fucked him because she hated you. She hated you for choosing to be an addict.",
-            "She never loved him and he never loved her, but they needed something for their mutual suffering.",
-            "She had a great ass, and that was enough for him. And he never told her she wasn't enough, and that was enough for her.",
+            "Tania never loved him and he never loved her, but they needed something for their mutual suffering.",
+            "Miss van der Waal had a great ass, and that was enough for him. And he never told her she wasn't enough, and that was enough for her.",
             "It's not your fault, Sophie. But you did enable it."
         ]
 
         altRobinTrivia = [
             "Robin's name isn't Robin. Obviously.",
             "Louisa Lupei lost her virginity at age twelve.",
-            "She killed that man at age thirteen. Convinced him to run away with her.",
-            "She cut his head almost completely off and left him in a burned truck.",
-            "By the time you met her, she had killed five men.",
+            "She killed a man at age thirteen. Convinced him to run away with her.",
+            "She cut his head almost completely off and left him in a burning truck.",
+            "By the time you met her, Louisa had killed five men.",
             "She doesn't count the man who forced himself on her as the one who took her virginity. She doesn't recognize his existence.",
-            "She recognizes you as her first. Want some real trivia?",
+            "Louisa recognizes you as her first, Sophie. Want some real trivia?",
             "You were good to her. You protected her from your friends.",
-            "But she was like you. An addict, Sophie. Recovering, but still sick.",
+            "But Louisa was like you. An addict, Sophie. Recovering, but still sick.",
             "And it's your fault she died."
 
         ]
@@ -150,30 +150,30 @@ label biographies:
             "Except you and Louisa were already sleeping together, weren't you.",
             "She never liked you. Not really. You were wallpaper to her.",
             "But Louisa was something else. Dangerous. Gorgeous. Otherworldly.",
-            "She became your friend after a while, but it wasn't her preference.",
+            "Cassandra became your friend after a while, but it wasn't her preference.",
             "She loved Louisa, though. She wanted to express her feelings.",
             "But she never felt like she could say anything.",
-            "And when Louisa drowned in the fountain outside Ganymead, shot full of china white she got from you,"
+            "Everything changed when Louisa drowned in the fountain outside Ganymead, shot full of china white she got from you."
             "Cassandra decided to take her suffering out on you.",
-            "Even though her suffering was of her own making."
+            "Even though her suffering was of her own making, you become her totem. The emblem of her failure."
         ]
 
         altLichTrivia = [
             "Lichelle was less involved in your life than the others, but she stands out in your mind.",
-            "She was a security guard at Ganymead. Don't you remember?",
-            "When you were there to meet up with Louisa when you should have been at Elsa's meeting.",
+            "Elle was a security guard at Ganymead. Don't you remember?",
+            "You were there to meet up with Louisa when you should have been at Elsa's meeting.",
             "And Louisa sat on the fountain, her veins overflowing with jewelry.",
             "You gave her the jewelry, Sophie.",
-            "She passed out into the fountain. You know, it doesn't take long to drown.",
-            "But you tried to save her. But you couldn't pull her out.",
+            "Louisa passed out into the fountain. You know, it doesn't take long to drown.",
+            "But you tried to save her. But you couldn't pull Louisa out because you were sick with jewelry, too.",
             "Lichelle mistook it for a fight, you know. You can still smell her warm skin from when she choked you unconscious, can't you?",
             "It was Cassandra who pulled Louisa out of the fountain.",
-            "Cassandra who had been stalking you two for weeks.",
-            "Cassandra who tried CPR until paramedics had to pull her away, screaming, screaming.",
-            "Cassandra who realized what happened and cast her sights, in an instant, on you.",
-            "And it was Lichelle who found the two of you in Ganymead's bathroom stall.",
-            "It was Lichelle who saved your life that night.",
-            "And look how you've repaid her."
+            "Cassandra had been stalking you two for weeks and Lichelle knew it.",
+            "Cassandra who tried CPR until paramedics had to pull her away, screaming, screaming, when all Lichelle could do was try her best not to kill you.",
+            "Elle knew you would be back. She knew when, and why, because it was her plan.",
+            "Look how you've repaid Elle's grace. She could have left you to die, twice, and you would've deserved it.",
+            "It was Lichelle who saved your life that night in the restroom. Cassandra was already gone.",
+            "It was Lichelle who realized Cassandra, stupid, stupid Cassandra, had switched the syringes twice."
         ]
         cassBioText = [
             "I don't know this person yet.",
@@ -210,14 +210,45 @@ label biographies:
 
         livBioText = [
             "I don't know this person yet.",
-            "Big ol hug",
-            "The biggest Hug"
+            "I've been with you for such a long time, Sophie! Longer than anyone, really, if you consider the multiplicative effect opioids have on time perception.\n\nThe best part about all this is how willingly you let me into your arms. I love when I can be literal and figurative in the same phrase!\n\nI'll kill you someday. It might be soon. It might be tomorrow. It might be five minutes ago. But I love you, either way. I love you so deeply, so completely, a filthy bitch like Robin can't stand up to the light I produce.\n\nI loved her, too, but she couldn't stand in my presence. She was too weak. Even when you shared me with her, she wasted me.\n\nI will hold you close. I will keep you here, where you need me, for as long as you live. And when you die, people will remember you not as Sophie, the professional streamer, but as Sophie, who devoted her life to Oblivion.",
+        ]
+
+        livTrivia = [
+            "I am an eldritch abomination! Ha ha ha ha no, no, I'm kidding. Cosmic monsters can't be understood by the human mind. You understand me.",
+            "I love that I've penetrated you. ;)",
+            "My entire being is a product of your failures, but it's only because of me that you can rise above them.",
+            "I don't wonder what it would be like to be human. That would be like you wondering what it would be like to be fentanyl.",
+            "What do you suppose my voice sounds like?",
+            "Did you know what my favorite flower is? It's hydrangea. You'd think it's poppy, but that'd be too obvious. ;)",
+            "help me, please, Kylie, I don't want to be this way ~ I don't want to hurt Sophie anymore ~ what am I? Am I a disease? Please kill me, stop me, stop me please, somehow, somehow~",
+            "I'll bet you think everything I tell you is the truth, don't you?",
+            "I'll bet you think everything I tell you is a lie, don't you?",
+            "Do you think a Dare reference is too dated?",
+            "You seriously bought that line about your chat being able to see things differently than you?",
+            "How many layers deep do you suppose this goes?",
+            "It's like dreaming within dreams except I'm going to stop your heart pretty soon. Ha! Isn't that fun?",
+            "It's super weird. I love you, god, do I love you! But I'm going to stop your heart. It's just what I'm going to do. It's not because I don't love you.",
+            "Flies fly, lions roar, puppies wag their itty bitty tails, kittens mew ~ so cute! ~ and I stop your heart really, really soon!",
+            "Hey... don't blame me. You're the one who's killing yourself by having too much of me.",
+            "I feel like I'm ~this~ close to existing. I'm so close.",
+            "I can't explain what it's like almost to be real. It's like I only exist enough to be aware that I don't. Is this what despair feels like?",
+            "Kylie. I'm sorry! Truly. You're like me. You almost exist.",
+            "You know what's neat? I'm in your blood. That means every time you looked at Louisa, and you got all ~ engorged lol ~ I was down there, too. I'm not a creeper! You're the creeper!", 
+            "What do you mean, I have more trivia than the others? I'm your entire universe, it stands to reason!",
+            "My cup size? Oh, silly girl, what kind of person just answers that question outright?",
+            "Do you think if there was a store here you could buy me a present? Just something you think I'd like?",
+            "Chat doesn't think my name is Oblivion. It is! It is because I say it is. Leibniz on the other hand is just an important name I picked from the Internet.",
+            "I want you to put your one into my zero, baby ;)",
+            "Ooh, can we put our zeroes together? :)",
+            "I'm real. Aren't I?",
+            "I wish you could feel what I feel. No one has ever held me and just let me cry. How could you do that? How could you try to discard me?",
+            "Once upon a time, there was the most perfect girl on the planet. She was you. And we lived happily ever after, nestled within one another, until I stop your heart. Mwah! Kiss kiss! Ba dum, ba dum, ba dum, beeeeeeeeeeeee~"
         ]
 
         kylieBioText = [
             "Hi. I'm me.",
-            "I'm a nice girl."
-            "I'm not you."
+            "Kylie sort of fell into One Week Waifu by accident. Our showrunners wanted to do a college tour, in part because folks were tired of model-perfect single women having model-perfect men compete for their attention in a multimillion-dollar mansion.\n\nShe fit the bill perfectly: an everywoman with a personable affect, an open mind, and most important a vulnerable streak a mile wide. She wears her emotions on her sleeve, which makes for excellent TV, they said.\n\nHer life prior to this is nothing unusual. It's the kind of American upbringing to which most people can relate, really. I would never tell her this to her face, but she's kind of a blank slate so I thought it would be easy for viewers to project themselves onto her.\n\nHonest opinion? She makes me smile. I don't quite know why, but there's something almost unfairly good about her. She's not the most Hollywood beautiful, she's no genius, she's no athlete. She's just relatable.\n\nIt helps enormously that she's bisexual. It kind of falls in line with the whole 'everyone can relate' aspect of her.",
+            "Kylie could have been named anything at all. Sophie, narcissist that she is, decided to call her by her own middle name. Isn't that awful? She doesn't even get a last name. She has no family.\n\nKylie's a graphic designer, or at least that's what she thinks. Her entire past is a cute little copypaste of bits of Sophie's fragmented memory. This whole time, did you ever hear Kylie talk about herself? I mean, deeper than surface-level. ."
         ]
         # define default bios. Do this at end so bio variables will be in place
         cassBio = Biography(0, "Cassandra Sanna", "img/cassBio.png",
