@@ -340,10 +340,15 @@ label common4:
     pause 2.0
 
     # ---------------------------------------------------------
-
-    $renpy.notify("There's still time. Not long now. You can sever them.")
-    # bit o cleanup
-    $elsa.name = "ElsaLingus"
+    python:
+        renpy.notify("There's still time. Not long now. You can sever them.")
+        # bit o cleanup
+        elsa.name = "ElsaLingus"
+        # add liv's bio to list.
+        bioColumns = 5
+        allBios.append(livBio)
+        livBio.font = fontEntity
+        livBio.fontColor = colorEntity
 
     # ---------------------------------------------------------
 

@@ -8,7 +8,7 @@ label endingTaniaBad:
     "Her eyes open again, gazing blandly."
     t "I'm sorry, Sophie."
     s "For what?"
-    t "I love Kylie. I love her courage, how moved she was when she saw my body nailed to the dressing room door."
+    t "I love Kylie. I love her courage, how moved she was when she saw Robin in a frozen heap on the floor."
     "A tear glitters on her lashes."
     #This next part is meant to be fragmented. Change it if testing shows it to be too weird
     "I'm not sure when the little robot rolled up to my feet, but I suppose"

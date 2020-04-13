@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/labels/00-chatHistory.rpy", line 183: for expects a non-empty block.
-    for i in chatHistory.history:
-                                 ^
+File "game/labels/00-chatHistory.rpy", line 185: expected an indented block
+        setRecapState("Chat")
+                     ^
+    
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Apr 08 23:46:06 2020
+Sun Apr 12 21:25:17 2020

@@ -294,8 +294,6 @@ label endingTron5000:
 
         s "Kylie. KYLIE!"
 
-
-
         pause 1.0
 
         hide image splashEKGFull at summonEKG
@@ -358,7 +356,7 @@ label endingTron5000:
 
         s "I'm not. I'm not, I promise. And I'm not crazy."
 
-        d "I didn't say you were. It's just that I've seen these signs before."
+        d "I didn't say you were crazy. It's just that I've seen these signs before."
 
         s "I'm clean."
 
@@ -366,13 +364,13 @@ label endingTron5000:
 
         s "David."
 
-        d "There're burn marks all over your arms."
+        d "There're marks all over your arms."
 
         s "I got shocked, that's all. It burned up some of my hair so I just, I just started over."
 
-        d "Baby, your life is yours. I can't tell you what to do or what not to do."
+        d "That didn't happen, Sophie. Remember?"
 
-        s "... I can't stop shaking, David."
+        s "... I can't stop shaking."
 
         d "I can see that."
 

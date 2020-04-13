@@ -5,7 +5,7 @@ label chatHistory:
     # declare pertinent variables
 
     init:
-        define chatHistoryBack = Image("img/GUI-historyBack.png")
+        define chatHistoryBack = Image("img/chatHistoryBack.png")
         # use a chatlog object. We're trying to get the chat history window to repopulate on clicking scene buttons.
         default chatHistory = Chatlog()
 
@@ -30,6 +30,7 @@ label chatHistory:
         selectedHistory = ""
         selectedTitle = ""
         selectedRecap = ""
+        recapState = "Recaps"
 
         # list of collected histories.
         histories = []
@@ -87,10 +88,11 @@ label chatHistory:
             "... hello? Hello? Someone, I can't... she's not moving. I think she's dead. I can't move her. She's frozen. I'm freezing. Help. Help me. Help her! please please please Louisa don't leave me don't die I'm sorry wake up wake up wake up you're okay you're fine honey breathe please breathe I can't do this alone come back, come back, come back, you're so cold, so\n\ncold, I love you, I never said it, I never said it! I never said it! someone! anyone! Take me instead! Kill me, save her! Give her my breath my heart my lungs whatever she needs, god, are you real? not her! me! I hate you! This is my fault! This is your fault! God! Elsa! David! LOUISA COME BACK please~\n\nThe Clinic defines dissociation as a separation of mental focus from physical reality. There are three types of dissociative disorders: Dissociative amnesia, dissociative identity disorder, and depersonalization-derealization disorder.\n\nI wonder what it would be like for all of those things to happen at once. And what kind of stimulus could cause such a thing?",
 
             "14 And deceiveth them that dwell on the earth by the means of those miracles which he had power to do in the sight of the beast; saying to them that dwell on the earth, that they should make an image to the beast, which had the wound by a sword, and did live.\n\n15 And (she) had power to give life unto the image of the beast, that the image of the beast should both speak, and cause that as many as would not worship the image of the beast should be killed.\n\n14 Everywhere are (her) hands and feet, eyes, heads, and faces. (Her) ears too are in all places, for (she) pervades everything in the universe.\n\n15 Though (she) perceives all sense-objects, yet (she) is devoid of the senses. (She) is unattached to anything, and yet (she) is the sustainer of all. Although (she) is without attributes, yet (she) is the enjoyer of the three modes of material nature.\n\nDo you think if I position myself as a goddess, you would become my missionary? ;) xoxoxo",
-            
+
             "Hold",
             "Hold",
         ]
+        chatShowing = True
         # chat history is collected at the end of every major area. Mostly will take place where you have the story beats broken up.
 
         class History:
@@ -115,21 +117,21 @@ label chatHistory:
         histBoxY = initialBoxY  # x and y are just guesses for now
 
         for i in range(0, 8):
-            k = History(i, histBoxX, histBoxY, "hold",
+            temp = History(i, histBoxX, histBoxY, [],
                         chatTitles[i], chatRecaps[i])
 
             histBoxY += histBoxHeight + boxMarginY
-            histories.append(k)
+            histories.append(temp)
 
         histBoxX = initialBoxX
         histBoxY = initialBoxY  # x and y are just guesses for now
         histBoxX += histBoxWidth + boxMarginX
 
         for i in range(8, 16):
-            k = History(i, histBoxX, histBoxY, "hold",
+            temp = History(i, histBoxX, histBoxY, [],
                         chatTitles[i], chatRecaps[i])
             histBoxY += histBoxHeight + boxMarginY
-            histories.append(k)
+            histories.append(temp)
 
         # add more as needed
 
@@ -144,56 +146,87 @@ label chatHistory:
             chat.delmessages()
 
         def getAllHistories():
-            #test function to fill out recap and titles section
+            # test function to fill out recap and titles section
             for i in histories:
+                global bioColumns
+                global allBios
                 i.seen = True
+                bioColumns = 6
+                allBios = [cassBio, lichBio, robinBio, taniaBio, kylieBio, livBio]
+               
 
         def chatHistUpdate(scene):
             global selectedRecap
+            global selectedTitle
             # selectedHistory refers to the currently active history, i.e., you have clicked scene 1 and now scene 1's chat log is stored in selectedHistory
 
             # chatHistory here refers to the box itself
             chatHistory.history = histories[scene].history
             selectedRecap = histories[scene].recap
+            selectedTitle = histories[scene].title
 
         def selectRecap(value):
             newRecap = int(value)
             return newRecap
-    # should chat history take up full screen or no? Maybe not. That's a lot of horizontal text. Use your chatbox code to create functions for acquiring and displaying chat text.
 
+        def closeChatHist():
+            renpy.hide_screen("chatHistory")
+            renpy.hide_screen("historyDisplay")
+            renpy.hide_screen("historySelect")
+            renpy.hide_screen("chatRecaps")
+
+
+        
+
+    # foundation screen for chat histories and recaps
     screen chatHistory:
 
         add chatHistoryBack
 
         tag chatHistory
         modal True
+        button:
+            text "X"  # temporary
+            xpos 1200
+            ypos 50
+            xalign 0.5
+            yalign 0.5
+            xysize(40, 40)
+            action Function(closeChatHist)
 
+        button:
+            if chatShowing:
+                text "Recaps"
+                action [ToggleVariable("chatShowing"), Hide("historyDisplay"), Show("chatRecaps")]
+            else:
+                text "Chat History"
+                action [ToggleVariable("chatShowing"), Hide("chatRecaps"), Show("historyDisplay")]
+
+    # screen shows chat history
     screen historyDisplay:
-        hbox at alphaFade:
+        
+        frame at summonChatHistory:
+            # position by transform, found on declarations page
+            viewport id "chatHistory":
+                mousewheel True
+                yinitial 0.0
+                scrollbars "vertical"
+                # side area determines how text is placed in the box
+                side_area(10, 0, histChatWidth, histChatHeight)
 
-            frame:
-                ypos initialBoxY
-                xpos 800
-                viewport id "chatHistory":
-                    mousewheel True
-                    yinitial 0.0
-                    scrollbars "vertical"
-                    # side area determines how text is placed in the box
-                    side_area(10, 0, histChatWidth, histChatHeight)
+                vbox:
+                    box_wrap True
+                    xsize histMaxWidth
 
-                    vbox:
-                        box_wrap True
-                        xsize histMaxWidth
+                    # histories is a list of stored chat history object.
+                    for i in chatHistory.history:
+                        
+                        text i.person:
+                            font nameFont
+                            color i.color
 
-                        # histories is a list of stored chat history object.
-                        for i in chatHistory.history:
-                            text "FUCK"
-                            # text i.person:
-                            #     font nameFont
-                            #     color i.color
-
-                            # text i.message:
-                            #     font messageFont
+                        text i.message:
+                            font messageFont
 
     # this screen needs multiple windows. Let's do this with one screen, shall we? A vbox on the left with history number clickable boxes to change which chat displayed, the chat itself on the right, (or even in the middle of a few columns of scenes) and an exit button upper right. must not allow story underneath to continue if clicked.
 
@@ -223,15 +256,19 @@ label chatHistory:
     # define a screen that holds the chat recaps.
 
     screen chatRecaps:
-        frame at summonRecaps:
+        frame at summonChatHistory:
+            # position by transform, found on declarations page
             viewport id "chatRecaps":
 
-                yinitial 0.0
                 mousewheel True
+                yinitial 0.0
                 scrollbars "vertical"
+                # side area determines how text is placed in the box
                 side_area(10, 0, histChatWidth, histChatHeight)
+
                 vbox:
                     box_wrap True
                     xsize histMaxWidth
+                    # for now. We may add another box for this.
+                    text selectedTitle
                     text selectedRecap
-                    # text selectedRecap.recap

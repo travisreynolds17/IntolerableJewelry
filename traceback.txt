@@ -1,31 +1,19 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/common5.rpy", line 251, in script
-    "Perhaps it doesn't."
-  File "game/labels/00-chatHistory.rpy", line 165, in execute
-    screen historyDisplay:
-  File "game/labels/00-chatHistory.rpy", line 165, in execute
-    screen historyDisplay:
-  File "game/labels/00-chatHistory.rpy", line 166, in execute
-    hbox at alphaFade:
-  File "game/labels/00-chatHistory.rpy", line 168, in execute
-    frame:
-  File "game/labels/00-chatHistory.rpy", line 171, in execute
-    viewport id "chatHistory":
-  File "game/labels/00-chatHistory.rpy", line 178, in execute
-    vbox:
-  File "game/labels/00-chatHistory.rpy", line 183, in execute
-    for i in chatHistory.history:
-  File "game/labels/00-chatHistory.rpy", line 184, in execute
-    text i.person:
-AttributeError: 'unicode' object has no attribute 'person'
+  File "game/labels/common4.rpy", line 764, in script
+    k "There's no more inner monologue! I'm real!"
+  File "renpy/common/00action_other.rpy", line 537, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/labels/00-chatHistory.rpy", line 157, in getAllHistories
+    i.font = allFonts[i.idNum]
+IndexError: list index out of range
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/common5.rpy", line 251, in script
-    "Perhaps it doesn't."
+  File "game/labels/common4.rpy", line 764, in script
+    k "There's no more inner monologue! I'm real!"
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
@@ -40,42 +28,39 @@ Full traceback:
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\screen.py", line 430, in visit_all
-    callback(self)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\screen.py", line 440, in per_interact
-    self.update()
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
-    self.screen.function(**self.scope)
-  File "game/labels/00-chatHistory.rpy", line 165, in execute
-    screen historyDisplay:
-  File "game/labels/00-chatHistory.rpy", line 165, in execute
-    screen historyDisplay:
-  File "game/labels/00-chatHistory.rpy", line 166, in execute
-    hbox at alphaFade:
-  File "game/labels/00-chatHistory.rpy", line 168, in execute
-    frame:
-  File "game/labels/00-chatHistory.rpy", line 171, in execute
-    viewport id "chatHistory":
-  File "game/labels/00-chatHistory.rpy", line 178, in execute
-    vbox:
-  File "game/labels/00-chatHistory.rpy", line 183, in execute
-    for i in chatHistory.history:
-  File "game/labels/00-chatHistory.rpy", line 184, in execute
-    text i.person:
-  File "<screen language>", line 184, in <module>
-AttributeError: 'unicode' object has no attribute 'person'
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 3518, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\screen.py", line 714, in event
+    rv = self.child.event(ev, x, y, st)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\transform.py", line 882, in event
+    rv = d.event(ev, cx, cy, st)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\behavior.py", line 962, in event
+    return handle_click(self.clicked)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\behavior.py", line 897, in handle_click
+    rv = run(action)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\behavior.py", line 320, in run
+    return action(*args, **kwargs)
+  File "renpy/common/00action_other.rpy", line 537, in __call__
+    rv = self.callable(*self.args, **self.kwargs)
+  File "game/labels/00-chatHistory.rpy", line 157, in getAllHistories
+    i.font = allFonts[i.idNum]
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 847, in __getitem__
+    rv = list.__getitem__(self, index)
+IndexError: list index out of range
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Ganymead 1.0
-Wed Apr 08 23:45:14 2020
+Sun Apr 12 22:35:08 2020

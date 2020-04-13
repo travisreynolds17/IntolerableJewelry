@@ -1110,6 +1110,12 @@ label common1:
 
     $hideGui()
 
+    #adjust character bios from 0 (unknown) to 1 (standard bios)
+
+    python:
+        for i in allBios:
+            i.levelUp()
+
     # collect chat history in appropriate variable.
     $getHistory(0)
 

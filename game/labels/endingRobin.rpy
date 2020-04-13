@@ -45,7 +45,7 @@ label endingRobin:
         jump endCredits
 
     else:
-        #in which Robin finds Sophie, asks David to give them time, and tells her things
+        #in which Robin finds Sophie, asks David to give them time, and tells her things. So, the nature of the rewrite means this has got to be mostly in Sophie's head. or at least positioned as such. IRL Louisa is gone, and David would recognize her even if Sophie called her Robin.
 
         un "... reservation. I am here to see someone."
 
@@ -125,13 +125,13 @@ label endingRobin:
 
         s "What? Why and how?"
 
-        r "[entityName] is an otherworldly thing, my dearest. It is not unique."
+        r "Oblivion is an otherworldly thing, my dearest. It is not unique."
 
         s "You're screwing with me, right?"
 
         r "I find your incredulity disheartening, darling. Do you suppose a single instance of rationality-breaking oddity exists, then?"
 
-        s "So there's more of them. More like [entityName]."
+        s "So there's more of them. More like Liv."
 
         r "Like it, yes, but not exactly like it."
 
@@ -147,11 +147,16 @@ label endingRobin:
 
         "I feel like all I can do is react, at this point. Even then, it is flat. I am a boxer being rabbit punched after the bell."
 
-        r "I went to that place to hunt [entityName] and add its name to my own horde."
+        r "I went to that place to hunt Liv and add its name to my own horde."
+
+        show image splashEKGFull at summonEKG
+        pause 0.3
 
         "I'm shaking. It's too much."
 
         r "You must have felt it the first time we met."
+
+        hide image splashEKGFull at summonEKG
 
         s "..."
 
@@ -185,11 +190,24 @@ label endingRobin:
 
         r "Papillon?"
 
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        s "I thought you drowned."
+
+        r "Drowned?"
+
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
         s "You don't have to tell me about it. I'm just... I'm happy to see you're okay now."
 
-        r "Without you, I wouldn't be. Again."
+        r "Ah, I see. In the simulation, you mean."
 
-        r "I thought I could wrest control away from [entityName]. In this world, perhaps I could have."
+        pause 0.4
+
+        r "I thought I could wrest control away from Liv. In this world, perhaps I could have."
 
         r "In the simulation, I could not touch it."
 
@@ -210,6 +228,8 @@ label endingRobin:
         r "Did the sight of her bother you?"
 
         s "Yes. You?"
+
+        pause 0.5
 
         r "Enormously."
 
@@ -232,7 +252,7 @@ label endingRobin:
 
         s "What about you?"
 
-        r "Tania and I have an accord. There are other [entityName]s gnawing at the roots of this world. The technological is her domain as the metaphysical is mine."
+        r "Tania and I have an accord. There are other Oblivions gnawing at the roots of this world. The technological is her domain as the metaphysical is mine."
 
         s "Robin."
 
@@ -326,6 +346,10 @@ label endingRobin:
             r "Let's go, then."
 
             s "Where?"
+
+            hide image splashEKGFull at summonEKG
+            show image splashEKGFull at summonEKG
+            pause 0.3
 
             r "Does it matter?"
 
