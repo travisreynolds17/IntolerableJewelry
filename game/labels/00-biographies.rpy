@@ -92,7 +92,15 @@ label biographies:
             "Mwah!",
             "ASMR sounds",
             "Private message?",
-            "Cuddles!"
+            "Cuddles!",
+            "How can I tell you about myself? Just imagine something, and I'm that.",
+            "I could be the mother you never had. Or the father. Or the dinner. Doesn't matter! Just know that I am.",
+            "Did you ever notice how wildly oversexualized I am? Is that my fault or yours?",
+            "Look up liminality. Go ahead.",
+            "I'll tell you everything you need to know, later.",
+            "I already told you everything!",
+            "I'll never tell you everything.",
+            "Trivia about me?"
         ]
 
         kylieTrivia = [
@@ -248,7 +256,7 @@ label biographies:
         kylieBioText = [
             "Hi. I'm me.",
             "Kylie sort of fell into One Week Waifu by accident. Our showrunners wanted to do a college tour, in part because folks were tired of model-perfect single women having model-perfect men compete for their attention in a multimillion-dollar mansion.\n\nShe fit the bill perfectly: an everywoman with a personable affect, an open mind, and most important a vulnerable streak a mile wide. She wears her emotions on her sleeve, which makes for excellent TV, they said.\n\nHer life prior to this is nothing unusual. It's the kind of American upbringing to which most people can relate, really. I would never tell her this to her face, but she's kind of a blank slate so I thought it would be easy for viewers to project themselves onto her.\n\nHonest opinion? She makes me smile. I don't quite know why, but there's something almost unfairly good about her. She's not the most Hollywood beautiful, she's no genius, she's no athlete. She's just relatable.\n\nIt helps enormously that she's bisexual. It kind of falls in line with the whole 'everyone can relate' aspect of her.",
-            "Kylie could have been named anything at all. Sophie, narcissist that she is, decided to call her by her own middle name. Isn't that awful? She doesn't even get a last name. She has no family.\n\nKylie's a graphic designer, or at least that's what she thinks. Her entire past is a cute little copypaste of bits of Sophie's fragmented memory. This whole time, did you ever hear Kylie talk about herself? I mean, deeper than surface-level. ."
+            "I mean, really. What kind of biography does Kylie have? What has she told you about herself? Surface-level details? Perhaps something about events she shares with Sophie?\n\nI wonder, truly, why that might be. ."
         ]
         # define default bios. Do this at end so bio variables will be in place
         cassBio = Biography(0, "Cassandra Sanna", "img/cassBio.png",
