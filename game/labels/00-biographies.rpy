@@ -100,7 +100,9 @@ label biographies:
             "I'll tell you everything you need to know, later.",
             "I already told you everything!",
             "I'll never tell you everything.",
-            "Trivia about me?"
+            "Trivia about me? Why? You don't even want me, even though all I've ever done is open your eyes.",
+            "Kiss me. You have to figure out how, but I promise it'll be worthwhile.",
+            "I have plenty to say about the others."
         ]
 
         kylieTrivia = [
@@ -111,9 +113,10 @@ label biographies:
 
         taniaTrivia = [
             "I hold certifications in midwifery, CPR/AED and first aid.",
-            "I'm also certified in New York, Florida, California and Nevada as a cutwoman.",
+            "I'm also certified in New York, Florida, California and Nevada as a referee.",
             "I was Lichelle's cutwoman in twelve of her fourteen pro fights.",
             "I've hosted One Week Waifu for six seasons prior to this one.",
+            "If you're wondering, two seasons a year for three years.",
             "Only one person ever tried to go after me on the show, but he smelled like veal. So no.",
             "I originally wanted to be a NICU nurse. I love babies.",
             "I don't drink or do drugs and I prefer to keep it that way, thanks.",
@@ -132,38 +135,55 @@ label biographies:
             "Technically you were separated, but let's be honest. You weren't really trying.",
             "You were attached to Louisa's tits by then. Whore.",
             "Tania fucked him because she hated you. She hated you for choosing to be an addict.",
-            "Tania never loved him and he never loved her, but they needed something for their mutual suffering.",
-            "Miss van der Waal had a great ass, and that was enough for him. And he never told her she wasn't enough, and that was enough for her.",
-            "It's not your fault, Sophie. But you did enable it."
+            "Tania never loved him and he never loved her. She couldn't love him that way.",
+            "Miss van der Waal had a great ass, and that was enough for David. And he never told her she wasn't enough, and that was enough for her.",
+            "Imagine how hard it was for Tania to hate-bone your boyfriend. You know. Being a lesbian and all.",
+            "Tania struggled so hard to reconcile her faith and her sexuality. She's Catholic, you see. Confirmed and all. And she likes girls. How funny is that?",
+            "Here's some trivia for you. Did you know at least one cartel has a bounty on Tania's head? Yup.",
+            "To the dealers, Tania's worth 500 bucks dead and $2,000 alive. Chump change, really.",
+            "Even though she's trying to destroy me every day of her life, I love Tania. I want to be inside her.",
+            "It's not your fault, Sophie. But you did enable it.",
+            "Did you know Tania's one of only two people at St. Agatha's who didn't try to sleep with Louisa?"
         ]
 
         altRobinTrivia = [
             "Robin's name isn't Robin. Obviously.",
             "Louisa Lupei lost her virginity at age twelve.",
-            "She killed a man at age thirteen. Convinced him to run away with her.",
-            "She cut his head almost completely off and left him in a burning truck.",
+            "Louisa killed a man at age thirteen. Convinced him to run away with her.",
+            "Sweet Robin cut his head almost completely off with a carving knife and left him in a burning truck.",
             "By the time you met her, Louisa had killed five men.",
-            "She doesn't count the man who forced himself on her as the one who took her virginity. She doesn't recognize his existence.",
-            "Louisa recognizes you as her first, Sophie. Want some real trivia?",
-            "You were good to her. You protected her from your friends.",
-            "But Louisa was like you. An addict, Sophie. Recovering, but still sick.",
-            "And it's your fault she died."
+            "Robin doesn't count the man who forced himself on her as the one who took her virginity. She did kill him, though. They haven't found the body.",
+            "Louisa recognizes you as her first, Sophie.",
+            "Want some real trivia? You were good to Robin. You protected her from your friends.",
+            "Louisa was like you. An addict, Sophie. Recovering, but still sick.",
+            "It's your fault Robin died.",
+            "Louisa really did want to become a chef. A girl with no resources can only pay for education in a few ways.",
+            "Did Louisa ever tell you she went back to Bucharest once? Her whole family had disappeared. Poof. Gone.",
+            "Robin's been stabbed three times, choked nearly to death, shot at twice, and almost died of sepsis once.",
+            "Did you ever ask yourself how I, Liv, know things I wasn't around to see?",
+            "Louisa cried every time you two were intimate, but she waited until she was alone to do it.",
+            "Robin loved you, loved being touched by you, but the memories it brought up tortured her.",
+            "Louisa would never have told you about her past, even your shared connection. She didn't want you to run.",
+            "Did you know Robin says things like papillon and draga mea because she thinks it improves how she's perceived?",
+            "Girls love when you give them jewelry. But you already knew that, didn't you, Sophie?"
 
         ]
 
         altCassTrivia = [
             "Cassandra Sanna's musical success led her down a familiar path.",
-            "She'd been in and out of rehab for all kinds of substances before she met you.",
-            "Well. The important part was she met Louisa.",
-            "Except you and Louisa were already sleeping together, weren't you.",
-            "She never liked you. Not really. You were wallpaper to her.",
-            "But Louisa was something else. Dangerous. Gorgeous. Otherworldly.",
+            "Cass had been in and out of rehab for all kinds of substances before she met you.",
+            "Well. The important part was Cass met Louisa.",
+            "You and Louisa were already sleeping together, weren't you, when Cass met her.",
+            "Cass never liked you. Not really. You were wallpaper to her.",
+            "Louisa was something else. Dangerous. Gorgeous. Otherworldly. Cassandra didn't want to screw her. She just wanted to be near her.",
             "Cassandra became your friend after a while, but it wasn't her preference.",
-            "She loved Louisa, though. She wanted to express her feelings.",
-            "But she never felt like she could say anything.",
-            "Everything changed when Louisa drowned in the fountain outside Ganymead, shot full of china white she got from you."
+            "You know, Cass's love for Louisa was pure. Not lust, not dependency. Not like yours. Whore.",
+            "Cass wanted to express her feelings, how deeply Louisa's stories moved her, how her voice was purely music.",
+            "Cassandra never felt like she could say anything. You were always there.",
+            "Everything changed when Louisa drowned in the fountain outside Ganymead, shot full of china white she got R/BG13:14-15.",
             "Cassandra decided to take her suffering out on you.",
-            "Even though her suffering was of her own making, you become her totem. The emblem of her failure."
+            "Even though her suffering was of her own making, you become her totem. The emblem of her failure.",
+            "You know what's weird? Cass could've loved you, too. She wanted to. She tried to. She couldn't."
         ]
 
         altLichTrivia = [
@@ -171,8 +191,8 @@ label biographies:
             "Elle was a security guard at Ganymead. Don't you remember?",
             "You were there to meet up with Louisa when you should have been at Elsa's meeting.",
             "And Louisa sat on the fountain, her veins overflowing with jewelry.",
-            "You gave her the jewelry, Sophie.",
-            "Louisa passed out into the fountain. You know, it doesn't take long to drown.",
+            "You gave Robin the jewelry, Sophie.",
+            "Louisa passed out into the fountain. You know, it doesn't take long to drown. Not much water, either.",
             "But you tried to save her. But you couldn't pull Louisa out because you were sick with jewelry, too.",
             "Lichelle mistook it for a fight, you know. You can still smell her warm skin from when she choked you unconscious, can't you?",
             "It was Cassandra who pulled Louisa out of the fountain.",
@@ -181,7 +201,9 @@ label biographies:
             "Elle knew you would be back. She knew when, and why, because it was her plan.",
             "Look how you've repaid Elle's grace. She could have left you to die, twice, and you would've deserved it.",
             "It was Lichelle who saved your life that night in the restroom. Cassandra was already gone.",
-            "It was Lichelle who realized Cassandra, stupid, stupid Cassandra, had switched the syringes twice."
+            "It was Lichelle who realized Cassandra, stupid, stupid Cassandra, had switched the syringes twice.",
+            "Elle met Louisa first, did you know that? Well, first in your town, anyway.",
+            "Lichelle and Louisa talked for hours sometimes. I think Robin recognized Elle's strength."
         ]
         cassBioText = [
             "I don't know this person yet.",
@@ -194,7 +216,7 @@ label biographies:
         robinBioText = [
             "I don't know this person yet.",
 
-            "Robin Godfrey smashed onto the city's scene like a time warp. One day she wasn't here, the next she held a coveted role as proprieter of Ganymead Performing Arts Center and all around darling of the community.\n\nHer exotic features, blended Romanian/French accent, and dominating aura made her tremendously popular. Her lack of a wedding band made her even more interesting for some in the community, enough that her friend Tania convinced her to take a spot on the dating show One Week Waifu.Nobody would have a shot against her, for certain.\n\nRobin was born in Bucharest but spent her teenage years in Paris studying to become a chef, eventually moving to R/BG13:14-15 and attaining a green card. Her early life isn't something she cares to discuss, but rumors suggest she was the daughter of a prominent Romanian businessman.\n\nRecently, Robin is most famous for working with Cassandra Sanna to put on a stage adaptation of Cassandra's concept album, 'The Subjugation of Cass'. Critics found the production to be solid, if not truly excellent, but universally commented on the believability of Cassandra's feelings for the character Marina, played by Robin herself.",
+            "Robin Godfrey smashed onto the city's scene like a time warp. One day she wasn't here, the next she held a coveted role as proprieter of Ganymead Performing Arts Center and all around darling of the community.\n\nHer exotic features, blended Romanian/French accent, and dominating aura made her tremendously popular. Her lack of a wedding band made her even more interesting for some in the community, enough that her friend Tania convinced her to take a spot on the dating show One Week Waifu. Nobody would have a shot against her, for certain.\n\nRobin was born in Bucharest but spent her teenage years in Paris studying to become a chef, eventually moving to R/BG13:14-15 and attaining a green card. Her early life isn't something she cares to discuss, but rumors suggest she was the daughter of a prominent Romanian businessman.\n\nRecently, Robin is most famous for working with Cassandra Sanna to put on a stage adaptation of Cassandra's concept album, 'The Subjugation of Cass'. Critics found the production to be solid, if not truly excellent, but universally commented on the believability of Cassandra's feelings for the character Marina, played by Robin herself.",
 
             "Robin Godfrey smashed onto the city's scene like a crime wave. One day she wasn't here, the next she had the eyes and wallets of johns throughout the city.\n\nHer exotic features, blended Romanian/French accent, and dominating aura made her tremendously persuasive for a certain type of prospective client. The lifestyle of an escort led her inevitably into drugs. The pain, emotional and physical, of her encounters could wash away with a simple shot, a simple snort.\n\nIt was there she met a woman named Sophia Kylie Koenig, a woman whom she had met before.\n\nIn a brothel underneath Montmartre, Louisa Lupei needed a way out. A purpose. There was a woman there, an American girl, who gave up her own body to prevent Louisa rendering the services her friends had purchased. Sophie would never admit to what she did with those two men, or dream of what might have happened after she passed out from the drugs in her system.\n\nAnd so Louisa, who might have killed your friends if you hadn't put your body between them, stole your driver's license and copied the information while you lay unconscious. Louisa Lupei is a murderess, paving her way from place to place with the satisfied corpses of would-be rapists and thieves who might target a creature like her.\n\nAnd so, half a decade after that encounter under the Parisian streets, Louisa Lupei - now Robin Godfrey - tracked you down. She got close to you, Sophie. You have to understand, Louisa had been clean for years before she found you and faked her way into the program. She shared everything with you. Food. Stories. Money. Kisses. Needles. A future, so she thought.\n\nAnd when she drowned, wearing your jewelry, that, well, that was your GOD DAMNED FAULT."
         ]
