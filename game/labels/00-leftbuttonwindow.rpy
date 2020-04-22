@@ -25,6 +25,10 @@ label leftbuttonwindow:
             temp = renpy.random.randint(0, length)
             setCurrentTrivia(askTaniaGreetings[temp])
 
+        def testSever(): # function only to be used to set up testing environment
+            global severEntity
+            severEntity = True
+
 
     screen leftBtnWindow:
         modal False
@@ -51,7 +55,7 @@ label leftbuttonwindow:
                     xysize(lbtnWidth, lbtnHeight/3)
                     
                     background "#777777"
-                    action Function(getAllHistories)
+                    action [Function(getAllHistories), Function(testSever)]
 
                 button:
                     #chatHistory

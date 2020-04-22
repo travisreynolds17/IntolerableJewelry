@@ -1,66 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/common4.rpy", line 764, in script
-    k "There's no more inner monologue! I'm real!"
-  File "renpy/common/00action_other.rpy", line 537, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "game/labels/00-chatHistory.rpy", line 157, in getAllHistories
-    i.font = allFonts[i.idNum]
-IndexError: list index out of range
+  File "game/labels/common1.rpy", line 165, in script
+    scene bg stage with longFade
+TypeError: Fade() takes at least 3 arguments (3 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/common4.rpy", line 764, in script
-    k "There's no more inner monologue! I'm real!"
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
-    **display_args)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "game/labels/common1.rpy", line 165, in script
+    scene bg stage with longFade
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 1389, in execute
+    renpy.exports.with_statement(trans, paired)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\exports.py", line 1601, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 2251, in do_with
+    clear=clear)
   File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 3518, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\screen.py", line 714, in event
-    rv = self.child.event(ev, x, y, st)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\transform.py", line 882, in event
-    rv = d.event(ev, cx, cy, st)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\behavior.py", line 962, in event
-    return handle_click(self.clicked)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\behavior.py", line 897, in handle_click
-    rv = run(action)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\behavior.py", line 320, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00action_other.rpy", line 537, in __call__
-    rv = self.callable(*self.args, **self.kwargs)
-  File "game/labels/00-chatHistory.rpy", line 157, in getAllHistories
-    i.font = allFonts[i.idNum]
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 847, in __getitem__
-    rv = list.__getitem__(self, index)
-IndexError: list index out of range
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\display\core.py", line 3047, in interact_core
+    new_widget=layers_root)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\curry.py", line 43, in __call__
+    **dict(self.kwargs.items() + kwargs.items()))
+TypeError: Fade() takes at least 3 arguments (3 given)
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Ganymead 1.0
-Sun Apr 12 22:35:08 2020
+Tue Apr 21 19:38:51 2020

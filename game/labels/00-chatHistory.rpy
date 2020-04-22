@@ -127,7 +127,7 @@ label chatHistory:
         histBoxY = initialBoxY  # x and y are just guesses for now
         histBoxX += histBoxWidth + boxMarginX
 
-        for i in range(8, 16):
+        for i in range(8, 17):
             temp = History(i, histBoxX, histBoxY, [],
                         chatTitles[i], chatRecaps[i])
             histBoxY += histBoxHeight + boxMarginY

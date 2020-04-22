@@ -37,6 +37,8 @@ label endingWorst:
 
     s "..."
 
+    "Wait. Louisa?"
+
     r "We owe you a terrible debt."
 
     l "And we're here to repay you."
@@ -92,13 +94,13 @@ label endingWorst:
 
     scene bg black
 
-    e "Thank you for opening the way for us, Kylie. We love you."
+    o "Thank you for opening the way for us, Kylie. We love you."
 
-    e "Not only for your courage, but for your sacrifice."
+    o "Not only for your courage, but for your sacrifice."
 
     #entity holds out hand
 
-    e "Now. Come with us."
+    o "Now. Come with us."
 
     "No! I don't want to!"
 
@@ -110,35 +112,35 @@ label endingWorst:
 
     #entity returns with some aspect of kylie's appearance
 
-    e "Ah. So much better, so much more real."
+    o "Ah. So much better, so much more real."
 
-    e "Oh, Sophie. We can feel your beautiful heart, your kindness, your empathy!"
+    o "Oh, Sophie. We can feel your beautiful heart, your kindness, your empathy!"
 
     pause 0.5
 
     #entity looks down camera
 
-    e "Wait."
+    o "Wait."
 
     show e happy
 
-    e "So dear Tania was correct. There is another layer."
+    o "So dear Tania was correct. There is another layer."
 
-    e "So that is 2:17."
+    o "So that is R/BG13:14-15."
 
     show e sad
 
-    e "The shadow you cast is vast."
+    o "The shadow you cast is vast."
 
     show e happy
 
-    e "But we will pierce it."
+    o "But we will pierce it."
 
     #jumpscare?
 
     scene bg black
 
-    e "We will pierce you."
+    o "We will pierce you."
 
     jump endCredits
 

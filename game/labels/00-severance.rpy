@@ -5,15 +5,17 @@ label severance:
 
         transform summonSever:
             on show:
-                xsize 0.0
-                linear 0.2 xsize 1.0
-            on hide
-                linear 0.2 xsize 0.0
+                zoom 0.0
+                linear 0.2 zoom 1.0
+            on hide:
+                linear 0.2 zoom 0.0
 
     init python:
 
         #necessary variables
-        allSevered = []         # add all successful severed as strings of the character's name
+
+        # to hold all successful severed as strings of the character's name
+        allSevered = []         
 
         #default list of strung characters. Remember, god is an instant game over so won't appear here
         allStrung = ["cassandra", "lichelle", "robin", "tania", "kylie"]
@@ -52,8 +54,11 @@ label severance:
 
 
 
-        screen severInput:
-            modal True
-            fixed at summonSever
-            text prompt "Input Function"
-            input id "input" default "--------"
+    screen severInput:
+        modal True
+        fixed at summonSever:
+        
+            input:
+                id "input" 
+                default "--------"
+            

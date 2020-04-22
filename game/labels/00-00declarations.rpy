@@ -2,6 +2,11 @@ label declarations:
     # declarations. Organize here for cleaner code.
 
     init python:
+
+        #time stuff
+        import time
+        year, month, day, hour, minute, second, dow, doy, dst = time.localtime()
+
         # declare lots of variables to hold color and font choices, makes it easier to change later.
         colorSophie = "#c5859d"
         colorCass = "#5e81a1"
@@ -31,25 +36,25 @@ label declarations:
         picEntity = "img/pic-Kylie.png"
         picKylie = "img/pic-Kylie.png"
 
-    define s = Character("Sophie", who_color="#c5859d", who_font="fonts/Roboto-Black.ttf", what_color=colorKylie, what_font=fontKylie)
+    define s = Character("Sophie", image = "s", who_color="#c5859d", who_font="fonts/Roboto-Black.ttf", what_color=colorKylie, what_font=fontKylie)
     # skin tone #c58c85
     # hair tone / name tone #c5859d
-    define r = Character("Robin", who_color="#bcb4ec", who_font="fonts/Parisienne-Regular.ttf")
+    define r = Character("Robin", image = "r", who_color="#bcb4ec", who_font="fonts/Parisienne-Regular.ttf")
     # skin tone #503335
     # hair tone / name tone #bcb4ec
-    define t = Character("Tania", who_color="#a3d1b9", who_font="fonts/Courgette-Regular.ttf")
+    define t = Character("Tania", image = "t", who_color="#a3d1b9", who_font="fonts/Courgette-Regular.ttf")
     # skin tone #d1a3a4
     # hair tone / name tone #a3d1b9
-    define c = Character("Cassandra", who_color="#89cff0", who_font=fontCass)
+    define c = Character("Cassandra", image = "c", who_color="#89cff0", who_font=fontCass)
     # skin tone #a1665e	rgb(161, 102, 94)
     # hair tone / name tone #5e81a1
 
-    define l = Character("Lichelle", who_color="#5e81a1", who_font="fonts/ElsieSwashCaps-Black.ttf")
+    define l = Character("Lichelle", image = "l", who_color="#5e81a1", who_font="fonts/ElsieSwashCaps-Black.ttf")
     # skin tone #503335
     # hair tone #503933
     # name tone #d46359 (to avoid everything about her being brown so peeps don't get upset)
-    define d = Character("David")
-    define k = Character("Kylie", who_color="#ffa4d5", who_font="fonts/Roboto-Black.ttf")
+    define d = Character("David",  image = "d",)
+    define k = Character("Kylie", image = "k", who_color="#ffa4d5", who_font="fonts/Roboto-Black.ttf")
     # skin tone #c58c85
     # hair tone / name tone ffa4d5
 
@@ -78,6 +83,8 @@ label declarations:
     define splashErrorTania = Image("img/ingameSplashErrorTania.png")
     define splashEKGFull = Image("img/splashEKG.png")
     define splashEKGFlat = Image("img/splashEKGFlat.png")
+
+    define glitchGui = Image("img/glitchGUI.png")
 
 
 
@@ -114,9 +121,7 @@ label declarations:
             alpha 1.0
             linear 0.5 alpha 0.0
 
-    # transitions
-
-    define longFade = Fade(0.5, 1.1, 0.5)
+    
 
     # For chatbox
     transform summonChat:
@@ -171,6 +176,15 @@ label declarations:
         on hide:
             linear 0.3 alpha 0.0
 
+    transform frameGlitch:
+        alpha 0.0
+        linear 0.05 alpha 0.1
+        linear 0.5 alpha 0.0
+
+
+# transition
+
+    define longFade = Fade(1.0, 0.0, 1.0)
 # -------------------------------------------------------------------------------------------------
 
     init:

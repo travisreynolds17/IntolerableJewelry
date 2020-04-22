@@ -2,6 +2,40 @@ label endingTania:
     
     scene bg resta
     show d
+
+    d "Back."
+
+    l "You're just in time. Sophie's about to make a call, and could you just make sure she does it?"
+
+    d "Uh, sure."
+
+    l "You're alright, David."
+
+    d "I aim to please, I guess?"
+
+    "Lichelle gives his seat back, brushing it off just as he had for her. I wonder at the nature of their relationship, but it feels overwhelmingly like siblings rather than romance."
+
+    l "I'll talk to both of you later."
+
+    "She touches him lightly on the shoulder as he sits. Maybe I was wrong."
+
+    hide l with dissolve
+
+    d "So, what's this call about?"
+
+    s "... I'm calling Tania."
+
+    d "Not Elsa?"
+
+    "I find my head shaking before the notion occurs to me."
+
+    s "I can't face her."
+
+    d "She's asked about you."
+
+    s "No. I'm calling Tania."
+
+    pause 0.1
     
     #phone sound
     s "OH!"
@@ -23,7 +57,92 @@ label endingTania:
 
     d "What's going on?"
 
-    s "Oh. It's... just someone I haven't heard from in a while."
+    s "Tania called ME."
+
+    t "Yeah... sorry, hon. Lichelle called me and let me know you were next to your phone."
+
+    "So much for trust."
+
+    t "I have a proposition for you."
+
+    s "Wait, what?"
+
+    t "I own a place in North Carolina, a refuge I go to when I need to disappear from the world for a few days."
+
+    s "Uh-huh?"
+
+    t "I'd like you to stay with me for a little while."
+
+    s "That's... that's a big ask, Ms. der Waal"
+
+    t "Tania."
+
+    s "We've never met."
+
+    t "... yes, we have."
+
+    d "What's saying?"
+
+    s "Not now, David."
+
+    d "Alright. I'll just be looking at boobs or something then. Somewhere."
+
+    t "Sophie?"
+
+    s "... why should I go?"
+
+    t "Because I believe you. About the simulation."
+
+    s "..."
+
+    t "I can't explain it over the phone. Not in a way that makes sense."
+
+    t "I can still feel Liv. Creeping around in my head."
+
+    s "You too?"
+
+    t "Yeah."
+
+    menu:
+        t "Will you come? I'll pay for a rental car and expenses."
+
+        "Only if David comes, too":
+            s "I'll go."
+            t "That's-"
+            s "David has to go, too."
+            d "Ah?"
+            t "We've already been in touch. He agreed weeks ago."
+            s "..."
+            t "Don't be mad. You wouldn't return my calls."
+            t "Lichelle and Cassandra had a different experience than you. You were at the helm."
+            t "I need you."
+            s "Tell me when."
+
+        "No. I'm not going.":
+            s "I can't. No."
+            t "Just like that?"
+            s "Yeah."
+            t "You don't want to talk about the simulation?"
+            s "No."
+            t "I can force you."
+            s "What?"
+            t "Don't test me, hon. We've been through something incredible."
+            t "We have to figure this out."
+            s "This call is over."
+            t "It's not."
+            "Mouth agape with wonder and fury, I tap the big red X on my phone to disconnect."
+            pause 0.2
+            t "I told you it's not over."
+            "Disconnect. Disconnect."
+            t "Sophie."
+            s "What the fuck?"
+            t "Language."
+            s "How are you doing this? Are we... are we still there?"
+            "disconnect"
+            t "We're not there, but I can't help you if you don't come see me."
+            t "Relax. It'll be fast. It'll be just like a fadeout."
+            s "What?"
+
 
     scene bg black with fade
 
@@ -39,7 +158,9 @@ label endingTania:
     
     "The quiet of a snowy day puts me at ease. At least it used to."
 
-    "I don't know what's waiting for me at the address Tania provided, of it it's even Tania who messaged me."
+    "I don't know what's waiting for me at the address Tania provided, of it it's even Tania who called me."
+
+    "Not like I know her voice."
 
     "I guess we can only see."
 
@@ -47,7 +168,7 @@ label endingTania:
 
     show d with dissolve
 
-    d "Your friend lives in a mansion? You should've told me you had a rich girlfriend, Soph."
+    d "Tania lives in a mansion? You should've told me you had a rich girlfriend, Soph."
 
     "We're at the right address. Off the road, gates, with high walls stretchig aroud the property line and..."
 
@@ -79,7 +200,7 @@ label endingTania:
 
     d "Uh..."
 
-    un "These are the terms. If we cannot agree, we must refuse entry."
+    un "These are the terms. If we cannot agree, Mr. Ellison may wait in the vehicle."
 
     s "David. Do you mind?"
 
@@ -91,7 +212,7 @@ label endingTania:
 
     un "Correct."
 
-    d "I can wait in the parlor, then. What kind of refreshments are talking about?"
+    d "I can wait in the parlor, then. What kind of refreshments are we talking about?"
 
     un "Opening gate. Please stay clear."
 
@@ -101,9 +222,9 @@ label endingTania:
 
     "They rather look like Christmas trees."
 
-    "The red zone is fairly easy to find, aflame with blinking crimson lights."
+    "The red zone is easy to find, aflame with blinking crimson lights."
 
-    "He guides the car to a stop, kills the engine."
+    "David guides the car to a stop, kills the engine."
 
     s "I really appreciate you coming."
 
@@ -114,6 +235,8 @@ label endingTania:
     "He smiles a resigned smile."
 
     d "If I can't be your husband, I can still be your point man, right?"
+
+    d "Besides. It's nice to score points with Elle."
 
     "I can only nod. Slowly. I know it stings him, still, but I also know I can count on him."
     
@@ -141,7 +264,7 @@ label endingTania:
 
     "The little floating ball in front of us hovers into sight as easily as if it were an everyday occurence."
 
-    "Its kind of like a floating soccery ball with a cute face."
+    "Its kind of like a floating soccer ball with a cute face."
 
     un "This unit is designated Mortimer, steward of the van der Waal estate."
 
@@ -199,7 +322,7 @@ label endingTania:
 
     "In any other situation I would have ten million questions."
 
-    "Now, I simplly follow the floating robo-orb thing down a corridor, lit almost as if it's an afterthought. There are sounds, whirring and grinding, like RC cars behind the walls."
+    "Now, I simply follow the floating robo-orb thing down a corridor, lit almost as if it's an afterthought. There are sounds, whirring and grinding, like RC cars racing behind the walls."
 
     "I see no more robots, though."
 
@@ -223,7 +346,7 @@ label endingTania:
 
     "Medical supplies and equipment dominate the room spreading before me. The consistent beep of an EKG, the hiss of a breathing machine."
 
-    "And there, on a pristine bed, a pallid young woman of no more than 20 years lies peaceful and still."
+    "And there, on a pristine bed, a pallid young woman of maybe 26 years lies peaceful and still."
 
     "There must be a hundred lines connected to her body, attended by a half dozen smaller Mortimers with various arms and attachments."
 
@@ -259,7 +382,7 @@ label endingTania:
 
     s "What do you mean?"
 
-    t "I was in a crash. A drunk driver clipped my dad's car and... well. Here I am."
+    t "This is who I am. Who I've been the entire time."
 
     s "Are you... are you awake?"
 
@@ -283,8 +406,6 @@ label endingTania:
 
     t "I guess it would freak me out, too. I didn't know how to warn you about me."
 
-    t "My family's stupid rich. Dad runs this future-medical program for the military, working on stuff you'd see in a sci-fi shooter game or something."
-
     t "Nobody knows about me. I'm a black book project."
 
     s "Tania, what are you?"
@@ -301,7 +422,7 @@ label endingTania:
 
     t "You lived inside a simulation for quite a while, yourself. I wonder what is so unbelievable about it."
 
-    t "Thanks for cracking that open, by the way. I thought [entityName] was going to keep us there forever."
+    t "Thanks for cracking that open, by the way. I thought Liv was going to keep us there forever."
 
     s "... I need to sit."
 
@@ -330,7 +451,7 @@ label endingTania:
 
     s "..."
 
-    t "You don't remember? You don't remember finding out the Entity's name was [entityName] and severing it?"
+    t "You don't remember? You don't remember the input screen? The GUI? stringSever(firstName) and all that?"
 
     s "No."
 
@@ -362,7 +483,7 @@ label endingTania:
 
     "But I am."
 
-    if loveTania == 5:
+    if loveConfession == "Tania":
         s "Nothing makes sense anymore."
         s "Nothing makes sense!"
 
@@ -388,21 +509,23 @@ label endingTania:
 
         t "You were always going to love me."
 
+        t "Kylie told me so."
+
         s "You're saying I had no choice in the matter?"
 
         t "I'm saying you had a choice, but it wasn't you who made it. It doesn't mean the way you feel about me now isn't legitimate."
 
-        t "It could've been Robin, you know. I imagine she's the most desirable, perhaps even the one the Entity intended you to fall for."
+        t "It could've been Robin, you know. I imagine she's the most desirable, perhaps even the one Liv intended you to fall for."
 
         "Tania chuckles through the robot."
 
-        t "How else could Robin have pulled off her teleporting-in-the-dark trick?"
+        t "How cruel."
 
         s "I feel sick."
 
         t "And look, now you're expositing."
 
-        s "Huh? No, I think I'm actually gonna be sick."
+        s "No, I think I'm actually gonna be sick."
 
         t "Oh."
 
@@ -422,7 +545,7 @@ label endingTania:
 
         s "Yeah..."
 
-    #break out of if you love her bit. Show her the bot. If it's love ending, promise a future. If it's not, don't. If it's non-sever, bot straight up drags Sophie to another bed and mortimers start slamming needles into her . I WANT MY KYLIE BACK YOU STIKING MEAT CREATURE
+    #break out of if you love her bit. Show her the bot. If it's love ending, promise a future. If it's not, don't. If it's non-sever, bot straight up drags Sophie to another bed and mortimers start slamming needles into her . I WANT MY KYLIE BACK YOU STINKING MEAT CREATURE
 
     t "I wanna show you something."
 
@@ -464,7 +587,7 @@ label endingTania:
 
     #love version
 
-    if loveTania == 5:
+    if loveConfession == "Tania":
         t "I want to hold your hand and kiss you and smell you."
         t "I can do these things, all of them. If you'll have me, that is."
         s "I can't process this."
@@ -496,13 +619,569 @@ label endingTania:
 
         "The robot chuckles."
 
-        "The bedroom door opens in the same motion as the closet door closing."
+        t "Oh."
 
-        t "Bye for now, Sophie."
+        t "By the way."
 
-        s "Tania..."
-        t "Yeah?"
-        s "I just want to tell you how sorry I am."
-        t "Don't be. You saved me, after all. And I truly, fully, and completely adore you for that."
+        # Here, we have the diversions for potential sever changes. We know Cass not being severed means she didn't wake up. Lichelle not being severed means she meets up with David in the compound. Robin not being severed ends the same. Waterlogged corpse attack. Tania's stays the same.
 
-        #This is a called label. Returns at this point to endingTron5000 and moves to next mini-ending. Newspaper clips for bad endings for lichelle and cass, add a bit if also had the love ending in that case.
+        if severCass == True:
+            t "Cassandra's here, too."
+            "What?"
+            s "What?"
+            t "She's recovering well."
+            s "Where is she?"
+            if loveConfession == "Cassandra":
+                t "Mortimer'll take you there."
+                t "She'll be in the music room if she's anywhere. Practicing."
+                call endingCass
+            else:
+                t "She's in isolation, for now. Don't worry. I expect her to be up and about in a week."
+        #else for if severCass True
+        else:
+            t "I was sorry to hear about Cassandra. Lichelle told me you two were close."
+            if loveConfession == "Cassandra":
+                s "... I loved her."
+                t "I'm sorry, hon."
+                t "Don't blame yourself. She made her own choices."
+                s "... I wish I had died instead of them. Louisa. Cassandra."
+                t "You didn't, though. Wishes mean nothing."
+                s "Tania..."
+                t "I'd have legs, for example."
+                s "I'm sorry."
+                t "Don't be. Just live."
+                s "Liv? What?"
+                t "Oh. Sorry. Just stay alive, I mean."
+                s "... oh."
+            else:
+
+                s "Not really."
+                t "You were a couple, though?"
+                s "It wasn't... it wasn't like that."
+                t "No? I must be mistaken then."
+
+        #lichelle endings
+        if loveConfession == "Lichelle":
+            t "Someone else is here, too."
+            s "Oh? Who?"
+            t "Mortimer will show you to her. Down in the gym."
+            pause 0.1
+            s "Gym?"
+            t "Yeah. Gym."
+            call endingLich
+        else:
+            if severLich == False:
+                t "Lichelle is here, too."
+                s "Oh?"
+                t "She's dead."
+                pause 1.0
+                s "huh"
+                t "You failed to sever her, Sophie. I sent so many messages."
+                s "But I just talked to her a few days ago..."
+                t "Oblivion thought she could hide inside someone else. I guess."
+                t "She thought she could hide from me in this world, you know?"
+                s "You... did you kill her?"
+                t "Lichelle was already gone, hon. Like Cass. Like I would've been if you hadn't saved me."
+                t "I just wanted you to know what happened."
+                s "... I'm fine with that."
+                t "Oh?"
+                s "If it meant stopping Liv, I'm fine with it."
+                t "Good. I would've killed you, too, if she'd tried to hide in you."
+                "I find myself smiling, somehow."
+                s "I'd hope so."
+                #end of lichelle not severed
+            else:
+                t "She's in isolation, though. It'll be weeks. I have to ensure she's free of Liv's influence."
+                s "I understand."
+        
+            # robin endings
+            if loveConfession == "Robin" and severRobin == True:
+                t "Before you leave, I think you ought to visit the bar downstairs."
+                s "I don't want to drink."
+                t "David's there, it looks like."
+                t "Someone else is on the way, too. Go talk to her, would you?"
+                s "Why are you being so cryptic?"
+                t "Surprises are better left as surprises."
+                
+                call endingRobin
+
+         # if no ending has been achieved yet, that means no love confessions and Sophie survived. This might actually be the best ending? Dunno.
+         # 
+         # Here, she wakes up in hospital
+         # 
+
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3   
+
+        s "Tania? What's happening?"
+
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        t "Oh. I guess time's up."
+
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        s "What?"
+
+        t "Don't forget us, Sophie. We'll always be with you, one way or another."
+
+        s "I don't understand."
+
+        t "You can't. Not yet."
+
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        "My vision."
+
+        "Was it ever really mine?"
+
+        scene bg black with fade
+
+        d "Doc. DOC! She's awake!"
+
+        "I know that voice."
+
+        e "Sophie? Hey girl! You..."
+
+        "Something's muffled. Who's crying?"
+
+        d "... scared us all to death."
+
+        "Fizz? Elsa? No. David and Elsa."
+
+        "My sense are putty from ten sources, squashed together in an incoherent ball."
+
+        "Suddenly, there are scrubs everywhere."
+
+        "Then..."
+
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        # hospital room?
+
+        d "... and Elle called the ambulance. Then she called Elsa, then me."
+
+        e "You owe a helluva debt to Lichelle."
+
+        "I do."
+
+        s "Am I going to prison?"
+
+        d "For what?"
+
+        e "No. You're coming to live with me."
+
+        s "I am?"
+
+        d "Yeah. I have your power of attorney, remember?"
+
+        "Oh, that's right. Because I know what I am."
+
+        "Junkie trash."
+
+        e "The prosecutor and I talked with your public defender. Nobody wants to go to court, and whether you gave the drugs to Cassandra's not a matter of evidence."
+
+        e "All you have to do is agree to the plea deal."
+
+        "Oh. That's all."
+
+        d "It's no joke this time, Soph. You screw up again, you're going to prison."
+
+        "Don't want that."
+
+        e "Believe me sweety, you're too cute for that. You'll get mauled in there."
+
+        "Don't want that, either."
+        
+        s "... where's Louisa."
+
+        d "..."
+
+        e "..."
+
+        e "Sweety. Do you know where you are?"
+
+        s "Y-yeah. I'm..."
+
+        # oblivon shows up in a lab coat
+        # knock knock
+
+        o "Sorry to interrupt."
+
+        d "Oh, uh, hey doc."
+
+        e "Try not to trip over your tongue, David."
+
+        "..."
+
+        o "Hello again, David. Let's have a little look at Sophie now that she's up and about, hey?"
+
+        s "n-n-no."
+
+        e "Sophie?"
+
+        s "No get her away from me!"
+
+        o "It's okay, Sophie. I'm here to help."
+
+        s "NO!"
+
+        d "What's gotten into you?"
+
+        "I want to kick, to thrash, to scream."
+
+        "I have no energy. Tubes sink into my arms."
+
+        d "Dr. Leibniz has been wonderful to you, and to us."
+
+        s "She's a monster. She's evil!"
+
+        e "She's single, so David might have a biased perspective."
+
+        d "Shush."
+
+        s "That's her. That's Liv! She killed Robin. She did it!"
+
+        e "Who's Robin?"
+
+        d "Doc, your name is Liv Leibniz?"
+
+        o "... it is. It's not unheard of for coma patients to hear what's said around them."
+
+        o "Some of the staff might have mentioned my name."
+
+        s "No, no no. She killed Robin, she drowned Robin!"
+
+        e "..."
+
+        e "I get it now."
+
+        e "Honey. Please calm down."
+
+        o "I should go. Sophie, I only want to help you."
+
+        s "NO! BITCH! MURDERER!"
+
+        o "Ms. Langford. I'll ask the nursing staff to check up on her shortly. We'll need to run a few tests now that she's awake."
+
+        e "Anything, doctor."
+
+        o "David."
+
+        d "Ma'am?"
+
+        o "You have her power of attorney, correct?"
+
+        d "That's right."
+
+        o "May I speak with you privately?"
+
+        d "Anything you need."
+
+        o "Thank you. Sophie, I'm not sure what you think I've done to you but I hope I can erase that perception in time."
+
+        
+        s "stay away, please stay away, please, please-"
+
+        o "I'm going. David, if you please?"
+
+        d "Sure."
+
+        
+        # hide oblivion
+
+        d "Be back soon."
+
+        e "Hey."
+
+        d "Yeah?"
+
+        e "I think she likes you, buddy."
+
+        d "You think?"
+
+        e "Yeah. Don't keep her waiting."
+
+        d "Of course. I'll be back soon."
+
+        # hide david
+
+        e "Not too soon, I hope."
+
+        s "..."
+
+        e "Sophie."
+
+        e "She's just a doctor. I've known her for a decade. She's normal. Fusses over her hair. Complains about having a little belly. Farts when she thinks nobody's paying attention."
+
+        s "... she's horrible. You have to kill her."
+
+        e "Sophie."
+
+        s "I don't know how she got out of the simulation."
+
+        e "Sophie."
+
+        s "She killed a million people!"
+
+        e "..."
+
+        s "..."
+
+        e "Listen to yourself."
+
+        s "..."
+
+        e "Doctor Leibniz cares about you."
+
+        s "... where's Louisa?"
+
+        e "She's gone, honey."
+
+        s "Where."
+
+        e "Hey. Listen. I'll make you a deal."
+
+        s "Deal."
+
+        e "If you just close your eyes and rest, and get better, I promise we'll talk about it."
+
+        s "..."
+
+        s "She'll kill him. She'll kill David. I saw her. In there. She's a monster."
+
+        e "..."
+
+        e "Just rest. Okay?"
+
+        e "I'm going to go get a soda. And breathe."
+
+        # hide Elsa
+
+        s "... Elsa?"
+
+        s "..."
+
+        s "Chat's not working."
+
+        "..."
+
+        # fade in, out
+
+        if entityForgiven == True:
+            # show o
+            o "Sophie."
+
+            s "... get out."
+
+            o "You forgave me."
+
+            "There are tears in her eyes. Her breath is quick, her lips trembling."
+
+            o "I was the worst. A monster, truly. A liar. But in there, you forgave me."
+
+            o "Kylie did, anyway."
+
+            s "I knew it."
+
+            o "I've earned your scorn."
+
+            o "But out here, I am doing everything I can to make up for it."
+
+            s "Where's David?"
+
+            o "Resting. He's a beautiful man, Sophie."
+            
+            s "Did you..."
+
+            o "I accepted his invitation to dinner, yes."
+
+            s "That's it?"
+
+            o "I want to be better out here. I don't want to just give people pleasures they want, knowing they can't handle them."
+
+            s "..."
+
+            o "He's a good man. He cares about you, and so do I."
+
+            o "So... I hope you're not angry with me for that, at least."
+
+            s "... I can't trust you."
+
+            o "You shouldn't. I deserve that."
+
+            s "Hurt him and I swear to god I'll kill you."
+
+            o "I deserve that, too."
+
+            o "You did everything you could have done to make everything right, Sophie."
+
+            o "Even knowing none of this is real, you put your heart into being a good person."
+
+            o "I love you, Kylie."
+
+            s "... that's not my name."
+
+            o "Sure it is. One of them, anyway."
+
+            s "... am I real?"
+
+            o "As real as anything else, yes."
+
+            # show elsa
+
+            e "Hey doc. Where's David?"
+
+            o "Uh, resting."
+
+            e "..."
+
+            o "..."
+
+            e "That was fast."
+
+            o "He asked me out."
+
+            e "Ah."
+
+            o "I didn't do anything but accept."
+
+            e "Ah."
+
+            o "Shush."
+
+            s "... I still forgive you."
+
+            e "huh?"
+
+            o "I'll earn that for the rest of my life, Sophie. Kylie."
+
+            e "I'm confused."
+
+            s "I'm tired."
+
+            o "I'll have the nursing staff check in on you later, then."
+
+            s "Thanks, Liv."
+
+            o "Anytime, love."
+
+            "Elsa's looking between us, confusion written on her face."
+
+            e "So... besties already?"
+
+            s "I guess."
+
+            "Oblivion's smile retains a shade of sadness. I believe her. I think."
+
+            "Alternatively, I talk in my sleep. I suppose I'll have no way of knowing for sure."
+
+            "It doesn't matter."
+
+            "It really doesn't."
+
+            "Things will be different this time."
+
+            scene bg black with fade
+
+            pause 3.0
+
+            show screen chatterbox
+            pause 0.5 
+            
+            $chat.addmessage(bong,"lol b00bs lol")
+
+            pause 0.5
+
+            jump endcredits
+
+        else:
+
+            e "Hey girl. Sorry to dip out like that."
+
+            s "..."
+
+            e "Dr. Leibniz said she'll postpone the tests until later. She's got David in her office now."
+
+            s "..."
+
+            e "Don't let that bother you. David loves you, no matter what."
+
+            s "... he wanted to marry me."
+
+            e "He did."
+
+            s "I messed that up."
+
+            e "Sophie. You have a disease. A real one."
+
+            s "Nobody ever cooked and shot cancer into their own arm."
+
+            e "Maybe not. I don't mean you shouldn't take personal responsibility. I just mean some aspect of this was always out of your control."
+
+            s "..."
+
+            e "If it means anything, you're young. You have time. Your body is resilient."
+
+            e "Now that it's court-ordered, I'm pretty sure we can kick this heroin thing together."
+
+            s "... I don't know if I can."
+
+            e "Whether you think you can or you can't, you're right."
+
+            s "Did you get that from a self-help book?"
+
+            e "Yoga instructor."
+
+            s "Oh."
+
+            pause 0.5
+
+            e "Sophie."
+
+            s "Hm."
+
+            e "Louisa had a long history of some really bad stuff."
+
+            s "I know."
+
+            e "I don't think you do."
+
+            s "... maybe not."
+
+            e "She was a complicated woman. Fierce. Driven."
+
+            s "Yeah."
+
+            e "She had demons you and I can't begin to fathom."
+
+            e "Awful things, Sophie."
+
+            s "Yeah."
+
+            s "... I loved her."
+
+            e "She loved you, hon. She wouldn't shut up about you."
+
+            s "I never deserved her."
+
+            e "Nobody deserves anything. You get what you earn, no matter what."
+
+            e "I'll help you. Okay? We'll get your gaming channel going again, if you want."
+
+            s "... I'd like that."
+
+            e "For now, just rest."
+
+            e "You've earned it."
+
+            jump endCredits

@@ -151,7 +151,7 @@ label endingGoodTania2:
                         t "Sophie. Sorry."
                         s "It has to be confusing, going between us like that."
                     s "I just can't imagine how hard this has been on you."
-                    t "It hasn't been easy, for sure. I lived in simulation thousands of times. I died in there every single time."
+                    t "It hasn't been easy, for sure. I lived in simulation thousands of times. I died in there more than once."
                     s "Does it hurt?"
                     t "Not like you'd think. It's more of a sense of confusion. And my body's pretty much anesthetized all the time in the real world."
                     s "That's horrible."

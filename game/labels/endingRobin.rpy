@@ -1,17 +1,17 @@
 label endingRobin:
     if robinSever == False:
         # in which Robin appears in the restaurant and cuts David's throat. Then her body falls down.
-        #heartbeat sound
+        # heartbeat sound
         d "Sophie?"
 
         scene bg resta
         show d
 
-        #heartbeat
+        # heartbeat
         s "David?"
 
         # sound effect of lights shutting off
-        play sound "sounds/Lights Out.mp3" 
+        play sound "sounds/Lights Out.mp3"
         scene bg black
 
         s "OH!"
@@ -19,14 +19,14 @@ label endingRobin:
         pause 1.0
 
         scene bg resta
-        #show dying robin stabbing david
+        # show dying robin stabbing david
 
         # sound effect of lights shutting off
-        play sound "sounds/Lights Out.mp3" 
+        play sound "sounds/Lights Out.mp3"
         scene bg black
 
         scene bg resta
-        #show dying robin
+        # show dying robin
 
         r "... I found... found you. P-papillon."
 
@@ -34,9 +34,7 @@ label endingRobin:
 
         r "... finally..."
 
-        
-
-        #show robin dropping dead
+        # show robin dropping dead
 
         scene bg black
 
@@ -45,7 +43,7 @@ label endingRobin:
         jump endCredits
 
     else:
-        #in which Robin finds Sophie, asks David to give them time, and tells her things. So, the nature of the rewrite means this has got to be mostly in Sophie's head. or at least positioned as such. IRL Louisa is gone, and David would recognize her even if Sophie called her Robin.
+        # in which Robin finds Sophie, asks David to give them time, and tells her things. So, the nature of the rewrite means this has got to be mostly in Sophie's head. or at least positioned as such. IRL Louisa is gone, and David would recognize her even if Sophie called her Robin.
 
         un "... reservation. I am here to see someone."
 
@@ -93,7 +91,7 @@ label endingRobin:
 
         r "I meant to find you sooner."
 
-        show r sad 
+        show r sad
 
         r "In fact, I wouldn't have been able to had Tania not lent assistance."
 
@@ -235,7 +233,6 @@ label endingRobin:
 
         "We both laugh at that, not because it's funny but out of some small bit of shared trauma."
 
-
         pause 0.5
 
         show r sad
@@ -244,7 +241,7 @@ label endingRobin:
 
         s "What do we do now, though?"
 
-        r "I would expect your role in all this must be over. I intend to tell Cassandra and Lichelle the same."
+        r "I would expect your role in all this must be over."
 
         s "It's kind of hard to just forget what happened."
 
@@ -252,7 +249,11 @@ label endingRobin:
 
         s "What about you?"
 
-        r "Tania and I have an accord. There are other Oblivions gnawing at the roots of this world. The technological is her domain as the metaphysical is mine."
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        r "I am standing here, somehow."
 
         s "Robin."
 
@@ -272,6 +273,10 @@ label endingRobin:
 
         r "Your strength inspires me."
 
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
         "She stands, enormous, once again."
 
         r "While I'm staying in this country, would you join me for dinner from time to time?"
@@ -284,79 +289,112 @@ label endingRobin:
 
         s "Maybe."
 
-        if loveRobin == 5:
-            "She's leaving."
+        "She's leaving."
 
-            "Just like that."
+        "Just like that."
 
-            s "Robin!"
+        s "Robin!"
 
-            "She turns so quickly I'm instantly convinced she wanted me to stop her."
+        "She turns so quickly I'm instantly convinced she wanted me to stop her."
 
-            r "Draga mea?"
+        r "Draga mea?"
 
-            s "You're not leaving without me."
+        s "You're not leaving without me."
 
-            r "Oh?"
+        r "Oh?"
 
-            s "Yeah. You gotta show me how you did the tattoo trick."
+        s "Yeah. You gotta show me how you did the tattoo trick."
 
-            r "A magician holds her secrets close to her chest, love."
+        r "A magician holds her secrets close to her chest, love."
 
-            s "Then fucking hold me there, too."
+        s "Then fucking hold me there, too."
 
-            "Oh my god."
+        "Oh my god."
 
-            "She's actually blushing."
+        "She's actually blushing."
 
-            r "You're still under the compounding effect from the simulation, then?"
+        r "You're still under the compounding effect from the simulation, then?"
 
-            s "I don't know."
+        s "I don't know."
 
-            r "Your feelings may not be real, love."
+        r "Your feelings may not be real, love."
 
-            s "Reality's just perception, right?"
+        s "Reality's just perception, right?"
 
-            r "I suppose."
+        r "I suppose."
 
-            s "Then I know what I feel is real."
+        s "Then I know what I feel is real."
 
-            r "And what do you feel, exactly?"
+        r "And what do you feel, exactly?"
 
-            "I've made my way across the restaurant and to her side."
+        "I've made my way across the restaurant and to her side."
 
-            "All eyes are upon both of us, now."
+        "All eyes are upon both of us, now."
 
-            s "I just want to be near you. I want to be near you."
+        s "I just want to be near you. I want to be near you."
 
-            show r happy
+        show r happy
 
-            r "Oh?"
+        r "Oh?"
 
-            s "Yeah. Yeah, so just don't make a big deal out of it."
+        s "Yeah. Yeah, so just don't make a big deal out of it."
 
-            r "And here I believed I was the one searching for you this entire time."
+        r "And here I believed I was the one searching for you this entire time."
 
-            r "Do you care for me?"
+        r "Do you care for me?"
 
-            s "I'm not sure. I'm not sure exactly what I feel for you. I just..."
+        s "I'm not sure. I'm not sure exactly what I feel for you. I just..."
 
-            s "If I don't follow you, I know I'll regret it."
+        s "If I don't follow you, I know I'll regret it."
 
-            r "Let's go, then."
+        r "Let's go, then."
 
-            s "Where?"
+        s "Where?"
 
-            hide image splashEKGFull at summonEKG
-            show image splashEKGFull at summonEKG
-            pause 0.3
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3
 
-            r "Does it matter?"
+        r "Does it matter?"
 
-            s "No."
+        s "You can't actually be here."
 
-            "And so, I traded my soul to the Romanian witch with the endless legs and poisonous smile."
-        else:
-            r "I will speak with you soon, papillon. Enjoy this new lease on your life."
+        s "You're dead."
 
-            #back to endingtron. I think that might be all of the mnis?
+        r "Yes."
+
+        r "So I ask again. Does it matter?"
+
+        s "No."
+
+        "And so, I traded my soul to the Romanian witch with the endless legs and poisonous smile."
+
+        "And I never looked back."
+
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        show bg black with fade
+
+        python:
+            renpy.notify("She looks peaceful.")
+            renpy.pause(0.2)
+            renpy.notify("I guess it's time.")
+            renpy.pause(0.2)
+            renpy.notify("Elsa. David. You don't have to stay.")
+            renpy.pause(0.2)
+            renpy.notify("Goodbye, Sophie.")
+            renpy.pause(0.2)
+
+        hide image splashEKGFull at summonEKG
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        $renpy.notify("Time of death [hour]:[minute] on [day], [month] [dom].")
+
+        pause 0.5
+
+        d "I love you Soph. I'm... I'll always love you."
+
+        jump endcredits
