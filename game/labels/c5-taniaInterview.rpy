@@ -79,7 +79,7 @@ label c5taniaInterview:
             "Who are you? Really." if taniaDone[2] == False:
                 t "It's hard to answer that one, Kyles."
                 
-                t "If you believe Liv, we're all born from the lives of some streamer who picked up this game."
+                t "If you believe Fontaine, we're all born from the lives of some streamer who picked up this game."
 
                 t "Can I ask you something?"
 
@@ -131,7 +131,7 @@ label c5taniaInterview:
 
                 k "Plot?"
 
-                t "Liv says we're just manifestations of that. Some soup boiled up from our player's mind, which in turn birthed the content of the game, which..."
+                t "Fontaine says we're just manifestations of that. Some soup boiled up from our player's mind, which in turn birthed the content of the game, which..."
 
                 k "Stop, stop. My head hurts."
 
@@ -165,7 +165,7 @@ label c5taniaInterview:
 
                 "She's crying. Kylie's unsure when that started."
 
-                t "I... I wish it was ME who Liv murdered, for once."
+                t "I... I wish it was ME who Fontaine murdered, for once."
 
                 t "I..."
 

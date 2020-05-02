@@ -65,15 +65,15 @@ label common5:
 
     k "What are you talking about?" 
     
-    $chat.addmessage(liv,"She's so great. :)")
+    $chat.addmessage(fon,"She's so great. :)")
 
     t "This is what happens when you play this game. Robin dies. You lose sight of yourself." 
     
-    $chat.addmessage(elsa,"Hey Liv, you're cheating! You're not supposed to be listening right now.")
+    $chat.addmessage(elsa,"Hey Fontaine, you're cheating! You're not supposed to be listening right now.")
 
     c "< And always Robin. >" 
     
-    $chat.addmessage(liv,"Oopsie! Naughty me ;)")
+    $chat.addmessage(fon,"Oopsie! Naughty me ;)")
 
     t "It lets Robin die. Iterates and expands the flaws of two. Controls one."
 
@@ -105,7 +105,7 @@ label common5:
 
     k "If we're just code, what is she?" 
     
-    $chat.addmessage(liv,"I'm Oblivion, silly.")
+    $chat.addmessage(fon,"I'm Oblivion, silly.")
 
     c "< I don't know. >"
 
@@ -117,19 +117,19 @@ label common5:
 
     pause 1.0
 
-    t "I'm sorry everyone. I might know Liv best of all of us, but even I don't know the nature of her."
+    t "I'm sorry everyone. I might know Fontaine best of all of us, but even I don't know the nature of her."
 
     t "... Kylie." 
     
-    $chat.addmessage(liv,"Sorry, sorry, I just love you all so much I can't help but peek ;)")
+    $chat.addmessage(fon,"Sorry, sorry, I just love you all so much I can't help but peek ;)")
 
     k "Hm?" 
     
-    $chat.addmessage(bong,"I got something for you to peek at Liv :D")
+    $chat.addmessage(bong,"I got something for you to peek at Fontaine :D")
 
     t "I'm sorry for misleading you." 
     
-    $chat.addmessage(liv,"ooh, private message lol ;)")
+    $chat.addmessage(fon,"ooh, private message lol ;)")
 
     c "<I'm sorry for puking on you.>"
 
@@ -197,7 +197,7 @@ label common5:
 
     t "We wait." 
     
-    $chat.addmessage(liv,"The narrator. Of course.")
+    $chat.addmessage(fon,"The narrator. Of course.")
 
 
     k "Wow... this all feels so anticlimactic."
@@ -210,7 +210,7 @@ label common5:
 
     l "Well, I'm not sitting around and doing nothing." 
     
-    $chat.addmessage(liv,"I suppose. Oh, you all make such sense.")
+    $chat.addmessage(fon,"I suppose. Oh, you all make such sense.")
 
     t "What will you do? Punch a hole in its server? Kick its objects and methods into submission?"
 
@@ -228,13 +228,13 @@ label common5:
 
     k "Credits? Like, names and roles credits?" 
     
-    $chat.addmessage(egg,"Hey Liv")
+    $chat.addmessage(egg,"Hey Fontaine")
 
     t "The same."
 
     k "And we can see them? Whose names are on there?" 
     
-    $chat.addmessage(liv,"Not now, I have a headache. ;)")
+    $chat.addmessage(fon,"Not now, I have a headache. ;)")
 
     c "< It's our names. If you believe the heading text, it's everybody who's ever played this game. >" 
     
@@ -246,7 +246,7 @@ label common5:
 
     "Time passes." 
     
-    $chat.addmessage(liv,"Because I gave it to Elsa. :) :p :P ;)")
+    $chat.addmessage(fon,"Because I gave it to Elsa. :) :p :P ;)")
 
     "Perhaps it doesn't."
 
@@ -260,7 +260,7 @@ label common5:
 
     "Perhaps there was never air to begin with."  
     
-    $chat.addmessage(liv,"Really, now? I must've gotten the method wrong.")
+    $chat.addmessage(fon,"Really, now? I must've gotten the method wrong.")
     
     $renpy.notify("character.narrator.setValue('')")
 

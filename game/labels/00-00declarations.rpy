@@ -69,10 +69,12 @@ label declarations:
     # hair tone / name tone
 
     define m = Character("Mortimer")
-    define o = Character("Oblivion", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf")
+    define o = Character("Fontaine", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf")
     define girls = Character("Cass, Lichelle & Robin")
 
     # define a = Character("Ashley")
+
+    define narr = Character(None, kind=nvl)
 
     # useful images
 
@@ -83,6 +85,7 @@ label declarations:
     define splashErrorTania = Image("img/ingameSplashErrorTania.png")
     define splashEKGFull = Image("img/splashEKG.png")
     define splashEKGFlat = Image("img/splashEKGFlat.png")
+    define splashSophieOnDesk = Image("img/splashSophieOnDesk.png")
 
     define glitchGui = Image("img/glitchGUI.png")
 
@@ -209,7 +212,7 @@ label declarations:
         $severAll = False  # checks for all five primary good ending severs
         $severCodeBase = "stringSever"  # kill code for the being
         $severInput = "unknown"
-        $entityName = "Oblivion"
+        $entityName = "Fontaine"
         $entityForgiven = False
         $entityForgiven = True
 
@@ -327,6 +330,12 @@ label declarations:
                 for k in range(0, max):
                     i.append(value)
                 
+
+        # enable NVL mode for monologue
+
+        config.empty_window = nvl_show_core
+        config.window_hide_transition = dissolve
+        config.window_show_transition = dissolve
             
 
       

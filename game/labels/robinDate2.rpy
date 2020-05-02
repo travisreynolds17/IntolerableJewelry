@@ -53,7 +53,7 @@ label robinDate2:
 
     ki "I just can't help thinking about Cassandra."
 
-    $chat.addmessage(liv, "Sophie Sophie Sophie!")
+    $chat.addmessage(fon, "Sophie Sophie Sophie!")
 
     # knock sound
 
@@ -75,13 +75,13 @@ label robinDate2:
 
     ki "I guess it'll be dubbed over with the interview I did about Cassandra. I don't have time to think about last night now, though, because in a very short time there's an Eastern Bloc Goth Dream Girl in my future."
 
-    $chat.addmessage(elsa, "Liv? poundCake? Beaver? TwixtBar? Fizz?")
+    $chat.addmessage(elsa, "Fontaine? poundCake? Beaver? TwixtBar? Fizz?")
 
     ki "... I hope she likes me in white."
 
     s "Contrast is good."
 
-    $chat.addmessage(liv, "You look beautiful, Sophie. :) I know you're tired.")
+    $chat.addmessage(fon, "You look beautiful, Sophie. :) I know you're tired.")
 
     ki "Okay, nerves. Pack your bags and let's go. Today's a new day."
 
@@ -101,7 +101,7 @@ label robinDate2:
 
     k "Not really. Last night was just pretty heavy."
 
-    $chat.addmessage(liv, "It isn't time for that yet. :)")
+    $chat.addmessage(fon, "It isn't time for that yet. :)")
 
     show l speak
 
@@ -183,17 +183,17 @@ label robinDate2:
 
     ki "It's not funny. Not really. No setup, no turn, no punchline."
 
-    $chat.addmessage(liv, "TwixtBar? Can I talk to you? Something you should know. :)")
+    $chat.addmessage(fon, "TwixtBar? Can I talk to you? Something you should know. :)")
 
     ki "But I burst out laughing anyway."
 
     l "That's better, that's what I wanted to see."
 
-    $chat.addmessage(fizz, "God, nobody cares about you Liv")
+    $chat.addmessage(fizz, "God, nobody cares about you Fontaine")
 
     l "This shit is hard enough. Don't get bogged down in the drama, babe."
 
-    $chat.addmessage(liv, "... I'm sorry David. :(")
+    $chat.addmessage(fon, "... I'm sorry David. :(")
 
     k "Alright. I'll do my best."
 
@@ -203,7 +203,7 @@ label robinDate2:
 
     k "Oh? Is Tania still out of commission?"
 
-    $chat.addmessage(liv, "Aww TwixtBar! My hero. :) Private message please?")
+    $chat.addmessage(fon, "Aww TwixtBar! My hero. :) Private message please?")
 
     l "Yeah. Turns out her ankle's broken."
 
@@ -349,7 +349,7 @@ label robinDate2:
 
     k "No, what if something went wrong?"
 
-    $chat.addmessage(liv, "He cares about Sophie, AngeredBeaver69")
+    $chat.addmessage(fon, "He cares about Sophie, AngeredBeaver69")
 
     l "What if it didn't?"
 
@@ -409,7 +409,7 @@ label robinDate2:
 
     ki "It is. My face is flushed, I feel hot. I'm not scared. I'm not because I could smell her perfume before the lights came up."
 
-    $chat.addmessage(liv, "Oh, she was :(")
+    $chat.addmessage(fon, "Oh, she was :(")
 
     ki "And it's nostalgic. I don't know what it is, but the scent puts me on edge."
 
@@ -487,7 +487,7 @@ label robinDate2:
 
     ki "Wait. The candles are artificial. I suppose fire on stage would be a terrible idea, wouldn't it?"
 
-    $chat.addmessage(liv, "Oh, David. :( ")
+    $chat.addmessage(fon, "Oh, David. :( ")
 
     k "Oh, then what are we having?"
 
@@ -561,7 +561,7 @@ label robinDate2:
 
     r "I'm flattered, of course. Perhaps you wouldn't remember, though, with so much of your favorite dish in your system."
 
-    $chat.addmessage(liv, "Sophie isn't alright, you know. My poor girl :(")
+    $chat.addmessage(fon, "Sophie isn't alright, you know. My poor girl :(")
 
     show r angry
 
@@ -591,7 +591,7 @@ label robinDate2:
 
     ki "No. I do remember. I remember her scent. That's why..."
 
-    $chat.addmessage(liv, "David, that isn't entirely true.")
+    $chat.addmessage(fon, "David, that isn't entirely true.")
 
     k "Oh my god! That... that was you?"
 
@@ -605,7 +605,7 @@ label robinDate2:
 
     ki "... I remember the drugs. The wine. The hell with it, I'd said, I'll only be in Paris once."
 
-    $chat.addmessage(liv, "Everything, sweet boy.:)")
+    $chat.addmessage(fon, "Everything, sweet boy.:)")
 
     $chat.addmessage(sophie, "Chat temporarily cooked into liquid and injected intravenously with the dark-eyed girl who let me kiss her by the fountain")
 
@@ -691,7 +691,7 @@ label robinDate2:
 
     ki "The silence between us drags on. I don't know what to say."
 
-    $chat.addmessage(liv, "Sophie, did you know? I LOVE you. Stay with me ;)")
+    $chat.addmessage(fon, "Sophie, did you know? I LOVE you. Stay with me ;)")
 
     ki "No one was ever supposed to know about that. And..."
 
@@ -723,7 +723,7 @@ label robinDate2:
 
     s "Hunt. She said hunt."
 
-    $chat.addmessage(cake, "Do you know Liv, too?")
+    $chat.addmessage(cake, "Do you know Fontaine, too?")
     show r speak
 
     r "It was against my father's wishes I left Bucharest for Paris. He wanted the life of a businesswoman for me, an arbiter in my family's enterprises."
@@ -744,7 +744,7 @@ label robinDate2:
 
     r "My brothers shattered knees and slit throats for them. My sisters ran the gambling parlors."
 
-    $chat.addmessage(liv, "Who do you think I am, sweet boy?")
+    $chat.addmessage(fon, "Who do you think I am, sweet boy?")
 
     ki "She's approaching me now, one step. One step. One."
 
@@ -758,7 +758,7 @@ label robinDate2:
 
     r "Something so foolish? So excerable?"
 
-    $chat.addmessage(liv, "Oh, my, oh no. No, sweet boy.")
+    $chat.addmessage(fon, "Oh, my, oh no. No, sweet boy.")
 
     k "Robin, no. It's not foolish to want out of that life!"
 
@@ -778,7 +778,7 @@ label robinDate2:
 
     r "These knives belonged in a kitchen, Kylie. My cooking was meant to overjoy, the richness of coq au vin, the simple pleasure of pomme frites."
 
-    $chat.addmessage(liv, "And why is that, my Elsa? Help him understand.")
+    $chat.addmessage(fon, "And why is that, my Elsa? Help him understand.")
 
     r "Not the liquid stupidity of l'héroïne."
 
@@ -844,7 +844,7 @@ label robinDate2:
 
     r "Never. Not you."
 
-    $chat.addmessage(liv, "Elsa, chat with me again?")
+    $chat.addmessage(fon, "Elsa, chat with me again?")
 
     k "This has gone far enough. I don't care about the show anymore, I'm leaving!"
 
@@ -860,7 +860,7 @@ label robinDate2:
 
     ki "My heart hurts from hammering in my chest. My arms and legs hang like earthworms. She lowers herself to me, kneeling so close I can smell her lipstick, tart and chemical."
 
-    $chat.addmessage(liv, "Oblivion. :) I'll tell you more privately. Promise me you'll finish yourself this time, too ;). x0x0")
+    $chat.addmessage(fon, "Oblivion. :) I'll tell you more privately. Promise me you'll finish yourself this time, too ;). x0x0")
 
     show l angry at left
     show r listen at right
@@ -957,11 +957,11 @@ label robinDate2:
 
             ki "I don't know where the butterfly knife came from."
 
-            $chat.addmessage(liv, "Robin! You did it. :) You did so well.")
+            $chat.addmessage(fon, "Robin! You did it. :) You did so well.")
 
             l "... gghhhk..."
 
-            $chat.addmessage(liv, "You made a difficult choice, Kylie. :) So Proud!")
+            $chat.addmessage(fon, "You made a difficult choice, Kylie. :) So Proud!")
 
             pause 0.1
 
@@ -1090,7 +1090,7 @@ label robinDate2:
 
     pause 2.0
 
-    $chat.addmessage(sophie, "Watching Liv and Elsa together, guys. Mmm lol haha :) ;) ")
+    $chat.addmessage(sophie, "Watching Fontaine and Elsa together, guys. Mmm lol haha :) ;) ")
 
     s "Again?"
 
@@ -1186,7 +1186,7 @@ label robinDate2:
 
     k "I get the feeling Robin isn't much for small talk."
 
-    $chat.addmessage(liv, "Pleeeease Elsa I'm waiting for you :)")
+    $chat.addmessage(fon, "Pleeeease Elsa I'm waiting for you :)")
 
     l "Obviously not, she-"
 
@@ -1329,7 +1329,7 @@ label robinDate2:
 
     $chat.addmessage(elsa, "Yeah.")
 
-    $chat.addmessage(liv, "Elsa, I'm starting without you ;)")
+    $chat.addmessage(fon, "Elsa, I'm starting without you ;)")
 
     s "~yaaawn~"
 
@@ -1473,11 +1473,11 @@ label robinDate2:
 
     s "That story about her dad's knife. She's killed someone, maybe."
 
-    $chat.addmessage(liv, "Definitely :) Elsa, I know how to get Sophie to answer the door.")
+    $chat.addmessage(fon, "Definitely :) Elsa, I know how to get Sophie to answer the door.")
 
     s "Then again, I don't know if I believe her story. It's way too convenient for her to show up here if she and Kylie have that kind of history."
 
-    $chat.addmessage(liv, "Come back to me, you won't regret it. :)")
+    $chat.addmessage(fon, "Come back to me, you won't regret it. :)")
 
     pause 1.0
 

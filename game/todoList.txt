@@ -10,14 +10,14 @@ Revamp affection system to:
     e) Maybe have a third real world scene mirroring the first? I dunno if it should be made so damn obvious.
         alternatively, rework the first scene so it's a little more cryptic. David is trying to get Sophie to give up heroin, not give up streaming.
     f) Define some custom transforms for character positioning, see, the in game gui covers a ton of 
-        screen space. Might feel too claustrophic. May have to alter the gui for more space.
+        screen space. Might feel too claustrophic. May have to alter the gui for more space.DONE
     g) Implement the string sever function to replace the subscribe button. This should occur with almost
         no fanfare when the game loop resets.
     h) Adjust character trivia and bios to alt versions at appropriate places. Robin and Cass each have a 
         dark turn in their dates, Cass when Kylie is KO'd, Robin when she reveals the heroin on a platter.
     j) Implement subscribe button messages. On click, you get a weird message and then it resets to subscribe.
         Maybe use a setter method for this.
-    k) Still need to adjust endings to fit with new drug addict storyline. I'm not sure if I want them to be delusions. Tania's with mortimer et al is nice, but it doesn't work as well with hte heroin plot.
+    k) Still need to adjust endings to fit with new drug addict storyline. I'm not sure if I want them to be delusions. Tania's with mortimer et al is nice, but it doesn't work as well with hte heroin plot. DONE(ish)
     l) adjust all bad endings such that some relic of the game still being played exists. Either have chat appear to comment or some graphical glitch happen.
     m) set up some simple boiler-plate bad endings for characters who aren't severed if you get a bad ending. Example: I got Lichelle's trap ending. I have only severed Robin. I then get Cass and Tania's simple bad ending before the Lichelle ending plays out.
     n) Adjust main menu, figure out how to add a splash screen.
@@ -27,7 +27,7 @@ Revamp affection system to:
     q) Change David's name? To something thematic?
     r) adjust all scene transitions and ensure appropriate cleanup (i.e. getHistory()) are being implemented
         correctly.
-    s) gonna need SFX. Re-work Robin's shutoff effect to be less loud.
+    s) gonna need SFX. Re-work Robin's shutoff effect to be less loud.-done
     t) need to make end credits
     u) more trivia for each character? Though I think too much might be too much. Speaking of which:
         - Kylie's trivia needs to be updated to reflect her choices in the game.
@@ -44,7 +44,7 @@ Revamp affection system to:
         - Electrified Sophie when she tries to remove headphones
         - Dead sophie lying on desk in bad lichelle ending. Maybe a small image of kylie and Tania together?
         - Dead robin on the ground in common4
-        - Oblivion prowling in the 'real world' for the didn't sever Liv ending
+        - Fontaine prowling in the 'real world' for the didn't sever Fontaine ending
         - David's proposal maybe? Sophie handing the ring box back, maybe showing her track marks?
         - Kylie dying with a smile on her face?
         - A splash for each of the good endings:
@@ -86,3 +86,11 @@ Revamp affection system to:
         - a couple different glitch/distortions. static, screeching, but nothing jarring or loud
         - fix Robin's lights out effect
     8) Gonna leave a note that tells me where to go back and add sounds as I'm editing. Note is SFX
+
+
+
+    HAIR AND EYES: 
+
+    Sophie:
+        base color: light brown
+        eyes: green

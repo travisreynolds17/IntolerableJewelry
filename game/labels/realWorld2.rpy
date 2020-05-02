@@ -1,5 +1,5 @@
 label realWorld2:
-    # later, this art needs to be of a snowy fountain outside a town square. I think Sophie might be drunk and freezing to death in this story. Maybe.
+    # later, this art needs to be of a snowy fountain outside a town square. 
     scene bg resta with fade
 
     "Somehow I find myself back outside the bar."
@@ -75,7 +75,7 @@ label realWorld2:
 
     "There's something inhuman about a drowning. Can't see the victim's face. Only limbs akimbo."
 
-    "Was I sipping my drink before or after?"
+    "Oh. I'm bleeding into my sleeve. I wonder when that started."
 
     "Could be anyone's arms and legs, really."
 
@@ -91,11 +91,11 @@ label realWorld2:
 
     "Dragging she of the long legs from the fountain."
 
-    "The negroni tastes mature."
+    "The warm shot tasted mature."
 
     "She must be freezing in the snow, drenched in fountain water."
 
-    "Beautiful in her pallor."
+    "Beautiful in her pallor, jewelry gleaming."
 
     "Onyx Dress pushes against her chest."
 
@@ -113,7 +113,7 @@ label realWorld2:
 
     "I should've done something."
 
-    "Why does my head hurt?"
+    "Why does my arm hurt?"
 
     "She finally looked at me."
 

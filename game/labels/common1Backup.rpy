@@ -54,7 +54,7 @@
         chat.addmessage(fizz, "Hi Sophie, whatcha playin?")
         chat.addmessage(elsa, "Hey sister! Wait, is this a VN? A DATING SIM?!?")
         chat.addmessage(bong, "Date me Sophie lol I'll be your date")
-        chat.addmessage(liv, "I love this game! <B")
+        chat.addmessage(fon, "I love this game! <B")
         chat.addmessage(beav, "Jeez, why")
         chat.addmessage(fizz, "How are you feeling these days?")
         chat.addmessage(elsa, "Yeah are you still okay????")
@@ -65,9 +65,9 @@
 
     $soph.addmessage(sophie,"Thanks, Fizz, how are you tonight? Did your test go okay?")
 
-    $soph.addmessage(sophie,"Hi Liv! You know this game, too? No spoilers, okay? Also, I don't think we've met, welcome!")
+    $soph.addmessage(sophie,"Hi Fontaine! You know this game, too? No spoilers, okay? Also, I don't think we've met, welcome!")
 
-    $chat.addmessage(liv, "It's my favorite game.")
+    $chat.addmessage(fon, "It's my favorite game.")
 
     $soph.addmessage(sophie,"Oh my god, Bong, stop, you horndog. I'm gonna be here all night.")
 
@@ -85,21 +85,21 @@
 
     $soph.addmessage(sophie,"Seriously, I've never been better. I'm independent again, no seizures, I can stream all I want. And I can hang out with you guys!")
 
-    $chat.addmessage(liv, "No spoilers, I can't wait to see if you can make it ;)")
+    $chat.addmessage(fon, "No spoilers, I can't wait to see if you can make it ;)")
 
     $soph.addmessage(sophie,"Thanks Twixt. I'm not ready to date in real life just yet, but I'm ready to date in this game we're gonna start playing right now!")
 
     $chat.addmessage(elsa, "don't date, practice self love")
 
     $chat.addmessage(bong, "weird u can see chat if I have window closed")
-    $chat.addmessage(liv, "No, that's part of the game. Even chat can switch some windows.")
+    $chat.addmessage(fon, "No, that's part of the game. Even chat can switch some windows.")
     #goes through title screen 
 
     $soph.addmessage(sophie,"So we already named our protag, and of course I named her Kylie. I'm happy it let me choose to be a girl, by the way.")
 
     $chat.addmessage(bar, "Why Kylie?")
 
-    $soph.addmessage(sophie,"Wait, really, Liv? That's interesting! So now all of you get to know how I feel when I get behind on chat and have to catch back up, ha!")
+    $soph.addmessage(sophie,"Wait, really, Fontaine? That's interesting! So now all of you get to know how I feel when I get behind on chat and have to catch back up, ha!")
     
     $soph.addmessage(sophie,"Twixt, it's because Kylie's my middle name. Everyone called me Kylie when I was just an egg.")
 
@@ -137,7 +137,7 @@
     $chat.addmessage(elsa, "nooooooo")
     $chat.addmessage(bong, "red E")
     $chat.addmessage(egg, "What's this game?")
-    $chat.addmessage(liv, "BEST game.")
+    $chat.addmessage(fon, "BEST game.")
     $chat.addmessage(fizz, "Not as good as Super Threatroid, not possible.")
     $chat.addmessage(beav, "Is it like Lass Effects?")
     $chat.addmessage(bong, "More like L'ASS EFFECTS")
@@ -145,7 +145,7 @@
     $chat.addmessage(egg, "lol")
     $chat.addmessage(beav, "hahahha")
     $chat.addmessage(bar, "C'mon")
-    $chat.addmessage(liv, "You're so funny, Oberbong.")
+    $chat.addmessage(fon, "You're so funny, Oberbong.")
     $chat.addmessage(bong, "doin god's work ma'am")
 
     t "That's what I want to hear. Now, get in there and find love!"
@@ -161,7 +161,7 @@
     $chat.addmessage(beav, "Assholes.")
     $chat.addmessage(fizz, "Tania's already best girl. 10/10")
     $chat.addmessage(elsa, "I like her hair")
-    $chat.addmessage(liv, "I love Tania so much!")
+    $chat.addmessage(fon, "I love Tania so much!")
 
     #checks chat
     if chatIsOn == False:
@@ -222,7 +222,7 @@
 
     ki "I love her choker. Can't say I'm familiar with the song, though."
 
-    $chat.addmessage(liv, "Ugh, no spoilers, but her choker :(")
+    $chat.addmessage(fon, "Ugh, no spoilers, but her choker :(")
 
 
 

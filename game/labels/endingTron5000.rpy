@@ -34,7 +34,7 @@ label endingTron5000:
             o "HEY what? What's that line?"
             "Kylie hadn't made it to her feet before a flare of pain seized her chest, leaving her to stumble against Tania and Lichelle."
             pause 0.2
-            t "Liv! What are you doing to her?"
+            t "Fontaine! What are you doing to her?"
             o "We did not cause that!"
             "She seems genuinely offended."
             k "... someone..."
@@ -430,7 +430,7 @@ label endingTron5000:
         # david will be the centerpiece here. He keeps getting interrupted by "the girls" and giving up his seat, then coming back. For the love endings, tania asks david to excuse her and then goes off to wherever they are. In Robin's case she just shows up and David is nonchalantly, "Oh hey Louisa. Sorry I doubted you." notes her hair is wet.
         #full everyone is good ending would show her in hospital with david and a woman who turns out to be Elsa watching over her.
         # need to go through list. can only be visited by severed. whoever is first brings notice of those who weren't severed. Tania is first, then cass, then lichelle.
-        # adjust the orders in the following ways. Liv is first, actually. dialog changes if you forgave her. either way not hostile. she brings news of the severed if we implement a way to confess to liv, she's still first. love confession is next to last. except liv, scenes need to be able to take place in any order. Robin's bad ending would have to take place last. We know Louisa's really gone, so it'd be sophie who found a way to stab david. Do I want it that way? It's like a person would have to sever everyone or get a bad end. if you get a bad end, it needs to be conveyed that all this happened in the span of a bad trip. she is NOT in a mental institution. too cliche. mention it once. someone saying that had a trip that lasted for a week, but then they opened their eyes to find two hours had passed.
+        # adjust the orders in the following ways. Fontaine is first, actually. dialog changes if you forgave her. either way not hostile. she brings news of the severed if we implement a way to confess to liv, she's still first. love confession is next to last. except liv, scenes need to be able to take place in any order. Robin's bad ending would have to take place last. We know Louisa's really gone, so it'd be sophie who found a way to stab david. Do I want it that way? It's like a person would have to sever everyone or get a bad end. if you get a bad end, it needs to be conveyed that all this happened in the span of a bad trip. she is NOT in a mental institution. too cliche. mention it once. someone saying that had a trip that lasted for a week, but then they opened their eyes to find two hours had passed.
         #Yes, this means we have to largely rewrite the endings.
 
 

@@ -95,7 +95,7 @@ label cassDate2:
 
     ki "Cassandra's easy to spot. Part of that's because of the film crew moving around to accommodate her, but it's also because she has such a soft presence."
 
-    $chat.addmessage(liv, "My sweet siren :)")
+    $chat.addmessage(fon, "My sweet siren :)")
 
     ki "It's a magnificent contrast to Lichelle's overwhelming power."
 
@@ -125,7 +125,7 @@ label cassDate2:
 
     k "You're kidding, right?"
 
-    $chat.addmessage(liv, ":(")
+    $chat.addmessage(fon, ":(")
 
     c "< Not at all. I wanna show you what a rock star life is really like. >"
 
@@ -211,7 +211,7 @@ label cassDate2:
 
     c "< The songs used to be personal. Wild. Angry, even. Now I'm wealthy, comfortable. What do I have to be so pissed about? > "
 
-    $chat.addmessage(liv, "Everything :) You'll see, trust me ;)")
+    $chat.addmessage(fon, "Everything :) You'll see, trust me ;)")
 
     c "< It all feels mechanical now. >"
 
@@ -263,7 +263,7 @@ label cassDate2:
             [beav, "god, that's the saddest sound I ever heard"],
             [unkn, "Resonance"],
             [bar, "Girl you okay?"],
-            [liv, "Sophie!!"]
+            [fon, "Sophie!!"]
         ]
 
         chat.bulkMessage(newComments, "random")
@@ -310,7 +310,7 @@ label cassDate2:
 
     ki "Cassandra leans back in her chair, her hands falling to the tabletop. She breathes out, chuckles a mute chuckle."
 
-    $chat.addmessage(liv, "I love this part. :)")
+    $chat.addmessage(fon, "I love this part. :)")
 
     c "< I have a piercing. Down there, you know. >"
 
@@ -334,7 +334,7 @@ label cassDate2:
 
     c "< Disappointing, huh? >"
 
-    $chat.addmessage(liv, "It's not that painful. ;)")
+    $chat.addmessage(fon, "It's not that painful. ;)")
 
     k "... no."
 
@@ -342,7 +342,7 @@ label cassDate2:
 
     k "No, I'm glad! I mean, maybe you didn't mean it the way I interpreted it, but that happens all the time in real relationships!"
 
-    $chat.addmessage(liv, "Private chat me then ;)")
+    $chat.addmessage(fon, "Private chat me then ;)")
 
     show c listen
 
@@ -362,7 +362,7 @@ label cassDate2:
 
     c "< You're handling it well. >"
 
-    $chat.addmessage(liv, "Shub-Nickelrath is resting ;)")
+    $chat.addmessage(fon, "Shub-Nickelrath is resting ;)")
 
     k "On the outside. Inside, I'm screaming like a banshee on fire."
 
@@ -376,7 +376,7 @@ label cassDate2:
 
     ki "She wasn't kidding, either. The platter hosts no less than twelve shot glasses filled with god-knows-what."
 
-    $chat.addmessage(fizz, "Jesus, Liv, just post the picture to the chat if you're that obvious.")
+    $chat.addmessage(fizz, "Jesus, Fontaine, just post the picture to the chat if you're that obvious.")
 
     ki "I find myself wringing my hands lightly together. This is so much harder than it looked on TV. Magic of editing, I guess."
 
@@ -386,7 +386,7 @@ label cassDate2:
 
     c "< So Kylie. Gun to your head, who would you sleep with first, me or Robin? > "
 
-    $chat.addmessage(liv, "I don't want to get Sophie kicked off Switch :)")
+    $chat.addmessage(fon, "I don't want to get Sophie kicked off Switch :)")
 
     k "Wow."
 
@@ -497,7 +497,7 @@ label cassDate2:
 
     ki "Another shot, two, three. Cassandra's deep into my side of the platter, now." 
     
-    $chat.addmessage(liv,"sorrow")
+    $chat.addmessage(fon,"sorrow")
 
     k "Oh my god."
 
@@ -574,7 +574,7 @@ label cassDate2:
 
     ki "She reaches for another shot, but I pull the platter away." 
     
-    $chat.addmessage(liv,"FizzyFizion. You obviously care about Sophie :)")
+    $chat.addmessage(fon,"FizzyFizion. You obviously care about Sophie :)")
 
     k "Stop! That's not going to help."
 
@@ -590,7 +590,7 @@ label cassDate2:
 
     k "Let's get a cab and get out of here." 
     
-    $chat.addmessage(liv,"I love her, too. She's the best. :)")
+    $chat.addmessage(fon,"I love her, too. She's the best. :)")
 
     c "< To my studio. >"
 
@@ -604,7 +604,7 @@ label cassDate2:
 
     c "< Never meet your heroes, right? I'm sorry I'm disappointing you.>" 
     
-    $chat.addmessage(liv,"Private chat, Fizz? I'll tell you how I know her :)")
+    $chat.addmessage(fon,"Private chat, Fizz? I'll tell you how I know her :)")
 
     k "Oh trust me, you, and, uh... I mean... sorry, I'm a little tongue tied."
 
@@ -677,7 +677,7 @@ label cassDate2:
 
     k "Which one do you play?" 
     
-    $chat.addmessage(liv,"Really? How thicc?")
+    $chat.addmessage(fon,"Really? How thicc?")
 
     ki "She points to a beautifully finished seven-string guitar hanging from a mount on the wall. It has a marbled pattern, swirling in royal blue and aquamarine."
 
@@ -691,7 +691,7 @@ label cassDate2:
 
     k "But you can't talk? I thought for sure you had a singer?" 
     
-    $chat.addmessage(liv,":(")
+    $chat.addmessage(fon,":(")
 
     ki "Her smile sours, just a bit."
 
@@ -739,13 +739,13 @@ label cassDate2:
 
     c "< Okay. Come with me into the recording booth? >" 
     
-    $chat.addmessage(elsa,"Liv, how depressing is this gonna get?")
+    $chat.addmessage(elsa,"Fontaine, how depressing is this gonna get?")
 
     ki "As Cassandra moves to the booth, snagging a water bottle on the way, one of the camera crew picks up behind her. Only then does it occur to me that we're going to be on TV--"
 
     c "!!!" 
     
-    $chat.addmessage(liv,"No spoilers ;)")
+    $chat.addmessage(fon,"No spoilers ;)")
 
     ki "-- but she wheels around then, a horrified expression on her face, and crumples to her knees." 
     
@@ -897,7 +897,7 @@ label cassDate2:
 
     c "< I guess you have questions. >" 
     
-    $chat.addmessage(liv,"Welcome back sweet boy :)")
+    $chat.addmessage(fon,"Welcome back sweet boy :)")
 
     ki "Gently, Lichelle helps me sit up as well. The room pirouettes around me, but her grip on my shoulders holds me in place."
 
@@ -915,7 +915,7 @@ label cassDate2:
 
     ki "She stops typing." 
     
-    $chat.addmessage(liv,"You were here for me a minute ago.")
+    $chat.addmessage(fon,"You were here for me a minute ago.")
 
     c "N-no body. I did it to myself." 
     
@@ -931,19 +931,19 @@ label cassDate2:
 
     ki "And just like that, she's doubled over again, pouring out her agony into the trash can." 
     
-    $chat.addmessage(liv,"Don't underestimate Sophie. :)")
+    $chat.addmessage(fon,"Don't underestimate Sophie. :)")
 
     l "Wow."
 
     k "Cassandra... dammit, you're not supposed to be like this." 
     
-    $chat.addmessage(elsa,"I'm not, I just... Liv, she's been through some things and I think this is bad for her.")
+    $chat.addmessage(elsa,"I'm not, I just... Fontaine, she's been through some things and I think this is bad for her.")
 
     l "I'll get her set up with a fluid IV. She'll be fine. I use them all the time to rehydrate after a weight cut."
 
     k "That's real?" 
     
-    $chat.addmessage(liv,"You care so much, Elsa")
+    $chat.addmessage(fon,"You care so much, Elsa")
 
     l "Yup. C'mon babe. I think Cass has been on TV enough today."
 
@@ -981,7 +981,7 @@ label cassDate2:
 
     ki "I wonder, briefly, whether Tania will be pleased or mortified by all this." 
     
-    $chat.addmessage(liv,"No, I mean it. You really care.")
+    $chat.addmessage(fon,"No, I mean it. You really care.")
 
     scene bg black with fade
 
@@ -1005,7 +1005,7 @@ label cassDate2:
     
     $chat.addmessage(elsa,"No. I don't want to talk about it.") 
     
-    $chat.addmessage(liv,"I won't ask any more. I'm just so impressed with you, Elsa.")
+    $chat.addmessage(fon,"I won't ask any more. I'm just so impressed with you, Elsa.")
 
     l "I did, babe."
 
@@ -1027,7 +1027,7 @@ label cassDate2:
 
     l "Dunno." 
     
-    $chat.addmessage(liv,"I think Lichelle meant to do it ;)")
+    $chat.addmessage(fon,"I think Lichelle meant to do it ;)")
 
     k "Why would you do that?"
 

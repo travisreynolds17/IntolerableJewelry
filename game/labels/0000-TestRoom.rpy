@@ -8,38 +8,21 @@ label testRoom:
 
     transform hop(x=640, z=0.80):
         xcenter x yoffset 0 yanchor 1.0 ypos 1.03 zoom z*1.00 alpha 1.00 subpixel True
-        easein 2.6 yoffset -20
+        easein 2.6 yoffset - 20
         easeout .1 yoffset 0
-
 
 
         #------ setup
 
     scene bg bar
 
-    $showGui()
+    # MONOLOGUE ------------------------------
 
-    show c at center
+    scene bg black with fade
 
-    $breakLoop = False
+    
+        
 
-    while breakLoop == False:
-        menu:
-            "Hop":
-                hide c 
-                hide l 
-                hide r 
-                hide t
-                show c 1a at f11
-                show l 2b at f13
-                show r 3c at f21
-                show t at fl22
-            "Sink":
-                hide c 
-                hide l 
-                hide r 
-                hide t
-                show c at fl11
-                show l at f12
-                show r at f13
+    # --------------------------------------
 
+    scene bg bar with longFade

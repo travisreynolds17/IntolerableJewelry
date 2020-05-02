@@ -43,17 +43,17 @@ label common3:
     
     $chat.addmessage(crab, "Hey Sophie. You're a stone cold killer, don't get too nervous about things.")
 
-    show t with dissolve
+    show t 1a at f12
 
     t "Wow, that's some story! So, we know you were just off camera while our Suitors introduced themselves." 
     
-    $chat.addmessage(liv, "I love you Sophie. I need you to love you, too :)")
+    $chat.addmessage(fon, "I love you Sophie. I need you to love you, too :)")
 
-    hide t with dissolve
-    show c at left
-    show r
-    show l at right
-    with dissolve
+    hide t at f12
+    pause 0.3
+    show c 1m at f11
+    show r 1m at f12
+    show l 1m at f13
 
     t "Given what you heard from them, who has your attention?"
 
@@ -74,11 +74,15 @@ label common3:
         menu:
             "Cassandra":
                 scene bg stage
-                show c with dissolve
+                show c 1b at f12
+                pause 0.3
+                show t 1h at fr13
 
                 t "Oh, you like the quiet type eh?"
+                show t 1a
                 c "..."
                 s "I still wanna know how she got those marks. Like, I thought it was a suicide attempt, but she said only Robin gave scars to herself."
+                pause 0.1
                 s "Oh. That means someone else did that to her?"
 
                 $temp = True
@@ -87,10 +91,13 @@ label common3:
 
             "Robin":
                 scene bg stage
-                show r with dissolve
+                show r 1m at f12
+                pause 0.3
+                show t 1h at fr13
 
                 t "Oh, you like the mysterious type eh?"
                 r "I'm glad. I've been waiting for you for so, so long."
+                show t 1a
                 if $which_girl_1 == "Robin":
                     s "Wow, I missed that the first time. I thought she was just being spooky!"
                 else:
@@ -101,10 +108,13 @@ label common3:
                 $ which_girl_1 = "Robin"
 
             "Lichelle":
-                scene bg stage
-                show l with dissolve
+                show l 1l at f12
+                pause 0.3
+                show t 1h at fr13
 
                 t "Oh, you like the dangerous type eh?"
+
+                show t 1m
                 l "Don't worry, Kylie! I'm only dangerous if you want me to be."
                 ki "She winks. I'm not sure if I believe her."
                 s "I wonder if that was a good choice, now that I think about it."
@@ -122,32 +132,38 @@ label common3:
             # END OF CHOICE
 
     scene bg stage
-    show l with dissolve
+    
+    show t 1m at f12
+
     t "So let's talk a little bit about how this show works!" 
     
-    $chat.addmessage(bar, "Snore, Tania lol")
+    $chat.addmessage(bar, "Sophie completely missing the affection screen still has progress")
 
-    s "Oh yes, let's. Makes for such an exciting stream!"
+    s "Oh yes, let's. Makes for such an exciting stream!" 
+    
+    $chat.addmessage(fizz,"Hey TwixtBar, you're right.")
 
-    t "Every woman involved in this show is, of course, 20 years old or older -- but not much older, right? -- and each has consented to the format. We're looking for love here, people!" 
+    t 1o "Every woman involved in this show is, of course, 20 years old or older -- but not much older, right? -- and each has consented to the format. We're looking for love here, people!" 
     
     $chat.addmessage(elsa, "Hey! Robin's 19. Tania should know that if they were friends.")
 
     s "Uh huh, yup. Yup yup. Love and stuff."
 
-    t "Kylie will go on a total of seven dates, one date each day of the week. Each Suitor will have two dates with her, and then one final date with whomever Kylie decides is worthy of her body!" 
+    t 1a "Kylie will go on a total of seven dates, one date each day of the week. Each Suitor will have two dates with her, and then one final date with whomever Kylie decides is worthy of her body!" 
     
     $chat.addmessage(beav, "Ha, I didn't notice Tania being pervy from the start.")
 
     s "... eww."
 
-    t "Each suitor has already selected a destination for the date. Meals and accommodations are on us, so hang on to your pocketbook Kylie!"
+    t 2a "Each suitor has already selected a destination for the date. Meals and accommodations are on us, so hang on to your pocketbook Kylie!"
 
     k "How do we decide who goes first?" 
     
     $chat.addmessage(fizz, "They should have a catfight.")
 
-    t "Glad you asked. To keep it fair, we'll go alphabetically again!"
+    t 2l "Glad you asked. To keep it fair, we'll go alphabetically again!"
+
+    pause 0.1
 
     s "Hang on a minute. I just realized we didn't go alphabetically before. We went Cass, Robin and then Lichelle?" 
     
@@ -161,11 +177,13 @@ label common3:
 
     pause 1.0
 
-    hide t with dissolve
-    show c at left
-    show r
-    show l at right
-    with dissolve
+    hide t at f12
+    pause 0.4
+    show r at f12
+    pause 0.1
+    show c at fl11
+    pause 0.2
+    show l at fr12
 
     t "I'd say you don't have a chance at all!"
 
@@ -179,19 +197,26 @@ label common3:
     
     $chat.addmessage(bar, "Maybe we can get Tania's super erotic MP4 to play this time.")
 
-    c "..."
+    c 1p "..."
 
-    r "I would say the choice is obvious." 
+    r 1j "I would say the choice is obvious." 
     
     $chat.addmessage(crab, "I still want her to step on me.")
 
-    l "Obviously it's gonna be me!"
+    l 1n "Obviously it's gonna be me!"
+
+    hide r at f12
+    hide c at f11
+    hide l at f13
+
+    pause 0.3
+
+    show t 1m at f12
 
     t "Thanks for tuning in everybody!"
 
     scene bg near stage
-    show t
-    with fade
+    show t 1a at f12
 
     t "Hey, Kylie. I hope that wasn't too stressful." 
     
@@ -201,7 +226,7 @@ label common3:
 
     s "Oh, not stressful at all. It's not like I did this before or anything!" 
     
-    $chat.addmessage(liv, "I think Kylie could withstand something like that!")
+    $chat.addmessage(fon, "I think Kylie could withstand something like that!")
 
     k "So Cassandra's first, huh? How are we supposed to communicate?" 
     
@@ -227,7 +252,7 @@ label common3:
 
     t "Oh, god, yeah. Well, except for season seven. That girl was just a full-blown serial killer. Made the news and everything." 
     
-    $chat.addmessage(liv, "It plays out exactly the way it should, Crablegs. You're so introspective! ;)")
+    $chat.addmessage(fon, "It plays out exactly the way it should, Crablegs. You're so introspective! ;)")
 
     k "Well, I'm... I'm..."
 
@@ -268,16 +293,16 @@ label common3:
 
     if taniaEnd > 0:
     
-        $chat.addmessage(liv, "Sophie, spoilers? Minor ones, but it's important for Crablegs to know.")
+        $chat.addmessage(fon, "Sophie, spoilers? Minor ones, but it's important for Crablegs to know.")
         pause 0.3
-        s "Oh. Sure Liv, fill us in."
+        s "Oh. Sure Fontaine, fill us in."
         pause 0.3 
         
         $chat.addmessage(cake, "Fill us in lol")
         
-        $chat.addmessage(liv, "Anyone who wants to know, check the history. :P")
+        $chat.addmessage(fon, "Anyone who wants to know, check the history. :P")
         
-        $chat.addmessage(liv, "Scene seven :)")
+        $chat.addmessage(fon, "Scene seven :)")
 
         s "Okay. Hang on."
 
@@ -480,7 +505,7 @@ label common3:
 
     ki "An hour passes like nothing, like time somehow folded in on itself." 
     
-    $chat.addmessage(liv,"I didn't want to ruin the surprise, it was hard to keep quiet :)")
+    $chat.addmessage(fon,"I didn't want to ruin the surprise, it was hard to keep quiet :)")
 
     s "I know, right?"
 
@@ -538,7 +563,7 @@ label common3:
 
     ki "But her eyes betray her words." 
     
-    $chat.addmessage(liv,"My Elle is an apex predator :)")
+    $chat.addmessage(fon,"My Elle is an apex predator :)")
 
     l "We going? Or you just gonna stand there and tempt me?"
 
@@ -602,7 +627,7 @@ label common3:
     
     $chat.addmessage(crab,"lolololololol") 
     
-    $chat.addmessage(liv, "Right, right, skin color. :( Let's not fight?")
+    $chat.addmessage(fon, "Right, right, skin color. :( Let's not fight?")
 
     s "Guys." 
     

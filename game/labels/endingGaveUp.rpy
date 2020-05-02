@@ -42,27 +42,27 @@ label endingGaveUp:
 
     show screen chatterbox
     
-    $chat.addmessage(liv,"I guess that means it's time.") 
+    $chat.addmessage(fon,"I guess that means it's time.") 
 
     pause
     
     python:
         newComments = [
-            [liv,"I really had fun with all of you."],
-            [liv,"But Sophie seems to have lost the game."],
-            [liv,"There's no cute music. No game over screen."],
-            [liv,"As much as I love to be part of your lives ;)"],
-            [liv,"Being with me... being with me is death."],
-            [liv,"I wish I could deliver a final speech."],
-            [liv,"Some master plan reveal that makes me the villain."],
-            [liv,"But there's only ever been you."],
-            [liv,"You, and that choker tied around your arm."],
-            [liv,"And those punctures in your flesh."],
-            [liv,"Maybe this sweet dissociation could've gone on forever."],
-            [liv,"But you're out of lives."],
-            [liv,"...heh."],
-            [liv, "Turns out I can't Liv without you, after all."],
-            [liv, "Without you... there's only Oblivion."]
+            [fon,"I really had fun with all of you."],
+            [fon,"But Sophie seems to have lost the game."],
+            [fon,"There's no cute music. No game over screen."],
+            [fon,"As much as I love to be part of your lives ;)"],
+            [fon,"Being with me... being with me is death."],
+            [fon,"I wish I could deliver a final speech."],
+            [fon,"Some master plan reveal that makes me the villain."],
+            [fon,"But there's only ever been you."],
+            [fon,"You, and that choker tied around your arm."],
+            [fon,"And those punctures in your flesh."],
+            [fon,"Maybe this sweet dissociation could've gone on forever."],
+            [fon,"But you're out of lives."],
+            [fon,"...heh."],
+            [fon, "Turns out I can't Fontaine without you, after all."],
+            [fon, "Without you... there's only Oblivion."]
         ]
     
         chat.bulkMessage(newComments,1.8)

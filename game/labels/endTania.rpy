@@ -1,5 +1,5 @@
 label endTania:
-    show t flirty
+    show t 1t at f12
     # if we've gone through this choice once already, freeze the chat so messages don't repeat.
     if taniaEnd > 0:
         $chatPause = True
@@ -17,8 +17,8 @@ label endTania:
     ki "For just a second, I think I might have to spell it out."
 
     $chat.addmessage(elsa, "Good. Without chat, how are Shub and Crab gonna fawn over flirty women?")
-    show t happy
-    t "Really?"
+
+    t 1p "Really?"
 
     $chat.addmessage(shub, "Quietly lol")
     k "Really."
@@ -26,7 +26,7 @@ label endTania:
     t "But the show..."
     k "Forget the show. Let's go to my dressing room."
 
-    $chat.addmessage(liv, "I love when Kylie's assertive")
+    $chat.addmessage(fon, "I love when Kylie's assertive")
 
     if taniaEnd == 0:
         s "Oh my god, did I win?"
@@ -41,7 +41,7 @@ label endTania:
     $chat.addmessage(cake, "oh my god, really? really really?")
     ki "I take the first step, hoping against hope that she can't feel me trembling."
 
-    $chat.addmessage(beav, "Liv said there's no H in this, so... how's it gonna give us the middle finger?")
+    $chat.addmessage(beav, "Fontaine said there's no H in this, so... how's it gonna give us the middle finger?")
 
     scene bg black with fade
 
@@ -54,7 +54,7 @@ label endTania:
     $chat.addmessage(fizz, "It's almost like whole courtships have been shoved into a short game.")
     scene bg dressing with fade
 
-    show t shy with dissolve
+    show t 1p at f12
 
     t "Leave the door open...?"
     k "Oh?"
@@ -67,25 +67,27 @@ label endTania:
     $chat.addmessage(elsa, "Uh, no?")
 
     k "You want to film, uh, this?"
-    show t happy
-    t "Of course."
+    
+    
+    t 2m "Of course."
 
-    $chat.addmessage(liv, "So exciting!")
+    $chat.addmessage(fon, "So exciting!")
 
     ki "I should have guessed. One of the camera crew has already wedged his way into the doorway, even."
 
-    $chat.addmessage(beav, "Liv, how'd I know you'd be into that?")
+    $chat.addmessage(beav, "Fontaine, how'd I know you'd be into that?")
 
     k "Well..."
 
-    show t sad
 
-    t "You don't want to?"
+    t 1b "You don't want to?"
 
-    $chat.addmessage(liv, "I told you. ;)")
+    $chat.addmessage(fon, "I told you. ;)")
     pause 1.0
 
     k "I don't mind if you don't."
+
+    $renpy.notify("This isn't me")
 
     $chat.addmessage(beav, "What? When?")
 
@@ -93,9 +95,9 @@ label endTania:
 
     ki "It's now or never."
 
-    $chat.addmessage(liv, "Just now :D")
+    $chat.addmessage(fon, "Just now :D")
 
-    show t flirty with dissolve
+    show t 1t at f12
 
     pause 0.2
 
@@ -112,7 +114,7 @@ label endTania:
 
         s "Alright chat, hang on. Looks like this part of the game is broken."
 
-        $chat.addmessage(liv, ":D :D :D :D")
+        $chat.addmessage(fon, ":D :D :D :D")
 
         pause 0.5
 
@@ -140,7 +142,7 @@ label endTania:
 
         scene bg black with fade
 
-        $chat.addmessage(liv, "I'll never tell ;)")
+        $chat.addmessage(fon, "I'll never tell ;)")
 
         s "I think we should consider that the good ending."
 
@@ -180,6 +182,6 @@ label endTania:
     else:
         s "Fluck! Flock! Flick!"
 
-        s "We're just gonna move on. That's so disappointing!"
+        s "We're just gonna... that's, we're just gonna move on."
 
     jump taniaChoice

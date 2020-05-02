@@ -97,7 +97,7 @@ label endingTania:
 
     t "I can't explain it over the phone. Not in a way that makes sense."
 
-    t "I can still feel Liv. Creeping around in my head."
+    t "I can still feel Fontaine. Creeping around in my head."
 
     s "You too?"
 
@@ -422,7 +422,7 @@ label endingTania:
 
     t "You lived inside a simulation for quite a while, yourself. I wonder what is so unbelievable about it."
 
-    t "Thanks for cracking that open, by the way. I thought Liv was going to keep us there forever."
+    t "Thanks for cracking that open, by the way. I thought Fontaine was going to keep us there forever."
 
     s "... I need to sit."
 
@@ -515,7 +515,7 @@ label endingTania:
 
         t "I'm saying you had a choice, but it wasn't you who made it. It doesn't mean the way you feel about me now isn't legitimate."
 
-        t "It could've been Robin, you know. I imagine she's the most desirable, perhaps even the one Liv intended you to fall for."
+        t "It could've been Robin, you know. I imagine she's the most desirable, perhaps even the one Fontaine intended you to fall for."
 
         "Tania chuckles through the robot."
 
@@ -650,7 +650,7 @@ label endingTania:
                 t "I'd have legs, for example."
                 s "I'm sorry."
                 t "Don't be. Just live."
-                s "Liv? What?"
+                s "Fontaine? What?"
                 t "Oh. Sorry. Just stay alive, I mean."
                 s "... oh."
             else:
@@ -685,13 +685,13 @@ label endingTania:
                 t "I just wanted you to know what happened."
                 s "... I'm fine with that."
                 t "Oh?"
-                s "If it meant stopping Liv, I'm fine with it."
+                s "If it meant stopping Fontaine, I'm fine with it."
                 t "Good. I would've killed you, too, if she'd tried to hide in you."
                 "I find myself smiling, somehow."
                 s "I'd hope so."
                 #end of lichelle not severed
             else:
-                t "She's in isolation, though. It'll be weeks. I have to ensure she's free of Liv's influence."
+                t "She's in isolation, though. It'll be weeks. I have to ensure she's free of Fontaine's influence."
                 s "I understand."
         
             # robin endings
@@ -849,11 +849,11 @@ label endingTania:
 
         d "Shush."
 
-        s "That's her. That's Liv! She killed Robin. She did it!"
+        s "That's her. That's Fontaine! She killed Robin. She did it!"
 
         e "Who's Robin?"
 
-        d "Doc, your name is Liv Leibniz?"
+        d "Doc, your name is Fontaine Leibniz?"
 
         o "... it is. It's not unheard of for coma patients to hear what's said around them."
 
@@ -1071,7 +1071,7 @@ label endingTania:
 
             o "I'll have the nursing staff check in on you later, then."
 
-            s "Thanks, Liv."
+            s "Thanks, Fontaine."
 
             o "Anytime, love."
 

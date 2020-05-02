@@ -181,6 +181,6 @@ label c5robinInterview:
     else:
         $renpy.notify("Object: Robin does not exist.") 
         
-        $chat.addmessage(liv,"Robin's gone, baby. She wouldn't be, except you... you know. ;)")
+        $chat.addmessage(fon,"Robin's gone, baby. She wouldn't be, except you... you know. ;)")
 
         pause    

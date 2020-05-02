@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/labels/00-00definitions.rpy", line 81: expected ':' not found.
-    transform mtl(spriteXRight)
-                               ^
+File "game/labels/0000-TestRoom.rpy", line 56: end of line expected.
+    narr "[temp]" (what_color="#bcb4ec") at alphaFade
+                                         ^
+
+File "game/labels/0000-TestRoom.rpy", line 58: end of line expected.
+    narr "[temp]" at alphaFade
+                  ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Apr 21 21:17:46 2020
+Fri May 01 15:09:10 2020

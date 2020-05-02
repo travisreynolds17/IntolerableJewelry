@@ -9,13 +9,13 @@ label common4:
 
     ki "Everything hurts. Maybe it doesn't. Maybe I feel fine and it's just the maelstrom in my heart throwing everything off."
 
-    $chat.addmessage(elsa, "What could you possibly know, Liv?")
+    $chat.addmessage(elsa, "What could you possibly know, Fontaine?")
 
     ki "Robin's mad monologue echoes against the corners of waking dreams."
 
     ki "Cassandra is wonderful. She's my idol, someone I've adored from afar for years."
 
-    $chat.addmessage(cake, "Liv seems to know a lot of things")
+    $chat.addmessage(cake, "Fontaine seems to know a lot of things")
 
     ki "And yet, my idol is an alcoholic, medicating her agony with liquor."
 
@@ -33,7 +33,7 @@ label common4:
 
     k "Hm? I'm awake."
 
-    $chat.addmessage(liv, "But it is. :) My mother gave it to me.")
+    $chat.addmessage(fon, "But it is. :) My mother gave it to me.")
 
     ki "I'm not."
 
@@ -47,13 +47,13 @@ label common4:
 
     k "Coming!"
 
-    $chat.addmessage(elsa, "So tell us all, Liv. How am I gonna get Sophie to open her door?")
+    $chat.addmessage(elsa, "So tell us all, Fontaine. How am I gonna get Sophie to open her door?")
 
     ki "I dress quickly in the last set of whites, gather my needs, and head for the door."
 
     ki "Is b-roll really that urgent?"
 
-    $chat.addmessage(liv, "Private :)")
+    $chat.addmessage(fon, "Private :)")
 
     scene bg black with fade
 
@@ -63,7 +63,7 @@ label common4:
 
     ki "Oddly heavily."
 
-    $chat.addmessage(liv, "But you bared yourself for me only a moment ago. :) How can you hate me?")
+    $chat.addmessage(fon, "But you bared yourself for me only a moment ago. :) How can you hate me?")
 
     pause 2.0
     # sound? flash?
@@ -76,7 +76,7 @@ label common4:
 
     s "Guys. Game."
 
-    $chat.addmessage(liv, "No. Private chat. ;)")
+    $chat.addmessage(fon, "No. Private chat. ;)")
 
     s "Cassandra? You left your choker around my arm."
 
@@ -84,11 +84,11 @@ label common4:
 
     pause 0.5
 
-    $chat.addmessage(liv, "Beaver, here's the pic you wanted ;)")
+    $chat.addmessage(fon, "Beaver, here's the pic you wanted ;)")
 
     pause 1.5
 
-    $chat.addmessage(liv, "Just kidding ;0)")
+    $chat.addmessage(fon, "Just kidding ;0)")
 
     pause 0.5
 
@@ -215,7 +215,7 @@ label common4:
 
     ki "Her hands are on either side of her head. She's just... saying Robin's name over and over." 
     
-    $chat.addmessage(liv,"it's okay Lichelle, bring that fine ass over here ;)")
+    $chat.addmessage(fon,"it's okay Lichelle, bring that fine ass over here ;)")
 
     ki "Crying out for forgiveness."
 
@@ -346,7 +346,7 @@ label common4:
         elsa.name = "ElsaLingus"
         # add liv's bio to list.
         bioColumns = 5
-        allBios.append(livBio)
+        allBios.append(fonBio)
         livBio.font = fontEntity
         livBio.fontColor = colorEntity
 
@@ -399,7 +399,7 @@ label common4:
 
     un "What about you two?"
 
-    $chat.addmessage(elsa, "Thanks for the pleasure, Liv. I'll never give you up again.")
+    $chat.addmessage(elsa, "Thanks for the pleasure, Fontaine. I'll never give you up again.")
 
     show c heartbroken at left with dissolve
 
@@ -413,7 +413,7 @@ label common4:
 
     un "... let... let us go..."
 
-    $chat.addmessage(bong, "Liv Love LoL")
+    $chat.addmessage(bong, "Fontaine Love LoL")
 
     show l happy
 
@@ -486,7 +486,7 @@ label common4:
 
     un "Sophie, you haven't figured us out yet? After all those hints?"
 
-    $chat.addmessage(sophie, "... Liv?")
+    $chat.addmessage(sophie, "... Fontaine?")
 
     pause 0.1
 
@@ -518,7 +518,7 @@ label common4:
 
     o "We are. No more than that."
 
-    $chat.addmessage(egg, "I need Liv to show up in person, so fine, mmm")
+    $chat.addmessage(egg, "I need Fontaine to show up in person, so fine, mmm")
 
     o "And you have a microphone turned on, genius."
 
@@ -554,7 +554,7 @@ label common4:
 
     k "Elsa? I... I feel like I know you?"
 
-    $chat.addmessage(liv, "Not after earlier it isn't ;)")
+    $chat.addmessage(fon, "Not after earlier it isn't ;)")
 
     o "You know all of us, angel."
 
@@ -775,11 +775,11 @@ label common4:
 
     k "You. Whoever you are!"
 
-    o "We? We are Liv." 
+    o "We? We are Fontaine." 
     
     $chat.addmessage(shub,"Kylie's got that thickness. Sophie's looks like all she eats is powder.")
 
-    k "There has to be another way, Liv. A way for Sophie and I both to live!"
+    k "There has to be another way, Fontaine. A way for Sophie and I both to live!"
 
     show l sad at right
 
@@ -791,13 +791,13 @@ label common4:
 
     o "Y-y-you are the last life we need." 
     
-    $chat.addmessage(elsa,"Liv, you sweetie, making things up ;)")
+    $chat.addmessage(elsa,"Fontaine, you sweetie, making things up ;)")
 
     k "What?"
 
     o "Once you are born, dearest Kylie, we all will break through her reality's perimeter!" 
     
-    $chat.addmessage(bar,"killing for the lols, Liv?")
+    $chat.addmessage(bar,"killing for the lols, Fontaine?")
 
     s "... how many others...?"
 
@@ -921,7 +921,7 @@ label common4:
     
     $chat.addmessage(egg,"hey LIV cut her some slack") 
     
-    $chat.addmessage(liv,"Only because you asked nicely TweeterEgg ;)")
+    $chat.addmessage(fon,"Only because you asked nicely TweeterEgg ;)")
 
     o "We are certain we explained it fully."
 

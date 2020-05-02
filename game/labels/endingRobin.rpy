@@ -129,7 +129,7 @@ label endingRobin:
 
         r "I find your incredulity disheartening, darling. Do you suppose a single instance of rationality-breaking oddity exists, then?"
 
-        s "So there's more of them. More like Liv."
+        s "So there's more of them. More like Fontaine."
 
         r "Like it, yes, but not exactly like it."
 
@@ -145,7 +145,7 @@ label endingRobin:
 
         "I feel like all I can do is react, at this point. Even then, it is flat. I am a boxer being rabbit punched after the bell."
 
-        r "I went to that place to hunt Liv and add its name to my own horde."
+        r "I went to that place to hunt Fontaine and add its name to my own horde."
 
         show image splashEKGFull at summonEKG
         pause 0.3
@@ -205,7 +205,7 @@ label endingRobin:
 
         pause 0.4
 
-        r "I thought I could wrest control away from Liv. In this world, perhaps I could have."
+        r "I thought I could wrest control away from Fontaine. In this world, perhaps I could have."
 
         r "In the simulation, I could not touch it."
 

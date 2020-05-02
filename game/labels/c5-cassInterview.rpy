@@ -80,13 +80,13 @@ label c5cassInterview:
 
                 k "I just don't understand any of this!"
 
-                c "<I don't think any of us do. Only Liv knows what's going on.>"
+                c "<I don't think any of us do. Only Fontaine knows what's going on.>"
 
                 k "I have to tell you something else."
 
                 c "<This is the time to do it, Kylie. I'll listen to whatever you have to say.>"
 
-                k "I think I'm glad Liv did this."
+                k "I think I'm glad Fontaine did this."
 
                 c "<Wait, really?>"
 
@@ -136,7 +136,7 @@ label c5cassInterview:
 
                 
                 
-                $chat.addmessage(liv,"Imagine your first broken heart to be among the first emotions you ever get to feel. Oh, Kylie. :(")
+                $chat.addmessage(fon,"Imagine your first broken heart to be among the first emotions you ever get to feel. Oh, Kylie. :(")
                 
                 $cassDone[3] = True
 

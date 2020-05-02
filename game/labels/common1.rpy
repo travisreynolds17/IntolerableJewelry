@@ -49,7 +49,7 @@ label common1:
         chat.addmessage(
             elsa, "Hey sister! Wait, is this a VN? A DATING SIM?!?")
         chat.addmessage(bong, "Date me Sophie lol I'll be your date")
-        chat.addmessage(liv, "I love this game! <B")
+        chat.addmessage(fon, "I love this game! <B")
         chat.addmessage(beav, "Jeez, why")
         chat.addmessage(fizz, "How are you feeling these days?")
         chat.addmessage(elsa, "Yeah are you still okay????")
@@ -62,9 +62,9 @@ label common1:
 
     s "Thanks, Fizz, how are you tonight? Did your test go okay?"
 
-    s "Hi Liv! You know this game, too? No spoilers, okay? Also, I don't think we've met, welcome!"
+    s "Hi Fontaine! You know this game, too? No spoilers, okay? Also, I don't think we've met, welcome!"
 
-    $chat.addmessage(liv, "It's my favorite game.")
+    $chat.addmessage(fon, "It's my favorite game.")
 
     s "Oh my god, Bong, stop, you horndog. I'm gonna be here all night."
 
@@ -82,21 +82,21 @@ label common1:
 
     s "Seriously, I've never been better. I'm independent again, no seizures, I can stream all I want. And I can hang out with you guys!"
 
-    $chat.addmessage(liv, "No spoilers, I can't wait to see if you can make it ;)")
+    $chat.addmessage(fon, "No spoilers, I can't wait to see if you can make it ;)")
 
     s "Thanks Twixt. I'm not ready to date in real life just yet, but I'm ready to date in this game we're gonna start playing right now!"
 
     $chat.addmessage(elsa, "don't date, practice self love")
 
     $chat.addmessage(bong, "weird u can see chat if I have window closed")
-    $chat.addmessage(liv, "No, that's part of the game. Even chat can switch some windows.")
+    $chat.addmessage(fon, "No, that's part of the game. Even chat can switch some windows.")
     # goes through title screen
 
     s "So we already named our protag, and of course I named her Kylie. I'm happy it let me choose to be a girl, by the way."
 
     $chat.addmessage(bar, "Why Kylie?")
 
-    s "Wait, really, Liv? That's interesting! So now all of you get to know how I feel when I get behind on chat and have to catch back up, ha!"
+    s "Wait, really, Fontaine? That's interesting! So now all of you get to know how I feel when I get behind on chat and have to catch back up, ha!"
 
     s "Twixt, it's because Kylie's my middle name. Everyone called me Kylie when I was just an egg."
 
@@ -145,7 +145,7 @@ label common1:
     $chat.addmessage(elsa, "nooooooo")
     $chat.addmessage(bong, "red E")
     $chat.addmessage(egg, "What's this game?")
-    $chat.addmessage(liv, "BEST game.")
+    $chat.addmessage(fon, "BEST game.")
     $chat.addmessage(fizz, "Not as good as Super Threatroid, not possible.")
     $chat.addmessage(beav, "Is it like Lass Effects?")
     $chat.addmessage(bong, "More like L'ASS EFFECTS")
@@ -153,7 +153,7 @@ label common1:
     $chat.addmessage(egg, "lol")
     $chat.addmessage(beav, "hahahha")
     $chat.addmessage(bar, "C'mon")
-    $chat.addmessage(liv, "You're so funny, Oberbong.")
+    $chat.addmessage(fon, "You're so funny, Oberbong.")
     $chat.addmessage(bong, "doin god's work ma'am")
 
     t 1m "That's what I want to hear. Now, get in there and find love!"
@@ -169,7 +169,7 @@ label common1:
     $chat.addmessage(beav, "Assholes.")
     $chat.addmessage(fizz, "Tania's already best girl. 10/10")
     $chat.addmessage(elsa, "I like her hair")
-    $chat.addmessage(liv, "I love Tania so much!")
+    $chat.addmessage(fon, "I love Tania so much!")
 
     # checks chat
     pause 1.0
@@ -221,11 +221,11 @@ label common1:
         chat.addmessage(egg, "Sexy choker girl.")
         chat.addmessage(bong, "its true. they're all fake anyway")
 
-    c 1o speak "..."
+    c 1o "..."
 
     ki "I love her choker. Can't say I'm familiar with the song, though."
 
-    $chat.addmessage(liv, "Ugh, no spoilers, but her choker :(")
+    $chat.addmessage(fon, "Ugh, no spoilers, but her choker :(")
 
     t 1o "Generally I'd ask our Suitor to say a few words, but Cassandra... well, I'll let her tell you."
 
@@ -245,7 +245,7 @@ label common1:
 
     t 2q "Anyone out there able to read ASL? No? Our next Suitor is, and she's offered to help us out."
 
-    show t at tf13
+    show t 1a at f13
 
     show c 1a at mt1
     pause 0.5
@@ -268,7 +268,7 @@ label common1:
     python:
         chat.addmessage(bong, "tell your sister come see me")
         chat.addmessage(cake, "my sister's an asshoel")
-        chat.addmessage(liv, "Oh, Robin, I love you <B")
+        chat.addmessage(fon, "Oh, Robin, I love you <B")
 
     s "I hear you, Kylie."
 
@@ -314,7 +314,7 @@ label common1:
 
     ki "Her pause is a teasing one. From the wings I can almost feel her authority radiating outward; This is a woman used to controlling the conversation."
 
-    $chat.addmessage(liv, "FizzyFizion you're so smart!")
+    $chat.addmessage(fon, "FizzyFizion you're so smart!")
 
     r 1o "... I would say the thirsty come to me for water."
 
@@ -351,7 +351,7 @@ label common1:
     l "Hey crew! How are good god you're tall."
 
     $chat.addmessage(elsa, "God you're gross @OberBong.")
-    $chat.addmessage(liv, "Aw, Lichelle is so great!")
+    $chat.addmessage(fon, "Aw, Lichelle is so great!")
 
     show r 1j
 
@@ -379,12 +379,12 @@ label common1:
 
     l 1k "Anyway."
 
-    $chat.addmessage(bar, "Liv, you like everybody.")
+    $chat.addmessage(bar, "Fontaine, you like everybody.")
 
     l "I'm just living life. I'm not in a training camp right now so I can eat what I want and make time to visit a TV show or two."
 
     $chat.addmessage(fizz, "A cutwoman or a cutman is there to stop a pro fighter's bleeding between rounds.")
-    $chat.addmessage(liv, "I love them. Wow, Fizz! Smarty smart. Handsome too?")
+    $chat.addmessage(fon, "I love them. Wow, Fizz! Smarty smart. Handsome too?")
 
     hide l at fr13
     hide c at f12
@@ -401,7 +401,7 @@ label common1:
 
     c "..."
 
-    $chat.addmessage(bong, "think Liv might be catfishin")
+    $chat.addmessage(bong, "think Fontaine might be catfishin")
 
     show r 1j at fl11
 
@@ -425,8 +425,8 @@ label common1:
 
     s "Hey Bong, be nice."
 
-    $chat.addmessage(bong, "sorry Liv")
-    $chat.addmessage(liv, "Nothing to forgive. I'll prove I'm not catfishing. Check private chat.")
+    $chat.addmessage(bong, "sorry Fontaine")
+    $chat.addmessage(fon, "Nothing to forgive. I'll prove I'm not catfishing. Check private chat.")
 
     hide l at fr12
     pause 0.5
@@ -475,7 +475,7 @@ label common1:
 
     t "It is! So, tell us a little bit about yourself?"
 
-    $chat.addmessage(bong, "holy shit guys, Liv is for real.")
+    $chat.addmessage(bong, "holy shit guys, Fontaine is for real.")
 
     k "Sure. Okay, um, I just graduated with a bachelor's in graphic design and I've been putting out feelers to get my career going."
 
@@ -723,13 +723,13 @@ label common1:
 
     k "No more than the last time I was in front of three dream girls and thousands of fans."
 
-    $chat.addmessage(fizz, "I'm really curious about Cassandra. Why's Robin mistranslating? Liv was sad about her choker. What's up with that?")
+    $chat.addmessage(fizz, "I'm really curious about Cassandra. Why's Robin mistranslating? Fontaine was sad about her choker. What's up with that?")
 
     s "Chat, I don't know about you, but I'm ready for a hot date. Let's take a sec to catch up though. Um..."
 
     $chat.addmessage(elsa, "Cassandra's in a cult. No doubt. Vow of silence. For sure.")
 
-    $chat.addmessage(crab, "Liv and Bong been awful quiet")
+    $chat.addmessage(crab, "Fontaine and Bong been awful quiet")
 
     s "I know guys, I'm pretty curious about Cassandra. Like, are we gonna find out why she can't talk? Or like... maybe she has some dark secret and she chooses not to speak."
 
@@ -739,7 +739,7 @@ label common1:
 
     s "Tweeter is interested in Elle, but wants to see her with her shirt off to find out if she has man-muscles. Uh-huh. I'm sure that's all."
 
-    $chat.addmessage(shub, "Tania's right there. She got richgurl money, bet. Lively.")
+    $chat.addmessage(shub, "Tania's right there. She got richgurl money, bet. Fontaineely.")
 
     s "Shub's disappointed Tania's not available. She's got lots of energy, I agree. Her last name sounds like her parents are rich, right, right."
 
@@ -987,11 +987,11 @@ label common1:
     s "Bong, you pick a girl yet?"
 
     $chat.addmessage(elsa, "Need some dude options!")
-    $chat.addmessage(egg, "he picked Liv")
+    $chat.addmessage(egg, "he picked Fontaine")
 
     pause 0.5
 
-    s "I guess Bong and Liv did both vanish at once. Probably just coincidence, right?"
+    s "I guess Bong and Fontaine did both vanish at once. Probably just coincidence, right?"
 
     $chat.addmessage(bar, "prob!")
 
@@ -1027,16 +1027,16 @@ label common1:
             [egg, "Pretty obvious"],
             [fizz, "NO"],
             [crab, "This game sux"],
-            [liv, "NO"],
-            [shub, "Hey, Liv's back"],
-            [liv, "This is the best game."],
+            [fon, "NO"],
+            [shub, "Hey, Fontaine's back"],
+            [fon, "This is the best game."],
             [cake, "So did you really private chat with Bong?"],
-            [liv, "Yes. He's a pretty boy."],
+            [fon, "Yes. He's a pretty boy."],
             [elsa, "Is he? I kind of imagined him as a greasy neckbeard."],
-            [liv, "No."],
+            [fon, "No."],
             [egg, "Bong said you were HAWT af"],
-            [liv, "Oh, I don't know about that. ;)"],
-            [liv, "Sophie, where'd you go? You need to play!"]
+            [fon, "Oh, I don't know about that. ;)"],
+            [fon, "Sophie, where'd you go? You need to play!"]
 
 
         ]
@@ -1052,7 +1052,7 @@ label common1:
 
     $chat.addmessage(crab, "Were you peeing")
 
-    s "Oh, welcome back Liv."
+    s "Oh, welcome back Fontaine."
 
     s "If you have to know, yes, I went to the restroom. You guys are freaks."
 
@@ -1093,7 +1093,7 @@ label common1:
 
     s "Am I wearing a little black dress to go ice skating? Hey Bong, what do you think?"
 
-    $chat.addmessage(liv, "I want to see you in the little dress.")
+    $chat.addmessage(fon, "I want to see you in the little dress.")
 
     s "Exactly, cake. Not feeling a pantsuit for Cassandra."
 
@@ -1103,7 +1103,7 @@ label common1:
 
         "Little Black Dress":
             ki "I think she might like something simple. She's a musician, and a successful one, so she might take us somewhere classy?"
-            $chat.addmessage(liv, "Yay!")
+            $chat.addmessage(fon, "Yay!")
             $outfitCurrent = "Dress"
             $outfitBlackDress += 1
 
@@ -1155,6 +1155,8 @@ label common1:
     $chat.addmessage(cake, "I saw a lot of b-roll in my porn director days")
 
     t 1l "Let's go!"
+
+    hide t at f12
 
     $hideGui()
 

@@ -1,6 +1,6 @@
 label biographies:
 
-    # this file contains class objects and screens for the character bio section that opens in common4, that way Liv isn't just expositing
+    # this file contains class objects and screens for the character bio section that opens in common4, that way Fontaine isn't just expositing
 
     init python:
         # reate a class that stores information for each individual biography.
@@ -38,6 +38,9 @@ label biographies:
 
             def loveUp(self):
                 self.love += 1
+
+            def setAge(self, value):
+                self.age = value
 
         # the different biographies are meant to be displayed as a character
 
@@ -88,7 +91,7 @@ label biographies:
 
         ]
 
-        livTrivia = [
+        fontTrivia = [
             "Mwah!",
             "ASMR sounds",
             "Private message?",
@@ -160,7 +163,7 @@ label biographies:
             "Louisa really did want to become a chef. A girl with no resources can only pay for education in a few ways.",
             "Did Louisa ever tell you she went back to Bucharest once? Her whole family had disappeared. Poof. Gone.",
             "Robin's been stabbed three times, choked nearly to death, shot at twice, and almost died of sepsis once.",
-            "Did you ever ask yourself how I, Liv, know things I wasn't around to see?",
+            "Did you ever ask yourself how I, Fontaine, know things I wasn't around to see?",
             "Louisa cried every time you two were intimate, but she waited until she was alone to do it.",
             "Robin loved you, loved being touched by you, but the memories it brought up tortured her.",
             "Louisa would never have told you about her past, even your shared connection. She didn't want you to run.",
@@ -238,12 +241,12 @@ label biographies:
 
         ]
 
-        livBioText = [
+        fontBioText = [
             "I don't know this person yet.",
-            "I've been with you for such a long time, Sophie! Longer than anyone, really, if you consider the multiplicative effect opioids have on time perception.\n\nThe best part about all this is how willingly you let me into your arms. I love when I can be literal and figurative in the same phrase!\n\nI'll kill you someday. It might be soon. It might be tomorrow. It might be five minutes ago. But I love you, either way. I love you so deeply, so completely, a filthy bitch like Robin can't stand up to the light I produce.\n\nI loved her, too, but she couldn't stand in my presence. She was too weak. Even when you shared me with her, she wasted me.\n\nI will hold you close. I will keep you here, where you need me, for as long as you live. And when you die, people will remember you not as Sophie, the professional streamer, but as Sophie, who devoted her life to Oblivion.",
+            "I've been with you for such a long time, Sophie! Longer than anyone, really, if you consider the multiplicative effect opioids have on time perception.\n\nThe best part about all this is how willingly you let me into your arms. I love when I can be literal and figurative in the same phrase!\n\nI'll kill you someday. It might be soon. It might be tomorrow. It might be five minutes ago. But I love you, either way. I love you so deeply, so completely, a filthy bitch like Robin can't stand up to the light I produce.\n\nI loved her, too, but she couldn't stand in my presence. She was too weak. Even when you shared me with her, she wasted me.\n\nI will hold you close. I will keep you here, where you need me, for as long as you live. And when you die, people will remember you not as Sophie, Internet-famous gamer, but as Sophie, but the sad, sad statistic.",
         ]
 
-        livTrivia = [
+        fontTrivia = [
             "I am an eldritch abomination! Ha ha ha ha no, no, I'm kidding. Cosmic monsters can't be understood by the human mind. You understand me.",
             "I love that I've penetrated you. ;)",
             "My entire being is a product of your failures, but it's only because of me that you can rise above them.",
@@ -287,14 +290,14 @@ label biographies:
                             lichBioText, "25", "Carmine Red", lichTrivia, "Hell no", "Nope", "MMA", "My dad", "66 inches", "Baltimore, Md.")
         robinBio = Biography(2, "Robin Godfrey", "", robinBioText, "24",
                              "Royal Purple", robinTrivia, "Not yet", "Innumerable", "None", "You", "73 inches", "Bucharest, Romania")
-        livBio = Biography(5, "Oblivion Leibniz", "", livBioText, "R/BG13:14-15", "China White", livTrivia, "I can't have kids. Comfort me?", "I love animals!", "I don't understand sports", "Sophie ;)", "All of them, if I want", "Everywhere!")
+        fontBio = Biography(5, "Fontaine", "", fontBioText, "R/BG13:14-15", "China White", fontTrivia, "I can't have kids. Comfort me?", "I love animals!", "I don't understand sports", "Sophie ;)", "All of them, if I want", "Everywhere!")
 
         taniaBio = Biography(3, "Tania van der Waal", "",
                              taniaBioText, "26", "Tuscan Sun", taniaTrivia, "No", "Cats Ferg, Della, Kana",  "Gymnastics", "R/BG13:14-15 Langford", "65 inches", "Centralia, Penn.")
         kylieBio = Biography(4, "Kylie", "", kylieBioText, "23", "Golden Poppy", kylieTrivia, "Someday",
                              "Someday I'll have a dog", "Basketball, I guess", "Elizabeth Bathory, jk", "66 inches", "Sobredosis, Nevada")
 
-        # append Liv in common4 after change
+        # append Fontaine in common4 after change
         allBios = [cassBio, lichBio, robinBio, taniaBio, kylieBio]
         allStats = ["Height:", "Hometown:", "Pets:", "Age:",
                     "Fav. Color:", "Fav. Sport:", "Kids:", "Idol:"]
@@ -303,9 +306,9 @@ label biographies:
         for i in allBios:
             i.font = allFonts[i.idNum]
             i.fontColor = allColors[i.idNum]
-        #go ahead and set up Liv's font.
-        livBio.font = fontEntity
-        livBio.fontColor = colorEntity
+        #go ahead and set up Fontaine's font.
+        fontBio.font = fontEntity
+        fontBio.fontColor = colorEntity
         # =============SCREEMS======================================================================================================
 
         bioBlockWd = 300
@@ -391,7 +394,7 @@ label biographies:
                     xysize(40, 40)
                     action Function(closeAskTania)
 
-            # button grid. columns will be set programatically. i.e. we'll add liv near the end
+            # button grid. columns will be set programatically. i.e. we'll add font near the end
             grid 2 bioColumns:
                 spacing 10
                 transpose True  # fill columns first

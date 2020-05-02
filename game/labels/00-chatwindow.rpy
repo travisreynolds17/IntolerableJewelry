@@ -37,7 +37,7 @@ label chatwindow:
         elsa = Chatter("ElsaLater", "#927732")
         fizz = Chatter("FizzyFizion", "#f21332")
         egg = Chatter("TweeterEgg101", "#a21332")
-        liv = Chatter("Liv", "#921344")
+        fon = Chatter("Fontaine", "#921344")
         obliv = Chatter("Oblivion", "#921332")
         bar = Chatter("TwixtBar", "#999332")
         beav = Chatter("AngeredBeaver69", "#921332")

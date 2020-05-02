@@ -32,7 +32,7 @@ call leftbtnwindow
 label start:
 
   # just to whatever we're testing currently
-    jump common1
+    jump testRoom
 
     # This ends the game.
 
