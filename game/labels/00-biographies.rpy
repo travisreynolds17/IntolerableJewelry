@@ -42,6 +42,9 @@ label biographies:
             def setAge(self, value):
                 self.age = value
 
+            def setName(self, value):
+                self.char = value
+
         # the different biographies are meant to be displayed as a character
 
         robinTrivia = [
@@ -112,6 +115,10 @@ label biographies:
             "Obviously, you're the main character! Congrats, protag, you did it.",
             "It's kind of strange to be telling you about yourself, Kyles.",
             "Maybe I'll have more to say as I get to know you better."
+        ]
+
+        altKylieTrivia = [
+            "TBD"
         ]
 
         taniaTrivia = [
@@ -371,6 +378,7 @@ label biographies:
 
     default askTaniaBack = Image("img/askTania.png")
     default bioBack = Image("img/bioTest.png")
+    default taniaFace = askTa
 
     transform bio1:
         xpos 400 ypos 120 alpha 0.0
@@ -378,6 +386,8 @@ label biographies:
 
     screen askTania:
         modal True
+
+        
 
         fixed at alphaFaster:
             add askTaniaBack
@@ -416,6 +426,11 @@ label biographies:
                         text "Bio"
                         background "#444444"
                         action Function(showBio, i)
+
+        image taniaFace:
+            xalign 1.0
+            yalign 1.0
+            zoom 0.8
 
     screen speechBubble:
         fixed at growShrink:

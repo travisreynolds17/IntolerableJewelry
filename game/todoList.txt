@@ -31,6 +31,7 @@ Revamp affection system to:
     t) need to make end credits
     u) more trivia for each character? Though I think too much might be too much. Speaking of which:
         - Kylie's trivia needs to be updated to reflect her choices in the game.
+    v) side story for each character? something to trigger maybe during dates?
     
 
 

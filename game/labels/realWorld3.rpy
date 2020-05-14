@@ -2,11 +2,13 @@ label realWorld3:
     
     "She was the host."
 
-    "I think."
+    "For a while."
 
     "I met her there, sitting outside by the fountain, scribbling away on my sketch pad."
 
-    "Where did you find that, I wondered to her face."
+    "Hey. That's mine."
+
+    "Where did you find that, I asked her, courageous."
 
     "She showed me her drawing, and I was amazed at how precise a single point could be."
 
@@ -24,7 +26,15 @@ label realWorld3:
 
     "Mmm. Thank you for saying so."
 
-    "Elsa's going to feel madness someone else."
+    "You know Elsa, too?"
+
+    "You've been watching me."
+
+    "Yes."
+
+    "I was waiting for you to say something."
+
+    "This is how our conversation went."
 
     menu:
         "Are we dreaming?"
@@ -109,6 +119,6 @@ label realWorld3:
 
     "I can't feel your fingers. What did you put in me?"
 
-    "Oblivion."
+    "Peace."
 
     jump robinDate2

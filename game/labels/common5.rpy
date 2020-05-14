@@ -15,29 +15,35 @@ label common5:
     $showGui()
     pause 0.5
 
-    "There's a shift, only barely perceptible, as the entity releases its control of Lichelle."
 
-    "It isn't dramatic, nor could it be taken as a clear indication of anything, but it's enough to put Kylie a little bit at ease."
+    show t 1b at f11
+    pause 0.3
 
-    
+    show c 1b at f12
+    pause 0.3
+
+    show l 1b at f12
+    pause 0.3
+
+    "The restraints clink and tumble away from the their skin."
     
     $chat.addmessage(crab,"Who's voice is that?")
 
-    k "You okay?"
+    k "You girls okay?"
 
-    "Cassandra and Tania flank the fighter and take gentle hold of her shoulders."
+    "Cassandra and Tania flank Lichelle as she stumbles, glassy-eyed, and take gentle hold of her shoulders."
 
     $renpy.notify("She can't be gone.")
 
-    l "... I'm good. I guess."
+    l 1q "... I'm good. I guess."
 
-    c "< Glad to hear it. >" 
+    c 1m "Glad to hear it." 
 
-    t "I hate to say it, but you'll get used to Oblivion the more you're around her."
+    t 1q "I hate to say it, but you'll get used to Fontaine the more you're around her."
 
     pause 0.4
 
-    t "Assuming she allows us more time."
+    t 1b "Assuming she allows us more time."
 
     k "Is there anything we can do to get out of this?" 
     
@@ -45,21 +51,25 @@ label common5:
 
     "Three sets of eyes gaze back at Kylie, forlorn, hopeless, and fiercely annoyed."
 
-    t "I tried to tell you. I'm the only one with the power to do it."
+    t 1k "I tried to tell you. I'm the only one with the power to do it."
 
     $renpy.notify("I didR/BG13:14-15 no more time. You have to make a decision!")
 
+    pause 0.8
+
+    t "See?"
+
     "Kylie pauses, wringing her hands, keenly aware of them being her own hands now."
 
-    k "I don't know."  
+    k "I don't understand."  
     
     $chat.addmessage(bar,"There's no way she could. Don't blame Kylie for Sophie's choices.")
 
-    c "< It's too late now. Whatever's decided is decided. >"
+    c 1g "It's too late now. Whatever's decided is decided."
 
     "Tania sighs, a quiet, empty sigh."
 
-    t "Something's interfering with my messages anyway. I'm sorry, Kylie. This isn't your fault."
+    t 1g "Something's interfering with my messages anyway. I'm sorry, Kylie. This isn't your fault."
     
     $chat.addmessage(shub,"right? Kylie is the best of all of us.")
 
@@ -67,19 +77,19 @@ label common5:
     
     $chat.addmessage(fon,"She's so great. :)")
 
-    t "This is what happens when you play this game. Robin dies. You lose sight of yourself." 
+    t 1a "This is what happens when you play this game. Robin dies. You lose sight of yourself." 
     
     $chat.addmessage(elsa,"Hey Fontaine, you're cheating! You're not supposed to be listening right now.")
 
-    c "< And always Robin. >" 
+    c 1a "We know these things, because you know these things." 
     
     $chat.addmessage(fon,"Oopsie! Naughty me ;)")
 
-    t "It lets Robin die. Iterates and expands the flaws of two. Controls one."
+    t 1a "You couldn't have saved her."
 
-    c "<Then, leaves a final gathering like this one where it gives its speeches and lets us be alone for a while.>"
+    c 1k "Everything here recurs. You just... you just keep going back and playing again."
 
-    l "So just like last time, then?" 
+    l 1b "So just like last time, then?" 
     
     $chat.addmessage(bong,"elle's getting it now")
 
@@ -89,13 +99,15 @@ label common5:
 
     "Cassandra and Tania exchange glances, as if silently debating which parent should deliver the bad news."
 
-    t "Dissolution." 
+    t 1q "Dissolution." 
     
     $chat.addmessage(bar,"More like recycling, honestly.")
 
     "An anxious thrill prickles the back of Kylie's neck. She's unsure if that feeling is her own, or how long she's known what it felt like."
 
-    t "Here, we are only objects of intelligence. Frighteningly complex objects, of course, fully realized autonomous beings."
+    t 1o "Here, we are only objects of intelligence. Frighteningly complex objects, of course, fully realized autonomous beings."
+
+    c 1o "You might think of us as code. I don't know how else to describe it."
 
     "There's no hiding the excitement in Tania's tone. Kylie is certain she would have made a wonderful mad scientist in another universe." 
     
@@ -103,21 +115,21 @@ label common5:
 
     "The idea brings with it the realization that another universe might well be around the corner."
 
-    k "If we're just code, what is she?" 
+    k "If we're just code, what is she? Is this some kind of simulation?" 
     
-    $chat.addmessage(fon,"I'm Oblivion, silly.")
+    $chat.addmessage(fon,"I'm Fontaine, silly.")
 
-    c "< I don't know. >"
+    c 1r "I don't know."
 
-    l "Me either babe."
+    l 1r "Me either babe."
 
     k "Tania?" 
     
-    $chat.addmessage(egg,"liivvvvv")
+    $chat.addmessage(egg,"I wanna drown in fountain too")
 
     pause 1.0
 
-    t "I'm sorry everyone. I might know Fontaine best of all of us, but even I don't know the nature of her."
+    t 1b "I'm sorry everyone. I might know Fontaine best of all of us, but even I don't know the nature of her."
 
     t "... Kylie." 
     
@@ -127,21 +139,21 @@ label common5:
     
     $chat.addmessage(bong,"I got something for you to peek at Fontaine :D")
 
-    t "I'm sorry for misleading you." 
+    t 1a "I'm sorry for misleading you." 
     
     $chat.addmessage(fon,"ooh, private message lol ;)")
 
-    c "<I'm sorry for puking on you.>"
+    c 2q "I'm sorry for puking on you."
 
     "Lichelle chuckles, quietly."
 
-    l "I don't think I have anything to be sorry about, but goddamn, I'm sorry, too." 
+    l 2m "I don't think I have anything to be sorry about, but goddamn, I'm sorry, too." 
     
     $chat.addmessage(elsa,"None of you have anything to be sorry for. Only Sophie.")
 
     t "We won't have much more time."
 
-    c "<Kylie. If you have anything else you want to know, or say, you'd better do it now.>"
+    c 1o "Kylie. If you have anything else you want to know, or say, you'd better do it now."
 
     # Last chance to talk with the girls. Maybe a last chance to raise relationsthip points?
 
@@ -180,10 +192,9 @@ label common5:
     
     scene bg stage with fade
 
-    show c at left
-    show t 
-    show l at right
-    with dissolve
+    show c 1a at fl11
+    show t 2a at f12
+    show l 1a at fr13
 
     "They wait."
 
@@ -195,52 +206,52 @@ label common5:
 
     k "So, what now?"
 
-    t "We wait." 
+    t 1k "We wait." 
     
     $chat.addmessage(fon,"The narrator. Of course.")
 
 
     k "Wow... this all feels so anticlimactic."
 
-    t "That's real life, hon. Not everything makes a good story." 
+    t 1m "That's real life, hon. Not everything makes a good story." 
     
     $chat.addmessage(bong,"Aren't we outside of the game?")
 
-    c "< I'd rather go out with a whisper than a bang. >"
+    c 1k "I'd rather go out with a whisper than a bang."
 
-    l "Well, I'm not sitting around and doing nothing." 
+    l 1d "Well, I'm not sitting around and doing nothing." 
     
     $chat.addmessage(fon,"I suppose. Oh, you all make such sense.")
 
-    t "What will you do? Punch a hole in its server? Kick its objects and methods into submission?"
+    t 1k "What will you do? Punch a hole in its server? Kick its objects and methods into submission?"
 
-    l "I just don't like doing nothing."
+    l 1k "I just don't like doing nothing."
 
     $renpy.notify("character.narrator.setValue('Null')")
 
-    c "< I wouldn't know where to begin. >"
+    c 1b "I wouldn't know where to begin."
 
     k "What happens when the game ends?" 
     
     $chat.addmessage(beav,"much better")
 
-    t "The credits roll, darling."
+    t 1a "The credits roll, darling."
 
     k "Credits? Like, names and roles credits?" 
     
     $chat.addmessage(egg,"Hey Fontaine")
 
-    t "The same."
+    t 1m "The same."
 
     k "And we can see them? Whose names are on there?" 
     
     $chat.addmessage(fon,"Not now, I have a headache. ;)")
 
-    c "< It's our names. If you believe the heading text, it's everybody who's ever played this game. >" 
+    c 1m "It's our names. If you believe the heading text, it's everybody who's ever played this game." 
     
     $chat.addmessage(egg,"You don't have a head :p")
 
-    c "< They've gotten really, really long. >"
+    c 2b "They've gotten really, really long."
 
     scene bg black with fade
 
@@ -274,11 +285,11 @@ label common5:
             show image splashEKGFull at summonEKG
             pause 0.3
             k "Nnggh...!"
-            t "Kylie?"
-            l "Babe? You okay?"
+            t 1h "Kylie?"
+            l 1s "Babe? You okay?"
             pause 0.2
             k "... my chest hurts."
-            c "< Is this normal? >"
+            c 1h "Is this normal?"
             k "... I'm okay."
             hide image splashEKGFull at summonEKG
         "Give up":

@@ -3,7 +3,7 @@ label declarations:
 
     init python:
 
-        #time stuff
+        # time stuff
         import time
         year, month, day, hour, minute, second, dow, doy, dst = time.localtime()
 
@@ -36,25 +36,25 @@ label declarations:
         picEntity = "img/pic-Kylie.png"
         picKylie = "img/pic-Kylie.png"
 
-    define s = Character("Sophie", image = "s", who_color="#c5859d", who_font="fonts/Roboto-Black.ttf", what_color=colorKylie, what_font=fontKylie)
+    define s = Character("Sophie", image="s", who_color="#c5859d", who_font="fonts/Roboto-Black.ttf", what_color=colorKylie, what_font=fontKylie)
     # skin tone #c58c85
     # hair tone / name tone #c5859d
-    define r = Character("Robin", image = "r", who_color="#bcb4ec", who_font="fonts/Parisienne-Regular.ttf")
+    define r = Character("Robin", image="r", who_color="#bcb4ec", who_font="fonts/Parisienne-Regular.ttf")
     # skin tone #503335
     # hair tone / name tone #bcb4ec
-    define t = Character("Tania", image = "t", who_color="#a3d1b9", who_font="fonts/Courgette-Regular.ttf")
+    define t = Character("Tania", image="t", who_color="#a3d1b9", who_font="fonts/Courgette-Regular.ttf")
     # skin tone #d1a3a4
     # hair tone / name tone #a3d1b9
-    define c = Character("Cassandra", image = "c", who_color="#89cff0", who_font=fontCass)
+    define c = Character("Cassandra", image="c", who_color="#89cff0", who_font=fontCass)
     # skin tone #a1665e	rgb(161, 102, 94)
     # hair tone / name tone #5e81a1
 
-    define l = Character("Lichelle", image = "l", who_color="#5e81a1", who_font="fonts/ElsieSwashCaps-Black.ttf")
+    define l = Character("Lichelle", image="l", who_color="#5e81a1", who_font="fonts/ElsieSwashCaps-Black.ttf")
     # skin tone #503335
     # hair tone #503933
     # name tone #d46359 (to avoid everything about her being brown so peeps don't get upset)
-    define d = Character("David",  image = "d",)
-    define k = Character("Kylie", image = "k", who_color="#ffa4d5", who_font="fonts/Roboto-Black.ttf")
+    define d = Character("David",  image="d",)
+    define k = Character("Kylie", image="k", who_color="#ffa4d5", who_font="fonts/Roboto-Black.ttf")
     # skin tone #c58c85
     # hair tone / name tone ffa4d5
 
@@ -63,16 +63,14 @@ label declarations:
     # skin tone #c58c85
     # hair tone / name tone #ffa4d5
     define un = Character("???")
-    define sk = Character("Sophie & Kylie", who_color="#c5859d", who_font="fonts/Roboto-Black.ttf")
+    define sk = Character("Sophie & Kylie", who_color="#c5859d", image="k", who_font="fonts/Roboto-Black.ttf")
     define e = Character("[entityName]", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf")
     # skin tone #503335
     # hair tone / name tone
 
-    define m = Character("Mortimer")
-    define o = Character("Fontaine", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf")
-    define girls = Character("Cass, Lichelle & Robin")
-
-    # define a = Character("Ashley")
+    define m = Character("Mortimer", image="m")
+    define o = Character("Fontaine", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf", image="f")
+    define girls = Character("Cass, Lichelle & Tania")
 
     define narr = Character(None, kind=nvl)
 
@@ -88,9 +86,6 @@ label declarations:
     define splashSophieOnDesk = Image("img/splashSophieOnDesk.png")
 
     define glitchGui = Image("img/glitchGUI.png")
-
-
-
 
     # --------------------------------------------------------------------------------------------
 
@@ -123,8 +118,6 @@ label declarations:
         on hide:
             alpha 1.0
             linear 0.5 alpha 0.0
-
-    
 
     # For chatbox
     transform summonChat:
@@ -188,6 +181,7 @@ label declarations:
 # transition
 
     define longFade = Fade(1.0, 0.0, 1.0)
+    define longestFade = Fade(2.0, 0.0, 2.0)
 # -------------------------------------------------------------------------------------------------
 
     init:
@@ -217,10 +211,9 @@ label declarations:
         $entityForgiven = True
 
         $sceneNum = 0
-        #Resistance. near end game the player will get a chance to push back a little
+        # Resistance. near end game the player will get a chance to push back a little
         $resistance = 0
 
-        
         # regarding severance. Ending determined by severance.
         # sever all four girls but not the entity, sophie escapes but everyone dies and the entity lives on. Bad newsreel ending. sever the entity and none of the girls, everyone dies. Bad newsreel ending but entity dead. No need to severkylie. Sever the entity and some of the girls, good ending where whoever's left unsevered dies. sever all four girls and the entity, best ending where all girls meet together and Robin reveals she's the one who was giving out code hints, and tells you she voluntarily went into the code because she's dealt with cosmic entities before. If the girl you have at least 4 romance with survives, hook up IRL for a special exclusive scene.
         # bonus. If at any point you try to sever Kylie, special ending where Sophie wakes up in a hospital bed surrounded by the Unstrung versions of the girls. Bad end. Bonus ending if you try to sever god, the game crashes. Will get one chance each time
@@ -246,63 +239,62 @@ label declarations:
         chatzorder = loveBarsZorder + 1
         historyzorder = loveBarsZorder + 1
         horrorZorder = historyzorder + 1
-        #current position of history objects
-        
+        # current position of history objects
+
         currentHistory = 0
 
-        #decision variables. I'm bad at organizing. 
-        #outfits. These guys are for a few scenes. I don't want to tie love points to this. Too arbitrary.
+        # decision variables. I'm bad at organizing.
+        # outfits. These guys are for a few scenes. I don't want to tie love points to this. Too arbitrary.
         outfitBlackDress = 0
         outfitJeans = 0
         outfitPantsuit = 0
         outfitCurrent = ""
 
-        #variables to show that cover chat window
+        # variables to show that cover chat window
         horrorChat = ""
-        horrorTwixt = [Image("img/twixtNorm.png"), Image("img/twixtNorm1.png"), Image("img/twixtNorm2.png")]
+        horrorTwixt = [Image(
+            "img/twixtNorm.png"), Image("img/twixtNorm1.png"), Image("img/twixtNorm2.png")]
 
-
-    #useful functions
+    # useful functions
 
         # functions to show and hide the primary in-game gui: sophie's stream window
+
         def hideGui():
-            renpy.hide_screen("mainGameWindow") 
+            renpy.hide_screen("mainGameWindow")
             renpy.hide_screen("loveScreen")
             renpy.hide_screen("chatterbox")
             renpy.hide_screen("leftBtnWindow")
             chatIsOn = False
-            renpy.hide_screen("btnWindow") 
+            renpy.hide_screen("btnWindow")
             renpy.pause(2.0)
 
         def showGui():
-            
-            renpy.show_screen("mainGameWindow") 
-            renpy.show_screen("loveScreen") 
+
+            renpy.show_screen("mainGameWindow")
+            renpy.show_screen("loveScreen")
             renpy.show_screen("chatterbox")
             renpy.show_screen("leftBtnWindow")
             chatIsOn = True
-            renpy.show_screen("btnWindow") 
+            renpy.show_screen("btnWindow")
             renpy.pause(2.0)
 
         # create a custom function to display the chat history screen.
         def showChatHistory():
             renpy.show_screen("chatHistory")
-            
+
             renpy.show_screen("historySelect")
             renpy.show_screen("chatRecaps")
-        
 
         def hideChatHistory():
             renpy.hide_screen("chatHistory")
             renpy.hide_screen("historyDisplay")
             renpy.hide_screen("historySelect")
             renpy.hide_screen("chatRecaps")
-     
 
-        #create a custom function that takes a string and returns it in reverse
+        # create a custom function that takes a string and returns it in reverse
 
         def reverseString(userInput):
-            #apparently this is the slice function, and it steps backward. fluckin python
+            # apparently this is the slice function, and it steps backward. fluckin python
             return userInput[::-1]
 
         # return a random x,y coordinate in this game's range. Note: the range is shortened by pixels each direction to account for zoom and RtoL text
@@ -320,25 +312,18 @@ label declarations:
             for i in strings:
                 if random:
                     temp = randomXY()
-                renpy.show(i, at_list = [transform])
+                renpy.show(i, at_list=[transform])
 
+        # function to construct and initialize multiple arrays. Takes a list of lists, a range, and a value to append in
 
-        # function to construct and initialize multiple arrays. Takes a list of lists, a range, and a value to append in 
         def buildArrays(arrayList, max, value):
-            #note, range does not include final digit 
+            # note, range does not include final digit
             for i in arrayList:
                 for k in range(0, max):
                     i.append(value)
-                
 
         # enable NVL mode for monologue
 
         config.empty_window = nvl_show_core
         config.window_hide_transition = dissolve
         config.window_show_transition = dissolve
-            
-
-      
-
-        
-  

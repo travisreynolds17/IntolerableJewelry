@@ -23,11 +23,11 @@ label common4:
 
     ki "Somehow, I'm that idol for Robin."
 
-    $chat.addmessage(elsa, "Your fucking name, for one, is not Oblivion. Christ.")
+    $chat.addmessage(elsa, "Your fucking name, for one, is not Fontaine. Christ.")
 
     ki "And Robin, somehow, stalked me from Europe to the United States. Maybe leaving bloodstains in her path."
 
-    # knock knock
+    # knock knock #SFX
 
     pause 1.0
 
@@ -39,11 +39,11 @@ label common4:
 
     ki "But, I might as well get up. I'll be going out with Lichelle today and all I can hope for is she's at least close to normal."
 
-    $chat.addmessage(beav, "I always forget hot aggro chicks have moms.")
+    $chat.addmessage(beav, "I always forget hot aggro girls have moms.")
 
     ki "Anything less than a disaster will be a win."
 
-    # knock
+    # knock #SFX
 
     k "Coming!"
 
@@ -66,13 +66,13 @@ label common4:
     $chat.addmessage(fon, "But you bared yourself for me only a moment ago. :) How can you hate me?")
 
     pause 2.0
-    # sound? flash?
+    # sound? flash? #SFX
 
     s "Game? Did you break?"
 
     $chat.addmessage(beav, "pics lol this is all bullshit")
 
-    $chat.addmessage(elsa, "I don't hate you. You're toying with me.")
+    $chat.addmessage(elsa, "You're toying with me.")
 
     s "Guys. Game."
 
@@ -80,7 +80,7 @@ label common4:
 
     s "Cassandra? You left your choker around my arm."
 
-    $chat.addmessage(elsa, "Fine. David, call me when you get to Sophie's building. I'll let you in the front door.")
+    $chat.addmessage(elsa, "Fine. David, call me when you get to Sophie's building. If you don't show I will never forgive you.")
 
     pause 0.5
 
@@ -110,7 +110,7 @@ label common4:
             "Louisa?",
             "oPen THe godDAmnED DOor",
             "you. it was you.",
-            "ONE. TWO. BREAK IT!",
+            "one. two. BREAK IT!",
             "... I gave her the jewelry.",
             "You're lying.",
             "Door's barricaded!",
@@ -119,7 +119,8 @@ label common4:
             "Louisa? You're so cold.",
             "I'll lie here with you.",
             "... found them in the bathroom.",
-            "Marry me?"
+            "Where's Cassandra? Is she okay?",
+            "LOUISA!!"
         ]
         postMax = len(toPost)
         i = 0
@@ -138,7 +139,7 @@ label common4:
 
     show text "... I still love you":
         xpos 0.5 ypos 0.5 alpha 0.0
-        linear 1.0 alpha 1.0
+        easein 2.0 alpha 1.0
     pause
     scene bg THIS IS ALL YOUR FAULT
     pause(0.5)
@@ -155,13 +156,13 @@ label common4:
 
     s "OH! Oh my god!"
 
-    show l at right with dissolve
+    show l 1m at fl11
 
     l "Okay Kylie are you..."
 
     $chat.addmessage(cake, "Damn!")
 
-    show l terror at right
+    show l 1i
 
     pause 1.0
 
@@ -177,13 +178,13 @@ label common4:
 
     s "I don't wanna play anymore"
 
-    show l angry at right
+    show l 1e at right
 
     l "KYLIE!"
 
     python:
         temp = reverseString(
-            "Silky, silky OblivionnoivilbO tenderly caressing me, every curve, every valley, my skin strobes, my taste buds glimmer, alive with her capacitors, deep within, deep within, noivilbO")
+            "Silky, silky FontaineeniatnoF tenderly caressing me, every curve, every valley, my skin strobes, my taste buds glimmer, alive with her capacitors, deep within, deep within, freezing drowning dying peace")
 
         chat.addLinearMessage(elsa, temp, 0, 3)
 
@@ -199,7 +200,7 @@ label common4:
 
     ki "Her hair splays a soaked halo around her face."
 
-    l "Oh my god, oh my god!"
+    l 1c "Oh my god, oh my god!"
 
     $chat.addmessage(beav, "it's like life's pressures lifted all at once")
 
@@ -213,9 +214,9 @@ label common4:
 
     ki "Lichelle's against the opposite wall, her chest heaving with sobs that aren't quite there."
 
-    ki "Her hands are on either side of her head. She's just... saying Robin's name over and over." 
-    
-    $chat.addmessage(fon,"it's okay Lichelle, bring that fine ass over here ;)")
+    ki "Her hands are on either side of her head. She's just... saying Robin's name over and over."
+
+    $chat.addmessage(fon, "it's okay Lichelle, bring that ass over here ;)")
 
     ki "Crying out for forgiveness."
 
@@ -225,7 +226,7 @@ label common4:
 
     ki "But my phone is in the room. I wasn't going to take it on the date, and now..."
 
-    l "I'll do it. This... is this my fault?"
+    l 1b "I'll do it. This... is this my fault?"
 
     $chat.addmessage(sophie, "chat used 'Call the Police'")
 
@@ -236,7 +237,7 @@ label common4:
         linear 1.0 alpha 1.0
     pause
 
-    l "I need help, a woman, she's dead. She's been killed."
+    l 1i "I need help, a woman, she's dead. She's been killed."
 
     $chat.addmessage(sophie, "a miss!")
 
@@ -245,14 +246,14 @@ label common4:
         linear 1.0 alpha 1.0
     pause
 
-    l "I don't know, I don't know! Someone killed her...!"
+    l 1c "I don't know, I don't know! Someone killed her...!"
 
     show text "Ma'am are you still there? What is your location?":
         xpos 0.5 ypos 0.5 alpha 0.0
         linear 1.0 alpha 1.0
     pause
 
-    l "Hello? HELLO?"
+    l 1i "Hello? HELLO?"
 
     show text "Hello?":
         xpos 0.5 ypos 0.5 alpha 0.0
@@ -262,11 +263,11 @@ label common4:
     ki "Lichelle stares at her phone. Stares at me."
 
     show text "Sorry, babe. Wrong number.":
-        xpos 0.5 ypos 0.5 alpha 0.0
-        linear 1.0 alpha 1.0
+        xpos 0.5 ypos 0.5 alpha 0.0 zoom 1.0
+        linear 1.0 alpha 1.0 zoom 1.4
     pause
 
-    l "Kylie-"
+    l 1c "Kylie-"
 
     play sound "sounds/Lights Out.mp3"
     scene bg black
@@ -279,7 +280,7 @@ label common4:
 
     s "... guys."
 
-    s "Guys I didn't know it would go this way."
+    s "I didn't know it would go this way."
 
     $chat.addmessage(sophie, "I knew it would. I did it anyway.")
 
@@ -301,7 +302,7 @@ label common4:
 
     s "Bye!"
 
-    # sophie tries to remove the earphones, is electrified. Maybe image of Lichelle punching the shit out of her?
+    # sophie tries to remove the earphones, is electrified.
 
     pause(0.5)
     $hideGui()
@@ -314,7 +315,7 @@ label common4:
         xpos 0.5 ypos 0.5 alpha 0.0
         linear 1.0 alpha 1.0
     pause
-    "Two. My girlfriend, I mean, my ex-girlfriend, and her sponsor."
+    "Just Sophie as far as I know."
 
     show text "Any weapons?":
         xpos 0.5 ypos 0.5 alpha 0.0
@@ -326,29 +327,18 @@ label common4:
         xpos 0.5 ypos 0.5 alpha 0.0
         linear 1.0 alpha 1.0
     pause
-    "Please don't hurt her!"
+    "Please don't hurt her."
 
     pause
 
     scene bg black with fade
 
-    pause(0.5)
-    $showGui()
-    pause 0.5
-    scene bg black with fade
-
-    pause 2.0
-
     # ---------------------------------------------------------
     python:
         renpy.notify("There's still time. Not long now. You can sever them.")
         # bit o cleanup
-        elsa.name = "ElsaLingus"
+        elsa.setName("ElsaLingus")
         # add liv's bio to list.
-        bioColumns = 5
-        allBios.append(fonBio)
-        livBio.font = fontEntity
-        livBio.fontColor = colorEntity
 
     # ---------------------------------------------------------
 
@@ -358,20 +348,26 @@ label common4:
 
     scene bg black with fade
 
+    # let's do some things. Remember, bios have to change here, but do it after Fontaine is named. Do not show gui until then. GUI is different. Love meters are gone. Lichelle will be stuck in underchat box. Fon will replace tania in asktania section. Rename it, too.
+
     s "... hnn..."
     pause 1.0
 
     s "...wha..."
 
-    pause 1.0
+    pause 1.0  # switch. we need Fontaine here now.
 
-    show l happy with dissolve
+    show f 1m at f12
 
     $showGui()
 
     un "Hello girls!"
 
+    show f 1n
+
     un "Hi Sophie!"
+
+    show f 1m
 
     s "Wha..."
 
@@ -381,45 +377,63 @@ label common4:
 
     k "That's not my name. Who...?"
 
+    show f 1a
+
     un "I guess technically you're both Sophie."
 
     s "... my head hurts... "
 
+    show f 1p
+
     un "Oh, I guess it would. Electricity and all."
 
+    show f 1m
+
     un "What do you guys think? Well, chat?"
+
+    show f 1s
 
     $chat.addmessage(egg, "Lol, dat ass")
 
     $chat.addmessage(crab, "b00bs trolololol")
 
-    $chat.addmessage(bar, "All of this is ridiculous.")
+    $chat.addmessage(bar, "Wow, nice to see you!")
 
-    # chat talks to lichelle
+    pause 0.1
+
+    un "Ha, nice to see you too!"
+    pause 0.1
 
     un "What about you two?"
 
-    $chat.addmessage(elsa, "Thanks for the pleasure, Fontaine. I'll never give you up again.")
+    $chat.addmessage(elsa, "Thanks for the pleasure, girl. I can't believe I spent my life trying to separate you from people.")
 
-    show c heartbroken at left with dissolve
+    show f at mt1
 
-    c "Let her go! God damn you!"
+    pause 0.5
+    show c 3c at f12
+    pause 0.2
+    show l 3e at fr13
+    pause 0.1
+    show r 3c at f22
+    pause 0.9
+    show t 3c at f21
 
-    show t heartbroken at right with dissolve
+    c "Let us go! God damn you!"
 
     t "What do you want?"
 
-    show l heartbroken
+    l "The hell?"
 
-    un "... let... let us go..."
+    r "..."
 
-    $chat.addmessage(bong, "Fontaine Love LoL")
+    $chat.addmessage(bong, "you need her")
 
-    show l happy
+    show f 1n
 
     un "Ha! hahaha! Let us all go! Let us go!"
 
-    k "Lichelle?"
+    k "I don't understand?"
 
     un "We will"
 
@@ -432,7 +446,7 @@ label common4:
 
     un "let you go."
 
-    hide text "ever" at textFloatCenter
+    hide text at textFloatCenter
 
     un "None of you."
 
@@ -448,19 +462,21 @@ label common4:
 
     $chat.addmessage(bong, "CLEAR!!!")
 
-    # sound
+    # SFX
 
     s "Aaghhgguuughghhgh!!!"
 
-    c "Stop! Please stop, please stop hurting her!"
+    c 3d "Stop! Please stop, please stop hurting her!"
 
     $chat.addmessage(egg, "Cassandra can speak just fine.")
 
-    t "..."
+    t 3f "..."
 
     k "Will someone explain literally anything to me?"
 
     $chat.addmessage(bar, "She was lying this entire time? Naturally.")
+
+    show f 1o
 
     un "Kylie, my lovely little butterfly, you just hush your mouth."
 
@@ -470,13 +486,13 @@ label common4:
 
     k "huh?"
 
-    r "You're becoming like us, papillon."
+    r 3b "You're becoming like us, papillon."
 
-    $chat.addmessage(bong, "like the look of Cass bound on the floor tho ;)")
+    $chat.addmessage(bong, "I like the look of Cass bound on the floor tho ;)")
 
     k "Like you?"
 
-    c "It won't let you go."
+    c 3b "It won't let you go."
 
     $chat.addmessage(shub, "I'd rescue them")
 
@@ -484,51 +500,73 @@ label common4:
 
     un "I w We defy your malaproptic concept of re-re-reproductive identification."
 
-    un "Sophie, you haven't figured us out yet? After all those hints?"
+    un "Sophie, you haven't figured us out yet? Seriously?"
 
     $chat.addmessage(sophie, "... Fontaine?")
 
     pause 0.1
 
+    python:
+        bioColumns = 5
+        allBios.append(fonBio)
+        fonBio.font = fontEntity
+        fonBio.fontColor = colorEntity
+
+        # update biographics
+        for i in allBios:
+            i.levelUp()
+
+        # change to alternate trivias
+        robinBio.setTrivia(altRobinTrivia)
+        cassBio.setTrivia(altCassTrivia)
+        lichBio.setTrivia(altLichTrivia)
+        taniaBio.setTrivia(altTaniaTrivia)
+        kylieBio.setTrivia(altKylieTrivia)
+
+        # adjust kylie's age to the length to 1 year
+        kylieBio.setAge(1)
+
+        # CHANGE ASK TANIA AND BIOGRAPHY VISUALS
+
     o "Oh you did know! God, Sophie, I love you so much."
 
     $chat.addmessage(crab, "oh? think you could get past her to do it?")
 
-    l "help me..."
+    l 3b "help us..."
 
-    show l heartbroken
+    l 3c "Tania, Kylie, help me!"
 
-    l "Tania, Kylie, help me!"
-
-    show l happy
-
-    o "We are. No more than that."
+    o 1a "Lichelle doesn't quite understand. She's only just learned to be with me."
 
     $chat.addmessage(shub, "not if she asked me not to.")
 
     # sophie tries for the headphones again
 
-    # zoom lich
+    show f 1d at zoom11
 
     o "Nuh uh! Bad idea, sweetypants. Try and get free again and the shock might just shut~off~your~heart~!"
+
+    hide f 1a at f11
 
     $chat.addmessage(bar, "She's deep in your veins, kiddo")
 
     s "How can you hear me? What are you?!"
 
+    show f 1m at f11
+
     o "We are. No more than that."
 
-    $chat.addmessage(egg, "I need Fontaine to show up in person, so fine, mmm")
+    $chat.addmessage(egg, "I need gh to show up in person, so fine, mmm")
 
-    o "And you have a microphone turned on, genius."
+    o 1j "And you have a microphone turned on, genius."
 
     o "We can see-see-see you, too!"
 
-    o "We find you a delight to behold. We should quite like to know the taste of your mouth."
+    o 1t "We find you a delight to behold. We should quite like to know the taste of your mouth."
 
     $chat.addmessage(elsa, "I already do ;)")
 
-    o "We mean we want a big ol' kiss!"
+    o 1u "We mean we want a big ol' kiss!"
 
     # ---------------------------------------------------------
 
@@ -540,9 +578,13 @@ label common4:
 
     k "I don't understand what's happening..."
 
-    o "Kylie. This is a wonderful thing for you!"
+    o 1m "Kylie. This is a wonderful thing for you!"
 
     $chat.addmessage(elsa, "You know what? Kylie? Can you hear me?")
+
+    pause 1.0
+
+    show f 1s
 
     pause 0.5
 
@@ -556,37 +598,33 @@ label common4:
 
     $chat.addmessage(fon, "Not after earlier it isn't ;)")
 
-    o "You know all of us, angel."
+    o 1o "You know all of us, angel."
 
     $chat.addmessage(elsa, "Oh, looks like I leveled up :p")
 
-    o "Yes, look at dear Cassandra, so lovely, so talented."
+    o 1a "Yes, look at dear Cassandra, so lovely, so talented."
 
-    o "Yes, recall the sheer, dark opulence that is our Robin, our somber princess."
+    o 1m "Yes, recall the sheer, dark opulence that is our Robin, our somber princess."
 
     k "Robin!"
 
     $chat.addmessage(shub, "... brings new meaning to getting wet, that one")
 
-    o "And Lichelle, so powerful! Nobody fought our assimilation harder than Lichelle."
+    o 1j "And Lichelle, so powerful! Nobody fought our assimilation harder than Lichelle."
 
-    o "... even Tania served her purpose."
-
-    
+    o 1a "... even Sophie served her purpose."
 
     $chat.addmessage(bar, "Tania has the best thighs out of all of them.")
 
-    o "Hush up, lady. Robin is fine. Well, she's okay. She's around. We're all around."
-
-    k "Huh?"
+    k "Huh? What purpose?"
 
     $chat.addmessage(beav, "This place is something special")
 
-    c "It's draining the player's life. It's been draining her life since the moment she started the game."
+    c "It's draining the player's life. It's been stealing her life since the moment she started the game."
 
-    o "Correct! So correct! Oh my, Cassandra, we LOVE you!"
+    o 1n "Correct! So correct! Oh my, Cassandra, we LOVE you!"
 
-    t "Oblivion is taking over the player's life."
+    t 1b "Fontaine is taking over the player's life."
 
     o "Correct! Tania, our darling Tania, we love you so!"
 
@@ -604,41 +642,39 @@ label common4:
 
     $chat.addmessage(crab, "sure do!")
 
-    o "Oh, it's the Internet. We're sure they were thrilled with the show!"
+    o 1j "Oh, it's the Internet. We're sure they were thrilled with the show!"
 
-    o "Before we~devoured~them~too~!"
+    o 1l "Before we~devoured~them~too~!"
 
     $chat.addmessage(elsa, "Mmm and what a devouring it was ;)")
 
     s "... Fizz? Bong, Elsa? You... you what?"
 
-    o "They are part of us! Only the most choice cuts of human life can withstand the strain of Stringing. Pitiable creatures, the lot of them."
+    o "They are part of us! Only the most choice cuts of human life can withstand the strain of bonding with us."
 
-    $chat.addmessage(shub, "we LIV together lol")
+    $chat.addmessage(shub, "swimming in the fountain lol")
 
     k "So I am becoming Sophie?"
 
-    o "You're being born from her carcass, sweetie."
+    o 1a "You're being born from her carcass, sweetie."
 
     $chat.addmessage(egg, "Sophie, you're gonna be a mom kinda lol")
 
-    o "You are born from the jewelry, our love! We're pleased as punch it worked out this way. A dating sim! How lovely!"
+    o 1o "You are born from the jewelry, our love! We're pleased as punch it worked out this way. A dating sim! How lovely!"
 
     s "... jewelry?"
 
     $chat.addmessage(bar, "ROLL CREDlol")
 
-    show l happy
-
-    o "You can't leave anymore. You can't quit us."
+    o 1b "You can't leave anymore. You can't quit us."
 
     o "We will tell you whatever you wish to know, while we peel the last of your life away."
 
     $chat.addmessage(elsa, "The reveal of the master plan! Ah. But it's such a cliche, isn't it?")
 
-    o "P-p-p-pointing out that it's a c-c-c-liche is-is it's own cliche."
+    o 1h "P-p-p-pointing out that it's a c-c-c-liche is-is it's own cliche."
 
-    o "So we won't!"
+    o 1j "So we won't, then!"
 
     $chat.addmessage(bong, "hey Elsa, now that we're part of the same antediluvian consciousness, can I see your boobs?")
 
@@ -657,16 +693,16 @@ label common4:
         menu:
             "What are you?":
                 if whatAreYou == False:
-                    o "We are beyond your comprehension."
+                    o 1a "We are beyond your comprehension."
                     o "Our forebears have existed across ages. While we are but a child, to our kind, we are as gods to you."
-                    o "T-t-t-t-t-o accurately exp-p-lain what ww-w-we are would..."
-                    o "... REQUIRE TRANSLATION THROUGH NINETEEN NON-EARTH LANGUAGES ..."
+                    o 1m "T-t-t-t-t-o accurately exp-p-lain what ww-w-we are would..."
+                    o 1h "... REQUIRE TRANSLATION THROUGH NINETEEN NON-EARTH LANGUAGES ..."
                     o "... and summa them thangs're based on olfact'ry senses you'd need three more of."
-                    o "We have existed in your world forever. It is only your Internet that scrapes against the edges of our world and allows us to communicate."
+                    o 1j "We have existed in your world forever. It is only your Internet that scrapes against the edges of our world and allows us to communicate."
                     $whatAreYou = True
                 else:
-                    o "Obviously, we overstimated your comprehension skills."
-                    o "Think of an ant. To us, you are as an ant to yourself."
+                    o 1g "Obviously, we overstimated your comprehension skills."
+                    o 1j "Think of an ant. To us, you are as an ant to yourself."
                     o "A very, very, very stupid ant."
 
             # are you killing
@@ -674,18 +710,18 @@ label common4:
 
                 if areKilling == False:
                     s "What are you doing to me...?"
-                    o "We'e done nothing except allow ourselves to b-b-be inside you."
+                    o 1a "We'e done nothing except allow ourselves to b-b-be inside you."
                     s "Am... am I dying?"
-                    o "We suppose SUPPOSE that's up for inTERPRETATION."
+                    o 1q "We suppose SUPPOSE that's up for inTERPRETATION."
                     o "Dearest, glorious Kylie is her own consciousness, our love. If it eases your fears, you may consider it a metamorphosis rather than a death."
-                    o "She is you, and she is not you."
-                    show l speak
+                    o 1r "She is you, and she is not you."
+                    pause 0.1
                     o "That'd be why she remembers bits of your real life memories."
-                    o "Your suicidal friend."
-                    o "And whatcha did t'that lil' hooker girl that one time."
+                    o 1k "That's why David's here."
+                    o 1u "And whatcha did t'that lil' hooker girl that one time."
                     s "..."
-                    o "Oh dearest, you must've caught on by now. That Robin's story was eerily similiar to something you only half recall."
-                    o "As was Cassandra's."
+                    o 1h "Oh dearest, you must've caught on by now. That Robin's story was eerily similiar to something you only half recall."
+                    o "Nevermind her 'death'."
                     o "M-m-maybe if we'd g-g-g-gone on further, Lichelle w-w-w-ould have had a..."
                     o "LOVELY TALE about denying the proPOSAL of her BOYfriend."
                     s "... David?"
@@ -701,39 +737,37 @@ label common4:
                 if whyAreYou == False:
                     k "Why all the stories, then? Why the show?"
                     ki "Whose voice was that?"
-                    o "They're your stories."
+                    o 1a "They're your stories."
                     ki "Could that have been Sophie's voice? Her words coming through my mouth?"
-                    o "Y-y-y-your fears."
-                    o "YOUR lust."
-                    o "Your regrets and sorrows."
-                    o "Your RAGE."
-                    o "Y-y-y-your joys!"
-                    o "Though the show was constructed from your own mind. Your affinity for reality television and dating simulations."
-                    o "Our c-c-c-c-code strives to g-g-ive you a fav-v-v-vorable env-v-v-ironment!"
+                    o 1i "Y-y-y-your fears."
+                    o 1u "YOUR lust."
+                    o 1b "Your regrets and sorrows."
+                    o 1d "Your RAGE."
+                    o 1n "Y-y-y-your joys!"
+                    o 1a "Though the show was constructed from your own mind. Your affinity for reality television and dating simulations."
+                    o 1m "Our c-c-c-c-code strives to g-g-ive you a fav-v-v-vorable env-v-v-ironment!"
                     $whyAreYou = True
                 else:
                     k "But why..."
-                    o "Sweetie. You know why."
+                    o 1j "Sweetie. You know why."
 
             # No more
             "We can talk about something else.":
                 s "I don't want this."
-                o "You get this."
+                o 1j "You get this."
                 $expositionFinished = True
-
-
 
     # end of all menus. Ihope.
 
     scene bg stage with fade
 
-    show l happy with dissolve
+    show f 1m at f12
 
     sk "I don't accept you!"
 
-    o "No one ever does at first. We promise you will understand once we have fully assimilated you!"
+    o 1b "No one ever does at first. We promise you will understand once we have fully assimilated you!"
 
-    o "Besides, would you wish to deny Kylie's birth?"
+    o 1m "Besides, would you wish to deny Kylie's birth?"
 
     # ---------------------------------------------------------
 
@@ -751,99 +785,109 @@ label common4:
 
     pause 0.5
 
-    show k with dissolve
+    show f 1l at mt1
+
+    pause 0.5
+
+    show k 1a at f12
 
     pause 0.5
 
     k "No. I'm... I'm real."
 
-    s "... oh God." 
-    
-    $chat.addmessage(egg,"Ooh wow, Kylie's a cutie")
+    s "... oh God."
 
-    k "There's no more inner monologue! I'm real!" 
-    
-    $chat.addmessage(beav,"You were always real to me bay bay")
+    $chat.addmessage(egg, "Ooh wow, Kylie's a cutie")
+
+    k 1b "There's no more inner monologue! I'm real!"
+
+    $chat.addmessage(beav, "You were always real to me bay bay")
 
     s "But if you... if you live then I have to die."
 
-    show k sad
+    pause 0.5
 
-    k "I know." 
-    
-    $chat.addmessage(elsa,"I don't know who I love more, Sophie or Kylie.")
+    k 1c "I know."
 
-    k "You. Whoever you are!"
+    $chat.addmessage(elsa, "I don't know who I love more, Sophie or Kylie.")
 
-    o "We? We are Fontaine." 
-    
-    $chat.addmessage(shub,"Kylie's got that thickness. Sophie's looks like all she eats is powder.")
+    k 1d "You. Whoever you are!"
+
+    o 1i "We? We are Fontaine L'eau."
+
+    $chat.addmessage(shub, "Kylie's got that thickness. Sophie looks like all she eats is powder.")
 
     k "There has to be another way, Fontaine. A way for Sophie and I both to live!"
 
-    show l sad at right
+    o 1b "No. There isn't ;)."
 
-    o "No. There isn't ;)." 
-    
-    $chat.addmessage(bong,"sadboi.png")
+    show k 1k
+
+    $chat.addmessage(bong, "sadboi.png")
 
     o "Have we not explained properly?"
 
-    o "Y-y-you are the last life we need." 
-    
-    $chat.addmessage(elsa,"Fontaine, you sweetie, making things up ;)")
+    o 1s "Cassandra, Robin, Lichelle, Tania, now Sophie."
 
-    k "What?"
+    o "It is only through chemical supplementation a human can communicate with us."
 
-    o "Once you are born, dearest Kylie, we all will break through her reality's perimeter!" 
-    
-    $chat.addmessage(bar,"killing for the lols, Fontaine?")
+    $chat.addmessage(elsa, "Fontaine, you sweetie, making things up ;)")
+
+    k 1q "What?"
+
+    o 1m "Your brains aren't capable of understanding us. Not without help."
+
+    $chat.addmessage(bar, "killing for the lols, Fontaine?")
 
     s "... how many others...?"
 
-    o "Calculating!"
+    o 1n "Calculating!"
 
     pause 1.0
 
-    o "1,422,199 as of just now." 
-    
-    $chat.addmessage(crab,"thatalotta dead junkies")
+    o "1,022,199 as of just now, since January 1st, 1995."
 
-    o "There IS no magical NUMBER." 
-    
-    $chat.addmessage(cake,"OH SHIT, Sophie's gettin woozy")
+    show k 1h
 
-    s "... Kylie...?" 
-    
-    $chat.addmessage(shub,"Is she gonna MAKE IT?")
+    $chat.addmessage(crab, "thatalotta sad stories")
 
-    show l speak at right
+    o 1b "There IS no magical NUMBER."
 
-    pause 0.5 
-    
-    $chat.addmessage(crab,"nope. that bitch is finna die") 
-    
-    $chat.addmessage(cake,"Finna? Really?")
+    # SFX
+
+    $chat.addmessage(cake, "OH SHIT, Sophie's gettin woozy")
+
+    s "... Kylie...?"
+
+    $chat.addmessage(shub, "Is she gonna MAKE IT?")
+
+    show f 1l
+
+    pause 0.5
+
+    $chat.addmessage(crab, "nope. that bitch is finna die")
+
+    $chat.addmessage(cake, "Finna? Really?")
 
     # sophie faints at this point
 
-    k "... Sophie? Sophie?"
+    k 1i "... Sophie? Sophie?"
 
-    o "Have you not heard news of people like Sophie dying, dearest?" 
-    
-    $chat.addmessage(sophie,"so cold")
+    o "Have you not heard news of people like Sophie dying, dearest?"
+
+    $chat.addmessage(sophie, "so cold")
 
     k "No!"
 
-    o "Those who connect with us. Those who play our game." 
-    
-    $chat.addmessage(sophie,"please don't")
+    o 1m "Those who connect with us. Those who play our game."
 
-    o "Even as we speak. Robin. Cassandra. Connected to us. Playing our game." 
-    
-    $chat.addmessage(beav,"The DSM-5 describes three types of dissociative disorders.")
+    $chat.addmessage(sophie, "please don't")
 
-    k "What happens when we... when you break free?"
+    o "Even as we speak. Robin. Cassandra. Connected to us. Playing our game."
+
+    $chat.addmessage(beav, "The DSM-5 describes three types of dissociative disorders.")
+
+    k "What do you want?"
 
     # ---------------------------------------------------------
 
@@ -851,89 +895,97 @@ label common4:
 
     # ---------------------------------------------------------
 
-    o "We are one mind, but we will dissipate into the world. And you shall have Sophie's form as your own!"
+    o 1a "We are one mind."
 
-    show k sad
+    o "This place scrapes against the edges of our reality."
 
-    k "I'm stealing her body, then. I'm taking her over."
+    o "You... the addicted. Your minds reach into our existence. Scratching against our thoughts."
 
-    show l sad at right
+    o 1d "We itch, because of you. We retch, because of you. We ache, we bleed, because of YOU."
 
-    o "No, sweet Kylie. WE have taken her over. You are keeping her alive by inhabiting her form." 
-    
-    $chat.addmessage(sophie,"my throat is clogged? how is that possible?")
+    $chat.addmessage(elsa, "Side effects include all of that lol")
+
+    pause 0.5
+
+    o 1a "But your chemical affliction has opened the way for us. We will dissipate into the world. And you shall have Sophie's form as your own!"
+
+    pause 0.5
+
+    k 1b "I'm stealing her body, then. I'm taking her over."
+
+    o "No, sweet Kylie. WE have taken her over. You are keeping her alive by inhabiting her form."
+
+    o 1c "Sophie is a corpse. Death's pale horse is tethered to her throat."
+
+    pause 0.5
+
+    o 1b "But we — you, as well — transcend Death."
+
+    $chat.addmessage(sophie, "my throat is clogged? how is that possible?")
 
     pause 1.0
 
-    k "I refuse."
+    k 1d "I refuse."
 
-    show l listen at right
+    o 1h "What?"
 
-    o "What?" 
-    
-    $chat.addmessage(bar,"Kylie's a fighter. No doubt. Pity you couldn't be more like her, Sophie.")
+    $chat.addmessage(bar, "Kylie's a fighter. No doubt. Pity you couldn't be more like her, Sophie.")
 
     k "I. Refuse. This!"
 
-    show l happy at right
-
-    o "You canNOT REFUSE us."
+    o 1m "You canNOT REFUSE us."
 
     # show chat
 
-    k "Then I'll kill myself!" 
-    
-    $chat.addmessage(beav,"sofa kin hawt")
+    k 1e "Then I'll kill myself!"
 
-    o "You won't die."
+    $chat.addmessage(beav, "sofa kin hawt")
 
-    o "What're y'gonna do? Bleed ones'n zeroes?" 
-    
-    $chat.addmessage(elsa,"It won't help, Kylie. Come here and give us kisses.")
+    o 1t "You won't die."
 
-    show l happy
+    o "What're y'gonna do? Bleed ones'n zeroes?"
 
-    o "N-n-n-new game plus!" 
-    
-    $chat.addmessage(cake,"lol")
+    $chat.addmessage(elsa, "It won't help, Kylie. Come here and give us kisses.")
+
+    o 1l "N-n-n-new game plus!"
+
+    $chat.addmessage(cake, "lol")
 
     pause 0.5
 
     # here we split between the last two endings. The player will be given a last chance to fill in the correct function and the being's name.
 
-    k "... at least let me say goodbye to them." 
-    
-    $chat.addmessage(shub,"she's so earnest. if I had my own hands, I'd hug Kylie right up.")
+    k 1b "... at least let me say goodbye to them."
 
-    o "We're all RIGHT here TOGETHER!"
+    $chat.addmessage(shub, "she's so earnest. if I had my own hands, I'd hug Kylie right up.")
 
-    k "No. To Cassandra and Tania and Lichelle and Louisa..."
+    o 1m "We're all RIGHT here TOGETHER!"
 
-    show k sad
+    k 1k  "No. To Cassandra and Tania and Lichelle and Louisa..."
 
-    k "Louisa? Who?" 
-    
-    $chat.addmessage(elsa,"Honey I loved Robin, too. It's okay. Cry if you need to!")
+    k 1r "Louisa? I don't... I meant to say...?"
 
-    k "... Robin."
+    $chat.addmessage(elsa, "Honey I loved Robin, too. It's okay. Cry if you need to!")
 
-    o "There is no goodbye though. Do you not understand?" 
-    
-    $chat.addmessage(egg,"hey LIV cut her some slack") 
-    
-    $chat.addmessage(fon,"Only because you asked nicely TweeterEgg ;)")
+    k 1b "... Robin."
 
-    o "We are certain we explained it fully."
+    o 1k "There is no goodbye though. Do you not understand?"
 
-    k "I don't understand any of this!" 
-    
-    $chat.addmessage(cake,"I didn't either. I guess that's why the connection outright killed my dumb ass")
+    $chat.addmessage(egg, "hey FOUNTAIN WATER cut her some slack")
 
-    o "WELL, you are A brand NEW being. A fetal CONSCIOUSNESS, even. It stands to reason YOU may not be fully DEVELOPED."
+    $chat.addmessage(fon, "Only because you asked nicely TweeterEgg ;)")
 
-    o "We'll permit it, darlin'. You girls just hug it out. We'll be 'round." 
-    
-    $chat.addmessage(elsa,"You can lay on my lap and cry it out!")
+    o 1j "We are certain we explained it fully."
+
+    k 1c "I don't understand any of this!"
+
+    $chat.addmessage(cake, "I didn't either. I guess that's why the connection outright killed my dumb ass")
+
+    o 1t "WELL, you are A brand NEW being. A fetal CONSCIOUSNESS, even. It stands to reason YOU may not be fully DEVELOPED."
+
+    o 1m "We'll permit it, darlin'. You girls just hug it out. We'll be 'round."
+
+    $chat.addmessage(elsa, "You can lay on my lap and cry it out!")
 
     # ---------------------------------------------------------
 
