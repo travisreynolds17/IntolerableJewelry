@@ -27,6 +27,7 @@ label biographies:
                 self.font = ""
                 self.fontColor = ""
                 self.love = 0  # gonna put the affection level inside this class to make it easier to display for bio
+                self.severed = False
 
             # create a mutator to increase the bio level.
             def levelUp(self):
@@ -45,11 +46,14 @@ label biographies:
             def setName(self, value):
                 self.char = value
 
+            def stringSever(self):
+                self.severed = True
+
         # the different biographies are meant to be displayed as a character
 
         robinTrivia = [
             "Despite being an open Satanist, Robin identifies her religion as Pastaferianism.",
-            "Robin's favorite foods are ossa buco to eat and lava cakes to prepare.",
+            "Robin's favorite foods are ossa buco and lava cakes.",
             "Robin's legal name is R/BG13:14-15 Lupei. Robin Godfrey is a stage name.",
             "Robin is a virgin, and no, she doesn't want to talk about it.",
             "Her favorite musical is the one about Alexander Hamilton.",
@@ -69,7 +73,7 @@ label biographies:
             "She wanted to wrestle, but wasn't comfortable showing as much skin as the local promotion wanted.",
             "She was disowned by her parents when she announced her intention to marry Marina",
             "Cassandra's favorite road snack is banana chips.",
-            "Cassandra has five tattoos. The only visible one most of the time is the letter M on her right hand.",
+            "Cassandra has five tattoos. The only one visible most of the time is the letter M on her right hand.",
             "She has one piercing.",
             "She would tell you her favorite movie is Moonlight, but she's never really sure.",
             "Her favorite singer is what's her name, from that band you like.",
@@ -90,7 +94,7 @@ label biographies:
             "Lichelle's favorite submission move is the triangle choke.",
             "She has zero musical talent, but admits she's never had an interest in developing it.",
             "If you asked her, Lichelle would tell you rap is her favorite style of music. It's actually country.",
-            "Despite being a pro fighter, Lichelle doesn't like hurting people",
+            "Despite being a pro fighter, Lichelle doesn't like hurting people"
 
         ]
 
@@ -147,13 +151,14 @@ label biographies:
             "Tania fucked him because she hated you. She hated you for choosing to be an addict.",
             "Tania never loved him and he never loved her. She couldn't love him that way.",
             "Miss van der Waal had a great ass, and that was enough for David. And he never told her she wasn't enough, and that was enough for her.",
-            "Imagine how hard it was for Tania to hate-bone your boyfriend. You know. Being a lesbian and all.",
-            "Tania struggled so hard to reconcile her faith and her sexuality. She's Catholic, you see. Confirmed and all. And she likes girls. How funny is that?",
+            "Imagine how hard it was for Tania to hate-bone your boyfriend. You know. Being religious and all.",
+            "Tania struggled so hard to reconcile her faith and her sexuality. She's Catholic, you see. Confirmed and all. And she likes lots of sex. How funny is that?",
             "Here's some trivia for you. Did you know at least one cartel has a bounty on Tania's head? Yup.",
             "To the dealers, Tania's worth 500 bucks dead and $2,000 alive. Chump change, really.",
             "Even though she's trying to destroy me every day of her life, I love Tania. I want to be inside her.",
             "It's not your fault, Sophie. But you did enable it.",
-            "Did you know Tania's one of only two people at St. Agatha's who didn't try to sleep with Louisa?"
+            "Did you know Tania's one of only two people at St. Agatha's who didn't try to sleep with Louisa?",
+            "Here's another secret. Elsa and Tania? Wow. So similiar. So interesting. So the same person. Figure that one out."
         ]
 
         altRobinTrivia = [
@@ -183,7 +188,7 @@ label biographies:
             "Cassandra Sanna's musical success led her down a familiar path.",
             "Cass had been in and out of rehab for all kinds of substances before she met you.",
             "Well. The important part was Cass met Louisa.",
-            "You and Louisa were already sleeping together, weren't you, when Cass met her.",
+            "Cass met Louisa before you did, at least in America.",
             "Cass never liked you. Not really. You were wallpaper to her.",
             "Louisa was something else. Dangerous. Gorgeous. Otherworldly. Cassandra didn't want to screw her. She just wanted to be near her.",
             "Cassandra became your friend after a while, but it wasn't her preference.",
@@ -192,13 +197,14 @@ label biographies:
             "Cassandra never felt like she could say anything. You were always there.",
             "Everything changed when Louisa drowned in the fountain outside Ganymead, shot full of china white she got R/BG13:14-15.",
             "Cassandra decided to take her suffering out on you.",
-            "Even though her suffering was of her own making, you become her totem. The emblem of her failure.",
-            "You know what's weird? Cass could've loved you, too. She wanted to. She tried to. She couldn't."
+            "Even though Cassandra's suffering was of her own making, you become her totem. The emblem of her failure.",
+            "You know what's weird? Cass could've loved you, too. She wanted to. She tried to. She couldn't.",
+            "I guess it turns out it's your fault at least TWO people wore jewelry. Ha ha! Such a silly term."
         ]
 
         altLichTrivia = [
             "Lichelle was less involved in your life than the others, but she stands out in your mind.",
-            "Elle was a security guard at Ganymead. Don't you remember?",
+            "Elle was a security guard at the real Ganymead. Don't you remember?",
             "You were there to meet up with Louisa when you should have been at Elsa's meeting.",
             "And Louisa sat on the fountain, her veins overflowing with jewelry.",
             "You gave Robin the jewelry, Sophie.",
@@ -210,7 +216,7 @@ label biographies:
             "Cassandra who tried CPR until paramedics had to pull her away, screaming, screaming, when all Lichelle could do was try her best not to kill you.",
             "Elle knew you would be back. She knew when, and why, because it was her plan.",
             "Look how you've repaid Elle's grace. She could have left you to die, twice, and you would've deserved it.",
-            "It was Lichelle who saved your life that night in the restroom. Cassandra was already gone.",
+            "It was Lichelle who saved your life that night in the restroom. Cassandra was dying.",
             "It was Lichelle who realized Cassandra, stupid, stupid Cassandra, had switched the syringes twice.",
             "Elle met Louisa first, did you know that? Well, first in your town, anyway.",
             "Lichelle and Louisa talked for hours sometimes. I think Robin recognized Elle's strength."

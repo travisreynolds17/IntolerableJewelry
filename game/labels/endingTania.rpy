@@ -520,15 +520,15 @@ label endingTania:
     show m 2p
     t "I know we only really spent a short time together, but I really liked you. I knew you would be the one to get my messages."
 
-    t "And to work out the stringSever function."
+    t "And to be strong enough to forgive."
 
-    s "The what?"
+    s "Forgive? What?"
     show m 2r
     t "..."
 
     s "..."
 
-    t "You don't remember? You don't remember the input screen? The GUI? stringSever(firstName) and all that?"
+    t "You don't remember? You don't remember the monologues? The choices?"
 
     s "No."
 
@@ -722,7 +722,7 @@ label endingTania:
     t "My real body is unnerving, too. For now."
     # ----------------------------------------------------
     # ----------------------------------------------------
-    if severTania == False:
+    if taniaBio.severed == False:
         call endingTaniaBad
     # ----------------------------------------------------
     # ----------------------------------------------------
@@ -750,7 +750,7 @@ label endingTania:
 
         # Here, we have the diversions for potential sever changes. We know Cass not being severed means she didn't wake up. Lichelle not being severed means she meets up with David in the compound. Robin not being severed ends the same. Waterlogged corpse attack. Tania's stays the same.
 
-        if severCass == True:
+        if cassBio.severed == True:
             t "Cassandra's here, too."
             "What?"
             s "What?"
@@ -803,7 +803,7 @@ label endingTania:
             t "Yeah. Gym."
             call endingLich
         else:
-            if severLich == False:
+            if lichBio.severed == False:
                 show m 2b
                 t "Lichelle is here, too."
                 s "Oh?"
@@ -832,7 +832,7 @@ label endingTania:
                 s "I understand."
 
             # robin endings
-            if loveConfession == "Robin" and severRobin == True:
+            if loveConfession == "Robin" and robinBio.severed == True:
                 show m 2a
                 t "Before you leave, I think you ought to visit the bar downstairs."
                 s "I don't want to drink."
@@ -962,7 +962,7 @@ label endingTania:
 
         s "... where's Louisa."
 
-        d 1h"..."
+        d 1h "..."
 
         e 1h "..."
 
@@ -1118,7 +1118,7 @@ label endingTania:
 
         e 1a "Sophie."
 
-        e 1m "She's your doctor. I've known her for a decade. She's normal. Fusses over her hair. Farts when she thinks nobody's paying attention."
+        e 1m "She's your doctor. I've known that lady for a decade. She's normal. Fusses over her hair. Farts when she thinks nobody's paying attention."
 
         s "... she's horrible. You have to kill her."
 

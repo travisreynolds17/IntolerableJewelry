@@ -1,47 +1,44 @@
 label endingCass:
-    "A ticket came in the mail one day."
+    
+    scene bg music room with fade
 
-    "Real mail, too. Paper and ink."
+    "Mortimer spins in the air, for no reason I can deduce, and leads the way from Tania's..."
 
-    "An invitation to a private performance, all expenses paid."
+    "Bedroom? I guess?"
 
-    "With deepest regards, Cassandra Sanna."
-
-    d "You gonna go?"
-
-    s "Yeah. I wanna know what she's like in person."
-
-    d "Want me to come with?"
-
-    s "No. No, I appreciate it but this feels..."
-
-    d "Exclusive?"
-
-    s "I guess so."
-
-    d "Take care of yourself, then."
-
-    pause 0.1
-
-    s "I will."
+    "The house blooms outward from a grand staircase in the foyer. I can hear David shouting about Pittsburgh's football team being evil, down to the man, from the parlor nearby."
 
     pause 0.5
 
-    scene bg stage with fade
+    "I'm curious about what's upstairs, but the little robot floats past the staircase and through a set of padded double doors that remind me of old gothic horror movies."
 
-    "The venue is intimate, warm and comfortable."
+    "A few timid, wandering notes sing softly from within."
 
-    "There's a piano, a gorgeous baby grand, sitting proudly on a platform."
+    show m at fr12
 
-    "An usher, prim and professional, leads me to the seat listed on my ticket."
+    m "If you please, ma'am."
 
-    "It seems moot. I'm the only one here."
+    s "Thanks, Mortimer. I appreciate your help today."
 
-    show c shy with dissolve
+    "It's like showing gratitude to a toaster. Isn't it?"
+
+    pause 0.5
+
+    hide m at f12
+
+    pause 0.5
+
+    "The music room is intimate, warm and comfortable, everything one might expect from a place like this."
+
+    "Even the floor is laid out in a black and white checkerboard pattern, like piano keys."
+
+    "Speaking of which, there's a gorgeous baby grand sitting proudly across the room."
+
+    show c 1p at f12
 
     "And suddenly, Cassandra."
 
-    "She looks exactly like her counterpart did in the simulation, somehow."
+    "She looks exactly like her counterpart in the simulation, somehow."
 
     "Choker and all."
 
@@ -49,9 +46,9 @@ label endingCass:
 
     "It's odd. Her name came to my lips, but anything beyond that?"
 
-    "I have no idea what to say. Nice to see you? How've you been?"
+    "I have no idea what to say. Nice to see you? How've you been? Glad you're alive?"
 
-    show c happy
+    show c 1m
 
     "She doesn't answer. She doesn't have to."
 
@@ -65,9 +62,9 @@ label endingCass:
 
     "And patiently."
 
-    scene bg stage with fade
-
     "She's clearly in no hurry, but that's fine."
+
+    show c 1a
 
     "Watching her play is mesmerizing. The way she sways, the way she looks almost bored, resigned to her hands going through the motions."
 
@@ -77,7 +74,7 @@ label endingCass:
 
     "I find myself applauding, which I suppose is just clapping when a person is alone."
 
-    show c with dissolve
+    show c 1m
 
     "She pats the piano bench next to her. Beckons to me with one hand."
 
@@ -95,9 +92,11 @@ label endingCass:
 
     "I should say something. But for now, I only listen."
 
+    "I guess I should have listened sooner."
+
     #love
 
-    if loveCass == 5:
+    if loveConfession == "Cassandra":
         "She smells like coconut."
         
         "And... hibiscus. Definitely."
@@ -123,6 +122,8 @@ label endingCass:
         "But for just now, just this moment"
 
         "I want to dream."
+
+    return
 
     #end. To next ending (Lichelle) by way of EndingTron
 

@@ -22,7 +22,7 @@ label opening:
 
     "Trying to figure out how to turn down a wedding ring."
 
-    # show d with fade
+    show d 1m at f12
 
     "His face is earnest. He means it when he tells me he'll be there forever."
 
@@ -34,6 +34,8 @@ label opening:
 
     s "David I care about you, I love you, but I-"
 
+    show d 1h
+
     "Damn everything about this."
 
     "His eyes are widening. He's starting to shiver. He knows."
@@ -44,29 +46,29 @@ label opening:
 
     "For a moment her eyes land on us, but only for a moment."
 
-    d "I... okay, but, what?"
+    d 1b "I... okay, but, what?"
 
     "Even now, his reaction is endearing."
 
-    s "Because we can't communicate. Not even on a basic level."
+    s "Because we can't communicate. Not even on a basic level. And you don't trust me."
 
     "Jesus Christ, self, could you let him down a little easier?"
 
-    d "I know sometimes I misinterpret what you're saying-"
+    d 1g "I know sometimes I misinterpret what you're saying-"
 
     s "All the time, David. All the time, every time. It doesn't matter what I say."
 
     "Of course it matters. Hyperbole is just... easier."
 
-    d "I don't know what to say."
+    d 1b "I don't know what to say."
 
     "Neither do I."
 
     "There's a woman moving among tables, coiffed and exotic, speaking briefly with each table. Must be the manager. A thick, musical accent."
 
-    "She's beautiful. I've seen her a hundred times. That's something else I haven't told David."
+    "That's something else I haven't told him."
 
-    d "Say something."
+    d 1c "Say something."
 
     s "I'm not giving up my work. You're already too jealous about it and I love doing it so-"
 
@@ -86,9 +88,9 @@ label opening:
 
     "He's quiet now. Shocked silent, I guess. There're a couple of door guards watching us now."
 
-    "One of them, a short-haired redheaded woman, wears a pained expression. I guess her hearing's pretty good."
+    "One of them, a short-haired woman in a vest and polo, wears a pained expression. I guess her hearing's pretty good."
 
-    d "So that's it then."
+    d 1b "So that's it then."
 
     s "That's what?"
 
@@ -98,11 +100,11 @@ label opening:
 
     "Shit."
 
-    d "What do you mean, why?"
+    d 1h "What do you mean, why?"
 
     s "Just because we disagree here doesn't mean we have to end it. We can compromise. I just don't want to sign a contract while -"
 
-    d "You see us getting married as a legal issue?"
+    d 1d "You see us getting married as a legal issue?"
 
     "There it is again. That's not what I meant."
 
@@ -110,27 +112,25 @@ label opening:
 
     "But maybe we should? Just... end it. I can free him, right now. He's young enough that he could find someone else."
 
-    d "It's pretty hypocritical of you to be worried about things being legal."
+    d 1k "It's pretty hypocritical of you to be worried about things being legal."
 
     s "David. Don't."
 
-    d "Why not? It's not like I'm the one who took you to rehab. Waited for you. It's not like I was the ONLY one."
-
-    s "..."
-
-    d "I never, ever saw you as a burden or an obstacle. Ever. I just worry-"
+    d 1b "I never, ever saw you as a burden or an obstacle. Ever. I just worry-"
 
     s "That I'll cheat on you with some Internet teenager?"
 
-    d "- that someone will find you some day, Sophie!"
+    d 1d "- that someone will find you some day, Sophie!"
 
     s "I can take care of myself!"
 
-    "We're shouting now. Good times. Great times. The guards are heading over. It wasn't supposed to-"
+    "We're shouting now. Good times. Great times. The bouncer is heading over. It wasn't supposed to-"
 
-    d "I know that, but these guys -"
+    d 1b "I know that, but these guys -"
 
     s "They're not all guys, you know."
+
+    show d 1h
 
     "Quietly, before I could stop them, those words tumble out."
 
@@ -140,13 +140,16 @@ label opening:
 
     s "David-"
 
-    d "You know what? Fine."
+    d 1d "You know what? Fine."
     
     d "Be a her in a d ct. Go righ ba k. I'm go na m v   t  f th hous  . You'll n  er have to wo  y ab  t    again."
 
     # she has a seizure
+    #VFX
 
     "Oh. Oh no. No no no no no not now."
+
+    hide d at f12
     
     "My arms pin themselves to my sides as my leg muscles lose all semblance of tension. There’s a sensation of impact when I hit the ground, but no accompanying pain."
 

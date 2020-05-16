@@ -92,7 +92,7 @@ label endingTron5000:
 
     o 1b "And you called us jewelry. Baubles. pppppointless accessories!"
 
-    "... storage.Tania.severed: [severTania]"
+    "... storage.Tania.severed: [taniaBio.severed]"
 
     if severTania:
         show t 1i at fr13
@@ -101,13 +101,13 @@ label endingTron5000:
 
     o 1h "Hm?"
 
-    "... storage.Robin.severed: [severRobin]" 
+    "... storage.Robin.severed: [robinBio.severed]" 
     
     $chat.addmessage(sophie,"... this is my will.")
 
-    "... storage.Cass.severed: [severCass]"
+    "... storage.Cass.severed: [cassBio.severed]"
 
-    if severCass:
+    if cassBio.severed:
         show c 1i at f13
         pause 0.5
         show c 1c at d13
@@ -118,26 +118,20 @@ label endingTron5000:
 
     # Lichelle is let loose at this pont
 
-    "... storage.Lichelle.severed: [severLich]"
+    "... storage.Lichelle.severed: [lichBio.severed]"
 
-    if severLich:
+    if lichBio.severed:
         show l 1i at fr13
         pause 0.5
         show l 1c at d13
     
     $chat.addmessage(sophie,"I don't want to need you anymore!")
 
-    "storage.Kylie.severed: [severKylie]"
-
     un "Why?"
-
-    "storage.God.severed: [severGod]"
-
-    o 1i "STAY AWAY FROM THAT COMMAND!" 
     
     $chat.addmessage(sophie,"I hope I've done this right. I hope.")
 
-    "storage.Oblivion.severed: [entitySevered]"
+    "storage.Fontaine.severed: [fontBio.severed]"
 
     o 1b "We had no idea you were so aware, Sophie."
 
@@ -145,19 +139,18 @@ label endingTron5000:
 
     o "Well, we can't have that. Let's fix things, shall we?"
 
-    if severKylie == True:
-        jump endingKylie
-
-    if severEntity == False:
+    if fontBio.severed == False:
         pause 1.0
         o 1b "... did you choose, then, not to sever your connection to us?"
         pause 0.5
         o 1c"Then you've learned nothing."
         o "Then you deserve your fate."
         o 1d "One last turn. One final dissociation."
-        o 1e "And now it is our turn to invade YOUR world."
+        o 1e "We will see you soon, Sophie."
         $hideGui()
-        jump endingEntityWins
+        $gaveUp = True
+        jump endingGaveUp
+
     
     else:
 
@@ -169,13 +162,13 @@ label endingTron5000:
 
         k "What happened to we?"
 
-        o 1i "WE ARE? un-un-unstrung?"
+        o 1i "WE ARE? Severed???"
 
         # Show a splash screen with the floor and only the unstrung girls lying dead. Some visual indication of a change.
 
         k "Guys!"
 
-        k "Hey Lichelle, Lichelle! Cass, Robin, you okay?"
+        k "Hey Lichelle, Lichelle! Cass, Tania, you okay?"
 
         o 1f "WE ARE O-O-OKAY"
 
@@ -484,7 +477,7 @@ label endingTron5000:
             $loveConfession = "Robin"
 
         elif loveCass >= 4 and severCass == True:
-            $loveConfession = "Cass"
+            $loveConfession = "Cassandra"
 
         elif loveTania >= 4 and severTania == True:
             $loveConfession = "Tania"
@@ -735,13 +728,15 @@ label endingTron5000:
         
         l "I oughtta smack your damn mouth every day for the rest of your natural life for what you did."
 
+        l "Giving her that trash."
+
         "Her tone remains friendly, even. I don't protest. She's not wrong."
 
         pause 0.4
 
         l 1b "But I won't."
 
-        l "You're not evil. You're sick. Only damn way to do right by Louisa and Cassandra is to get your flat ass cleaned up and do something with your life."
+        l "You're not evil. You're sick. Only damn way to do right by Louisa and Cassandra is to get your self cleaned up and do something with your life."
 
         l 1j "I've been talking to David for a while, too. I'm making it my personal mission to be up your ass every single day until I'm satisfied you're gonna be all right."
 

@@ -8,7 +8,7 @@ label realWorld2:
 
     "Something meaningful. Anything."
 
-    "From within the building, I can hear a woman singing. It's impossible to make out the words."
+    "From within the building, I can hear a woman singing, a piano. It's impossible to make out the words."
 
     "Her voice rings crystal clear, but the words are muddled."
 
@@ -16,7 +16,7 @@ label realWorld2:
 
     "Near the door, a bouncer puffs on a casual cigarette."
 
-    "Scratch that. From the scent, a {i}very{/i} casual cigarette."
+    "From the scent, a {i}very{/i} casual cigarette."
 
     "I find myself scratching her onto paper, in that crisp suit and vest combo common to bouncers, bartenders and stylish lesbians."
 
@@ -55,7 +55,7 @@ label realWorld2:
 
     "Is that snow?"
 
-    "She's undone her buttons."
+    "She's undone her buttons, swaying in the light."
 
     "Tonight, a third. Such magical times. Snowflakes sizzle and die against her chest, leaving little glittering paths that snake between her breasts."
 
@@ -81,7 +81,7 @@ label realWorld2:
 
     "The bouncer moves like murder."
 
-    "Her beautiful brown arms wrench around the attacker's neck, squeezing, a sultry, pythonic embrace."
+    "Her beautiful brown arms wrench around the neck, squeezing, a sultry, pythonic embrace."
 
     "I smell iron."
 
@@ -99,11 +99,11 @@ label realWorld2:
 
     "Onyx Dress pushes against her chest."
 
-    "Breaking ribs. Two, more?"
+    "Breaking ribs. Two, more? Oh. CPR."
 
     "The python relaxes. No one important lies jolting in the snow."
 
-    "Long legs's mouth erupts in steam and retch."
+    "Long legs's mouth never erupts in steam and retch."
 
     "What are those lights?"
 
@@ -117,6 +117,48 @@ label realWorld2:
 
     "She finally looked at me."
 
+    "The bouncer stands over Legs and Onyx."
+
+    "It's your fault my neck hurts, bouncer."
+
+    "I wasn't doing anything."
+    
+    "I couldn't pull her out."
+
+    "You could have pulled her out."
+
+    "Instead you choked me."
+
+    "You ruined my sketch pad."
+
+    "You let Legs freeze."
+
+    "Even though it's my fault."
+
+    menu:
+        "I forgive you":
+            "I want you to know."
+            "Even if you never hear me."
+            "I don't blame you."
+            "I only blame me."
+            "For everything."
+            "If you hate me"
+            "I accept that."
+            "I hate me, too."
+            $stringSever(lichBio)
+        
+        "I can't forgive you":
+            "You could have saved her."
+            "You're strong enough."
+            "You wanted to hurt me."
+            "You're addicted to violence."
+            "You left Onyx to do try."
+            "Onyx is little."
+            "Legs is big."
+            "Stupid."
+            "I blame you."
+
     scene bg black with fade
 
     jump common3
+    return

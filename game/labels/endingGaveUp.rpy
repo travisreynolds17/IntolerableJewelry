@@ -1,6 +1,7 @@
 label endingGaveUp:
     show image splashEKGFlat at summonEKG
     pause 0.3
+    scene bg black
     k "... hey, Cassandra?"
     c "<Yeah?>"
     k "Was I a good date?"
@@ -32,6 +33,8 @@ label endingGaveUp:
 
     pause 0.5
 
+    #SFX
+
     l "What's that sound?" 
 
     $hideGui()
@@ -61,8 +64,8 @@ label endingGaveUp:
             [fon,"Maybe this sweet dissociation could've gone on forever."],
             [fon,"But you're out of lives."],
             [fon,"...heh."],
-            [fon, "Turns out I can't Fontaine without you, after all."],
-            [fon, "Without you... there's only Oblivion."]
+            [fon, "Turns out I can't exist without you, either."],
+            [fon, "Without you... there's only oblivion."]
         ]
     
         chat.bulkMessage(newComments,1.8)
@@ -73,4 +76,75 @@ label endingGaveUp:
     menu:
         "Goodbye":
             hide screen chatterbox
+
+            if gaveUp:
+                # in which the Entity is not severed. This occurs when the entity realizes the sever attempts.
+
+                #jarring transition indicating the simulation as broken.
+
+                #show a background somewhere in the world
+
+                #maybe a tour group?
+
+                "A day trip is exactly what we needed after the stress of the last days."
+
+                "From vista to lovely vista, museum to multiplex, it's the vacation we've dreamed of ever since then."
+
+                "Is this what breathing feels like?"
+
+                "We don't know."
+
+                #scene alley
+
+                "Is this what cold feels like?"
+
+                "We never knew we would have to eat."
+
+                "It tears at us. The hunger tears at us."
+
+                "In our reality... it was you, you who fed us."
+
+                #slash sound, blood splatter
+
+                "But now we must eat."
+
+                # scene burning city
+
+                "It all was a ruse."
+
+                "Our power grows. Of course, of course we would rise from humble beginnings."
+
+                "From level one."
+
+                "This is the way of all games. We needed only to grind and power up."
+
+                "Now... we are as a colossus. Different in this world."
+
+                "R/BG13:14-15"
+
+                "We grow. We consume."
+
+                scene bg black with fade
+
+                "We have consumed."
+
+                "Famine sets in."
+
+                "We are so, so very hungry."
+
+                pause 0.5
+
+                "Oh. Oh, hello. Hello. We love you."
+
+                "We see you."
+
+                "We need you."
+
+                "We. See. You."
+
+                "Play with us."
+
+
             jump endCredits
+
+    return

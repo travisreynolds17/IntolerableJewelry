@@ -915,7 +915,7 @@ label common4:
 
     o "No, sweet Kylie. WE have taken her over. You are keeping her alive by inhabiting her form."
 
-    o 1c "Sophie is a corpse. Death's pale horse is tethered to her throat."
+    o 1c "Sophie is a corpse. Death's pale horse is tethered to her neck."
 
     pause 0.5
 

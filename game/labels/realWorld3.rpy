@@ -1,4 +1,6 @@
 label realWorld3:
+
+    show window
     
     "She was the host."
 
@@ -22,7 +24,7 @@ label realWorld3:
 
     "It's cold, I wondered. Inside? Inside the bar?"
 
-    "We are already there, babe, and I love you."
+    "We are already there, and I love you."
 
     "Mmm. Thank you for saying so."
 
@@ -77,7 +79,11 @@ label realWorld3:
 
     "You knew about that, Sophie?"
 
-    "Mm."
+    "Mm. I can't hear your music anymore."
+
+    "You liked it?"
+
+    "Yes. I can't see though so it's sad I can't hear it."
 
     "Her name was Louisa."
 
@@ -105,20 +111,118 @@ label realWorld3:
 
     "You're the most yellow you've ever been."
 
-    "Thank you for saying that. I feel cold. Sweating."
+    "Thank you for saying that. I feel colder than the tile. Sweating."
 
     "You should."
 
     "Kiss me."
 
-    "I'd love to, babe."
+    "I'd love to."
 
-    "What did you give me? You're kissing me now, but I can't feel your lips."
+    "What did you give me? You're kissing me, but I can't feel your lips."
 
-    "Give you?"
+    "I only ever felt nothing at you."
 
     "I can't feel your fingers. What did you put in me?"
 
     "Peace."
 
+    "Am I going to die?"
+
+    "I hope so."
+
+    "You're sure?"
+
+    "It's what I want, anyway."
+
+    "Oh. I'm happy."
+
+    "Why would you be happy when I'm the one killing you?"
+
+    "I miss your music."
+
+    "... shut up."
+
+    "Your notes took the hurt away, some. Just some, but some."
+
+    "Shut up."
+
+    "Am I tingling? Am I that yellow?"
+
+    "And blue."
+
+    "Oh. Thank you so much."
+
+    "And dying."
+
+    "Am I?"
+
+    "Please do."
+
+    "I'm happy because I'm finally able to give you something you want."
+
+    "You are?"
+
+    "If I die."
+
+    "Oh. I might write a song about you."
+
+    "Would you do that?"
+
+    "I promise."
+
+    "Okay."
+
+    "Okay."
+
+    #sfx knock
+
+    "Oh. No."
+
+    #knock
+
+    "Someone's at the door."
+
+    "Shh. Hurry and die."
+
+    "I'm doing my best."
+
+    "You're not sad?"
+
+    "No, should I be?"
+
+    "No. But I want want you to know something."
+
+    #knock harder
+
+    "I..."
+
+    hide window
+
+    nvl clear
+
+    menu:
+        "I forgive you":
+            s "I can't ask for it in return."
+            s "But... I forgive you."
+            unkn "... dammit. Why are you making this so hard?"
+            unkn "Why couldn't you just die?"
+            # sfx knock
+            pause 1.5
+            # sfx door opening
+            l "Oh god. Elsa, they're in here!"
+            $stringSever(cassBio)
+
+        "I can't forgive you":
+            s "I know you put something else in the needle."
+            s "I'm not... stupid."
+            unkn "... why didn't you stop me?"
+            unkn "Why couldn't you just die?"
+            # sfx knock
+            pause 1.5
+            s "... I deserve to die."
+            # sfx door opening
+            l "Oh god. Elsa, they're in here!"
+
     jump robinDate2
+    return

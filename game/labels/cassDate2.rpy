@@ -1097,7 +1097,6 @@ label cassDate2:
             ki "Not yet. Maybe not at all."
 
             $renpy.notify("You can still save her")
-
     ki "I wonder, briefly, whether Tania will be pleased or mortified by all this." 
     
     $chat.addmessage(fon,"No, I mean it. You really care.")
@@ -1209,5 +1208,5 @@ label cassDate2:
     
     
     jump realWorld3
-
+    return
     # end cass date

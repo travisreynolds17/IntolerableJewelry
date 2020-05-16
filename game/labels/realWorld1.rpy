@@ -5,9 +5,9 @@ label realWorld1:
 
     "I come here, sometimes, when things get heavy."
 
-    "This place has a great bartender. I can never remember her name, though."
+    "This place has a great bartender. I can never remember his name, though."
 
-    "I get lost in her eyes. Haunting, spectral baby blues."
+    "I get lost in her eyes. Warm, friendly hazel eyes."
 
     "Sometimes people I know ask why I come back here. If it's worth reopening the wounds of that day just for a prime negroni."
 
@@ -15,7 +15,7 @@ label realWorld1:
 
     "There's a fountain out front, part of the town square. I sit on the bench outside sometimes, with my pad and paper, and just doodle."
 
-    "That's what I'm doing while I sip my drink."
+    "That's what I'm doing while I sip cranberry juice."
 
     "There's a woman."
 
@@ -23,9 +23,11 @@ label realWorld1:
 
     "I think she's one of the bar's managers. She always puts a pad down before she sits."
 
-    "Doesn't want to ruin her skirt."
+    "Doesn't want to ruin her jeans."
 
     "She looks around for a while and sighs, like something she wanted to appear stayed home."
+
+    "Her eyes gleam, haunting, spectral baby blues."
 
     "Then she raises her arms and undoes the clip holding her hair in place, a shower of rich dark chocolate strands."
 
@@ -33,7 +35,7 @@ label realWorld1:
 
     "Streetlight pours milkily over her neckline."
 
-    "In my mind I've asked her for her name a dozen times."
+    "In my mind I've asked her name a dozen times."
 
     "In reality I've drawn her twice as often, from every bench in the plaza."
 
@@ -45,8 +47,10 @@ label realWorld1:
 
     "I wish I knew her name."
 
-    "It's time to go. Elsa, Fizz and the others need me."
+    "It's time to go. Fizz and the others need me."
 
     scene bg black with fade
 
     jump lichDate
+
+    return
