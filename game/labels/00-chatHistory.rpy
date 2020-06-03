@@ -152,7 +152,7 @@ label chatHistory:
                 global allBios
                 i.seen = True
                 bioColumns = 6
-                allBios = [cassBio, lichBio, robinBio, taniaBio, kylieBio, livBio]
+                allBios = [cassBio, lichBio, robinBio, taniaBio, kylieBio, fontBio]
                
 
         def chatHistUpdate(scene):

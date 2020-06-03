@@ -109,6 +109,8 @@ label realWorld2:
 
     "My sketch pad is ruined."
 
+    "Whose shoes are those? By the fountain."
+
     "It got wet in the snow."
 
     "I should've done something."

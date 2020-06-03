@@ -453,6 +453,9 @@ label robinDate1:
     $chat.addmessage(cake, "last tiem I scared the hell out of a date it did not end in cuffing.")
     pause 0.5
 
+
+    hide window # test hiding nvl window. I think using NVL has caused the flickering say window problem
+
     ki "It is. My face is flushed, I feel hot. I'm not scared. I could smell her perfume before the lights came up."
 
     $chat.addmessage(fizz, "Or cuffs in general, right?")
@@ -746,7 +749,7 @@ label robinDate1:
     k "Holy god you're only 19?"
 
     # set Robin's age from default 24 to 19 because's a big ol liar
-    $robin.Bio.setAge(19)
+    $robinBio.setAge(19)
 
     $chat.addmessage(beav, "anime 15 creeps me out. Man.")
 

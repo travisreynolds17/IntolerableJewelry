@@ -1,6 +1,8 @@
 label opening:
 
 # opening scene: basically same as other game, just tuned up. maybe can be skipped?
+
+    window hide 
     scene bg resta
     with fade
 

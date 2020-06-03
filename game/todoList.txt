@@ -90,8 +90,10 @@ Revamp affection system to:
 
 
 
-    HAIR AND EYES: 
+    #Major issues
 
-    Sophie:
-        base color: light brown
-        eyes: green
+    1) Adding NVL mode has caused a problem where before any transition or pause an empty say window appears. I'm pretty sure we can stop this by using window hide at the very beginnning and making sure to hide it after every NVL situation.
+
+    Alternatively there may be a preference that we can use. the NVL window should only every appear in NVL mode.
+
+    Alternatively, could rewrite to remove all NVL. Dammit. Not what we want.

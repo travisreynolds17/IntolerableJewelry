@@ -2,13 +2,89 @@
 errors listed below, and try again.
 
 
-File "game/labels/0000-TestRoom.rpy", line 56: end of line expected.
-    narr "[temp]" (what_color="#bcb4ec") at alphaFade
-                                         ^
+File "game/labels/00-00definitions.rpy", line 307: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rca.png")
+                                                                                      ^
 
-File "game/labels/0000-TestRoom.rpy", line 58: end of line expected.
-    narr "[temp]" at alphaFade
-                  ^
+File "game/labels/00-00definitions.rpy", line 308: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcb.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 309: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcc.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 310: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcd.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 311: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rce.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 312: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcf.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 313: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcg.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 314: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rch.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 315: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rci.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 316: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcj.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 317: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rck.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 318: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcl.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 319: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcm.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 320: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcn.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 321: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rco.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 322: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcp.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 323: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcq.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 324: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcr.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 325: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcs.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 326: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rct.png")
+                                                                                      ^
+
+File "game/labels/00-00definitions.rpy", line 327: unexpected EOF while parsing
+    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcu.png")
+                                                                                      ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri May 01 15:09:10 2020
+Wed Jun 03 01:19:43 2020

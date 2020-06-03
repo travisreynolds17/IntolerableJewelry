@@ -5,6 +5,8 @@ label robinDate2:
     scene bg story-9 with fade
     pause
     scene bg dressing with fade
+    #enable severance
+    $severToggle()
     $showGui()
     pause 0.5
 
@@ -63,6 +65,9 @@ label robinDate2:
     ki "I just don't have time to think about her."
 
     scene bg black with fade
+
+    #disable severance
+    $severToggle()
 
     # ---------------------------------------------------------
 

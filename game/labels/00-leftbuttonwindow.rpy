@@ -8,6 +8,7 @@ label leftbuttonwindow:
 
         #variable to hold message for subscribe button
         subBtnMsg = "Error: Subscription failed. Contact administrator."
+        subText = "Subscribe"
 
         # Variables for left button menu
         leftBtnTxt = [
@@ -16,10 +17,12 @@ label leftbuttonwindow:
 
         # functions to set the messages above
         def setSubBtnMsg(value):
-            global subBtnMsg = value
+            global subBtnMsg
+            subBtnMsg = value
 
         def setSubBtn(value):
-            global leftBtnText[1] = value
+            global subText
+            subText = value
 
 
                 
@@ -57,15 +60,21 @@ label leftbuttonwindow:
                     action Function(showAskTania)
                     background "#444444"
 
+                
                 button:
                     # this button is intended to show a contextual message depending on story point. Note that subscribe never actually does anything.
-                    text leftBtnTxt[1]:
+                    # during dressing room segments, this is also the severance panel button
+                    text subText:
                         yalign 0.5
                         xalign 0.5
                     xysize(lbtnWidth, lbtnHeight/3)
                     
                     background "#777777"
-                    action [Function(getAllHistories), Function(testSever)]
+                    if severAvailable:
+                        action Function(showSeverancePanel)
+                    else:
+                        # when testing is pretty much done, replace with the fake subscription messages
+                        action [Function(getAllHistories), Function(testSever)]
 
                 button:
                     #chatHistory

@@ -1,6 +1,8 @@
 label definitions:
     
+    # quick thing deal with NVL mode issue of flickering empty box
 
+    
 
     #transforms will be used to animate and position characters. Beecause we're using a gui with a limited window, there can only be a few positions. Left-front, center front, right front, and backs. 
 
@@ -278,27 +280,51 @@ label definitions:
 
 # robin composite images
 
-    image r 1a = im.Composite((371, 1004), (0, 215), "chars/rca.png", (0, 500), "chars/rc1.png")
-    image r 1b = im.Composite((371, 1004), (0, 215), "chars/rcb.png", (0, 500), "chars/rc1.png")
-    image r 1c = im.Composite((371, 1004), (0, 215), "chars/rcc.png", (0, 500), "chars/rc1.png")
-    image r 1d = im.Composite((371, 1004), (0, 215), "chars/rcd.png", (0, 500), "chars/rc1.png")
-    image r 1e = im.Composite((371, 1004), (0, 215), "chars/rce.png", (0, 500), "chars/rc1.png")
-    image r 1f = im.Composite((371, 1004), (0, 215), "chars/rcf.png", (0, 500), "chars/rc1.png")
-    image r 1g = im.Composite((371, 1004), (0, 215), "chars/rcg.png", (0, 500), "chars/rc1.png")
-    image r 1h = im.Composite((371, 1004), (0, 215), "chars/rch.png", (0, 500), "chars/rc1.png")
-    image r 1i = im.Composite((371, 1004), (0, 215), "chars/rci.png", (0, 500), "chars/rc1.png")
-    image r 1j = im.Composite((371, 1004), (0, 215), "chars/rcj.png", (0, 500), "chars/rc1.png")
-    image r 1k = im.Composite((371, 1004), (0, 215), "chars/rck.png", (0, 500), "chars/rc1.png")
-    image r 1l = im.Composite((371, 1004), (0, 215), "chars/rcl.png", (0, 500), "chars/rc1.png")
-    image r 1m = im.Composite((371, 1004), (0, 215), "chars/rcm.png", (0, 500), "chars/rc1.png")
-    image r 1n = im.Composite((371, 1004), (0, 215), "chars/rcn.png", (0, 500), "chars/rc1.png")
-    image r 1o = im.Composite((371, 1004), (0, 215), "chars/rco.png", (0, 500), "chars/rc1.png")
-    image r 1p = im.Composite((371, 1004), (0, 215), "chars/rcp.png", (0, 500), "chars/rc1.png")
-    image r 1q = im.Composite((371, 1004), (0, 215), "chars/rcq.png", (0, 500), "chars/rc1.png")
-    image r 1r = im.Composite((371, 1004), (0, 215), "chars/rcr.png", (0, 500), "chars/rc1.png")
-    image r 1s = im.Composite((371, 1004), (0, 215), "chars/rcs.png", (0, 500), "chars/rc1.png")
-    image r 1t = im.Composite((371, 1004), (0, 215), "chars/rct.png", (0, 500), "chars/rc1.png")
-    image r 1u = im.Composite((371, 1004), (0, 215), "chars/rcu.png", (0, 500), "chars/rc1.png")
+    image r 1a = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rca.png")
+    image r 1b = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcb.png")
+    image r 1c = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcc.png")
+    image r 1d = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcd.png")
+    image r 1e = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rce.png")
+    image r 1f = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcf.png")
+    image r 1g = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcg.png")
+    image r 1h = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rch.png")
+    image r 1i = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rci.png")
+    image r 1j = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcj.png")
+    image r 1k = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rck.png")
+    image r 1l = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcl.png")
+    image r 1m = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcm.png")
+    image r 1n = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcn.png")
+    image r 1o = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rco.png")
+    image r 1p = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcp.png")
+    image r 1q = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcq.png")
+    image r 1r = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcr.png")
+    image r 1s = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcs.png")
+    image r 1t = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rct.png")
+    image r 1u = im.Composite((540, 1004), (-103, 300), "chars/rc1.png", (137, 395), "chars/rcu.png")
+
+    # robin composite images
+
+    image r 2a = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rca.png")
+    image r 2b = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcb.png")
+    image r 2c = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcc.png")
+    image r 2d = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcd.png")
+    image r 2e = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rce.png")
+    image r 2f = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcf.png")
+    image r 2g = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcg.png")
+    image r 2h = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rch.png")
+    image r 2i = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rci.png")
+    image r 2j = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcj.png")
+    image r 2k = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rck.png")
+    image r 2l = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcl.png")
+    image r 2m = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcm.png")
+    image r 2n = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcn.png")
+    image r 2o = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rco.png")
+    image r 2p = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcp.png")
+    image r 2q = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcq.png")
+    image r 2r = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcr.png")
+    image r 2s = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcs.png")
+    image r 2t = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rct.png")
+    image r 2u = im.Composite((540, 1004), (-50, 295), "chars/rc2.png", (153, 390), "chars/rcu.png")
 
 # lichelle composite images
 
@@ -372,7 +398,7 @@ label definitions:
     image f 1t = im.Composite((371, 1004), (0, 215), "chars/fct.png", (0, 500), "chars/fc1.png")
     image f 1u = im.Composite((371, 1004), (0, 215), "chars/fcu.png", (0, 500), "chars/fc1.png")
 
-# fontaine composite images
+# fontaine composite images (doctor coat)
 
     image f 2a = im.Composite((371, 1004), (0, 215), "chars/fca.png", (0, 500), "chars/fc2.png")
     image f 2b = im.Composite((371, 1004), (0, 215), "chars/fcb.png", (0, 500), "chars/fc2.png")
@@ -472,29 +498,7 @@ label definitions:
     image c 2t = im.Composite((371, 1004), (0, 215), "chars/ct.png", (0, 500), "chars/c1.png")
     image c 2u = im.Composite((371, 1004), (0, 215), "chars/cu.png", (0, 500), "chars/c1.png")
 
-# robin composite images
 
-    image r 2a = im.Composite((371, 1004), (0, 215), "chars/rca.png", (0, 500), "chars/rc1.png")
-    image r 2b = im.Composite((371, 1004), (0, 215), "chars/rcb.png", (0, 500), "chars/rc1.png")
-    image r 2c = im.Composite((371, 1004), (0, 215), "chars/rcc.png", (0, 500), "chars/rc1.png")
-    image r 2d = im.Composite((371, 1004), (0, 215), "chars/rcd.png", (0, 500), "chars/rc1.png")
-    image r 2e = im.Composite((371, 1004), (0, 215), "chars/rce.png", (0, 500), "chars/rc1.png")
-    image r 2f = im.Composite((371, 1004), (0, 215), "chars/rcf.png", (0, 500), "chars/rc1.png")
-    image r 2g = im.Composite((371, 1004), (0, 215), "chars/rcg.png", (0, 500), "chars/rc1.png")
-    image r 2h = im.Composite((371, 1004), (0, 215), "chars/rch.png", (0, 500), "chars/rc1.png")
-    image r 2i = im.Composite((371, 1004), (0, 215), "chars/rci.png", (0, 500), "chars/rc1.png")
-    image r 2j = im.Composite((371, 1004), (0, 215), "chars/rcj.png", (0, 500), "chars/rc1.png")
-    image r 2k = im.Composite((371, 1004), (0, 215), "chars/rck.png", (0, 500), "chars/rc1.png")
-    image r 2l = im.Composite((371, 1004), (0, 215), "chars/rcl.png", (0, 500), "chars/rc1.png")
-    image r 2m = im.Composite((371, 1004), (0, 215), "chars/rcm.png", (0, 500), "chars/rc1.png")
-    image r 2n = im.Composite((371, 1004), (0, 215), "chars/rcn.png", (0, 500), "chars/rc1.png")
-    image r 2o = im.Composite((371, 1004), (0, 215), "chars/rco.png", (0, 500), "chars/rc1.png")
-    image r 2p = im.Composite((371, 1004), (0, 215), "chars/rcp.png", (0, 500), "chars/rc1.png")
-    image r 2q = im.Composite((371, 1004), (0, 215), "chars/rcq.png", (0, 500), "chars/rc1.png")
-    image r 2r = im.Composite((371, 1004), (0, 215), "chars/rcr.png", (0, 500), "chars/rc1.png")
-    image r 2s = im.Composite((371, 1004), (0, 215), "chars/rcs.png", (0, 500), "chars/rc1.png")
-    image r 2t = im.Composite((371, 1004), (0, 215), "chars/rct.png", (0, 500), "chars/rc1.png")
-    image r 2u = im.Composite((371, 1004), (0, 215), "chars/rcu.png", (0, 500), "chars/rc1.png")
 
 # lichelle composite images
 

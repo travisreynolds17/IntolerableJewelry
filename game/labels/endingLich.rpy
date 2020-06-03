@@ -370,23 +370,23 @@ label endingLich:
         s "Whammmmphhpp!"
 
         show image splashEKGFull at summonEKG
-            pause 0.3
+        pause 0.3
         hide l at d12
         "She's so fast. I guess the round wasn't officially over."
         "In a breath, she's spun on her back and whipped her legs around my head and one arm."
         l "Triangle choke."
         "She informs me as I'm dragged toward the ground. The pressure's unbelievable."
         show image splashEKGFull at summonEKG
-            pause 0.3
+        pause 0.3
         "At first, it's funny. A little sexy. Just a little."
         "But she's not letting go."
         show image splashEKGFull at summonEKG
-            pause 0.3
+        pause 0.3
         "Even when I slap the mat."
         "Even when my face turns purple."
 
         show image splashEKGFull at summonEKG
-            pause 0.3
+        pause 0.3
         l "So, I really appreciate you coming down here."
         l "You're a good sport."
         l "But you tried to end me, sweety pie. ;)"
@@ -394,12 +394,12 @@ label endingLich:
         l "Oh, Sophie, you're so brave! We love you. ;)"
 
         show image splashEKGFull at summonEKG
-            pause 0.3
+        pause 0.3
         o "Tania's the key, though. We had no idea she had such a network out here!"
         o "N-n-new game plus!"
 
         show image splashEKGFlat at summonEKG
-            pause 0.3
+        pause 0.3
         o "Goodnight, Sophie. We truly, truly love you."
 
         show image splashEKGFull at f12

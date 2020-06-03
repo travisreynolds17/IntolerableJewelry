@@ -1044,7 +1044,7 @@ label endingTania:
         s "David, don't talk to her. She'll... she'll kill you, too!"
         show o 2b
         show d 1b
-        she e 1b
+        show e 1b
 
         d "Sophie..."
 
@@ -1180,7 +1180,7 @@ label endingTania:
 
         "Elsa? Why are you crying?"
 
-        hide e at fr 13
+        hide e at fr13
 
         s "... Elsa?"
 
@@ -1352,9 +1352,9 @@ label endingTania:
 
             e "Hm."
 
-            s "I'll never touch the jewelry again."
+            s "I'll never touch that stuff again."
 
-            s "I'll eat cereal with a fork."
+            
 
             e 1m "Hon..."
 

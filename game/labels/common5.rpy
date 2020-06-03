@@ -10,7 +10,7 @@ label common5:
     scene bg load-god with fade
     pause 1.0
     pause
-    scene bg screen
+    scene bg dressing 
     pause(0.5)
     $showGui()
     pause 0.5
@@ -26,6 +26,11 @@ label common5:
     pause 0.3
 
     "The restraints clink and tumble away from the their skin."
+
+    "How did we get... we're in my dressing room?"
+
+    #enable severance
+    $severToggle()
     
     $chat.addmessage(crab,"Who's voice is that?")
 
@@ -172,7 +177,7 @@ label common5:
     # Note C5 stands for Common5. This is to keep files organized togather.
     
     while interviewed == False:
-        scene bg stage with fade
+        scene bg dressing with fade
         menu:
             k "Who to talk to..."
 
@@ -190,7 +195,7 @@ label common5:
     #=============================================
 
     
-    scene bg stage with fade
+    scene bg dressing with fade
 
     show c 1a at fl11
     show t 2a at f12

@@ -510,6 +510,9 @@ label common3:
 
     ki "The dressing room is clean and simple. I'd like to stretch out for a nap, actually. The nerves have taken it out of me."
 
+    #enable severance
+    $severToggle()
+
     $chat.addmessage(cake, "pity that bed's for sleepin")
 
     ki "There are some clothes in the closet and... I'm a little disappointed. They're all white sundresses, basically cut the same way."
@@ -524,7 +527,7 @@ label common3:
     
     $chat.addmessage(fon,"I think Sophie might be blissfully unaware rn ;)\n||--===>-")
 
-    s "Gasp, dudes! Was the game supposed to crash? Is this part of the plan?"
+    s "Gasp, you guys! Was the game supposed to crash? Is this part of the plan?"
 
     $chat.addmessage(elsa, "I think so") 
     
@@ -533,6 +536,9 @@ label common3:
     s "Oh, okay! Jeez, I wish they'd warned me a little bit. I just about said to hell with it and called it a night."
 
     s "What a surprise! Ha!"
+
+    #disable severance
+    $severToggle()
 
     scene bg black with dissolve
 

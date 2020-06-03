@@ -28,6 +28,9 @@ label biographies:
                 self.fontColor = ""
                 self.love = 0  # gonna put the affection level inside this class to make it easier to display for bio
                 self.severed = False
+                self.fullySevered = False
+                self.severViewed = False
+                self.bioEyes = ""
 
             # create a mutator to increase the bio level.
             def levelUp(self):
@@ -48,6 +51,17 @@ label biographies:
 
             def stringSever(self):
                 self.severed = True
+
+            def fullySever(self):
+                self.fullySevered = True
+
+            # make it so a severance interview can only be viewed once
+            def severViewed(self):
+                self.severViewed = True
+
+            # set bio eyes plate
+            def setNamePlate(self, value):
+                self.biosEyes = value
 
         # the different biographies are meant to be displayed as a character
 
@@ -279,7 +293,7 @@ label biographies:
             "I feel like I'm ~this~ close to existing. I'm so close.",
             "I can't explain what it's like almost to be real. It's like I only exist enough to be aware that I don't. Is this what despair feels like?",
             "Kylie. I'm sorry! Truly. You're like me. You almost exist.",
-            "You know what's neat? I'm in your blood. That means every time you looked at Louisa, and you got all ~ engorged lol ~ I was down there, too. I'm not a creeper! You're the creeper!", 
+            "You know what's neat? I'm in your blood. That means every time you looked at Louisa, and you got all ~ engorged lol ~ I was down there, too. I'm not a creeper! You're the creeper!",
             "What do you mean, I have more trivia than the others? I'm your entire universe, it stands to reason!",
             "My cup size? Oh, silly girl, what kind of person just answers that question outright?",
             "Do you think if there was a store here you could buy me a present? Just something you think I'd like?",
@@ -303,7 +317,8 @@ label biographies:
                             lichBioText, "25", "Carmine Red", lichTrivia, "Hell no", "Nope", "MMA", "My dad", "66 inches", "Baltimore, Md.")
         robinBio = Biography(2, "Robin Godfrey", "", robinBioText, "24",
                              "Royal Purple", robinTrivia, "Not yet", "Innumerable", "None", "You", "73 inches", "Bucharest, Romania")
-        fontBio = Biography(5, "Fontaine", "", fontBioText, "R/BG13:14-15", "China White", fontTrivia, "I can't have kids. Comfort me?", "I love animals!", "I don't understand sports", "Sophie ;)", "All of them, if I want", "Everywhere!")
+        fontBio = Biography(5, "Fontaine", "", fontBioText, "R/BG13:14-15", "China White", fontTrivia, "I can't have kids. Comfort me?",
+                            "I love animals!", "I don't understand sports", "Sophie ;)", "All of them, if I want", "Everywhere!")
 
         taniaBio = Biography(3, "Tania van der Waal", "",
                              taniaBioText, "26", "Tuscan Sun", taniaTrivia, "No", "Cats Ferg, Della, Kana",  "Gymnastics", "R/BG13:14-15 Langford", "65 inches", "Centralia, Penn.")
@@ -319,9 +334,26 @@ label biographies:
         for i in allBios:
             i.font = allFonts[i.idNum]
             i.fontColor = allColors[i.idNum]
-        #go ahead and set up Fontaine's font.
+        # go ahead and set up Fontaine's font.
         fontBio.font = fontEntity
         fontBio.fontColor = colorEntity
+        # namePlaets
+
+        # name plates.
+        bioEyesCass = Image("img/bioEyesCass.png")
+        bioEyesLich = Image("img/bioEyesLich.png")
+        bioEyesRobin = Image("img/bioEyesRobin.png")
+        bioEyesTania = Image("img/bioEyesTania.png")
+        bioEyesKylie = Image("img/bioEyesKylie.png")
+        bioEyesFont = Image("img/bioEyesFont.png")
+
+        allPlates = [bioEyesCass, bioEyesLich,
+                     bioEyesRobin, bioEyesTania, bioEyesKylie]
+
+        for i in allBios:
+            i.bioEyes = allPlates[i.idNum]
+
+        fontBio.bioEyes = bioEyesFont
         # =============SCREEMS======================================================================================================
 
         bioBlockWd = 300
@@ -330,6 +362,7 @@ label biographies:
         bioColumns = 5
 
         def closeAskTania():
+            # closes entire biographies/askTania menu.
             renpy.hide_screen("speechBubble")
 
             setCurrentTrivia("")
@@ -338,17 +371,16 @@ label biographies:
             renpy.hide_screen("askTania")
             renpy.hide_screen("speechBubble")
             renpy.hide_screen("biography")
-            renpy.hide_screen("bioHearts")
 
         def showBio(selected):
+            # moves from AskTania to individual selected Bio
             setSelected(selected)
-            renpy.show_screen("bioHearts")
             renpy.show_screen("biography")
             renpy.hide_screen("askTania")
             renpy.hide_screen("speechBubble")
 
         def closeBio():
-            renpy.hide_screen("bioHearts")
+            # close currently displayed bio, moving back to AskTania
             renpy.hide_screen("biography")
             setSelected(0)
 
@@ -358,6 +390,7 @@ label biographies:
 
         def setSelected(value):
             global currentlySelected
+            # used to determine which char bio is shown
             currentlySelected = value
 
         # test to determine if randomly selected trivia is the same as current trivia, to avoid repeating same one
@@ -382,68 +415,106 @@ label biographies:
 
     #--------------- screens and transforms
 
-    default askTaniaBack = Image("img/askTania.png")
-    default bioBack = Image("img/bioTest.png")
+    default askTaniaBack = Image("img/backAskTania.png")
+    default severanceBack = Image("img/backSeverance.png")
+
+    # back to variables
+
     default taniaFace = askTa
+    default iconHeartEmpty = Image("img/iconEmptyHeart.png")
+    default iconHeartFull = Image("img/iconFullHeart.png")
+    default iconBtnBack = Image("img/iconBtnBack.png")
+    default iconBtnBack2 = Image("img/iconBtnBack2.png")
+    default iconBtnExit = Image("img/iconBtnExit.png")
+    default iconBtnCommit = Image("img/iconBtnCommit.png")
+
+    default namePlateY = [140, 215, 290, 365, 440, 515]
+    default namePlateX = 100
 
     transform bio1:
         xpos 400 ypos 120 alpha 0.0
         linear 0.8 alpha 1.0
 
+    transform namePlates(row):
+        on show:
+            xpos 2000 ypos namePlateY[row]
+            easein 0.5 xpos namePlateX
+        on hide:
+            easein 0.5 xpos 2000
+
+# -------------------SCREEENS
     screen askTania:
         modal True
 
-        
-
         fixed at alphaFaster:
             add askTaniaBack
-            # help menu
-            button:
-                text "Help"
-            # close and back buttons
-                button:
-                    text "X"  # temporary
-                    xpos 1200
-                    ypos 50
-                    xalign 0.5
-                    yalign 0.5
-                    xysize(40, 40)
-                    action Function(closeAskTania)
 
-            # button grid. columns will be set programatically. i.e. we'll add font near the end
-            grid 2 bioColumns:
-                spacing 10
-                transpose True  # fill columns first
-                xpos 650
-                ypos 140
-                # note: all dimensions gained from gimp mockup grid.
-                xysize(120, 210)
-
-                # trivia buttons
+            # nameplates
+            fixed:
+                xalign 0.0
+                xpos namePlateX
                 for i in allBios:
-                    button:
-                        text "Trivia"
-                        background "#777733"
-                        action Function(showTrivia, i)
 
-                # bio buttons
-                for i in allBios:
-                    button:
-                        text "Bio"
-                        background "#444444"
-                        action Function(showBio, i)
+                    # cass
+                    fixed at namePlates(i.idNum):
+                        add i.bioEyes
+                        ypos namePlateY[i.idNum]
+                        xpos namePlateX
+                        hbox:
+                            # name
+                            text i.char:
+                                xpos 205
+                                ypos 0.4
+
+                                color i.fontColor
+                            # show hearts
+                            hbox:
+                                xpos 220
+                                for iTemp in range(0, 5):
+                                    if i.char != "Kylie":
+                                        if i.love > iTemp:
+                                            image iconHeartFull:
+                                                ypos 0.3
+                                        else:
+                                            image iconHeartEmpty:
+                                                ypos 0.3
+
+                        hbox:
+                            xalign 1.0
+                            xpos 0
+                            button:
+                                text "Trivia"
+                                background "#777733"
+                                ypos 0.5
+                                action Function(showTrivia, i)
+
+                            button:
+                                text "Bio"
+                                background "#444444"
+                                ypos 0.5
+                                action Function(showBio, i)
+
+            # end of nameplates
 
         image taniaFace:
             xalign 1.0
             yalign 1.0
             zoom 0.8
 
+        button:
+            background iconBtnBack
+            ypos 580
+            xsize 100
+            ysize 100
+            xpos 50
+            action Function(closeAskTania)
+
     screen speechBubble:
         fixed at growShrink:
             add "#dddddd"
             # note: per transformGrowshrink, this one is anchored on its right side, not left.
             xpos 760
-            ypos 430
+            ypos 580
             xsize 600
             ysize 100
 
@@ -456,48 +527,34 @@ label biographies:
     screen biography:
         modal True
         fixed at alphaFaster:
-            add bioBack
+            add askTaniaBack
             # back button and close button
             button:
-                text "X"  # temporary
-                xpos 1200
-                ypos 50
-                xalign 0.5
-                yalign 0.5
-                xysize(40, 40)
+                background iconBtnExit
+                ypos 580
+                xsize 100
+                ysize 100
+                xpos 150
                 action[Function(closeBio), Function(closeAskTania)]
 
             button:
-                text "<-"  # temporary
-                xpos 1150
-                ypos 50
-                xalign 0.5
-                yalign 0.5
-                xysize(40, 40)
+                background iconBtnBack
+                ypos 580
+                xsize 100
+                ysize 100
+                xpos 50
                 action[Function(closeBio), Function(showAskTania)]
 
             # name
             text currentlySelected.char:
-                xpos 70
-                ypos 50
+                xpos 50
+                ypos 100
                 color currentlySelected.fontColor
                 font currentlySelected.font
                 size 40
 
-            # affection level
-            text "Connection":
-                xpos 70
-                ypos 120
-
-            # confession ready alert
-            text "Confession Ready!":
-                if currentlySelected.love == 5:
-                    color "#d34588"
-                else:
-                    color "#aaaaaa"
-                xpos 370
-                ypos 120
-
+            
+            
             # basic stats
             grid 2 8:
                 transpose True
@@ -531,7 +588,7 @@ label biographies:
                 xpos 50
                 ypos 450
                 xsize 480
-                ysize 170
+                ysize 120
                 viewport id "bio-Bio":
 
                     yinitial 0.0
@@ -545,14 +602,3 @@ label biographies:
                             ysize 150
                             box_wrap True
                             text currentlySelected.bio[currentlySelected.level]
-
-    screen bioHearts:
-        # next include current heart level. It's a bar, remember, so do it jus like lovebox
-        bar at growShrink:
-            value currentlySelected.love
-            range 4
-            left_bar "#FF69B4"
-            right_bar "#000000"
-            xysize(120, 25)
-            xpos 230
-            ypos 120

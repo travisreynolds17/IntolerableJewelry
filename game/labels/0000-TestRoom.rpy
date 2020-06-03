@@ -18,11 +18,14 @@ label testRoom:
 
     # MONOLOGUE ------------------------------
 
-    scene bg black with fade
+    $showGui()
 
-    
-        
+    pause 2.0
 
-    # --------------------------------------
+    $severToggle()
 
-    scene bg bar with longFade
+    pause
+
+    s "Well, this is a waste of time."
+
+    return

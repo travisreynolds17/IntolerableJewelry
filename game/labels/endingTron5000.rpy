@@ -33,6 +33,9 @@ label endingTron5000:
 
     o "Are you ready? To go?"
 
+    #disable severance
+    $severToggle()
+
     menu:
         "Resist":
             $resistance +=1
@@ -55,7 +58,8 @@ label endingTron5000:
         "Give up":
             jump endingGaveUp
     
-
+    #enable severance
+    $severToggle()
     o "We know what to do, then."
 
     c 1d "And what's that? Regale us."
@@ -92,9 +96,12 @@ label endingTron5000:
 
     o 1b "And you called us jewelry. Baubles. pppppointless accessories!"
 
+    #disable severance
+    $severToggle()
+
     "... storage.Tania.severed: [taniaBio.severed]"
 
-    if severTania:
+    if taniaBio.fullySevered:
         show t 1i at fr13
         pause 0.5
         show t 1c at d13
@@ -107,7 +114,7 @@ label endingTron5000:
 
     "... storage.Cass.severed: [cassBio.severed]"
 
-    if cassBio.severed:
+    if cassBio.fullySevered:
         show c 1i at f13
         pause 0.5
         show c 1c at d13
@@ -120,7 +127,7 @@ label endingTron5000:
 
     "... storage.Lichelle.severed: [lichBio.severed]"
 
-    if lichBio.severed:
+    if lichBio.fullySevered:
         show l 1i at fr13
         pause 0.5
         show l 1c at d13
@@ -473,16 +480,16 @@ label endingTron5000:
         #Yes, this means we have to largely rewrite the endings.
 
 
-        if loveRobin >= 4 and severRobin == True:
+        if loveRobin >= 4 and robinBio.fullySevered == True:
             $loveConfession = "Robin"
 
-        elif loveCass >= 4 and severCass == True:
+        elif loveCass >= 4 and cassBio.fullySevered == True:
             $loveConfession = "Cassandra"
 
-        elif loveTania >= 4 and severTania == True:
+        elif loveTania >= 4 and taniaBio.fullySevered == True:
             $loveConfession = "Tania"
 
-        elif loveLich >= 4 and severCass == True:
+        elif loveLich >= 4 and lichBio.fullySevered == True:
             $loveConfession = "Lichelle"
 
         else:
@@ -676,7 +683,7 @@ label endingTron5000:
 
                 "For a moment, I can feel the earth separating between us."
 
-                show l at 1m
+                show l 1m
 
                 "But then she smiles again, and her poker face is back in place."
             else:

@@ -7,6 +7,9 @@ label common4:
 
     ki "I dreamed of the dark, and I dreamed of a fever-cold, fleeting touch."
 
+    #enable severance
+    $severToggle()
+
     ki "Everything hurts. Maybe it doesn't. Maybe I feel fine and it's just the maelstrom in my heart throwing everything off."
 
     $chat.addmessage(elsa, "What could you possibly know, Fontaine?")
@@ -77,6 +80,9 @@ label common4:
     s "Guys. Game."
 
     $chat.addmessage(fon, "No. Private chat. ;)")
+
+    #disable severance
+    $severToggle()
 
     s "Cassandra? You left your choker around my arm."
 

@@ -7,7 +7,7 @@ label realWorld1:
 
     "This place has a great bartender. I can never remember his name, though."
 
-    "I get lost in her eyes. Warm, friendly hazel eyes."
+    "I get lost in his eyes. Warm, friendly hazel eyes."
 
     "Sometimes people I know ask why I come back here. If it's worth reopening the wounds of that day just for a prime negroni."
 

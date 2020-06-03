@@ -64,13 +64,13 @@ label endingRobin:
         # in which Robin appears in the restaurant and cuts David's throat. Then her body falls down.
         # SFX
         show image splashEKGFull at summonEKG
-            pause 0.3
+        pause 0.3
         d 1h "Sophie?"
 
         
 
         show image splashEKGFull at summonEKG
-            pause 0.3
+        pause 0.3
         s "What?"
 
         # sound effect of lights shutting off

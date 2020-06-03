@@ -42,6 +42,9 @@ label declarations:
     define r = Character("Robin", image="r", who_color="#bcb4ec", who_font="fonts/Parisienne-Regular.ttf")
     # skin tone #503335
     # hair tone / name tone #bcb4ec
+    define rr = Character("Robin", who_color="#bcb4ec", who_font="fonts/Parisienne-Regular.ttf")
+    # skin tone #503335
+
     define t = Character("Tania", image="t", who_color="#a3d1b9", who_font="fonts/Courgette-Regular.ttf")
     # skin tone #d1a3a4
     # hair tone / name tone #a3d1b9
@@ -176,6 +179,8 @@ label declarations:
         alpha 0.0
         linear 0.05 alpha 0.1
         linear 0.5 alpha 0.0
+
+    
 
 
 # transition
@@ -324,6 +329,6 @@ label declarations:
 
         # enable NVL mode for monologue
 
-        config.empty_window = nvl_show_core
+        #config.empty_window = nvl_show_core
         config.window_hide_transition = dissolve
         config.window_show_transition = dissolve
