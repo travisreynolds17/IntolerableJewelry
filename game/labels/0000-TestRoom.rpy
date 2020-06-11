@@ -20,9 +20,26 @@ label testRoom:
 
     $showGui()
 
-    pause 2.0
 
     $severToggle()
+
+    python:
+        heightRef = Image("chars/heightReference.png")
+        fon = Image("chars/fc2.png")
+
+
+    
+
+    show c 1c at f11
+    show d 1b at f12
+    show f 1c at f13
+
+
+    k  1c "Let's test."
+
+    r  2g "coat."
+
+    o  "dick."
 
     pause
 

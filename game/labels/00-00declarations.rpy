@@ -48,6 +48,9 @@ label declarations:
     define t = Character("Tania", image="t", who_color="#a3d1b9", who_font="fonts/Courgette-Regular.ttf")
     # skin tone #d1a3a4
     # hair tone / name tone #a3d1b9
+
+    define e = Character("Elsa", image="t", who_color="#a3d1b9", who_font="fonts/Courgette-Regular.ttf")
+
     define c = Character("Cassandra", image="c", who_color="#89cff0", who_font=fontCass)
     # skin tone #a1665e	rgb(161, 102, 94)
     # hair tone / name tone #5e81a1
@@ -67,9 +70,7 @@ label declarations:
     # hair tone / name tone #ffa4d5
     define un = Character("???")
     define sk = Character("Sophie & Kylie", who_color="#c5859d", image="k", who_font="fonts/Roboto-Black.ttf")
-    define e = Character("[entityName]", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf")
-    # skin tone #503335
-    # hair tone / name tone
+    
 
     define m = Character("Mortimer", image="m")
     define o = Character("Fontaine", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf", image="f")

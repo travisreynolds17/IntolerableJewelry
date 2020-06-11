@@ -2,89 +2,85 @@
 errors listed below, and try again.
 
 
-File "game/labels/00-00definitions.rpy", line 307: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rca.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 27: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcb.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 308: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcb.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 28: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 300), "chars/fcc.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 309: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcc.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 29: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcd.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 310: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcd.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 30: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fce.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 311: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rce.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 31: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcf.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 312: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcf.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 32: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcg.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 313: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcg.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 33: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fch.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 314: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rch.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 34: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fci.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 315: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rci.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 35: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcj.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 316: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcj.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 36: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fck.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 317: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rck.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 37: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcl.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 318: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcl.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 38: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcm.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 319: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcm.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 39: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcn.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 320: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcn.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 40: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fco.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 321: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rco.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 41: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcp.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 322: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcp.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 42: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcq.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 323: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcq.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 43: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcr.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 324: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcr.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 44: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcs.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 325: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcs.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 45: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fct.png")
+                                     ^
 
-File "game/labels/00-00definitions.rpy", line 326: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rct.png")
-                                                                                      ^
-
-File "game/labels/00-00definitions.rpy", line 327: unexpected EOF while parsing
-    im.Composite((540, 1004), (-50, 295), "chars/rc2.png") (50, 385), "chars/rcu.png")
-                                                                                      ^
+File "game/labels/000-TempDefs.rpy", line 46: invalid syntax
+    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcu.png")
+                                     ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Jun 03 01:19:43 2020
+Wed Jun 10 17:13:10 2020
