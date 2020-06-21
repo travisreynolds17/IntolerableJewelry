@@ -50,6 +50,8 @@ label robinDate1:
 
     ki "She gestured with her head, subtly, toward one of the tables."
 
+    play music robinChoir fadein 4.5
+
     ki "How Robin is so stealthy escapes me. She was sitting there, fingers curled around a coffee mug."
 
     ki "Her eyes were locked on that wispy little man."
@@ -74,13 +76,13 @@ label robinDate1:
 
     ki "I didn't hear the name he gave. I did notice some of Tania's security officers paying closer attention, though."
 
-    r "Serve her."
+    r 1e "Serve her."
 
     ki "The little man's mouth hung open."
 
     ki "Excuse me, he said, I'm her agent, not her something else I didn't hear."
 
-    r "..."
+    r 1d "..."
 
     ki "She didn't answer. She just stared him down."
 
@@ -96,7 +98,7 @@ label robinDate1:
 
     ki "Exactly what will you do if I don't, he said, finding a bit of courage."
 
-    r "You will. Men like you exist to please women like me."
+    r 2d "You will. Men like you exist to please women like me."
 
     ki "He stammered something to the effect of \"That's sexist\"."
 
@@ -104,7 +106,7 @@ label robinDate1:
 
     ki "... yeah, I looked. I don't feel good about it."
 
-    r "All that blood, flowing away from your little brain. I already own you, darling."
+    r 2d "All that blood, flowing away from your little brain. I already own you, darling."
 
     $chat.addmessage(fon, "Robin wow. Wow, wow. :)")
 
@@ -130,7 +132,7 @@ label robinDate1:
 
     ki "He looked like he'd been slapped."
 
-    r 1k "Cut a piece of that pie, place it on a saucer and hand it to me, you wretched little bootlicker."
+    r 2k "Cut a piece of that pie, place it on a saucer and hand it to me, you pitiful, pitiful clown."
 
     ki "Someone else in the entourage was chuckling."
 
@@ -154,17 +156,17 @@ label robinDate1:
 
     ki "Don't you want this, he asked."
 
-    r 1k "From you? How disgusting."
+    r 2k "From you? How disgusting."
 
     $chat.addmessage(fizz, "Cold as ice.")
 
     ki "He'd gone red at this point."
 
-    r "Cassandra."
+    r 2a "Cassandra."
 
     show c 1s
 
-    r 1m "Come."
+    r 2m "Come."
 
     ki "Just like that, Robin turned on her heel and led a flummoxed Cassandra away."
 
@@ -186,15 +188,21 @@ label robinDate1:
 
     ki "Meeting Cassandra was intimidating. She's my musical idol, after all."
 
+    stop music fadeout 3.0
+
     ki "Robin is something else entirely."
 
     $chat.addmessage(fizz, "vampire")
+
+    pause 0.1
 
     ki "Speaking of Robin... what should I wear on our date? I wish I had a better idea of where we were going."
 
     pause 0.1
 
-    s "What should we wear this time?"
+    s 1a "What should we wear this time?"
+
+    play music lichelle fadein 3.0
 
     $chat.addmessage(fon, "That dress. :) Yum yum.")
 

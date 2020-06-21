@@ -3,8 +3,10 @@ label opening:
 # opening scene: basically same as other game, just tuned up. maybe can be skipped?
 
     window hide 
-    scene bg resta
-    with fade
+
+    pause 2.0
+
+    
 
     "It's not what you said."
 
@@ -16,15 +18,20 @@ label opening:
 
     "It's just the look on your face."
 
+    play music ringRejection fadein 2.0
+
     "It doesn't matter what you think you mean or how you think you said it."
 
     "... these are why I would rather just play video games. Dealing with people is hard. I don't have the right interface."
 
     "Somehow I ended up here anyway."
 
+    scene bg resta
+    with fade
+
     "Trying to figure out how to turn down a wedding ring."
 
-    show d 1m at f12
+    show d 1a at f12
 
     "His face is earnest. He means it when he tells me he'll be there forever."
 
@@ -36,7 +43,7 @@ label opening:
 
     s "David I care about you, I love you, but I-"
 
-    show d 1h
+    show d 1g
 
     "Damn everything about this."
 
@@ -70,7 +77,7 @@ label opening:
 
     "That's something else I haven't told him."
 
-    d 1c "Say something."
+    d 1g "Say something."
 
     s "I'm not giving up my work. You're already too jealous about it and I love doing it so-"
 
@@ -102,11 +109,11 @@ label opening:
 
     "Shit."
 
-    d 1h "What do you mean, why?"
+    d 1s "What do you mean, why?"
 
     s "Just because we disagree here doesn't mean we have to end it. We can compromise. I just don't want to sign a contract while -"
 
-    d 1d "You see us getting married as a legal issue?"
+    d 1g "You see us getting married as a legal issue?"
 
     "There it is again. That's not what I meant."
 
@@ -114,7 +121,7 @@ label opening:
 
     "But maybe we should? Just... end it. I can free him, right now. He's young enough that he could find someone else."
 
-    d 1k "It's pretty hypocritical of you to be worried about things being legal."
+    d 1b "It's pretty hypocritical of you to be worried about things being legal."
 
     s "David. Don't."
 
@@ -122,7 +129,7 @@ label opening:
 
     s "That I'll cheat on you with some Internet teenager?"
 
-    d 1d "- that someone will find you some day, Sophie!"
+    d 1g "- that someone will find you some day, Sophie!"
 
     s "I can take care of myself!"
 
@@ -132,7 +139,7 @@ label opening:
 
     s "They're not all guys, you know."
 
-    show d 1h
+    pause 1.0 
 
     "Quietly, before I could stop them, those words tumble out."
 
@@ -142,7 +149,9 @@ label opening:
 
     s "David-"
 
-    d 1d "You know what? Fine."
+    d 1g "You know what? Fine."
+
+    stop music fadeout 3.0
     
     d "Be a her in a d ct. Go righ ba k. I'm go na m v   t  f th hous  . You'll n  er have to wo  y ab  t    again."
 
@@ -155,7 +164,7 @@ label opening:
     
     "My arms pin themselves to my sides as my leg muscles lose all semblance of tension. There’s a sensation of impact when I hit the ground, but no accompanying pain."
 
-    "There's warmth on my tongue and lips."
+    "Warmth blooms on my tongue and lips."
     
     "Vaguely, I hear voices around me. Something moves me. It’s always the same. I’m falling. Falling, and falling, while the ghosts of whatever was around me slide from side to side."
     
@@ -165,8 +174,14 @@ label opening:
 
     "He’s not there."
 
+    "He's not there."
+
+    "It's my fault."
+
+    "I should've tried harder."
+
     scene bg black
-    with fade
+    with longFade
 
     pause 2.0
 

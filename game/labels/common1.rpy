@@ -3,9 +3,12 @@ label common1:
 
     # text
 
+
     scene bg load-string with fade
 
     pause 4.0
+
+    play music jazzNoodle fadein 3.0
 
     scene bg black with fade
     pause 1.0
@@ -13,10 +16,7 @@ label common1:
     show screen mainGameWindow
     show image splashTitle at alphaFade
 
-    show screen loveScreen
     show screen leftBtnWindow
-
-    show screen btnWindow
 
     # some chat front load. more later.
     python:
@@ -27,18 +27,25 @@ label common1:
         chat.addmessage(egg, "Hi sweet Sophie")
         chat.addmessage(unkn, "hello")
 
-    s "Hey everyone! Time for some sweet, sweet dating sim action, don't you think?"
+    s 1a "Hey everyone! Time for some sweet, sweet dating sim action, don't you think?"
 
-    s "Oh that's right, we were getting ready to meet the host."
+    s 1m "So this game is supposed to be a visual novel about one of those dating reality shows. Kind of like The Unmarried Guy."
 
-    s "So this game is supposed to be a visual novel about one of those dating reality shows. Kind of like The Unmarried Guy."
+    s "And you can super tell it's still in beta. Let's get started with One Week Waifu!"
 
-    s "A fan gifted it to me the other day and it couldn't come at a better time! Let's get started with Intolerable Jewelry!"
+    #sfx: game button confirm sound
+    stop music fadeout 0.5
+
+    scene bg black with longFade
+
+    pause 1.5
 
     scene bg near stage
-    with fade
+    with longFade
 
-    s "Just like always guys, chat away! Fan club comments go straight to the top, so if you wanna support me join up!"
+    play music hallwayChats fadein 1.5
+
+    s 1m "Just like always guys, chat away! Fan club comments go straight to the top, so if you wanna support me join up!"
 
     s "Lemme see what you guys are saying."
 
@@ -62,25 +69,25 @@ label common1:
 
     s "Thanks, Fizz, how are you tonight? Did your test go okay?"
 
-    s "Hi Fontaine! You know this game, too? No spoilers, okay? Also, I don't think we've met, welcome!"
+    s 1a "Hi Fontaine! You know this game, too? No spoilers, okay? Also, I don't think we've met, welcome!"
 
     $chat.addmessage(fon, "It's my favorite game.")
 
-    s "Oh my god, Bong, stop, you horndog. I'm gonna be here all night."
+    s 1k "Oh my god, Bong, stop, you horndog. I'm gonna be here all night."
 
     $chat.addmessage(fizz, "Passed, barely. God.")
 
-    s "Elsa, it's really just a dating sim. I kind of needed something to wind down."
+    s 1m "Elsa, it's really just a dating sim. I kind of needed something to wind down."
 
     s "How am I doing? I'm doing fine, I guess. I haven't had a seizure since the last one."
 
     $chat.addmessage(bong, "u love me lol")
 
-    s "I know, I know, I know. I'm funny."
+    s 1q "I know, I know, I know. I'm funny."
 
     $chat.addmessage(bar, "really glad your OK. you gonna try to date again?")
 
-    s "Seriously, I've never been better. I'm independent again, no seizures, I can stream all I want. And I can hang out with you guys!"
+    s 1a "Seriously, I've never been better. I'm independent again, no seizures, I can stream all I want. And I can hang out with you guys!"
 
     $chat.addmessage(fon, "No spoilers, I can't wait to see if you can make it ;)")
 
@@ -90,40 +97,48 @@ label common1:
 
     $chat.addmessage(bong, "weird u can see chat if I have window closed")
     $chat.addmessage(fon, "No, that's part of the game. Even chat can switch some windows.")
-    # goes through title screen
 
     s "So we already named our protag, and of course I named her Kylie. I'm happy it let me choose to be a girl, by the way."
 
     $chat.addmessage(bar, "Why Kylie?")
 
-    s "Wait, really, Fontaine? That's interesting! So now all of you get to know how I feel when I get behind on chat and have to catch back up, ha!"
+    s 1r "Wait, really, Fontaine? That's interesting! So now all of you get to know how I feel when I get behind on chat and have to catch back up, ha!"
 
-    s "Twixt, it's because Kylie's my middle name. Everyone called me Kylie when I was just an egg."
+    s 1a "Twixt, it's because Kylie's my middle name. Everyone called me Kylie when I was just an egg."
 
     s "Okay, chat, I'll catch up with you later!"
 
-    pause 1.0
-
-    s "So... we've already got a love meter, it looks like?"
+    s "And we're going to get started!"
 
     $renpy.notify("Chat?")
 
-    s "Could also be a life bar. That must be our four girls, right?"
+    ki "I'm nervous. Of course I am. I've never been on a TV show before."
 
-    s "Got some traits on the right, it seems. So is that what each girl is like?"
-
-    python:
-        newComments = [
-
-            [shub, "Four girls man."],
-            [crab, "I like those odds."]
-
-        ]
-        chat.bulkMessage(newComments, 0)
+    ki "There's a lot going on, but I found a hallway to hide away from the production assistants and makeup team for a minute."
 
     show t 1a at f12 
 
-    t "Okay, are you ready? Everyone's waiting on you. No pressure, right?"
+    t "Hi Kylie!"
+
+    s 1t "Ooh, I like her outfit."
+
+    ki "... it was only a matter of time before Tania found me."
+
+    t 1j "Hiding out?"
+
+    k "Yes. Yes I am."
+
+    t 1q "I'm here for you. Anything you need, if it takes less than two minutes, I've got you covered."
+
+    ki "I'm too nervous to make a sex joke."
+
+    ki "That's never happened before."
+
+    k "I'm good. I'm good!"
+
+    t 1m "Yes you are! Nothing to worry about hon, not a bit."
+
+    t "So. You ready to go find love or whatever?"
 
     # quick choice to show how choices work
 
@@ -136,7 +151,7 @@ label common1:
                 $ answer = True
 
             "I'm not ready!":
-                t "Take a moment to get yourself together."
+                t 1a "Take a moment to get yourself together."
                 pause 2.0
 
     # end of choice
@@ -158,13 +173,22 @@ label common1:
 
     t 1m "That's what I want to hear. Now, get in there and find love!"
 
-    s "I love cheese. I love this game already!"
+    k "Or whatever?"
+
+    t 1j "Now you're learning."
+
+    s 1a "I love cheese. I love this game already!"
+
+    stop music fadeout 2.0
 
     hide t
 
+    pause 1.0 
     scene bg stage with longFade
 
-    s "Oh, I like this setup! I wonder what kind of people we're gonna meet?"
+    play music cheerfulGuitar fadein 2.0
+
+    s 1a "Oh, I like this setup! I wonder what kind of people we're gonna meet?"
 
     $chat.addmessage(beav, "Assholes.")
     $chat.addmessage(fizz, "Tania's already best girl. 10/10")
@@ -176,14 +200,14 @@ label common1:
 
     s "Oh wow, you guys like Tania. Fizz you can't name her best girl yet, we haven't even met the dates!"
 
-    s "Oh, hey Beaver, how's your day? Assholes, sure. Probably."
+    s 1m "Oh, hey Beaver, how's your day? Assholes, sure. Probably."
 
     pause 0.25
     $chat.addmessage(beav, "Good, yours? How's you? Any moer seizures?")
 
     s "Yeah, I'm great. I'm happy, doing what I love with people I like!"
 
-    s "Nope, no seizures. I guess my ex was causing them after all."
+    s 1a "Nope, no seizures. I guess my ex was causing them after all."
 
     pause 0.25
     $chat.addmessage(elsa, "Men are cancer.")
@@ -204,10 +228,13 @@ label common1:
 
     t 1o "Let's start with the introductions. We're going alphabetically just so nobody gets top billing, besides myself of course!"
 
+    stop music fadeout 2.0
+
     show t 1a at mt1
 
     $chat.addmessage(bong, "probly just a casting couch situation neway.")
 
+    play music cassPiano fadein 1.0
     pause 0.5
     show c 1p at fl12
 
@@ -215,7 +242,7 @@ label common1:
 
     $chat.addmessage(elsa, "Quillboard. Also, bong, grow tf up.")
 
-    s "Ooh, she's a cutie."
+    s 1t "Ooh, she's a cutie."
 
     python:
         chat.addmessage(egg, "Sexy choker girl.")
@@ -229,11 +256,11 @@ label common1:
 
     t 1o "Generally I'd ask our Suitor to say a few words, but Cassandra... well, I'll let her tell you."
 
-    show c 1l
+    show c 1m
 
     ki "Cassandra lifts her hands and whirls them about in patterns I could never hope to translate, but know enough of to recognize as some form of sign language."
 
-    s "Oh, is she deaf? Poor thing!"
+    s 1b "Oh, is she deaf? Poor thing!"
 
     $chat.addmessage(bar, "She's a deaf musician. Wow.")
     $chat.addmessage(bar, "I wonder if there are any of those in reality nowadays?")
@@ -243,14 +270,22 @@ label common1:
     pause 0.7
     $chat.addmessage(crab, "Bae-thoven")
 
-    t 2q "Anyone out there able to read ASL? No? Our next Suitor is, and she's offered to help us out."
+    t 2q "Anyone out there able to read ASL? No?"
 
-    show t 1a at f13
+    show t at justFade
+
+    t "Our next Suitor is, and she's offered to help us out."
+
+    stop music fadeout 2.0
+
+    hide t
 
     show c 1a at mt1
     pause 0.5
 
-    show r 1j at fl12
+    show r 1j at fr12
+
+
     pause 1.0
 
     t "May I present to you, everyone, the owner, proprieter and face of Ganymead Performing Arts, miss Robin Mia Lupei Godrey!"
@@ -261,7 +296,7 @@ label common1:
 
     show r 1m 
 
-    s "GOTH CHICK! I'm so onboard."
+    s 1h "GOTH CHICK! I'm so onboard."
 
     ki "The woman looming statuesque before me is every inch of six-foot-three. Her hair is voluminous. She's like a goth-chick telephone pole."
 
@@ -270,7 +305,7 @@ label common1:
         chat.addmessage(cake, "my sister's an asshoel")
         chat.addmessage(fon, "Oh, Robin, I love you <B")
 
-    s "I hear you, Kylie."
+    s 1r "I hear you, Kylie."
 
     t 2n "Hi Robin!"
 
@@ -280,7 +315,7 @@ label common1:
 
     ki "Her voice rings musically, with a hint of the tongue-tension common to eastern European nations. I can't quite pin down her accent, though."
 
-    s "Tongue-tension. Chat, I'll let you guys pore over that one." 
+    s 1a "Tongue-tension. Chat, I'll let you guys pore over that one." 
     
     $chat.addmessage(bong,"treatin us lke a bunch of preverts")
 
@@ -345,6 +380,7 @@ label common1:
     pause 1.0
 
     show l 1o at f13
+    pause 1.0
 
     $chat.addmessage(bong, "ooh chocolate")
 
@@ -357,9 +393,9 @@ label common1:
 
     ki "Robin only smiles, a gentle, delicious smile."
 
-    s "Oh, we've got our tomboy! Wait. Which one is the nerd? Could we be dodging tropes today?"
+    s 1n "Oh, we've got our tomboy! Wait. Which one is the nerd? Could we be dodging tropes today?"
 
-    s "Also, I don't think the game has any sex, people. I couldn't stream it."
+    s 1b "Also, I don't think the game has any sex, people. I couldn't stream it."
 
     $chat.addmessage(bar, "Pity")
 
@@ -386,11 +422,17 @@ label common1:
     $chat.addmessage(fizz, "A cutwoman or a cutman is there to stop a pro fighter's bleeding between rounds.")
     $chat.addmessage(fon, "I love them. Wow, Fizz! Smarty smart. Handsome too?")
 
-    hide l at fr13
-    hide c at f12
-    hide r at fl11
+    show l at justFade
+    show c at justFade 
+    show r at justFade 
+
+    pause 1.0
 
     t "Well, we're happy to have you here on One-Week Waifu. Now, before we meet our eligible bachelorette, I'd like each of you to let us know what being here means to you. And be honest!"
+
+    hide c
+    hide l
+    hide r
 
     show t 1l at fr13
     
@@ -423,7 +465,7 @@ label common1:
 
     s "I admire their honesty if nothing else."
 
-    s "Hey Bong, be nice."
+    s 1g "Hey Bong, be nice."
 
     $chat.addmessage(bong, "sorry Fontaine")
     $chat.addmessage(fon, "Nothing to forgive. I'll prove I'm not catfishing. Check private chat.")
@@ -440,14 +482,14 @@ label common1:
 
     $chat.addmessage(bar, "Robin lives her gimmick.")
 
-    s "She talkin' bout ME."
+    s 1b "She talkin' bout ME."
 
     t "Everyone welcome this season's single lady! Come on out, Kylie!"
 
     hide r at fl11
     
     hide t at f13
-    pause 0.4
+    pause 1.4
 
     show r 1s at fl11
     pause 0.3
@@ -462,7 +504,7 @@ label common1:
 
     ki "I make my way to the stage, fully aware of the eyes trained on me. Cassandra's side-eye, Lichelle's direct gaze, Robin's --"
 
-    $chat.addmessage(shub, "Robin's belly button.")
+    $chat.addmessage(shub, "Robin's jeans.")
 
     ki "Well, Robin is looking past me, to the stage doors. Detachment must be part of her schtick."
 
@@ -481,7 +523,7 @@ label common1:
 
     show r 1j
 
-    s "Ooh, I'm an artist. Nice."
+    s 1a "Ooh, I'm an artist. Nice."
 
     $chat.addmessage(crab, "oh yeah Bong? what's that mean?")
     $chat.addmessage(elsa, "Oh wow graphic design! Like me!")
@@ -494,7 +536,7 @@ label common1:
 
     scene bg stage with fade
 
-    show t 1j at fr13
+    show t 1l at fr13
 
     t "Wow, that's some story! So, we know you were just off camera while our Suitors introduced themselves."
 
@@ -514,20 +556,17 @@ label common1:
 
     $chat.addmessage(cake, "brb.")
 
-    s "So it's a dating game, sure, but don't you think it's weird for one person to meet all these others and expect to fall in love with one in a week?"
+    s 1a "So it's a dating game, sure, but don't you think it's weird for one person to meet all these others and expect to fall in love with one in a week?"
 
     s "I think I'd have a hard time with that. So... hey chat. Who do we like?"
 
     $chat.addmessage(elsa, "If I liked girls, probly the fighter. Imagine holding that person in your arms after a tough loss or a great win :)")
     $chat.addmessage(elsa, "But she might be too aggressive. Robin, then.")
 
-    # show chat
-    if chatIsOn == False:
-        show screen chatterbox
-        $chatIsOn = True
+    
     pause 1.0
 
-    s "Wow you guys are talkative today. Hi Shub, Crab, and Cake! My three amigos."
+    s 1m "Wow you guys are talkative today. Hi Shub, Crab, and Cake! My three amigos."
 
     $chat.addmessage(shub, "Hola, mamacita.")
     $chat.addmessage(crab, "'allo Ms. K")
@@ -536,19 +575,19 @@ label common1:
 
     $chat.addmessage(fizz, "Cassandra's mysterious. Like it.")
 
-    s "Oh, Elsa, you're such a romantic. Bong, I'm not on the list you perv. Don't any of these cuties get your attention?"
+    s 1a "Oh, Elsa, you're such a romantic. Bong, I'm not on the list you perv. Don't any of these cuties get your attention?"
 
     $chat.addmessage(bar, "Bong is off gallavanting.")
 
     s "Fizz is all about some Cassandra, Twixt likes Robin. No love for Lichelle guys? I mean she's a badass, she could protect me if I needed it."
 
-    s "Which I don't, just so you know."
+    s 1r "Which I don't, just so you know."
 
     $chat.addmessage(egg, "we got a badass over here")
 
     $renpy.notify("Even immaterial decisions may matter.")
 
-    s "I guess my answer here won't decide anything major yet, so I'm gonna say..."
+    s 1a "I guess my answer here won't decide anything major yet, so I'm gonna say..."
 
     # choice
 
@@ -572,7 +611,7 @@ label common1:
                 t "Oh, you like the quiet type eh?"
                 c "..."
                 $chat.addmessage(fizz, "Good choice.")
-                s "I'm super curious how this is gonna play out if she can't talk. Like, maybe I can learn sign language in a week?"
+                s 1a "I'm super curious how this is gonna play out if she can't talk. Like, maybe I can learn sign language in a week?"
                 $temp = True
                 $loveCass += 1
                 $ which_girl_1 = "Cassandra"
@@ -587,7 +626,7 @@ label common1:
                 t "Oh, you like the mysterious type eh?"
                 r "I see. Perhaps you have my interest, as well, papillon."
                 $chat.addmessage(bar, "Butterfly? Right?")
-                s "Oh my god she speaks French! The goth chick called me butterfly! Guys. Chat. We did it. We won."
+                s 1a "Oh my god she speaks French! The goth chick called me butterfly! Guys. Chat. We did it. We won."
                 $temp = True
                 $loveRobin += 1
                 $ which_girl_1 = "Robin"
@@ -598,7 +637,6 @@ label common1:
                 hide l at fr13
                 scene bg stage
                 show l 1m at f12
-                show c 2q at f12
 
                 t "Oh, you like the dangerous type eh?"
                 l "Don't worry, Kylie! I'm only dangerous if you want me to be."
@@ -638,7 +676,7 @@ label common1:
                 $groupThing = True
 
         # END OF CHOICE
-        show screen loveScreen
+        
 
     scene bg stage
     show t 1a at f12
@@ -648,7 +686,7 @@ label common1:
 
     $chat.addmessage(elsa, "Me too, Tania, me too. Preach girl.")
 
-    s "Love, huh? Well... not me. But maybe."
+    s 1a "Love, huh? Well... not me. But maybe."
 
     t 1o "Kylie will go on a total of seven dates, one date each day of the week. Each Suitor will have two dates with her, and then one final date with whomever Kylie decides is worthy of her affection!"
 
@@ -693,7 +731,7 @@ label common1:
 
     t "Kylie, Cassandra, Robin, Lichelle, on behalf of everyone at One-Week Waifu, I wish you the best of luck! No matter who Kylie chooses, you'll make the cutest couple wherever you go!"
 
-    s "TOO MUCH SUGAR!"
+    s 1n "TOO MUCH SUGAR!"
 
     $chat.addmessage(cake, "oranges wtf .... oh i getcha")
 
@@ -711,6 +749,8 @@ label common1:
 
     t "Thanks for tuning in everybody!"
 
+    stop music fadeout 1.0
+
     scene bg near stage with fade
     
     show t 1a at f12
@@ -719,13 +759,15 @@ label common1:
 
     pause 1.0
 
+    play music hallwayChats fadein 1.0
+
     t "Hey, Kylie. I hope that wasn't too stressful."
 
     k "No more than the last time I was in front of three dream girls and thousands of fans."
 
     $chat.addmessage(fizz, "I'm really curious about Cassandra. Why's Robin mistranslating? Fontaine was sad about her choker. What's up with that?")
 
-    s "Chat, I don't know about you, but I'm ready for a hot date. Let's take a sec to catch up though. Um..."
+    s 1a "Chat, I don't know about you, but I'm ready for a hot date. Let's take a sec to catch up though. Um..."
 
     $chat.addmessage(elsa, "Cassandra's in a cult. No doubt. Vow of silence. For sure.")
 
@@ -739,7 +781,7 @@ label common1:
 
     s "Tweeter is interested in Elle, but wants to see her with her shirt off to find out if she has man-muscles. Uh-huh. I'm sure that's all."
 
-    $chat.addmessage(shub, "Tania's right there. She got richgurl money, bet. Fontaineely.")
+    $chat.addmessage(shub, "Tania's right there. She got richgurl money, bet.")
 
     s "Shub's disappointed Tania's not available. She's got lots of energy, I agree. Her last name sounds like her parents are rich, right, right."
 
@@ -760,6 +802,8 @@ label common1:
     s "Actually, let's not go down this rabbit hole just yet."
 
     # back to game
+
+    pause 0.2
 
     k "So Cassandra's first, huh? How are we supposed to communicate?"
 
@@ -874,10 +918,7 @@ label common1:
     $haveAsked = False  # Just a variable to signify whether you've already asked a question
 
     while temp == False:
-        if haveAsked:
-            t "Anything else?"
-        else:
-            k "What should I ask...?"
+        pause 0.5
 
         menu:
 
@@ -943,14 +984,14 @@ label common1:
 
     show c 1p at f12
 
-    ki "Cassandra, the silent musician. Her eyes miss nothing, her features are so perfectly Greek, her bearing so beautifully coquettish."
+    ki "Cassandra, the silent musician. Her eyes miss nothing, her features are so perfectly sculpted, her bearing so beautifully coquettish."
 
     $chat.addmessage(fizz, "I wonder if any of her music is written for the game.")
     ki "I feel some deep well of empathy emanating from her, building behind a dam of muteness."
 
     show c at mt3
 
-    show l 1q at f12
+    show l 1m at f12
 
     ki "Lichelle, the fit girl with the wild smile and hungry eyes. So fierce, so powerful, so dangerous. Some part of me has a tiny, tiny submissive side and Lichelle simply radiates the power to control."
 
@@ -974,15 +1015,15 @@ label common1:
 
     ki "I should focus on getting ready, though. I wonder what Cassandra has in mind?"
 
-    scene bg black with dissolve
+    stop music fadeout 1.0
 
-    s "Oh my god, me too. Hey chat, how we doin? How's everyone feeling?"
+    scene bg black with dissolve
 
     $chat.addmessage(cake, "Shame b/c I'm dom AF")
 
     # checks chat
 
-    s "Hm. I agree, everyone, it's gonna be a tough choice. Like, I like how Robin's all spooky and gothic. She's like a playhouse owner, too, so she's probably good at business and stuff."
+    s 1a "Hm. I agree, everyone, it's gonna be a tough choice. Like, I like how Robin's all spooky and gothic. She's like a playhouse owner, too, so she's probably good at business and stuff."
 
     s "Bong, you pick a girl yet?"
 
@@ -999,18 +1040,18 @@ label common1:
 
     $chat.addmessage(shub, "Gross! We need to date ALIENS instead.")
 
-    s "Shub, that's okay, we have to make sure everyone has something that works for them. Now that I'm doing better, we'll find a Martian to mate with at some point."
+    s 1m "Shub, that's okay, we have to make sure everyone has something that works for them. Now that I'm doing better, we'll find a Martian to mate with at some point."
 
     $chat.addmessage(egg, "Scandalous. Also, all these ladies seem great in their own way!")
 
     s "Tweeter, you're right. It's like... I feel like it'll be hard to really decide who we like if everyone's good. We only have seven days!"
 
-    s "Oh my god. Seven days to find love. Or hit that. Right Fizzy?"
+    s 1d "Oh my god. Seven days to find love. Or hit that. Right Fizzy?"
 
     $chat.addmessage(fizz, "I'm a lover, not a hitter!")
     $chat.addmessage(crab, "or a quitter!")
 
-    s "Okay guys, I'm gonna take a short break. You perverts talk amongst yourselves for a bit!"
+    s 1a "Okay guys, I'm gonna take a short break. You perverts talk amongst yourselves for a bit!"
 
     pause 1.0
 
@@ -1054,11 +1095,13 @@ label common1:
 
     s "Oh, welcome back Fontaine."
 
-    s "If you have to know, yes, I went to the restroom. You guys are freaks."
-
     $chat.addmessage(fizz, "Gross.")
 
+    s "If you have to know, yes, I went to the restroom. You guys are freaks."
+
     scene bg dressing with dissolve
+
+    play music lichelle fadein 1.0
 
     ki "The dressing room is clean and simple. I'd like to stretch out for a nap, actually; the nerves have taken it out of me."
 
@@ -1082,7 +1125,7 @@ label common1:
 
     ki "The pantsuit is stylish, but I think a suit requires a certain power attitude. Not me, not in the least."
 
-    s "So the game wants us to guess who might like which outfit?"
+    s 1a "So the game wants us to guess who might like which outfit?"
 
     $chat.addmessage(elsa, "Little black dress on first date? Nope.")
 
@@ -1134,7 +1177,7 @@ label common1:
 
     t "Hey, Kylie, looking great!"
 
-    s "I bet she would have said that no matter what we picked."
+    s 1m "I bet she would have said that no matter what we picked."
 
     $chat.addmessage(shub, "bet")
 
@@ -1159,6 +1202,8 @@ label common1:
     hide t at f12
 
     $hideGui()
+
+    stop music fadeout 2.0
 
     # adjust character bios from 0 (unknown) to 1 (standard bios)
 

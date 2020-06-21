@@ -112,8 +112,10 @@ label chatwindow:
         tag chatterbox
         $ chatyadj.value = infyadjValue
         # declare a frame to hold the whole bit. we're gonna make a transform, and it's declared at frame, to slide the box into sight.
-        frame at summonChat:
-
+        frame:
+            xpos chatXPos
+            ypos chatYPos
+            
             viewport id "chatbox":
                 yadjustment chatyadj
                 mousewheel True  # allow player to scroll at will? maybe not. Will def need to pull the box to specific points durint narrative

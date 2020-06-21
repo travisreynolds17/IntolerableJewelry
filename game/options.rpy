@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Ganymead")
+define config.name = _("Intolerable Jewelry")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -211,3 +211,7 @@ init python:
 ## by a slash.
 
 # define build.itch_project = "renpytom/test-project"
+
+# extra layers
+
+    config.layers = ['master', 'transient', 'sophie', 'screens', 'overlay']

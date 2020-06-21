@@ -2,85 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/labels/000-TempDefs.rpy", line 27: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcb.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 28: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 300), "chars/fcc.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 29: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcd.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 30: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fce.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 31: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcf.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 32: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcg.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 33: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fch.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 34: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fci.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 35: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcj.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 36: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fck.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 37: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcl.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 38: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcm.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 39: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcn.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 40: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fco.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 41: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcp.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 42: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcq.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 43: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcr.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 44: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcs.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 45: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fct.png")
-                                     ^
-
-File "game/labels/000-TempDefs.rpy", line 46: invalid syntax
-    im.Composite((371, 1004), (0. 260), "chars/fc2.png", (0, 215), "chars/fcu.png")
-                                     ^
+File "game/labels/00-00definitions.rpy", line 303: unexpected EOF while parsing
+    im.Composite((371, 1004), (0, 240), "chars/c1.png", (135, 423), "chars/ch.png", (0, 240), "img/cassBlood.png"))
+                                                                                                                   ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Jun 10 17:13:10 2020
+Sun Jun 21 00:00:40 2020

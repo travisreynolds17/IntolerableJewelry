@@ -36,6 +36,107 @@ label declarations:
         picEntity = "img/pic-Kylie.png"
         picKylie = "img/pic-Kylie.png"
 
+        # we need characters to visually alter when speaking. we'll use a character callback for that, it seems. 
+
+        def speakingCass(event, interact = True, **kwargs):
+            if not interact:
+                return
+            # if event == begin means if a say statement has started.
+            if event == "begin":
+                if renpy.showing("c"):
+                    renpy.show("c", at_list = [speakZoom])
+            if event == "end":
+                if renpy.showing("c"):
+                    renpy.show("c", at_list = [speakNormal])
+        
+        def speakingLich(event, interact = True, **kwargs):
+            if not interact:
+                return
+            # if event == begin means if a say statement has started.
+            if event == "begin":
+                if renpy.showing("l"):
+                    renpy.show("l", at_list = [speakZoom])
+            if event == "end":
+                if renpy.showing("l"):
+                    renpy.show("l", at_list = [speakNormal])
+
+        def speakingTania(event, interact = True, **kwargs):
+            if not interact:
+                return
+            # if event == begin means if a say statement has started.
+            if event == "begin":
+                if renpy.showing("t"):
+                    renpy.show("t", at_list = [speakZoom])
+            if event == "end":
+                if renpy.showing("t"):
+                    renpy.show("t", at_list = [speakNormal])
+
+        def speakingRobin(event, interact = True, **kwargs):
+            if not interact:
+                return
+            # if event == begin means if a say statement has started.
+            if event == "begin":
+                if renpy.showing("r"):
+                    renpy.show("r", at_list = [speakZoom])
+            if event == "end":
+                if renpy.showing("r"):
+                    renpy.show("r", at_list = [speakNormal])
+        
+        def speakingKylie(event, interact = True, **kwargs):
+            if not interact:
+                return
+            # if event == begin means if a say statement has started.
+            if event == "begin":
+                if renpy.showing("k"):
+                    renpy.show("k", at_list = [speakZoom])
+            if event == "end":
+                if renpy.showing("k"):
+                    renpy.show("k", at_list = [speakNormal])
+
+        def speakingFont(event, interact = True, **kwargs):
+            if not interact:
+                return
+            # if event == begin means if a say statement has started.
+            if event == "begin":
+                if renpy.showing("o"):
+                    renpy.show("o", at_list = [speakZoom])
+            if event == "end":
+                if renpy.showing("o"):
+                    renpy.show("o", at_list = [speakNormal])
+
+        def speakingDavid(event, interact = True, **kwargs):
+            if not interact:
+                return
+            # if event == begin means if a say statement has started.
+            if event == "begin":
+                if renpy.showing("d"):
+                    renpy.show("d", at_list = [speakZoom])
+            if event == "end":
+                if renpy.showing("d"):
+                    renpy.show("d", at_list = [speakNormal])
+        
+        def speakingElsa(event, interact = True, **kwargs):
+            if not interact:
+                return
+            # if event == begin means if a say statement has started.
+            if event == "begin":
+                if renpy.showing("e"):
+                    renpy.show("e", at_list = [speakZoom])
+            if event == "end":
+                if renpy.showing("e"):
+                    renpy.show("e", at_list = [speakNormal])
+
+        def speakingMort(event, interact = True, **kwargs):
+            if not interact:
+                return
+            # if event == begin means if a say statement has started.
+            if event == "begin":
+                if renpy.showing("m"):
+                    renpy.show("m", at_list = [speakZoom])
+            if event == "end":
+                if renpy.showing("m"):
+                    renpy.show("m", at_list = [speakNormal])
+
     define s = Character("Sophie", image="s", who_color="#c5859d", who_font="fonts/Roboto-Black.ttf", what_color=colorKylie, what_font=fontKylie)
     # skin tone #c58c85
     # hair tone / name tone #c5859d
@@ -135,12 +236,12 @@ label declarations:
 
     transform summonSoph:
         on show:
-            xpos - 200
+            xpos 1400
             ypos lbtnY
             linear 0.2 xpos lbtnX
 
         on hide:
-            linear 0.2 xpos - 200
+            linear 0.2 xpos 1400
 
     transform summonChatHorror:
         xpos chatXPos ypos chatYPos
@@ -267,21 +368,17 @@ label declarations:
 
         def hideGui():
             renpy.hide_screen("mainGameWindow")
-            renpy.hide_screen("loveScreen")
             renpy.hide_screen("chatterbox")
             renpy.hide_screen("leftBtnWindow")
-            chatIsOn = False
-            renpy.hide_screen("btnWindow")
+         
             renpy.pause(2.0)
 
         def showGui():
 
             renpy.show_screen("mainGameWindow")
-            renpy.show_screen("loveScreen")
             renpy.show_screen("chatterbox")
             renpy.show_screen("leftBtnWindow")
-            chatIsOn = True
-            renpy.show_screen("btnWindow")
+           
             renpy.pause(2.0)
 
         # create a custom function to display the chat history screen.

@@ -1,21 +1,22 @@
 label leftbuttonwindow:
+    #Note: These buttons are no longer on the left. Not refactoring at this point. Just adjusting.
     init python:
-        lbtnX = 20
-        lbtnY = 219
+        lbtnX = 956
+        lbtnY = 20
 
-        lbtnWidth = 180
-        lbtnHeight = 292
+        lbtnWidth = 302
+        lbtnHeight = 74
 
-        #variable to hold message for subscribe button
+        #variable to hold message for subscribe button # Deprecated. Will need to adjust sever function to no longer use the left buttons..
         subBtnMsg = "Error: Subscription failed. Contact administrator."
         subText = "Subscribe"
 
-        # Variables for left button menu
+        # Variables for left button menu - Deprecated
         leftBtnTxt = [
                 "Ask Tania", "Subscribe", "History"
             ]
 
-        # functions to set the messages above
+        # functions to set the messages above - Deprecated
         def setSubBtnMsg(value):
             global subBtnMsg
             subBtnMsg = value
@@ -50,39 +51,20 @@ label leftbuttonwindow:
             xpos lbtnX
             ypos lbtnY
             xysize(lbtnWidth, lbtnHeight)
-            vbox:
+            hbox:
                 # ask tania is where in-game help menus, as well as character bios, can be found. Maybe put settings here, too? 
                 button: 
-                    text leftBtnTxt[0]:
-                        xalign 0.5
-                        yalign 0.5
-                    xysize(lbtnWidth, lbtnHeight/3)
+                    add btnAskTania
+                    xysize(lbtnWidth/2, lbtnHeight)
                     action Function(showAskTania)
-                    background "#444444"
 
                 
-                button:
-                    # this button is intended to show a contextual message depending on story point. Note that subscribe never actually does anything.
-                    # during dressing room segments, this is also the severance panel button
-                    text subText:
-                        yalign 0.5
-                        xalign 0.5
-                    xysize(lbtnWidth, lbtnHeight/3)
-                    
-                    background "#777777"
-                    if severAvailable:
-                        action Function(showSeverancePanel)
-                    else:
-                        # when testing is pretty much done, replace with the fake subscription messages
-                        action [Function(getAllHistories), Function(testSever)]
+                
 
                 button:
                     #chatHistory
-                    text leftBtnTxt[2]:
-                        xalign 0.5
-                        yalign 0.5
-                    xysize(lbtnWidth, lbtnHeight/3)
-                    background "#dddddd"
+                    add btnChatHistory
+                    xysize(lbtnWidth/2, lbtnHeight)
                     action Function(showChatHistory)
 
 

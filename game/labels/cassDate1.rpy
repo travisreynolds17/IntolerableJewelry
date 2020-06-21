@@ -10,6 +10,8 @@ label cassDate1:
 
     pause 1.0
 
+    scene bg black with fade
+
     # Monologue
 
     python:
@@ -41,11 +43,13 @@ label cassDate1:
     nvl clear
     nvl hide
             
-    scene bg bar with fade
+    scene bg bar with longFade
+
+    #play music jazzNoodle fadein 1.5
 
     $showGui()
 
-    s "Oh, hey, we're getting trashed before the date! Always drink responsibly, kids."
+    s 1m "Oh, hey, we're getting trashed before the date! Always drink responsibly, kids."
 
     $chat.addmessage(elsa, "A bar's kind of blah as a first date.")
 
@@ -75,7 +79,7 @@ label cassDate1:
 
     $chat.addmessage(shub, "lol@alcohjolism")
 
-    s "Breathe, self! You can do this!"
+    s 1a "Breathe, self! You can do this!"
 
     ki "The establishment is an odd one. It's a bar, obviously, but there are regular tables and booths all around the floor. No one's eating anything, so my guess is this place is..."
 
@@ -151,6 +155,8 @@ label cassDate1:
         k "You don't like it."
         c 2b "< I just feel under dressed compared to you. >"
         ki "... should've seen that one coming."
+
+    c "< So... drink? >"
 
     menu:
 
@@ -454,8 +460,7 @@ label cassDate1:
 
     # screen effect - blank chat, then return chat
 
-    $chatSelected = True
-    show screen chatterbox
+    pause 0.1
 
     python:
         newComments = [
@@ -490,6 +495,8 @@ label cassDate1:
 
     $chat.addmessage(beav, "drink from the lady fountain :D :D :D")
 
+    stop music fadeout 4.0
+
     s "Beaver. Oh my god."
 
     s "I'm betting she's like an electronica DJ. She just makes beats and spins records in a microwave, right?"
@@ -505,6 +512,8 @@ label cassDate1:
     # STUDIO SECTION -------------------------
 
     ki "The studio is almost exactly what I would have expected. There's a drum kit, tons of wires and blinking lights that I guess are part of editing equipment."
+
+    play music cassPiano fadein 1.0
 
     $chat.addmessage(unkn, "I am undone")
     $chat.addmessage(shub, "This looks like my studio")
@@ -541,7 +550,7 @@ label cassDate1:
 
     ki "Then I remember I don't know enough about it to decide one way or another."
 
-    s "Wise Kylie!"
+    s 1a "Wise Kylie!"
 
     $chat.addmessage(fon, "Oh, TweeterEgg, you want a date?")
 
@@ -620,7 +629,7 @@ label cassDate1:
 
     $chat.addmessage(egg, "Ooh, private chat, brb")
 
-#    $renpy.notify("soon")
+    $renpy.notify("soon")
 
     ki "Wait. What?"
 
@@ -721,7 +730,7 @@ label cassDate1:
 
     k "Coming!"
 
-    scene bg booth with fade
+    scene bg booth with longFade
 
     ki "The recording booth is... cozy. Padded walls and not a lot of space mean Cassandra and I are standing pretty close together."
 
@@ -740,15 +749,21 @@ label cassDate1:
     ki "She retrieves a set of thickly padded earphones from a rung on the wall and hands them to me. They're heavy, obviously professional gear, but what I notice most about them is how her fingertips graze my hand when I take them."
     $chat.addmessage(elsa, "Aww... but imagine how creepy this would be if she was a guy.")
 
-    ki "She dons her own pair. I feel my heart thumping harder."
+    hide c 1a at f12
+
+    show image splashCass2 at cassBooth
+
+    ki "She closes her eyes. I feel my heart thumping harder."
 
     $chat.addmessage(crab, "sexist ass")
 
-    s "Oh, dating sim protags fall in love so fast."
+    s 1b "Oh, dating sim protags fall in love so fast."
 
     $chat.addmessage(fizz, "She's not wrong though.")
 
-    s "At least we have a good reason this time!"
+    s 1a "At least we have a good reason this time!"
+
+    show image splashCass1 at cassBooth
 
     $chat.addmessage(cake, "beta enablin' ass")
 
@@ -759,6 +774,8 @@ label cassDate1:
     $chat.addmessage(shub, "Hey, I like chillstep")
 
     ki "She moves in a seamless flow from heels to head, ethereal, a waveform made flesh."
+
+    show image splashCass3 at cassBooth
 
     $chat.addmessage(cake, "It's my experience that an orifice should be filled.")
 
@@ -775,15 +792,21 @@ label cassDate1:
 
     ki "She lifts her hands and deftly undoes the clasp of her choker."
 
+    show image splashCass4 at cassBooth
+
     ki "It tumbles free."
+
+    show image splashCass5 at cassBooth
 
     k "Oh..."
 
     # SPLASH SAD CASS NO CHOKER
 
-    s "Oh!"
+    s 1h "Oh!"
 
-    c "Undone in a time of need / heroin my heroine / set me set me free~"
+    c "Undone in a time of need / heroin my heroine / set me bleed me free~"
+
+    show image splashCass6 at cassBooth
 
     ki "She's singing, sharp and clear. Her voice strikes me, pierces right through me. It's gorgeous. It's operatic but somehow dark and dangerous."
 
@@ -793,13 +816,15 @@ label cassDate1:
 
     $chat.addmessage(elsa, "Hey Sophie... are you okay reading about that?")
 
+    show image splashCass5 at cassBooth
+
     ki "But even a voice like that can't tear my focus from the scars."
 
     $chat.addmessage(cake, "wait why, Sophie you chase the dragon?")
 
     $chat.addmessage(elsa, "shit, sorry Sophie")
 
-    s "Oh, Cassandra, what happened to you?"
+    s 1c "Oh, Cassandra, what happened to you?"
 
     $chat.addmessage(shub, "Wait, really. You a fuckin doper lol")
 
@@ -811,7 +836,11 @@ label cassDate1:
 
     $chat.addmessage(fizz, "Ignore this, Sophie")
 
+    show image splashCass5 at cassBooth
+
     ki "But she's singing. She's singing so purely, and her eyes are focused and she's just so damn different and I don't know how or why it happened but suddenly there are tears in my eyes and I don't know if it's her song or the ligature marks on her neck or--"
+
+    show image splashCass6 at cassBooth
 
     c "Until the world burns, the words burn me away ~"
 
@@ -823,6 +852,13 @@ label cassDate1:
 
     ki "The song ends."
 
+    hide image splashCass6 at cassBooth
+    hide image splashCass5 at cassBooth
+    hide image splashCass4 at cassBooth
+    hide image splashCass3 at cassBooth
+    hide image splashCass2 at cassBooth
+    hide image splashCass1 at cassBooth
+
     $chat.addmessage(elsa, "Sophie...")
 
     # HIDE SPLASH
@@ -830,6 +866,8 @@ label cassDate1:
     show c 1b at f12
 
     ki "The song, it... it ended. She's looking at me, her eyes full of questions. Yearning, longing, pleading."
+
+    ki "The choker is wound around her old wounds once more."
 
     ki "I can only stare back. There's a gulf of something between us. I can't breathe."
 
@@ -876,15 +914,14 @@ label cassDate1:
 
     s "I'm pausing chat for a few minutes. If you wanna stick around, I'm really happy about that. If you wanna leave, no worries okay?"
 
-    s "So let's move on. Cassandra just showed me her singing and her scars, but I'm not really sure what the significance is yet."
+    s 1b "So let's move on. Cassandra just showed me her singing and her scars, but I'm not really sure what the significance is yet."
+
 
     $chat.addmessage(sophie, "Chat currently paused. Feel free to hang around, it's temporary!")
 
-    hide c at f12
+    
 
     pause
-
-    show c 1t at kiss12
 
     k "... I'm..."
 
@@ -896,11 +933,10 @@ label cassDate1:
 
     ki "I want this silence to last forever."
 
-    # knocking sound
+    # SFX knocking sound
 
-    hide c 1h at kiss12
 
-    ki "At the sound, Cassandra whips the choker back around her neck and fastens it. The movement is practiced and swift, and it yanks me out of my mesmerized state."
+    ki "At the sound, Cassandra's fingertips leave my skin."
 
     show c 1b at f12
 
@@ -914,13 +950,15 @@ label cassDate1:
 
     ki "I can only nod, and brush what's left of my tears away. I don't know how she got to me so fast."
 
-    s "..."
+    s 1b "..."
 
     k "Wait, is... we're not done, are we? I was just..."
 
     ki "Tania's head pokes through the crack."
 
     show t 1q at fl11
+
+    show c 1r
 
     t "Hey you two! So, uh, I know I said to be true to yourselves and everything, but we don't have a show if the leads disappear."
 
@@ -938,25 +976,31 @@ label cassDate1:
 
     c "< My voice... it's beside the point. I needed you to know that I'm broken, but I'm healing. I'm not perfect. I'm a work in progress.>"
 
+    show c 1bleed at f12
+
     c "< Is that okay? It's fine if not. >"
 
     $chat.addmessage(unkn, "R/BG13:14-15. ")
 
     k "Hey. Are you okay?"
 
-    c 1b "..."
+    c "..."
 
     k "You have, uh..."
 
     ki "There's blood on her lip. Not much. Just a slight discoloration."
 
-    show c 1r
+    show c 2bleed
 
-    s "Wait. Has she got mysterious plot device coughing disease?"
+    s 1h "Wait. Has she got mysterious plot device coughing disease?"
 
     s "She's not gonna die, is she? That's bullshit if she does! You can't break my heart like that, game."
 
+    hide c at f12
+
     ki "Cassandra covers her mouth, quickly, with one hand. When she withdraws it, the stain is gone."
+
+    show c 1m at f12
 
     c 1m "< Thanks for that. >"
 
@@ -966,11 +1010,11 @@ label cassDate1:
 
     ki "She nods, again, almost imperceptibly. This feels wrong. Dates don't end this way. Right?"
 
-    s "Okay, chat. We should be unlocked again. I'm really sorry, again, for the pause. Everything's fine."
+    s 1b "Okay, chat. We should be unlocked again. I'm really sorry, again, for the pause. Everything's fine."
 
     $chat.addmessage(elsa, "Sophie I'm so so sorry.")
 
-    s "Nothing to be sorry about Elsa. Just let's move on, yeah?"
+    s 1a "Nothing to be sorry about Elsa. Just let's move on, yeah?"
 
     $chat.addmessage(crab, "Hey I know I'm kind of a shitstarter, but I hope you're good.")
     $chat.addmessage(fon, "I'm glad you're okay Sophie :D")
@@ -999,11 +1043,19 @@ label cassDate1:
 
     hide c at f12
 
+    stop music fadeout 1.0
+
+    scene bg black with longFade
+
     ki "The night was not what I thought it would be."
 
     $chat.addmessage(beav, "Seems like that ended quickly.")
 
     ki "I get that we have to rush. I understand. Even so, I feel like Cassandra's entire life story was punched directly through my forehead."
+
+    scene bg hallway with longFade
+
+    play music hallwayChats fadein 2.5
 
     $chat.addmessage(cake, "they didn't talk at all on the rid eto the studio?")
 
@@ -1019,7 +1071,7 @@ label cassDate1:
 
     $chat.addmessage(bar, "Is anything just between you, though, if Tania runs the show?")
 
-    s "No way. Don't answer. She has a hidden microphone somewhere. Don't do it, me!"
+    s 1a "No way. Don't answer. She has a hidden microphone somewhere. Don't do it, me!"
 
     k "I haven't decided."
 
@@ -1027,13 +1079,29 @@ label cassDate1:
 
     $chat.addmessage(fizz, "A non-answer is still an answer!")
 
-    ki "Of course I have, but it's none of Tania's business right now."
+    ki "Of course I have, but it's none of Tania's business just now."
 
     $chat.addmessage(elsa, "So secretive ")
 
-    ki "The rest of the ride progresses in silence. I have so much to sort out right now, I... I just need to sleep."
+    t "I think you have, Kyles. But I like you so I'll play along."
+
+    k "I appreciate you humoring me."
+
+    t 1m "I appreciate you in general."
+
+    t "I'll see you in the morning at craft services."
+    
+    $chat.addmessage(fizz,"Tania's a sweet lady, isn't she?")
+
+    k "Okay." 
+    
+    $chat.addmessage(elsa,"Such a sweetie.")
+
+    ki "The pillow calls for me. I have so much to sort out right now, I... I just need to sleep."
 
     hide t at f12
+
+    stop music fadeout 4.0
 
     $hideGui()
 

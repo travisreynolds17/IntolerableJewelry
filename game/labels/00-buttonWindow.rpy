@@ -1,55 +1,55 @@
-label btnWindow:
-    # this file arranges and provides function to two buttons: chat toggle and subscribe. upper right corner.
+# label btnWindow:
+#     # this file arranges and provides function to two buttons: chat toggle and subscribe. upper right corner.
 
-    init python:
-        btnWindowHeight = 72
-        btnWindowWidth = 300
-        btnWindowX = 960
-        btnWindowY = 24
+#     init python:
+#         btnWindowHeight = 72
+#         btnWindowWidth = 300
+#         btnWindowX = 960
+#         btnWindowY = 24
 
-        #variable to hold the on/off state of chat window
-        chatIsOn = False
+#         #variable to hold the on/off state of chat window
+#         chatIsOn = False
         
 
-    screen btnWindow:
-        modal False
-        tag btnWindow
+#     screen btnWindow:
+#         modal False
+#         tag btnWindow
 
-        fixed at alphaFade:
-            xysize(btnWindowWidth, btnWindowHeight)
-            xpos btnWindowX
-            ypos btnWindowY
+#         fixed at alphaFade:
+#             xysize(btnWindowWidth, btnWindowHeight)
+#             xpos btnWindowX
+#             ypos btnWindowY
                          
-            hbox:       
-                #this button is intended to toggle the in-game chat window into and out of sight.                          
+#             hbox:       
+#                 #this button is intended to toggle the in-game chat window into and out of sight.                          
             
-                showif chatIsOn == False:
-                    button:
-                        text "Chat":
-                            yalign 0.5
-                            xalign 0.5
-                        xysize(btnWindowWidth/2, btnWindowHeight)
-                        background "#111111"
+#                 showif chatIsOn == False:
+#                     button:
+#                         text "Chat":
+#                             yalign 0.5
+#                             xalign 0.5
+#                         xysize(btnWindowWidth/2, btnWindowHeight)
+#                         background "#111111"
                         
-                        action [ToggleVariable("chatIsOn"), Show("chatterbox"), Hide("loveScreen")]
+#                         action [ToggleVariable("chatIsOn"), Show("chatterbox"), Hide("loveScreen")]
 
-                showif chatIsOn:
-                    button:
-                        text "Status":
-                            yalign 0.5
-                            xalign 0.5
-                        xysize(btnWindowWidth/2, btnWindowHeight)
-                        background "#111111"
+#                 showif chatIsOn:
+#                     button:
+#                         text "Status":
+#                             yalign 0.5
+#                             xalign 0.5
+#                         xysize(btnWindowWidth/2, btnWindowHeight)
+#                         background "#111111"
                         
-                        action [ToggleVariable("chatIsOn"), Hide("chatterbox"), Show("loveScreen")]
+#                         action [ToggleVariable("chatIsOn"), Hide("chatterbox"), Show("loveScreen")]
 
-                button:
-                        text "Tips":
-                            yalign 0.5
-                            xalign 0.5
-                        xysize(btnWindowWidth/2, btnWindowHeight)
-                        background "#111111"
+#                 button:
+#                         text "Tips":
+#                             yalign 0.5
+#                             xalign 0.5
+#                         xysize(btnWindowWidth/2, btnWindowHeight)
+#                         background "#111111"
                         
-                        action Notify("Not working yet")
+#                         action Notify("Not working yet")
 
                 

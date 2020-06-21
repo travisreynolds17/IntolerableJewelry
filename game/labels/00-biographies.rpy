@@ -3,6 +3,16 @@ label biographies:
     # this file contains class objects and screens for the character bio section that opens in common4, that way Fontaine isn't just expositing
 
     init python:
+
+        #declare bio pics
+
+        bioCass = Image("images/chars/bioCass.png")
+        bioLich = Image("images/chars/bioLich.png")
+        bioRobin = Image("images/chars/bioRobin.png")
+        bioTania = Image("images/chars/bioTania.png")
+        bioFont = Image("images/chars/bioFont.png")
+        bioKylie = Image("images/chars/bioKylie.png")
+
         # reate a class that stores information for each individual biography.
         class Biography:
             def __init__(self, idNum, char, pic, bio, age, color, trivia, kids, pets, sport, idol, height, town):
@@ -31,6 +41,7 @@ label biographies:
                 self.fullySevered = False
                 self.severViewed = False
                 self.bioEyes = ""
+                
 
             # create a mutator to increase the bio level.
             def levelUp(self):
@@ -311,18 +322,18 @@ label biographies:
             "I mean, really. What kind of biography does Kylie have? What has she told you about herself? Surface-level details? Perhaps something about events she shares with Sophie?\n\nI wonder, truly, why that might be. ."
         ]
         # define default bios. Do this at end so bio variables will be in place
-        cassBio = Biography(0, "Cassandra Sanna", "img/cassBio.png",
+        cassBio = Biography(0, "Cassandra Sanna", bioCass,
                             cassBioText, "22", "Ultramarine", cassTrivia, "No", "Vox the Python", "Pro Wrestling", "Janis Joplin", "62 inches", "Charlotte, N.C.")
-        lichBio = Biography(1, "Lichelle Carpenter", "",
+        lichBio = Biography(1, "Lichelle Carpenter", bioLich,
                             lichBioText, "25", "Carmine Red", lichTrivia, "Hell no", "Nope", "MMA", "My dad", "66 inches", "Baltimore, Md.")
-        robinBio = Biography(2, "Robin Godfrey", "", robinBioText, "24",
+        robinBio = Biography(2, "Robin Godfrey", bioRobin, robinBioText, "24",
                              "Royal Purple", robinTrivia, "Not yet", "Innumerable", "None", "You", "73 inches", "Bucharest, Romania")
-        fontBio = Biography(5, "Fontaine", "", fontBioText, "R/BG13:14-15", "China White", fontTrivia, "I can't have kids. Comfort me?",
+        fontBio = Biography(5, "Fontaine", bioFont, fontBioText, "R/BG13:14-15", "China White", fontTrivia, "I can't have kids. Comfort me?",
                             "I love animals!", "I don't understand sports", "Sophie ;)", "All of them, if I want", "Everywhere!")
 
-        taniaBio = Biography(3, "Tania van der Waal", "",
+        taniaBio = Biography(3, "Tania van der Waal", bioTania,
                              taniaBioText, "26", "Tuscan Sun", taniaTrivia, "No", "Cats Ferg, Della, Kana",  "Gymnastics", "R/BG13:14-15 Langford", "65 inches", "Centralia, Penn.")
-        kylieBio = Biography(4, "Kylie", "", kylieBioText, "23", "Golden Poppy", kylieTrivia, "Someday",
+        kylieBio = Biography(4, "Kylie", bioKylie, kylieBioText, "23", "Golden Poppy", kylieTrivia, "Someday",
                              "Someday I'll have a dog", "Basketball, I guess", "Elizabeth Bathory, jk", "66 inches", "Sobredosis, Nevada")
 
         # append Fontaine in common4 after change
@@ -602,3 +613,33 @@ label biographies:
                             ysize 150
                             box_wrap True
                             text currentlySelected.bio[currentlySelected.level]
+
+            # image
+
+            
+            
+                #order: cass lich robin tania kylie fontaine
+            if currentlySelected.idNum == 0:
+                image currentlySelected.pic:
+                    xalign 1.0
+                    yalign 0.1
+            if currentlySelected.idNum == 1: 
+                image currentlySelected.pic:
+                    xalign 1.0
+                    yalign 0.0
+            if currentlySelected.idNum == 2: 
+                image currentlySelected.pic:
+                    xalign 1.0
+                    yalign -0.1
+            if currentlySelected.idNum == 3: 
+                image currentlySelected.pic:
+                    xalign 1.0
+                    yalign 0.05
+            if currentlySelected.idNum == 4: 
+                image currentlySelected.pic:
+                    xalign 1.0
+                    yalign 0.1
+            if currentlySelected.idNum == 5: 
+                image currentlySelected.pic:
+                    xalign 1.0
+                    yalign 0.0

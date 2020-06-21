@@ -11,37 +11,45 @@ label definitions:
     transform textFade(x = 640, y = 200, z = 1.0):
         on show:
             xcenter x ycenter y yoffset 0 ypos y zoom z*1.00 alpha 0.0 subpixel True
-            easein .5 alpha 1.00
+            alpha 1.00
         on replace:
             xcenter x ycenter y yoffset 0 ypos y zoom z*1.00 alpha 0.0 subpixel True
-            easein .5 alpha 1.00
+            alpha 1.00
         on hide:
             xcenter x yoffset 0 yanchor 1.0 ypos 1.00 zoom z*1.00 alpha 1.0 subpixel True
-            easein .5 alpha 0.00
+            alpha 0.00
 
     transform tfade(x = 640, z = 1.0):
         on show:
             xcenter x yoffset 0 yanchor 1.0 ypos 1.00 zoom z*1.00 alpha 0.0 subpixel True
-            easein .5 alpha 1.00
+            easein 1.0 alpha 1.00
         on hide:
             xcenter x yoffset 0 yanchor 1.0 ypos 1.00 zoom z*1.00 alpha 1.0 subpixel True
-            easein .5 alpha 0.00
+            linear .5 alpha 0.00
+
+    transform sophfade(x = 0, y = 80, z = 0.9):
+        on show:
+            xpos x  ycenter y ypos y zoom z*1.00 alpha 0.0 subpixel True
+            easein 1.0 alpha 1.00 
+        on hide:
+            xpos x  ycenter y ypos y zoom z*1.00 alpha 1.0 subpixel True
+            linear .5 alpha 0.00 
 
     transform tFromLeft(x = 640, z = 1.0):
         on show:
             xcenter x xoffset -600 yanchor 1.0 ypos 1.00 zoom z*1.00 alpha 1.0 subpixel True
-            easein .5 xoffset 0
+            easein 1.0 xoffset 0
         on hide:
             xcenter x xoffset 0 yanchor 1.0 ypos 1.00 zoom z*1.00 alpha 1.0 subpixel True
-            easein .5 xoffset -600
+            easein 1.0 xoffset -600
 
     transform tFromRight(x = 640, z = 1.0):
         on show:
             xcenter x xoffset 1200 yanchor 1.0 ypos 1.00 zoom z*1.00 alpha 1.0 subpixel True
-            easein .5 xoffset 0
+            easein 1.0 xoffset 0
         on hide:
             xcenter x xoffset 0 yanchor 1.0 ypos 1.00 zoom z*1.00 alpha 1.0 subpixel True
-            easein .5 xoffset 1200
+            easein 1.0 xoffset 1200
 
     transform moveTo(x = 640, z = 1.0):
         on replace:
@@ -53,11 +61,11 @@ label definitions:
 
     transform kissZoom(x = 640):
         on show:
-            alpha 0.0 zoom 1.0 xcenter 0 yanchor 1.0 subpixel True
-            easein 0.5 zoom 5.0
+            xcenter x yoffset 0 yanchor 1.0 ypos 1.0
+            easein 0.5 zoom 2.0 ypos 1.8
         on hide:
-            zoom 5.0 alpha 1.0
-            easeout 0.5 zoom 1.0 alpha 0.0
+            xcenter x yoffset 0 yanchor 1.0 ypos 1.00 zoom 2.0 alpha 1.0
+            easeout 1.0 zoom 1.0 alpha 0.0
 
     transform tzoom(x = 640):
         on show:
@@ -67,7 +75,7 @@ label definitions:
             easein 0.8 zoom 3.0
         on hide:
             zoom 5.0 alpha 1.0
-            easeout 0.5 zoom 1.0 alpha 0.0
+            easeout 1.0 zoom 1.0 alpha 0.0
 
     transform tInstant(x = 640, z = 1.0):
         on show:
@@ -75,17 +83,30 @@ label definitions:
             
         on hide:
             xcenter x yoffset 0 yanchor 1.0 ypos 1.00 zoom z*1.00 alpha 0.0 subpixel True
+
+    transform justFade():
+        linear 0.8 alpha 0.00
             
 
-    # position with transform takes the first letter of the transform and applies it to a row and position. the argument is the x position. will have to work out what those are. only two can ever be back row.
-    # note zorder can't be set with transform. gotta do it in script. shit.
+    # quick zooms for speaking callbacks
+
+    transform speakZoom:
+        easein 0.5 zoom 1.05 
+
+    transform speakNormal:
+        easein 0.5 zoom 1.0 
 
     init python:
-        spriteXLeft = 350
-        spriteXCenter = 600
-        spriteXRight = 850
+
+        
+
+        spriteXLeft = 225
+        spriteXCenter = 550
+        spriteXRight = 825
         spriteBLeft = 500
         spriteBRight = 700
+        spriteSophX = 10
+        spriteSophY = 10
         
         #note argument z is used to control zoom, not zorder.
 
@@ -117,6 +138,7 @@ label definitions:
         tfade(spriteBLeft)
     transform f22:
         tfade(spriteBRight)
+    
 
     # from lefts
     transform fl11:
@@ -228,6 +250,30 @@ label definitions:
 #     u flirty/teasing
 #     v nervous? Implement later
 
+# TEST SOPHIE IMAGES
+
+    image side s 1a = Image("chars/sca.png")
+    image side s 1b = Image("chars/scb.png")
+    image side s 1c = Image("chars/scc.png")
+    image side s 1d = Image("chars/scd.png")
+    image side s 1e = Image("chars/sce.png")
+    image side s 1f = Image("chars/scf.png")
+    image side s 1g = Image("chars/scg.png")
+    image side s 1h = Image("chars/sch.png")
+    image side s 1i = Image("chars/sci.png")
+    image side s 1j = Image("chars/scj.png")
+    image side s 1k = Image("chars/sck.png")
+    image side s 1l = Image("chars/scl.png")
+    image side s 1m = Image("chars/scm.png")
+    image side s 1n = Image("chars/scn.png")
+    image side s 1o = Image("chars/sco.png")
+    image side s 1p = Image("chars/scp.png")
+    image side s 1q = Image("chars/scq.png")
+    image side s 1r = Image("chars/scr.png")
+    image side s 1s = Image("chars/scs.png")
+    image side s 1t = Image("chars/sct.png")
+    image side s 1u = Image("chars/scu.png")
+
 
 #cassandra composite images
 
@@ -252,6 +298,9 @@ label definitions:
     image c 1s = im.Composite((371, 1004), (0, 240), "chars/c1.png", (135, 423), "chars/cs.png")
     image c 1t = im.Composite((371, 1004), (0, 240), "chars/c1.png", (135, 423), "chars/ct.png")
     image c 1u = im.Composite((371, 1004), (0, 240), "chars/c1.png", (135, 423), "chars/cu.png")
+
+    image c 1bleed = im.Composite((371, 1004), (0, 240), "chars/c1.png", (135, 423), "chars/cb.png", (0, 240), "img/cassBlood.png")
+    image c 2bleed = im.Composite((371, 1004), (0, 240), "chars/c1.png", (135, 423), "chars/ch.png", (0, 240), "img/cassBlood.png")
 
     image c 2a = im.Composite((371, 1004), (0, 240), "chars/c1.png", (135, 423), "chars/ca.png")
     image c 2b = im.Composite((371, 1004), (0, 240), "chars/c1.png", (135, 423), "chars/cb.png")
@@ -568,9 +617,24 @@ label definitions:
     image m 2u = im.Composite((260, 1004), (0, 350), "chars/mu.png")
 # second poses
 
-    #cassandra composite images
+    #cassandra splash images
 
-    
+    default splashCass1 = Image("chars/splashCass1.png")
+    default splashCass2 = Image("chars/splashCass2.png")
+    default splashCass3 = Image("chars/splashCass3.png")
+    default splashCass4 = Image("chars/splashCass4.png")
+    default splashCass5 = Image("chars/splashCass5.png")
+    default splashCass6 = Image("chars/splashCass6.png")
+    default cassBlood = Image("img/cassBlood.png")
+
+
+    transform cassBooth():
+        on show:
+            xpos 320 yoffset 0 yanchor 1.0 ypos 0.73 zoom 1.00 alpha 0.0 subpixel True
+            easein 1.0 alpha 1.00
+        on hide:
+            xpos 320 yoffset 0 yanchor 1.0 ypos 0.73 zoom 1.00 alpha 1.0 subpixel True
+            linear .5 alpha 0.00
 
 
     #askTania Faces
@@ -588,3 +652,10 @@ label definitions:
     define askTi = Image("img/askTania9.png")
     define askTj = Image("img/askTania10.png")
     define askTk = Image("img/askTania11.png")
+
+
+    # buttons
+
+    define btnAskTania = Image("img/iconBtnAskTania.png")
+    define btnChatHistory = Image("img/iconBtnChatHistory.png")
+    define btnSever = Image("img/iconSever.png")
