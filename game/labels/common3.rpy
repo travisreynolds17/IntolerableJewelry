@@ -7,19 +7,23 @@ label common3:
     # set current scene for chat history purposes
     $sceneNum = 8
 
+    stop music fadeout 4.0
+
     scene bg story-2 with fade
     pause
 
-    scene bg near stage
+    scene bg stage
     with fade
 
     pause 0.5
+
+    play music cheerfulGuitar fadein 3.0
 
     $showGui()
 
     pause 0.5
 
-    s "Hey guys, I'm back. If you're still around."
+    s 1b "Hey guys, I'm back. If you're still around."
 
     s "I'm really sorry about that. Maybe I'm not as okay as I thought I was."
 
@@ -43,6 +47,8 @@ label common3:
 
     $chat.addmessage(crab, "Hey Sophie. You're a stone cold killer, don't get too nervous about things.")
 
+    pause 0.5
+
     show t 1a at f12
 
     t "Wow, that's some story! So, we know you were just off camera while our Suitors introduced themselves."
@@ -57,19 +63,21 @@ label common3:
 
     t "Given what you heard from them, who has your attention?"
 
-    s "Okay. Well, I guess we're going from here again!"
+    s 1a "Okay. Well, I guess we're going from here again!"
 
     $chat.addmessage(cake, "Gonna be heckin weird pretending like we don't know things")
 
-    s "I was sure I'd saved more recently. What can ya do."
-
-    # choice
-
+    s 1a "Should we bother with Lichelle or Tania? I mean... maybe we missed something last time."
+    s 1b "I'm worried they're bad end routes or something."
     $temp = False
 
     while temp == False:
 
-        s "Should we bother with Lichelle or Tania? I mean... maybe we missed something last time."
+        hide t
+        hide r 
+        hide c 
+        hide l 
+        with dissolve
 
         menu:
             "Cassandra":
@@ -81,12 +89,12 @@ label common3:
                 t "Oh, you like the quiet type eh?"
                 show t 1a
                 c "..."
-                s "I still wanna know how she got those marks. Like, I thought it was a suicide attempt, but she said only Robin gave scars to herself."
+                s 1b "I still wanna know how she got those marks. Like, I thought it was a suicide attempt, but she said only Robin gave scars to herself."
                 pause 0.1
-                s "Oh. That means someone else did that to her?"
+                s 1i "Oh. That means someone else did that to her?"
 
                 $temp = True
-                $loveCass += 1
+                $cassBio.loveUp()
                 $ which_girl_1 = "Cassandra"
 
             "Robin":
@@ -104,7 +112,7 @@ label common3:
                     s "Wow! I guess if I picked her before that would've been a big clue about our past!"
                 # chat tells her that's not what Robin said the first time, but the message vanishes
                 $temp = True
-                $loveRobin += 1
+                $robinBio.loveUp()
                 $ which_girl_1 = "Robin"
 
             "Lichelle":
@@ -117,29 +125,33 @@ label common3:
                 show t 1m
                 l "Don't worry, Kylie! I'm only dangerous if you want me to be."
                 ki "She winks. I'm not sure if I believe her."
-                s "I wonder if that was a good choice, now that I think about it."
+                s 1b "I wonder if that was a good choice, now that I think about it."
                 s "If she's not even going to be around for the second round, maybe there's another way to spend time with her."
                 $temp = True
-                $loveLich += 1
+                $lichBio.loveUp()
                 $ which_girl_1 = "Lichelle"
 
-            "You on the menu, Tania?" if loveTania > 0:
+            "You on the menu, Tania?" :
                 t "We talked about this already, Kylie."
                 ki "Jeez, I guess not."
                 s "We did? Oh, I guess it was in the hallway before the show."
-                $loveTania += 1
+                $taniaBio.loveUp()
 
             # END OF CHOICE
 
-    scene bg stage
+    scene bg stage with longFade
+
+    stop music fadeout 3.0
 
     show t 1m at f12
 
     t "So let's talk a little bit about how this show works!"
 
+    play music2 jazzNoodle
+
     $chat.addmessage(bar, "Sophie completely missing the affection screen still has progress")
 
-    s "Oh yes, let's. Makes for such an exciting stream!"
+    s 1a "Oh yes, let's. Makes for such an exciting stream!"
 
     $chat.addmessage(fizz, "Hey TwixtBar, you're right.")
 
@@ -149,7 +161,9 @@ label common3:
 
     s "Uh huh, yup. Yup yup. Love and stuff."
 
-    t 1a "Kylie will go on a total of seven dates, one date each day of the week. Each Suitor will have two dates with her, and then one final date with whomever Kylie decides is worthy of her body!"
+    t 1a "Kylie will go on a total of seven dates, one date each day of the week. Each Suitor will have two dates with her, and then one final date with whomever Kylie decides to smash!"
+
+    $renpy.notify("I'm sorry")
 
     $chat.addmessage(beav, "Ha, I didn't notice Tania being pervy from the start.")
 
@@ -179,11 +193,11 @@ label common3:
 
     hide t at f12
     pause 0.4
-    show r at f12
+    show r 1a at f12
     pause 0.1
-    show c at fl11
+    show c 1a at fl11
     pause 0.2
-    show l at fr12
+    show l 1a at fr13
 
     t "I'd say you don't have a chance at all!"
 
@@ -213,9 +227,13 @@ label common3:
 
     show t 1m at f12
 
+    stop music2 fadeout 3.0
+
     t "Thanks for tuning in everybody!"
 
-    scene bg near stage
+    scene bg near stage with longFade
+
+    play music hallwayChats fadein 3.0
     show t 1a at f12
 
     t "Hey, Kylie. I hope that wasn't too stressful."
@@ -224,7 +242,7 @@ label common3:
 
     # darken screen, sophie time
 
-    s "Nothing's stress right now, um... Talia? Hang on. Tania."
+    s 1j "Nothing's stress right now, um... Talia? Hang on. Tania."
 
     $chat.addmessage(fon, "I think Kylie could withstand something like that!")
 
@@ -240,15 +258,17 @@ label common3:
 
     k "I'm worried, though. I don't know anything about them, really. Is every contestant nervous like this?"
 
-    s "Kylie, hey girl. You're a god damn liar, me."
+    s 1h "Kylie, hey girl. You're a god damn liar, me."
 
     $chat.addmessage(fizz, "Suppose Tania knows Kylie's aware of Cassandra?")
 
-    s "You know Cassandra and Robin both."
+    s 1j "You know Cassandra and Robin both."
 
     s "So is the game just written with holes in it, or is Kylie lying? It's hard to tell sometimes."
 
-    $chat.addmessage(crab, "Hey Oblivion does this gaem do this second go-through on purpose?")
+    $chat.addmessage(crab, "Hey Fontaine does this gaem do this second go-through on purpose?")
+
+    pause 0.1
 
     t 1q "Oh, god, yeah. Well, except for season seven. That girl was just a full-blown serial killer. Made the news and everything."
 
@@ -285,7 +305,8 @@ label common3:
 
     t 1m "Yup. So... your first date is with Cassandra. You have a dressing room set up down the hall, and you have about an hour to get ready and get your nerves down."
 
-    $chat.addmessage(bar, "coulda been some sweet girl-on-girl in that room.")
+    if taniaEnd > 0:
+        $chat.addmessage(bar, "coulda been some sweet girl-on-girl in that room.")
 
     k "That might not be enough."
 
@@ -295,7 +316,7 @@ label common3:
 
         $chat.addmessage(fon, "Sophie, spoilers? Minor ones, but it's important for Crablegs to know.")
         pause 0.3
-        s "Heh heh, spoiled crab legs. Fontaine win, wins."
+        s 1j "Heh heh, spoiled crab legs. Do it, Fontaine."
         pause 0.3
 
         $chat.addmessage(cake, "Fill us in lol")
@@ -310,13 +331,13 @@ label common3:
 
         $chat.addmessage(elsa, "Oh my god! What a sweet ending!")
 
-        s "Aww wow. That's nice."
+        s 1n "Aww wow. That's nice."
 
         $chat.addmessage(crab, "HLA! HLA! HLA!")
 
         $chat.addmessage(cake, "Crab your wish is granted lol")
 
-        s "It's beautiful, actually. Everything's beautiful."
+        s 1j "It's beautiful, actually. Everything's beautiful."
 
         $chat.addmessage(fizz, "Sophie, you good? Kind of spacey rn?")
 
@@ -350,7 +371,7 @@ label common3:
 
     t 2n "Yeah!"
 
-    s "Getting them hype girl hours! I have no idea what I just said."
+    s 1a "Getting them hype girl hours! I have no idea what I just said."
 
     $chat.addmessage(bar, "Sophie, never do that again. lol.")
 
@@ -406,7 +427,7 @@ label common3:
 
     ki "It feels unfair, since I'm a superfan and all, but then maybe my fandom will drive her away?"
 
-    s "See? She's lying to Tania then. Such a faker."
+    s 1b "See? She's lying to Tania then. Such a faker."
 
     $chat.addmessage(beav, "what a cnut")
 
@@ -418,11 +439,11 @@ label common3:
 
     ki "Lichelle, the fit girl with the wild smile and hungry eyes."
 
-    ki "So fierce, so powerful, so dangerous. Some part of me has had a tiny, tiny submissive side and Lichelle just... radiates the power to control."
+    ki "So fierce, so powerful, so dangerous. Some part of me has a tiny, tiny submissive side and Lichelle just... radiates the power to control."
 
     $chat.addmessage(cake, "hot. A. F.")
 
-    s "Wanna be tied up, Kylie?"
+    s 1t "Wanna be tied up, Kylie?"
 
     show r 1a at f11
 
@@ -430,15 +451,17 @@ label common3:
 
     ki "Some part of me is afraid of her, but it's hard to express why."
 
-    s "Robin looks like someone I..."
+    s 1b "Robin looks like someone I..."
 
     pause 0.2
 
-    s "Like someone I used to know."
+    s 1c "Like someone I used to know."
 
     $chat.addmessage(fizz, "Now that you mention it... hey Elsa, doesn't Robin look like Louisa?")
 
     ki "They're all otherworldly in their way. I guess I should feel incredibly lucky that the women in front of me are all so desirable."
+
+    stop music fadeout 3.0
 
     $chat.addmessage(elsa, "I've been thinking that the whole time. I was hoping not to draw attention to it.")
 
@@ -454,7 +477,7 @@ label common3:
 
     pause 0.5
 
-    s "I know we just took a break guys, but I'm getting pretty tired. I'm gonna pee. You guys chill for a sec."
+    s 1c "I know we just took a break guys, but I'm getting pretty tired. I'm gonna pee. You guys chill for a sec."
 
     $getHistory(8)
     $sceneNum = 9
@@ -492,7 +515,7 @@ label common3:
 
     pause 0.5
 
-    scene bg hallway with dissolve
+    scene bg dressing with dissolve
 
     pause 0.5
 
@@ -502,11 +525,15 @@ label common3:
 
     # sophie with tiny pupils
 
-    s "Back. So, let's speed through these dates and get back to where we were?"
+    s 1j "Back. So, let's speed through these dates and get back to where we were?"
 
+    
     $chat.addmessage(fizz, "You okay? Your eyes.")
 
     scene bg dressing with dissolve
+
+    play music bedroom fadein 3.0
+
 
     ki "The dressing room is clean and simple. I'd like to stretch out for a nap, actually. The nerves have taken it out of me."
 
@@ -521,26 +548,28 @@ label common3:
 
     pause 1.0
 
-    s "Hey! That's different, right? Heh heh. There were different outfits before."
+    s 1t "Hey! That's different, right? Heh heh. There were different outfits before."
 
     $chat.addmessage(crab, "there's been a bunch of new things, Sophie, you just missed 'em") 
     
     $chat.addmessage(fon,"I think Sophie might be blissfully unaware rn ;)\n||--===>-")
 
-    s "Gasp, you guys! Was the game supposed to crash? Is this part of the plan?"
+    s 1i "Gasp, you guys! Was the game supposed to crash? Is this part of the plan?"
 
     $chat.addmessage(elsa, "I think so") 
     
     $chat.addmessage(bar,"cripes, Sophie, you dense.")
 
-    s "Oh, okay! Jeez, I wish they'd warned me a little bit. I just about said to hell with it and called it a night."
+    s 1a "Oh, okay! Jeez, I wish they'd warned me a little bit. I just about said to hell with it and called it a night."
 
-    s "What a surprise! Ha!"
+    s 1m "What a surprise! Ha!"
 
     #disable severance
     $severToggle()
 
     scene bg black with dissolve
+
+    stop music fadeout 3.0
 
     ki "An hour passes like nothing, like time somehow folded in on itself."
 
@@ -556,9 +585,11 @@ label common3:
 
     l "Hey babe. You ready to go?"
 
+    play music lichelle fadein 3.0
+
     $chat.addmessage(cake, "gasp it's Elle!")
 
-    ki "To my surprise, Lichelle stands before me, a bright grin on her face."
+    ki "To my surprise, Lichelle stands before me, a little smile on her face."
 
     k "Oh, uh, sure? I guess?"
 
@@ -566,23 +597,23 @@ label common3:
 
     l 1l "You were expecting someone else."
 
-    s "So was I!"
+    s 1a "So was I!"
 
     $chat.addmessage(beav, "preach")
 
     k "Um... well, yeah. I thought Cassandra was first."
 
-    l 1m "She is. Tania just rolled the hell out of her ankle about twenty minutes ago, though, so I'm here to whisk you off to the bar or whatever."
+    l 1m "She is. Tania just rolled the hell out of her ankle about twenty minutes ago, so I'm here to whisk you off to the bar or whatever."
 
     $chat.addmessage(bar, "Tania no! I'll nurse you to health.")
 
-    s "Huh. Poor Tania. "
+    s 1b "Huh. Poor Tania. "
 
     k "Oh. Well... is that okay?"
 
     $chat.addmessage(fizz, "Sudden change of plans by the lady who no-showed last time.")
 
-    l "Should be. Why?"
+    l 1q "Should be. Why?"
 
     k "Well, I thought we weren't supposed to really talk until our date."
 
@@ -620,7 +651,7 @@ label common3:
 
     l 1u "Based on the way you're breathing right now, it might already be too late."
 
-    s "Wow. Heh heh."
+    s 1t "Wow. Heh heh."
 
     k "... don't get ahead of yourself."
 
@@ -638,9 +669,9 @@ label common3:
 
     s "This show makes me feel all... itchy. NO. Not that. Heh heh."
 
-    $chat.addmessage(cake, "Hey fizz, won't you stfu bro. Nothing racist about that.")
+    $chat.addmessage(cake, "Hey fizz, won't you sYoAssTFUp. Nothing racist about that.")
 
-    s "Just imagine being as thirsty as Kylie seems to be and having all these dream girl archetypes trying to woo you..."
+    s 1a "Just imagine being as thirsty as Kylie seems to be and having all these dream girl archetypes trying to woo you..."
 
     $chat.addmessage(fizz, "Calling a black woman chocolate is racist, full stop.")
 
@@ -652,13 +683,13 @@ label common3:
 
     pause 0.5
 
-    s "Hey no fighting. I wanna see you boys rassle with my eyes, not my, uh, reading eyes."
+    s 1b "Hey no fighting. I wanna see you boys rassle with my eyes, not my, uh, reading eyes."
 
     $chat.addmessage(fizz, "How's it not racist to refer to someone as chocolate?")
 
     $chat.addmessage(beav, "This kind of thing never ends well.")
 
-    s "I guess they're all reading eyes and seeing eyes."
+    s 1j "I guess they're all reading eyes and seeing eyes."
 
     pause 0.5
 
@@ -668,9 +699,9 @@ label common3:
 
     $chat.addmessage(crab, "lolololololol")
 
-    $chat.addmessage(fon, "Right, right, skin color. How boring. :( Let's not fight?")
+    $chat.addmessage(fon, "Right, right, skin color. Humans have that. How boring. :( Let's not fight?")
 
-    s "Hey. Hey no."
+    s 1b "Hey. Hey no."
 
     $chat.addmessage(fizz, "Just because you think it's okay doesn't")
 
@@ -682,7 +713,7 @@ label common3:
 
     pause 0.5
 
-    s "I might cry. I might actually cry."
+    s 1c "I might cry. I might actually cry."
 
     s "No more fighting! We're gonna go on a nice date with a nice girl and that's that."
 
@@ -691,5 +722,7 @@ label common3:
     pause 0.5
 
     $hideGui()
+
+    stop music fadeout 3.0
 
     jump cassDate2

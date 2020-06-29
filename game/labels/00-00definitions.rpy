@@ -57,7 +57,7 @@ label definitions:
 
     transform tdrop(x = 640, z = 1.0):
         on replace:
-            easein 0.9 xcenter x yoffset 400
+            easein 0.9 xcenter x yoffset 900
 
     transform kissZoom(x = 640):
         on show:
@@ -138,6 +138,8 @@ label definitions:
         tfade(spriteBLeft)
     transform f22:
         tfade(spriteBRight)
+    transform f14:
+        tfade(800)
     
 
     # from lefts
@@ -653,9 +655,60 @@ label definitions:
     define askTj = Image("img/askTania10.png")
     define askTk = Image("img/askTania11.png")
 
+    # fountain stuff
+
+    define fountainShroud = Image("img/fountainShroud.png")
+    define fountainLit = Image("img/fountainLit.png")
+    define fountainDrown = Image("img/fountainDrown.png")
+    define fountainDrown2 = Image("img/fountainDrown2.png")
+    define fountainRed = Image("img/fountainRed.png")
+    define fountainBlue = Image("img/fountainBlue.png")
+
+    # screen crack
+
+    define screenCrack = Image("img/screenCrack.png")
+    define screenCrack2 = Image("img/screenCrack2.png")
+    define screenCrack3 = Image("img/screenCrack3.png")
+    define screenCrack4 = Image("img/screenCrack4.png")
+
+    # car lich
+
+    define carLich = Image("img/carlich.png")
+    define carLichClosed = Image("img/carLightsclosed.png")
+    define carLightsBack = Image("img/carLightsback.png")
+    define carLightsLight = Image("img/carLightsLight.png")
+
+    transform carLights:
+        alpha 0.0
+        easein 2.8 alpha 1.0
+        pause 0.3
+        easein 4.8 alpha 0.0
+        pause 0.7
+        easein 3.8 alpha 1.0
+        pause 0.4
+        easein 6.8 alpha 0.0
+        pause 0.9
+        easein 4.8 alpha 1.0
+        pause 1.0
+        easein 2.8 alpha 1.0
+        
+        easein 8.8 alpha 0.0
+        easein 3.8 alpha 1.0
+        easein 6.8 alpha 0.0
+        repeat
+
 
     # buttons
 
     define btnAskTania = Image("img/iconBtnAskTania.png")
     define btnChatHistory = Image("img/iconBtnChatHistory.png")
     define btnSever = Image("img/iconSever.png")
+    define btnSeverCommit = Image("img/iconBtnCommit.png")
+
+    # platter
+
+    define platter = Image("img/platter.png")
+    define platterCover = Image("img/platterCover.png")
+
+    transform showPlatter:
+        xoffset -20 yoffset -10

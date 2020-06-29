@@ -10,6 +10,8 @@ label cassDate2:
 
     pause 0.5
 
+    play music hallwayChats fadein 3.0
+
     $showGui()
 
     # ---------------------------------------------------------
@@ -18,16 +20,16 @@ label cassDate2:
 
     # ---------------------------------------------------------
 
-    s "So... okay. If you guys have cooled off, we'll get started again."
+    s 1b "So... okay. If you guys have cooled off, we'll get started again."
 
     $chat.addmessage(fizz, "We're good. Sorry.")
 
-    $chat.addmessage(cake, "he straight")
+    $chat.addmessage(cake, "straight")
 
     pause 0.4
 
     s "Good. Then let's move on."
-
+    pause 0.1
     $chat.addmessage(elsa, "Sophie, taking charge.")
 
     s "We're going back to the bar with Cassandra, then."
@@ -36,7 +38,7 @@ label cassDate2:
 
     pause 0.5
 
-    s "Turnt up? No, nothing like that. Heh. That's silly."
+    s 1j "Turnt up? No, nothing like that. Heh. That's silly."
 
     s "You're silly, AngeredBeaver69." 
     
@@ -46,7 +48,8 @@ label cassDate2:
     
     $chat.addmessage(elsa,"Shush.")
 
-    s "I wonder why we went to the bar at all the first time? Isn't like we did much there."
+    s 1j "I wonder why we went to the bar at all the first time? Isn't like we did much there."
+    pause 0.1
 
     ki "The car ride is ... exhausting. Lichelle sits next to me in the backseat, playing with the little silver cross dangling from her neck, perfectly silent."
 
@@ -60,11 +63,15 @@ label cassDate2:
 
     ki "Streetlights glimmer to life outside, pouring slats of glow over her features."
 
+    stop music fadeout 3.0
+
     ki "Now I know what it feels like to be hunted by an apex predator."
 
     $chat.addmessage(crab, "you're hittin that missionary and then she's like fluckin' tap or I break your arm :D")
 
     scene bg bar with fade
+
+    play music2 jazzNoodle fadein 3.0
 
     show l 1o at f12
 
@@ -84,13 +91,13 @@ label cassDate2:
 
     $chat.addmessage(beav, "oh right")
 
-    s "She's sabotaging Cass no matter what though. I wouldn't want my date to have someone else on her mind."
+    s 1b "She's sabotaging Cass no matter what though. I wouldn't want my date to have someone else on her mind."
 
     scene bg bar with fade
 
     ki "Breathe. Breathe."
 
-    s "~ yawn ~ yeah, self. You can do it."
+    s 1j "~ yawn ~ yeah, self. You can do it."
 
     ki "The establishment is an odd one. It's a bar, obviously, but there are regular tables and booths all around the floor."
     
@@ -101,6 +108,8 @@ label cassDate2:
     ki "A hookup parlor?"
 
     $chat.addmessage(cake, "aww man")
+
+    scene bg bar with fade
 
     show c 1p at fr12
 
@@ -148,9 +157,11 @@ label cassDate2:
 
     c 2m "< Not at all. I wanna show you what a rock star life is really like. >"
 
+    s 1b "Rock star life, eh."
+
     menu:
 
-        s "Rock star life, eh."
+        
 
         "Have a drink":
             k "All right Cassandra, you're on. Order for both of us and impress me!"
@@ -230,13 +241,17 @@ label cassDate2:
 
     $chat.addmessage(beav, "What do you suppose this game is about?")
 
-    k "I, uh, I knew that!"
+    k "I, uh, I knew that!" 
+    
+    $chat.addmessage(crab,"About an hour too long")
 
     c 1g "< The songs used to be personal. Wild. Angry, even. Now I'm wealthy, comfortable. What do I have to be so pissed about? >"
 
-    $chat.addmessage(fon, "Everything :) You'll see, trust me ;)")
+    $chat.addmessage(fon, "It's about everything :) You'll see, trust me ;)")
 
-    c "< It all feels mechanical now. >"
+    c "< It all feels mechanical now. >" 
+    
+    $chat.addmessage(cake,"fekkin' crab lol")
 
     ki "I suppose this is as good a time as ever to tell her that I..."
 
@@ -295,7 +310,7 @@ label cassDate2:
         chat.bulkMessage(newComments, "random")
 
     pause(0.5)
-    hide c at f12
+    
     $hideGui()
     scene bg story-4 with fade
     pause(2.0)
@@ -337,7 +352,7 @@ label cassDate2:
 
     c "< I have a piercing. Down there, you know. >"
 
-    s "Oh."
+    s 1j "Oh."
 
     k "Oh. Wait, really?"
 
@@ -427,7 +442,7 @@ label cassDate2:
 
     ki "Cassandra pounds a shot. Then another. And another."
 
-    show c 1f
+    show c 1b
     pause 0.2
     show c 1j
 
@@ -471,7 +486,7 @@ label cassDate2:
 
     ki "It's easy for me. I know who she is, I've idolized her, even. To her, though, I'm just another face."
 
-    show c 1f
+    show c 1b
     pause 0.2
     show c 1k
 
@@ -495,7 +510,7 @@ label cassDate2:
 
     ki "I take another shot. It's easier than the first."
 
-    s "The second shoot's always easier. The second... shot?" 
+    s 1j "The second shoot's always easier. The second... shot?" 
     
     $chat.addmessage(bar,"sophie?")
 
@@ -504,10 +519,11 @@ label cassDate2:
     $chat.addmessage(crab,"goddamn")
 
     s "~yawn~"
-
+    stop music2 fadeout 3.0
     c 1g "< She died. >"
 
-    s "Oh. Shit." 
+    play music sadCass fadein 3.0
+    s 1i "Oh. Shit." 
     
     $chat.addmessage(cake,"yo crab, you get to see Fontaine's fountain?")
 
@@ -519,7 +535,7 @@ label cassDate2:
 
     c "< Yeah. I guess she couldn't handle us not being a thing. >" 
 
-    c 1o "< She was great, but I wanted tear shit up. I'm not marrying some dime piece from who-gives-a-shit Russia. >"
+    c 1o "< She was great, but I wanted to tear shit up. I'm not marrying some dime piece from who-gives-a-shit Russia. >"
 
     c 1b "< She wanted me to give up everything I liked doing and just be some clean living boring damn nobody. >"
 
@@ -546,7 +562,7 @@ label cassDate2:
 
     show c 1g
 
-    ki "< She's smiling, mirthlessly. Painfully. >"
+    ki "She's smiling, mirthlessly. Painfully."
 
     c "< She was right. It was my heroin. Didn't you read my book, fangirl? It's my fault. >" 
     
@@ -572,15 +588,15 @@ label cassDate2:
     $showGui()
     pause 0.5
 
-    show c 1c
+    show c 1c at f12
 
-    s "Sorry. That just got a little too real for me." 
+    s 1b "Sorry. That just got a little too real for me." 
     
     $chat.addmessage(elsa,"Sophie please. Answer, okay?")
 
-    s "Anyway. Sorry. Let's keep going."
+  
 
-    s "I think this game is bad for me."
+    s 1b  "I think this game is bad for me."
 
     pause 0.2
 
@@ -686,6 +702,7 @@ label cassDate2:
     pause(0.5)
 
     hide c at f12
+    stop music fadeout 3.0
     $hideGui()
     scene bg story-6 with fade
     pause 2.0
@@ -699,8 +716,9 @@ label cassDate2:
     $sceneNum = 11
 
     #----------------------------------------------------------------------------------------------------
+    play music cassPiano
 
-    s "Guys. I'm sorry for that."
+    s 1b "Guys. I'm sorry for that."
 
     pause 0.5
 
@@ -810,7 +828,7 @@ label cassDate2:
 
     c 2b "< Okay. Come with me into the recording booth? >" 
 
-    hide c at fr12
+    hide c at f12
     
     $chat.addmessage(elsa,"Fontaine, how depressing is this gonna get?")
 
@@ -848,30 +866,28 @@ label cassDate2:
 
     ki "I turn my head just in time to see the bin come flying at my face and-"
 
-    # klonk sound
+    # SFX
+    stop music
+    scene bg black
 
     pause(0.5)
     $hideGui()
     scene bg story-7 with fade
     pause 2.0
     pause
-    scene bg black with fade:
+    scene bg black with fade
     pause(0.5)
     $showGui()
     
 
-    scene bg studio with longestFade
-
-    s "This date has gone fully off the rails." 
+    s 1b "This date has gone fully off the rails." 
     
     $chat.addmessage(cake,"KTFO baybay")
 
-    scene bg black with fade
-
-
+    play music bedroom fadein 4.5
     ki "It's odd, what one notices when one has been clocked with a bin chucked by a professional MMA fighter."
 
-    scene bg studio with longestFade
+   
 
     ki "For example, I find myself busily studying a scratch in the wood flooring, wondering what on earth could have caused such a small, consistent fissure." 
     
@@ -881,7 +897,7 @@ label cassDate2:
 
     ki "And there's something soft and warm under my head."
 
-    show l 1i:
+    show l 1i at f12:
         alpha 0
         linear 0.5 alpha 0.5
         linear 0.5 alpha 0.5
@@ -909,7 +925,7 @@ label cassDate2:
     
     $chat.addmessage(bar,"Suspend disbelief Sophie. Even if you aren't talkin to us.")
 
-    show l 2t
+    show l 2t at f12
 
     l "You're okay, trust me. I've been KO'd more times than I can remember."
 
@@ -955,7 +971,7 @@ label cassDate2:
     
     $chat.addmessage(elsa,"Who gave you this game Sophie?")
 
-    show window
+    nvl show
 
 
 
@@ -967,7 +983,7 @@ label cassDate2:
     ki "Her fingers claw at nothing."
     ki "Why won't somebody help her?"
 
-    hide window
+    nvl hide
 
     nvl clear
     
@@ -998,7 +1014,7 @@ label cassDate2:
     $chat.addmessage(fizz,"back")
 
     ki "Cassandra drags herself to a sitting position and claps the choker back around her neck. The movement is practiced and swift, and it yanks me out of my mesmerized state."
-
+    show l at mt1
     show c 1g at f12
 
     c "< I guess you have questions. >" 
@@ -1042,7 +1058,7 @@ label cassDate2:
 
     c 2c "< Go back. Kylie. I'm sorry. This is stupid. I'm stupid. It's always like this. >"
 
-    show c 2f at d12
+    show c 2c at d12
 
     ki "And just like that, she's doubled over again, pouring out her agony into the trash can." 
     
@@ -1085,7 +1101,7 @@ label cassDate2:
             ki "The camera crew encircles us as Cassandra sobs."
             ki "It probably makes for great trash TV."
 
-            $loveCass += 1
+            $cassBio.loveUp()
 
         "Say goodnight":
             k "Goodnight Cassandra."
@@ -1101,9 +1117,24 @@ label cassDate2:
     
     $chat.addmessage(fon,"No, I mean it. You really care.")
 
+    stop music fadeout 3
+
     scene bg black with fade
 
+    pause 2.0
+    show image carLightsLight at carLights
+    show image carLightsBack with dissolve:
+        xpos 0 ypos 0
+    
+    pause 2.0
+
+    show image carLich with dissolve:
+        xpos 0 ypos 0
+
     ki "Lichelle is silent during the ride home. She plays idly with her necklace, gazing out the window."
+
+    show image carLichClosed with dissolve:
+        xpos 0 ypos 0
 
     ki "On the way to the bar, I got the feeling Lichelle was trying to send signals to me. Small ones. Quick glances." 
     
@@ -1119,9 +1150,11 @@ label cassDate2:
 
     k "... you clonked me, Elle."
 
-    show l 1b at f12
+    show l 1b at f11
 
     ki "Lichelle's fingertips glide along the surface of the cross." 
+
+    $renpy.notify("Odd she keeps mentioning the cross.")
     
     $chat.addmessage(elsa,"No. I don't want to talk about it.") 
     
@@ -1133,7 +1166,11 @@ label cassDate2:
     
     $chat.addmessage(beav,"I Like the idea that Elle sabotaged Cass by crackin' Kylie with a bin")
 
+    hide carLichClosed with dissolve
+
     l 1g "Probably."
+
+    $renpy.notify("What cross? I don't see a cross.")
 
     pause 0.5
 
@@ -1144,6 +1181,9 @@ label cassDate2:
     $chat.addmessage(beav,"Toldja")
 
     k "Mm-hm."
+
+    show image carLichClosed with dissolve:
+        xpos 0 ypos 0
 
     l "Dunno." 
     
@@ -1161,6 +1201,7 @@ label cassDate2:
             k "I do."
             pause 0.2
             l "Why?"
+            hide carLichClosed with dissolve
             ki "She's looking sidelong at me. The cross gleams."
             k "I just get that feeling."
             l 1b "Mm."

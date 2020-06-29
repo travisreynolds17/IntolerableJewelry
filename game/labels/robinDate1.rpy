@@ -8,22 +8,24 @@ label robinDate1:
 
     scene bg dressing with longFade
 
+    play audio bedroom fadein 0.4
+
     $showGui()
 
     ki "The morning and afternoon faded together. I had a few meetings with staff of the show and we shot some B roll of me going about my morning ritual."
 
     $chat.addmessage(shub, "was wonderin how the episodes of this show seem so short. hard to fill 45 minutes without B roll.")
 
-    ki "I guess it'll be dubbed over with the interview I did about Cassandra."
-
     ki "Catering is my favorite part of the show so far. No pressure. Just coffee."
 
     $chat.addmessage(fizz, "B roll?")
 
+    show c 1a at f12
+
     ki "I saw Cassandra around lunchtime, surrounded by her entourage. She was trying to get a slice of pecan pie."
 
     $chat.addmessage(crab, "its like background footage people talk over.")
-
+    show c 1b
     ki "A wispy man took the plate right out of her hand."
 
     $chat.addmessage(crab, "Like you know how a news story on TV has an interview, then like a shot of traffic and people walking from the neck down happens.")
@@ -40,7 +42,7 @@ label robinDate1:
 
     $chat.addmessage(fizz, "Ain't that the truth.")
 
-    ki "I hate that little man."
+    ki "I want to scream at that little man."
 
     ki "I do too, Tania said, but I don't think it's a problem."
 
@@ -50,21 +52,23 @@ label robinDate1:
 
     ki "She gestured with her head, subtly, toward one of the tables."
 
-    play music robinChoir fadein 4.5
+    stop audio fadeout 3.0
+
+    play music robin fadein 4.5
 
     ki "How Robin is so stealthy escapes me. She was sitting there, fingers curled around a coffee mug."
 
     ki "Her eyes were locked on that wispy little man."
 
-    ki "That's right. Robin and Cassandra know each other."
-
     $chat.addmessage(cake, "this dude gonna turn up missing. you watch.")
 
-    ki "She rose, and the entourage parted for her like the Red Sea."
+    ki "She rose, and the entourage parted for her like the senate before Caesar."
 
     ki "Her eyes never left that little man's face."
 
     $chat.addmessage(bar, "This is like that one scene from that movie.")
+
+    show c at mt3
 
     show r 1d at f12
 
@@ -76,7 +80,9 @@ label robinDate1:
 
     ki "I didn't hear the name he gave. I did notice some of Tania's security officers paying closer attention, though."
 
-    r 1e "Serve her."
+    r 1a "Serve her."
+
+    show c 1i
 
     ki "The little man's mouth hung open."
 
@@ -84,17 +90,15 @@ label robinDate1:
 
     r 1d "..."
 
-    ki "She didn't answer. She just stared him down."
+    ki "She didn't answer. Just stared him down."
 
     ki "It was mesmerizing."
+
+    show c 1q
 
     ki "Cassandra stood back, meekly."
 
     show r 1k
-
-    ki "Good god, all this over a piece of pie, the little man griped."
-
-    r "..."
 
     ki "Exactly what will you do if I don't, he said, finding a bit of courage."
 
@@ -106,13 +110,13 @@ label robinDate1:
 
     ki "... yeah, I looked. I don't feel good about it."
 
-    r 2d "All that blood, flowing away from your little brain. I already own you, darling."
+    r 2q "All that blood, flowing away from your little brain. I already own you, darling."
 
     $chat.addmessage(fon, "Robin wow. Wow, wow. :)")
 
     $chat.addmessage(shub, "man I'd tell this girl to piss off")
 
-    show c 1b at fr13
+    show c 1b
 
     ki "Cassandra signed something in the air."
 
@@ -134,8 +138,6 @@ label robinDate1:
 
     r 2k "Cut a piece of that pie, place it on a saucer and hand it to me, you pitiful, pitiful clown."
 
-    ki "Someone else in the entourage was chuckling."
-
     ki "With her size and accent, I think she missed her calling as a dominatrix."
 
     ki "Fine, he spat, if it'll get you to go away."
@@ -156,7 +158,7 @@ label robinDate1:
 
     ki "Don't you want this, he asked."
 
-    r 2k "From you? How disgusting."
+    r 2k "From you? Disgusting."
 
     $chat.addmessage(fizz, "Cold as ice.")
 
@@ -172,7 +174,7 @@ label robinDate1:
 
     hide r at fr12
     pause 1.1
-    hide c at fr13
+    hide c 1i at fr13
 
     ki "No one in the entourage attempted to follow."
 
@@ -249,6 +251,8 @@ label robinDate1:
 
     ki "Okay, nerves. Pack your bags and let's go."
 
+    play music hallwayChats fadein 3.0
+
     scene bg hallway with fade
 
     show t 1m at fr12
@@ -271,7 +275,7 @@ label robinDate1:
 
     $chat.addmessage(elsa, "Sophie can prob relate to that dealing with us. Reading, playing AND speaking.")
 
-    k "You think it'll be easier? Because if I'm honest, Robin kind of scares me."
+    k "You think it'll be easier? If I'm honest, Robin kind of scares me."
 
     $chat.addmessage(bar, "She's a multi-tasking muthaflucka, muthaflucka.")
 
@@ -287,7 +291,7 @@ label robinDate1:
 
     $chat.addmessage(crab, "TwixtBar, you're next it seems.")
 
-    s "Tania being all suspicious."
+    s 1a "Tania being all suspicious."
 
     $chat.addmessage(bar, "Yeah no")
 
@@ -342,7 +346,7 @@ label robinDate1:
 
     $chat.addmessage(cake, "is your name actually Fontaine? Or like, Brittany. Or something else.")
 
-    ki "I wonder if that's a contractual thing or if she's just off limits somewhow?"
+    ki "I wonder if that's a contractual thing or if she's just off limits somehow?"
 
     $chat.addmessage(fon, "My real name is Fontaine L'eau.")
 
@@ -359,7 +363,7 @@ label robinDate1:
         ]
         chat.bulkMessage(newComments, 0.7)
 
-    s "Wait, Fontaine, are you for real? Where are you from?"
+    s 1a "Wait, Fontaine, are you for real? Where are you from?"
 
     $chat.addmessage(fon, "Oh, all over.")
 
@@ -395,7 +399,7 @@ label robinDate1:
     $chat.addmessage(shub, "it great")
     $chat.addmessage(cake, "dunno")
 
-    s "Portmanteaus are cute, though!"
+    s 1m "Portmanteaus are cute, though!"
 
     t 1q "Robin's here somewhere. Probably hanging by her feet from the rafters taking a nap."
 
@@ -416,6 +420,7 @@ label robinDate1:
     k "I guess I--"
 
     play sound "sounds/Lights Out.mp3"
+    stop music fadeout 0.5
     scene bg black
 
     pause 0.5
@@ -445,6 +450,7 @@ label robinDate1:
 
     play sound "sounds/Lights Out.mp3"
     scene bg playhouse near
+    play music robin fadein 1.0
 
     show r 1m at i12
 
@@ -462,8 +468,6 @@ label robinDate1:
     pause 0.5
 
 
-    hide window # test hiding nvl window. I think using NVL has caused the flickering say window problem
-
     ki "It is. My face is flushed, I feel hot. I'm not scared. I could smell her perfume before the lights came up."
 
     $chat.addmessage(fizz, "Or cuffs in general, right?")
@@ -472,7 +476,7 @@ label robinDate1:
 
     $chat.addmessage(elsa, "Sophie I need to brb")
 
-    s "Bet it smells like chloroform. Oh, Elsa, you're fine. We're playing at our own pace here."
+    s 1a "Bet it smells like chloroform. Oh, Elsa, you're fine. We're playing at our own pace here."
 
     $chat.addmessage(shub, "private chat, eh?")
     $chat.addmessage(elsa, "Shut up, Shub, I'll bring back Bong if I find him.")
@@ -559,7 +563,7 @@ label robinDate1:
 
     k "We just met." 
 
-    r 1m "Are you sure?" 
+    r 2m "Are you sure?" 
     
     $chat.addmessage(crab,"dun dun dunnnn")
 
@@ -571,11 +575,11 @@ label robinDate1:
 
     ki "Wha?"
 
-    s "You said it, Kylie."
+    s 1a "You said it, Kylie."
 
     $chat.addmessage(elsa, "Fontaine really is gorgeous wow")
 
-    r 2m "Come, come. We should have our dinner, don't you think?"
+    r 2n "Come, come. We should have our dinner, don't you think?"
 
     $chat.addmessage(shub, "What kinda chat is she sending?")
 
@@ -583,15 +587,19 @@ label robinDate1:
 
     $chat.addmessage(elsa, "her eyes are haunting and she's just wow")
 
-    r "Right here."
+    r 2m "Right here."
 
     $chat.addmessage(beav, "You paying for that chat by the minute?")
 
     ki "That's it. She's going to cook me."
 
-    hide r at f12
+    show r at justFade
+
+    stop music fadeout 4.0
 
     ki "Robin turns and beckons to me, carelessly, as if she's only here in my imagination."
+
+    hide r
 
     $chat.addmessage(fizz, "Yeah I just read back in the chat a ways and Egg really hasn't said a thing for a while.")
 
@@ -602,17 +610,25 @@ label robinDate1:
 
     ki "She really is otherworldly."
 
-    s "I feel like the game wants me to pick Robin. What do you think, chat?"
+    s 1r "I feel like the game wants me to pick Robin. What do you think, chat?"
 
-    s "Wow, what did I miss? Elsa and Fontaine vanished for a private chat?"
+    s 1a "Wow, what did I miss? Elsa and Fontaine vanished for a private chat?"
+
+    stop music fadeout 3.0
 
     s "I feel like my stream became a meet-cute parlor. Ha!"
 
     pause 1.0
 
-    s "No comment? Oh. Oh! Sorry, I must've paused the chat by accident. Sorry!"
+    s 1b "No comment? Oh. Oh! Sorry, I must've paused the chat by accident. Sorry!"
+
+    
 
     $chat.addmessage(beav, "That's what I think, anway.")
+
+    show r 1m at f12
+
+    play music darkNoodle fadein 2.4
 
     r 1m "I hope you don't mind, I turned down Tania's offer to pay for our meal."
 
@@ -660,7 +676,7 @@ label robinDate1:
 
     r 1p "Because we've been friends for so long, papillon."
 
-    s "Wait, what."
+    s 1i "Wait, what."
 
     $chat.addmessage(cake, "broooooo")
 
@@ -683,10 +699,11 @@ label robinDate1:
         ki "Her smile is warm, briefly. I could be wrong, but I feel like both of us are a little more comfortable than a moment ago."
 
     if outfitCurrent == "Jeans":
+        r "You're a bit more casual, I suppose."
         k "So my other choices were a pantsuit and a dress that was basically a napkin and some strings."
-        k "I didn't want to come across wrong, I guess."
+        k "I didn't want to come across too forward, I guess."
         ki "Huh. Self, that was an awfully forthright answer."
-        ki "Robin, I discover, has a habit of tilting her head owlishly when she's considering her words."
+        ki "Robin, I discover, has a habit of bending her left wrist and tucking her thumb when she's thinking."
         r 1m "It is the woman beneath the fabric who interests me, darling. Nothing more."
 
     if outfitCurrent == "Pantsuit":
@@ -704,7 +721,11 @@ label robinDate1:
 
     k "I don't--"
 
-    $chat.addmessage(bong, "01010100 01101000 01100101 00100000 01100100 01100001 01110100 01100001 00100000 01100110 01100101 01100101 01101100 01110011 00100000 01110011 01101111 00100000 01100111 01101111 01101111 01100100")
+    $chat.addmessage(bong, "01010100 01101000 01100101 00100000 01100100 01100001 01110100 01100001 00100000 01100110 01100101 01100101 01101100 01110011 00100000 01110011 01101111 00100000 01100111 01101111 01101111 01100100") 
+    
+    $chat.addmessage(fon,"Shh") 
+    
+    $chat.addmessage(fon,"Hush now.")
 
     pause 1
 
@@ -716,15 +737,20 @@ label robinDate1:
 
     pause 0.4
 
-    s "You're back fast this time, Fontaine. Yeah, I have been to Paris, I went in college."
+    s 1m "You're back fast this time, Fontaine. Yeah, I have been to Paris, I went in college."
 
     $chat.addmessage(fizz, "Too much coincidence?")
 
-    s "I never took French, though. I took two years of Spanish and promptly forgot all of it."
+    s 1q"I never took French, though. I took two years of Spanish and promptly forgot all of it."
+
+    stop music fadeout 3.0
+    
 
     r 2b "I was different then. Lesser. But I am a deft hand in the kitchen, papillon."
 
     $chat.addmessage(elsa, "Back.")
+
+    play music2 robin fadein 3.0
 
     ki "No. I do remember. I remember her scent. That's why..."
 
@@ -732,7 +758,7 @@ label robinDate1:
 
     k "Oh my god! So that's why you seemed so damn familiar."
 
-    ki "Her smile now, it's dark but searching. Meaningful."
+    ki "Her expression now, it's dark but searching. Meaningful."
 
     $chat.addmessage(elsa, "Yup, safe and sound. Obviously.")
 
@@ -774,6 +800,10 @@ label robinDate1:
     k "I'm sorry, I just have a million questions."
 
     $chat.addmessage(fizz, "Dunno about that, but she dodges questions like they were wrenches.")
+
+    stop music2 fadeout 3.0
+
+    play music darkNoodle fadein 4.0
 
     r 2l "I know. And I have a few answers for you, as well. But for now, please. Your kind words about my cooking changed everything for me, darling, please let me see if I still deserve them."
 
@@ -825,7 +855,7 @@ label robinDate1:
 
     $chat.addmessage(fizz, "Why would they make it that obvious?")
 
-    s "Don't you guys think all of this is too easy? Like I get this is a cheesy dating sim and all, but you mean to tell me this girl fell in love with me at first sight?"
+    s 1a "Don't you guys think all of this is too easy? Like I get this is a cheesy dating sim and all, but you mean to tell me this girl fell in love with me at first sight?"
     s "Then she tracked me down on this show while also becoming a playhouse owner?"
 
     $chat.addmessage(crab, "You ever see 'Single White Female'?")
@@ -836,7 +866,7 @@ label robinDate1:
 
     $chat.addmessage(fon, "Her sad face is so endearing :(")
 
-    r "You... you brought me water, Kylie."
+    r 1b "You... you brought me water, Kylie."
 
     k "I don't know what to say."
 
@@ -884,9 +914,7 @@ label robinDate1:
 
     show r 2s
 
-    ki "She rises then, looming enormous over me, and my skin freezes. Her dress opens from just below her sternum in a diamond pattern that ends just below her navel."
-
-    ki "And now, that pale, warm skin is inches from me."
+    ki "She rises then, looming enormous over me, and my skin freezes."
 
     $chat.addmessage(crab, "'bout time we got some H in this :P")
 
@@ -895,6 +923,7 @@ label robinDate1:
     ki "My heart hurts from hammering in my chest. My arms and legs hang like noodles. She lowers herself to me, kneeling so close I can smell her lipstick, tart and chemical."
 
     # sound effect of lights shutting off
+    stop music fadeout 0.4
     play sound "sounds/Lights Out.mp3"
     scene bg black
 
@@ -939,6 +968,8 @@ label robinDate1:
 
     pause 1.0
 
+    play music robin fadein 3.0
+
     ki "And then, a soft brush of something firm against my cheek. The sound of lips plucking gently away."
 
     ki "A whisper."
@@ -946,6 +977,7 @@ label robinDate1:
     r "{alpha=0.5}Shh. I'll see you again, papillon.{/alpha}"
 
     # sound effect of lights
+    stop music fadeout 0.2
     play sound "sounds/Lights Out.mp3"
     scene bg playhouse far
 
@@ -965,7 +997,7 @@ label robinDate1:
 
     $chat.addmessage(crab, "Can't have it both ways.")
 
-    s "Guys, don't ever pull that on someone on a date! Oh my god."
+    s 1i "Guys, don't ever pull that on someone on a date! Oh my god."
 
     show t 1d at f12
 
@@ -1018,6 +1050,7 @@ label robinDate1:
 
     # sounds/Lights Out
     play sound "sounds/Lights Out.mp3"
+    stop music fadeout 0.2
     scene bg black
 
     pause 2.0
@@ -1027,6 +1060,10 @@ label robinDate1:
     t "God dammit, Robin!"
 
     ki "The lights are gone. My heart races again. Is she back? I brace for some sensation against my skin, terrified it will come and never come in the same instant."
+
+    k "Language, Tania. We-"
+
+    t "We'll edit, don't cover for her!"
 
     $chat.addmessage(cake, "This must be frustrating for Tania.")
 
@@ -1087,7 +1124,7 @@ label robinDate1:
 
     t "Robin! Turn the damn lights back on!"
 
-    ki "I'm breathless, still sitting in the dining chair, when the lights come back up."
+    
 
     $chat.addmessage(egg, "")
 
@@ -1097,6 +1134,8 @@ label robinDate1:
     scene bg playhouse far
     
     show t 1d at i12
+
+    ki "I'm breathless, still sitting in the dining chair, when the lights come back up."
 
     t "That's not funny! Kylie..."
 
@@ -1110,11 +1149,9 @@ label robinDate1:
 
     t 1k "Oh well. Guys, get in here and get her face. Make sure you can see the lipstick."
 
-    ki "Right... a TV show."
-
     t 1a "We'll cut it into something great. Somehow. Robin, if you're still here somewhere I want to talk to you!"
 
-    $chat.addmessage(elsa, "Me, too. Hey Robin, I like food too!")
+    $chat.addmessage(elsa, "Hey Robin, I like food too!")
 
     ki "There's no response. I wonder if she's really gone or if she's nearby, still. Watching."
 
@@ -1139,6 +1176,8 @@ label robinDate1:
     ki "She might really have stolen my soul."
 
     scene bg hallway with dissolve
+
+    play music hallwayChats fadein  2.2
 
     pause 0.25
 
@@ -1179,7 +1218,7 @@ label robinDate1:
 
     ki "It's hard to think, even now. I feel drained, like all of my energy has been spent dissecting those few minutes in the dark."
 
-    s "Oh my god what if someone else kissed me? I mean, I guess the game made a point to tell us it was her, but still, weird!"
+    s 1i "Oh my god what if someone else kissed me? I mean, I guess the game made a point to tell us it was her, but still, weird!"
 
     $chat.addmessage(beav, "like a fishbowl party")
 
@@ -1205,9 +1244,11 @@ label robinDate1:
 
     $chat.addmessage(bar, "I assumed you're a guy pretending to be a gay woman to mess with people.")
 
+    stop music fadeout 4.0
+
     pause 1.0
 
-    s "Wow, okay. Chat, I think I'm gonna need a minute after that. Like Robin's gorgeous and mysterious and everything and apparently we have a backstory, which is kind of too convenient."
+    s 1a "Wow, okay. Chat, I think I'm gonna need a minute after that. Like Robin's gorgeous and mysterious and everything and apparently we have a backstory, which is kind of too convenient."
 
     s "I guess I wish they put more effort into coming up with a reason for Kylie and Robin to bond. Cassandra had her own thing, right?"
 
@@ -1227,6 +1268,8 @@ label robinDate1:
 
     show image splashHorror:
         alpha 0.05
+
+    play music onTheNod fadein 1.0
 
     python:
         # split string into whole words. The create lists, each entry emulating message object.
@@ -1254,11 +1297,13 @@ label robinDate1:
 
     scene bg black with fade
 
+    stop music fadeout 1.0
+
     $chat.addmessage(shub, "there he goes again lol")
 
     $chat.addmessage(crab, "So like boobs, right? What's better than two?")
 
-    s "Okay chat, I'm back. So, who do you guys think between Cassandra and Robin?"
+    s 1a "Okay chat, I'm back. So, who do you guys think between Cassandra and Robin?"
 
     $chat.addmessage(elsa, "... okay fair.")
     $chat.addmessage(fon, "A beautiful man like you, Crablegs. ;)")
@@ -1276,11 +1321,11 @@ label robinDate1:
     $chat.addmessage(crab, "finally Sophie speaking my language ;) Also, sure Fontaine.")
     $chat.addmessage(fizz, "Fontaine, I hope you aren't about to turn out to be a hacker spy or something.")
 
-    s "Whatcha got, Fontaine? I'm curious."
+    s 1m "Whatcha got, Fontaine? I'm curious."
 
     $chat.addmessage(beav, "Robin has my vote. She's freaky.")
 
-    s "Well, anyway, we have one more date to go! Let's go see Lichelle."
+    pause 1.0
 
     $chat.addmessage(fon, "Crablegs is five foot nine. He has a fade haircut. He is Canadian. He is interested in women. He enjoys bluegrass music and has brown eyes.")
 
@@ -1298,7 +1343,7 @@ label robinDate1:
 
     pause 1.0
 
-    s "The hell?"
+    s 1h "The hell?"
 
     $chat.addmessage(fon, "Relax, relax. He sent me his dating profile. ;)")
 
@@ -1314,11 +1359,11 @@ label robinDate1:
 
     pause 1.0
 
-    s "Fontaine, you're devious, you know that?"
+    s 1a "Fontaine, you're devious, you know that?"
 
     $chat.addmessage(fon, "I try ;)")
 
-    s "You guys feel like going on if I take, like, a half hour break? I know it's a lot, but this is heavy stuff for me."
+    s "You guys feel like going on if I take, like, a half hour break? I'm starting to feel a little uninspired."
 
     python:
         newComments = [

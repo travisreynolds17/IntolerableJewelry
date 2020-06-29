@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/labels/00-00definitions.rpy", line 303: unexpected EOF while parsing
-    im.Composite((371, 1004), (0, 240), "chars/c1.png", (135, 423), "chars/ch.png", (0, 240), "img/cassBlood.png"))
-                                                                                                                   ^
+File "game/labels/cassDate2.rpy", line 1127: expected statement.
+    xpos 0 ypos 0
+                 ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Jun 21 00:00:40 2020
+Sat Jun 27 23:40:15 2020

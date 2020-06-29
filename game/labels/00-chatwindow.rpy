@@ -6,6 +6,16 @@ label chatwindow:
 
     init python:
 
+        #hide/show chat functions to redraw chat window? Yup, this works.
+        # flashing the chat window (hiding then immediately showing with no ttransfrom) repaints it, which resets the yadjustment value, forcing new texts to scroll the window.
+        def hideChat():
+            renpy.hide_screen("chatterbox")
+        def showChat():
+            renpy.show_screen("chatterbox")
+        def flashChat():
+            hideChat()
+            showChat()
+
         # useful variables
         chatWidth = 300
         chatHeight = 400
@@ -67,6 +77,7 @@ label chatwindow:
             def addmessage(self, person, message):
                 if chatPause == False:
                     self.history.append(Message(person, message + "\n"))
+                    flashChat()
 
             # define a method by which the chatlog is cleared entirely.
 
@@ -86,6 +97,7 @@ label chatwindow:
                         self.delay = suchRandom / 10
                     if self.delay > 0:
                         renpy.pause(self.delay)
+                flashChat()
 
             # function to append a message to chatHistory in one continuous line
             # think of speed and modulus as numerator and denominator. Renpy pause, even at time 0, pauses for a bit. The lower modulus, the faster the text.
@@ -98,6 +110,7 @@ label chatwindow:
                     count += 1
                     if count % modulus == 0:
                         renpy.pause(speed)
+                flashChat()
 
     # Set a variable to infinity, to be used later. This part is to keep chat box showing newest chat at the bottom rather than forcing player to scroll.
         infyadjValue = float("inf")

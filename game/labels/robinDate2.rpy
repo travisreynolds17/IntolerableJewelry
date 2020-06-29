@@ -10,7 +10,9 @@ label robinDate2:
     $showGui()
     pause 0.5
 
-    s "~yawn~ I don't know how much longer I'm gonna play this."
+    play music bedroom fadein 3.0
+
+    s 1j "~yawn~ I don't know how much longer I'm gonna play this."
 
     $chat.addmessage(elsa, "Yes, Sophie, please stop!")
 
@@ -24,9 +26,9 @@ label robinDate2:
 
     # chat begs her to continue, oddly worded
     pause 0.5
-    s "You guys are that into this, huh? You really want me to keep playing?"
+    s 1b "You guys are that into this, huh? You really want me to keep playing?"
 
-    s "I guess I ~yawwwwn~ can stick it out a bit longer."
+    s 1j "I guess I ~yawwwwn~ can stick it out a bit longer."
 
     $chat.addmessage(elsa, "What? No!")
 
@@ -36,7 +38,8 @@ label robinDate2:
 
     $chat.addmessage(beav, "sophie you scarin me")
 
-    s "Oh, shush, all'ya, but thanks for calling me pretty, Egg."
+    s 1t "Oh, shush, all'ya, but thanks for calling me pretty, Egg."
+    pause 0.1
 
     ki "The night passes, beset by squads of nightmares."
 
@@ -56,7 +59,9 @@ label robinDate2:
 
     $chat.addmessage(fon, "Sophie Sophie Sophie!")
 
-    # knock sound
+    # SFX 
+
+    stop music fadeout 5.0
 
     un "Miss Koenig? Makeup is in thirty minutes!"
 
@@ -83,13 +88,15 @@ label robinDate2:
 
     ki "... I hope she likes me in white."
 
-    s "Contrast is good."
+    s 1r "Contrast is good."
 
     $chat.addmessage(fon, "You look beautiful, Sophie. :) I know you're tired.")
 
     ki "Okay, nerves. Pack your bags and let's go. Today's a new day."
 
     scene bg hallway with fade
+
+    play music hallwayChats fadein 1.0
 
     show l 1m at fr12
 
@@ -113,13 +120,13 @@ label robinDate2:
 
     l "She'll be feeling that episode for a week, probably. It's cool."
 
-    l 1j "She's rich as shit, so she'll probably go to rehab then bust out an album about it."
+    l 1j "She's rich as hell, so she'll probably go to rehab then write an album about it."
 
     $chat.addmessage(elsa, "Sophie. You still have the card I gave you, right?")
 
     k "I hope so."
 
-    s "Rehab isn't a good environment for art. I don't think so."
+    s 1j "Rehab isn't a good environment for art. I don't think so."
 
     $chat.addmessage(bar, "What card?")
 
@@ -148,7 +155,7 @@ label robinDate2:
     k "Oh."
 
     $chat.addmessage(elsa, "Stop it.")
-
+    pause 1.0
     l 2m "And sex."
 
     k "Oh!"
@@ -165,7 +172,7 @@ label robinDate2:
 
     $chat.addmessage(fizz, "Oh yeah, so lucky")
 
-    s "..."
+    s 1t "..."
 
     s "Am we?"
 
@@ -196,6 +203,7 @@ label robinDate2:
     l 1m "Cool. Let's get moving, then."
 
     $chat.addmessage(bar, "Leave her alone.")
+    pause 0.4
 
     k "Oh? Is Tania still out of commission?"
 
@@ -220,6 +228,7 @@ label robinDate2:
     $chat.addmessage(fizz, "Better brb clown.")
 
     l "Let's ride."
+    pause 0.1
 
     ki "Lichelle steps past me, toward the exit doors at the end of the hall."
 
@@ -227,7 +236,7 @@ label robinDate2:
 
     ki "As I turn to follow, though, she pauses and plants a light kiss on my cheek."
 
-    s "She's making moves when the others aren't able to compete. Devious, devious."
+    s 1b "She's making moves when the others aren't able to compete. Devious, devious."
 
     $chat.addmessage(elsa, "I'm okay. I'm not happy. Thank you poundCake.")
 
@@ -240,9 +249,10 @@ label robinDate2:
 
     l 1p "I'm not apologizing. Couldn't wait."
 
-    s "Wow."
+    s 1r "Wow."
 
     $chat.addmessage(beav, "I guess with the fightin' over for a minute, y'all missin kissin")
+    pause 0.1
 
     k "I, uh... you don't have to."
 
@@ -258,13 +268,28 @@ label robinDate2:
 
     hide l at f12
 
+    stop music fadeout 4.0
+
     ki "After a moment of composing myself, I follow along, barely thinking of Robin or Cassandra, or anything much at all."
 
-    scene bg black with fade
+    scene bg black with longFade
+
+    play music lichelle fadein 1.0
+
+    show image carLightsLight at carLights
+    show image carLightsBack with dissolve:
+        xpos 0 ypos 0
+    
+    pause 2.0
+
+    show image carLich with dissolve:
+        xpos 0 ypos 0
 
     ki "Like before, the car ride is uneventful. Lichelle sits across from me, gazing through the window, toying with her necklace."
 
-    $chat.addmessage(beav, "so we keep hearin about that necklace.")
+    $chat.addmessage(beav, "so we keep hearin about that necklace.") 
+    
+    $chat.addmessage(beav,"I don't see a necklace on her.")
 
     ki "I find myself taking a little time to consider her. She's a professional fighter, an athlete who makes her living by beating the sense out of other women."
 
@@ -280,8 +305,10 @@ label robinDate2:
     ki "I don't think it's fair she gets to spend more time with me than the others, but I'm not sure what the alternative would be."
 
     $horrorChat = horrorTwixt[2]
-
+    stop music fadeout 3.0
     ki "Either way, I spend the rest of the ride looking out the window and wondering what the hell I'm going to have to say to Robin."
+
+    hide carLich with dissolve
 
     hide screen chatHorror
 
@@ -296,7 +323,9 @@ label robinDate2:
     $showGui()
     pause 0.5
 
+    
     k "Oh my god, is this the place she owns?"
+    play music darkNoodle
 
     show l 1a at fr12
 
@@ -330,7 +359,7 @@ label robinDate2:
 
     k "Uh, yeah. I think so. You seem upbeat about it."
 
-    l 1m "Vale Tudo's a combat sport in Brazil. And a moon, turns out."
+    l 1m "Vale Tudo's a combat sport in Brazil."
 
     pause 0.1
 
@@ -353,12 +382,13 @@ label robinDate2:
     k "I wouldn't know what to ask-"
 
     l 1t "Maybe I'll just show you."
+    pause 1.0
 
     ki "Lichelle is shameless, isn't she?"
 
     $chat.addmessage(cake, "not the word I'd use")
 
-    s "... are you asking us, Kylie? Why are you asking us?"
+    s 1u "... are you asking us, Kylie? Why are you asking us?"
 
     $chat.addmessage(fizz, "Sophie, what are you doing? Are you alone in there?")
 
@@ -380,13 +410,16 @@ label robinDate2:
 
     $chat.addmessage(beav, "I been listenin though. Man")
 
-    s "Guh. Feels bad, man."
+    s 1b "Guh. Feels bad, man."
+    pause 0.1
 
     l 1a "Breathe in, breathe out, babe. Robin's just a flesh and blood spooky-ass dimepiece. You'll be fine."
 
     $chat.addmessage(beav, "I dunno if you're wanted anymore, my guy")
 
     k "I guess I--"
+
+    stop music fadeout 0.4
 
     play sound "sounds/Lights Out.mp3"
     scene bg black
@@ -412,6 +445,8 @@ label robinDate2:
     play sound "sounds/Lights Out.mp3"
     scene bg playhouse near
 
+    play music robin
+
     r "You seem unsettled draga mea."
 
     $chat.addmessage(beav, "Was she your girl? Since she's not payin attention, tell us.")
@@ -430,13 +465,13 @@ label robinDate2:
 
     pause 0.5
 
-    ki "It is. My face is flushed, I feel hot. I'm not scared. I'm not because I could smell her perfume before the lights came up."
+    ki "It is. My face is flushed, I feel hot. I'm not scared. I could smell her perfume before the lights came up."
 
     $chat.addmessage(fon, "Oh, she was :(. WAS. :(")
 
     ki "And it's nostalgic. I don't know what it is, but the scent puts me on edge."
 
-    s "~yawn~"
+    s 1j "~yawn~"
 
     k "... I could smell you."
 
@@ -445,8 +480,11 @@ label robinDate2:
     show r 2p
 
     r "I apologize papillon. Stagecraft is my life, and so I thought I might show you just a bit."
+    
+    stop music fadeout 3.0
+    play music darkNoodle fadein 5.0
 
-    r 2q "So my lavender betrayed me."
+    r 2q "My lavender betrayed me."
 
     pause 0.2
 
@@ -456,7 +494,7 @@ label robinDate2:
 
     r "Lovely."
 
-    ki "Her voice thrills me. It's at once dangerous and comfortable, and I can't place it for the life of me."
+    ki "Her voice thrills me. It's at once dangerous and familiar, and I can't place it for the life of me."
 
     $chat.addmessage(fizz, "Why do you care so much?")
 
@@ -480,7 +518,7 @@ label robinDate2:
 
     ki "Wha?"
 
-    s "I didn't forget you Louisa~"
+    s 1c "I didn't forget you Louisa~"
 
     $chat.addmessage(fizz, "What?")
 
@@ -528,6 +566,8 @@ label robinDate2:
 
     r "Your favorite, of course."
 
+    scene bg black with longFade
+
     $chat.addmessage(cake, "seems like you earned it, man")
 
     ki "How on earth would she know--"
@@ -536,11 +576,16 @@ label robinDate2:
 
     $chat.addmessage(fizz, "The hell does that mean?")
 
-    hide r with dissolve
+    show image platterCover at showPlatter with dissolve
 
     ki "She moves like a whisper from the stairs to the table, and I follow, curious, nervous."
 
+    play music onTheNod fadein 7.0
+
     ki "She lifts a platter cover from one of the place settings."
+
+    hide platterCover with dissolve
+    show platter at showPlatter with dissolve
 
     $chat.addmessage(beav, "You can't neglect someone all the damn time and expect them to marry you. You can't tell them they have to stop doing things they like.")
 
@@ -552,11 +597,16 @@ label robinDate2:
 
     show screen chatHorror
 
-    pause 0.6
+    pause 1.6
 
     hide screen chatHorror
 
+    stop music2
+     
+
     r 1b "Was I wrong, papillon?" 
+
+    show r at justFade with dissolve
     
     $chat.addmessage(beav,"you told her she had to give up strims")
 
@@ -565,6 +615,7 @@ label robinDate2:
     $chat.addmessage(fizz, "That's bullshit. You wanna know the truth?")
 
     ki "A chip of ice races along my bloodstream. On the platter, plain as day, there sits R/BG13:14-15."
+    hide r
 
     $chat.addmessage(fizz, "Sophie's a fucking junkie. She has been almost as long as I've known her.")
 
@@ -573,6 +624,8 @@ label robinDate2:
     $chat.addmessage(beav,"dude")
 
     k "Robin, what is that?"
+
+    show r 1b at f14
 
     r "It's your favorite jewelry, darling." 
     
@@ -588,7 +641,7 @@ label robinDate2:
 
     r "It's our shared history, dearest."
 
-    s "I don't... guys. I don't feel right."
+    s 1f "I don't... guys. I don't feel right."
 
     show r 2b
 
@@ -658,6 +711,8 @@ label robinDate2:
 
     ki "... and I remember the girl. Dressed in sheer black, wandering the floors with frozen eyes."
 
+    scene bg black with fade
+
     ki "I remember the man behind her who whispered in my ears. The man who accepted a hundred and fifty dollars from me and my friends."
 
     $renpy.notify("You can still save her. Sever the strings.")
@@ -668,7 +723,7 @@ label robinDate2:
     
     $chat.addmessage(fizz,"stop this game Sophie, I swear to God I'll never bother you again")
 
-    show window
+    nvl show
 
     ki "I remember lying draped across a chair, watching her dance so nervously for the others. Watching her take off her already minimal clothes with shivering hands."
 
@@ -678,7 +733,7 @@ label robinDate2:
 
     ki "... the next part didn't last long. I was too euphoric, too leaden to participate much."
 
-    hide window
+    nvl hide
 
     nvl clear
 
@@ -686,11 +741,10 @@ label robinDate2:
 
     s "Guys..."
 
-    $temp = reverseString("I never understood pain until now. Louisa. Blissful, blissful Louisa. Her kiss paralyzes. She's angelic. I can't taste the fountain but she loves me and I need Louisa")
+    $temp = reverseString("\nI never understood pain until now. Louisa. Blissful, blissful Louisa. Her kiss paralyzes. She's angelic. I can't taste the fountain but she loves me and I need Louisa")
 
     $chat.addLinearMessage(bar, temp, 0, 3)
 
-    show window
 
     ki "'Why are you crying? Is everything okay?' I had asked the girl shivering in my arms afterward. Knowing nothing."
 
@@ -698,40 +752,43 @@ label robinDate2:
 
     ki "I remember the trickle of blood flowing from her, not enough to drip, but enough to redden my lap."
 
-    hide window
-
-    nvl clear
 
     s "Was it always like this?"
 
-    $temp = "It was always like this. You were there the entire time."
+    $temp = "It was always like this. You were there the entire time.\n"
+
+    stop music fadeout 3.0
 
     $chat.addLinearMessage(egg, temp, 0, 3)
 
+    scene bg playhouse with fade
 
+    play music robin
+
+    show r 1b at f12
     r 1b "I was fifteen when we met, draga mea."
 
     k "You what?"
 
-    s "Oh my fucking god."
+    s 1c "Oh my fucking god."
 
     r 1a "I'm not angry. Rather the opposite, I am thrilled to have you here, within my reach, once again."
 
-    $chat.addmessage(elsa, "Guys, I'm at her apartment. Sophie's door is barricaded. I called the cops, but they said it could be forty minutes before they get here.")
+    $chat.addmessage(elsa, "Guys, I'm at her apartment. Sophie's door is barricaded. I called the cops, but they said it could be fifteen minutes before they get here.")
 
     r 1j "I remembered you being taller."
 
     $chat.addmessage(elsa, "David, do something! Get your ass over here!")
 
-    s "I remember..."
+    s 1b "I remember..."
 
-    s "... and she was only..."
+    s 1c "... and she was only..."
 
     $chat.addmessage(fizz, "So now I'm supposed to go save her again.")
 
     # show a sad sophie and then sudden brb
 
-    s "I don't want to play anymore."
+    s 1q "I don't want to play anymore."
 
     s "But, blugh. I'll leave it up to you guys.?"
 
@@ -739,13 +796,15 @@ label robinDate2:
 
     $chat.addmessage(elsa, "Sophie open your door, please!")
 
-    s "Alright. I'll play."
+    s 1a "Alright. I'll play."
 
     $chat.addmessage(cake, "it's like she's watchin a different chat")
 
     $chat.addmessage(beav, "so this is all a stunt, right?")
 
     scene bg playhouse far with fade
+
+    show r at f12
 
     ki "The silence between us drags on. I don't know what to say."
 
@@ -759,7 +818,7 @@ label robinDate2:
 
     ki "The camera crew looms around us."
 
-    s "Oh god. The cameras."
+    s 1h "Oh god. The cameras."
 
     $chat.addmessage(elsa, "What in the actual hell?")
 
@@ -779,7 +838,7 @@ label robinDate2:
 
     r "Please, don't. It took too long to find you draga mea, please do not make me hunt you down again."
 
-    s "Hunt. She said hunt."
+    s 1f "Hunt. She said hunt."
 
     $chat.addmessage(cake, "Do you know Fontaine, too?")
     
@@ -799,7 +858,7 @@ label robinDate2:
 
     k "Oh my god."
 
-    s "Oh my god."
+    s 1b "Oh my god."
 
     r 1m "My brothers shattered knees and slit throats for them. My sisters ran the gambling parlors."
 
@@ -848,6 +907,8 @@ label robinDate2:
     $chat.addmessage(elsa, "That girl's dead, David.") 
     
     $chat.addmessage(elsa,"Louisa died.")
+
+    $renpy.notify("But David must have known that already...")
 
     r "Bisque couldn't bring me to you."
 
@@ -916,13 +977,13 @@ label robinDate2:
 
     $chat.addmessage(fon, "Elsa, chat with me again?")
 
-    r "Under the streets of MontMartre, you saved me. My body, my soul."
+    r "Under the streets of Montmartre, you saved me. My body, my soul."
 
     $chat.addmessage(elsa, "Who ARE you?")
 
     pause 0.5
 
-    r 2c "When you held me, shielded me. You let me weep, you let me bleed. You never judgmed my weakness."
+    r 2c "When you held me, shielded me. You let me weep, you let me bleed. You never judgeed my weakness."
 
     ki "My heart hurts from hammering in my chest. My arms and legs hang like earthworms. She lowers herself to me, so close I can smell her lipstick, tart and chemical."
 
@@ -933,7 +994,11 @@ label robinDate2:
     show r 1h at mt3
     show l 1d at fl11
 
+    stop music fadeout 2.0
+
     l "Alright, back the fuck up."
+
+    play music battle
 
     $chat.addmessage(elsa, "Fountain water. Oh my god.")
 
@@ -943,7 +1008,7 @@ label robinDate2:
 
     $chat.addmessage(beav, "the hell just happened")
 
-    ki "Lichelle's presence next to me shatters the tension of the situation. Her flannel overshirt is off, putting her thick musculature on display."
+    ki "Lichelle's presence next to me shatters the tension of the situation. Her body looms tense, volatile."
 
     r 1j "I have nothing to discuss with you."
 
@@ -989,7 +1054,7 @@ label robinDate2:
 
             l 1d "Gladly."
 
-            ki "In a flash, Lichelle's overshirt is flung to the floor."
+            ki "Lichelle seems far too ready for this."
 
             ki "The first steps she takes toward Robin are just... steps."
 
@@ -1007,18 +1072,27 @@ label robinDate2:
 
             ki "A murderball, right down the center."
 
+            stop music fadeout 0.4
+
+            play sound "sounds/Lights Out.mp3"
             scene bg black
 
-            pause 0.4
+            pause 0.5
 
             # find a way to display dialogue of gutteral noise on both sides
 
             # scene - image of Robin slashing Lichelle
-            pause 0.4
+            pause 2.4
+
+            
             #ARTART
             #scene - black
 
             ki "It was never supposed to be like this."
+
+            pause 4.0
+
+            play music robinChoir
 
             scene bg playhouse with fade
 

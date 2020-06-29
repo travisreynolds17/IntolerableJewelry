@@ -70,16 +70,15 @@ label severance:
             fontBio.stringSever()
 
         def severToggle():
-            # alters state of subscribe button such that it can be clicked.
-            # this communicates directly with functions in leftbuttonwindow file.
             global severAvailable
-
+            
             if severAvailable:
-                setSubBtn("stringSever")
-                severAvailable = True
-            else:
-                setSubBtn("Subscribe")
+                renpy.hide_screen("severButton")
                 severAvailable = False
+            else:
+                
+                renpy.show_screen("severButton")
+                severAvailable = True
 
         def testInput(text):
             # tests input to see if it matches possibilities
@@ -141,6 +140,7 @@ label severance:
 
             else:
                 renpy.notify("Input match not found.")
+            currentInput = text
 
         def showSeverancePanel():
             #
@@ -154,38 +154,39 @@ label severance:
         def severCommit():
             # temp
             global currentInput
-            renpy.notify("WARNING: Severance cannot be undone.")
+            renpy.notify(currentInput)
 
             if currentInput == "cassandra":
                 if cassBio.severed:
-                    renpy.call_label("severCass")
+                    renpy.call("severCassandra")
                 else:
                     renpy.notify("Cassandra's absolution is incomplete.")
 
             if currentInput == "robin":
                 if robinBio.severed:
-                    renpy.call_label("severRobin")
+                    renpy.call("severRobin")
                 else:
                     renpy.notify("Robin's absolution is incomplete.")
 
             if currentInput == "lichelle":
                 if lichBio.severed:
-                    renpy.call_label("severLichelle")
+                    renpy.call("severLichelle")
                 else:
                     renpy.notify("Lichelle's absolution is incomplete.")
 
             if currentInput == "tania":
                 if taniaBio.severed:
-                    renpy.call_label("severTania")
+                    renpy.call("severTania")
                 else:
                     renpy.notify("Tania's absolution is incomplete.")
 
             if currentInput == "kylie":
-                renpy.call_label("severKylie")
+                renpy.call("severKylie")
+                renpy.notify("yup")
 
             if currentInput == "fontaine":
                 fontBio.stringSever()
-                renpy.call_label("severFontaine")
+                renpy.call("severFontaine")
 
 
 # these labels are mini stories from the perspective of the severed character, providing some light on their part in the story.
@@ -205,22 +206,36 @@ label kylieEnding:
     $hideSeverancePanel()
     scene bg black
 
+    stop music fadeout 5.0
+
+    pause 1.0
+
     k "Huh?"
+
+    pause 0.5
 
     k "Why does... ow! I... why does..."
 
     k "it hurts"
 
+    #sfx
+    show image screenCrack
+
     k "why"
+
+    #sfx
+    show image screenCrack2
 
     k "somebody"
 
+    #sfx
+    show image screenCrack3
+
     k "h... h...hel..."
 
-    # cracked screen?
-    # SFX
-    # sophie's eyes roll back
-    # she falls
+    #sfx
+    show image screenCrack4 with dissolve
+
 
     # some quote about there's no using burning the boats while you're still on them
 
@@ -271,3 +286,24 @@ screen severancePanel:
             xpos 900
             ypos 400
             action Function(severCommit)
+
+# define a quick transform to show and hide button
+
+transform severButton:
+    xpos -20 ypos 5
+
+    on show:
+        easein 1.0 xpos 10
+    on hide:
+        easein 1.0 xpos -200
+
+screen severButton:
+    modal False
+
+    fixed at severButton:
+        xpos 30
+        ypos 100
+        button:
+            xysize(lbtnWidth, lbtnHeight)
+            background btnSever
+            action Function(showSeverancePanel)

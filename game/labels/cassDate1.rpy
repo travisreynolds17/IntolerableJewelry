@@ -1107,6 +1107,8 @@ label cassDate1:
 
     # collect chat history in appropriate variable.
     $getHistory(2)
+    #raise cass's biography level
+    $cassBio.levelUp()
 
     scene bg black with fade
 

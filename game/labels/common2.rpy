@@ -2,13 +2,15 @@ label common2:
 
     # because the previous label, lichDate, had multiple choices to get us here, we're going to hide the GUI and show the definition screen on this label instead of at the end of the last.
     # this way it works as a catch-all.
-
+    stop music fadeout 2.0
     $hideGui()
 
     scene bg load-dating with fade
     pause
 
     scene bg stage with fade
+
+    play music cheerfulGuitar fadein 3.0
 
     pause 0.66
     $showGui()
@@ -24,7 +26,7 @@ label common2:
 
     $chat.addmessage(elsa, "From time to time.")
 
-    t "That's part of the fun, right?"
+    t 1a "That's part of the fun, right?"
 
     $chat.addmessage(crab, "hell no")
 
@@ -42,7 +44,7 @@ label common2:
 
     $chat.addmessage(bar, "Kylie, you should be in our chat.")
 
-    t 1o "So, we'e decided to move things up a little."
+    t 1o "So, we've decided to move things up a little."
 
     t "Everyone please welcome back Cassandra and Robin!"
 
@@ -50,7 +52,7 @@ label common2:
 
     show t 1a at mt3
     pause 0.2
-    show r 1a at fl12
+    show r 2a at fl12
     pause 0.1
 
     show c 1p at fl11
@@ -81,7 +83,7 @@ label common2:
 
     t "Oh, right! Cassandra, would you mind showing off the new toy I gave you?"
 
-    $chat.addmessage(elsa, "She wanted to show me a painting she did. Since I'm a graphic designer.")
+    $chat.addmessage(elsa, "She was asking about what I do at the group I run.")
 
     show c 1p
 
@@ -139,20 +141,24 @@ label common2:
 
     $chat.addmessage(crab, "that makes sense tho. they're competitors")
 
+    stop music fadeout 1.0
+
     c 2o "< Are you feeling disadvantaged, Robin? Maybe you should shut the lights off and vanish again.>"
 
     show c 2a
 
+    play music competition fadein 1.0
+
     $chat.addmessage(cake, "o shit bitch :D :D")
 
-    s "Whoa! Stalker much?"
+    s 1j "Whoa! Stalker much?"
 
     $chat.addmessage(elsa, "Cassandra was at the theater?!?")
 
-    show r 1d
+    show r 1e
     pause 0.2
 
-    show r 1g
+    show r 1a
 
     ki "Robin's placid features flicker for a heartbeat. It's hard to tell, but I thought I saw..."
 
@@ -180,7 +186,11 @@ label common2:
 
     r 2m "I would never call you an idiot, dear."
 
-    r "An alcoholic, perhaps, a pitiful pity party committed to a {i}ponosit{/i} choker that screams for the attention it supposedly protects against."
+    r "A hopeless addict, perhaps, a pitiful pity party committed to a {i}ponosit{/i} choker that screams for the attention it supposedly protects against."
+
+    show t 1i
+
+    show c 1i
 
     $chat.addmessage(elsa, "Oh my god o.o")
 
@@ -190,7 +200,7 @@ label common2:
 
     $chat.addmessage(cake, "yep, Robin's a class 1A bitch")
 
-    r 1j "Quickly, darling. Wouldn't want half of a witty retort to go to waste."
+    r 1j "Quickly, darling. We wouldn't want half of a witty retort to go to waste."
 
     $chat.addmessage(crab, "roasting a mute is full-on savage")
 
@@ -216,7 +226,7 @@ label common2:
     pause 0.2
     show c 1h
 
-    ki "her shout snaps Cassandra out of typing for a second."
+    ki "Her shout snaps Cassandra out of typing for a second."
 
     t 2h "Wait. Kylie specifically?"
 
@@ -224,7 +234,7 @@ label common2:
 
     ki "Robin, for once, doesn't answer."
 
-    c 1d "< I'm not an alcoholic and you're a trash actress. And a cheapskate. I make ten times the money playing anywhere else in this country! >"
+    c 1d "< I'm not an addict and you're a trash actress. And a cheapskate. I make ten times the money playing anywhere else in this country than at your stupid theater! >"
 
     show t 1b
 
@@ -234,11 +244,15 @@ label common2:
 
     show r 1c
 
+    show t 1i
+
     $chat.addmessage(elsa, "oh god")
 
     $chat.addmessage(fizz, "O.O")
 
     ki "I've had enough. Robin's demeanor breaks, then, and it's not the fury I expected to see."
+
+    stop music fadeout 3.0
 
     k "Stop it!"
 
@@ -249,6 +263,8 @@ label common2:
     $chat.addmessage(bar, "Get 'em, Kylie!")
 
     k "Stop fighting! This isn't how this is supposed to go!"
+
+    play music kylieFightsBack
 
     t 1q "Oh, uh, welcome back Kylie-"
 
@@ -262,13 +278,13 @@ label common2:
 
     ki "They're all looking at me now. I wonder, absently, if this will make for good TV."
 
-    k "First off, I like you both."
+    k "First off, I like you all."
 
     $chat.addmessage(fizz, "fair")
 
     k "Second, Cassandra, you look hot. Robin, you look amazing. Tania, you already {i}know{/i} you look good."
 
-    s "What an odd thing to say."
+    s 1b "What an odd thing to say."
 
     $chat.addmessage(unkn, "R/BG13:14-15")
 
@@ -276,7 +292,7 @@ label common2:
 
     ki "A little smile forms on Tania's lips. I don't know if that helped ease the tension, though."
 
-    k "I don't know how much of this is for the show, but I'd rather go home alone than see two people who mean so much to me tear each other apart."
+    k "I don't know how much of this behavior is for the show, but I'd rather go home alone than see two people who mean so much to me tear each other apart."
 
     $chat.addmessage(fizz, "Taking a stand!")
 
@@ -297,7 +313,7 @@ label common2:
 
     k "But you don't need to justify yourself or your scars to anyone! You don't have to be a badass all the time!"
 
-    s "Oh god, Beaver, I think we screwed up!"
+    s 1i "Oh god, Beaver, I think we screwed up!"
 
     show c 1b
 
@@ -307,11 +323,13 @@ label common2:
 
     $chat.addmessage(cake, "hindsight kids")
 
-    k "And you..."
+    pause 0.5
 
     k "You kissed me. In the dark. Just like that, like it was the easiest thing in the world for you. But I felt it!"
 
-    $chat.addmessage(bar, "this is the part where Kylie's theme music would fade in")
+    $chat.addmessage(bar, "this is the part where Kylie's theme music would fade in") 
+    
+    $chat.addmessage(fon,"That happened right before Tania welcomed Kylie back. ;)")
 
     show t 1q
     show c 1h
@@ -329,7 +347,7 @@ label common2:
     pause 0.1
     show r 1b
 
-    s "This is quite a diatribe."
+    s 1a "This is quite a diatribe."
 
     $chat.addmessage(fon, "Back. This part breaks my heart :(")
 
@@ -343,7 +361,7 @@ label common2:
 
     $chat.addmessage(fizz, "Yes you are, Kylie!")
 
-    r 1g "Papillon, I... I'm sorry."
+    r 1c "Papillon, I... I'm sorry."
 
     c 1g "< Me, too. I'm sorry, Kylie. >"
 
@@ -359,15 +377,17 @@ label common2:
 
     c 1q "< I'm sorry, Robin. I shouldn't have brought up your scars. >"
 
-    r 1k "You shouldn't have, no. And I should not have called you an alcoholic."
+    r 1k "You shouldn't have, no. And I should not have called you an addict."
 
     $chat.addmessage(bar, "Kiss and make up")
+
+    pause 0.5
 
     r 1b "Kylie. I have loved you for a quarter of my life. I could not let this chance slip past!"
 
     $chat.addmessage(elsa, "#hentai?")
 
-    k "And I've loved Cassandra almost as long!"
+    k "And I've idolized Cassandra almost as long!"
 
     $chat.addmessage(cake, "See Elsa? Now you're getting it")
 
@@ -398,7 +418,7 @@ label common2:
 
     $chat.addmessage(fon, "My heart! It's breaking!")
 
-    t 1r "Kylie, wait a second."
+    t 1i "Kylie, wait a second."
 
     k "I've already made up my mind!"
 
@@ -406,7 +426,9 @@ label common2:
 
     $chat.addmessage(cake, "Taaania! Taaania! WTF bro")
 
-    s "I haven't decided!"
+    s 1i "I haven't decided!"
+
+    stop music fadeout 3.0
 
     k "Cassandra. Robin."
 
@@ -422,7 +444,7 @@ label common2:
 
     k "I choose..."
 
-    # sound effect
+    # SFX
     scene bg bsod
 
     pause 2.0
@@ -437,24 +459,24 @@ label common2:
             [crab, "well, hell. "],
         ]
         chat.bulkMessage(newComments, "random")
-    s "Double U tee eff!"
+    s 1d "Double U tee eff!"
 
     s "Hang on. Hang on chat, hang right the hell on."
 
     scene bg black
     pause 1.0
 
-    s "Reloading."
+    s 1d "Reloading."
 
     scene bg stage with fade
     pause 0.8
     scene bg bsod
 
-    s "Guys. I'm so pissed right now."
+    s 1e "Guys. I'm so pissed right now."
 
     $chat.addmessage(elsa, "Reload!")
 
-    s "I have to reload my last save and it's... quite a ways back. Hang on."
+    s 1d"I have to reload my last save and it's... quite a ways back. Hang on."
 
     s "Almost all of my saves are missing."
 
@@ -462,7 +484,7 @@ label common2:
 
     scene bg black
 
-    s "We gotta go all the way back to the first spot. Right before... aw hell!"
+    s 1b "We gotta go all the way back to the first spot. Right before... aw hell!"
 
     $chat.addmessage(crab, "be some shit if it isn't")
 
@@ -470,9 +492,11 @@ label common2:
 
     s "If we get any further and the game is bugged, I'm gonna lose my mind."
 
+    s "But I'm gonna stop and recharge first."
+
     $chat.addmessage(elsa, "Sophie? You there?")
 
-    s "I'm restless. What am I doing."
+    s 1a "I'm restless. What am I doing."
 
     $chat.addmessage(fizz, "Didn't you just recharge like a minute ago?")
 
@@ -499,19 +523,20 @@ label common2:
         chat.bulkMessage(newComments, "random")
     pause
     $getHistory(7)
-    hide screen chatterbox
+    
 
     pause 1.0
 
     $showGui()
+    hide screen chatterbox
 
-    s "Alright guys. Let's reload this ish."
+    s 1a "Alright guys. Let's reload this ish."
 
     s "Guys?"
 
     pause 0.8
 
-    s "Alone. Again. If you care at all, I'll be back in thirty."
+    s 1b "Alone. Again. If you care at all, I'll be back in thirty."
 
     $hideGui()
 

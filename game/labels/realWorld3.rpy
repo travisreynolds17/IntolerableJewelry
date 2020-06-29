@@ -1,6 +1,5 @@
 label realWorld3:
 
-    show window
     
     "She was the host."
 
@@ -9,6 +8,9 @@ label realWorld3:
     "I met her there, sitting outside by the fountain, scribbling away on my sketch pad."
 
     "Hey. That's mine."
+
+    play music tension fadein 4.0
+
 
     "Where did you find that, I asked her, courageous."
 
@@ -197,32 +199,31 @@ label realWorld3:
 
     "I..."
 
-    hide window
-
-    nvl clear
+    
 
     menu:
         "I forgive you":
             s "I can't ask for it in return."
             s "But... I forgive you."
-            unkn "... dammit. Why are you making this so hard?"
-            unkn "Why couldn't you just die?"
+            un "... dammit. Why are you making this so hard?"
+            un "Why couldn't you just die?"
             # sfx knock
             pause 1.5
             # sfx door opening
             l "Oh god. Elsa, they're in here!"
-            $stringSever(cassBio)
+            $cassBio.stringSever()
 
         "I can't forgive you":
             s "I know you put something else in the needle."
             s "I'm not... stupid."
-            unkn "... why didn't you stop me?"
-            unkn "Why couldn't you just die?"
+            un "... why didn't you stop me?"
+            un "Why couldn't you just die?"
             # sfx knock
             pause 1.5
             s "... I deserve to die."
             # sfx door opening
             l "Oh god. Elsa, they're in here!"
 
+    stop music fadeout 5.0
     jump robinDate2
     return

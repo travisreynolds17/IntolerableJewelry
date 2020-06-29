@@ -1,6 +1,7 @@
 label realWorld2:
     # later, this art needs to be of a snowy fountain outside a town square. 
-    scene bg resta with fade
+    scene bg fountain with fade
+    play music toughDiscussion fadein 3.0
 
     "Somehow I find myself back outside the bar."
 
@@ -24,7 +25,7 @@ label realWorld2:
 
     pause 1.0
 
-    "She wears her hair in neat, tight cornrows. I wonder if she would wear it differently were her job less prone to getting in fights."
+    "She wears her hair short, neat. I wonder if she would wear it differently were her job less prone to getting in fights."
 
     show screen chatterbox
     pause 0.5
@@ -49,27 +50,38 @@ label realWorld2:
 
     "The long-legged woman sets her cushion on the fountain rim."
 
+    show image fountainShroud with dissolve
+
     "The ice in my drink clinks musically."
 
     "Her hair spills over her shoulders like papal mercy."
 
     "Is that snow?"
 
+    show image fountainLit with dissolve
+
     "She's undone her buttons, swaying in the light."
 
     "Tonight, a third. Such magical times. Snowflakes sizzle and die against her chest, leaving little glittering paths that snake between her breasts."
 
     "I remember my Vonnegut."
+    hide fountainShroud
+    hide fountainLit with dissolve
 
     "So it goes."
 
+    stop music fadeout 2.0
+    
     pause 0.5
 
+    show image fountainDrown2 with dissolve
     "Someone's drowning her."
 
     pause 0.5
 
     "When did that start?"
+
+    play music onTheNod fadein 2.5
 
     "Her long legs stream up from the fountain, kicking wildly, a climactic eruption of foam and spray billowing from the fountain."
 
@@ -81,7 +93,9 @@ label realWorld2:
 
     "The bouncer moves like murder."
 
-    "Her beautiful brown arms wrench around the neck, squeezing, a sultry, pythonic embrace."
+    "Her beautiful, chiseled arms wrench around the neck, squeezing, a sultry, pythonic embrace."
+
+    show image fountainDrown with dissolve
 
     "I smell iron."
 
@@ -91,9 +105,15 @@ label realWorld2:
 
     "Dragging she of the long legs from the fountain."
 
+    hide fountainDrown with dissolve
+
+    hide fountainDrown2 with dissolve
+
     "The warm shot tasted mature."
 
     "She must be freezing in the snow, drenched in fountain water."
+
+    "Where'd the moon go"
 
     "Beautiful in her pallor, jewelry gleaming."
 
@@ -104,6 +124,15 @@ label realWorld2:
     "The python relaxes. No one important lies jolting in the snow."
 
     "Long legs's mouth never erupts in steam and retch."
+
+    image redBlue:
+        fountainRed with dissolve
+        pause 1.0
+        fountainBlue with dissolve
+        pause 1.0
+        repeat
+
+    show redBlue
 
     "What are those lights?"
 
@@ -138,6 +167,8 @@ label realWorld2:
     "Even though it's my fault."
 
     menu:
+
+        "Hey."
         "I forgive you":
             "I want you to know."
             "Even if you never hear me."
@@ -147,14 +178,14 @@ label realWorld2:
             "If you hate me"
             "I accept that."
             "I hate me, too."
-            $stringSever(lichBio)
+            $lichBio.stringSever()
         
         "I can't forgive you":
             "You could have saved her."
             "You're strong enough."
             "You wanted to hurt me."
             "You're addicted to violence."
-            "You left Onyx to do try."
+            "You left Onyx to do it."
             "Onyx is little."
             "Legs is big."
             "Stupid."

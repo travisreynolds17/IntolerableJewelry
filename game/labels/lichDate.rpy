@@ -11,7 +11,7 @@ label lichDate:
 
     $showGui()
 
-    s "Hey guys, I'm back! Sorry about the delay, I had to cook up something."
+    s 1g "Hey guys, I'm back! Sorry about the delay, I had to cook up something."
 
     python:
         newComments = [
@@ -23,11 +23,11 @@ label lichDate:
         ]
         chat.bulkMessage(newComments, 0.7)
 
-    s "I'm good, Fontaine. I just got sad, that's all."
+    s 1b "I'm good, Fontaine. I just got sad, that's all."
 
     $chat.addmessage(fizz, "Hey Sophie. If you're not okay, don't force yourself.")
 
-    s "Promise, guys, I'm all kinds of good."
+    s 1j "Promise, guys, I'm all kinds of good."
 
     $chat.addmessage(elsa, "Better be. If you're not, Fizz and I are here for you.")
 
@@ -39,7 +39,7 @@ label lichDate:
 
     s "Thanks, Elsa and Fontaine. Fizz and Shub. Cake and Crab. Bong and Egg, too, wherever they got to."
 
-    s "It's stupid, but I'm really glad to have you guys."
+    s 1b "It's stupid, but I'm really glad to have you guys."
 
     $chat.addmessage(crab, "send nudes")
 
@@ -49,15 +49,17 @@ label lichDate:
 
     $chat.addmessage(crab, "damn right")
 
-    s "So let's get going again. I think we were about to go see what Lichelle's up to."
+    s 1a "So let's get going again. I think we were about to go see what Lichelle's up to."
 
-    s "I kind of hope her date isn't as heavy as Robin's and Cassandra's!"
+    s "I kind of hope her date isn't as heavy as Robin's and Cassandra's."
 
     $chat.addmessage(elsa, "Hope not! Could use some levity.")
 
     $chat.addmessage(shub, "what kinda drunk are you Sophie")
 
     scene bg dressing with dissolve
+
+    play music bedroom fadein 3.0
 
     pause 1.0
 
@@ -69,7 +71,7 @@ label lichDate:
 
     ki "All I can think about is Robin, now."
 
-    s "She's got her claws in me! Um, Shub, I'm a crier. Not ashamed."
+    s 1j "She's got her claws in me! Um, Shub, I'm a crier. Not ashamed."
 
     $chat.addmessage(bar, "She might have actual claws.")
 
@@ -81,7 +83,7 @@ label lichDate:
 
     $chat.addmessage(elsa, "Ooh, symmetry.")
 
-    # knock knock
+    # SFX knock knock
 
     pause 1.0
 
@@ -91,9 +93,11 @@ label lichDate:
 
     $chat.addmessage(fizz, "lol dork")
 
-    # door open
+    # SFX door open
 
-    t 1k "Rise and shine! We gotta go go go!"
+    show t 1k at f12
+
+    t "Rise and shine! We gotta go go go!"
 
     k "Hey privacy!"
 
@@ -133,6 +137,8 @@ label lichDate:
 
     ki "Tania flustered is adorable."
 
+    stop music fadeout 3.0
+
     # Lichelle will no show at the park. Talk with Tania instead.
 
     scene bg black with fade
@@ -143,11 +149,13 @@ label lichDate:
 
     $chat.addmessage(fizz, "Oh. That's not what I expected.")
 
-    s "Oh, plot twist!"
+    s 1h "Oh, plot twist!"
 
     pause 1.0
 
     scene bg near stage with fade
+
+    play music sadCass fadein 3.0
 
     show t 1e at f12
 
@@ -195,7 +203,9 @@ label lichDate:
 
     pause 0.3
 
-    t 1g "I don't know what."
+    t 1f "I don't know what."
+
+    pause 0.5
 
     # choice - who to talk to. Moot, but affects points.
 
@@ -221,13 +231,18 @@ label lichDate:
 
 label taniaChoice:
     while temp == False:
-        scene bg hallway with fade
-        show t 1s
+
+        scene bg near stage
+        show t 1f at i12
+
+        $renpy.notify("Heart me, baby.")
+
+        s 1a  "..."
 
         if taniaEnd == 1:
-            s "Right. Let's try this again."
+            s 1b "Right. Let's try this again."
         elif taniaEnd >= 2:
-            s "I don't think we're getting anywhere if we keep trying to get with Tania here."
+            s 1g "I don't think we're getting anywhere if we keep trying to get with Tania here."
         else:
             k "I should ask Tania..."
 
@@ -239,7 +254,7 @@ label taniaChoice:
                 t 1m "Let me make a few calls."
                 t "I'm glad you feel that way, but we have to stick to the show format some, so what if I got Robin and Cass here for a quick round-up episode first?"
                 k "I don't see why not."
-                $loveCass += 1
+                $cassBio.loveUp()
                 $temp = True
                 jump common2
 
@@ -252,19 +267,22 @@ label taniaChoice:
                 t 2o "I'll make a call. I dunno though, she might want more time to set up something elaborate."
                 t "Meanwhile, I'll try to get the girls together for a quick round-up. Need that footage."
                 $temp = True
-                $loveRobin += 1
+                $robinBio.loveUp()
                 jump common2
 
-            "Tania, go out with me?" if loveTania > 0:
+            "Tania, go out with me?" if taniaBio.love > 0:
+                stop music fadeout 2.0
                 if taniaEnd == 0:
-                    s "You know what? She's been a trooper, and she could use a night out."
+                    s 1a "You know what? She's been a trooper, and she could use a night out."
                 ki "Now or never."
                 k "I want to have a date with you, Tania."
                 pause 1.0
+                play music msTania fadein 3.0
+                
                 t 1b "That's twice you've asked for me."
                 ki "For a moment, the energy in her expression falters."
                 t 1c "Why?"
-                $renpy.notify("Tania has no time for frivolity. Take her seriously, or else.")
+                $renpy.notify("Tania has no time for frivolity. Take me seriously, or else.")
 
                 menu:
                     "Because since I laid eyes on you, I wanted you." if taniaEnd <= 2:
@@ -281,7 +299,7 @@ label taniaChoice:
                         k "Because Robin and Cassandra seem like they're projecting a persona. You seem..."
                         k "Genuine."
                         if taniaEnd == False:
-                            $loveTania += 1
+                            $taniaBio.loveUp()
                         pause 1.0
                         show t 1c at f12
 
@@ -297,13 +315,13 @@ label taniaChoice:
                         show t 1b
                         pause 1.0
                         show t 1g
-                        pause 0.5
+                        pause 1.5
 
                         show t 1a
 
                         pause 0.5
 
-                        s "I don't know what happened just now, but I feel like a bad person."
+                        s 1b "I don't know what happened just now, but I feel like a bad person."
 
                         pause 0.5
 
@@ -315,5 +333,5 @@ label taniaChoice:
                         t 1b "I'd be... I'd be more hurt than I'd tell you, if that was all you thought of me."
 
                         ki "Great job, self."
-                        s "I'm an asshole."
+                        s 1b "I'm an asshole."
     # END CHOICE - No matter what, we should have jumped to anew label at this point
