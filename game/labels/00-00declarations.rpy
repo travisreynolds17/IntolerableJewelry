@@ -15,6 +15,7 @@ label declarations:
         colorTania = "#a3d1b9"
         colorEntity = "#c5859d"
         colorKylie = "#ffa4d5"
+        colorHover = "#816161"
 
         fontSophie = "fonts/Roboto-Black.ttf"
         fontCass = "fonts/Lobster-Regular.ttf"
@@ -150,7 +151,7 @@ label declarations:
     # skin tone #d1a3a4
     # hair tone / name tone #a3d1b9
 
-    define e = Character("Elsa", image="t", who_color="#a3d1b9", who_font="fonts/Courgette-Regular.ttf")
+    define e = Character("Elsa", image="e", who_color="#a3d1b9", who_font="fonts/Courgette-Regular.ttf")
 
     define c = Character("Cassandra", image="c", who_color="#89cff0", who_font=fontCass)
     # skin tone #a1665e	rgb(161, 102, 94)
@@ -189,8 +190,18 @@ label declarations:
     define splashEKGFull = Image("img/splashEKG.png")
     define splashEKGFlat = Image("img/splashEKGFlat.png")
     define splashSophieOnDesk = Image("img/splashSophieOnDesk.png")
+    define askTaniaBack2 = Image("img/backAskTania2.png")
+    define splashDrown = Image("img/drownedRobin.png")
+    define splashDrown2 = Image("img/drownedRobin2.png")
 
     define glitchGui = Image("img/glitchGUI.png")
+
+    # to hold title of ending
+    default endingTitle = ""
+    define endings = ["Birth of a Neurochemical God", "Sobredosis", "Damned in Elle", "Homunculus Post Mortem", "Papillon", "My Soul Is Yours", "Dr. L'eau, Amateur Surgeon", "Free from Myself"]
+
+
+    
 
     # --------------------------------------------------------------------------------------------
 
@@ -424,6 +435,27 @@ label declarations:
             for i in arrayList:
                 for k in range(0, max):
                     i.append(value)
+
+        # function to pause chat history/ask tania buttons. Sometimes they don't need to work.
+        guiPaused = False
+
+        def pauseGui():
+            global guiPaused
+            guiPaused = True
+        def unpauseGui():
+            global guiPaused
+            guiPaused = False
+
+        #endingTestFunction to set up correct endings for beta testing
+        def endingTest():
+            for i in allBios:
+                i.stringSever()
+                i.severView()
+                i.fullySever()
+            taniaBio.setLove(5)
+            fontBio.stringSever()
+            fontBio.severView()
+            fontBio.fullySever()
 
         # enable NVL mode for monologue
 

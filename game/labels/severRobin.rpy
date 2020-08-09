@@ -3,6 +3,10 @@ label severRobin:
 
     $hideGui()
     $hideSeverancePanel()
+    stop music fadeout 6.0
+    scene bg black with fade
+    show image fountainShroud with dissolve
+    play music robin fadein 10.0
 
     pause 1.0
 
@@ -31,14 +35,6 @@ label severRobin:
     r "Have sex."
 
     t "I gotcha, hon."
-
-    r "Make the beast with two backs?"
-
-    t "Huh?"
-
-    r "It is from Othello, darling."
-
-    t "... so anyway."
 
     r "You are so easily flustered."
 
@@ -98,7 +94,7 @@ label severRobin:
 
     rr "I traveled the world to find her again."
 
-    rr "What if I had refused? With my own eyes I saw her cast David aside for asking her put her jewelry aside."
+    rr "What if I had refused? With my own eyes I saw her cast David aside for asking her to put her jewelry aside."
 
     t "Can I tell you something?"
 
@@ -116,7 +112,7 @@ label severRobin:
 
     t "I'm not here to attack you."
 
-    rr "I would not defend if you did."
+    rr "I wouldn't defend if you did."
 
     rr "I should not have abandoned you."
 
@@ -140,7 +136,7 @@ label severRobin:
 
     rr "The words she used were different."
 
-    rr "\"If you aren't there the stars look wrong.\""
+    rr "\"The stars look wrong when you're not there.\""
 
     rr "She always wanted to sketch me."
 
@@ -171,6 +167,9 @@ label severRobin:
     rr "I require her."
 
     rr "And so, when she asked me to partake in her vice, god herself could not have prevented me from doing so."
+    pause 0.5
+
+    show image fountainLit with dissolve
 
     rr "That night, I sat as I always did. I learned early that the stone rim of that deplorable fountain would freeze me to the core."
 
@@ -198,6 +197,8 @@ label severRobin:
 
     t "You passed out."
 
+    show image fountainDrown with dissolve
+
     rr "I was aware of the water around me. Freezing, freezing, freezing."
 
     t "Do you need a moment?"
@@ -208,7 +209,7 @@ label severRobin:
 
     rr "When I hit the water my body shocked to life, and I breathed ice into my lungs. Just like that."
 
-    rr "The pain of this is, it is difficult to describe."
+    rr "The pain of this is... it is difficult to describe."
 
     rr "But my limbs would not respond."
 
@@ -246,9 +247,25 @@ label severRobin:
 
     t "... neat."
 
-    rr "I was happy, dear Elsa. I saw her face, even as death embraced me."
+    show image splashDrown2 with dissolve
+
+    pause 1.0
+
+    rr "..."
+
+    rr "... is that me...?"
+
+    t "... yeah."
+
+    rr "My hair... I forgot it was that color."
+
+    t "..."
+
+    rr "I was happy, dear Elsa. I saw my Sophie's face, even as death embraced me."
 
     rr "But then, it was gone. Someone else had me."
+
+    
 
     t "That was Cassandra."
 
@@ -272,6 +289,15 @@ label severRobin:
 
     rr "Ah. How I adored beautiful Elle! Such a charming woman."
 
+    hide image splashDrown2 with dissolve
+    image redBlue:
+        fountainRed with dissolve
+        pause 1.0
+        fountainBlue with dissolve
+        pause 1.0
+        repeat
+
+    show redBlue with dissolve
     t "She had a bit of a crush on you. Did you know?"
 
     rr "I did. We had the most fascinating conversations. She would go on about training camp nutrition. It sounded dreadful."
@@ -305,7 +331,7 @@ label severRobin:
     scene bg black with fade
 
     pause 1.0
-
+    stop music  fadeout 5.0
     rr "Tania."
 
     t "Yeah?"
@@ -317,9 +343,10 @@ label severRobin:
     t "... I promise."
 
 
-    $robinBio.severViewed()
+    $robinBio.severView()
 
     scene bg dressing with fade
+    play music bedroom fadein 1.0
 
     pause 1.0
     $showGui()
@@ -334,4 +361,4 @@ label severRobin:
 
     pause 0.5
 
-    return
+    

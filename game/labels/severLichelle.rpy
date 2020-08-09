@@ -3,6 +3,9 @@ label severLichelle:
 
     $hideGui()
     $hideSeverancePanel()
+    stop music fadeout 6.0
+    scene bg black with fade
+    show image fountainShroud with dissolve
 
     pause 1.0
 
@@ -17,6 +20,8 @@ label severLichelle:
     l "I wasn't thinking."
 
     l "I saw her with her hands in the water and someone splashing. I saw that. It was dark."
+
+    play music introspection
 
     t "Why didn't you stop?"
 
@@ -42,7 +47,7 @@ label severLichelle:
 
     pause 0.5
 
-    l "That's just... that's a person. And now she's just a... just a fucking pair of pumps."
+    l "That's just... that's a person. And now she's just a... just a fucking pair of ugly boots."
 
     l "... she must've been freezing her ass off even before she..."
 
@@ -96,9 +101,10 @@ label severLichelle:
 
     l "... right."
 
-    t "So? We know what happened on the 13th."
+    t "We know what happened on the 13th."
 
     t "Tell us what happened a month later."
+    pause 0.1
 
     l "... so Cassie came back to work right away."
 
@@ -202,9 +208,9 @@ label severLichelle:
 
     l "So halfway through the set Cassie got up and nodded to Sophie. Then they went to the bathroom together."
 
-    l "So... I asked someone to watch the door."
+    l "So... I asked someone to watch the front door."
 
-    l "Maybe they were going in there to get some.I was pretty sure Cassie wasn't into women but I didn't know her all that well."
+    l "Maybe they were going in there to mess around. I was pretty sure Cassie wasn't into women but I didn't know her all that well."
 
     l "She used to stare at Louisa, though."
 
@@ -228,7 +234,7 @@ label severLichelle:
 
     l "I know I must've been there, or called the ambulance, or something."
 
-    l "I don't remember anything about what I saw, except Sophie laying on Cassie's lap turning yellow."
+    l "I don't remember anything about what I saw, except Sophie laying on Cassie's lap, turning yellow."
 
     t "You wouldn't, here."
 
@@ -237,6 +243,7 @@ label severLichelle:
     t "Nevermind."
     
     t "I want you to know they both would've died in there without you paying attention."
+    pause 0.1
 
     t "I'm pretty sure Cassandra tampered with the doses."
 
@@ -276,6 +283,8 @@ label severLichelle:
 
     l "... huh."
 
+    stop music fadeout 9.0
+
     t "One question."
 
     l "Hm."
@@ -288,15 +297,16 @@ label severLichelle:
 
     pause 0.5
 
-    $lichBio.severViewed()
+    $lichBio.severView()
 
     scene bg dressing with fade
 
     pause 1.0
     $showGui()
+    play music bedroom fadein 1.0
 
     k "... was I... dreaming? I can't remember..."
 
     pause 0.5
 
-    return
+    

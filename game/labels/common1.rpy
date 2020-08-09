@@ -34,7 +34,7 @@ label common1:
     s "And you can super tell it's still in beta. Let's get started with One Week Waifu!"
 
     #sfx: game button confirm sound
-    stop music fadeout 0.5
+    stop music fadeout 2.5
 
     scene bg black with longFade
 
@@ -79,15 +79,15 @@ label common1:
 
     s 1m "Elsa, it's really just a dating sim. I kind of needed something to wind down."
 
-    s "How am I doing? I'm doing fine, I guess. I haven't had a seizure since the last one."
+    s "How am I doing? I'm doing fine, I guess. I still have my card, too."
 
     $chat.addmessage(bong, "u love me lol")
 
-    s 1q "I know, I know, I know. I'm funny."
+    s 1q "Yup, on the straight and narrow!"
 
     $chat.addmessage(bar, "really glad your OK. you gonna try to date again?")
 
-    s 1a "Seriously, I've never been better. I'm independent again, no seizures, I can stream all I want. And I can hang out with you guys!"
+    s 1a "Seriously, I've never been better. I'm independent again, no jewelry, I can stream all I want. And I can hang out with you guys!"
 
     $chat.addmessage(fon, "No spoilers, I can't wait to see if you can make it ;)")
 
@@ -112,6 +112,8 @@ label common1:
 
     $renpy.notify("Chat?")
 
+    pause 1.0
+
     ki "I'm nervous. Of course I am. I've never been on a TV show before."
 
     ki "There's a lot going on, but I found a hallway to hide away from the production assistants and makeup team for a minute."
@@ -120,7 +122,9 @@ label common1:
 
     t "Hi Kylie!"
 
-    s 1t "Ooh, I like her outfit."
+    s 1t "Ooh, I like her outfit." 
+    
+    $chat.addmessage(bong,"hips girl")
 
     ki "... it was only a matter of time before Tania found me."
 
@@ -130,7 +134,9 @@ label common1:
 
     t 1q "I'm here for you. Anything you need, if it takes less than two minutes, I've got you covered."
 
-    ki "I'm too nervous to make a sex joke."
+    ki "I'm too nervous to make a sex joke." 
+    
+    $chat.addmessage(fizz,"That's never happened... yes.")
 
     ki "That's never happened before."
 
@@ -234,11 +240,13 @@ label common1:
 
     $chat.addmessage(bong, "probly just a casting couch situation neway.")
 
-    play music cassPiano fadein 1.0
+    
     pause 0.5
     show c 1p at fl12
 
     t "First off, you know her from the number one single on Quillboard's top 100 rock charts, 'China White', put your hands together for Cassandra Sanna!"
+
+    play music cassPiano fadein 3.0
 
     $chat.addmessage(elsa, "Quillboard. Also, bong, grow tf up.")
 
@@ -289,6 +297,8 @@ label common1:
     pause 1.0
 
     t "May I present to you, everyone, the owner, proprieter and face of Ganymead Performing Arts, miss Robin Mia Lupei Godrey!"
+
+    play music robin
 
     $chat.addmessage(cake, "She looks like my sister")
 
@@ -373,18 +383,22 @@ label common1:
 
     show r 1a
 
-    t "I see. Well, one thing that isn't a secret is our last Suitor's black belt. Everyone, give a warm welcome to MMA flyweight Lichelle 'Elegy' Carpenter!"
+    stop music fadeout 2.0
+
+    t "I see. Well, one thing that isn't a secret is our last Suitor's black belt. Everyone, give a warm welcome to MMA flyweight Lichelle Carpenter!"
 
     hide t at f13
 
     pause 1.0
 
-    show l 1o at f13
+    show l 1o at fr13
     pause 1.0
 
     $chat.addmessage(bong, "ooh chocolate")
 
     l "Hey crew! How are good god you're tall."
+
+    play music lichelle
 
     $chat.addmessage(elsa, "God you're gross @OberBong.")
     $chat.addmessage(fon, "Aw, Lichelle is so great!")
@@ -425,10 +439,12 @@ label common1:
     show l at justFade
     show c at justFade 
     show r at justFade 
-
+    stop music fadeout 2.0
     pause 1.0
 
     t "Well, we're happy to have you here on One-Week Waifu. Now, before we meet our eligible bachelorette, I'd like each of you to let us know what being here means to you. And be honest!"
+
+    play music cheerfulGuitar fadein 0.5
 
     hide c
     hide l
@@ -486,7 +502,7 @@ label common1:
 
     t "Everyone welcome this season's single lady! Come on out, Kylie!"
 
-    hide r at fl11
+    hide r at f12
     
     hide t at f13
     pause 1.4
@@ -544,7 +560,7 @@ label common1:
     $chat.addmessage(egg, "He's messing with us. Let's just enjoy Sophie's stream.")
 
     hide t at f13
-    pause 0.4
+    pause 1.4
 
     show r 1s at fl11
     pause 0.3
@@ -1015,7 +1031,7 @@ label common1:
 
     ki "I should focus on getting ready, though. I wonder what Cassandra has in mind?"
 
-    stop music fadeout 1.0
+    stop music fadeout 3.0
 
     scene bg black with dissolve
 
@@ -1046,7 +1062,7 @@ label common1:
 
     s "Tweeter, you're right. It's like... I feel like it'll be hard to really decide who we like if everyone's good. We only have seven days!"
 
-    s 1d "Oh my god. Seven days to find love. Or hit that. Right Fizzy?"
+    s 1d "Oh my god. Seven days to find love. Or hit that. Right Fizz?"
 
     $chat.addmessage(fizz, "I'm a lover, not a hitter!")
     $chat.addmessage(crab, "or a quitter!")
@@ -1101,7 +1117,7 @@ label common1:
 
     scene bg dressing with dissolve
 
-    play music lichelle fadein 1.0
+    play music bedroom fadein 1.0
 
     ki "The dressing room is clean and simple. I'd like to stretch out for a nap, actually; the nerves have taken it out of me."
 

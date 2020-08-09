@@ -5,7 +5,7 @@ label endingTron5000:
     #routes based on if entity is severed, routed according to who else is severed.
 
     # show oblivion
-
+    play music fountainWater
     show f 1a at f12
     o "Ladies."
 
@@ -13,11 +13,10 @@ label endingTron5000:
 
     l "Bitch."
 
-    show l 1m at fr22
 
     "Tania snorts, covers her mouth to hide her laughter."
 
-    show c 1k at fr12 
+    show c 1k at fl11 
     
     $chat.addmessage(elsa,"There's just no stopping the narrator.")
 
@@ -33,8 +32,7 @@ label endingTron5000:
 
     o "Are you ready? To go?"
 
-    #disable severance
-    $severToggle()
+    
 
     menu:
         "Resist":
@@ -42,9 +40,12 @@ label endingTron5000:
             show image splashEKGFull at summonEKG
             pause 0.3
             k "Aagghkk...!"
+            show f 1h at mt1
+            show c 1i at mt2
             o 1h "HEY what? What's that line?"
             show l 1h
-            show t 1i
+            
+            show t 1i at f22
             "Kylie hadn't made it to her feet before a flare of pain seized her chest, leaving her to stumble against Tania and Lichelle."
             pause 0.2
             t "Fontaine! What are you doing to her?"
@@ -52,14 +53,14 @@ label endingTron5000:
             "She seems genuinely offended."
             k "... someone..."
             hide image splashEKGFull at summonEKG
+            stop music fadeout 3.0
             k "i t  h u r t s"
             show image splashEKGFull at summonEKG
             pause 0.3
         "Give up":
             jump endingGaveUp
     
-    #enable severance
-    $severToggle()
+    pause 0.1 
     o "We know what to do, then."
 
     c 1d "And what's that? Regale us."
@@ -70,9 +71,11 @@ label endingTron5000:
 
     o 1a "Sophie."
 
-    l 1r "Huh?"
+    l 2r "Huh?"
 
     pause 0.5
+
+    play music onTheNod
 
     o 1n "You're still there, aren't you?"
 
@@ -86,7 +89,7 @@ label endingTron5000:
 
     o "Sophie. Cassandra. Kylie. Lichelle. Louisa."
 
-    o 1m "WE are a-a-a-s much an NPC in this as any of you!" 
+    o 1i "WE are a-a-a-s much an NPC in this as any of you!" 
     
     $chat.addmessage(sophie,"Louisa...") 
     
@@ -96,8 +99,8 @@ label endingTron5000:
 
     o 1b "And you called us jewelry. Baubles. pppppointless accessories!"
 
-    #disable severance
-    $severToggle()
+    #here is where endings are determined. MAKE SURE TO REMOVE THIS FUNCTION
+    $endingTest()
 
     "... storage.Tania.severed: [taniaBio.severed]"
 
@@ -160,12 +163,14 @@ label endingTron5000:
 
     
     else:
-
+        stop music fadeout 1.0
         pause 1.0
 
         o 1c "W-w-w-w-w-w-w-w-w-what?"
 
         o "Kylie did you do this to us?"
+
+        play music kylieFightsBack
 
         k "What happened to we?"
 
@@ -213,6 +218,7 @@ label endingTron5000:
                 o "...ccould n-n-nnever hhate--"
                 o 1m "...l-lllove... so so so so m-m-m-mmuch"
                 k "..."
+                show f at d12
                 #splash screen of kylie hugging entity
 
             "I'll never, ever forgive you.":
@@ -225,6 +231,7 @@ label endingTron5000:
                 o "...ccould n-n-nnever hhate--"
                 o 1m "...l-lllove... so so so so m-m-m-mmuch"
                 k "..."
+                show f at d12
                 # splash screen of kylie turning from entity
 
         # effect suggesting collapse of game
@@ -245,7 +252,7 @@ label endingTron5000:
         show image splashEKGFull at summonEKG
         pause 0.3
 
-        s "What..."
+        s 1v "What..."
 
         ki "What's that... that smell...?"
 
@@ -254,11 +261,11 @@ label endingTron5000:
         show image splashEKGFull at summonEKG
         pause 0.3
 
-        show k 1h 
+        show k 1h at f12
 
         s "... Kylie...?"
 
-        k "Sophie? Is that you?"
+        k 1i "Sophie? Is that you?"
 
         s "... is this real...?"
 
@@ -269,9 +276,13 @@ label endingTron5000:
 
         k 1f "Nnngngghh!"
 
+        hide k at f12
+
         s "KYLIE!"
 
-        k 1q "I don't have time. I'm, I'm coming apart--"
+        show k 1v at f12
+
+        k "I don't have time. I'm, I'm coming apart--"
 
         hide image splashEKGFull at summonEKG
 
@@ -285,11 +296,12 @@ label endingTron5000:
         show image splashEKGFull at summonEKG
         pause 0.3
 
-        k 1f "Nnngh! I, I, I think we w-would've had..."
+        k "Nnngh! I, I, I think we w-would've had..."
 
         $hideGui()
 
-        k 1n "a lot... a lot in common!"
+        k "a lot... a lot in common!"
+        stop music fadeout 3.0
 
         hide image splashEKGFull at summonEKG
 
@@ -329,7 +341,7 @@ label endingTron5000:
 
         scene bg resta with fade
 
-    
+        play music jazzNoodle
 
         d "Sophie? Hey, you okay?"
 
@@ -347,7 +359,7 @@ label endingTron5000:
 
         "He does. It's probably why he agreed to meet me here at all."
 
-        d 1m "I gotta tell you, it surprised me when you called me up and asked to meet here."
+        d 1q "I gotta tell you, it surprised me when you called me up and asked to meet here."
         
         d "Of all places."
 
@@ -365,7 +377,7 @@ label endingTron5000:
 
         pause 0.5
 
-        d 1r "I guess? I don't see why not."
+        d 1g "I guess? I don't see why not."
 
         s "But how do you know?"
 
@@ -419,7 +431,7 @@ label endingTron5000:
 
         s "I just don't know what's real anymore!"
 
-        d 1m "I'm real."
+        d 1a "I'm real."
 
         "He covers my hand with his own, then."
 
@@ -434,7 +446,7 @@ label endingTron5000:
 
         pause 0.1
 
-        d 1a "What girls?"
+        d 1g "What girls?"
         hide glitchGui
 
         show image glitchGui at frameGlitch
@@ -456,7 +468,7 @@ label endingTron5000:
 
         pause 0.1
 
-        d 1m "Someday you will."
+        d 1a "Someday you will."
 
         pause 0.1
 
@@ -519,7 +531,7 @@ label endingTron5000:
 
         s "Elle. You've met her, she used to be the door guard."
 
-        d "Oh, Elle. Right. Biceps. What's she want?"
+        d 1a "Oh, Elle. Right. Biceps. What's she want?"
 
         s "To talk."
 
@@ -529,7 +541,7 @@ label endingTron5000:
 
         l "Sophie. You look rough, girl."
 
-        show d 1m
+        show d 1q
 
         "David swivels a bit in his chair and provides an easy smile to her."
 
@@ -539,7 +551,7 @@ label endingTron5000:
 
         s "I feel okay, though."
 
-        l "I don't believe it. David, my guy, do you mind giving me and gamer girl a minute?"
+        l 1j "I don't believe it. David, my guy, do you mind giving me and gamer girl a minute?"
 
         "He already was on his feet, brushing off his seat for her."
 
@@ -553,13 +565,13 @@ label endingTron5000:
 
         l "Yeah, it is, but I'm Elle to you, bitch."
 
-        d 1n "Yes ma'am. You two have fun, I'm gonna go admire the restroom."
+        d 1a "Yes ma'am. You two have fun, I'm gonna go admire the restroom."
 
-        hide d at fl11
+        hide d 1a at f11
 
         "He's chuckling as he walks off, effervescent, easy. How could I have misjudged him so completely?"
 
-        l 1a "Babe. Based on how you're looking right now, I need you to be honest."
+        l 1d "Babe. Based on how you're looking right now, I need you to be honest."
 
         s "I'm not using."
 
@@ -567,11 +579,11 @@ label endingTron5000:
 
         s "On god."
 
-        "She pauses, but her smile remains."
+        "She pauses, but her smile returns."
 
         l 1a "I found out something today."
 
-        "She has my attention. I'm never sure whether to answer someone who opens a conversation with a statement like that, so I simply wait."
+        "She has my attention. I'm never sure whether to answer someone who opens a conversation with a statement like that, so I wait."
 
         if severCass == True:
             l "Cassandra woke up."
@@ -612,9 +624,10 @@ label endingTron5000:
 
             pause 0.1
 
-            l "Tania's been asking about you, too."
+            l "Elsa's been asking about you, too."
 
         else:
+            stop music fadeout 2.0
 
             l 1b "Cassandra won't..."
 
@@ -625,6 +638,8 @@ label endingTron5000:
             "I knew it would be like this."
 
             l "... she's gone, babe."
+
+            play music cassPiano
 
             s "When? I heard she was just recovering."
 
@@ -711,7 +726,7 @@ label endingTron5000:
 
         pause 0.1 
 
-        l 1a "Tania's been bugging me to have you call."
+        l 1a "Elsa's been bugging me to have you call."
         
         "... I haven't returned any of her messages."
 
@@ -735,7 +750,7 @@ label endingTron5000:
         
         l "I oughtta smack your damn mouth every day for the rest of your natural life for what you did."
 
-        l "Giving her that trash."
+        l 1e "Giving her that trash."
 
         "Her tone remains friendly, even. I don't protest. She's not wrong."
 
@@ -743,9 +758,10 @@ label endingTron5000:
 
         l 1b "But I won't."
 
-        l "You're not evil. You're sick. Only damn way to do right by Louisa and Cassandra is to get your self cleaned up and do something with your life."
+        l "You're not evil. You're sick. Only damn way to do right by Louisa and Cassandra is to get cleaned up and do something with your life."
 
         l 1j "I've been talking to David for a while, too. I'm making it my personal mission to be up your ass every single day until I'm satisfied you're gonna be all right."
+        pause 0.2
 
         s "... promise?"
 
@@ -795,15 +811,6 @@ label endingTron5000:
 
         
         call endingTania
-        # as long as Tania was severed, we return here after her ending.
-
-        call endingCass
-       
-        call endingLich
-
-        call endingRobin
-
-        call endingsBad 
-        # checks for all non-severed or bad endings. 
+   
         
         return

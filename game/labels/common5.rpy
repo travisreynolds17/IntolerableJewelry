@@ -2,7 +2,7 @@ label common5:
     # common ending. Ends with jump to ENDING-TRON 5000 which routes us to appropriate endings.
 
     # note there is narration here. There has to be. Actually probably need to add it earlier. It's just quote narration.
-
+    stop music fadeout 3.0
     pause 1.0
 
     pause(0.5)
@@ -10,10 +10,21 @@ label common5:
     scene bg load-god with fade
     pause 1.0
     pause
-    scene bg dressing 
+    scene bg dressing
     pause(0.5)
     $showGui()
     pause 0.5
+
+    "Huh? My... the bedroom?"
+
+    play music bedroom fadein 3.0
+
+    python:
+        renpy.notify("The last of my strength... I have sever them. Please—")
+        cassBio.stringSever()
+        lichBio.stringSever()
+        robinBio.stringSever()
+        taniaBio.stringSever()
 
 
     show t 1b at f11
@@ -22,12 +33,10 @@ label common5:
     show c 1b at f12
     pause 0.3
 
-    show l 1b at f12
+    show l 1b at f13
     pause 0.3
 
     "The restraints clink and tumble away from the their skin."
-
-    "How did we get... we're in my dressing room?"
 
     #enable severance
     $severToggle()
@@ -82,7 +91,7 @@ label common5:
     
     $chat.addmessage(fon,"She's so great. :)")
 
-    t 1a "This is what happens when you play this game. Robin dies. You lose sight of yourself." 
+    t 1a "This is what happens when Sophie uses. Robin dies. You lose sight of yourself." 
     
     $chat.addmessage(elsa,"Hey Fontaine, you're cheating! You're not supposed to be listening right now.")
 
@@ -238,7 +247,7 @@ label common5:
 
     k "What happens when the game ends?" 
     
-    $chat.addmessage(beav,"much better")
+    $chat.addmessage(beav,"Did that work?")
 
     t 1a "The credits roll, darling."
 
@@ -276,16 +285,27 @@ label common5:
 
     "Perhaps there was never air to begin with."  
     
-    $chat.addmessage(fon,"Really, now? I must've gotten the method wrong.")
+    $chat.addmessage(fon,"Really, now? I could try again.") 
+    
+    $chat.addmessage(fon,"Really, I only have control of code if Sophie's hypersensory delusion provides it.")
     
     $renpy.notify("character.narrator.setValue('')")
 
-    "..."
+    "..." 
+    
+    $chat.addmessage(fon,"Oops, spoilers ;)")
+
+    pause 1.0
 
     $getHistory(16)
 
+    pause 1.0
+
+
+
     menu:
         "Resist":
+            stop music fadeout 3.0
             $resistance +=1
             show image splashEKGFull at summonEKG
             pause 0.3

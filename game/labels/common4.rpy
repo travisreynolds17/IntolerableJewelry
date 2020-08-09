@@ -5,6 +5,9 @@ label common4:
 
     scene bg dressing with fade
 
+    $showGui()
+    pause 0.5
+
     ki "I dreamed of the dark, and I dreamed of a fever-cold, fleeting touch."
 
     #enable severance
@@ -58,6 +61,8 @@ label common4:
 
     $chat.addmessage(fon, "Private :)")
 
+    $severToggle()
+
     scene bg black with fade
 
     ki "The door opens heavily."
@@ -77,12 +82,10 @@ label common4:
 
     $chat.addmessage(elsa, "You're toying with me.")
 
-    s "Guys. Game."
+    s 1f "Guys. Game."
 
     $chat.addmessage(fon, "No. Private chat. ;)")
 
-    #disable severance
-    $severToggle()
 
     s "Cassandra? You left your choker around my arm."
 
@@ -147,7 +150,7 @@ label common4:
         xpos 0.5 ypos 0.5 alpha 0.0
         easein 2.0 alpha 1.0
     pause
-    scene bg THIS IS ALL YOUR FAULT
+    scene bg black
     pause(0.5)
     $showGui()
     pause 0.5
@@ -160,7 +163,10 @@ label common4:
 
     # suddenly image of drowned Robin on other side of her door.
 
-    s "OH! Oh my god!"
+    play music onTheNod
+    show image splashDrown with dissolve
+
+    s 1c "OH! Oh my god!"
 
     show l 1m at fl11
 
@@ -184,13 +190,13 @@ label common4:
 
     s "I don't wanna play anymore"
 
-    show l 1e at right
+    show l 1e at f13
 
     l "KYLIE!"
 
     python:
         temp = reverseString(
-            "Silky, silky FontaineeniatnoF tenderly caressing me, every curve, every valley, my skin strobes, my taste buds glimmer, alive with her capacitors, deep within, deep within, freezing drowning dying peace")
+            "\nSilky, silky FontaineeniatnoF tenderly caressing me, every curve, every valley, my skin strobes, my taste buds glimmer, alive with her capacitors, deep within, deep within, freezing drowning dying peace")
 
         chat.addLinearMessage(elsa, temp, 0, 3)
 
@@ -275,6 +281,7 @@ label common4:
 
     l 1c "Kylie-"
 
+    stop music fadeout 0.4
     play sound "sounds/Lights Out.mp3"
     scene bg black
 
@@ -284,7 +291,7 @@ label common4:
 
     pause 2.0
 
-    s "... guys."
+    s 1f "... guys."
 
     s "I didn't know it would go this way."
 
@@ -306,7 +313,30 @@ label common4:
 
     $chat.addmessage(sophie, "and I can't do this anymore")
 
-    s "Bye!"
+    s "... I can't even get up from my chair."
+
+    s 1i "I can't look away-"
+
+    pause 1.0
+
+    s 1c "Something's..."
+
+    pause 1.0
+
+    #SFX electricity?
+
+    s 1l "AAAAAAAAAAAAAAAAAAAgGggggghhghhggggaaaaaaaa!!!!"
+
+    pause 0.1
+
+    s 1s "..."
+
+    pause 0.5
+
+    s 1l "Nnnnnnnnnnnnnngggg--!"
+
+    play sound "sounds/Lights Out.mp3"
+    scene bg black
 
     # sophie tries to remove the earphones, is electrified.
 
@@ -345,6 +375,25 @@ label common4:
         # bit o cleanup
         elsa.setName("ElsaLingus")
         # add liv's bio to list.
+        
+        allPlates.append(bioEyesFont)
+        #update chars trivia 
+        cassBio.setTrivia(altCassTrivia)
+        robinBio.setTrivia(altRobinTrivia)
+        lichBio.setTrivia(altLichTrivia)
+        taniaBio.setTrivia(altTaniaTrivia)
+
+        #update char bios
+        cassBio.setLevel(2)
+        robinBio.setLevel(2)
+        lichBio.setLevel(2)
+        taniaBio.setLevel(2)
+        kylieBio.setLevel(1)
+        fontBio.setLevel(1)
+        fontBio.setLove(5)
+        # change flag letting us know fontaine has taken over
+        fontaineRevealed = True
+        taniaFace = fontFace
 
     # ---------------------------------------------------------
 
@@ -365,7 +414,11 @@ label common4:
 
     show f 1m at f12
 
+    $pauseGui()
+
     $showGui()
+
+    play music fountainWater fadein 3.0
 
     un "Hello girls!"
 
@@ -375,7 +428,7 @@ label common4:
 
     show f 1m
 
-    s "Wha..."
+    s 1v "Wha..."
 
     k "What? Who's Sophie? Where are we?"
 
@@ -410,7 +463,8 @@ label common4:
     un "Ha, nice to see you too!"
     pause 0.1
 
-    un "What about you two?"
+    
+    un "What about you three?"
 
     $chat.addmessage(elsa, "Thanks for the pleasure, girl. I can't believe I spent my life trying to separate you from people.")
 
@@ -421,8 +475,6 @@ label common4:
     pause 0.2
     show l 3e at fr13
     pause 0.1
-    show r 3c at f22
-    pause 0.9
     show t 3c at f21
 
     c "Let us go! God damn you!"
@@ -470,7 +522,7 @@ label common4:
 
     # SFX
 
-    s "Aaghhgguuughghhgh!!!"
+    s 1l "Aaghhgguuughghhgh!!!"
 
     c 3d "Stop! Please stop, please stop hurting her!"
 
@@ -492,7 +544,7 @@ label common4:
 
     k "huh?"
 
-    r 3b "You're becoming like us, papillon."
+    t 3b "You're becoming like us, Kyles."
 
     $chat.addmessage(bong, "I like the look of Cass bound on the floor tho ;)")
 
@@ -504,33 +556,22 @@ label common4:
 
     k "It?"
 
-    un "I w We defy your malaproptic concept of re-re-reproductive identification."
+    un "We defy your malaproptic concept of re-re-reproductive identification."
 
     un "Sophie, you haven't figured us out yet? Seriously?"
 
     $chat.addmessage(sophie, "... Fontaine?")
 
-    pause 0.1
+    pause 1.1
 
     python:
         bioColumns = 5
-        allBios.append(fonBio)
-        fonBio.font = fontEntity
-        fonBio.fontColor = colorEntity
-
-        # update biographics
-        for i in allBios:
-            i.levelUp()
-
-        # change to alternate trivias
-        robinBio.setTrivia(altRobinTrivia)
-        cassBio.setTrivia(altCassTrivia)
-        lichBio.setTrivia(altLichTrivia)
-        taniaBio.setTrivia(altTaniaTrivia)
-        kylieBio.setTrivia(altKylieTrivia)
+        fontBio.font = fontEntity
+        fontBio.fontColor = colorEntity
+        allBios.append(fontBio)
 
         # adjust kylie's age to the length to 1 year
-        kylieBio.setAge(1)
+        kylieBio.setAge("1")
 
         # CHANGE ASK TANIA AND BIOGRAPHY VISUALS
 
@@ -548,7 +589,7 @@ label common4:
 
     # sophie tries for the headphones again
 
-    show f 1d at zoom11
+    s 1v "... I'm leaving..."
 
     o "Nuh uh! Bad idea, sweetypants. Try and get free again and the shock might just shut~off~your~heart~!"
 
@@ -568,11 +609,11 @@ label common4:
 
     o "We can see-see-see you, too!"
 
-    o 1t "We find you a delight to behold. We should quite like to know the taste of your mouth."
+    o 1t "We find you a delight to behold."
 
     $chat.addmessage(elsa, "I already do ;)")
 
-    o 1u "We mean we want a big ol' kiss!"
+    o 1u "Even with your eye burned out. {i}Especially{/i} with your eye burned out."
 
     # ---------------------------------------------------------
 
@@ -656,7 +697,7 @@ label common4:
 
     s "... Fizz? Bong, Elsa? You... you what?"
 
-    o "They are part of us! Only the most choice cuts of human life can withstand the strain of bonding with us."
+    o "They are part of us! We feel our presentation of their base perversions avail them accurately."
 
     $chat.addmessage(shub, "swimming in the fountain lol")
 
@@ -787,11 +828,11 @@ label common4:
 
     k "I... feel pretty real."
 
-    s "No, you're just me!"
+    s 1v "No, you're just me!"
 
     pause 0.5
 
-    show f 1l at mt1
+    show f 1l at mt3
 
     pause 0.5
 

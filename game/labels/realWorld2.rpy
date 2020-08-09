@@ -83,7 +83,7 @@ label realWorld2:
 
     play music onTheNod fadein 2.5
 
-    "Her long legs stream up from the fountain, kicking wildly, a climactic eruption of foam and spray billowing from the fountain."
+    "Her long legs stream up from the fountain, kicking wildly, a climactic eruption of foam and spray billowing from within."
 
     "There's something inhuman about a drowning. Can't see the victim's face. Only limbs akimbo."
 

@@ -45,7 +45,7 @@ label cassDate1:
             
     scene bg bar with longFade
 
-    #play music jazzNoodle fadein 1.5
+    play music jazzNoodle fadein 1.5
 
     $showGui()
 
@@ -222,7 +222,7 @@ label cassDate1:
 
     $chat.addmessage(fizz, "You're both right")
 
-    c 1q "< It would have been easier if we were both drunk already. >"
+    c 2q "< It would have been easier if we were both drunk already. >"
 
     k "Maybe."
 
@@ -256,7 +256,7 @@ label cassDate1:
 
     $chat.addmessage(elsa, "Kylie's a ditz, isn't she")
 
-    c 1o "< My songs just aren't the same anymore, Kylie. I thought going on this show and meeting someone new in this weird pressure cooker of an environment might draw something out of me.> "
+    c 2o "< My songs just aren't the same anymore, Kylie. I thought going on this show and meeting someone new in this weird pressure cooker of an environment might draw something out of me.> "
 
     ki "I suppose this is as good a time as ever to tell her that I..."
 
@@ -268,7 +268,7 @@ label cassDate1:
 
     ki "Her expression changes, then, as she accepts this new piece of information. I'm not sure if she hoped I'd be a fan, or hoped for the opposite."
 
-    c 1b "< So you know my work? >"
+    c 2b "< So you know my work? >"
 
     k "I love your work. Intolerable Jewelry got me through the worst break-up of my life!"
 
@@ -280,7 +280,7 @@ label cassDate1:
             [shub, "ROLL CREDITS"],
             [cake, "that title is dumb"],
             [fon, "I love the album tho"],
-            [bar, "liv you way too into this"],
+            [bar, "Fontaine you way too into this"],
             [beav, "roll cred-- shit"]
 
         ]
@@ -294,7 +294,7 @@ label cassDate1:
 
     $chat.addmessage(elsa, "God, maybe she really needed to meet someone who didn't know her.")
 
-    c 1q "< Writing it did the same for me. >"
+    c 2q "< Writing it did the same for me. >"
 
     c 1n "<I'm really happy to know you're a fan. I'm also really happy you're not asking for an autograph.>"
 
@@ -336,7 +336,7 @@ label cassDate1:
 
     $chat.addmessage(crab, "aww")
 
-    c 1a "< So... I have a question. >"
+    c 2a "< So... I have a question. >"
 
     $chat.addmessage(fizz, "lol")
 
@@ -352,7 +352,7 @@ label cassDate1:
 
     $chat.addmessage(crab, "I like girls, Elsa")
 
-    c 1m "< Well, I do. >"
+    c 2m "< Well, I do. >"
 
     $chat.addmessage(elsa, "Sucks for them.")
 
@@ -378,7 +378,7 @@ label cassDate1:
 
     $chat.addmessage(shub, "dafuq")
 
-    c 1u "< I have an idea, though. >"
+    c 2u "< I have an idea, though. >"
 
     $chat.addmessage(egg, "boobs")
 

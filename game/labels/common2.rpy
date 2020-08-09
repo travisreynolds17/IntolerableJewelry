@@ -472,6 +472,8 @@ label common2:
     pause 0.8
     scene bg bsod
 
+    pause 1.0
+
     s 1e "Guys. I'm so pissed right now."
 
     $chat.addmessage(elsa, "Reload!")

@@ -37,7 +37,7 @@ label realWorld1:
 
     "Her eyes gleam, haunting, spectral baby blues."
 
-    "Then she raises her arms and undoes the clip holding her hair in place, a shower of rich dark chocolate strands."
+    "Then she raises her arms and undoes the clip holding her hair in place, a shower of rich dark orange liquer strands."
 
     "She crosses one endless leg over the other and leans back after that, gazing at the stars."
 

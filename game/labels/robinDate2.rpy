@@ -424,7 +424,7 @@ label robinDate2:
     play sound "sounds/Lights Out.mp3"
     scene bg black
 
-    pause 0.5
+    pause 1.5
 
     k "What the fu--"
 
@@ -478,10 +478,11 @@ label robinDate2:
     $chat.addmessage(beav, "What happened? Be honest, bro")
 
     show r 2p
+    stop music fadeout 3.0
 
     r "I apologize papillon. Stagecraft is my life, and so I thought I might show you just a bit."
     
-    stop music fadeout 3.0
+    
     play music darkNoodle fadein 5.0
 
     r 2q "My lavender betrayed me."
@@ -571,6 +572,8 @@ label robinDate2:
     $chat.addmessage(cake, "seems like you earned it, man")
 
     ki "How on earth would she know--"
+
+    stop music fadeout 3.0
 
     k "Okay, hang on. Robin, I'm game, but how would you know what I like?"
 
@@ -717,7 +720,7 @@ label robinDate2:
 
     $renpy.notify("You can still save her. Sever the strings.")
 
-    s "Oh my god. No. Kylie, no. I'm gonna puke."
+    s 1c "Oh my god. No. Kylie, no. I'm gonna puke."
 
     ki "I remember the little room off to the side of the party." 
     
@@ -804,7 +807,7 @@ label robinDate2:
 
     scene bg playhouse far with fade
 
-    show r at f12
+    show r 1b at f12
 
     ki "The silence between us drags on. I don't know what to say."
 
@@ -983,7 +986,7 @@ label robinDate2:
 
     pause 0.5
 
-    r 2c "When you held me, shielded me. You let me weep, you let me bleed. You never judgeed my weakness."
+    r 2c "When you held me, shielded me. You let me weep, you let me bleed. You never judged my weakness."
 
     ki "My heart hurts from hammering in my chest. My arms and legs hang like earthworms. She lowers herself to me, so close I can smell her lipstick, tart and chemical."
 
@@ -1032,7 +1035,7 @@ label robinDate2:
 
     $chat.addmessage(sophie, "CHAT feverish, signs of SEPSIS")
 
-    $renpy.notify("Robin is far more dangerous than she lets on, babe.")
+    $renpy.notify("Robin is far more dangerous than she lets on, Kyles.")
 
     menu:
         k "Huh? I don't... what...?"
@@ -1090,11 +1093,19 @@ label robinDate2:
 
             ki "It was never supposed to be like this."
 
-            pause 4.0
+            $hideGui()
 
-            play music robinChoir
+            pause 2.0
 
-            scene bg playhouse with fade
+            play music [robinChoir, robin, robinChoir, robin] noloop
+
+            show image litEye with dissolve
+
+            pause 2.0
+
+            show image splashLichFight with dissolve
+
+            
 
             k "LICHELLE!"
 
@@ -1124,7 +1135,7 @@ label robinDate2:
 
             r "I will. If you desire it."
 
-            s "No, no. No."
+            s 1c "No, no. No."
 
             $renpy.notify("Override. Menu: 'Kill Her', 'Spare Her' removed. $SparedElle = True")
 
@@ -1134,13 +1145,16 @@ label robinDate2:
 
             l "... yeah no shit..."
 
-            show r 2f at fr13
+            show r 2f at fl11
 
             r "Understand this was a consequence of your choice. Should you attempt reprisal, next time, I will carve you to the bone."
 
+            hide litEye
+            hide splashLichFight with dissolve
+
             ki "Her tone lacks music."
 
-            s "Louisa, you cut me..."
+            s 1f "Louisa, you cut me..."
 
             k "Robin! Disappear. Just disappear!"
 
@@ -1154,7 +1168,7 @@ label robinDate2:
 
             show r 1c
 
-            pause 0.5
+            pause 1.5
 
             show r 1b
 
@@ -1162,8 +1176,9 @@ label robinDate2:
 
             # lights out
 
-            $loveLich += 1
+            $lichBio.loveUp()
             $fuckUpRobin = True
+            $showGui()
 
         "Don't you dare touch Robin!":
             $fuckUpRobin = False
@@ -1188,7 +1203,7 @@ label robinDate2:
 
             l 1d "Like that makes it better!"
 
-            s "Right?"
+            s 1q "Right?"
 
             r 1b "She is not at fault."
 
@@ -1196,13 +1211,14 @@ label robinDate2:
 
             r 1c "I never received a single coin for our encounter, putain."
 
-            s "Maybe Robin didn't. Someone did."
+            s 1b "Maybe Robin didn't. Someone did."
+            pause 0.1
 
             ki "I don't speak French, but I'm positive Robin isn't being as sweet as the words flowing from those dark lips."
 
             k "... I have to make it up to her, Lichelle."
 
-            l 1k "The hell you do. Did you not notice the giant brick of H on the table?"
+            l 1k "The hell you do. Did you not notice the giant sack of H on the table?"
 
             show r 1m
 
@@ -1224,7 +1240,7 @@ label robinDate2:
 
             show r 1m
 
-            s "the lights"
+            s 1f "the lights"
 
             k "How beautiful. How perfect!"
 
@@ -1236,7 +1252,7 @@ label robinDate2:
 
             ki "If I hadn't been looking directly at Robin, I wouldn't have noticed her sliding the butterfly knife back into her sash."
 
-            $loveRobin += 1
+            $robinBio.loveUp()
     # END MENU
 
     # sound effect of lights shutting off
@@ -1247,7 +1263,7 @@ label robinDate2:
 
     $chat.addmessage(sophie, "Watching Fontaine and Elsa together, guys. Mmm lol haha jk :) ;) ")
 
-    s "Again?"
+    s 1b "Again?"
 
     pause 2.0
 
@@ -1286,6 +1302,7 @@ label robinDate2:
     r "{alpha=0.5}I still have my father's blade.{/alpha}"
 
     # sound effect of lights
+    stop music fadeout 0.4
     play sound "sounds/Lights Out.mp3"
     scene bg playhouse far
 
@@ -1297,7 +1314,7 @@ label robinDate2:
 
     ki "How did she do that? I couldn't hear anything moving or clattering. I'm stuck between heart-poundingly impressed and horrified."
 
-    show l 1d at fl12
+    
 
     l "Alright, gloves off. Robin, I know you can hear me!"
 
@@ -1305,7 +1322,7 @@ label robinDate2:
 
     $chat.addmessage(fizz, "Elsa. Don't you leave with that... that thing!")
 
-    show l 1o
+    show l 1o at f12
 
     pause 0.5
 
@@ -1319,7 +1336,7 @@ label robinDate2:
 
     $chat.addmessage(elsa, "Why not? You did.")
 
-    ki "My heart's fluttering. It doesn't hurt, not at all."
+    ki "My heart flutters."
 
     k "I'm okay."
 
@@ -1387,19 +1404,22 @@ label robinDate2:
     play sound "sounds/Lights Out.mp3"
 
     scene bg playhouse far
-    show l 1f at f12
+    show l 3i at f12
+    
 
     # with blood?
 
     k "Oh my god, Lichelle!"
 
-    s "Holy shit."
+    play music onTheNod 
+
+    s 1c "Holy shit."
 
     $chat.addmessage(elsa, "Not that you give a shit.")
 
     ki "She's staring at me, her eyes wide with shock and pain. There's a slash of blood across her chest, shallow, but running in a neat flowing path."
 
-    l 2e "I'm gonna fucking kill you bitch! I swear to god!"
+    l 3e "I'm gonna fucking kill you bitch! I swear to god!"
 
     k "Are you okay? Should we call the police?"
 
@@ -1415,7 +1435,7 @@ label robinDate2:
     
     $chat.addmessage(elsa,"I'm sure you have an excuse for not being here. Sophie hasn't answered me.")
 
-    ki "One of the straps of her tank top is cut through."
+    ki "A swipe of blood saturates her top."
 
     k "Lichelle. You're okay?"
 
@@ -1423,7 +1443,7 @@ label robinDate2:
 
     $chat.addmessage(cake, "What do you do, Elsa?")
 
-    l 1k "Yeah. She ruined my top."
+    l 3k "Yeah. She ruined my shirt."
 
     k "That's what you're worried about?"
 
@@ -1433,15 +1453,17 @@ label robinDate2:
 
     $chat.addmessage(beav, "And that is?")
 
-    l 1d "It's a theatre prop. Fake blood. She put it on you, too."
+    l 3d "It's a theatre prop. Fake blood. She put it on you, too."
 
     k "Oh."
+
+    stop music fadeout 5.0
 
     ki "Except the burning pain tattooing my neck begs to differ."
 
     $chat.addmessage(elsa, "It's a mission here in R/BG13:14-15. We're a rehabilitation program for addicts of all types.")
 
-    show l 1q
+    show l 3q
     # up close if possible
 
     if loveLich == 4:
@@ -1449,7 +1471,7 @@ label robinDate2:
 
         k "Elle?"
 
-        show l 1m at zoom12
+        show l 3m at zoom12
 
         ki "She's staring at me now, eyes full of purpose."
 
@@ -1457,15 +1479,15 @@ label robinDate2:
 
         ki "A whisper, nothing more."
 
-        l 1n "You're a criminal rave bitch under that wallflower exterior."
+        l 3n "You're a criminal rave bitch under that wallflower exterior."
 
         k "... that's not me."
 
-        l 1p "It's okay if it is."
+        l 3p "It's okay if it is."
 
         ki "She's close now, close enough that if I were a braver woman I could be brushing against her."
 
-        l 1u "I need to wash this off."
+        l 3u "I need to wash this off."
 
         k "Yeah."
 
@@ -1475,19 +1497,40 @@ label robinDate2:
 
     scene bg black with dissolve
 
+    "It doesn't matter. Lichelle's okay. The night is... what it is."
+
+    "Part of me feels far too upbeat about all this."
+
+    show image carLightsLight at carLights
+    show image carLightsBack with dissolve:
+        xpos 0 ypos 0
+
+    play music lichelle 
+    
+    pause 2.0
+
+    show image carLich with dissolve:
+        xpos 0 ypos 0
+
     ki "The car ride home lasts an eternal instant. Cassandra's humbled sobbing echoes in between fits of Robin's cold laughter in the pitch black."
+
+    ki "Lichelle wears the same placid expression she wore on the way to the theater."
+
+    ki "Astonishingly."
 
     $chat.addmessage(beav, "Heroin?")
 
     ki "These two nights wrestle for dominance in my mind. The show has faded into an afterthought."
 
-    ki "I look to Lichelle, sitting with her flannel shirt buttoned over the sticky theatre blood."
+    ki "I look to Lichelle, sitting with her sleeveless top mired in sticky theatre blood."
+
+    $renpy.notify("Where'd the blood go?")
 
     $chat.addmessage(elsa, "Yeah.")
 
     $chat.addmessage(fon, "Elsa, I'm starting without you ;)")
 
-    s "~yaaawn~"
+    s 1j  "~yaaawn~"
 
     if loveLich == 4:
         # option for love scene ending with Lichelle
@@ -1499,7 +1542,7 @@ label robinDate2:
 
         k "Hey, Lichelle..."
 
-        show l 2s at f12
+        show l 2s at f11
         l "Hm?"
 
         ki "Her expression is so far away. She's so fearsome in her way that this vulnerability captivates me in the darkness."
@@ -1507,6 +1550,8 @@ label robinDate2:
         $renpy.notify("give in, babe. You need me.")
 
         s "Wow. I can't believe Kylie's thinking about anything other than running the ~yawn~ hell away."
+
+        $renpy.notify("No, don't! Don't, not yet!")
 
         menu:
             ki "Should I..."
@@ -1517,7 +1562,7 @@ label robinDate2:
                 k "Mm... nothing. It's nothing."
                 l 1g "Cool."
 
-    scene bg hallway with dissolve
+    scene bg hallway with fade
 
     pause 0.25
 
@@ -1535,11 +1580,18 @@ label robinDate2:
         l "Babe, I fight professionally. She coulda killed me."
         l 1k "I messed up."
         k "You seem awfully calm about that, Elle."
-        l "She was like a god damned ghost. If you wanna know if I think she's dangerous, the answer is hell yes she's dangerous."
+        l "Nothing to do about it now. Just don't turn your back on her."
+        k "It doesn't make sense that she could do that to you."
+
+        l 1d "No. No, it does not."
     else:
         l 1k "She splashed us with fake blood, but I think she was sending a message. Showing us what she could have done if she wanted."
 
+    pause 1.0
+
     show l 2s
+
+
 
     l "... are you okay?"
 
@@ -1549,7 +1601,7 @@ label robinDate2:
 
     show l 1o
 
-    l "Christ, I hope not. I mean, we're a TV show and no one's ever pulled a stunt like that."
+    l "I'd hope not."
 
     show l 1m
 
@@ -1567,7 +1619,7 @@ label robinDate2:
 
     $chat.addmessage(elsa, "Louisa used to say everyone there was either selling jewelry or wearing it.")
 
-    s "... you're all frickin' nuts."
+    s 1b "... you're all frickin' nuts."
 
     show l 1q
 
@@ -1579,9 +1631,9 @@ label robinDate2:
 
     ki "So, so tired."
 
-    $chat.addmessage(elsa, "Yeah. Usually. Sophie started people using that term.")
+    $chat.addmessage(elsa, "Yeah. Usually. Sophie got people using that term.")
 
-    k "Please don't let it be a disaster. If we just get fast food and watch TV I'll be just fine."
+    k "Please don't let it be a disaster. If we just get fast food and watch TV I'll be fine."
 
     show l 1m
 
@@ -1590,6 +1642,9 @@ label robinDate2:
     $chat.addmessage(beav, "and You were looking after Louisa, too?")
 
     scene bg dressing with dissolve
+
+    stop music fadeout 2.0
+    play music2 bedroom fadein 3.0
 
     ki "I don't even have time to consider much more. I didn't even intend to flop directly on the bed and drag a pillow under my head. It just kind of happened."
 
@@ -1607,11 +1662,11 @@ label robinDate2:
 
     pause 1.0
 
-    s "... guys. I need to pee, but I don't wanna get up."
+    s 1b "... guys. I need to pee, but I don't wanna get up."
 
     $chat.addmessage(elsa, "Yeah. Thanks. Thank you.")
 
-    s "Sophie's a sleepy girl. I just don't feel like getting up."
+    s 1j "Sophie's a sleepy girl. I just don't feel like getting up."
 
     pause 0.5
 
@@ -1619,21 +1674,21 @@ label robinDate2:
 
     scene bg black with fade
 
-    s "This game. All these lights?"
+    s 1j "This game. All these lights?"
 
     $chat.addmessage(cake, "Elsa, you still at Sophie's place? damn cops ever gonna show?")
 
-    s "I like Cassandra. She reminds me of someone."
+    s 1b "I like Cassandra. She reminds me of someone."
 
-    s "Robin, she reminds me of someone, too."
+    s 1m "Robin, she reminds me of someone, too."
 
     $chat.addmessage(elsa, "I'm here, yeah. I can hear her talking. She's not answering the door.")
 
-    s "That story about her dad's knife. She's killed someone, maybe."
+    s 1i "That story about her dad's knife. She's killed someone, maybe."
 
     $chat.addmessage(fon, "Definitely :) Elsa, I know how to get Sophie to answer the door.")
 
-    s "I don't have to pee. Anymore."
+    s 1j "I don't have to pee. Anymore."
 
     $chat.addmessage(fon, "Come back to me, you won't regret it. :)")
 
@@ -1641,14 +1696,15 @@ label robinDate2:
 
     $getHistory(14)
 
+    stop music2 fadeout 4.0
+
     pause(0.5)
     $hideGui()
     scene bg load-run with fade
     pause 2.0
     pause
-    scene bg dressing
     pause(0.5)
-    $showGui()
-    pause 0.5
+    
+    
 
     jump common4

@@ -336,7 +336,7 @@ label cassDate2:
 
     c 1t "< You would think. It's about my hood ornament. >"
 
-    s "Her what?"
+    s 1q "Her what?"
 
     $chat.addmessage(cake, "she drives a Rolls-Royce or something")
 
@@ -1050,13 +1050,15 @@ label cassDate2:
     
     $chat.addmessage(cake,"damn boi")
 
-    s "Wait! No she didn't. She did not!"
+    s 1d "Wait! No she didn't. She did not!"
 
     ki "Her voice flows painfully, strained, as if something still squeezes her around the throat." 
     
     $chat.addmessage(elsa,"Sophie I don't think you should go any further.")
 
     c 2c "< Go back. Kylie. I'm sorry. This is stupid. I'm stupid. It's always like this. >"
+
+    pause 1.0 
 
     show c 2c at d12
 

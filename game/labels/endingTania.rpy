@@ -2,16 +2,17 @@ label endingTania:
 
     scene bg resta
     show d 1a at fl11
+    show l 1b at f12
 
     d "Back."
 
     l 1m "You're just in time. Sophie's about to make a call, and could you just make sure she does it?"
 
-    d 1r "Uh, sure."
+    d 1g "Uh, sure."
 
     l "You're a decent man, David."
 
-    d 1m "I aim to please, I guess?"
+    d 1a "I aim to please, I guess?"
 
     "Lichelle gives his seat back, brushing it off just as he had for her."
 
@@ -31,13 +32,13 @@ label endingTania:
 
     s "... I'm calling Tania."
 
-    d 1m "Not Elsa?"
+    d 1b "You mean Elsa?"
 
     "I find my head shaking before the notion occurs to me."
 
     s "I can't face her."
 
-    d "She's asked about you."
+    d "Sophie. There is no Tania."
 
     s "No. I'm calling Tania."
 
@@ -58,26 +59,30 @@ label endingTania:
     un "Hey. I hope this is the right person. My name is Tania van der Waal."
 
     "A shock shoots up my spine."
-
-    show window
+    nvl clear
+    nvl show
 
     t "If you recognize my name, please respond and let me know."
 
     t "If I have the wrong number, forgive me."
+    stop music fadeout 3.0
 
     t "But I don't think I do."
 
-    hide window
+    nvl hide
 
     nvl clear
 
-    d 1r "What's going on?"
+    d 1g "What's going on?"
 
     s "Tania called ME."
 
+    d 1k "Wha?"
+    play music darkNoodle fadein 3.0
+
     t "Yeah... sorry, hon. Lichelle called me and let me know you were next to your phone."
 
-    show d 1a
+    show d 1b
 
     "So much for trust."
 
@@ -91,7 +96,7 @@ label endingTania:
 
     t "I'd like you to stay with me for a little while."
 
-    s "That's... that's a big ask, Ms. der Waal"
+    s "That's... that's a big ask, Ms. van der Waal"
 
     t "Tania."
 
@@ -99,7 +104,7 @@ label endingTania:
 
     t "... yes, we have."
 
-    show d 1l
+    show d 1s
 
     d "What's she saying?"
 
@@ -107,7 +112,7 @@ label endingTania:
 
     d 1g "Alright. I'll just be looking at boobs or something then. Somewhere."
 
-    hide d at f12
+    hide d with dissolve
 
     t "Sophie?"
 
@@ -121,7 +126,7 @@ label endingTania:
 
     pause 0.5
 
-    show window
+    nvl show
 
     t "I can still feel Fontaine. Creeping around in my head."
 
@@ -133,7 +138,7 @@ label endingTania:
 
     s "Me, too. God."
 
-    hide window
+    nvl hide
 
     nvl clear
 
@@ -144,7 +149,7 @@ label endingTania:
             s "I'll go."
             t "That's-"
             s "David has to go, too."
-            show d 1h at f12
+            show d 1k at f12
             d "Ah?"
             t "We've already been in touch. He agreed weeks ago."
             show d 1a
@@ -185,12 +190,13 @@ label endingTania:
             t "We're not there, but I can't help you if you don't come see me."
             t "Relax. It'll be fast. It'll be just like a fadeout."
             s "What?"
-
+    stop music fadeout 3.0
     scene bg black with fade
 
     pause 1.0
 
     scene bg road with fade
+    play music hallwayChats fadein 3.0
 
     "I must have dozed off again."
 
@@ -206,7 +212,7 @@ label endingTania:
 
     "I guess we can only see."
 
-    show bg gates with fade
+    scene bg gates with fade
 
     show d 1a at f12
 
@@ -216,7 +222,7 @@ label endingTania:
 
     s "Is that a guard house?"
 
-    d 1r "Looks that way. And that would be a security camera."
+    d 1k "Looks that way. And that would be a security camera."
 
     "He points, and sure enough, at the corner of the gates before us the cold red eye of a camera gazes unflinchingly."
 
@@ -240,7 +246,7 @@ label endingTania:
 
     un "Ms. Koenig will see Ms. van der Waal. Mr. Ellison will receive refreshment in the parlor. Mr. Ellison will not leave the parlor until Ms. Koenig's visit is complete."
 
-    d 1r "Uh..."
+    d 1k "Uh..."
 
     un "These are the terms. If we cannot agree, Mr. Ellison may wait in the vehicle."
 
@@ -272,19 +278,19 @@ label endingTania:
 
     s "I really appreciate you coming."
 
-    show d 1m at f12
+    show d 1a at f12
 
     d "Hey, look at this place. They probably have the fanciest snacks in there, you couldn't ask for better."
 
     s "No... really. Thank you. You didn't have to."
 
-    show d 1m
+    show d 1q
 
     "He smiles a resigned smile."
 
     d "If I can't be your husband, I can still be your point man, right?"
 
-    d 1u "Besides. It's nice to score points with Elle."
+    d 1q "Besides. It's nice to score points with Elle."
 
     "I can only nod. Slowly. I know it stings him, still, but I also know I can count on him."
 
@@ -298,7 +304,7 @@ label endingTania:
 
     "David whistles, as one should when entering a house like this."
 
-    d 1l "I'll bet my apartment has cheaper utilities, though."
+    d 1k "I'll bet my apartment has cheaper utilities, though."
 
     s "Probably."
 
@@ -306,11 +312,13 @@ label endingTania:
 
     un "Welcome, Ms. Koenig, Mr. Ellison."
 
-    d 1i "Holy shit."
+    d 1g "Holy shit."
+
+    stop music fadeout 2.0
 
     un "Language sir."
 
-    show d 1h at mt1
+    show d 1s at mt1
 
     pause 0.1
 
@@ -318,19 +326,21 @@ label endingTania:
 
     "The little floating ball in front of us hovers into sight as easily as if it were an everyday occurence."
 
+    play music mortimer
+
     "Its kind of like a floating soccer ball with a cute face."
 
     un "This unit is designated Mortimer, steward of the van der Waal estate."
 
-    m 1m "May I take your coats?"
+    m 1d "May I take your coats?"
 
-    d 1h "Um... nice to meet... you? Yes?"
+    d 1k "Um... nice to meet... you? Yes?"
 
     s "How?"
 
-    m 1k "I'm kidding. I can't take your coats. I have no hands."
+    m 1a "I'm kidding. I can't take your coats. I have no hands."
 
-    m 1m "There is a coat rack behind you. Dust off!"
+    m 1c "There is a coat rack behind you. Dust off!"
 
     "David and I stare, still, at Mortimer."
 
@@ -342,7 +352,7 @@ label endingTania:
 
     s "No."
 
-    m 1n "Yes, Ms. van der Waal likes her privacy."
+    m 1c "Yes, Ms. van der Waal likes her privacy."
 
     m "Which is why Mr. Ellison, if you would kindly turn to your left and enter the lit room before you and stay there until you are summoned."
 
@@ -356,7 +366,7 @@ label endingTania:
 
     pause 0.5
 
-    hide d 1m at fl11
+    hide d at fl11
 
     "David gazes at the robot for a moment and then shrugs, turns to the parlor entrance, and promptly is greeted by another floating orb with another cute face."
 
@@ -370,7 +380,7 @@ label endingTania:
 
     s "How do you know?"
 
-    m 1m "The packaging says so. Now, if you'll kindly follow me? The madam is eager to see you again."
+    m 1c "The packaging says so. Now, if you'll kindly follow me? The madam is eager to see you again."
 
     "Mortimer turns, somehow. It isn't immediately clear how its little body moves."
 
@@ -392,9 +402,13 @@ label endingTania:
 
     "Mortimer faces a plate to the left of a security door."
 
+    scene bg black with longFade
+
     # SFX
 
     "The door slides open."
+
+    stop music fadeout 3.0
 
     m "In you go."
 
@@ -402,25 +416,44 @@ label endingTania:
 
     s "Okay."
 
-    # SPLASH
+    pause 1.0
 
-    "Medical supplies and equipment dominate the room spreading before me. The consistent beep of an EKG, the hiss of a breathing machine."
+    "..."
 
-    "And there, on a pristine bed, a pallid young woman of maybe 26 years lies peaceful and still."
+    pause 1.0
 
-    "There must be two dozen lines connected to her body, attended by a half dozen smaller Mortimers with various arms and attachments."
+    play music ringRejection
+    show image splashWired
+
+    hide m
 
     s "Oh my..."
 
-    "The security door slides closed behind me. Mortimer floats past my shoulder, settles above the young woman's head."
+    "She lies utterly still, draped in a translucent sheet."
 
-    show m 2a  # with tania. figure this out. the 2 series for mortimer is tania faces
+    "There is no rise, no fall of her chest."
 
-    "His cute face vanishes, replaced abruptly by a familiar one. A woman with a slightly crooked smile, eyes the blue of a cloudless winter sky."
+    show m 1a at fr13
+
+    "The security door slides closed behind me. Mortimer floats past my shoulder, settles above the young woman's feet."
+
+    "Her... her feet."
+
+    "She has no... no feet. No shins, no, no arms."
+
+    "I can't see."
+
+     # with tania. figure this out. the 2 series for mortimer is tania faces
+
+
+    show m 2a at f13
+    "Mortimer's cute face vanishes, replaced abruptly by a familiar one. A woman with a slightly crooked smile, eyes the green of a dewy Scottish glade."
 
     "She looks like the girl on the bed, but... healthy."
 
     s "T... no. Tania?"
+
+    
 
     t "Hey. It's good to see you again, Kylie."
 
@@ -463,17 +496,25 @@ label endingTania:
     show m 2j
     t "Wanna see something spooky?"
 
-    "Mortimer moves, and I can see Tania's body's face again."
+    hide m at f13
+
+    pause 1.0
+
+    "..."
+
+
+
+    show image splashWiredOpen with dissolve
 
     "Her eyes are open and she's looking right at me. Blinking. Gazing."
 
     s "W-what does that mean?"
-    show m 2a
+    show m 2a at f13
     t "I'm almost fully paralyzed. I can move my eyes though, and I can see you. And hear you."
 
     t "Honestly, I'd expected you to ask how I'm talking through Mortimer by now."
 
-    s "I... s-sorry, I, uh, how?"
+    s "I... s-sorry, I, uh, how? You're not... not breathing."
 
     "How poetic. How empathetic, Sophie."
     show m 2m
@@ -495,6 +536,8 @@ label endingTania:
 
     s "It's unbelievable!"
 
+    hide image splashWiredOpen with dissolve
+
     t "You lived inside a simulation for quite a while, yourself. I wonder what is so unbelievable about it."
     show m 2m
     t "Thanks for cracking that open, by the way. I thought Fontaine was going to keep us there forever."
@@ -507,6 +550,8 @@ label endingTania:
 
     t "Sit. Don't worry, I'm very comfortable."
 
+    stop music fadeout 3.0
+
     "Exhibiting a 'just go with it' attitude far beyond my abilities, I settle carefully onto the robo-chair."
 
     if loveTania >= 4:
@@ -515,6 +560,8 @@ label endingTania:
         "I might blush if the oddity of the situation wasn't dominating my mind."
 
     show m 2a
+    
+    play music2 msTania fadein 3.0
     
     t "So... I've missed you."
     show m 2p
@@ -556,7 +603,7 @@ label endingTania:
 
     show m 2a
 
-    t "For me, what the Entity did was bad but it wasn't all that different."
+    t "For me, Fontaine's actions changed almost nothing."
 
     t "..."
 
@@ -657,7 +704,7 @@ label endingTania:
 
     t "Follow Mortimer, would you?"
 
-    hide m at f12
+    hide m with dissolve
 
     "The little robot lifts and floats, still bearing Tania's face, and glides across the room to what would appear to be a closet door."
 
@@ -849,13 +896,15 @@ label endingTania:
          #
          # Here, she wakes up in hospital
          #
-
+        stop music2
+        #sfx
+        play audio beep noloop
         hide image splashEKGFull at summonEKG
         show image splashEKGFull at summonEKG
         pause 0.3
 
         s "Tania? What's happening?"
-
+        play audio beep noloop
         hide image splashEKGFull at summonEKG
         show image splashEKGFull at summonEKG
         pause 0.3
@@ -863,7 +912,7 @@ label endingTania:
         show m 2b
 
         t "Oh. I guess time's up."
-
+        play audio beep noloop
         hide image splashEKGFull at summonEKG
         show image splashEKGFull at summonEKG
         pause 0.3
@@ -877,7 +926,7 @@ label endingTania:
         show m 2c
 
         t "You can't. Not yet."
-
+        play audio beep noloop
         hide image splashEKGFull at summonEKG
         show image splashEKGFull at summonEKG
         pause 0.3
@@ -898,14 +947,14 @@ label endingTania:
 
         d "... scared us all to death."
 
-        "Fizz? Elsa? No. David and Elsa."
+        "Fizz? Elsa?"
 
         "My senses are putty, squashed together in an incoherent ball."
 
         "Suddenly, there are scrubs everywhere."
 
         "Then..."
-
+        play audio beep noloop
         hide image splashEKGFull at summonEKG
         show image splashEKGFull at summonEKG
         pause 0.3
@@ -913,6 +962,8 @@ label endingTania:
         scene bg black with fade
         pause 0.5
         scene bg hospital with fade
+
+        play music hallwayChats
 
         show d 1a at f11
 
@@ -924,31 +975,25 @@ label endingTania:
 
         "I do."
 
-        s "Am I going to prison?"
+        s "Tania. I liked you better as a redhead."
+
+        e 1p "Huh?"
+
+        pause 0.1
+
+        "... oh. That's right."
+
+        s "Am I gonna be arrested?"
 
         d 1q "For what?"
 
         s "For giving the heroi-"
 
-        d 1q "FOR DOING nothing like that, ha ha."
+        e 1q "FOR DOING nothing like that, ha ha."
+
+        pause 0.1
 
         "Right. Public."
-
-        e 1m "No. You're coming to live with me."
-
-        s "I am?"
-
-        d 1m "Yeah. I have your power of attorney, remember?"
-
-        "Oh, that's right. Because I know what I am."
-
-        "Junkie trash."
-
-        e 1a "The prosecutor and I talked with your public defender. Nobody wants to go to court, and whether you gave the drugs to Cassandra's not a matter of evidence."
-
-        e "All you have to do is agree to the plea deal."
-
-        "Oh. That's all."
 
         d 1g "It's no joke this time, Soph. You screw up again, you're going to prison."
 
@@ -962,7 +1007,7 @@ label endingTania:
 
         s "... where's Louisa."
 
-        d 1h "..."
+        d 1b "..."
 
         e 1h "..."
 
@@ -972,12 +1017,16 @@ label endingTania:
 
         # fontaine shows up in a lab coat
         # SFX - Knock
+        pause 1.0
+
 
         show f 2m at f12
 
+        stop music fadeout 4.0
+
         o "Sorry to interrupt."
 
-        d 1p "Oh, uh, hey doc."
+        d 1a "Oh, uh, hey doc."
 
         show e 1j
 
@@ -991,39 +1040,41 @@ label endingTania:
 
         s "n-n-no."
 
-        e 1h "Sophie?"
+        play music onTheNod
 
-        show d 1h
+        e 1b "Sophie?"
+
+        show d 1b
 
         s "Get away from me!"
 
-        show o 2b
+        show f 2b
 
         o "It's okay, Sophie. I'm here to help."
 
         s "NO!"
 
-        d 1d "What's gotten into you?"
+        d 1s "What's gotten into you?"
 
         "I want to kick, to thrash, to scream."
 
         "I have no energy. Tubes sink into my arms."
 
-        d 1m "Dr. Fontaine has been wonderful to you, and to us."
+        d 1b "Dr. Fontaine has been wonderful to you, and to us."
 
-        show d 1h 
+        show d 1b 
 
         s "She's a monster. She's evil!"
 
         e 1j "She's single, so David might have a biased perspective."
 
-        show o 2q
+        show f 2q
 
-        d 1m "Shush."
+        d 1b "Shush."
 
         show d 1b
 
-        s "That's her. That's Fontaine! She killed Robin. She did it!"
+        s "That's her. That's Fontaine! She killed Robin. {i}She{/i} did it!"
 
         e 1b "Who's Robin?"
 
@@ -1042,7 +1093,7 @@ label endingTania:
         o 2r "I think?"
         
         s "David, don't talk to her. She'll... she'll kill you, too!"
-        show o 2b
+        show f 2b
         show d 1b
         show e 1b
 
@@ -1052,11 +1103,11 @@ label endingTania:
 
         s "I saw her!"
 
+        pause 0.2
+
         o 2g "It's not unheard of for coma patients to hear what's said around them."
 
-        o "Some of the staff might have mentioned my name."
-
-        s "No, no no. She killed Robin, she drowned Robin!"
+        s "No, no no. Her name is Fontaine L'eau! It's a trap. {i}Help! Help me!{/i}"
 
         e 1h "..."
 
@@ -1068,23 +1119,21 @@ label endingTania:
 
         s "NO! BITCH! MURDERER!"
 
-        o 2a "Ms. Langford. I'll ask the nursing staff to check up on her shortly. We'll need to run a few tests now that she's awake."
+        o 2a "Ms. Langford. I'll ask the nursing staff to check up on Sophie shortly. We'll need to run a few tests now that she's awake."
 
         e 1m "Anything, doctor."
 
         o "David."
 
-        d 1h "Ma'am?"
-
-        o "You have her power of attorney, correct?"
-
-        d 1q "That's right."
+        d 1b "Ma'am?"
 
         o 2a "May I speak with you privately?"
 
-        d 1i "Anything you need."
+        d 1k "Anything you need."
 
         o "Thank you." 
+
+        pause 0.1
         
         o 2b "Sophie, I'm not sure what you think I've done to you but I hope I can erase that perception in time."
 
@@ -1092,7 +1141,7 @@ label endingTania:
 
         o 2a "I'm going. David, if you please?"
 
-        d "Sure."
+        d 1a "Sure."
 
         hide f at fr12
 
@@ -1104,11 +1153,11 @@ label endingTania:
 
         e 1t "I think she likes you, buddy."
 
-        d 1h "You think?"
+        d 1b "You think?"
 
         e "Yeah. Don't keep her waiting."
 
-        d 1m "Of course. I'll be back soon."
+        d 1b "Of course. I'll be back soon."
 
         hide d at fr11
 
@@ -1124,7 +1173,7 @@ label endingTania:
 
         e 1k "For farting? Honey."
 
-        s "She's evil. You have to believe me, Elsa."
+        s "She's evil. You have to believe me."
 
         s "I don't know how she got out of the simulation."
 
@@ -1135,7 +1184,7 @@ label endingTania:
         e "..."
 
         s "..."
-
+        pause 1.0
         e 1c "Listen to yourself."
 
         s "..."
@@ -1186,9 +1235,13 @@ label endingTania:
 
         s "..."
 
+        stop music fadeout 5.0
+
         s "Chat's not working."
 
         "..."
+
+        
 
         scene bg black with fade
         pause 0.5
@@ -1199,12 +1252,16 @@ label endingTania:
         show f 2q  at fr12
 
         if entityForgiven == True:
-            # show o
+            # show f
             o "Sophie."
+
+            play music ringRejection 
 
             s "... get out."
 
             o "You forgave me."
+
+            
 
             "There are tears in her eyes. Her breath is quick, her lips trembling."
 
@@ -1240,7 +1297,7 @@ label endingTania:
 
             o 2b "You shouldn't. I deserve that."
 
-            s "Hurt him and I swear to god I'll kill you."
+            s "I'll kill you myself."
 
             o "I deserve that, too."
 
@@ -1276,28 +1333,29 @@ label endingTania:
 
             e 1m "Ah."
 
-            o 2i "I didn't do anything but accept."
+            o 2i "I didn't do anything."
 
             e 1n "Ah."
 
             o 2q "Shush."
-
+            stop music fadeout 4.0
             nvl clear
-            show window
+            nvl show
 
-            "Is it an act"
+            "Is it an act?"
             "Elsa trusts her."
             "Am I wrong? Was I ever right?"
             "If... she existed in the simulation, were any of her crimes real?"
             "Do they matter?"
-            hide window
+            nvl hide
             nvl clear
 
+            play music bedroom
             s "... I forgive you."
 
             e "huh?"
 
-            o 1m "I'll earn that for the rest of my life, my Kylie."
+            o 2m "I'll earn that for the rest of my life, my Kylie."
 
             e 1r "I'm confused."
 
@@ -1305,15 +1363,15 @@ label endingTania:
 
             pause 0.4
 
-            o 1b "I know."
+            o 2b "I know."
 
             o "I'll have the nursing staff check in on you later, then."
 
             s "Thanks, Fontaine."
 
-            o 1n "Anytime, love."
+            o 2n "Anytime, love."
 
-            hide o 1m at fr12
+            show f at justFade
 
             "Elsa's looking between us as Fontaine leaves, confusion written on her face."
 
@@ -1323,7 +1381,7 @@ label endingTania:
 
             s "I guess."
 
-            show window
+            nvl show
 
             "Fontaine's smile retains a shade of sadness. I believe her. I think."
 
@@ -1334,10 +1392,6 @@ label endingTania:
             "Alternatively alternatively, the jewelry..."
             
             "... the heroin."
-            
-            "It crafted all of this."
-            
-            "I suppose I'll have no way of knowing for sure."
 
             "It doesn't matter."
 
@@ -1345,7 +1399,7 @@ label endingTania:
 
             "Things will be different this time."
 
-            hide window
+            nvl hide
             nvl clear
 
             s "Elsa."
@@ -1361,6 +1415,8 @@ label endingTania:
             s "I promise. I'll... I'm swearing off. Forever."
 
             show e 1b
+
+            stop music fadeout 7.0
 
             "I promise."
 
@@ -1431,6 +1487,8 @@ label endingTania:
 
             e "I don't think you do."
 
+            pause 1.0
+
             s "... maybe not."
 
             e 1g "She was a complicated woman. Fierce. Driven."
@@ -1459,19 +1517,47 @@ label endingTania:
 
             e "You've earned it."
 
+            pause 1.0
+
+            s "One... one last thing?"
+
+            e 2q "Anything."
+
+            s "Could you call me by my real name?"
+
+            e 2i "Huh?"
+
+            pause 0.1
+
+            s "My name is Kylie."
+
+            k "Is... is that okay?"
+
+            show e 2n
+
+            pause 0.5
+
+            e "I understand. A whole new you, eh?"
+
+            k "Something like that."
+
+            e 1m "Okay, Kylie. I think I can do that."
+
             #SFX: Running?
 
-            show e 1h
+            show e 2s
 
-            s "What's all that racket?"
+            k "What's all that noise?"
 
-            e 1r "A bunch of nurses just ran by."
+            play music fountainWater
 
-            s "..."
+            e 1s "A bunch of nurses just ran by."
+
+            k "..."
 
             e 1m "Never a dull moment in a hospital, I suppose."
 
-            s "I guess."
+            k "I guess."
 
             scene bg black with fade
 

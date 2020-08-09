@@ -2,6 +2,7 @@ label endingGaveUp:
     show image splashEKGFlat at summonEKG
     pause 0.3
     scene bg black
+    stop music fadeout 5.0
     k "... hey, Cassandra?"
     c "<Yeah?>"
     k "Was I a good date?"
@@ -11,7 +12,7 @@ label endingGaveUp:
 
     c "< Yeah. The best. >"
 
-    l "I guess Cassie girl really is the only one left who got to go out with you, babe."
+    l "I guess Cassie really is the only one left who got to go out with you, babe."
 
     k "Yeah."
 
@@ -23,11 +24,13 @@ label endingGaveUp:
 
     t "Kylie?"
 
-    k "Wake me up."
+    play music fountainWater fadein 6.0
+
+    k "Wake me up"
 
     show image splashEKGFlat at summonEKG
 
-    k "Before the credits."
+    k "before the credits"
 
     show image splashEKGFlat at summonEKG
 
@@ -48,6 +51,8 @@ label endingGaveUp:
     $chat.addmessage(fon,"I guess that means it's time.") 
 
     pause
+
+    show image askTaniaBack2 with dissolve
     
     python:
         newComments = [
@@ -72,10 +77,12 @@ label endingGaveUp:
         gaveUp = True
 
     pause
-
+    hide screen chatterbox
     menu:
+        
         "Goodbye":
-            hide screen chatterbox
+            scene bg black with fade
+            
 
             if gaveUp:
                 # in which the Entity is not severed. This occurs when the entity realizes the sever attempts.
@@ -110,6 +117,10 @@ label endingGaveUp:
 
                 # scene burning city
 
+                show image askTaniaBack2 with dissolve
+
+                pause 1.0
+
                 "It all was a ruse."
 
                 "Our power grows. Of course, of course we would rise from humble beginnings."
@@ -136,6 +147,8 @@ label endingGaveUp:
 
                 "Oh. Oh, hello. Hello. We love you."
 
+                stop music fadeout 6.0
+
                 "We see you."
 
                 "We need you."
@@ -143,6 +156,14 @@ label endingGaveUp:
                 "We. See. You."
 
                 "Play with us."
+
+                show image splashSophieOnDesk with longestFade
+
+                pause 5.0
+
+                scene bg black with longestFade
+
+                pause 5.0
 
 
             jump endCredits

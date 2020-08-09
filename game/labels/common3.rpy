@@ -347,7 +347,7 @@ label common3:
 
     k "I just don't know what I have to offer any of them."
 
-    t 1i "Stop playing this game!"
+    t 1i "Take some goddamn responsiblity!"
 
     show t 1m
 

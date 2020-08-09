@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/labels/cassDate2.rpy", line 1127: expected statement.
-    xpos 0 ypos 0
-                 ^
+File "game/labels/endingTania.rpy", line 995: expected statement.
+    PAUSE 0.1
+           ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sat Jun 27 23:40:15 2020
+Sun Aug 02 21:10:27 2020

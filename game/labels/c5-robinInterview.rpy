@@ -1,3 +1,5 @@
+# so I don't wanna discard this writing, but Robin is dead at this point. This conversation can't happen.
+# You might have a new scene where Robin shows up in your bedroom the night before? If you turn down Lichelle, maybe, Robin appears in your bedroom. You might have the option for this conversation then?
 label c5robinInterview:
     if severRobin:
     

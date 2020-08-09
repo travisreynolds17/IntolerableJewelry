@@ -38,6 +38,9 @@ label chatwindow:
                 self.color = color
                 self.name = name
 
+            def setName(self, name):
+                self.name = name
+
         # For chatbox
 
         nameFont = "fonts/EncodeSans-ExtraBold.ttf"

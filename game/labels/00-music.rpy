@@ -25,3 +25,8 @@ label music:
     define audio.darkNoodle = ("music/darkNoodle.ogg")
     define audio.competition = ("music/competition.ogg")
     define audio.battle = ("music/battle.ogg")
+    define audio.fountainWater = ("music/fountainWater.ogg")
+    define audio.ecg = ("music/ecg.ogg")
+    define audio.flatline = ("music/fountainWater.ogg")
+    define audio.beep = ("music/beep.ogg")
+

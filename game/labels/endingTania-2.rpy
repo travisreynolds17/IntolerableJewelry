@@ -1,5 +1,6 @@
 label endingGoodTania2:
     t "Is there anything I can try to answer for you?"
+    default taniaExplains = [False, False, False, False, False]
 
     $success = False
     while success == False:
@@ -19,7 +20,8 @@ label endingGoodTania2:
 
                     #-- Cassandra
 
-                    if severCass == True:
+                    if cassBio.fullySevered == True:
+                        
                         show m 2m at mt1
                         show c 1m at f12
                         t "Cassandra spent some time in a safe place after the simulation broke down."
@@ -44,14 +46,14 @@ label endingGoodTania2:
                         "How... how could she say it so casually...?"
                         s "Why would she do that, though? I thought--"
                         show m 2b
-                        t "Cassandra needed help, Sophie. She wasn't severed when the simulation collapsed, so enough of the Fontaine's influence was left in her that it broke her completely."
+                        t "Cassandra needed help, Sophie. She wasn't severed when the simulation collapsed, so enough of Fontaine's influence was left in her that it broke her completely."
                         s "... you mean I could have saved her?"
                         show m 2d
                         t "Sophie, do not blame yourself. Do. Not."
                         s "But..."
                         t "You had no conscious control, remember? It just happened this way."
 
-                    if severLichelle == True:
+                    if lichBio.fullySevered == True:
                         show m 2m at mt1
                         show l 1m at f12
                         t "As for Lichelle, she's doing fine."
@@ -84,36 +86,30 @@ label endingGoodTania2:
                     # Robin answer the same regardless
                     show m 2a at mt2
                     s "What about Robin?"
-                    t "Robin disappeared."
+                    t "You know, it amazed me someone like her could even exist."
                     s "Huh?"
                     show m 2p
-                    t "Yeah. She came out of the collapse okay, made some financial moves, put out a video to her fans about retiring from streaming and vanished."
+                    t "She was almost like a fanfiction version of someone you knew personally."
                     s "Is she okay?"
                     show m 2a
                     t "I have no idea. I've searched for traces of her, but she's either completely off grid or has some other way of being invisible."
                     s "How does a woman who looks like her disappear?"
                     show m 2q
-                    t "No idea. At the very least she would've stood out in Northern Ireland, so I'm guessing maybe somewhere in the States. A big city."
-                    t "It's easy to vanish in a city."
-                    s "She was from Northern Ireland?"
+                    t "I can't say, Kyles. I mean, Sophie."
+                    t "I'm still not sure she was ever real."
+                    s "..."
+                    pause 1.0
+                    s "I can't let myself believe the simulation created her from nothing."
                     show m 2a
-                    t "She was living there, but I think her story about coming from Romania might be true."
-                    s "Oh?"
+                    t "Not nothing. Even Fontaine told us a lot of what we were seeing in Kylie's history belonged to you."
+                    s "... Louisa?"
                     t "Yeah."
-                    s "... which one?"
+                    s "I had to lose her twice, then."
                     show m 2q
-                    t "It might as well be the one about cooking."
+                    t "And yet here you are. Stronger, healthier than ever."
                     s "... huh."
-                    t "Spooky bitch."
-                    s "Ha. Yeah."
-                    s "... but... I thought she wasn't real."
-                    show m 2r
-                    t "Huh?"
-                    s "She's Louisa."
-                    show m 2b
-                    t "She was her own woman, hon. Maybe inside the sim your brain interpreted her as someone you knew."
-                    pause 0.5
-                    s "... I see."
+                    t "I'll miss her, though. In there, Robin was my friend."
+                    pause 0.1
                     s "So... what about Kylie?"
                     show m 2c
                     "It's hard to explain just how the mechanical expression falters at the name."

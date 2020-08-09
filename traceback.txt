@@ -1,40 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/robinDate2.rpy", line 1001, in script
-    play music battle
-  File "renpy/common/000statements.rpy", line 120, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "game/labels/robinDate2.rpy", line 1001, in <module>
-    play music battle
-NameError: name 'battle' is not defined
+  File "game/labels/endingTron5000.rpy", line 813, in script call
+    call endingTania
+  File "game/labels/endingTania.rpy", line 1436, in script
+    jump endcredits
+ScriptError: could not find label 'endcredits'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/robinDate2.rpy", line 1001, in script
-    play music battle
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 1949, in execute
-    self.call("execute")
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 1937, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\statements.py", line 277, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 120, in execute_play_music
-    renpy.music.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 2059, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/labels/robinDate2.rpy", line 1001, in <module>
-    play music battle
-NameError: name 'battle' is not defined
+  File "game/labels/endingTron5000.rpy", line 813, in script call
+    call endingTania
+  File "game/labels/endingTania.rpy", line 1436, in script
+    jump endcredits
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 1697, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\script.py", line 898, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'endcredits'.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Intolerable Jewelry 1.0
-Sun Jun 28 21:20:09 2020
+Sun Aug 02 21:39:20 2020

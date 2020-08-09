@@ -46,6 +46,9 @@ label biographies:
             # create a mutator to increase the bio level.
             def levelUp(self):
                 self.level += 1
+            # set level explicitly in case we fuck up
+            def setLevel(self, level):
+                self.level = level
 
             # mutator to set trivia state
             def setTrivia(self, value):
@@ -53,6 +56,9 @@ label biographies:
 
             def loveUp(self):
                 self.love += 1
+
+            def setLove(self, value):
+                self.love = value
 
             def setAge(self, value):
                 self.age = value
@@ -67,7 +73,7 @@ label biographies:
                 self.fullySevered = True
 
             # make it so a severance interview can only be viewed once
-            def severViewed(self):
+            def severView(self):
                 self.severViewed = True
 
             # set bio eyes plate
@@ -281,7 +287,7 @@ label biographies:
 
         fontBioText = [
             "I don't know this person yet.",
-            "I've been with you for such a long time, Sophie! Longer than anyone, really, if you consider the multiplicative effect opioids have on time perception.\n\nThe best part about all this is how willingly you let me into your arms. I love when I can be literal and figurative in the same phrase!\n\nI'll kill you someday. It might be soon. It might be tomorrow. It might be five minutes ago. But I love you, either way. I love you so deeply, so completely, a filthy bitch like Robin can't stand up to the light I produce.\n\nI loved her, too, but she couldn't stand in my presence. She was too weak. Even when you shared me with her, she wasted me.\n\nI will hold you close. I will keep you here, where you need me, for as long as you live. And when you die, people will remember you not as Sophie, Internet-famous gamer, but as Sophie, but the sad, sad statistic.",
+            "I've been with you for such a long time, Sophie! Longer than anyone, really, if you consider the multiplicative effect opioids have on time perception.\n\nThe best part about all this is how willingly you let me into your arms. I love when I can be literal and figurative in the same phrase!\n\nI'll kill you someday. It might be soon. It might be tomorrow. It might be five minutes ago. But I love you, either way. I love you so deeply, so completely, a plain bitch like Robin can't stand up to the light I produce.\n\nI loved her, too, but she couldn't stand in my presence. She was too weak. Even when you shared me with her, she wasted me.\n\nI will hold you close. I will keep you here, where you need me, for as long as you live. And when you die, people will remember you not as Sophie, Internet-famous gamer, but as Sophie, the sad, sad statistic.",
         ]
 
         fontTrivia = [
@@ -319,7 +325,7 @@ label biographies:
         kylieBioText = [
             "Hi. I'm me.",
             "Kylie sort of fell into One Week Waifu by accident. Our showrunners wanted to do a college tour, in part because folks were tired of model-perfect single women having model-perfect men compete for their attention in a multimillion-dollar mansion.\n\nShe fit the bill perfectly: an everywoman with a personable affect, an open mind, and most important a vulnerable streak a mile wide. She wears her emotions on her sleeve, which makes for excellent TV, they said.\n\nHer life prior to this is nothing unusual. It's the kind of American upbringing to which most people can relate, really. I would never tell her this to her face, but she's kind of a blank slate so I thought it would be easy for viewers to project themselves onto her.\n\nHonest opinion? She makes me smile. I don't quite know why, but there's something almost unfairly good about her. She's not the most Hollywood beautiful, she's no genius, she's no athlete. She's just relatable.\n\nIt helps enormously that she's bisexual. It kind of falls in line with the whole 'everyone can relate' aspect of her.",
-            "I mean, really. What kind of biography does Kylie have? What has she told you about herself? Surface-level details? Perhaps something about events she shares with Sophie?\n\nI wonder, truly, why that might be. ."
+            "I mean, really. What kind of biography does Kylie have? She has an American upbringing to which most people can relate? Sure. The kind with no backstory whatsoever.\n\nWhat has she told you about herself? Surface-level details? Perhaps something about events she shares with Sophie?\n\nI wonder, truly, why that might be. I wonder whether her masturbatory simulation fantasies could possibly take root inside a fantasy of a fantasy. \n\nActually she's been dead the whole time. \n\nOh, no, sorry, she's a dream. \n\nAhahahhaaaahahhaa no, wait, no, she's a memory. \n\nA flashback. \n\nShe's a self-aware AI. \n\nWait wait wait. \n\nShe's definitely real. Definitely."
         ]
         # define default bios. Do this at end so bio variables will be in place
         cassBio = Biography(0, "Cassandra Sanna", bioCass,
@@ -371,6 +377,14 @@ label biographies:
         bioBlockHt = 500
         currentTrivia = ""
         bioColumns = 5
+        taniaAvailable = False
+
+        def toggleAskTania():
+            global taniaAvailable
+            if taniaAvailable:
+                taniaAvailable = False
+            else:
+                taniaAvailable = True
 
         def closeAskTania():
             # closes entire biographies/askTania menu.
@@ -427,11 +441,15 @@ label biographies:
     #--------------- screens and transforms
 
     default askTaniaBack = Image("img/backAskTania.png")
+    # ask fontaine background
+    default askTaniaBack2 = Image("img/backAskTania2.png")
     default severanceBack = Image("img/backSeverance.png")
+    default fontaineRevealed = False
 
     # back to variables
 
     default taniaFace = askTa
+    default fontFace = Image("img/askFontaine.png")
     default iconHeartEmpty = Image("img/iconEmptyHeart.png")
     default iconHeartFull = Image("img/iconFullHeart.png")
     default iconBtnBack = Image("img/iconBtnBack.png")
@@ -458,7 +476,10 @@ label biographies:
         modal True
 
         fixed at alphaFaster:
-            add askTaniaBack
+            if fontaineRevealed:
+                add askTaniaBack2
+            else:
+                add askTaniaBack
 
             # nameplates
             fixed:
@@ -496,12 +517,14 @@ label biographies:
                             button:
                                 text "Trivia"
                                 background "#777733"
+                                hover_background colorHover
                                 ypos 0.5
                                 action Function(showTrivia, i)
 
                             button:
                                 text "Bio"
                                 background "#444444"
+                                hover_background colorHover
                                 ypos 0.5
                                 action Function(showBio, i)
 
@@ -514,6 +537,7 @@ label biographies:
 
         button:
             background iconBtnBack
+            hover_background iconBtnBack2
             ypos 580
             xsize 100
             ysize 100
@@ -538,10 +562,14 @@ label biographies:
     screen biography:
         modal True
         fixed at alphaFaster:
-            add askTaniaBack
+            if fontaineRevealed:
+                add askTaniaBack2
+            else:
+                add askTaniaBack
             # back button and close button
             button:
                 background iconBtnExit
+                hover_background btnExit2
                 ypos 580
                 xsize 100
                 ysize 100
@@ -550,6 +578,7 @@ label biographies:
 
             button:
                 background iconBtnBack
+                hover_background iconBtnBack2
                 ypos 580
                 xsize 100
                 ysize 100
@@ -600,8 +629,8 @@ label biographies:
                 ypos 450
                 xsize 480
                 ysize 120
+                padding(10,10)
                 viewport id "bio-Bio":
-
                     yinitial 0.0
                     scrollbars "vertical"
                     mousewheel True
@@ -635,10 +664,11 @@ label biographies:
                 image currentlySelected.pic:
                     xalign 1.0
                     yalign 0.05
-            if currentlySelected.idNum == 4: 
-                image currentlySelected.pic:
-                    xalign 1.0
-                    yalign 0.1
+            if fontaineRevealed:
+                if currentlySelected.idNum == 4: 
+                    image currentlySelected.pic:
+                        xalign 1.0
+                        yalign 0.1
             if currentlySelected.idNum == 5: 
                 image currentlySelected.pic:
                     xalign 1.0

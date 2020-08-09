@@ -3,6 +3,9 @@ label severCassandra:
 
     $hideGui()
     $hideSeverancePanel()
+    stop music fadeout 6.0
+    scene bg black with fade
+    show image fountainShroud with dissolve
 
     pause 1.0 
 
@@ -15,6 +18,8 @@ label severCassandra:
     c "The music is supposed to speak on its own."
 
     t "Why pick that dress, then?"
+    pause 0.1
+    play music cassPiano
 
     c "It's stupid."
 
@@ -35,8 +40,10 @@ label severCassandra:
     t "That's not stupid."
 
     c "It felt that way. I always felt that way around her."
+    pause 0.1
 
     c "Unworthy."
+    pause 0.1
 
     t "How much did you know about her?"
 
@@ -55,6 +62,7 @@ label severCassandra:
     c "It's like..."
 
     c "..."
+    pause 0.1
 
     c "Imagine a theme park."
 
@@ -83,8 +91,10 @@ label severCassandra:
     c "Shit. No. I was a better musician strung out on dirt than I ever was off it."
 
     t "Dirt?"
+    pause 0.1
 
     c "Don't play dumb."
+    pause 0.1
 
     t "Of course. Sorry, hon."
 
@@ -203,6 +213,9 @@ label severCassandra:
     t "Take your time."
 
     c "..."
+    pause 0.1
+
+    show image splashDrown2 with dissolve
 
     c "She was blue. I remember her face in the streetlight. It was pale, it was blue."
 
@@ -219,6 +232,17 @@ label severCassandra:
     t "They were there that fast?"
 
     c "I dunno. Time fell apart for me. It was freezing."
+
+    pause 0.4
+
+    image redBlue:
+        fountainRed with dissolve
+        pause 1.0
+        fountainBlue with dissolve
+        pause 1.0
+        repeat
+
+    show redBlue with dissolve
 
     c "... she died right in front of me."
 
@@ -296,6 +320,8 @@ label severCassandra:
 
     t "So you..."
 
+    pause 0.2
+
     c "... yeah. I wanted to help. So... I gave her a bad dose."
 
     t "Did it... oh my god."
@@ -334,7 +360,9 @@ label severCassandra:
 
     c "Sophie has to decide what's real for her."
 
-    
+    scene bg black with dissolve
+
+    show c 2c at f12
 
     c "I'd give anything to take it all back."
 
@@ -350,24 +378,28 @@ label severCassandra:
 
     t "Thank you, Cassandra. For telling us the truth."
 
-    c "... yeah. Sure."
+    c 1b "... yeah. Sure."
 
     scene bg black with fade
+    stop music fadeout 4.0
 
     c "If I'm honest with you..."
 
     c "I kind of wish I was more like the Cassandra in here."
 
-    $cassBio.severViewed()
+    $cassBio.severView()
 
     scene bg dressing with fade
 
     pause 1.0
     $showGui()
+    play music bedroom fadein 1.0
 
     k "Huh? I must've dozed off."
 
-    return
+    $severToggle()
+
+    
 
 
 

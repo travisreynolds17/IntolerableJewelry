@@ -48,22 +48,32 @@ label leftbuttonwindow:
         modal False
         tag leftBtnWindow
         fixed at summonSoph:
-            xpos lbtnX
-            ypos lbtnY
+            xpos lbtnX +3
+            ypos lbtnY +4
             xysize(lbtnWidth, lbtnHeight)
             hbox:
                 # ask tania is where in-game help menus, as well as character bios, can be found. Maybe put settings here, too? 
-                button: 
-                    add btnAskTania
-                    xysize(lbtnWidth/2, lbtnHeight)
-                    action Function(showAskTania)
+                if fontaineRevealed:
+                    button: 
+                        background btnAskFont
+                        hover_background btnAskFont2
+                        xysize(lbtnWidth/2, lbtnHeight)
+                        action Function(showAskTania)
+                
+                else:
+                    button: 
+                        background btnAskTania
+                        hover_background btnAskTania2
+                        xysize(lbtnWidth/2, lbtnHeight)
+                        action Function(showAskTania)
 
                 
                 
 
                 button:
                     #chatHistory
-                    add btnChatHistory
+                    background btnChatHistory
+                    hover_background btnChatHistory2
                     xysize(lbtnWidth/2, lbtnHeight)
                     action Function(showChatHistory)
 

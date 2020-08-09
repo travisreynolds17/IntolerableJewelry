@@ -1,99 +1,13 @@
-Things we still need to do:
+New todo as of 8-9
 
-Revamp affection system to:
-    a) ensure each character gets 6 opportunities to raise love level, with one being a chance to drop level.
-    b) revamp those affection changes to use the love setter method in biographies
-    c) art. dangit. see later section for specifics
-    d) soundtrack. Have pieces written, but need to zero in and determine which songs
-        are needed for which scenes, establish concrete character themes. see later section.
-    d+) set up track list and start brainstorming names for songs
-    e) Maybe have a third real world scene mirroring the first? I dunno if it should be made so damn obvious.
-        alternatively, rework the first scene so it's a little more cryptic. David is trying to get Sophie to give up heroin, not give up streaming.
-    f) Define some custom transforms for character positioning, see, the in game gui covers a ton of 
-        screen space. Might feel too claustrophic. May have to alter the gui for more space.DONE
-    g) Implement the string sever function to replace the subscribe button. This should occur with almost
-        no fanfare when the game loop resets.
-    h) Adjust character trivia and bios to alt versions at appropriate places. Robin and Cass each have a 
-        dark turn in their dates, Cass when Kylie is KO'd, Robin when she reveals the heroin on a platter.
-    j) Implement subscribe button messages. On click, you get a weird message and then it resets to subscribe.
-        Maybe use a setter method for this.
-    k) Still need to adjust endings to fit with new drug addict storyline. I'm not sure if I want them to be delusions. Tania's with mortimer et al is nice, but it doesn't work as well with hte heroin plot. DONE(ish)
-    l) adjust all bad endings such that some relic of the game still being played exists. Either have chat appear to comment or some graphical glitch happen.
-    m) set up some simple boiler-plate bad endings for characters who aren't severed if you get a bad ending. Example: I got Lichelle's trap ending. I have only severed Robin. I then get Cass and Tania's simple bad ending before the Lichelle ending plays out.
-    n) Adjust main menu, figure out how to add a splash screen.
-    o) Might need to adjust basic ui functions, too?
-    p) Rework the story such that David is actually a great guy. Point out that FIzz isn't really him, just a 
-        concoction of sophie's memories good and  bad.
-    q) Change David's name? To something thematic?
-    r) adjust all scene transitions and ensure appropriate cleanup (i.e. getHistory()) are being implemented
-        correctly.
-    s) gonna need SFX. Re-work Robin's shutoff effect to be less loud.-done
-    t) need to make end credits
-    u) more trivia for each character? Though I think too much might be too much. Speaking of which:
-        - Kylie's trivia needs to be updated to reflect her choices in the game.
-    v) side story for each character? something to trigger maybe during dates?
-    
-
-
-
-
-    ART NEEDS
-
-    1) Character art including Sophie's face bubble for GUI. 
-
-    2) Splash screens to include:
-        - Electrified Sophie when she tries to remove headphones
-        - Dead sophie lying on desk in bad lichelle ending. Maybe a small image of kylie and Tania together?
-        - Dead robin on the ground in common4
-        - Fontaine prowling in the 'real world' for the didn't sever Fontaine ending
-        - David's proposal maybe? Sophie handing the ring box back, maybe showing her track marks?
-        - Kylie dying with a smile on her face?
-        - A splash for each of the good endings:
-            At the piano with Cass
-            jujitsu with lichelle
-            in the kitchen with Robin?
-            maybe tania treating a wound on a sheepish kylie
-            if accept the entity? maybe an ending where Kylie holds liv while she cries, and both of their bodies are fading into binary?
-            Four possessed girls looking at Sophie in hospital
-            a good ending with David
-        - a splash of sophie's arm on the floor, the ligature around her bicep, maybe her headphones lying nearby?
-    3) Finalize Gui and menu screens:
-        - Main gui.
-        - Ask Tania
-        - biographies
-        - help menu
-        - any save/load screens if we adjust gui
-    4) Need icons for:
-        - close button (x)
-        - back button
-        - maybe icons for ask tania/subscribe/recaps
-    5) Character thumbnails for main gui affection menu. Though, maybe remove that entirely? probably not.
-    6) 
-
-
-
-    soundtrack
-
-    1) All purpose sad stuff track. 
-    2) Each girl needs a leitmotif of her own. Something simple that you can build into tracks.
-    3) A horror theme for bad ending entity.
-    4) A simple, high-tension track for high tension spots
-    5) A title track. Maybe featuring each girl's leitmotif.
-    6) Every character will have a stripped down sine wave version of the theme maybe.
-    7) SFX:
-        - heartbeat
-        - splashing sound (to be played during transitions. It's the sound of louisa in the fountain)
-        - phone vibration?
-        - a couple different glitch/distortions. static, screeching, but nothing jarring or loud
-        - fix Robin's lights out effect
-    8) Gonna leave a note that tells me where to go back and add sounds as I'm editing. Note is SFX
-
-
-
-    #Major issues
-
-    1) Adding NVL mode has caused a problem where before any transition or pause an empty say window appears. I'm pretty sure we can stop this by using window hide at the very beginnning and making sure to hide it after every NVL situation.
-
-    Alternatively there may be a preference that we can use. the NVL window should only every appear in NVL mode.
-
-    Alternatively, could rewrite to remove all NVL. Dammit. Not what we want.
+- Robin's sprite needs work. Some expressions are off. Pose 1 is off balance.
+- Tania's 2 pose has some shading issues. looks like she pissed herself.
+- Title screen and end credits
+- Story dialog screens need adjusted, starting after RealWorld2. They're too specific to real life. Need to be more about heroin. 
+- Main gui still has green lines. Adjust gui sprite so it has dark instead of green anyway
+- Fix lichelle's lip gloss. far away it looks like she has a mike tyson tooth.
+- Fix choices so they center in the game gui unless outside the game.
+- fix bg playhouse beginning robindate2
+- maybe another fontaine pose?
+- fix image of cass lich tania showing up when fontaine does. splice them together? or like a whirling circle of their heads sewn to a thing?
+- fix fontaine zoom when she tells Sophie about stopping her heart

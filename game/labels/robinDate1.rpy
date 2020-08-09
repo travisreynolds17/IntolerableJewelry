@@ -8,7 +8,7 @@ label robinDate1:
 
     scene bg dressing with longFade
 
-    play audio bedroom fadein 0.4
+    play music2 bedroom fadein 0.4
 
     $showGui()
 
@@ -52,7 +52,7 @@ label robinDate1:
 
     ki "She gestured with her head, subtly, toward one of the tables."
 
-    stop audio fadeout 3.0
+    stop music2 fadeout 3.0
 
     play music robin fadein 4.5
 
@@ -248,6 +248,8 @@ label robinDate1:
     # endchoice
 
     $chat.addmessage(bar, "Solid choice.")
+
+    stop music fadeout 2.0
 
     ki "Okay, nerves. Pack your bags and let's go."
 
@@ -819,7 +821,7 @@ label robinDate1:
 
     ki "The food is sublime. It isn't as if coq au vin is a life-changing dish but the weight of her story lends fullness to the flavor."
 
-    ki "The brie is tender in that almost-not-quite-creamy sort of way, sweet and cruncy on top from the honey and almonds. Robin is a deft hand, that much is certain."
+    ki "The brie is tender in that almost-not-quite-creamy sort of way, sweet and crunchy on top from the honey and almonds. Robin is a deft hand, that much is certain."
 
     $chat.addmessage(beav, "Makes me want a big-ass roast chicken.")
 
