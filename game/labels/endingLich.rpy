@@ -1,31 +1,11 @@
 label endingLich:
     #in which sophie is invited to Lichelle's dojo
 
-    "Mortimer leads the way once again, dependable little fellow that it is."
-
-    "On the other side of the grand staircase, away from the parlor where David has begun philosophizing on the utility of timing belts, the little robot stops."
-
-    show m at fl12
-
-    m "Madam! Please remove your shoes inside the doors."
-
-    s "Oh?"
-
-    m "For the sake of the flooring."
-
-    s "Ah."
-
-    hide m at fl12
-
     scene bg gym with fade
 
-    "I'm not sure what I expected when Tania said the word gym, but this isn't exactly it."
+    "She called me up not long after Cassandra's service."
 
-    "Most of the equipment appears therapeutic in nature: yoga mats and blocks, foam cylinders, a massage table."
-
-    "There do appear to be a few new additions, though. Boxing equipment seems somewhat hastily rigged up, with shipping boxes stacked against the wall nearby."
-
-    "There's one other new addition."
+    "Most of the equipment here appears therapeutic in nature: yoga mats and blocks, foam cylinders, a massage table."
 
     show l 1j at fr12
 
@@ -69,6 +49,8 @@ label endingLich:
 
     s "I'd hate to meet them."
 
+    "I say nothing about Robin. There's no need."
+
     l "Nah. Just about every jujitsu player is cool."
 
     "It's banter. It's small talk."
@@ -89,7 +71,7 @@ label endingLich:
 
     l "Don't wanna. There's gonna be time for that now that we're here."
     
-    l 1a "And I'd rather just have a good time with a new friend. Roll. Grab dinner. Drink beer. Talk shit."
+    l 1a "And I'd rather just have a good time with a new friend. Roll. Grab dinner. Talk shit."
 
     s "Lichelle..."
 
@@ -240,7 +222,7 @@ label endingLich:
 
     l "I don't think she could get licensed to fight. Pretty sure you need to be able to move."
 
-    s "And it's probably hard to armbar a flying robot ball thing."
+    s "And it's probably hard to armbar someone without arms."
 
     l "I'd find a way."
 
@@ -288,7 +270,7 @@ label endingLich:
 
     l "Then she saw you. It only damn took once."
 
-    l "She only had eyes for you. Fine. I wasn't tryin to marry her. I just needed a friend and she... she just showed up one day and was the best friend I ever had besides my dad."
+    l "She only had eyes for you. Fine. I wasn't tryin to marry her. I just needed a friend and she... she just showed up one day and was the best friend I ever had. Besides my dad."
 
     s "..."
 
@@ -338,36 +320,39 @@ label endingLich:
 
     "She's quiet for a little too long. Perhaps I overplayed my hand."
 
-    l "Not here."
+    if loveConfession == "Lichelle":
 
-    s "No?"
+        l "Not here."
 
-    show l 1b at f12
+        s "No?"
 
-    "She stands again, offers a hand."
+        show l 1b at f12
 
-    l "I still hate you."
+        "She stands again, offers a hand."
 
-    l 1k "I'm... willing to work through that."
+        l "I still hate you."
 
-    l 1b "With you."
+        l 1k "I'm... willing to work through that."
 
-    s "... thank you."
+        l 1b "With you."
 
-    l 1b "But come on. We need some pillows for all this pillow talk."
+        s "... thank you."
 
-    l 1p "If you want."
+        l 1b "But come on. We need some pillows for all this pillow talk."
 
-    s "Pillow talk, what do you oh. Oh, I, uh, okay."
+        l 1p "If you want."
 
-    "Smooth."
+        s "Pillow talk, what do you oh. Oh, I, uh, okay."
 
-    s "Let's do that. Yes."
+        "Smooth."
+
+        s "Let's do that. Yes."
+        
 
 
     if severLich == False:
         l "Oh. First?"
-        s "Whammmmphhpp!"
+        s "Wha-mmmmphhpp!"
 
         show image splashEKGFull at summonEKG
         pause 0.3
@@ -407,10 +392,20 @@ label endingLich:
         pause 2.0
 
         scene bg black with longFade
-        jump endCredits
-        #show ekg flatline
+
+        pause 3.0
+
+        "End: Damned in Elle"
+
+        show image splashEKGFull at summonEKG
+        
+        pause 2.3
+        hide image splashEKGFull at summonEKG
+
+        "Huh? What happened?"
 
         # finish her
-
     scene bg black with fade
+
+    
     return

@@ -2,9 +2,7 @@ label severTania:
     # in which Tania talks about running the program and what happened with her and David
 
     $hideGui()
-    $hideSeverancePanel()
     stop music fadeout 6.0
-    scene bg black with fade
     show image fountainShroud with dissolve
 
     pause 1.0
@@ -64,7 +62,6 @@ label severTania:
     d "Well, she's a verified dime piece, so..."
 
     show t 1b at f12
-
 
     t "In that case, thank you, you sweet boy."
     hide e
@@ -214,7 +211,7 @@ label severTania:
 
     d "It's good to have friends in power, isn't it?"
 
-    t "It's to earn friends in power. St. Agatha's hadn't had a single overdose in our program in years, and now we've had two back to back."
+    t "It's good to earn friends in power. St. Agatha's hadn't had a single overdose in our program in years, and now we've had two back to back."
 
     d "Two?"
 
@@ -227,7 +224,7 @@ label severTania:
     t 1b "Louisa drowned that night in the fountain, that's true."
 
     t "..."
-
+    hide redBlue with dissolve
     d "You okay?"
 
     t "... I just..."
@@ -244,6 +241,8 @@ label severTania:
     d "Hey. Breathe."
 
     t "..."
+
+    hide splashDrown2 with dissolve
 
     t "Sophie doesn't want to get better."
 
@@ -357,11 +356,41 @@ label severTania:
 
     t 1b "It's hers."
 
-    t "I hope she can see her way to forgiving herself, too."
+    t "Did you notice how this place has altered us to fit Sophie's perceptions?"
+
+    d "It's hard to tell. I don't see much, just being stuck in comments."
+
+    pause 1.0
+
+    show image splashWired with dissolve
+
+    pause 1.0
+
+    t "I'm glad at least that you could see me this way."
+
+    d "Tania."
+
+    t "... this is how I feel about myself, too. Sophie's right about me."
+
+    show image splashWiredOpen with dissolve
+
+    t "Powerless. Broken."
+
+    d "That's not true."
+
+    t "She sees you as caring, nurturing. Strong. A lot to say."
+
+    d "..."
+
+    hide splashWiredOpen with dissolve
+
+    t "I'm tired, David."
 
     d "Yeah."
 
-    e "Thank you, David."
+    e "It's sad, though."
+
+    hide splashWired with dissolve
 
     e 2q "You'll remember none of this."
 
@@ -371,29 +400,24 @@ label severTania:
 
     t 2m "I'll make it up to you out there."
 
+    show e 1m at f12
+
     e  "Somehow."
     stop music fadeout 4.0
-    scene bg black
-
     d "You don't have to make anything up to me."
 
     d "As long as Sophie's okay."
+
+    hide e 2m at f12
 
     t "That's not up to us, David."
 
     d "... no. No, it isn't."
 
-
     $taniaBio.severView()
 
-    scene bg dressing with fade
-
     pause 1.0
-    $showGui()
-    play music bedroom
 
     k "Oh. I... I guess I spaced out for a minute."
 
     pause 0.5
-
-    

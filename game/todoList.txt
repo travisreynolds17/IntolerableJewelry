@@ -3,7 +3,6 @@ New todo as of 8-9
 - Robin's sprite needs work. Some expressions are off. Pose 1 is off balance.
 - Tania's 2 pose has some shading issues. looks like she pissed herself.
 - Title screen and end credits
-- Story dialog screens need adjusted, starting after RealWorld2. They're too specific to real life. Need to be more about heroin. 
 - Main gui still has green lines. Adjust gui sprite so it has dark instead of green anyway
 - Fix lichelle's lip gloss. far away it looks like she has a mike tyson tooth.
 - Fix choices so they center in the game gui unless outside the game.
@@ -11,3 +10,9 @@ New todo as of 8-9
 - maybe another fontaine pose?
 - fix image of cass lich tania showing up when fontaine does. splice them together? or like a whirling circle of their heads sewn to a thing?
 - fix fontaine zoom when she tells Sophie about stopping her heart
+- sprinkle a few more affection raisers. Maybe comment on how they aren't big moments every time.
+- fix and fill out trivia
+- fix ask fontaine sprite
+- fix chat history screen. note recaps and chat history are reversed. art and buttons.
+
+- art of kylie and fontaine bleeding out 

@@ -36,7 +36,7 @@ label endTania:
     t "This doesn't really feel earned, but..."
     t 1n "Okay."
     if taniaEnd == 0:
-        s 1a "Okay, I think I won!"
+        s 1a "I think I won!"
     ki "Tania's gentle fingers brush my palm as she slides our hands together."
 
     $chat.addmessage(cake, "oh my god, really? really really?")
@@ -86,7 +86,7 @@ label endTania:
     $chat.addmessage(fon, "I told you. ;)")
     pause 1.0
 
-    k "... I don't mind if you don't."
+    k "... I don't mind if you don't mind."
 
     $renpy.notify("This isn't me")
 
@@ -167,7 +167,7 @@ label endTania:
 
         $chat.addmessage(unkn, "CHAT unavailable")
 
-        s "You know, I think the code might just be broken."
+        s 1k "You know, I think the code might just be broken."
 
         pause 1.0
         stop music

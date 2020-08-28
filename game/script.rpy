@@ -16,23 +16,23 @@
 # The game starts here. First, housekeeping.
 
 # define all characters, transforms, variables, etc.
-call declarations
+call declarations from _call_declarations
 # create and declare the chat window.
-call chatwindow
+call chatwindow from _call_chatwindow
 
 # define what we need for main game GUI
-call mainWindow
+call mainWindow from _call_mainWindow
 
 # create and declare the love window
-call loveBox
+call loveBox from _call_loveBox
 # create and declare button window
-call btnWindow
-call leftbtnwindow
+call btnWindow from _call_btnWindow
+call leftbtnwindow from _call_leftbtnwindow
 
 label start:
-
+    
   # just to whatever we're testing currently
-    jump common1
+    jump opening
 
     # This ends the game.
 

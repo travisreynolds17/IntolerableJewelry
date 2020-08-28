@@ -1,26 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/labels/endingTron5000.rpy", line 813, in script call
-    call endingTania
-  File "game/labels/endingTania.rpy", line 1436, in script
-    jump endcredits
-ScriptError: could not find label 'endcredits'.
+  File "game/labels/cassDate2.rpy", line 545, in script
+    $chat.history.add(temp)
+  File "game/labels/cassDate2.rpy", line 545, in <module>
+    $chat.history.add(temp)
+AttributeError: 'RevertableList' object has no attribute 'add'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/labels/endingTron5000.rpy", line 813, in script call
-    call endingTania
-  File "game/labels/endingTania.rpy", line 1436, in script
-    jump endcredits
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 1697, in execute
-    rv = renpy.game.script.lookup(target)
-  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\script.py", line 898, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'endcredits'.
+  File "game/labels/cassDate2.rpy", line 545, in script
+    $chat.history.add(temp)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\John Dough\Documents\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/labels/cassDate2.rpy", line 545, in <module>
+    $chat.history.add(temp)
+AttributeError: 'RevertableList' object has no attribute 'add'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Intolerable Jewelry 1.0
-Sun Aug 02 21:39:20 2020
+Thu Aug 27 20:44:14 2020

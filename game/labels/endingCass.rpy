@@ -1,128 +1,124 @@
 label endingCass:
     
-    scene bg music room with fade
+    if cassBio.severViewed:
+        scene bg music room with fade
 
-    "Mortimer spins in the air, for no reason I can deduce, and leads the way from Tania's..."
 
-    "Bedroom? I guess?"
+        "The music room is intimate, warm and comfortable, everything one might expect from a place like this."
 
-    "The house blooms outward from a grand staircase in the foyer. I can hear David shouting about Pittsburgh's football team being evil, down to the man, from the parlor nearby."
+        "Even the floor is laid out in a black and white checkerboard pattern, like piano keys."
 
-    pause 0.5
+        "Speaking of which, there's a gorgeous baby grand sitting proudly across the room."
 
-    "I'm curious about what's upstairs, but the little robot floats past the staircase and through a set of padded double doors that remind me of old gothic horror movies."
+        show c 1p at f12
 
-    "A few timid, wandering notes sing softly from within."
+        "And suddenly, Cassandra."
 
-    show m at fr12
+        "She looks exactly like her counterpart in the simulation, somehow."
 
-    m "If you please, ma'am."
+        "Choker and all."
 
-    s "Thanks, Mortimer. I appreciate your help today."
+        s "Cassandra."
 
-    "It's like showing gratitude to a toaster. Isn't it?"
+        "It's odd. Her name came to my lips, but anything beyond that?"
 
-    pause 0.5
+        "I have no idea what to say. Nice to see you? How've you been? Glad you're alive?"
 
-    hide m at f12
+        show c 1m
 
-    pause 0.5
+        "She doesn't answer. She doesn't have to."
 
-    "The music room is intimate, warm and comfortable, everything one might expect from a place like this."
+        "Cassandra settles onto the piano bench, brushes a bit of her hair from her eyes."
 
-    "Even the floor is laid out in a black and white checkerboard pattern, like piano keys."
+        "And plays."
 
-    "Speaking of which, there's a gorgeous baby grand sitting proudly across the room."
+        #piano song. whatever.
 
-    show c 1p at f12
+        "She plays so beautifully."
 
-    "And suddenly, Cassandra."
+        "And patiently."
 
-    "She looks exactly like her counterpart in the simulation, somehow."
+        "She's clearly in no hurry, but that's fine."
 
-    "Choker and all."
+        show c 1a
 
-    s "Cassandra."
+        "Watching her play is mesmerizing. The way she sways, the way she looks almost bored, resigned to her hands going through the motions."
 
-    "It's odd. Her name came to my lips, but anything beyond that?"
+        "She seems so unreachable."
 
-    "I have no idea what to say. Nice to see you? How've you been? Glad you're alive?"
+        #fade out music
 
-    show c 1m
+        "I find myself applauding, which I suppose is just clapping when a person is alone."
 
-    "She doesn't answer. She doesn't have to."
+        show c 1m
 
-    "Cassandra settles onto the piano bench, brushes a bit of her hair from her eyes."
+        "She pats the piano bench next to her. Beckons to me with one hand."
 
-    "And plays."
+        #show cass up close?
 
-    #piano song. whatever.
+        "The bench is warm where she was sitting."
 
-    "She plays so beautifully."
+        "I don't know when, or if, to speak."
 
-    "And patiently."
+        "She begins to play again, a jaunty, upbeat tune with just a hint of wistfulness."
 
-    "She's clearly in no hurry, but that's fine."
+        "I don't recognize the tune, but a tilt of her chin leads me to follow her gaze to the sheet music."
 
-    show c 1a
+        "'To you, my friend'."
 
-    "Watching her play is mesmerizing. The way she sways, the way she looks almost bored, resigned to her hands going through the motions."
+        "I should say something. But for now, I only listen."
 
-    "She seems so unreachable."
+        "I guess I should have listened sooner."
 
-    #fade out music
+        #love
 
-    "I find myself applauding, which I suppose is just clapping when a person is alone."
+        if loveConfession == "Cassandra":
+            "She smells like coconut."
+            
+            "And... hibiscus. Definitely."
 
-    show c 1m
+            "I wonder what to do."
 
-    "She pats the piano bench next to her. Beckons to me with one hand."
+            "No, I don't. I know."
 
-    #show cass up close?
+            "She doesn't flinch when I slip my arm around her waist."
 
-    "The bench is warm where she was sitting."
+            "A smile. Just a small, small smile."
 
-    "I don't know when, or if, to speak."
+            "A tear on her cheek."
 
-    "She begins to play again, a jaunty, upbeat tune with just a hint of wistfulness."
+            "Out there, in here... our relationships were so different."
+            
+            "But I wonder."
 
-    "I don't recognize the tune, but a tilt of her chin leads me to follow her gaze to the sheet music."
+            "Where we are... is it the Cassandra who is open to being with a woman?"
 
-    "'To you, my friend'."
+            "I don't know."
 
-    "I should say something. But for now, I only listen."
+            "I won't push her. I won't try to change her."
 
-    "I guess I should have listened sooner."
+            "I want to let her make up her own mind."
 
-    #love
+            "But for just now, just this moment"
 
-    if loveConfession == "Cassandra":
-        "She smells like coconut."
-        
-        "And... hibiscus. Definitely."
+            "I want to dream."
+    else:
+        "Cassandra's funeral drew quite a crowd."
+        "Made headlines. What a tragedy. What a waste of young brilliance."
+        "That's true. It's also true the throngs of people who came to be seen at her funeral could have been there for her as she fought with her own addiction."
+        "Copy paste that line into almost every junkie's obituary."
+        "I had to be there. Mine was the last bed she shared. For better or for worse."
+        "She hated me. That much is clear, now. At least, she hated me when we went into the bathroom at Ganymead together."
+        "I don't know what changed."
+        "I don't know why she switched the doses at the last second."
+        "What was in her syringe? What was in mine?"
+        pause 1.0
+        "Death. Just... death."
+        "I'm sorry Cass. I failed you before I even knew you."
+        "And again, when I did."
 
-        "I wonder what to do."
-
-        "No, I don't. I know."
-
-        "She doesn't flinch when I slip my arm around her waist."
-
-        "A smile. Just a small, small smile."
-
-        "A tear on her cheek."
-
-        "She said she wasn't interested in women."
-        
-        "But I wonder."
-
-        "I won't push her. I won't try to change her."
-
-        "I want to let her make up her own mind."
-
-        "But for just now, just this moment"
-
-        "I want to dream."
-
+    pause 1.0
+    "End: Sobredosis"
     return
 
     #end. To next ending (Lichelle) by way of EndingTron

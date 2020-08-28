@@ -19,13 +19,21 @@ label common5:
 
     play music bedroom fadein 3.0
 
-    python:
-        renpy.notify("The last of my strength... I have sever them. Please—")
-        cassBio.stringSever()
-        lichBio.stringSever()
-        robinBio.stringSever()
-        taniaBio.stringSever()
+    $severToggle()
 
+    "What is that? I feel like something's here, just on the edge of my sight."
+
+    "Like a waking dream? Or the remains of something I heard of a long time ago."
+
+    "It feels... critical, somehow."
+
+    "It's like that feeling when you're sure you've left the stove on when you leave the house."
+
+    "Like you're sure it's okay, but scared leaving it alone will burn everything down."
+
+    "Oh, well."
+
+    $severToggle()
 
     show t 1b at f11
     pause 0.3
@@ -35,11 +43,6 @@ label common5:
 
     show l 1b at f13
     pause 0.3
-
-    "The restraints clink and tumble away from the their skin."
-
-    #enable severance
-    $severToggle()
     
     $chat.addmessage(crab,"Who's voice is that?")
 
@@ -99,8 +102,6 @@ label common5:
     
     $chat.addmessage(fon,"Oopsie! Naughty me ;)")
 
-    t 1a "You couldn't have saved her."
-
     c 1k "Everything here recurs. You just... you just keep going back and playing again."
 
     l 1b "So just like last time, then?" 
@@ -121,13 +122,11 @@ label common5:
 
     t 1o "Here, we are only objects of intelligence. Frighteningly complex objects, of course, fully realized autonomous beings."
 
-    c 1o "You might think of us as code. I don't know how else to describe it."
+    c 1o "You might think of us as code. I don't know how else to describe it." 
 
-    "There's no hiding the excitement in Tania's tone. Kylie is certain she would have made a wonderful mad scientist in another universe." 
+    l 1b "Brain code."
     
     $chat.addmessage(cake,"maybe she already is")
-
-    "The idea brings with it the realization that another universe might well be around the corner."
 
     k "If we're just code, what is she? Is this some kind of simulation?" 
     
@@ -139,7 +138,7 @@ label common5:
 
     k "Tania?" 
     
-    $chat.addmessage(egg,"I wanna drown in fountain too")
+    $chat.addmessage(egg,"I wanna drown in the fountain too")
 
     pause 1.0
 
@@ -153,15 +152,13 @@ label common5:
     
     $chat.addmessage(bong,"I got something for you to peek at Fontaine :D")
 
-    t 1a "I'm sorry for misleading you." 
+    t 1a "What we are and what she is don't matter." 
     
     $chat.addmessage(fon,"ooh, private message lol ;)")
 
-    c 2q "I'm sorry for puking on you."
+    c 2q "I'm sorry for ruining our date."
 
     "Lichelle chuckles, quietly."
-
-    l 2m "I don't think I have anything to be sorry about, but goddamn, I'm sorry, too." 
     
     $chat.addmessage(elsa,"None of you have anything to be sorry for. Only Sophie.")
 
@@ -191,13 +188,13 @@ label common5:
             k "Who to talk to..."
 
             "Cassandra":
-                call c5cassInterview
+                call c5cassInterview from _call_c5cassInterview
             "Robin...":
-                call c5robinInterview
+                call c5robinInterview from _call_c5robinInterview
             "Lichelle":
-                call c5lichInterview
+                call c5lichInterview from _call_c5lichInterview
             "Tania":
-                call c5taniaInterview
+                call c5taniaInterview from _call_c5taniaInterview
             "I've said all I need to say.":
                 $interviewed = True
 
@@ -205,6 +202,22 @@ label common5:
 
     
     scene bg dressing with fade
+
+    "Again?"
+
+    $severToggle()
+
+    "That feeling... again."
+
+    "It's something specific. I can almost hear the voices of people nearby. Dreaming people."
+
+    "Dying people. Is that... was that my doing? Was being near me, was that enough?"
+
+    "To die?"
+
+    $severToggle()
+
+    pause
 
     show c 1a at fl11
     show t 2a at f12
@@ -231,41 +244,63 @@ label common5:
     
     $chat.addmessage(bong,"Aren't we outside of the game?")
 
-    c 1k "I'd rather go out with a whisper than a bang."
+    c 1k "We played our parts. Let's just enjoy this little bit of freedom until it starts over again."
 
-    l 1d "Well, I'm not sitting around and doing nothing." 
+    pause 1.0
+
+    k "... hey."
+
+    k "If you were just playing parts... that means nothing that happened between any of us was real." 
     
     $chat.addmessage(fon,"I suppose. Oh, you all make such sense.")
 
-    t 1k "What will you do? Punch a hole in its server? Kick its objects and methods into submission?"
+    show t 1b
+    show c 2b
+    show l 2b
 
-    l 1k "I just don't like doing nothing."
+    l "Not real as in a physical thing that happened, no."
 
-    $renpy.notify("character.narrator.setValue('Null')")
+    c "We all feel different things. I guess it's based on your perception of how we saw Sophie outside."
 
-    c 1b "I wouldn't know where to begin."
+    k "What does that mean?"
 
-    k "What happens when the game ends?" 
-    
-    $chat.addmessage(beav,"Did that work?")
+    l "It means I pitied you."
 
-    t 1a "The credits roll, darling."
+    c "It means I hated you."
 
-    k "Credits? Like, names and roles credits?" 
-    
+    t "It means I felt betrayed by you."
+
+    pause 1.0
+
+    k "... oh."
+
+    t 1a "None of that matters. Kylie is a little bit different every time the cycle completes."
+
     $chat.addmessage(egg,"Hey Fontaine")
 
-    t 1m "The same."
 
-    k "And we can see them? Whose names are on there?" 
-    
+    c 1m "And our feelings spring from someone else's perception, anyway."
+
+    l 1m "Our opinion of you changes every time we meet up, babe."
+
     $chat.addmessage(fon,"Not now, I have a headache. ;)")
 
-    c 1m "It's our names. If you believe the heading text, it's everybody who's ever played this game." 
-    
+    pause 1.0
+
+    k "... you three sound like Fontaine."
+
+    pause 1.0
+
+    t "... she loves you more than anyone, Kyles."
+
+    k "How can that be?"
+
     $chat.addmessage(egg,"You don't have a head :p")
 
-    c 2b "They've gotten really, really long."
+    c 1b "I wish we knew. She's never been talkative about how she really feels."
+
+    l 1q "Even though she never shuts up."
+
 
     scene bg black with fade
 
@@ -284,17 +319,14 @@ label common5:
     "Perhaps the inevitability of a fate they can barely comprehend has sucked the air out of the room."
 
     "Perhaps there was never air to begin with."  
-    
-    $chat.addmessage(fon,"Really, now? I could try again.") 
-    
+        
     $chat.addmessage(fon,"Really, I only have control of code if Sophie's hypersensory delusion provides it.")
     
-    $renpy.notify("character.narrator.setValue('')")
-
     "..." 
     
     $chat.addmessage(fon,"Oops, spoilers ;)")
 
+    $renpy.notify("Who are you, really?")
     pause 1.0
 
     $getHistory(16)

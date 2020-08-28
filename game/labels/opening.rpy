@@ -1,12 +1,59 @@
 label opening:
 
-# opening scene: basically same as other game, just tuned up. maybe can be skipped?
+    # opening scene: basically same as other game, just tuned up. maybe can be skipped?
+    # because we should only see this scene on starting a new game, we need to reset the game started variable, then force the game to restart so it runs init again. Right?
+    # Test: We're going to populate all our bios here so it only happens when the game begins, rather than at init time.
 
-    window hide 
+    python:
 
-    pause 2.0
+        # This section of code is designed to update some stuff in the biographies that kept breaking when I did it at init. Seems to work.
+        for i in allBios:
+            i.font = allFonts[i.idNum]
+            i.fontColor = allColors[i.idNum]
+            i.love = 0  # reset love on new game start
+        # go ahead and set up Fontaine's font.
+        fontBio.font = fontEntity
+        fontBio.fontColor = colorEntity
+        # namePlaets
+        for i in allBios:
+            i.bioEyes = allPlates[i.idNum]
 
-    
+        fontBio.bioEyes = bioEyesFont
+
+        # declare the history variables. Note: most of this won't actually be set in stone until later. Also, each of these histories will be re-declared when they're collected so as to collect the history correctly
+
+        histBoxX = initialBoxX
+        histBoxY = initialBoxY  # x and y are just guesses for now
+
+        for i in range(0, 8):
+            temp = History(i, histBoxX, histBoxY, [],
+                           chatTitles[i], chatRecaps[i])
+
+            histBoxY += histBoxHeight + boxMarginY
+            histories.append(temp)
+
+        histBoxX = initialBoxX
+        histBoxY = initialBoxY  # x and y are just guesses for now
+        histBoxX += histBoxWidth + boxMarginX
+
+        for i in range(8, 17):
+            temp = History(i, histBoxX, histBoxY, [],
+                           chatTitles[i], chatRecaps[i])
+            histBoxY += histBoxHeight + boxMarginY
+            histories.append(temp)
+
+        
+
+    # end python block.
+    pause 1.0
+    show image splashChoice with dissolve
+    nvl hide
+
+    pause 9.0
+
+    scene bg black
+
+    pause 1.0
 
     "It's not what you said."
 
@@ -81,7 +128,7 @@ label opening:
 
     s "I'm not giving up my work. You're already too jealous about it and I love doing it so-"
 
-    d "You love people online that call you a whore and wish you die of space herpes? Seriously?"
+    d "You love people online that call you a whore and wish you would die of space herpes? Seriously?"
 
     "He's getting angry. I understand, so I'm going to forgive some of the brunt of this."
 
@@ -139,7 +186,7 @@ label opening:
 
     s "They're not all guys, you know."
 
-    pause 1.0 
+    pause 1.0
 
     "Quietly, before I could stop them, those words tumble out."
 
@@ -152,29 +199,27 @@ label opening:
     d 1g "You know what? Fine."
 
     stop music fadeout 3.0
-    
+
     d "Be a her in a d ct. Go righ ba k. I'm go na m v   t  f th hous  . You'll n  er have to wo  y ab  t    again."
 
     # she has a seizure
-    #VFX
+    # VFX
 
     "Oh. Oh no. No no no no no not now."
 
     hide d at f12
-    
+
     "My arms pin themselves to my sides as my leg muscles lose all semblance of tension. There’s a sensation of impact when I hit the ground, but no accompanying pain."
 
     "Warmth blooms on my tongue and lips."
-    
+
     "Vaguely, I hear voices around me. Something moves me. It’s always the same. I’m falling. Falling, and falling, while the ghosts of whatever was around me slide from side to side."
-    
+
     "He’s not there for me this time. He’s not there to tell everyone what’s happening, to tell them not to crowd me, that the seizure will stop on its own."
 
     "He’s not there to tell me how long I lay writhing on the floor, how much time was stolen."
 
     "He’s not there."
-
-    "He's not there."
 
     "It's my fault."
 

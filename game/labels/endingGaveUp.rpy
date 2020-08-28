@@ -36,9 +36,9 @@ label endingGaveUp:
 
     pause 0.5
 
-    #SFX
+    # SFX
 
-    l "What's that sound?" 
+    l "What's that sound?"
 
     $hideGui()
 
@@ -47,51 +47,50 @@ label endingGaveUp:
     scene bg black with fade
 
     show screen chatterbox
-    
-    $chat.addmessage(fon,"I guess that means it's time.") 
+
+    $chat.addmessage(fon, "I guess that means it's time.")
 
     pause
 
     show image askTaniaBack2 with dissolve
-    
+
     python:
         newComments = [
-            [fon,"I really had fun with all of you."],
-            [fon,"But Sophie seems to have lost the game."],
-            [fon,"There's no cute music. No game over screen."],
-            [fon,"As much as I love to be part of your lives ;)"],
-            [fon,"Being with me... being with me is death."],
-            [fon,"I wish I could deliver a final speech."],
-            [fon,"Some master plan reveal that makes me the villain."],
-            [fon,"But there's only ever been you."],
-            [fon,"You, and that choker tied around your arm."],
-            [fon,"And those punctures in your flesh."],
-            [fon,"Maybe this sweet dissociation could've gone on forever."],
-            [fon,"But you're out of lives."],
-            [fon,"...heh."],
+            [fon, "I really had fun with all of you."],
+            [fon, "But Sophie seems to have lost the game."],
+            [fon, "There's no cute music. No game over screen."],
+            [fon, "As much as I love to be part of your lives ;)"],
+            [fon, "Being with me... being with me is death."],
+            [fon, "I wish I could deliver a final speech."],
+            [fon, "Some master plan reveal that makes me the villain."],
+            [fon, "But there's only ever been you."],
+            [fon, "You, and that choker tied around your arm."],
+            [fon, "And those punctures in your flesh."],
+            [fon, "Maybe this sweet dissociation could've gone on forever."],
+            [fon, "But you're out of lives."],
+            [fon, "...heh."],
             [fon, "Turns out I can't exist without you, either."],
             [fon, "Without you... there's only oblivion."]
         ]
-    
-        chat.bulkMessage(newComments,1.8)
+
+        chat.bulkMessage(newComments, 1.8)
         gaveUp = True
 
     pause
     hide screen chatterbox
     menu:
-        
+
         "Goodbye":
             scene bg black with fade
-            
 
             if gaveUp:
                 # in which the Entity is not severed. This occurs when the entity realizes the sever attempts.
 
-                #jarring transition indicating the simulation as broken.
+                # jarring transition indicating the simulation as broken.
 
-                #show a background somewhere in the world
+                # show a background somewhere in the world
 
-                #maybe a tour group?
+                # maybe a tour group?
 
                 "A day trip is exactly what we needed after the stress of the last days."
 
@@ -101,7 +100,7 @@ label endingGaveUp:
 
                 "We don't know."
 
-                #scene alley
+                # scene alley
 
                 "Is this what cold feels like?"
 
@@ -111,7 +110,7 @@ label endingGaveUp:
 
                 "In our reality... it was you, you who fed us."
 
-                #slash sound, blood splatter
+                # slash sound, blood splatter
 
                 "But now we must eat."
 
@@ -165,6 +164,7 @@ label endingGaveUp:
 
                 pause 5.0
 
+                "End: Birth of a Neurochemical God"
 
             jump endCredits
 

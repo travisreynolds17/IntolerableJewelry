@@ -2,9 +2,7 @@ label severLichelle:
     # in which Robin talks about not knowing who she is. 
 
     $hideGui()
-    $hideSeverancePanel()
     stop music fadeout 6.0
-    scene bg black with fade
     show image fountainShroud with dissolve
 
     pause 1.0
@@ -255,7 +253,7 @@ label severLichelle:
 
     t "How do you feel about your role in all this?"
     
-    t "You're the only one was wrapped up in all this without being directly connected to it."
+    t "You're the only one who was wrapped up in all this without being directly connected to it."
 
     l "Is that how you see it?"
 
@@ -293,20 +291,5 @@ label severLichelle:
 
     t "Who-"
 
-    scene bg black
-
-    pause 0.5
 
     $lichBio.severView()
-
-    scene bg dressing with fade
-
-    pause 1.0
-    $showGui()
-    play music bedroom fadein 1.0
-
-    k "... was I... dreaming? I can't remember..."
-
-    pause 0.5
-
-    

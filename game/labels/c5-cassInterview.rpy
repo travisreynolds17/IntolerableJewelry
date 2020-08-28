@@ -48,11 +48,9 @@ label c5cassInterview:
 
                 c 1a "<Oh?>"
 
-                "Kylie settles her hands over her navel, uncertain. Something's missing. She's not quite sure what."
-
                 k "... mm-hm."
 
-                c 1m "<Maybe Sophie's body and my body will get together out there.>"
+                c 1m "<Maybe Sophie's body and my body will get back together out there.>"
 
                 k "Maybe."
 

@@ -33,7 +33,8 @@ label chatHistory:
         recapState = "Recaps"
 
         # list of collected histories.
-        histories = []
+        
+        histories = [] 
         chatTitles = [
             "New Faces",
             "Cassandra",
@@ -95,6 +96,7 @@ label chatHistory:
         chatShowing = True
         # chat history is collected at the end of every major area. Mostly will take place where you have the story beats broken up.
 
+        
         class History:
             def __init__(self, number, x, y, history, title, recap):
                 # ID number corresponds to area of story
@@ -111,27 +113,7 @@ label chatHistory:
                 # has this section been collected yet
                 self.seen = False
 
-        # declare the history variables. Note: most of this won't actually be set in stone until later. Also, each of these histories will be re-declared when they're collected so as to collect the history correctly
-
-        histBoxX = initialBoxX
-        histBoxY = initialBoxY  # x and y are just guesses for now
-
-        for i in range(0, 8):
-            temp = History(i, histBoxX, histBoxY, [],
-                        chatTitles[i], chatRecaps[i])
-
-            histBoxY += histBoxHeight + boxMarginY
-            histories.append(temp)
-
-        histBoxX = initialBoxX
-        histBoxY = initialBoxY  # x and y are just guesses for now
-        histBoxX += histBoxWidth + boxMarginX
-
-        for i in range(8, 17):
-            temp = History(i, histBoxX, histBoxY, [],
-                        chatTitles[i], chatRecaps[i])
-            histBoxY += histBoxHeight + boxMarginY
-            histories.append(temp)
+        
 
         # add more as needed
 

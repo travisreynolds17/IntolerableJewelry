@@ -113,7 +113,7 @@ label realWorld2:
 
     "She must be freezing in the snow, drenched in fountain water."
 
-    "Where'd the moon go"
+    "Where'd the moon go."
 
     "Beautiful in her pallor, jewelry gleaming."
 
@@ -123,7 +123,7 @@ label realWorld2:
 
     "The python relaxes. No one important lies jolting in the snow."
 
-    "Long legs's mouth never erupts in steam and retch."
+    "Long Legs' mouth never erupts in steam and retch."
 
     image redBlue:
         fountainRed with dissolve
@@ -175,10 +175,11 @@ label realWorld2:
             "I don't blame you."
             "I only blame me."
             "For everything."
-            "If you hate me"
+            "If you hate me."
             "I accept that."
             "I hate me, too."
             $lichBio.stringSever()
+            $lichBio.loveUp()
         
         "I can't forgive you":
             "You could have saved her."

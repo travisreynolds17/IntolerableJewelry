@@ -2,9 +2,7 @@ label severRobin:
     # in which Robin talks about not knowing who she is.
 
     $hideGui()
-    $hideSeverancePanel()
     stop music fadeout 6.0
-    scene bg black with fade
     show image fountainShroud with dissolve
     play music robin fadein 10.0
 
@@ -328,8 +326,6 @@ label severRobin:
 
     t "... I know."
 
-    scene bg black with fade
-
     pause 1.0
     stop music  fadeout 5.0
     rr "Tania."
@@ -344,12 +340,6 @@ label severRobin:
 
 
     $robinBio.severView()
-
-    scene bg dressing with fade
-    play music bedroom fadein 1.0
-
-    pause 1.0
-    $showGui()
 
     k "Huh? I... why am I crying?"
 

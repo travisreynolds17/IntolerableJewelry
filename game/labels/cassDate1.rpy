@@ -42,7 +42,7 @@ label cassDate1:
     pause
     nvl clear
     nvl hide
-            
+
     scene bg bar with longFade
 
     play music jazzNoodle fadein 1.5
@@ -163,7 +163,7 @@ label cassDate1:
         s "Whaddaya say, chat? Like if it were me, I'd want to be sober for sure, but..."
 
         "Have a drink":
-            k "I'll have a --"
+            k "I'll have a —"
 
             ki "You know, I shouldn't be drinking. Not now. Not when there are two other people to meet."
 
@@ -238,7 +238,7 @@ label cassDate1:
 
     c 1p "< I am looking for inspiration. I guess I lost my voice somewhere along the way. >"
 
-    ki "Is that... wait, is she talking about her --"
+    ki "Is that... wait, is she talking about her —"
 
     $chat.addmessage(egg, "Metaphor")
 
@@ -262,13 +262,15 @@ label cassDate1:
 
     $chat.addmessage(egg, "Don't like girls")
 
-    k "I love your new stuff though."
+    k "I love all your music."
 
     $chat.addmessage(fizz, "Huh. We've just been assuming Kylie likes women, though. What if she's faking?")
 
     ki "Her expression changes, then, as she accepts this new piece of information. I'm not sure if she hoped I'd be a fan, or hoped for the opposite."
 
     c 2b "< So you know my work? >"
+
+    $cassBio.loveUp()
 
     k "I love your work. Intolerable Jewelry got me through the worst break-up of my life!"
 
@@ -281,7 +283,7 @@ label cassDate1:
             [cake, "that title is dumb"],
             [fon, "I love the album tho"],
             [bar, "Fontaine you way too into this"],
-            [beav, "roll cred-- shit"]
+            [beav, "roll cred— shit"]
 
         ]
     $chat.bulkMessage(newComments, 0.6)
@@ -507,9 +509,9 @@ label cassDate1:
 
     $getHistory(1)
 
-    # -----------------------------------------
-    # -----------------------------------------
-    # STUDIO SECTION -------------------------
+    # ————————————————————-
+    # ————————————————————-
+    # STUDIO SECTION ————————————-
 
     ki "The studio is almost exactly what I would have expected. There's a drum kit, tons of wires and blinking lights that I guess are part of editing equipment."
 
@@ -674,6 +676,7 @@ label cassDate1:
 
     c 1g "< I don't have time not to trust you if I want you to like me. >"
 
+    $cassBio.loveUp()
     $chat.addmessage(elsa, "Oh, my heart")
 
     s "... huh."
@@ -704,7 +707,7 @@ label cassDate1:
 
     hide c 1l at f12
 
-    ki "As Cassandra moves to the booth, snagging a water bottle on the way, one of the camera crew picks up behind her. Only then does it occur to me that we're going to be on TV--"
+    ki "As Cassandra moves to the booth, snagging a water bottle on the way, one of the camera crew picks up behind her. Only then does it occur to me that we're going to be on TV—"
 
     $chat.addmessage(bong, "")
 
@@ -712,7 +715,7 @@ label cassDate1:
 
     c  "!!!"
 
-    ki "-- but she wheels around and shoots a fearsome glare at the crew, shaking her head violently."
+    ki "— but she wheels around and shoots a fearsome glare at the crew, shaking her head violently."
 
     $chat.addmessage(fizz, "Jesus, that's a death look")
 
@@ -838,7 +841,7 @@ label cassDate1:
 
     show image splashCass5 at cassBooth
 
-    ki "But she's singing. She's singing so purely, and her eyes are focused and she's just so damn different and I don't know how or why it happened but suddenly there are tears in my eyes and I don't know if it's her song or the ligature marks on her neck or--"
+    ki "But she's singing. She's singing so purely, and her eyes are focused and she's just so damn different and I don't know how or why it happened but suddenly there are tears in my eyes and I don't know if it's her song or the ligature marks on her neck or—"
 
     show image splashCass6 at cassBooth
 
@@ -916,10 +919,7 @@ label cassDate1:
 
     s 1b "So let's move on. Cassandra just showed me her singing and her scars, but I'm not really sure what the significance is yet."
 
-
     $chat.addmessage(sophie, "Chat currently paused. Feel free to hang around, it's temporary!")
-
-    
 
     pause
 
@@ -934,7 +934,6 @@ label cassDate1:
     ki "I want this silence to last forever."
 
     # SFX knocking sound
-
 
     ki "At the sound, Cassandra's fingertips leave my skin."
 
@@ -1090,12 +1089,12 @@ label cassDate1:
     t 1m "I appreciate you in general."
 
     t "I'll see you in the morning at craft services."
-    
-    $chat.addmessage(fizz,"Tania's a sweet lady, isn't she?")
 
-    k "Okay." 
-    
-    $chat.addmessage(elsa,"Such a sweetie.")
+    $chat.addmessage(fizz, "Tania's a sweet lady, isn't she?")
+
+    k "Okay."
+
+    $chat.addmessage(elsa, "Such a sweetie.")
 
     ki "The pillow calls for me. I have so much to sort out right now, I... I just need to sleep."
 
@@ -1107,8 +1106,8 @@ label cassDate1:
 
     # collect chat history in appropriate variable.
     $getHistory(2)
-    #raise cass's biography level
-    $cassBio.levelUp()
+    # raise cass's biography level
+    $cassBio.setLevel(1)
 
     scene bg black with fade
 

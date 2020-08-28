@@ -53,6 +53,8 @@ label common4:
 
     k "Coming!"
 
+    stop music fadeout 3.0
+
     $chat.addmessage(elsa, "So tell us all, Fontaine. How am I gonna get Sophie to open her door?")
 
     ki "I dress quickly in the last set of whites, gather my needs, and head for the door."
@@ -85,7 +87,6 @@ label common4:
     s 1f "Guys. Game."
 
     $chat.addmessage(fon, "No. Private chat. ;)")
-
 
     s "Cassandra? You left your choker around my arm."
 
@@ -394,6 +395,7 @@ label common4:
         # change flag letting us know fontaine has taken over
         fontaineRevealed = True
         taniaFace = fontFace
+        askTaniaGreetings = askFontaineGreetings
 
     # ---------------------------------------------------------
 
@@ -506,8 +508,6 @@ label common4:
 
     hide text at textFloatCenter
 
-    un "None of you."
-
     un "and you won't want us to."
 
     #chat is weird
@@ -575,15 +575,11 @@ label common4:
 
         # CHANGE ASK TANIA AND BIOGRAPHY VISUALS
 
-    o "Oh you did know! God, Sophie, I love you so much."
+    o "Oh you did know! God, Sophie, we love you so much."
 
     $chat.addmessage(crab, "oh? think you could get past her to do it?")
 
-    l 3b "help us..."
-
-    l 3c "Tania, Kylie, help me!"
-
-    o 1a "Lichelle doesn't quite understand. She's only just learned to be with me."
+    o 1a "Even as you are, anchored to your psychotropic delusions."
 
     $chat.addmessage(shub, "not if she asked me not to.")
 
@@ -593,13 +589,9 @@ label common4:
 
     o "Nuh uh! Bad idea, sweetypants. Try and get free again and the shock might just shut~off~your~heart~!"
 
-    hide f 1a at f11
-
     $chat.addmessage(bar, "She's deep in your veins, kiddo")
 
     s "How can you hear me? What are you?!"
-
-    show f 1m at f11
 
     o "We are. No more than that."
 
@@ -617,7 +609,7 @@ label common4:
 
     # ---------------------------------------------------------
 
-    $renpy.notify("stringSever(firstName)")
+    $renpy.notify("You must sever the anomaly. At the very least.")
 
     # ---------------------------------------------------------
 
@@ -667,11 +659,11 @@ label common4:
 
     $chat.addmessage(beav, "This place is something special")
 
-    c "It's draining the player's life. It's been stealing her life since the moment she started the game."
+    c "It doesn't matter what she tells you."
 
     o 1n "Correct! So correct! Oh my, Cassandra, we LOVE you!"
 
-    t 1b "Fontaine is taking over the player's life."
+    t 1b "Everything Fontaine says is both true and a lie."
 
     o "Correct! Tania, our darling Tania, we love you so!"
 
@@ -679,9 +671,17 @@ label common4:
 
     $chat.addmessage(bong, "TWO GIRLS AT THE SAME TIME LOL")
 
-    c "You're becoming Strung. Like us."
+    pause 1.0
 
-    o "And we will live forever together!"
+    o "... Imagine being so deeply mired in a delusion that reality itself became a delusion."
+
+    o 1m "Imagine occupying a place where breaking the fourth wall only meant lifting the veil directly into an entirely different set of fictional dimensions!"
+
+    o "We are all of this things. We are an eldritch abomination existing within lines of video game code."
+
+    o 1n "We are dissociation incarnate. We are your most agonizing memory made manifest."
+
+    o 1e "We are whatever you must imagine us to be."
 
     pause 0.1
 
@@ -713,7 +713,7 @@ label common4:
 
     $chat.addmessage(bar, "ROLL CREDlol")
 
-    o 1b "You can't leave anymore. You can't quit us."
+    o 1b "You can't leave anymore. Your delusion is omnipresent."
 
     o "We will tell you whatever you wish to know, while we peel the last of your life away."
 
@@ -746,6 +746,8 @@ label common4:
                     o 1h "... REQUIRE TRANSLATION THROUGH NINETEEN NON-EARTH LANGUAGES ..."
                     o "... and summa them thangs're based on olfact'ry senses you'd need three more of."
                     o 1j "We have existed in your world forever. It is only your Internet that scrapes against the edges of our world and allows us to communicate."
+                    o 1m "Either that or we are a drug-induced nightmare that has grown self-aware."
+                    o 1a "BUT WHO REALLY KNOWS?"
                     $whatAreYou = True
                 else:
                     o 1g "Obviously, we overstimated your comprehension skills."
@@ -773,7 +775,7 @@ label common4:
                     o "LOVELY TALE about denying the proPOSAL of her BOYfriend."
                     s "... David?"
                     k "David proposed to me?"
-                    o "Yes, my love. He did."
+                    o "Yes, love. He did."
                     $areKilling = True
                 else:
                     s "Are you killing me?"
@@ -912,7 +914,7 @@ label common4:
 
     pause 0.5
 
-    $chat.addmessage(crab, "nope. that bitch is finna die")
+    $chat.addmessage(crab, "nope. that bitch finna die")
 
     $chat.addmessage(cake, "Finna? Really?")
 
@@ -938,7 +940,7 @@ label common4:
 
     # ---------------------------------------------------------
 
-    $renpy.notify("stringSever(firstname) for the love of god help them")
+    $renpy.notify("Sever Sever Sever for the love of god help them")
 
     # ---------------------------------------------------------
 
@@ -966,7 +968,7 @@ label common4:
 
     pause 0.5
 
-    o 1b "But we — you, as well — transcend Death."
+    o 1b "But we transcend Death."
 
     $chat.addmessage(sophie, "my throat is clogged? how is that possible?")
 
@@ -990,7 +992,7 @@ label common4:
 
     o 1t "You won't die."
 
-    o "What're y'gonna do? Bleed ones'n zeroes?"
+    o "Our cycle can never be broken."
 
     $chat.addmessage(elsa, "It won't help, Kylie. Come here and give us kisses.")
 

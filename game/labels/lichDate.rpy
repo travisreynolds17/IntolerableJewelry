@@ -214,7 +214,7 @@ label lichDate:
     $chat.addmessage(fizz, "CHOICE ALERT")
 
     $temp = False
-    if loveTania > 0:
+    if taniaBio.love > 0:
         $chat.addmessage(bar, "Tania's an option, is she?")
 
         $chat.addmessage(fon, "Oh, sweet Tania, I love you :)")
@@ -230,6 +230,9 @@ label lichDate:
     jump taniaChoice
 
 label taniaChoice:
+    $realTania = 0  # tracks if you've told Tania she's real.
+    $askedTania = False
+    
     while temp == False:
 
         scene bg near stage
@@ -254,6 +257,8 @@ label taniaChoice:
                 t 1m "Let me make a few calls."
                 t "I'm glad you feel that way, but we have to stick to the show format some, so what if I got Robin and Cass here for a quick round-up episode first?"
                 k "I don't see why not."
+                if realTania > 1:
+                    s "She bounces right back from being hurt. I'm impressed."
                 $cassBio.loveUp()
                 $temp = True
                 jump common2
@@ -266,66 +271,150 @@ label taniaChoice:
                 k "I don't know."
                 t 2o "I'll make a call. I dunno though, she might want more time to set up something elaborate."
                 t "Meanwhile, I'll try to get the girls together for a quick round-up. Need that footage."
+                if realTania > 1:
+                    s "I wish I had Tania's ability to recover from hurt."
                 $temp = True
                 $robinBio.loveUp()
                 jump common2
 
             "Tania, go out with me?" if taniaBio.love > 0:
-                stop music fadeout 2.0
-                if taniaEnd == 0:
+                $nowPlaying = renpy.music.get_playing()
+                if nowPlaying != "music/justTania.ogg":
+                    stop music fadeout 4.0
+                if taniaEnd == 0 and askedTania == False:
                     s 1a "You know what? She's been a trooper, and she could use a night out."
-                ki "Now or never."
-                k "I want to have a date with you, Tania."
-                pause 1.0
-                play music msTania fadein 3.0
+                if chatPause:
+                    $chat.addmessage(unkn, "chat available")
+                $chatPause = False
                 
-                t 1b "That's twice you've asked for me."
-                ki "For a moment, the energy in her expression falters."
+                if askedTania == False:
+                    ki "Now or never."
+                    k "I want to have a date with you, Tania."
+                pause 1.0
+                if nowPlaying != "music/justTania.ogg":
+                    play music msTania fadein 3.0
+                if askedTania == False:
+                    t 1b "That's twice you've asked for me."
+                    ki "For a moment, the energy in her expression falters."
                 t 1c "Why?"
-                $renpy.notify("Tania has no time for frivolity. Take me seriously, or else.")
+                $askedTania = True
+                $renpy.notify("Tania has no time for frivolity. Take her seriously, or else.")
 
                 menu:
                     "Because since I laid eyes on you, I wanted you." if taniaEnd <= 2:
                         k "Because I've wanted you since season two. If I'm being fully open and honest with you."
                         k "Your energy, your style, your..."
+                        pause 0.1
                         ki "God, why is this so hard?"
                         t 1b "My what?"
+                        pause 0.1
                         k "... it's your lips."
                         t "My lips?"
                         k "Something about the shape. I don't know, I don't! I just... I've always wanted to... to..."
                         jump endTania
 
                     "Because you're real.":
-                        k "Because Robin and Cassandra seem like they're projecting a persona. You seem..."
-                        k "Genuine."
-                        if taniaEnd == False:
-                            $taniaBio.loveUp()
-                        pause 1.0
-                        show t 1c at f12
+                        if realTania == 0:
+                            k "Because Robin and Cassandra seem like they're projecting a persona. You seem..."
+                            k "Genuine."
+                            if taniaEnd == False:
+                                $taniaBio.loveUp()
+                            pause 1.0
+                            show t 1c at f12
 
-                        ki "Her expression wilts, a dead bloom."
-                        t "I wish I could tell you how badly hearing that hurts."
-                        k "What? Why? I'm sorry, I didn't mean-"
-                       
-                        t 1b "I know. I know you didn't mean anything, so let's, please, let's please just not talk about this."
-                        t "Please?"
-                        ki "I find myself nodding, a little stunned."
-                        k "Okay."
-                        pause 1.0
-                        show t 1b
-                        pause 1.0
-                        show t 1g
-                        pause 1.5
+                            ki "Her expression wilts, a dead bloom."
+                            t "I wish I could tell you how badly that hurts."
+                            k "What? Why? I'm sorry, I didn't mean-"
+                            pause 0.1
+                            t 1b "I know. I know you didn't mean anything, so let's, please, let's please just not talk about this."
+                            t 1c "Please?"
+                            ki "I find myself nodding, a little stunned."
+                            k "Okay."
+                            pause 1.0
+                            show t 1d
+                            pause 1.0
+                            show t 1b
+                            pause 1.5
 
-                        show t 1a
+                            show t 1a
 
-                        pause 0.5
+                            pause 0.5
 
-                        s 1b "I don't know what happened just now, but I feel like a bad person."
+                            s 1b "I don't know what happened just now, but I feel like a bad person."
 
-                        pause 0.5
+                            pause 0.5
+                            $realTania += 1
+                            t "So. What else do you want to do?"
+                        elif realTania == 1:
+                            pause 1.0
+                            t 1b "... I... were you not listening to me?"
+                            k "Tania, I just..."
+                            t 1c "No. No just. Kylie, I'm not... I'm not here for this."
+                            t 1b "Please stop hurting me."
+                            k "..."
+                            $realTania += 1
 
-                        t "So. What else do you want to do?"
+                        elif realTania == 2:
+                            pause 1.0
+
+                            $chat.addmessage(elsa, "Sophie why?")
+                            t 1c "... do you hate me?"
+                            k "No, I--"
+
+                            $chat.addmessage(fizz, "Sophie...")
+                            t 1d "Stop! Please stop. I'm off limits. Okay?"
+                            t 1c "I'm the host. You have three incredible women to choose from."
+
+                            $chat.addmessage(shub, "For real. Leave her be")
+                            t 1d "I asked you to stop. I asked you twice. And yet, here we are."
+                            t 1c "You keep doing this. To me. What did I do to you? How did I wrong you?"
+                            k "You didn't!"
+                            t 1d "You're the one that keeps going back to awful decisions like this."
+                            t 1c "It doesn't help you. You're just needling me at this point."
+
+                            $chat.addmessage(bar, "She's not really this fragile, right?")
+                            t 1d "What do you get out of this? Huh? I told you it hurts. I told you!"
+                            t 1c "But you kept hurting me."
+                            t 1d "I've failed you. Somehow, I've failed you."
+
+                            $chat.addmessage(cake, "Girl got issues")
+                            t 1c "... do. Not. Tell. Me. I'm. Real. Again."
+                            pause 1.0
+                            $realTania += 1
+
+                        elif realTania == 3:
+                            t "..."
+
+                            $chat.addmessage(elsa, "Leave the poor girl alone.")
+                            t "... you hate me, don't you?"
+                            t 1b "... that's okay. I hate me, too."
+
+                            $chat.addmessage(crab, "Damn. Heavy.")
+                            t "I was... I was looking for a way out."
+                            t 1c "I want out. I'm a coward, Kylie."
+                            $chat.addmessage(fon, "... I can't stop crying.")
+                            s 1b "Tania..."
+                            t 1b "But I realize something."
+
+                            $chat.addmessage(fizz, "Please don't kill yourself please don't kill yourself please don't kill yourself")
+                            k "Yeah?"
+
+                            $chat.addmessage(shub, "for real")
+                            t 1a "It's not... you wouldn't do this to me. You wouldn't keep asking me the same thing over and over."
+
+                            $chat.addmessage(crab, "she wouldn't, would she?")
+                            k "I mean..."
+                            t 1m "This is a prank, right? Or you're just fucking with me?"
+
+                            $chat.addmessage(elsa, "I would not be able to handle this if she did that.")
+                            s 1c "Tania..."
+                            t "I appreciate a good trolling. I do. Let's move on, though, what do you say?"
+                            $taniaBio.setLove(0)
+                            t "..."
+                            pause 2.0
+                            t "... I don't think I could handle it. If this wasn't just... messing around."
+                            pause 1.0
+                            s "... I'm not sure what possessed me to keep hurting her."
 
                     "Because we have nothing else to do, why not?":
                         k "It's not like we have anything else to do."
@@ -334,4 +423,5 @@ label taniaChoice:
 
                         ki "Great job, self."
                         s 1b "I'm an asshole."
+                        $taniaBio.setLove(0)
     # END CHOICE - No matter what, we should have jumped to anew label at this point

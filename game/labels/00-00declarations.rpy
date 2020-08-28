@@ -1,6 +1,37 @@
-label declarations:
-    # declarations. Organize here for cleaner code.
+    init:
+        # attempt to create default bios.
 
+        default cassBio = Biography(0, "Cassandra Sanna", bioCass,
+                                cassBioText, "22", "Ultramarine", cassTrivia, "No", "Vox the Python", "Pro Wrestling", "Britomart", "62 inches", "Charlotte, N.C.")
+        default lichBio = Biography(1, "Lichelle Carpenter", bioLich,
+                            lichBioText, "25", "Carmine Red", lichTrivia, "Hell no", "Nope", "MMA", "My dad", "66 inches", "Baltimore, Md.")
+        default robinBio = Biography(2, "Robin Godfrey", bioRobin, robinBioText, "24",
+                            "Royal Purple", robinTrivia, "Not yet", "Innumerable", "None", "You", "73 inches", "Bucharest, Romania")
+        default fontBio = Biography(5, "Fontaine", bioFont, fontBioText, "R/BG13:14-15", "China White", fontTrivia, "I can't have kids. Comfort me?",
+                            "I love animals!", "I don't understand sports", "Sophie ;)", "All of them, if I want", "Everywhere!")
+
+        default taniaBio = Biography(3, "Tania van der Waal", bioTania,
+                            taniaBioText, "26", "Tuscan Sun", taniaTrivia, "No", "Cats: Ferg, Della, Kana",  "Gymnastics", "R/BG13:14-15 Langford", "65 inches", "Centralia, Penn.")
+        default kylieBio = Biography(4, "Kylie", bioKylie, kylieBioText, "23", "Golden Poppy", kylieTrivia, "Someday", "Someday I'll have a dog", "Basketball, I guess", "Elizabeth Bathory, jk", "66 inches", "Sobredosis, Nevada")
+
+        # append Fontaine in common4 after change
+        default allBios = [cassBio, lichBio, robinBio, taniaBio, kylieBio]
+        default allStats = ["Height:", "Hometown:", "Pets:", "Age:", "Fav. Color:", "Fav. Sport:", "Kids:", "Idol:"]
+
+        # name plates.
+        default bioEyesCass = Image("img/bioEyesCass.png")
+        default bioEyesLich = Image("img/bioEyesLich.png")
+        default bioEyesRobin = Image("img/bioEyesRobin.png")
+        default bioEyesTania = Image("img/bioEyesTania.png")
+        default bioEyesKylie = Image("img/bioEyesKylie.png")
+        default bioEyesFont = Image("img/bioEyesFont.png")
+
+        default allPlates = [bioEyesCass, bioEyesLich, bioEyesRobin, bioEyesTania, bioEyesKylie]
+
+        # chat history variables
+    init -1:
+        default histories = []
+    
     init python:
 
         # time stuff
@@ -36,6 +67,8 @@ label declarations:
         picTania = "img/pic-Kylie.png"
         picEntity = "img/pic-Kylie.png"
         picKylie = "img/pic-Kylie.png"
+
+        
 
         # we need characters to visually alter when speaking. we'll use a character callback for that, it seems. 
 
@@ -189,13 +222,26 @@ label declarations:
     define splashErrorTania = Image("img/ingameSplashErrorTania.png")
     define splashEKGFull = Image("img/splashEKG.png")
     define splashEKGFlat = Image("img/splashEKGFlat.png")
+    define splashBoats = Image("img/splashBoats.png")
     define splashSophieOnDesk = Image("img/splashSophieOnDesk.png")
     define askTaniaBack2 = Image("img/backAskTania2.png")
     define splashDrown = Image("img/drownedRobin.png")
     define splashDrown2 = Image("img/drownedRobin2.png")
+    define splashChoice = Image("img/splashWrongChoice.png")
+    define story7Edit = Image("img/bg story-7-edit.png")
+    define story9Edit = Image("img/bg story-9-edit.png")
+
+    define kylieBlood1 = Image("img/kcBlood1.png")
+    define kylieBlood2 = Image("img/kcBlood2.png")
+
+    define credits1 = Image("img/endCredits1.png")
+    define credits2 = Image("img/endCredits2.png")
+    define credits3 = Image("img/endCredits3.png")
+    define credits4 = Image("img/endCredits4.png")
+    define credits5 = Image("img/endCredits5.png")
 
     define glitchGui = Image("img/glitchGUI.png")
-
+    default doneSevering = False
     # to hold title of ending
     default endingTitle = ""
     define endings = ["Birth of a Neurochemical God", "Sobredosis", "Damned in Elle", "Homunculus Post Mortem", "Papillon", "My Soul Is Yours", "Dr. L'eau, Amateur Surgeon", "Free from Myself"]
@@ -312,7 +358,7 @@ label declarations:
         $loveTania = 0
         $loveEntity = 0
         # in late game you'll have a chance to confess. Only way to get a love ending.
-        $loveConfession = "None"
+        default loveConfession = "None"
         $severChances = 9
         $severCass = False
         $severRobin = False
@@ -325,8 +371,10 @@ label declarations:
         $severCodeBase = "stringSever"  # kill code for the being
         $severInput = "unknown"
         $entityName = "Fontaine"
-        $entityForgiven = False
-        $entityForgiven = True
+        default entityForgiven = False
+
+        # keep count of times said I'm not ready
+        default notReady = 0
 
         $sceneNum = 0
         # Resistance. near end game the player will get a chance to push back a little

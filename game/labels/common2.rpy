@@ -309,6 +309,8 @@ label common2:
 
     k "You... you are everything I imagined you to be and so much more, you're so warm and comfortable and your eyes destroy me."
 
+    $taniaBio.loveUp()
+
     $chat.addmessage(beav, "Did Kylie just spill the beans?")
 
     k "But you don't need to justify yourself or your scars to anyone! You don't have to be a badass all the time!"
@@ -349,13 +351,13 @@ label common2:
 
     s 1a "This is quite a diatribe."
 
-    $chat.addmessage(fon, "Back. This part breaks my heart :(")
+    $chat.addmessage(fon, "This part breaks my heart :(")
 
     k "So..."
 
     t "Kylie..."
 
-    $chat.addmessage(unkn, "stringSever(firstName)")
+    $chat.addmessage(unkn, "Sever them.")
 
     k "So stop fighting! I'm not worth it. I'm not!"
 
@@ -398,6 +400,8 @@ label common2:
     $chat.addmessage(beav, "H training lol")
 
     t 1l "Oh, wow."
+
+    $taniaBio.loveUp()
 
     pause 0.7
 

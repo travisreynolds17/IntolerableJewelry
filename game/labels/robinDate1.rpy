@@ -678,6 +678,8 @@ label robinDate1:
 
     r 1p "Because we've been friends for so long, papillon."
 
+    $robinBio.loveUp()
+
     s 1i "Wait, what."
 
     $chat.addmessage(cake, "broooooo")
@@ -760,6 +762,8 @@ label robinDate1:
 
     k "Oh my god! So that's why you seemed so damn familiar."
 
+    $robinBio.loveUp()
+
     ki "Her expression now, it's dark but searching. Meaningful."
 
     $chat.addmessage(elsa, "Yup, safe and sound. Obviously.")
@@ -785,7 +789,7 @@ label robinDate1:
     k "Holy god you're only 19?"
 
     # set Robin's age from default 24 to 19 because's a big ol liar
-    $robinBio.setAge(19)
+    $robinBio.setAge("19")
 
     $chat.addmessage(beav, "anime 15 creeps me out. Man.")
 
@@ -796,6 +800,8 @@ label robinDate1:
     k "Didn't Tania say everyone was 20? And how do you own this place?"
 
     r 1m "Your food is getting cold."
+
+    $robinBio.loveUp()
 
     $chat.addmessage(fon, "Robin is so mature for her age. We love her, don't we.")
 
@@ -978,6 +984,8 @@ label robinDate1:
 
     r "{alpha=0.5}Shh. I'll see you again, papillon.{/alpha}"
 
+    $robinBio.loveUp()
+
     # sound effect of lights
     stop music fadeout 0.2
     play sound "sounds/Lights Out.mp3"
@@ -1096,7 +1104,7 @@ label robinDate1:
             ki "She tastes like sweetened, spiced rum."
             ki "And then, breathlessly, it's over. I can hear a soft gasp from her as our lips part."
             r "{alpha=0.3}Let's do this again, darling.{/alpha}"
-            $ loveRobin += 1
+            $ robinBio.loveUp()
             $ kissedRobin = True
             $chat.addmessage(elsa, "... wow.")
 
@@ -1146,6 +1154,7 @@ label robinDate1:
     ki "She's staring at me, at my fingertips resting against my lips."
 
     t "Oh you have got be kidding me. My cameras can't see in the dark!"
+    pause 0.1
 
     $chat.addmessage(fizz, "It's almost like the dates are intentionally sabotaging the show.")
 
@@ -1320,7 +1329,7 @@ label robinDate1:
 
     s "You guys have no opinion on Robin or Cassandra? Or are we all too tied up in lesbian discussions?"
 
-    $chat.addmessage(crab, "finally Sophie speaking my language ;) Also, sure Fontaine.")
+    $chat.addmessage(shub, "finally Sophie speaking my language ;) Also, sure Fontaine.")
     $chat.addmessage(fizz, "Fontaine, I hope you aren't about to turn out to be a hacker spy or something.")
 
     s 1m "Whatcha got, Fontaine? I'm curious."
@@ -1329,7 +1338,7 @@ label robinDate1:
 
     pause 1.0
 
-    $chat.addmessage(fon, "Crablegs is five foot nine. He has a fade haircut. He is Canadian. He is interested in women. He enjoys bluegrass music and has brown eyes.")
+    $chat.addmessage(fon, "Crablegs is five foot nine. He has a fade haircut. He is Canadian. He is interested in women. He enjoys bluegrass music and has beautiful brown eyes.")
 
     pause 1.0
 

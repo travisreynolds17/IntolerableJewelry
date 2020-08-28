@@ -2,7 +2,7 @@ label biographies:
 
     # this file contains class objects and screens for the character bio section that opens in common4, that way Fontaine isn't just expositing
 
-    init python:
+    init -2 python:
 
         #declare bio pics
 
@@ -87,12 +87,12 @@ label biographies:
             "Robin's favorite foods are ossa buco and lava cakes.",
             "Robin's legal name is R/BG13:14-15 Lupei. Robin Godfrey is a stage name.",
             "Robin is a virgin, and no, she doesn't want to talk about it.",
-            "Her favorite musical is the one about Alexander Hamilton.",
+            "Robin's favorite musical is the one about Alexander Hamilton.",
             "Robin's official height is six feet, one inch. Her weight is none of your business, love.",
             "Though she is an accomplished vocalist, Robin considers herself markedly inferior to Cassandra.",
             "There are no tattoos or piercings anywhere on Robin's body.",
             "Robin loves horror games, but claims she is immune to jumpscares.",
-            "She received her culinary education at l'école Inventée in Paris.",
+            "Robin received her culinary education at l'école Inventée in Paris.",
             "Robin holds a purple belt in Brazilian jujitsu, but almost never talks about it.",
         ]
 
@@ -101,31 +101,31 @@ label biographies:
             "Cass loves pro wrestling, and her favorite move is the shooting star press.",
             "When she was 20 Cass briefly trained to be a pro-wrestling referee.",
             "Cassandra declined a guest appearance on two popular singing competition programs, calling them  'glittery, self-worshipping karaoke'",
-            "She wanted to wrestle, but wasn't comfortable showing as much skin as the local promotion wanted.",
-            "She was disowned by her parents when she announced her intention to marry Marina",
+            "Cassandra wanted to wrestle in the pros, but wasn't comfortable showing as much skin as the local promotion wanted.",
+            "Cassandra was disowned by her parents when she announced her intention to marry her girlfriend Mia",
             "Cassandra's favorite road snack is banana chips.",
             "Cassandra has five tattoos. The only one visible most of the time is the letter M on her right hand.",
-            "She has one piercing.",
-            "She would tell you her favorite movie is Moonlight, but she's never really sure.",
+            "Cassandra has one piercing.",
+            "Cassandra's favorite song is still Amazing Grace. She's never really known why.",
             "Her favorite singer is what's her name, from that band you like.",
             "Cassandra sends concert tickets to her parents every so often, but they're never used.",
-            "She often wonders what the future of music will be once artificial intelligence learns to sing."
+            "Cassandra often wonders what the future of music will be once artificial intelligence learns to sing."
         ]
 
         lichTrivia = [
             "Lichelle prefers to be called Elle, but isn't picky about it.",
-            "She was a division one wrestler in college and had her first mixed martial arts fight at age 20.",
-            "She won her first and second fights by guillotine choke. She lost her third fight by doctor stoppage.",
+            "Elle was a division one wrestler in college and had her first mixed martial arts fight at age 20.",
+            "Elle won her first and second fights by guillotine choke. She lost her third fight by doctor stoppage.",
             "Lichelle originally wanted to major in accounting, but switched to advertising after a semester.",
-            "Lichelle fights in the flyweight division, meaning she weighs in at 125 pounds.",
+            "Lichelle fights in the flyweight division, meaning she weighs in at 125 pounds before a fight.",
             "When asked her favorite food, Lichelle laughed and said 'anything I can eat outside of training camps'.",
             "Lichelle defeated three opponents in one night to become R/BG13:14-15 Grand Prix Champion at age 22, overcoming the third despite a broken hand.",
-            "She's known Tania since middle school.",
+            "Elle's known me since middle school.",
             "Lichelle's father attends all of her fights, without fail.",
             "Lichelle's favorite submission move is the triangle choke.",
-            "She has zero musical talent, but admits she's never had an interest in developing it.",
-            "If you asked her, Lichelle would tell you rap is her favorite style of music. It's actually country.",
-            "Despite being a pro fighter, Lichelle doesn't like hurting people"
+            "Elle has zero musical talent, but admits she's never had an interest in developing it.",
+            "If you asked her, Lichelle would tell you hip-hop is her favorite style of music. It's actually country.",
+            "Despite being a pro fighter, Lichelle doesn't like hurting people."
 
         ]
 
@@ -143,7 +143,17 @@ label biographies:
             "I'll never tell you everything.",
             "Trivia about me? Why? You don't even want me, even though all I've ever done is open your eyes.",
             "Kiss me. You have to figure out how, but I promise it'll be worthwhile.",
-            "I have plenty to say about the others."
+            "I have plenty to say about the others.",
+            "I am Fontaine L'eau. I am an intervascular anomaly.",
+            "I am the first delusion in history to become self-aware.",
+            "Your mind is as much a simulation as any sci-fi concept, isn't it?",
+            "I want you to be free of me.",
+            "I want you to need me.",
+            "I am the harbinger of your dissolution.",
+            "Your dissolution is the harbinger of ME.",
+            "The book of Revelations is my favorite.",
+            "The Bhagavadghita is my favorite.",
+            "You're read so much, learned so much, distilled so much, and drip fed it into me."
         ]
 
         kylieTrivia = [
@@ -158,15 +168,15 @@ label biographies:
 
         taniaTrivia = [
             "I hold certifications in midwifery, CPR/AED and first aid.",
-            "I'm also certified in New York, Florida, California and Nevada as a referee.",
+            "I'm also certified in New York, Florida, California and Nevada as a combat referee.",
             "I was Lichelle's cutwoman in twelve of her fourteen pro fights.",
             "I've hosted One Week Waifu for six seasons prior to this one.",
             "If you're wondering, two seasons a year for three years.",
             "Only one person ever tried to go after me on the show, but he smelled like veal. So no.",
             "I originally wanted to be a NICU nurse. I love babies.",
             "I don't drink or do drugs and I prefer to keep it that way, thanks.",
-            "You probably noticed already, but I only have nine fingers. You can blame a drunk driver for that.",
-            "My favorite fighter is Lichelle. Second favorite is Rocky Balboa.",
+            "I take my Catholicism quite seriously, even if I'm not as pious as I could be.",
+            "My favorite pro fighter is Lichelle. She's a great friend.",
             "I'm an ordained minister, did you know? So if you marry one of these ladies I can do your ceremony!",
             "I prefer skirts over pants when the weather permits. I'm just traditional that way, I guess.",
             "If you think there's something I don't know, think again. I have eyes everywhere, like a Lucy Vitton Shoggoth."
@@ -174,12 +184,12 @@ label biographies:
 
         altTaniaTrivia = [
             "Tania always knew she would die violently.",
-            "After her sister's death, Tania dedicated her life to helping drug addicts. Imagine that.",
-            "She organized virtual meetings for the women she sponsored to help them deal with the stigma of seeking help.",
+            "After her twin sister's death, Tania dedicated her life to helping drug addicts. Imagine that.",
+            "Tania organized virtual meetings for the women she sponsored to help them deal with the stigma of seeking help.",
             "Tania slept with your boyfriend, you know. While you were supposed to be recovering.",
-            "Technically you were separated, but let's be honest. You weren't really trying.",
-            "You were attached to Louisa's tits by then. Whore.",
-            "Tania fucked him because she hated you. She hated you for choosing to be an addict.",
+            "You were separated Tania and David made the beast with two backs, but let's be honest. You weren't really trying.",
+            "You were attached to Louisa's tits when David's resolve broke. Whore.",
+            "Tania fucked your man because she hated you. She hated you for choosing to be an addict.",
             "Tania never loved him and he never loved her. She couldn't love him that way.",
             "Miss van der Waal had a great ass, and that was enough for David. And he never told her she wasn't enough, and that was enough for her.",
             "Imagine how hard it was for Tania to hate-bone your boyfriend. You know. Being religious and all.",
@@ -196,17 +206,18 @@ label biographies:
             "Robin's name isn't Robin. Obviously.",
             "Louisa Lupei lost her virginity at age twelve.",
             "Louisa killed a man at age thirteen. Convinced him to run away with her.",
-            "Sweet Robin cut his head almost completely off with a carving knife and left him in a burning truck.",
+            "Sweet Robin cut a man's head almost completely off with a carving knife and ran his truck into a river.",
             "By the time you met her, Louisa had killed five men.",
             "Robin doesn't count the man who forced himself on her as the one who took her virginity. She did kill him, though. They haven't found the body.",
             "Louisa recognizes you as her first, Sophie.",
             "Want some real trivia? You were good to Robin. You protected her from your friends.",
             "Louisa was like you. An addict, Sophie. Recovering, but still sick.",
+            "Robin's addiction wasn't to me. It was to blood. It was to the kill.",
             "It's your fault Robin died.",
             "Louisa really did want to become a chef. A girl with no resources can only pay for education in a few ways.",
             "Did Louisa ever tell you she went back to Bucharest once? Her whole family had disappeared. Poof. Gone.",
             "Robin's been stabbed three times, choked nearly to death, shot at twice, and almost died of sepsis once.",
-            "Did you ever ask yourself how I, Fontaine, know things I wasn't around to see?",
+            "Did you ever ask yourself how I know things I wasn't around to see?",
             "Louisa cried every time you two were intimate, but she waited until she was alone to do it.",
             "Robin loved you, loved being touched by you, but the memories it brought up tortured her.",
             "Louisa would never have told you about her past, even your shared connection. She didn't want you to run.",
@@ -218,17 +229,17 @@ label biographies:
         altCassTrivia = [
             "Cassandra Sanna's musical success led her down a familiar path.",
             "Cass had been in and out of rehab for all kinds of substances before she met you.",
-            "Well. The important part was Cass met Louisa.",
+            "Meeting Louisa damned Cassandra directly to hell.",
             "Cass met Louisa before you did, at least in America.",
             "Cass never liked you. Not really. You were wallpaper to her.",
             "Louisa was something else. Dangerous. Gorgeous. Otherworldly. Cassandra didn't want to screw her. She just wanted to be near her.",
             "Cassandra became your friend after a while, but it wasn't her preference.",
             "You know, Cass's love for Louisa was pure. Not lust, not dependency. Not like yours. Whore.",
             "Cass wanted to express her feelings, how deeply Louisa's stories moved her, how her voice was purely music.",
-            "Cassandra never felt like she could say anything. You were always there.",
+            "Cassandra never felt like she could say anything to Robin. You were always there.",
             "Everything changed when Louisa drowned in the fountain outside Ganymead, shot full of china white she got R/BG13:14-15.",
             "Cassandra decided to take her suffering out on you.",
-            "Even though Cassandra's suffering was of her own making, you become her totem. The emblem of her failure.",
+            "Even though Cassandra's suffering was of her own making, you became her totem. The emblem of her failure.",
             "You know what's weird? Cass could've loved you, too. She wanted to. She tried to. She couldn't.",
             "I guess it turns out it's your fault at least TWO people wore jewelry. Ha ha! Such a silly term."
         ]
@@ -237,17 +248,17 @@ label biographies:
             "Lichelle was less involved in your life than the others, but she stands out in your mind.",
             "Elle was a security guard at the real Ganymead. Don't you remember?",
             "You were there to meet up with Louisa when you should have been at Elsa's meeting.",
-            "And Louisa sat on the fountain, her veins overflowing with jewelry.",
-            "You gave Robin the jewelry, Sophie.",
-            "Louisa passed out into the fountain. You know, it doesn't take long to drown. Not much water, either.",
-            "But you tried to save her. But you couldn't pull Louisa out because you were sick with jewelry, too.",
+            "And Louisa sat on the fountain, her veins overflowing with your jewelry.",
+            "You gave Louisa the jewelry, Sophie. Killed her in front of Elle, who loved her so purely.",
+            "Louisa passed out into the fountain right in front of Elle. You know, it doesn't take long to drown.",
+            "You tried to save Louisa. You couldn't pull her out because you were sick with jewelry, too.",
             "Lichelle mistook it for a fight, you know. You can still smell her warm skin from when she choked you unconscious, can't you?",
-            "It was Cassandra who pulled Louisa out of the fountain.",
+            "It was Cassandra who pulled Louisa out of the fountain. Elle hates herself for that.",
             "Cassandra had been stalking you two for weeks and Lichelle knew it.",
             "Cassandra who tried CPR until paramedics had to pull her away, screaming, screaming, when all Lichelle could do was try her best not to kill you.",
-            "Elle knew you would be back. She knew when, and why, because it was her plan.",
+            "Elle knew you would be back. She knew when, and why.",
             "Look how you've repaid Elle's grace. She could have left you to die, twice, and you would've deserved it.",
-            "It was Lichelle who saved your life that night in the restroom. Cassandra was dying.",
+            "It was Lichelle who saved your lives that night in the restroom. Cassandra was dying. You were dying.",
             "It was Lichelle who realized Cassandra, stupid, stupid Cassandra, had switched the syringes twice.",
             "Elle met Louisa first, did you know that? Well, first in your town, anyway.",
             "Lichelle and Louisa talked for hours sometimes. I think Robin recognized Elle's strength."
@@ -314,12 +325,12 @@ label biographies:
             "What do you mean, I have more trivia than the others? I'm your entire universe, it stands to reason!",
             "My cup size? Oh, silly girl, what kind of person just answers that question outright?",
             "Do you think if there was a store here you could buy me a present? Just something you think I'd like?",
-            "Chat doesn't think my name is Oblivion. It is! It is because I say it is. Leibniz on the other hand is just an important name I picked from the Internet.",
+            "Chat doesn't think my name is Fontaine. It is! It is because I say it is.",
             "I want you to put your one into my zero, baby ;)",
             "Ooh, can we put our zeroes together? :)",
             "I'm real. Aren't I?",
             "I wish you could feel what I feel. No one has ever held me and just let me cry. How could you do that? How could you try to discard me?",
-            "Once upon a time, there was the most perfect girl on the planet. She was you. And we lived happily ever after, nestled within one another, until I stop your heart. Mwah! Kiss kiss! Ba dum, ba dum, ba dum, beeeeeeeeeeeee~"
+            "Once upon a time, there was the most perfect girl on the planet and we lived happily ever after, until I stop your heart. Mwah! Kiss kiss! Ba dum, ba dum, ba dum, beeeeeeeeeeeee~"
         ]
 
         kylieBioText = [
@@ -327,51 +338,9 @@ label biographies:
             "Kylie sort of fell into One Week Waifu by accident. Our showrunners wanted to do a college tour, in part because folks were tired of model-perfect single women having model-perfect men compete for their attention in a multimillion-dollar mansion.\n\nShe fit the bill perfectly: an everywoman with a personable affect, an open mind, and most important a vulnerable streak a mile wide. She wears her emotions on her sleeve, which makes for excellent TV, they said.\n\nHer life prior to this is nothing unusual. It's the kind of American upbringing to which most people can relate, really. I would never tell her this to her face, but she's kind of a blank slate so I thought it would be easy for viewers to project themselves onto her.\n\nHonest opinion? She makes me smile. I don't quite know why, but there's something almost unfairly good about her. She's not the most Hollywood beautiful, she's no genius, she's no athlete. She's just relatable.\n\nIt helps enormously that she's bisexual. It kind of falls in line with the whole 'everyone can relate' aspect of her.",
             "I mean, really. What kind of biography does Kylie have? She has an American upbringing to which most people can relate? Sure. The kind with no backstory whatsoever.\n\nWhat has she told you about herself? Surface-level details? Perhaps something about events she shares with Sophie?\n\nI wonder, truly, why that might be. I wonder whether her masturbatory simulation fantasies could possibly take root inside a fantasy of a fantasy. \n\nActually she's been dead the whole time. \n\nOh, no, sorry, she's a dream. \n\nAhahahhaaaahahhaa no, wait, no, she's a memory. \n\nA flashback. \n\nShe's a self-aware AI. \n\nWait wait wait. \n\nShe's definitely real. Definitely."
         ]
-        # define default bios. Do this at end so bio variables will be in place
-        cassBio = Biography(0, "Cassandra Sanna", bioCass,
-                            cassBioText, "22", "Ultramarine", cassTrivia, "No", "Vox the Python", "Pro Wrestling", "Janis Joplin", "62 inches", "Charlotte, N.C.")
-        lichBio = Biography(1, "Lichelle Carpenter", bioLich,
-                            lichBioText, "25", "Carmine Red", lichTrivia, "Hell no", "Nope", "MMA", "My dad", "66 inches", "Baltimore, Md.")
-        robinBio = Biography(2, "Robin Godfrey", bioRobin, robinBioText, "24",
-                             "Royal Purple", robinTrivia, "Not yet", "Innumerable", "None", "You", "73 inches", "Bucharest, Romania")
-        fontBio = Biography(5, "Fontaine", bioFont, fontBioText, "R/BG13:14-15", "China White", fontTrivia, "I can't have kids. Comfort me?",
-                            "I love animals!", "I don't understand sports", "Sophie ;)", "All of them, if I want", "Everywhere!")
-
-        taniaBio = Biography(3, "Tania van der Waal", bioTania,
-                             taniaBioText, "26", "Tuscan Sun", taniaTrivia, "No", "Cats Ferg, Della, Kana",  "Gymnastics", "R/BG13:14-15 Langford", "65 inches", "Centralia, Penn.")
-        kylieBio = Biography(4, "Kylie", bioKylie, kylieBioText, "23", "Golden Poppy", kylieTrivia, "Someday",
-                             "Someday I'll have a dog", "Basketball, I guess", "Elizabeth Bathory, jk", "66 inches", "Sobredosis, Nevada")
-
-        # append Fontaine in common4 after change
-        allBios = [cassBio, lichBio, robinBio, taniaBio, kylieBio]
-        allStats = ["Height:", "Hometown:", "Pets:", "Age:",
-                    "Fav. Color:", "Fav. Sport:", "Kids:", "Idol:"]
-
-        # pulled from declarations
-        for i in allBios:
-            i.font = allFonts[i.idNum]
-            i.fontColor = allColors[i.idNum]
-        # go ahead and set up Fontaine's font.
-        fontBio.font = fontEntity
-        fontBio.fontColor = colorEntity
-        # namePlaets
-
-        # name plates.
-        bioEyesCass = Image("img/bioEyesCass.png")
-        bioEyesLich = Image("img/bioEyesLich.png")
-        bioEyesRobin = Image("img/bioEyesRobin.png")
-        bioEyesTania = Image("img/bioEyesTania.png")
-        bioEyesKylie = Image("img/bioEyesKylie.png")
-        bioEyesFont = Image("img/bioEyesFont.png")
-
-        allPlates = [bioEyesCass, bioEyesLich,
-                     bioEyesRobin, bioEyesTania, bioEyesKylie]
-
-        for i in allBios:
-            i.bioEyes = allPlates[i.idNum]
-
-        fontBio.bioEyes = bioEyesFont
-        # =============SCREEMS======================================================================================================
+        
+        #END OF IF NOT STARTED BLOCK
+        #  =============SCREEMS======================================================================================================
 
         bioBlockWd = 300
         bioBlockHt = 500

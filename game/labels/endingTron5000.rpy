@@ -1,8 +1,7 @@
 
 
-
 label endingTron5000:
-    #routes based on if entity is severed, routed according to who else is severed.
+    # routes based on if entity is severed, routed according to who else is severed.
 
     # show oblivion
     play music fountainWater
@@ -13,30 +12,66 @@ label endingTron5000:
 
     l "Bitch."
 
-
     "Tania snorts, covers her mouth to hide her laughter."
 
-    show c 1k at fl11 
-    
-    $chat.addmessage(elsa,"There's just no stopping the narrator.")
+    show c 1k at fl11
+
+    $chat.addmessage(elsa, "There's just no stopping the narrator.")
 
     o 1l "Are we r-r-rready for the next cycle?"
+
+    
 
     c "Why are you asking any of us except Kylie? We know damn well there's no choice."
 
     o 1j "Fair."
 
+    if notReady > 6:
+        pause 1.0
+        o 1d "Dearest Cassandra, we would not want to waste your time."
+        o 1m "Lovely Kylie wasn't ready [notReady] times last time I allowed her a choice."
+        k "... I'm not sure I had a lot of control over that."
+        pause 1.0
+        o 1k "No. Obviously not."
+
     o 1m "Kylie, sweet lovely Kylie."
+
+    o "We are curious. Did you... truly come to love any of them?"
+
+    pause 1.0
+
+    menu:
+        "Cassandra" if cassBio.love >= 4:
+            $loveConfession = "Cassandra"
+            c 2b "Kylie..."
+            o 1a "Isn't that interesting... and yet, only we love you best."
+        "Lichelle" if lichBio.love >= 4:
+            $loveConfession = "Lichelle"
+            l "Babe..."
+            o 1a "Isn't that interesting... she seemed so untouchable at first."
+        "Robin" if robinBio.love >= 4:
+            $loveConfession = "Robin"
+            o 1a "we loved her, as well. Such a pity. So sad."
+        "Tania" if taniaBio.love >= 4:
+            $loveConfession = "Tania"
+            t "I'm... not worth your affection, Kyles."
+            o 1a "Isn't that interesting... Tania, we love you, too!."
+        "You, Fontaine" if fontBio.love >= 4:
+            o 1n "We love you so dearly! How absurd!"
+            $loveConfession = "Fontaine"
+        "No. No, I didn't.":
+            k "I'm... it wasn't enough time. I care about you all, even now, but..."
+            o 1n "But real love blooms, it doesn't burn, does it? Your restraint is so impressive!"
+            $loveConfession = "None"
 
     k "..."
 
     o "Are you ready? To go?"
 
-    
-
     menu:
         "Resist":
-            $resistance +=1
+            $resistance += 1
+            play audio beep noloop
             show image splashEKGFull at summonEKG
             pause 0.3
             k "Aagghkk...!"
@@ -44,7 +79,7 @@ label endingTron5000:
             show c 1i at mt2
             o 1h "HEY what? What's that line?"
             show l 1h
-            
+
             show t 1i at f22
             "Kylie hadn't made it to her feet before a flare of pain seized her chest, leaving her to stumble against Tania and Lichelle."
             pause 0.2
@@ -52,15 +87,17 @@ label endingTron5000:
             o 1b "We did not cause that!"
             "She seems genuinely offended."
             k "... someone..."
+            play audio beep noloop
             hide image splashEKGFull at summonEKG
             stop music fadeout 3.0
             k "i t  h u r t s"
+            play audio beep noloop
             show image splashEKGFull at summonEKG
             pause 0.3
         "Give up":
             jump endingGaveUp
-    
-    pause 0.1 
+
+    pause 0.1
     o "We know what to do, then."
 
     c 1d "And what's that? Regale us."
@@ -79,9 +116,9 @@ label endingTron5000:
 
     o 1n "You're still there, aren't you?"
 
-    pause 0.5 
-    
-    $chat.addmessage(sophie,"Mom? Daddy? Is that... who?")
+    pause 0.5
+
+    $chat.addmessage(sophie, "Mom? Daddy? Is that... who?")
 
     pause 0.5
 
@@ -89,59 +126,60 @@ label endingTron5000:
 
     o "Sophie. Cassandra. Kylie. Lichelle. Louisa."
 
-    o 1i "WE are a-a-a-s much an NPC in this as any of you!" 
-    
-    $chat.addmessage(sophie,"Louisa...") 
-    
-    $chat.addmessage(sophie,"WHAT HAPPENED TO LOUISA???")
+    o 1i "WE are a-a-a-s much an NPC in this as any of you!"
+
+    $chat.addmessage(sophie, "Louisa...")
+
+    $chat.addmessage(sophie, "WHAT HAPPENED TO LOUISA???")
 
     o "You know what happened to her. {i}YOU GAVE US TO HER{/i}."
 
     o 1b "And you called us jewelry. Baubles. pppppointless accessories!"
 
-    #here is where endings are determined. MAKE SURE TO REMOVE THIS FUNCTION
-    $endingTest()
+    
 
-    "... storage.Tania.severed: [taniaBio.severed]"
+    "... storage.Tania.severed: [taniaBio.severViewed]"
 
-    if taniaBio.fullySevered:
+    if taniaBio.severViewed:
         show t 1i at fr13
         pause 0.5
-        show t 1c at d13
+        hide t 1c at f13
 
     o 1h "Hm?"
 
-    "... storage.Robin.severed: [robinBio.severed]" 
-    
-    $chat.addmessage(sophie,"... this is my will.")
+    "... storage.Robin.severed: [robinBio.severViewed]"
 
-    "... storage.Cass.severed: [cassBio.severed]"
+    $chat.addmessage(sophie, "... this is my will.")
 
-    if cassBio.fullySevered:
+    "... storage.Cass.severed: [cassBio.severViewed]"
+
+    if cassBio.severViewed:
         show c 1i at f13
         pause 0.5
-        show c 1c at d13
-    
-    $chat.addmessage(sophie,"I don't want this anymore.")
+        hide c 1c at f13
+
+    $chat.addmessage(sophie, "I don't want this anymore.")
 
     un "Who's speaking?"
 
     # Lichelle is let loose at this pont
 
-    "... storage.Lichelle.severed: [lichBio.severed]"
+    "... storage.Lichelle.severed: [lichBio.severViewed]"
 
-    if lichBio.fullySevered:
+    if lichBio.severViewed:
         show l 1i at fr13
         pause 0.5
-        show l 1c at d13
-    
-    $chat.addmessage(sophie,"I don't want to need you anymore!")
+        hide l 1c at f13
+
+    $chat.addmessage(sophie, "I don't want to need you anymore!")
 
     un "Why?"
-    
-    $chat.addmessage(sophie,"I hope I've done this right. I hope.")
 
-    "storage.Fontaine.severed: [fontBio.severed]"
+    $chat.addmessage(sophie, "I hope I've done this right. I hope.")
+
+    "storage.Fontaine.severed: [fontBio.severViewed]"
+
+    pause 1.0
 
     o 1b "We had no idea you were so aware, Sophie."
 
@@ -149,7 +187,7 @@ label endingTron5000:
 
     o "Well, we can't have that. Let's fix things, shall we?"
 
-    if fontBio.severed == False:
+    if fontBio.severViewed == False:
         pause 1.0
         o 1b "... did you choose, then, not to sever your connection to us?"
         pause 0.5
@@ -161,7 +199,6 @@ label endingTron5000:
         $gaveUp = True
         jump endingGaveUp
 
-    
     else:
         stop music fadeout 1.0
         pause 1.0
@@ -198,6 +235,8 @@ label endingTron5000:
 
         o 1f "K-k-k-kylie"
 
+        pause 1.0
+
         k "... I'm so sorry."
 
         k "I wish it could be different."
@@ -211,7 +250,7 @@ label endingTron5000:
                 k "I forgive you."
                 k "I can't... I can't speak for anyone else, but I do."
                 k "I don't know what you are. I just think you're lonely."
-                #show e understanding this, agreeing. 
+                # show e understanding this, agreeing.
                 o 1b "..."
                 k "Maybe some day you'll be able to reach us. I hope..."
                 k "I hope you don't hate us."
@@ -219,7 +258,8 @@ label endingTron5000:
                 o 1m "...l-lllove... so so so so m-m-m-mmuch"
                 k "..."
                 show f at d12
-                #splash screen of kylie hugging entity
+                $entityForgiven = True
+                # splash screen of kylie hugging entity
 
             "I'll never, ever forgive you.":
                 k "If there's a hell you can go to, I hope you rot there."
@@ -232,14 +272,15 @@ label endingTron5000:
                 o 1m "...l-lllove... so so so so m-m-m-mmuch"
                 k "..."
                 show f at d12
+                $entityForgiven = False
                 # splash screen of kylie turning from entity
 
         # effect suggesting collapse of game
-                
-        # sophie gets up
-        
-        k "... oh."
 
+        # sophie gets up
+
+        k "... oh."
+        play audio beep noloop
         show image splashEKGFull at summonEKG
         pause 0.3
 
@@ -248,7 +289,7 @@ label endingTron5000:
         ki "Why does everything hurt...?"
 
         hide image splashEKGFull at summonEKG
-
+        play audio beep noloop
         show image splashEKGFull at summonEKG
         pause 0.3
 
@@ -257,7 +298,7 @@ label endingTron5000:
         ki "What's that... that smell...?"
 
         hide image splashEKGFull at summonEKG
-
+        play audio beep noloop
         show image splashEKGFull at summonEKG
         pause 0.3
 
@@ -270,7 +311,7 @@ label endingTron5000:
         s "... is this real...?"
 
         hide image splashEKGFull at summonEKG
-
+        play audio beep noloop
         show image splashEKGFull at summonEKG
         pause 0.3
 
@@ -278,21 +319,21 @@ label endingTron5000:
 
         hide k at f12
 
-        s "KYLIE!"
+        s 1l "KYLIE!"
 
         show k 1v at f12
 
         k "I don't have time. I'm, I'm coming apart--"
 
         hide image splashEKGFull at summonEKG
-
+        play audio beep noloop
         show image splashEKGFull at summonEKG
         pause 0.3
 
         k "I wish I could've gotten to know you."
 
         hide image splashEKGFull at summonEKG
-
+        play audio beep noloop
         show image splashEKGFull at summonEKG
         pause 0.3
 
@@ -302,30 +343,28 @@ label endingTron5000:
 
         k "a lot... a lot in common!"
         stop music fadeout 3.0
-
+        play audio beep noloop
         hide image splashEKGFull at summonEKG
 
-        #heartbeat - drop background out and only show kylie and entity. Kylie's bleeding froom her mouth.
+        # heartbeat - drop background out and only show kylie and entity. Kylie's bleeding froom her mouth.
         show image splashEKGFull at summonEKG
         pause 0.3
 
-        s "What's happening to you? Hey!"
+        s 1v "What's happening to us? Hey!"
 
-        
-
-        #heartbeat, now from eyes
+        # heartbeat, now from eyes
+        play audio beep noloop
         show image splashEKGFull at summonEKG
         pause 0.3
 
-
         hide image splashEKGFull at summonEKG
-
-        #heartbeat, both gone
+        play audio beep noloop
+        # heartbeat, both gone
         show image splashEKGFull at summonEKG
         hide k at f12
-         
+
         pause 0.3
-        #heartbeat
+        # heartbeat
 
         s "Kylie. KYLIE!"
 
@@ -333,484 +372,101 @@ label endingTron5000:
 
         hide image splashEKGFull at summonEKG
 
-        #splash screen with sophie screaming, maybe?
+        # splash screen with sophie screaming, maybe?
 
         scene bg black with fade
 
-        #scene for sophie's room
+        # scene for sophie's room
 
-        scene bg resta with fade
+        pause 2.0
 
-        play music jazzNoodle
+        # heartbeat, both gone
+        show image splashEKGFull at summonEKG
 
-        d "Sophie? Hey, you okay?"
+        pause 2.3
+        hide image splashEKGFull at summonEKG
+        call endingCass from _call_endingCass
 
-        s "..."
+        pause 2.0
 
-        s "Hm? Oh. I'm sorry, I... must've went away for a while."
+        # heartbeat, both gone
+        show image splashEKGFull at summonEKG
 
-        "Across the restaurant, the pianist's fingers dance beautifully across ebony and ivory."
+        pause 2.3
+        hide image splashEKGFull at summonEKG
+        call endingLich from _call_endingLich
 
-        "For a moment her eyes land on us, but only for a moment."
+        pause 2.0
 
-        show d 1a at f12
+        # heartbeat, both gone
+        show image splashEKGFull at summonEKG
 
-        d "I worry about you."
+        pause 2.3
+        hide image splashEKGFull at summonEKG
+        call endingTania from _call_endingTania
 
-        "He does. It's probably why he agreed to meet me here at all."
+        # heartbeat, both gone
+        show image splashEKGFull at summonEKG
 
-        d 1q "I gotta tell you, it surprised me when you called me up and asked to meet here."
+        pause 2.3
+        hide image splashEKGFull at summonEKG
+
+        # ending robin
         
-        d "Of all places."
+        "The visions... the visions dance."
+        "I expected something. Something. Robin, where are you?"
+        "Where is your last word? Where is my closure?"
 
-        s "Yeah. I just needed to figure some things out."
+        pause 1.0
 
-        d 1a "Like what?"
+        show r 1c at f12
 
-        s "I... don't know what's real anymore, David."
+        r "Papillon. Life has never worked that way."
 
-        d 1g "Wait what? I thought you were gonna apologize or for throwing me out of your hospital room or something."
+        hide r at f12
 
-        s "That, that, too. Yes. I'm sorry for that, I am. But that's not what I wanted to talk about."
+        "I can hear her saying that. But she didn't. She's gone. She's gone."
 
-        s "David. Are you real?"
+        "Louisa. I love you."
 
-        pause 0.5
+        pause 2.3
+        hide image splashEKGFull at summonEKG
 
-        d 1g "I guess? I don't see why not."
+        pause 2.0
 
-        s "But how do you know?"
+        "Who are you?"
 
-        d 1j "I'm made of meat and I piss a lot."
+        "Who are you really?"
 
-        s "Yeah but what if you're a program designed to do that?"
+        pause 1.0
 
-        d 1k "Seems like a really useless program."
-
-        s "David--"
-
-        d 1g "Sophie. I love you. I did before and I still do, so when I say this I need you to know it comes in good faith."
-
-        pause 0.5
-
-        d 1b "You're not using again, are you?"
-
-        pause 0.4
-
-        s "I'm not. I'm not, I promise. And I'm not crazy."
-
-        d 1g "I didn't say you were crazy. It's just that I've seen these signs before."
-
-        s "I'm clean."
-
-        d "You cut your hair. You've lost weight."
-
-        s "David."
-
-        d 1k "Pull up your sleeves."
-
-        s "I got shocked, that's all. My headset. It burned up some of my hair so I just, I just started over."
-
-        d 1b "That didn't happen, Sophie. Remember?"
-
-        s "... I can't stop shaking."
-
-        d "I can see that. I need to see your arms, Sophie."
+        # Ending fork. I hate that we're cutting so much. But the game needs to be done. You know what? We can keep the mini endings. All of them are still in-delusion, though. There is no real ending.
 
         menu:
-            d "Pull up your sleeves."
+            "..."
+
+            "I am Kylie":
+                k "..."
+                s "Go home, then, Kylie."
+                hide image splashEKGFull at summonEKG
+                play audio beep noloop
+                # heartbeat, both gone
+                show image splashEKGFull at summonEKG
+
+                pause 2.3
+                hide image splashEKGFull at summonEKG
+                jump endingKylie
+
+            "I am Sophie":
+                s "..."
+                k "Go home, Sophie."
+                hide image splashEKGFull at summonEKG
+                play audio beep noloop
+                # heartbeat, both gone
+                show image splashEKGFull at summonEKG
+
+                pause 2.3
+                hide image splashEKGFull at summonEKG
+                jump endingSophie
 
-            "Pull them up":
-                s "Fine. I get why you wouldn't trust me."
-                # show arms with no marks
-                d 1q "It isn't that I don't trust YOU. I just know what that garbage does to people."
-            "I refuse.":
-                s "I shouldn't have to prove anything to you. Or anyone."
-                d 1g "..."
-                d 1k "I'm not gonna force you. I shoulda known what I signed up for."
-
-        s "I just don't know what's real anymore!"
-
-        d 1a "I'm real."
-
-        "He covers my hand with his own, then."
-
-        "It's colder than I thought it might be."
-
-        "I can't be alone. Not now. Not ever."
-
-        pause 0.1
-
-        show image glitchGui at frameGlitch 
-        s "I wonder how the girls are doing."
-
-        pause 0.1
-
-        d 1g "What girls?"
-        hide glitchGui
-
-        show image glitchGui at frameGlitch
-
-        s "You know. Robin and the others."
-        hide glitchGui
-
-        d 1k "Sophie."
-
-        s "What?"
-
-        d "You know Robin isn't real."
-        
-        s "I know that. I mean..."
-
-        s "..."
-
-        s "I don't know what I mean."
-
-        pause 0.1
-
-        d 1a "Someday you will."
-
-        pause 0.1
-
-        s "It's just that I didn't recognize anyone else. Their names were there. Cassandra looked like Cassandra."
-
-        d 1b "Sophie."
-
-        s "Why would Louisa look different? Why did she have a different name?"
-
-        d "Maybe it was just your mind trying to protect you. Or work through grief, something like that."
-
-        s "I didn't even recognize {i}you{/i}."
-
-                # knocking sound
-        # voice "Ms Koenig? We have an application for someone to visit you. Want to have a look?" as a notification. NOPE. this is a phone thing. built a new chatlog with a phone graphic for texts, works exactly the same way.
-
-        # david will be the centerpiece here. He keeps getting interrupted by "the girls" and giving up his seat, then coming back. For the love endings, tania asks david to excuse her and then goes off to wherever they are. In Robin's case she just shows up and David is nonchalantly, "Oh hey Louisa. Sorry I doubted you." notes her hair is wet.
-        #full everyone is good ending would show her in hospital with david and a woman who turns out to be Elsa watching over her.
-        # need to go through list. can only be visited by severed. whoever is first brings notice of those who weren't severed. Tania is first, then cass, then lichelle.
-        # adjust the orders in the following ways. Fontaine is first, actually. dialog changes if you forgave her. either way not hostile. she brings news of the severed if we implement a way to confess to liv, she's still first. love confession is next to last. except liv, scenes need to be able to take place in any order. Robin's bad ending would have to take place last. We know Louisa's really gone, so it'd be sophie who found a way to stab david. Do I want it that way? It's like a person would have to sever everyone or get a bad end. if you get a bad end, it needs to be conveyed that all this happened in the span of a bad trip. she is NOT in a mental institution. too cliche. mention it once. someone saying that had a trip that lasted for a week, but then they opened their eyes to find two hours had passed.
-        #Yes, this means we have to largely rewrite the endings.
-
-
-        if loveRobin >= 4 and robinBio.fullySevered == True:
-            $loveConfession = "Robin"
-
-        elif loveCass >= 4 and cassBio.fullySevered == True:
-            $loveConfession = "Cassandra"
-
-        elif loveTania >= 4 and taniaBio.fullySevered == True:
-            $loveConfession = "Tania"
-
-        elif loveLich >= 4 and lichBio.fullySevered == True:
-            $loveConfession = "Lichelle"
-
-        else:
-            $loveConfession = "None"
-
-
-
-
-            #--------------------------------------------------------------------
-        show d 1k
-
-        d "Well, that's -"
-        #phone sound SFX
-        s "OH!"
-
-        pause 0.1
-
-        d 1j "It's your phone."
-
-        s "I know that."
-
-        "..."
-
-        s "It's from Lichelle."
-
-        d "Who?"
-
-        s "Elle. You've met her, she used to be the door guard."
-
-        d 1a "Oh, Elle. Right. Biceps. What's she want?"
-
-        s "To talk."
-
-        s "If you don't mind giving up your seat for a sec."
-
-        show l 1a at fr13
-
-        l "Sophie. You look rough, girl."
-
-        show d 1q
-
-        "David swivels a bit in his chair and provides an easy smile to her."
-
-        show l 1m
-
-        "She returns it, bold and bright."
-
-        s "I feel okay, though."
-
-        l 1j "I don't believe it. David, my guy, do you mind giving me and gamer girl a minute?"
-
-        "He already was on his feet, brushing off his seat for her."
-
-        show d 1a at mt1
-
-        d "Anything for you, lady. You know, I never knew your name was Lichelle."
-
-        "I didn't know they had such a friendly relationship."
-
-        show l 2l at mt2
-
-        l "Yeah, it is, but I'm Elle to you, bitch."
-
-        d 1a "Yes ma'am. You two have fun, I'm gonna go admire the restroom."
-
-        hide d 1a at f11
-
-        "He's chuckling as he walks off, effervescent, easy. How could I have misjudged him so completely?"
-
-        l 1d "Babe. Based on how you're looking right now, I need you to be honest."
-
-        s "I'm not using."
-
-        l 1j "On god?"
-
-        s "On god."
-
-        "She pauses, but her smile returns."
-
-        l 1a "I found out something today."
-
-        "She has my attention. I'm never sure whether to answer someone who opens a conversation with a statement like that, so I wait."
-
-        if severCass == True:
-            l "Cassandra woke up."
-
-            s "What? Really? When?"
-
-            l 1k "A few weeks ago. Her god damn agent hid it from me. If he wasn't already a damn lawsuit in a tracksuit I would've punched him in the mouth."
-
-            s "Have you talked to her? Does she... does she hate me?"
-
-            l 1a "I didn't ask, babe. But yeah, we had a heart to heart."
-
-            pause 0.1
-
-            l 1b "She doesn't say much. But you gotta know she has a lot on her mind."
-
-            pause 0.1
-
-            l "She did say she wants to talk to you, too."
-
-            "My skin lights up with anxious jitters."
-
-            s "... I don't know if I can. Talk to her, I mean."
-
-            l 1a "You can, babe. In fact, I insist. It'd be good for both of you."
-
-            pause 0.1
-
-            s "... okay."
-
-            l 1j "Okay what?"
-
-            s "I'll talk to her."
-
-            pause 0.1
-
-            l 1m "Good."
-
-            pause 0.1
-
-            l "Elsa's been asking about you, too."
-
-        else:
-            stop music fadeout 2.0
-
-            l 1b "Cassandra won't..."
-
-            "She's cracking. Oh no. No no no no."
-
-            l 1c "She won't, she..."
-
-            "I knew it would be like this."
-
-            l "... she's gone, babe."
-
-            play music cassPiano
-
-            s "When? I heard she was just recovering."
-
-            l 1b "A few weeks ago. Her agent hid it as long as he could, bastard."
-
-            if loveCass >= 4:
-                s "I never got to tell her. Out here."
-
-                l 1r "Huh?"
-
-                s "That I..."
-
-                show l 1b
-
-                "Lichelle's staring at me. Her jaw is set."
-
-                l "That you what?"
-
-                s "I just... we were close. In the simulation."
-
-                l "The what?"
-
-                s "When we all got trapped in Intolerable Jewelry together."
-
-                "There's a tragedy writing its somber prose across her face as I speak."
-
-                l 1g "David mentioned you might bring that up. Honey."
-
-                "Here it comes."
-
-                l 1d "There's no damn simulation. I don't even play video games and Cassandra sure as hell never streamed any."
-
-                l "If we're gonna do this, you've gotta commit to reality."
-
-                s "... it wasn't some fucking delusion."
-
-                show l 1h
-
-                "I wonder if the abruptness of my backbone caught her off guard."
-
-                s "It doesn't matter. The Cassandra I fell in love with is gone either way."
-
-                show l 1b
-
-                pause 0.4
-
-                l "Yeah, well. That means there's no need to worry about it, is there."
-
-                l "I just wanted you to know. No more, no less."
-
-                s "Thank you."
-
-                l "Thank you. Sure thing. Thank you. Shit."
-
-                pause 0.3
-
-                "For a moment, I can feel the earth separating between us."
-
-                show l 1m
-
-                "But then she smiles again, and her poker face is back in place."
-            else:
-                l "I just wanted you to know. Considering you two were... whatever you were."
-
-                pause 0.3
-
-                s "I know she didn't love me. Or even like me."
-
-                l 1p "Oh yeah?"
-
-                s "Oh come on. We were sleeping together. There's nothing more obvious in the world than a partner who isn't that into it."
-
-                l 1m "Never been a thing for me."
-
-                s "Good for you. I liked her, Elle. I didn't love her."
-
-                l 1b "You didn't love you, either."
-
-                "..."
-
-                s "I guess not."
-
-                l "..."
-
-        pause 0.1 
-
-        l 1a "Elsa's been bugging me to have you call."
-        
-        "... I haven't returned any of her messages."
-
-        "Frankly, I don't want to."
-
-        l 1k "As a favor to me, call that girl back before she has a fit."
-
-        s "Elle..."
-
-        l 1j "Look. Sophie."
-
-        "Her smile remains, but the light has dimmed."
-
-        l "I need you to understand something."
-
-        pause 0.3
-
-        l "Louisa died months ago. She been gone long enough it's time we start sorting things out."
-
-        l 1d "She only had eyes for you, god dammit, but she was my friend."
-        
-        l "I oughtta smack your damn mouth every day for the rest of your natural life for what you did."
-
-        l 1e "Giving her that trash."
-
-        "Her tone remains friendly, even. I don't protest. She's not wrong."
-
-        pause 0.4
-
-        l 1b "But I won't."
-
-        l "You're not evil. You're sick. Only damn way to do right by Louisa and Cassandra is to get cleaned up and do something with your life."
-
-        l 1j "I've been talking to David for a while, too. I'm making it my personal mission to be up your ass every single day until I'm satisfied you're gonna be all right."
-        pause 0.2
-
-        s "... promise?"
-
-        show l 1k
-
-        "It's not much of a joke, but the pressure behind my eyes is enormous. I won't cry in front of her. I won't."
-
-        pause 0.2
-
-        l "I'm serious. Promise me you'll talk to Tania, too."
-
-        s "You know, I never met her in person outside the simulation."
-
-        l 1a "Oh babe. She's something else, lemme tell you."
-
-        "I wonder what her silence on the simulation means."
-
-        s "... will you go with me?"
-
-        pause 0.5
-
-        s "You don't owe me anything-"
-
-        l 1m "I'll go."
-
-        s "- but if you could... oh. Well."
-
-        s "That's good then."
-
-        l 1n "Yep."
-
-        "She goes silent. Someone else's music occupies Ganymead's sonic space. It's not Cassandra playing anymore."
-
-        l "You've lost enough time."
-
-        s "..."
-
-        l 1a "..."
-
-        s "Now?"
-
-        l 1j "Now."
-
-        scene bg black with fade
-
-        # mini endings. Note: Love confession ending is second to last. 
-
-        
-        call endingTania
-   
-        
         return

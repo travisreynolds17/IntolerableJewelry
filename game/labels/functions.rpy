@@ -81,7 +81,7 @@ label severInput:
                 #else here related to length check
                     else:
                         un("Severance failed.", True)
-            call allSeveredCheck
+            call allSeveredCheck from _call_allSeveredCheck
             $severChances -= 1
             "There are [severChances] attempts remaining."
             if severChances == 0:

@@ -3,7 +3,6 @@ label common1:
 
     # text
 
-
     scene bg load-string with fade
 
     pause 4.0
@@ -33,7 +32,7 @@ label common1:
 
     s "And you can super tell it's still in beta. Let's get started with One Week Waifu!"
 
-    #sfx: game button confirm sound
+    # sfx: game button confirm sound
     stop music fadeout 2.5
 
     scene bg black with longFade
@@ -118,13 +117,13 @@ label common1:
 
     ki "There's a lot going on, but I found a hallway to hide away from the production assistants and makeup team for a minute."
 
-    show t 1a at f12 
+    show t 1a at f12
 
     t "Hi Kylie!"
 
-    s 1t "Ooh, I like her outfit." 
-    
-    $chat.addmessage(bong,"hips girl")
+    s 1t "Ooh, I like her outfit."
+
+    $chat.addmessage(bong, "hips girl")
 
     ki "... it was only a matter of time before Tania found me."
 
@@ -134,9 +133,9 @@ label common1:
 
     t 1q "I'm here for you. Anything you need, if it takes less than two minutes, I've got you covered."
 
-    ki "I'm too nervous to make a sex joke." 
-    
-    $chat.addmessage(fizz,"That's never happened... yes.")
+    ki "I'm too nervous to make a sex joke."
+
+    $chat.addmessage(fizz, "That's never happened... yes.")
 
     ki "That's never happened before."
 
@@ -149,6 +148,8 @@ label common1:
     # quick choice to show how choices work
 
     $ answer = False
+    # set a counter so the chat can razz you for being a shithead.
+    $ notReady = 0
 
     while answer == False:
 
@@ -158,7 +159,55 @@ label common1:
 
             "I'm not ready!":
                 t 1a "Take a moment to get yourself together."
-                pause 2.0
+
+                pause 1.0
+                if notReady == 2:
+                    $chat.addmessage(elsa, "Uh... Sophie? ")
+                if notReady == 3:
+
+                    $chat.addmessage(bong, "tease")
+                if notReady == 4:
+                    s "Hang on, I'm trying to break this thing."
+                    $chat.addmessage(shub, "Like when I learned manual stimulation, nice? ")
+                if notReady == 5:
+                    $chat.addmessage(cake, "I don't think it's doing anything? ")
+                if notReady == 6:
+                    $chat.addmessage(fon, "Sophie, sweetie, are you afraid of what might be ahead?")
+                if notReady == 7:
+                    s "I wonder how many times she'll let me wait?"
+                if notReady == 8:
+                    t "Really, Kylie..."
+                if notReady == 9:
+
+                    $chat.addmessage(bong, "Just like a chick not to be ready.")
+                if notReady == 10:
+                    s 1b "C'mon Tania, scold me or something!"
+                    $chat.addmessage(fizz, "You're really committed to this not ready thing.")
+                if notReady == 11:
+                    t 1b "..."
+                    $chat.addmessage(elsa, "I admire your dedication.")
+                if notReady == 12:
+
+                    $chat.addmessage(fon, "... I'm drying up here.")
+                if notReady == 13:
+                    k "I'm not..."
+
+                    $chat.addmessage(fizz, "But thou must lol")
+                    t 1d "Kylie. You're cute when you're nervous."
+
+                    $chat.addmessage(bong, "uh oh")
+                    k "Uh?"
+                    t 1a "But we have a little bit of a deadline, so I really must insist you be ready."
+                    s 1m "Yay!"
+                    pause 0.1
+                    t "I like you so much more than I like breach of contract suits."
+                    s 1k "... scold me without invoking the justice system next time."
+                    pause 0.1
+                    $chat.addmessage(bong, "Whoa, scary. Dat legal lees.")
+                    pause 0.1
+                    k "... okay. Let's go."
+                    $answer = True
+                $notReady += 1
 
     # end of choice
 
@@ -189,7 +238,7 @@ label common1:
 
     hide t
 
-    pause 1.0 
+    pause 1.0
     scene bg stage with longFade
 
     play music cheerfulGuitar fadein 2.0
@@ -240,7 +289,6 @@ label common1:
 
     $chat.addmessage(bong, "probly just a casting couch situation neway.")
 
-    
     pause 0.5
     show c 1p at fl12
 
@@ -293,7 +341,6 @@ label common1:
 
     show r 1j at fr12
 
-
     pause 1.0
 
     t "May I present to you, everyone, the owner, proprieter and face of Ganymead Performing Arts, miss Robin Mia Lupei Godrey!"
@@ -304,7 +351,7 @@ label common1:
 
     ki "Oh. Tall. Jesus."
 
-    show r 1m 
+    show r 1m
 
     s 1h "GOTH CHICK! I'm so onboard."
 
@@ -325,9 +372,9 @@ label common1:
 
     ki "Her voice rings musically, with a hint of the tongue-tension common to eastern European nations. I can't quite pin down her accent, though."
 
-    s 1a "Tongue-tension. Chat, I'll let you guys pore over that one." 
-    
-    $chat.addmessage(bong,"treatin us lke a bunch of preverts")
+    s 1a "Tongue-tension. Chat, I'll let you guys pore over that one."
+
+    $chat.addmessage(bong, "treatin us lke a bunch of preverts")
 
     t 1l "Would you mind telling us what Cassandra said just now, Robin?"
 
@@ -365,15 +412,13 @@ label common1:
 
     t 1r "That's awfully cryptic, Robin."
 
-
     r 1j "Yes, it is."
 
     $chat.addmessage(bong, "bestGirl. #hentai")
 
-
     c 1b "..."
 
-    ki "Cassandra signs something toward them, and Robin chuckles a trill of a chuckle."
+    ki "Cassandra signs something toward them, and Robin chuckles a trilling note."
 
     $chat.addmessage(elsa, "Sophie, this isn't really an H-game, is it?")
 
@@ -437,8 +482,8 @@ label common1:
     $chat.addmessage(fon, "I love them. Wow, Fizz! Smarty smart. Handsome too?")
 
     show l at justFade
-    show c at justFade 
-    show r at justFade 
+    show c at justFade
+    show r at justFade
     stop music fadeout 2.0
     pause 1.0
 
@@ -451,11 +496,10 @@ label common1:
     hide r
 
     show t 1l at fr13
-    
 
     pause 0.10
 
-    show c 1o at f12 
+    show c 1o at f12
 
     c "..."
 
@@ -503,7 +547,7 @@ label common1:
     t "Everyone welcome this season's single lady! Come on out, Kylie!"
 
     hide r at f12
-    
+
     hide t at f13
     pause 1.4
 
@@ -512,7 +556,6 @@ label common1:
     show c 1s at f12
     pause 0.3
     show l 1s at fr13
-
 
     $renpy.notify("Chat!")
 
@@ -579,7 +622,6 @@ label common1:
     $chat.addmessage(elsa, "If I liked girls, probly the fighter. Imagine holding that person in your arms after a tough loss or a great win :)")
     $chat.addmessage(elsa, "But she might be too aggressive. Robin, then.")
 
-    
     pause 1.0
 
     s 1m "Wow you guys are talkative today. Hi Shub, Crab, and Cake! My three amigos."
@@ -629,7 +671,7 @@ label common1:
                 $chat.addmessage(fizz, "Good choice.")
                 s 1a "I'm super curious how this is gonna play out if she can't talk. Like, maybe I can learn sign language in a week?"
                 $temp = True
-                $loveCass += 1
+                $cassBio.loveUp()
                 $ which_girl_1 = "Cassandra"
 
             "Robin":
@@ -644,7 +686,7 @@ label common1:
                 $chat.addmessage(bar, "Butterfly? Right?")
                 s 1a "Oh my god she speaks French! The goth chick called me butterfly! Guys. Chat. We did it. We won."
                 $temp = True
-                $loveRobin += 1
+                $ robinBio.loveUp()
                 $ which_girl_1 = "Robin"
 
             "Lichelle":
@@ -659,10 +701,10 @@ label common1:
                 ki "She winks. I'm not sure if I believe her."
                 $chat.addmessage(elsa, "I dunno about BDSM with a trained fighter though.")
                 $temp = True
-                $loveLich += 1
+                $lichBio.loveUp()
                 $ which_girl_1 = "Lichelle"
 
-            "You on the menu, Tania?" if loveTania == 0:
+            "You on the menu, Tania?" if taniaBio.love == 0:
                 hide r at fl11
                 hide c at f12
                 hide l at fr13
@@ -671,7 +713,8 @@ label common1:
                 t "Oh, no, that would make filming next season pretty tough!"
                 $chat.addmessage(egg, "But she has a progress bar, so...")
                 t "But I'm flattered!"
-                $loveTania += 1
+                if taniaBio.love == 0:
+                    $taniaBio.loveUp()
 
             "Just one?" if groupThing == False:
                 hide r at fl11
@@ -688,11 +731,10 @@ label common1:
                         [shub, "Hell yeah"],
                         [cake, "swoon"]
                     ]
-                    chat.bulkMessage(newComments, 0)
+                    chat.bulkMessage(newComments, 0.9)
                 $groupThing = True
 
         # END OF CHOICE
-        
 
     scene bg stage
     show t 1a at f12
@@ -768,7 +810,7 @@ label common1:
     stop music fadeout 1.0
 
     scene bg near stage with fade
-    
+
     show t 1a at f12
 
     $chat.addmessage(fizz, "Buncha freaks in here and it's great.")
@@ -950,7 +992,7 @@ label common1:
             "What if I want to end the date early?":
                 $haveAsked == True
                 t 1q "You're contractually obligated not to, so... even if you don't like the date, you have to get through it."
-                
+
                 t 2a "Just try to make it interesting for the audience if that happens."
 
             "How much of this is staged?":
@@ -966,7 +1008,7 @@ label common1:
     $chat.addmessage(fizz, "I love Q and A time. Hey Sophie, did you notice chat wasn't working just now?")
 
     t 1l "Great. Go get ready, and hey Kylie? Listen. If you need to talk to anybody, I'm around."
-    
+
     t "I've been on this show since day one and I'll be happy to listen if you need anything."
 
     $chat.addmessage(unkn, "R/BG13:14-15")
@@ -1015,9 +1057,9 @@ label common1:
 
     show l 1a at mt1
 
-    show r 1j at f12 
+    show r 1j at f12
     ki "Robin, the shadow, graceful and statuesque. Her detachment paired with that accent lend her this ghostly, mysterious vibe that pulls at me, even now as I think about her."
-    
+
     ki "Some part of me is afraid of her, but it's hard to express why."
 
     $chat.addmessage(bar, "I mean, that's a chick who's in control of her space. Don't fluck with a woman like that.")
@@ -1086,6 +1128,17 @@ label common1:
             [crab, "This game sux"],
             [fon, "NO"],
             [shub, "Hey, Fontaine's back"],
+
+
+
+        ]
+        chat.bulkMessage(newComments, 1.00)
+
+    pause
+
+    python:
+        newComments = [
+
             [fon, "This is the best game."],
             [cake, "So did you really private chat with Bong?"],
             [fon, "Yes. He's a pretty boy."],
@@ -1097,7 +1150,7 @@ label common1:
 
 
         ]
-        chat.bulkMessage(newComments, 0.75)
+        chat.bulkMessage(newComments, 1.10)
 
     pause
 
@@ -1129,15 +1182,23 @@ label common1:
     $chat.addmessage(egg, "l0l")
     $chat.addmessage(bar, "nice")
 
-    ki "So I have a simple black dress with matching shoes for one date, a jeans and teddy bear tee for another, and then a smart blue pantsuit with emerald blouse."
+    ki "The options before me span an array of styles."
 
-    ki "The dress is awfully revealing. It feels like a silky puddle of nothing in my hands." 
-    
-    $chat.addmessage(cake,"That's that whiskeyDiq, right Crab?")
+    s 1q "Probably tropes, too."
 
-    ki "I like the jeans and bear shirt more than I want to admit, but it seems too casual. Laundry-day casual." 
-    
-    $chat.addmessage(crab,"never happens son")
+    ki "There's a standard, silky little black dress. Frankly, I'm not certain if I have the figure for this."
+
+    $chat.addmessage(crab, "That one. Limp and silky.")
+
+    ki "The dress is awfully revealing. It feels like an effervescent puddle of nothing in my hands."
+
+    $chat.addmessage(cake, "That's that whiskeyDiq, right Crab?")
+
+    ki "I like the jeans and sweetie bear shirt more than I want to admit, but it seems too casual. Laundry-day casual."
+
+    $chat.addmessage(crab, "never happens son")
+
+    ki "There's a smart pantsuit, as well. Royal blue with an emerald blouse."
 
     ki "The pantsuit is stylish, but I think a suit requires a certain power attitude. Not me, not in the least."
 

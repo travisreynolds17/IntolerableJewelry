@@ -2,9 +2,7 @@ label severCassandra:
     # called label in which Cassandra describes what happened the night Louisa drowned
 
     $hideGui()
-    $hideSeverancePanel()
     stop music fadeout 6.0
-    scene bg black with fade
     show image fountainShroud with dissolve
 
     pause 1.0 
@@ -278,7 +276,7 @@ label severCassandra:
 
     t "What did you do?"
 
-    c "I comforted her."
+    c "I screwed her."
 
     t "Huh?"
 
@@ -380,7 +378,6 @@ label severCassandra:
 
     c 1b "... yeah. Sure."
 
-    scene bg black with fade
     stop music fadeout 4.0
 
     c "If I'm honest with you..."
@@ -389,17 +386,7 @@ label severCassandra:
 
     $cassBio.severView()
 
-    scene bg dressing with fade
-
-    pause 1.0
-    $showGui()
-    play music bedroom fadein 1.0
-
     k "Huh? I must've dozed off."
-
-    $severToggle()
-
-    
 
 
 

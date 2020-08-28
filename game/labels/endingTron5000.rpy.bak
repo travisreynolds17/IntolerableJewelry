@@ -1,0 +1,435 @@
+
+
+label endingTron5000:
+    # routes based on if entity is severed, routed according to who else is severed.
+
+    # show oblivion
+    play music fountainWater
+    show f 1a at f12
+    o "Ladies."
+
+    show l 1d at fr13
+
+    l "Bitch."
+
+    "Tania snorts, covers her mouth to hide her laughter."
+
+    show c 1k at fl11
+
+    $chat.addmessage(elsa, "There's just no stopping the narrator.")
+
+    o 1l "Are we r-r-rready for the next cycle?"
+
+    c "Why are you asking any of us except Kylie? We know damn well there's no choice."
+
+    o 1j "Fair."
+
+    o 1m "Kylie, sweet lovely Kylie."
+
+    k "..."
+
+    o "Are you ready? To go?"
+
+    menu:
+        "Resist":
+            $resistance += 1
+            play audio beep noloop
+            show image splashEKGFull at summonEKG
+            pause 0.3
+            k "Aagghkk...!"
+            show f 1h at mt1
+            show c 1i at mt2
+            o 1h "HEY what? What's that line?"
+            show l 1h
+
+            show t 1i at f22
+            "Kylie hadn't made it to her feet before a flare of pain seized her chest, leaving her to stumble against Tania and Lichelle."
+            pause 0.2
+            t "Fontaine! What are you doing to her?"
+            o 1b "We did not cause that!"
+            "She seems genuinely offended."
+            k "... someone..."
+            play audio beep noloop
+            hide image splashEKGFull at summonEKG
+            stop music fadeout 3.0
+            k "i t  h u r t s"
+            play audio beep noloop
+            show image splashEKGFull at summonEKG
+            pause 0.3
+        "Give up":
+            jump endingGaveUp
+
+    pause 0.1
+    o "We know what to do, then."
+
+    c 1d "And what's that? Regale us."
+
+    t 1e "HELP HER you... you damn thing!"
+
+    pause 0.5
+
+    o 1a "Sophie."
+
+    l 2r "Huh?"
+
+    pause 0.5
+
+    play music onTheNod
+
+    o 1n "You're still there, aren't you?"
+
+    pause 0.5
+
+    $chat.addmessage(sophie, "Mom? Daddy? Is that... who?")
+
+    pause 0.5
+
+    o 1k "Fine then."
+
+    o "Sophie. Cassandra. Kylie. Lichelle. Louisa."
+
+    o 1i "WE are a-a-a-s much an NPC in this as any of you!"
+
+    $chat.addmessage(sophie, "Louisa...")
+
+    $chat.addmessage(sophie, "WHAT HAPPENED TO LOUISA???")
+
+    o "You know what happened to her. {i}YOU GAVE US TO HER{/i}."
+
+    o 1b "And you called us jewelry. Baubles. pppppointless accessories!"
+
+    # here is where endings are determined. MAKE SURE TO REMOVE THIS FUNCTION
+    $endingTest()
+
+    "... storage.Tania.severed: [taniaBio.severed]"
+
+    if taniaBio.fullySevered:
+        show t 1i at fr13
+        pause 0.5
+        hide t 1c at f13
+
+    o 1h "Hm?"
+
+    "... storage.Robin.severed: [robinBio.severed]"
+
+    $chat.addmessage(sophie, "... this is my will.")
+
+    "... storage.Cass.severed: [cassBio.severed]"
+
+    if cassBio.fullySevered:
+        show c 1i at f13
+        pause 0.5
+        hide c 1c at f13
+
+    $chat.addmessage(sophie, "I don't want this anymore.")
+
+    un "Who's speaking?"
+
+    # Lichelle is let loose at this pont
+
+    "... storage.Lichelle.severed: [lichBio.severed]"
+
+    if lichBio.fullySevered:
+        show l 1i at fr13
+        pause 0.5
+        hide l 1c at f13
+
+    $chat.addmessage(sophie, "I don't want to need you anymore!")
+
+    un "Why?"
+
+    $chat.addmessage(sophie, "I hope I've done this right. I hope.")
+
+    "storage.Fontaine.severed: [fontBio.severed]"
+
+    pause 1.0
+
+    o 1b "We had no idea you were so aware, Sophie."
+
+    o 1c "SOMEONE has been NAUGHTY. Trying to SEVER our STRINGS."
+
+    o "Well, we can't have that. Let's fix things, shall we?"
+
+    if fontBio.severed == False:
+        pause 1.0
+        o 1b "... did you choose, then, not to sever your connection to us?"
+        pause 0.5
+        o 1c"Then you've learned nothing."
+        o "Then you deserve your fate."
+        o 1d "One last turn. One final dissociation."
+        o 1e "We will see you soon, Sophie."
+        $hideGui()
+        $gaveUp = True
+        jump endingGaveUp
+
+    else:
+        stop music fadeout 1.0
+        pause 1.0
+
+        o 1c "W-w-w-w-w-w-w-w-w-what?"
+
+        o "Kylie did you do this to us?"
+
+        play music kylieFightsBack
+
+        k "What happened to we?"
+
+        o 1i "WE ARE? Severed???"
+
+        # Show a splash screen with the floor and only the unstrung girls lying dead. Some visual indication of a change.
+
+        k "Guys!"
+
+        k "Hey Lichelle, Lichelle! Cass, Tania, you okay?"
+
+        o 1f "WE ARE O-O-OKAY"
+
+        # character appears, an amalgamation of each other character, bleeding ones and zeros
+
+        k "Oh my god, you're... are you real?"
+
+        o "We suffer"
+
+        o 1r "P-p-p-pain, this is pain? Is this pain?"
+
+        o 1c "Make IT stop"
+
+        o "please"
+
+        o 1f "K-k-k-kylie"
+
+        pause 1.0
+
+        k "... I'm so sorry."
+
+        k "I wish it could be different."
+
+        o 1h "kkkkkkkk"
+
+        menu:
+            k "If it means anything at all..."
+
+            "I forgive you.":
+                k "I forgive you."
+                k "I can't... I can't speak for anyone else, but I do."
+                k "I don't know what you are. I just think you're lonely."
+                # show e understanding this, agreeing.
+                o 1b "..."
+                k "Maybe some day you'll be able to reach us. I hope..."
+                k "I hope you don't hate us."
+                o "...ccould n-n-nnever hhate--"
+                o 1m "...l-lllove... so so so so m-m-m-mmuch"
+                k "..."
+                show f at d12
+                # splash screen of kylie hugging entity
+
+            "I'll never, ever forgive you.":
+                k "If there's a hell you can go to, I hope you rot there."
+                k "You're a killer. A monster."
+                o 1b "nnnnn"
+                k "I hate you."
+                o 1c "... you ex-x-x-ist because... of us..."
+                k "I never asked for that! Sophie's dead!"
+                o "...ccould n-n-nnever hhate--"
+                o 1m "...l-lllove... so so so so m-m-m-mmuch"
+                k "..."
+                show f at d12
+                # splash screen of kylie turning from entity
+
+        # effect suggesting collapse of game
+
+        # sophie gets up
+
+        k "... oh."
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        k "nngh"
+
+        ki "Why does everything hurt...?"
+
+        hide image splashEKGFull at summonEKG
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        s 1v "What..."
+
+        ki "What's that... that smell...?"
+
+        hide image splashEKGFull at summonEKG
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        show k 1h at f12
+
+        s "... Kylie...?"
+
+        k 1i "Sophie? Is that you?"
+
+        s "... is this real...?"
+
+        hide image splashEKGFull at summonEKG
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        show image kylieBlood1 at kylieBlood
+        pause 0.3
+
+        k 1f "Nnngngghh!"
+
+        hide k at f12
+
+        s 1l "KYLIE!"
+
+        show k 1v at f12
+
+        k "I don't have time. I'm, I'm coming apart--"
+
+        hide image splashEKGFull at summonEKG
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        k "I wish I could've gotten to know you."
+
+        hide image splashEKGFull at summonEKG
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        show image kylieBlood2 at kylieBlood
+        pause 0.3
+
+        k "Nnngh! I, I, I think we w-would've had..."
+
+        $hideGui()
+
+        k "a lot... a lot in common!"
+        stop music fadeout 3.0
+        play audio beep noloop
+        hide image splashEKGFull at summonEKG
+
+        # heartbeat - drop background out and only show kylie and entity. Kylie's bleeding froom her mouth.
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        s 1v "What's happening to us? Hey!"
+
+        # heartbeat, now from eyes
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        hide image splashEKGFull at summonEKG
+        play audio beep noloop
+        # heartbeat, both gone
+        show image splashEKGFull at summonEKG
+        hide k at f12
+
+        pause 0.3
+        # heartbeat
+
+        s "Kylie. KYLIE!"
+
+        pause 1.0
+
+        hide image splashEKGFull at summonEKG
+
+        # splash screen with sophie screaming, maybe?
+
+        scene bg black with fade
+
+        # scene for sophie's room
+
+        pause 2.0
+
+        # heartbeat, both gone
+        show image splashEKGFull at summonEKG
+
+        pause 2.3
+        hide image splashEKGFull at summonEKG
+        call endingCass
+
+        pause 2.0
+
+        # heartbeat, both gone
+        show image splashEKGFull at summonEKG
+
+        pause 2.3
+        hide image splashEKGFull at summonEKG
+        call endingLich
+
+        pause 2.0
+
+        # heartbeat, both gone
+        show image splashEKGFull at summonEKG
+
+        pause 2.3
+        hide image splashEKGFull at summonEKG
+        call endingTania
+
+        # heartbeat, both gone
+        show image splashEKGFull at summonEKG
+
+        pause 2.3
+        hide image splashEKGFull at summonEKG
+
+        # ending robin
+        
+        "The visions... the visions dance."
+        "I expected something. Something. Robin, where are you?"
+        "Where is your last word? Where is my closure?"
+
+        pause 1.0
+
+        show r 1c at f12
+
+        r "Papillon. Life has never worked that way."
+
+        hide r at f12
+
+        "I can hear her saying that. But she didn't. She's gone. She's gone."
+
+        "Louisa. I love you."
+
+        pause 2.3
+        hide image splashEKGFull at summonEKG
+
+        pause 2.0
+
+        "Who are you?"
+
+        "Who are you really?"
+
+        pause 1.0
+
+        # Ending fork. I hate that we're cutting so much. But the game needs to be done. You know what? We can keep the mini endings. All of them are still in-delusion, though. There is no real ending.
+
+        menu:
+            "..."
+
+            "I am Kylie":
+                k "..."
+                s "Go home, then, Kylie."
+                hide image splashEKGFull at summonEKG
+                play audio beep noloop
+                # heartbeat, both gone
+                show image splashEKGFull at summonEKG
+
+                pause 2.3
+                hide image splashEKGFull at summonEKG
+                jump endingKylie
+
+            "I am Sophie":
+                s "..."
+                k "Go home, Sophie."
+                hide image splashEKGFull at summonEKG
+                play audio beep noloop
+                # heartbeat, both gone
+                show image splashEKGFull at summonEKG
+
+                pause 2.3
+                hide image splashEKGFull at summonEKG
+                jump endingSophie
+
+        return

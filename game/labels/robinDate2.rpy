@@ -4,9 +4,10 @@ label robinDate2:
     $hideGui()
     scene bg story-9 with fade
     pause
+    show image story9Edit with dissolve
+    pause
     scene bg dressing with fade
-    #enable severance
-    $severToggle()
+    
     $showGui()
     pause 0.5
 
@@ -41,6 +42,8 @@ label robinDate2:
     s 1t "Oh, shush, all'ya, but thanks for calling me pretty, Egg."
     pause 0.1
 
+    pause 1.0
+
     ki "The night passes, beset by squads of nightmares."
 
     $chat.addmessage(elsa, "Huh?")
@@ -67,12 +70,13 @@ label robinDate2:
 
     k "Coming, coming."
 
+    
+
     ki "I just don't have time to think about her."
 
     scene bg black with fade
 
-    #disable severance
-    $severToggle()
+    
 
     # ---------------------------------------------------------
 
@@ -1551,13 +1555,14 @@ label robinDate2:
 
         s "Wow. I can't believe Kylie's thinking about anything other than running the ~yawn~ hell away."
 
-        $renpy.notify("No, don't! Don't, not yet!")
-
         menu:
             ki "Should I..."
 
             "Make a move":
-                jump endLich
+                k "Lichelle. What if we ended the show right now?"
+                #sfx static
+                k "Mm... nothing. It's nothing."
+                l 1g "Cool."
             "Don't make a move":
                 k "Mm... nothing. It's nothing."
                 l 1g "Cool."

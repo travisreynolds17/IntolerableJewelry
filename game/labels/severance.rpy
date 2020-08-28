@@ -23,8 +23,8 @@ label severance:
         underLabelText = ""
         # need this because button action functions can't take arguments.
         currentInput = ""
-        #icon
-        
+        # icon
+
         # useful functions
 
         def sanitizeInput(text):
@@ -71,12 +71,12 @@ label severance:
 
         def severToggle():
             global severAvailable
-            
+
             if severAvailable:
                 renpy.hide_screen("severButton")
                 severAvailable = False
             else:
-                
+
                 renpy.show_screen("severButton")
                 severAvailable = True
 
@@ -151,6 +151,13 @@ label severance:
             global currentInput
             currentInput = ""
 
+        def showSeveranceMenu():
+            renpy.show_screen("severanceMenu")
+            renpy.call("severanceChoices")
+
+        def hideSeveranceMenu():
+            renpy.hide_screen("severanceMenu")
+
         def severCommit():
             # temp
             global currentInput
@@ -188,59 +195,56 @@ label severance:
                 fontBio.stringSever()
                 renpy.call("severFontaine")
 
+#label shows the choice menu for severance
+label severanceChoices:
+    $severToggle()
+    
 
-# these labels are mini stories from the perspective of the severed character, providing some light on their part in the story.
-label severKylie:
-    $hideSeverancePanel()
-    menu:
-        "Are you sure you wish to cut connection to Kylie?"
+    while doneSevering == False:
+        scene bg desk with fade
 
-        "Sever Kylie":
-            jump kylieEnding
-        "Maybe better not":
-            "Certainly, Kylie does not know how close she came to dissolution."
-    return
+        menu:
 
+            "What? What is... sever them? Sever them from me?"
 
-label kylieEnding:
-    $hideSeverancePanel()
-    scene bg black
+            "Cassandra" if cassBio.severViewed == False:
+                $hideSeveranceMenu()
+                pause 2.0
+                call severCassandra from _call_severCassandra
+                
+            "Lichelle" if lichBio.severViewed == False:
+                $hideSeveranceMenu()
+                pause 2.0
+                call severLichelle from _call_severLichelle
+            "Robin" if robinBio.severViewed == False:
+                $hideSeveranceMenu()
+                pause 2.0
+                call severRobin from _call_severRobin
+            "Tania" if taniaBio.severViewed == False:
+                $hideSeveranceMenu()
+                pause 2.0
+                call severTania from _call_severTania
+            "Kylie":
+                $hideSeveranceMenu()
+                pause 2.0
+                call severKylie from _call_severKylie
+            "The Intervascular Anomaly" if fontBio.severViewed == False and fontaineRevealed:
+                $hideSeveranceMenu()
+                pause 2.0
+                $severFontaine()
+                "Freed from... it? But who is free? She or we?"
+            "No... nobody.":
+                $doneSevering = True
 
-    stop music fadeout 5.0
-
-    pause 1.0
-
-    k "Huh?"
-
-    pause 0.5
-
-    k "Why does... ow! I... why does..."
-
-    k "it hurts"
-
-    #sfx
-    show image screenCrack
-
-    k "why"
-
-    #sfx
-    show image screenCrack2
-
-    k "somebody"
-
-    #sfx
-    show image screenCrack3
-
-    k "h... h...hel..."
-
-    #sfx
-    show image screenCrack4 with dissolve
+    $doneSevering = False
+    $hideSeveranceMenu()
+    scene bg dressing with fade
+    play music bedroom fadein 3.0
+    $showGui()
+    $severToggle()
+    pause
 
 
-    # some quote about there's no using burning the boats while you're still on them
-
-    jump endCredits
-    return
 
 transform summonSeverance:
     on show:
@@ -249,19 +253,23 @@ transform summonSeverance:
     on hide:
         easein 0.5 ypos 0.0
 
+screen severanceMenu:
+    modal True
+    fixed at alphaFade:
+        add severanceBack
+
 
 screen severancePanel:
     modal True
-    
 
     fixed at alphaFade:
         add severanceBack
-        button:   
+        button:
             background iconBtnBack
             ypos 580
             xsize 100
             ysize 100
-            xpos 50               
+            xpos 50
             action Function(hideSeverancePanel)
 
         input:
@@ -290,12 +298,12 @@ screen severancePanel:
 # define a quick transform to show and hide button
 
 transform severButton:
-    xpos -20 ypos 5
+    xpos - 20 ypos 5
 
     on show:
         easein 1.0 xpos 10
     on hide:
-        easein 1.0 xpos -200
+        easein 1.0 xpos - 200
 
 screen severButton:
     modal False
@@ -306,4 +314,5 @@ screen severButton:
         button:
             xysize(lbtnWidth, lbtnHeight)
             background btnSever
-            action Function(showSeverancePanel)
+            action Function(showSeveranceMenu)
+            # Note: We may go back to showSeverancePanel at some point. For now, it will just be a menu.

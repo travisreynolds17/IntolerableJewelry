@@ -327,6 +327,28 @@ label definitions:
     image c 2t = im.Composite((371, 1004), (0, 240), "chars/c2.png", (135, 423), "chars/ct.png")
     image c 2u = im.Composite((371, 1004), (0, 240), "chars/c2.png", (135, 423), "chars/cu.png")
 
+    image c 3a = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/ca.png")
+    image c 3b = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cb.png")
+    image c 3c = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cc.png")
+    image c 3d = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cd.png")
+    image c 3e = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/ce.png")
+    image c 3f = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cf.png")
+    image c 3g = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cg.png")
+    image c 3h = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/ch.png")
+    image c 3i = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/ci.png")
+    image c 3j = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cj.png")
+    image c 3k = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/ck.png")
+    image c 3l = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cl.png")
+    image c 3m = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cm.png")
+    image c 3n = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cn.png")
+    image c 3o = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/co.png")
+    image c 3p = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cp.png")
+    image c 3q = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cq.png")
+    image c 3r = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cr.png")
+    image c 3s = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cs.png")
+    image c 3t = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/ct.png")
+    image c 3u = im.Composite((371, 1004), (0, 240), "chars/c3.png", (135, 423), "chars/cu.png")
+
     #lichelle
     image l 1a = im.Composite((348, 942), (0, 210), "chars/lc1.png", (116, 342),  "chars/lca.png")
     image l 1b = im.Composite((348, 942), (0, 210), "chars/lc1.png", (116, 342),  "chars/lcb.png")
@@ -466,6 +488,30 @@ label definitions:
     image t 2s = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/tcs.png")
     image t 2t = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/tct.png")
     image t 2u = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/tcu.png")
+
+    # tania composite images
+
+    image t 3a = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tca.png")
+    image t 3b = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcb.png")
+    image t 3c = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcc.png")
+    image t 3d = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcd.png")
+    image t 3e = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tce.png")
+    image t 3f = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcf.png")
+    image t 3g = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcg.png")
+    image t 3h = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tch.png")
+    image t 3i = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tci.png")
+    image t 3j = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcj.png")
+    image t 3k = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tck.png")
+    image t 3l = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcl.png")
+    image t 3m = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcm.png")
+    image t 3n = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcn.png")
+    image t 3o = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tco.png")
+    image t 3p = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcp.png")
+    image t 3q = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcq.png")
+    image t 3r = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcr.png")
+    image t 3s = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcs.png")
+    image t 3t = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tct.png")
+    image t 3u = im.Composite((371, 1004), (0, 250), "chars/tc3.png", (82, 358), "chars/tcu.png")
 
 # robin composite images
 
@@ -642,6 +688,8 @@ label definitions:
     image m 2s = im.Composite((260, 1004), (0, 350), "chars/ms.png")
     image m 2t = im.Composite((260, 1004), (0, 350), "chars/mt.png")
     image m 2u = im.Composite((260, 1004), (0, 350), "chars/mu.png")
+    image m 2font = im.Composite((260, 1004), (0, 350), "chars/mFont.png")
+
 # second poses
 
     #cassandra splash images

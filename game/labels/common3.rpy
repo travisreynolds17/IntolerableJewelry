@@ -70,6 +70,7 @@ label common3:
     s 1a "Should we bother with Lichelle or Tania? I mean... maybe we missed something last time."
     s 1b "I'm worried they're bad end routes or something."
     $temp = False
+    $taniaPicked = False
 
     while temp == False:
 
@@ -78,7 +79,7 @@ label common3:
         hide c 
         hide l 
         with dissolve
-
+       
         menu:
             "Cassandra":
                 scene bg stage
@@ -106,7 +107,7 @@ label common3:
                 t "Oh, you like the mysterious type eh?"
                 r "I'm glad. I've been waiting for you for so, so long."
                 show t 1a
-                if $which_girl_1 == "Robin":
+                if which_girl_1 == "Robin":
                     s "Wow, I missed that the first time. I thought she was just being spooky!"
                 else:
                     s "Wow! I guess if I picked her before that would've been a big clue about our past!"
@@ -131,11 +132,13 @@ label common3:
                 $lichBio.loveUp()
                 $ which_girl_1 = "Lichelle"
 
-            "You on the menu, Tania?" :
+            "You on the menu, Tania?" if taniaPicked == False:
                 t "We talked about this already, Kylie."
                 ki "Jeez, I guess not."
                 s "We did? Oh, I guess it was in the hallway before the show."
+                $taniaPicked = True
                 $taniaBio.loveUp()
+                
 
             # END OF CHOICE
 
@@ -282,6 +285,7 @@ label common3:
 
         "In it for the cash":
             t 2j "You say that, but somebody this season is gonna get your heart. I just know it."
+            
 
         "Looking for The One":
 
@@ -293,6 +297,7 @@ label common3:
             t 1u "Oh. So you're a sex-pervert?"
             k "No, no, I just... I dunno. I guess I want some excitement in my life before I settle into a cubicle somewhere."
             t 1j "You never know. The cubicle may never come."
+            $taniaBio.setLove(1)
 
             ki "Tania's got a dark streak, doesn't she?"
     # end menu
@@ -347,7 +352,7 @@ label common3:
 
     k "I just don't know what I have to offer any of them."
 
-    t 1i "Take some goddamn responsiblity!"
+    t 1i "Take some goddamn responsibility!"
 
     show t 1m
 
@@ -649,7 +654,9 @@ label common3:
 
     pause 0.5
 
-    l 1u "Based on the way you're breathing right now, it might already be too late."
+    l 1u "Based on the way you're breathing right now, it might already be too late." 
+    
+    $chat.addmessage(fizz,"Might be too late. Anyone else notice the affection levels?")
 
     s 1t "Wow. Heh heh."
 
