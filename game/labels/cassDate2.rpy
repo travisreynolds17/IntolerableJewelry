@@ -1199,6 +1199,7 @@ label cassDate2:
             l "I only want to hurt you if you want me to, babe."
             k "Oh."
             ki "But she doesn't ask if I want her to hurt me."
+            $lichClonked = True
             pause 0.5
 
         "No, I don't":

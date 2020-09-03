@@ -2,10 +2,14 @@
 label severKylie:
     $hideSeverancePanel()
     menu:
-        "Are you sure you wish to cut connection to Kylie?"
+        "Are you sure you wish to cut connection to Kylie? Such a risk..."
 
         "Sever Kylie":
-            jump kylieEnding
+            
+            if loveConfession == "Robin" and robinBio.severViewed:
+                $severKylie = True
+            else:
+                jump kylieEnding
         "Maybe better not":
             "Certainly, Kylie does not know how close she came to dissolution."
     return

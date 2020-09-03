@@ -83,6 +83,10 @@ label lichDate:
 
     $chat.addmessage(elsa, "Ooh, symmetry.")
 
+    # jump over to scene with Lichelle and Tania. come back after Kylie decides to have a nap.
+
+    call lichDateTania
+
     # SFX knock knock
 
     pause 1.0
@@ -94,6 +98,8 @@ label lichDate:
     $chat.addmessage(fizz, "lol dork")
 
     # SFX door open
+
+    scene bg dressing
 
     show t 1k at f12
 
@@ -123,9 +129,9 @@ label lichDate:
 
     $chat.addmessage(crab, "She is, right? succubus or something")
 
-    k "I need a shower. How long have we got?"
+    k "I need a shower. Did you say it's five?"
 
-    t 1k "You just get in there and I'll put some clothes out. We're supposed to be at the park in like forty minutes."
+    t 1k "You just get in there and I'll put some clothes out. We're supposed to be at the park in like twenty minutes."
 
     $chat.addmessage(elsa, "At the park? What kind of park I wonder?")
 

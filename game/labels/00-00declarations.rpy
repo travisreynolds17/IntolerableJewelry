@@ -231,6 +231,12 @@
     define story7Edit = Image("img/bg story-7-edit.png")
     define story9Edit = Image("img/bg story-9-edit.png")
 
+    #showNotes
+    define showNotes1 = Image("img/showNotes1.png")
+    define showNotes2 = Image("img/showNotes2.png")
+    define showNotes3 = Image("img/showNotes3.png")
+    define showNotes4 = Image("img/showNotes4.png")
+
     define kylieBlood1 = Image("img/kcBlood1.png")
     define kylieBlood2 = Image("img/kcBlood2.png")
 
@@ -244,7 +250,20 @@
     default doneSevering = False
     # to hold title of ending
     default endingTitle = ""
+    default kylieSevered = False
+    default lichClonked = False
     define endings = ["Birth of a Neurochemical God", "Sobredosis", "Damned in Elle", "Homunculus Post Mortem", "Papillon", "My Soul Is Yours", "Dr. L'eau, Amateur Surgeon", "Free from Myself"]
+
+    # kylie and fontain dissolving
+
+    define fontDiss1 = "images/chars/fc3.png"
+    define fontDiss2 = "images/chars/fc4.png"
+    define fontDiss3 = "images/chars/fc5.png"
+
+    define kylieDiss1 = "images/chars/kc3.png"
+    define kylieDiss2 = "images/chars/kc4.png"
+    define kylieDiss3 = "images/chars/kc5.png"
+    define kylieDiss4 = "images/chars/kc6.png"
 
 
     
@@ -313,10 +332,10 @@
 
     transform summonChatHistory:
         on show:
-            xpos 1400 ypos 100
-            linear 0.3 xpos 800
+            alpha 0.0 xpos 640 xcenter 0.5 ypos 180
+            linear 0.3 alpha 1.0
         on hide:
-            linear 0.3 xpos 1400
+            linear 0.1 alpha 0.0
 
     transform textFloatCenter:
         on show:

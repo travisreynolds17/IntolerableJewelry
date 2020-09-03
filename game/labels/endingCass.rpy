@@ -14,6 +14,8 @@ label endingCass:
 
         "And suddenly, Cassandra."
 
+        show image glitchGui at frameGlitch 
+
         "She looks exactly like her counterpart in the simulation, somehow."
 
         "Choker and all."
@@ -102,6 +104,10 @@ label endingCass:
             "But for just now, just this moment"
 
             "I want to dream."
+
+            pause 1.0
+
+            "End: She In Silence Sang"
     else:
         "Cassandra's funeral drew quite a crowd."
         "Made headlines. What a tragedy. What a waste of young brilliance."

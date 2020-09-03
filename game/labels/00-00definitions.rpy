@@ -27,6 +27,14 @@ label definitions:
             xcenter x yoffset 0 yanchor 1.0 ypos 1.00 zoom z*1.00 alpha 1.0 subpixel True
             linear .5 alpha 0.00
 
+    transform tDiss(x = 640, z = 1.0):
+        on show:
+            xcenter x yoffset 0 yanchor 1.0 ypos 1.2 zoom z*1.00 alpha 0.0 subpixel True
+            easein 1.0 alpha 1.00
+        on hide:
+            xcenter x yoffset 0 yanchor 1.0 ypos 1.2 zoom z*1.00 alpha 1.0 subpixel True
+            linear .5 alpha 0.00
+
     transform sophfade(x = 0, y = 80, z = 0.9):
         on show:
             xpos x  ycenter y ypos y zoom z*1.00 alpha 0.0 subpixel True
@@ -86,6 +94,11 @@ label definitions:
 
     transform justFade():
         linear 0.8 alpha 0.00
+
+    transform foreverFade(x = 640):
+        on show:
+            alpha 0.0 xcenter x yoffset 0 yanchor 1.0 ypos 1.00 subpixel True
+            linear 100.0 alpha 0.6
             
 
     # quick zooms for speaking callbacks
@@ -140,6 +153,12 @@ label definitions:
         tfade(spriteBRight)
     transform f14:
         tfade(800)
+    transform f15:
+        tfade(1000)
+    transform ff15:
+        foreverFade(1000)
+    transform diss:
+        tDiss(spriteXCenter)
     
 
     # from lefts

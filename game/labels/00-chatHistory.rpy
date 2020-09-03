@@ -7,13 +7,19 @@ label chatHistory:
     init:
         define chatHistoryBack = Image("img/chatHistoryBack.png")
         # use a chatlog object. We're trying to get the chat history window to repopulate on clicking scene buttons.
+        define btnChat = Image("img/iconBtnChat.png")
+        define btnChat2 = Image("img/iconBtnChat2.png")
+        define btnJournal = Image("img/iconBtnJournal.png")
+        define btnJournal2 = Image("img/iconBtnJournal2.png")
         default chatHistory = Chatlog()
+
+        default chatShowing = True
 
     init python:
         histWidth = 1280
-        histHeight = 720
+        histHeight = 730
 
-        histBoxWidth = 170
+        histBoxWidth = 240
         histBoxHeight = 40
         initialBoxX = 60
         initialBoxY = 100
@@ -31,6 +37,9 @@ label chatHistory:
         selectedTitle = ""
         selectedRecap = ""
         recapState = "Recaps"
+
+        #Vbox positioning
+        
 
         # list of collected histories.
         
@@ -52,7 +61,7 @@ label chatHistory:
             "Am I Evil",
             "Fugue",
             "R/BG13:14-15",
-            "Hold",
+            "Hypodermically Yours",
         ]
 
         chatRecaps = [
@@ -93,7 +102,7 @@ label chatHistory:
             "Hold",
             "Hold",
         ]
-        chatShowing = True
+        
         # chat history is collected at the end of every major area. Mostly will take place where you have the story beats broken up.
 
         
@@ -146,6 +155,7 @@ label chatHistory:
             chatHistory.history = histories[scene].history
             selectedRecap = histories[scene].recap
             selectedTitle = histories[scene].title
+            
 
         def selectRecap(value):
             newRecap = int(value)
@@ -162,27 +172,36 @@ label chatHistory:
 
     # foundation screen for chat histories and recaps
     screen chatHistory:
-
-        add chatHistoryBack
-
+        add askTaniaBack
         tag chatHistory
         modal True
-        button:
-            text "X"  # temporary
-            xpos 1200
-            ypos 50
-            xalign 0.5
-            yalign 0.5
-            xysize(40, 40)
-            action Function(closeChatHist)
 
-        button:
-            if chatShowing:
-                text "Recaps"
-                action [ToggleVariable("chatShowing"), Hide("historyDisplay"), Show("chatRecaps")]
-            else:
-                text "Chat History"
-                action [ToggleVariable("chatShowing"), Hide("chatRecaps"), Show("historyDisplay")]
+        fixed:
+            
+            button:
+                background iconBtnExit
+                hover_background btnExit2
+                ypos 580
+                xsize 100
+                ysize 100
+                xpos 60
+                action Function(closeChatHist)
+
+            button:
+                ypos 580
+                xsize 100
+                ysize 100
+                xpos 1120
+
+                if chatShowing == False:
+                    background btnJournal
+                    hover_background btnJournal2
+                    action [ToggleVariable("chatShowing"), Hide("historyDisplay"), Show("chatRecaps")]
+                else:
+                    
+                    background btnChat
+                    hover_background btnChat2
+                    action [ToggleVariable("chatShowing"), Hide("chatRecaps"), Show("historyDisplay")]
 
     # screen shows chat history
     screen historyDisplay:
@@ -194,7 +213,7 @@ label chatHistory:
                 yinitial 0.0
                 scrollbars "vertical"
                 # side area determines how text is placed in the box
-                side_area(10, 0, histChatWidth, histChatHeight)
+                side_area(10, 10, histChatWidth, histChatHeight)
 
                 vbox:
                     box_wrap True
@@ -213,27 +232,71 @@ label chatHistory:
     # this screen needs multiple windows. Let's do this with one screen, shall we? A vbox on the left with history number clickable boxes to change which chat displayed, the chat itself on the right, (or even in the middle of a few columns of scenes) and an exit button upper right. must not allow story underneath to continue if clicked.
 
     screen historySelect:
+
         fixed id "historySelectLeft":
-            for i in histories:
-                button:
-                    if i.seen:
-                        background "#888888"
-                        text i.title:
-                            xalign 0.5
-                            yalign 0.5
-                        action Function(chatHistUpdate, i.number)
+            vbox:
+                spacing 10
+                xpos 60
+                ypos 140
+                for i in histories:
+                    if i.number <= 7:
+                        button:
+                            xsize histBoxWidth
+                            ysize histBoxHeight
+                            if i.seen:
+                                background "#888888"
+                                hover_background "#831132"
+                                text i.title:
+                                    xalign 0.5
+                                    yalign 0.5
+                                action Function(chatHistUpdate, i.number)
+                            else:
+                                background "#444444"
+                                text "??????":
+                                    xalign 0.5
+                                    yalign 0.5
+                                action NullAction()
+                
 
-                    else:
-                        background "#444444"
-                        text "??????":
-                            xalign 0.5
-                            yalign 0.5
-                        action NullAction()
-                    xpos i.x
-                    ypos i.y
-
-                    xsize histBoxWidth
-                    ysize histBoxHeight
+        fixed id "historySelectRight":
+            vbox:
+                spacing 10
+                xpos 980
+                ypos 140
+                for i in histories:
+                    if i.number > 7 and i.number <= 15:
+                        button:
+                            xsize histBoxWidth
+                            ysize histBoxHeight
+                            if i.seen:
+                                background "#888888"
+                                hover_background "#831132"
+                                text i.title:
+                                    xalign 0.5
+                                    yalign 0.5
+                                action Function(chatHistUpdate, i.number)
+                            else:
+                                background "#444444"
+                                text "??????":
+                                    xalign 0.5
+                                    yalign 0.5
+                                action NullAction()
+        
+        if histories[16].seen:
+            button:
+                xpos 0.5
+                ypos 620
+                xcenter 0.5
+                xsize histBoxWidth
+                ysize histBoxHeight
+                    
+                background "#888888"
+                hover_background "#831132"
+                text histories[16].title:
+                    xalign 0.5
+                    yalign 0.5
+                action Function(chatHistUpdate, i.number)
+                    
 
     # define a screen that holds the chat recaps.
 

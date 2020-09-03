@@ -1,5 +1,5 @@
 label endingLich:
-    #in which sophie is invited to Lichelle's dojo
+    # in which sophie is invited to Lichelle's dojo
 
     scene bg gym with fade
 
@@ -23,7 +23,7 @@ label endingLich:
 
     "And no matter what I do, I can't get her off me."
 
-    #scene dojo
+    # scene dojo
 
     l "Don't be discouraged babe. Just tap out! I've done it thousands of times."
 
@@ -51,7 +51,7 @@ label endingLich:
 
     "I say nothing about Robin. There's no need."
 
-    l "Nah. Just about every jujitsu player is cool."
+    l "Nah. Just about every jiu jitsu player is cool."
 
     "It's banter. It's small talk."
 
@@ -70,7 +70,7 @@ label endingLich:
     s "I just think we should talk about what happened."
 
     l "Don't wanna. There's gonna be time for that now that we're here."
-    
+
     l 1a "And I'd rather just have a good time with a new friend. Roll. Grab dinner. Talk shit."
 
     s "Lichelle..."
@@ -138,7 +138,6 @@ label endingLich:
     s "Why DID you ask me here?"
 
     "It comes out more confrontational than I'd intended."
-
 
     l 1a "Wanted to roll with you."
     s "What on earth could you get out of that? It's like swatting flies for you."
@@ -255,13 +254,13 @@ label endingLich:
     s "... I know."
 
     l "I didn't even know you."
-    
+
     l "You were some nobody Elsa brought in to get cleaned up. Just another doper, always arguing with the dumbass man who kept taking you back."
-    
+
     s "..."
-    
-    l "Another project. It pisses me off that people like you get so much help and forgiveness, but people like me..." 
-    
+
+    l "Another project. It pisses me off that people like you get so much help and forgiveness, but people like me..."
+
     "She doesn't finish the sentence. She doesn't have to."
 
     l "Louisa was my friend. Some kind of damn succubus, just charming everybody to do whatever she wanted."
@@ -279,12 +278,12 @@ label endingLich:
     s "Because of me."
 
     l "She died because she was stupid. That bitch, that bitch was perfect. You know. She spoke like four languages, she could cook like a pro, she had those eyes."
-    
+
     l "Those damn eyes. Those cold, cold eyes."
-    
+
     pause 0.5
-    
-    l "She never touched that shit as far as I know before you."
+
+    l "She was clean, before you."
 
     s "Lichelle..."
 
@@ -321,6 +320,7 @@ label endingLich:
     "She's quiet for a little too long. Perhaps I overplayed my hand."
 
     if loveConfession == "Lichelle":
+        pause 1.0
 
         l "Not here."
 
@@ -336,21 +336,184 @@ label endingLich:
 
         l 1b "With you."
 
-        s "... thank you."
+        l "Those women. Cassandra. Louisa."
 
-        l 1b "But come on. We need some pillows for all this pillow talk."
+        l "They felt something with you."
 
-        l 1p "If you want."
+        s "..."
+
+        l 1m "I need to understand what it is. I {i}have{/i} to know why you're worth..."
+
+        l 1b "Why you're worth dying for."
+
+        s "... are you sure?"
+
+        pause 1.0
+
+        l 1b "Come on. We need some pillows for all this pillow talk."
 
         s "Pillow talk, what do you oh. Oh, I, uh, okay."
 
         "Smooth."
 
         s "Let's do that. Yes."
+
+        "She pulls me to her feet, her power evident in that simple grip."
+
+        l "Don't think we're okay."
+
+        pause 1.0
+
+        s "... I'll spend my life to get there."
+
+        pause 1.0
+
+        l 2m "Yeah. I know."
+
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        s "Huh?"
+
+        l 1c "Damn."
+
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        s "What's happening?"
+
+        l "I guess the round's over for real."
+
+        s "Huh?"
+
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        l "Listen. Out there, you have to tell me the same thing you told me in here."
+
+        l 2b "Tell me you need me. I'm like that. I'm a fixer. Right?"
+
+
+
+        s "... yeah."
+
+        l "Tell me my dad always told me I'd... I'd find someone who needed my strength."
+
+        l "... his name is Elijah. You tell me Elijah knew I'd meet you."
+
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        l "Kylie..."
+
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        l "I..."
+
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        scene bg black with longFade
+
+        "End: Heaven and Elle"
+
+    else:
+        l 2m "You're too clever for your own damn good."
+
+        s "Thanks?"
+
+        pause 1.0
+
+        l 1b "Sophie."
+
+        l "I can't trust you. I can't."
+
+        s "... I know."
+
+        l 1c "I hate you."
+
+        s "... I know."
+
+        l 1c "{i}You don't get to know!{/i} You don't get to apologize!"
+
+        "Her chest heaves. My blood sings."
+
+        pause 1.0
+
+        "She could kill me."
+
+        "Maybe I want her to."
+
+        pause 1.0
+
+        s "You loved her."
+
+        l "... shut up."
+
+        pause 1.0
+
+        s "... you can hurt me. If... if you want to."
+
+        "She's quiet."
+
+        "She's shaking. Her eyelids squeeze together."
+
+        if lichClonked:
+            l "I told you already. I don't want to hurt you unless you want me to."
+        else:
+            l "... is that what you want?"
+            s "... yeah."
+            pause 1.0
+            "She's breathing so hard."
+            s "If it helps you heal from the wound I caused... you can hurt me."
+            pause 0.5
+            l 2d "..."
+            s "... you can kill me."
+            l "That's not happening."
+            
+        l "You don't get a free pass from me."
+        l "You have a life, somehow. You gotta use it to make things right."
+
+        pause 1.0
+
+        s "... I don't know how."
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        l 2b "... oh."
+
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        s "What..."
+
+        l "I guess the round's over."
+
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
+
+        s "Lichelle? What's happening?"
+
+        l 1m "Tell the Elle out there to give you a second chance, babe."
+
+        s "I..."
+
+        play audio beep noloop
+        show image splashEKGFull at summonEKG
+        pause 0.3
         
-
-
-    if severLich == False:
+        
+    if lichBio.severViewed == False:
         l "Oh. First?"
         s "Wha-mmmmphhpp!"
 
@@ -398,14 +561,14 @@ label endingLich:
         "End: Damned in Elle"
 
         show image splashEKGFull at summonEKG
-        
+
         pause 2.3
         hide image splashEKGFull at summonEKG
 
         "Huh? What happened?"
 
-        # finish her
+        # finish her        
+    
     scene bg black with fade
 
-    
     return

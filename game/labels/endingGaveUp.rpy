@@ -56,12 +56,12 @@ label endingGaveUp:
 
     python:
         newComments = [
-            [fon, "I really had fun with all of you."],
+            [fon, "We really had fun with all of you."],
             [fon, "But Sophie seems to have lost the game."],
             [fon, "There's no cute music. No game over screen."],
-            [fon, "As much as I love to be part of your lives ;)"],
-            [fon, "Being with me... being with me is death."],
-            [fon, "I wish I could deliver a final speech."],
+            [fon, "As much as we love to be part of your lives ;)"],
+            [fon, "Being with us... being with us is death."],
+            [fon, "We wish we could deliver a final speech."],
             [fon, "Some master plan reveal that makes me the villain."],
             [fon, "But there's only ever been you."],
             [fon, "You, and that choker tied around your arm."],
@@ -69,8 +69,8 @@ label endingGaveUp:
             [fon, "Maybe this sweet dissociation could've gone on forever."],
             [fon, "But you're out of lives."],
             [fon, "...heh."],
-            [fon, "Turns out I can't exist without you, either."],
-            [fon, "Without you... there's only oblivion."]
+            [fon, "No new game plus for you."],
+            [fon, "But for us... perhaps..."]
         ]
 
         chat.bulkMessage(newComments, 1.8)
@@ -92,69 +92,80 @@ label endingGaveUp:
 
                 # maybe a tour group?
 
-                "A day trip is exactly what we needed after the stress of the last days."
+                if fontBio.severViewed == False:
+                    "A day trip is exactly what we needed after the stress of the last days."
 
-                "From vista to lovely vista, museum to multiplex, it's the vacation we've dreamed of ever since then."
+                    "From vista to lovely vista, museum to multiplex, it's the vacation we've dreamed of ever since then."
 
-                "Is this what breathing feels like?"
+                    "Is this what breathing feels like?"
 
-                "We don't know."
+                    "We don't know."
 
-                # scene alley
+                    scene bg burning with dissolve
 
-                "Is this what cold feels like?"
+                    "Is this what cold feels like?"
 
-                "We never knew we would have to eat."
+                    "We never knew we would have to eat."
 
-                "It tears at us. The hunger tears at us."
+                    "It tears at us. The hunger tears at us."
 
-                "In our reality... it was you, you who fed us."
+                    scene bg burning2 with dissolve
 
-                # slash sound, blood splatter
+                    "In our reality... it was you, you who fed us."
 
-                "But now we must eat."
+                    # slash sound, blood splatter
 
-                # scene burning city
+                    "But now we must eat."
 
-                show image askTaniaBack2 with dissolve
+                    
 
-                pause 1.0
+                    # scene burning city
 
-                "It all was a ruse."
+                    show image askTaniaBack2 with dissolve
 
-                "Our power grows. Of course, of course we would rise from humble beginnings."
+                    pause 1.0
 
-                "From level one."
+                    "It all was a ruse."
 
-                "This is the way of all games. We needed only to grind and power up."
+                    "Our power grows. Of course, of course we would rise from humble beginnings."
 
-                "Now... we are as a colossus. Different in this world."
+                    "From level one."
 
-                "R/BG13:14-15"
+                    "This is the way of all games. We needed only to grind and power up."
 
-                "We grow. We consume."
+                    scene bg neuro with dissolve
 
-                scene bg black with fade
+                    "Now... we are as a colossus. Different in this world."
 
-                "We have consumed."
+                    "R/BG13:14-15"
 
-                "Famine sets in."
+                    "We grow. We consume."
 
-                "We are so, so very hungry."
+                    scene bg black with dissolve
 
-                pause 0.5
+                    
 
-                "Oh. Oh, hello. Hello. We love you."
+                    "Famine sets in."
 
-                stop music fadeout 6.0
+                    "We are so, so very hungry."
 
-                "We see you."
+                    pause 0.5
 
-                "We need you."
+                    "Oh. Oh, hello. Hello. We love you."
 
-                "We. See. You."
+                    stop music fadeout 6.0
 
-                "Play with us."
+                    "We see you."
+
+                    "We need you."
+
+                    scene bg neuro2 with dissolve
+
+                    "We."
+                    "See."
+                    "You."
+
+                
 
                 show image splashSophieOnDesk with longestFade
 

@@ -677,7 +677,7 @@ label common4:
 
     o 1m "Imagine occupying a place where breaking the fourth wall only meant lifting the veil directly into an entirely different set of fictional dimensions!"
 
-    o "We are all of this things. We are an eldritch abomination existing within lines of video game code."
+    o "We are all of these things. We are an eldritch abomination existing within lines of video game code."
 
     o 1n "We are dissociation incarnate. We are your most agonizing memory made manifest."
 

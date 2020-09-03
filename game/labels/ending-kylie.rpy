@@ -314,10 +314,11 @@ label endingKylie:
 
     pause 0.5
 
-    show f 2q  at fr12
+    
 
     if entityForgiven == True:
         # show f
+        show f 2q  at fr12
         o "Sophie."
 
         play music ringRejection
@@ -475,22 +476,55 @@ label endingKylie:
 
         s "I promise. I'll... I'm swearing off. Forever."
 
+        
+
         show e 1b
 
         stop music fadeout 7.0
 
         "I promise."
 
+        k "I'm a whole new woman."
+
         "I promise."
 
         scene bg black with fade
-
+        $chat.delmessages()
         pause 3.0
 
         show screen chatterbox
         pause 0.5
 
         $chat.addmessage(bong, "lol b00bs lol")
+
+        pause 1.0
+
+        
+        
+        $chat.addmessage(unkn,"Oh. You're still here, too. ;)")
+
+        pause 1.0
+        
+        
+        python:
+            newComments = [
+                [bar,"Me, too."],
+                [egg,"Yup."],
+                [crab,"Where are we?"],
+                [shub,"hell"],
+                [cake, "no"],
+                [beav, "... Fontaine?"]
+            ]
+        
+            chat.bulkMessage(newComments, 0.7)
+
+        
+        
+        $chat.addmessage(fon,"Don't worry.")
+        pause 1.0
+        
+        
+        $chat.addmessage(fon,"We'll take very, very good care of you boys.")
 
         pause 4.5
 
@@ -584,11 +618,11 @@ label endingKylie:
 
         s "One... one last thing?"
 
-        e 2q "Anything."
+        e 1q "Anything."
 
         s "Could you call me by my real name?"
 
-        e 2i "Huh?"
+        e 1i "Huh?"
 
         pause 0.1
 
@@ -596,7 +630,7 @@ label endingKylie:
 
         k "Is... is that okay?"
 
-        show e 2n
+        show e 1n
 
         pause 0.5
 
@@ -608,7 +642,7 @@ label endingKylie:
 
         # SFX: Running?
 
-        show e 2s
+        show e 1s
 
         k "What's all that noise?"
 
@@ -625,15 +659,23 @@ label endingKylie:
         scene bg black with fade
 
         pause 3.0
-
+        $chat.delmessages()
         show screen chatterbox
-        pause 0.5
+        pause 0.5 
+        
+        $chat.addmessage(unkn,"...")
+
+        pause 2.5
 
         $chat.addmessage(fizz, "*screams*")
 
         pause 4.5
 
         "End: Dr. L'eau, Amateur Surgeon"
+        hide chatterbox
+
+        pause 5.0
+        stop music fadeout 6.0
         jump endCredits
 
         return

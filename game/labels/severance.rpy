@@ -195,13 +195,12 @@ label severance:
                 fontBio.stringSever()
                 renpy.call("severFontaine")
 
-#label shows the choice menu for severance
+# label shows the choice menu for severance
 label severanceChoices:
     $severToggle()
-    
 
     while doneSevering == False:
-        scene bg desk with fade
+        scene bg black with fade
 
         menu:
 
@@ -211,7 +210,7 @@ label severanceChoices:
                 $hideSeveranceMenu()
                 pause 2.0
                 call severCassandra from _call_severCassandra
-                
+
             "Lichelle" if lichBio.severViewed == False:
                 $hideSeveranceMenu()
                 pause 2.0
@@ -231,7 +230,7 @@ label severanceChoices:
             "The Intervascular Anomaly" if fontBio.severViewed == False and fontaineRevealed:
                 $hideSeveranceMenu()
                 pause 2.0
-                $severFontaine()
+                $fontBio.severView()
                 "Freed from... it? But who is free? She or we?"
             "No... nobody.":
                 $doneSevering = True
@@ -243,7 +242,6 @@ label severanceChoices:
     $showGui()
     $severToggle()
     pause
-
 
 
 transform summonSeverance:

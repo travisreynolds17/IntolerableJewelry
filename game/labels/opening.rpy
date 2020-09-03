@@ -42,7 +42,9 @@ label opening:
             histBoxY += histBoxHeight + boxMarginY
             histories.append(temp)
 
-        
+        #reset lots of variables for new game.
+        kylieSevered = False
+        lichClonked = False
 
     # end python block.
     pause 1.0

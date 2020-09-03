@@ -221,6 +221,10 @@ label endingTron5000:
 
         o 1f "WE ARE O-O-OKAY"
 
+        hide f with dissolve
+
+        show image fontDiss1 at tDiss
+
         # character appears, an amalgamation of each other character, bleeding ones and zeros
 
         k "Oh my god, you're... are you real?"
@@ -230,6 +234,8 @@ label endingTron5000:
         o 1r "P-p-p-pain, this is pain? Is this pain?"
 
         o 1c "Make IT stop"
+
+        show image fontDiss2 at tDiss
 
         o "please"
 
@@ -252,12 +258,14 @@ label endingTron5000:
                 k "I don't know what you are. I just think you're lonely."
                 # show e understanding this, agreeing.
                 o 1b "..."
+
+                show image fontDiss3 at tDiss
                 k "Maybe some day you'll be able to reach us. I hope..."
                 k "I hope you don't hate us."
                 o "...ccould n-n-nnever hhate--"
                 o 1m "...l-lllove... so so so so m-m-m-mmuch"
                 k "..."
-                show f at d12
+                
                 $entityForgiven = True
                 # splash screen of kylie hugging entity
 
@@ -271,7 +279,7 @@ label endingTron5000:
                 o "...ccould n-n-nnever hhate--"
                 o 1m "...l-lllove... so so so so m-m-m-mmuch"
                 k "..."
-                show f at d12
+                show image fontDiss3 at tDiss
                 $entityForgiven = False
                 # splash screen of kylie turning from entity
 
@@ -284,6 +292,11 @@ label endingTron5000:
         show image splashEKGFull at summonEKG
         pause 0.3
 
+        hide f
+        hide fontDiss1
+        hide fontDiss2
+        hide fontDiss3
+        
         k "nngh"
 
         ki "Why does everything hurt...?"
@@ -325,10 +338,14 @@ label endingTron5000:
 
         k "I don't have time. I'm, I'm coming apart--"
 
+        hide k with dissolve
+
         hide image splashEKGFull at summonEKG
         play audio beep noloop
         show image splashEKGFull at summonEKG
         pause 0.3
+
+        show image kylieDiss1 at tDiss
 
         k "I wish I could've gotten to know you."
 
@@ -337,14 +354,21 @@ label endingTron5000:
         show image splashEKGFull at summonEKG
         pause 0.3
 
+        show image kylieDiss2 at tDiss
         k "Nnngh! I, I, I think we w-would've had..."
 
         $hideGui()
 
+        show image kylieDiss3 at tDiss
         k "a lot... a lot in common!"
         stop music fadeout 3.0
         play audio beep noloop
         hide image splashEKGFull at summonEKG
+        hide k with dissolve
+        hide kylieDiss1 with dissolve
+        hide kylieDiss2 with dissolve
+        hide kylieDiss3 with dissolve
+        show image kylieDiss4 at tDiss
 
         # heartbeat - drop background out and only show kylie and entity. Kylie's bleeding froom her mouth.
         show image splashEKGFull at summonEKG
@@ -357,11 +381,13 @@ label endingTron5000:
         show image splashEKGFull at summonEKG
         pause 0.3
 
+
+
         hide image splashEKGFull at summonEKG
         play audio beep noloop
         # heartbeat, both gone
         show image splashEKGFull at summonEKG
-        hide k at f12
+        hide kylieDiss4 with dissolve
 
         pause 0.3
         # heartbeat

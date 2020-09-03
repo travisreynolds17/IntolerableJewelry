@@ -154,7 +154,7 @@ label robinDate2:
 
     $chat.addmessage(fizz, "Or what? You gonna type me to death, prick?")
 
-    l 2t "In jujitsu."
+    l 2t "In jiu jitsu."
 
     k "Oh."
 
@@ -1470,7 +1470,7 @@ label robinDate2:
     show l 3q
     # up close if possible
 
-    if loveLich == 4:
+    if lichBio.love == 4:
         # note you have to pick her both times at first roundup and agree with her on both second-play dates.
 
         k "Elle?"
@@ -1536,12 +1536,11 @@ label robinDate2:
 
     s 1j  "~yaaawn~"
 
-    if loveLich == 4:
+    if lichBio.love == 4:
         # option for love scene ending with Lichelle
 
         ki "She's been the one constant over these few days."
 
-        $renpy.notify("Don't give in to base needs. Not when you've come so far!")
         ki "Streetlights paint her features brightly, then vanish, then paint once more."
 
         k "Hey, Lichelle..."

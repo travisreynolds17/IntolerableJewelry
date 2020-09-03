@@ -214,15 +214,19 @@ label common1:
     $chat.addmessage(beav, "READY")
     $chat.addmessage(elsa, "nooooooo")
     $chat.addmessage(bong, "red E")
+    pause 1.0
     $chat.addmessage(egg, "What's this game?")
     $chat.addmessage(fon, "BEST game.")
     $chat.addmessage(fizz, "Not as good as Super Threatroid, not possible.")
+    pause 1.0
     $chat.addmessage(beav, "Is it like Lass Effects?")
     $chat.addmessage(bong, "More like L'ASS EFFECTS")
     $chat.addmessage(elsa, "eww")
+    pause 1.0
     $chat.addmessage(egg, "lol")
     $chat.addmessage(beav, "hahahha")
     $chat.addmessage(bar, "C'mon")
+    pause 1.0
     $chat.addmessage(fon, "You're so funny, Oberbong.")
     $chat.addmessage(bong, "doin god's work ma'am")
 
@@ -231,6 +235,7 @@ label common1:
     k "Or whatever?"
 
     t 1j "Now you're learning."
+
 
     s 1a "I love cheese. I love this game already!"
 
@@ -1011,9 +1016,54 @@ label common1:
 
     t "I've been on this show since day one and I'll be happy to listen if you need anything."
 
+    t "Speaking of which, did you want to glance at the show notes?"
+
+    menu:
+        "Look at the notes (tutorial)": 
+        
+            $chat.addmessage(bong,"dat tutorial SON")
+            k "Sure."
+            #SFX paper sound effect?
+            t 1a "Here."
+            #hide say screen
+            window hide
+            $hideGui()
+            
+            show image showNotes1 with dissolve
+            pause
+
+            show image showNotes2 with dissolve
+            pause 0.5
+            hide showNotes1 with dissolve
+            pause
+
+            show image showNotes3 with dissolve
+            pause 0.5
+            hide showNotes2 with dissolve
+
+            pause
+            show image showNotes4 with dissolve
+            pause 0.5
+            hide showNotes3 with dissolve
+            pause 
+            hide showNotes4 with dissolve
+
+            pause 1.0
+            $showGui()
+            window auto
+
+            t "See? Nothing to it, Kyles."
+        "I think I'm good (skip tutorial)":
+            t 2m "You're a quick study. You'll be fine." 
+            
+            $chat.addmessage(bong,"FEK a tutorial anyway")
+
+
     $chat.addmessage(unkn, "R/BG13:14-15")
 
-    s "Tania's nice. I bet the real hosts of these shows are nothing like her."
+    s "Tania's nice. I bet the real hosts of these shows are nothing like her." 
+    
+    $chat.addmessage(bong,"no lie, tania got nice legs")
 
     k "Thanks, Tania. That actually means a lot."
 

@@ -93,7 +93,7 @@ label biographies:
             "There are no tattoos or piercings anywhere on Robin's body.",
             "Robin loves horror games, but claims she is immune to jumpscares.",
             "Robin received her culinary education at l'école Inventée in Paris.",
-            "Robin holds a purple belt in Brazilian jujitsu, but almost never talks about it.",
+            "Robin holds a purple belt in Brazilian jiu jitsu, but almost never talks about it.",
         ]
 
         cassTrivia = [
