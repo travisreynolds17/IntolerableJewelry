@@ -45,6 +45,7 @@ label opening:
         #reset lots of variables for new game.
         kylieSevered = False
         lichClonked = False
+        guiButtonsEnabled = False
 
     # end python block.
     pause 1.0
@@ -88,148 +89,204 @@ label opening:
 
     d "Sophia Kylie Koenig, will you -"
 
-    "It's now or never."
+    if persistent.playthrough > 0:
+        "... huh."
 
-    s "David I care about you, I love you, but I-"
+        "I've... this feels familiar."
 
-    show d 1g
+        d "Hey, are you... okay?"
 
-    "Damn everything about this."
+        menu:
+            "I don't want to do this again...":
+                d "What do you mean?"
+                stop music fadeout 7.0
+                pause 1.0
+                s "David... I..."
+                show image glitchGui at frameGlitch
+                s "... I don't feel right."
+                d "Sophie?"
+                show image glitchGui at frameGlitch
+                s "... I can't marry you..."
+                d 1b "What? But..."
+                s "You want me to stop... I can't... I"
+                show image glitchGui at frameGlitch
+                pause 0.2
+                "Oh. Oh no. No no no no no not now."
 
-    "His eyes are widening. He's starting to shiver. He knows."
+                hide d at f12
 
-    s "I can't."
+                "My arms pin themselves to my sides as my leg muscles lose all semblance of tension. There’s a sensation of impact when I hit the ground, but no accompanying pain."
 
-    "Across the restaurant, the pianist's fingers dance beautifully across ebony and ivory."
+                "Warmth blooms on my tongue and lips."
 
-    "For a moment her eyes land on us, but only for a moment."
+                "Vaguely, I hear voices around me. Something moves me. It’s always the same. I’m falling. Falling, and falling, while the ghosts of whatever was around me slide from side to side."
 
-    d 1b "I... okay, but, what?"
+                "He’s not there for me this time. He’s not there to tell everyone what’s happening, to tell them not to crowd me, that the seizure will stop on its own."
 
-    "Even now, his reaction is endearing."
+                "He’s not there to tell me how long I lay writhing on the floor, how much time was stolen."
 
-    s "Because we can't communicate. Not even on a basic level. And you don't trust me."
+                "He’s not there."
 
-    "Jesus Christ, self, could you let him down a little easier?"
+                "It's my fault."
 
-    d 1g "I know sometimes I misinterpret what you're saying-"
+                "I should've tried harder."
+                scene bg black with fade
+                jump common1
 
-    s "All the time, David. All the time, every time. It doesn't matter what I say."
 
-    "Of course it matters. Hyperbole is just... easier."
+            "I should... I should relive this.":
+                s "Nevermind. What... what were you saying?"
+                jump proposal
+    else:
+        jump proposal
+    
+    label proposal:
+    
+        "It's now or never."
 
-    d 1b "I don't know what to say."
+        s "David I care about you, I love you, but I-"
 
-    "Neither do I."
+        show d 1g
 
-    "There's a woman moving among tables, coiffed and exotic, speaking briefly with each table. Must be the manager. A thick, musical accent."
+        "Damn everything about this."
 
-    "That's something else I haven't told him."
+        "His eyes are widening. He's starting to shiver. He knows."
 
-    d 1g "Say something."
+        s "I can't."
 
-    s "I'm not giving up my work. You're already too jealous about it and I love doing it so-"
+        "Across the restaurant, the pianist's fingers dance beautifully across ebony and ivory."
 
-    d "You love people online that call you a whore and wish you would die of space herpes? Seriously?"
+        "For a moment her eyes land on us, but only for a moment."
 
-    "He's getting angry. I understand, so I'm going to forgive some of the brunt of this."
+        if persistent.playthrough > 0:
+            "There's a woman in a purple sweatshirt, sobbing softly, her blood red hair pouring over her eyes."
 
-    s "You take the good with the bad."
+        d 1b "I... okay, but, what?"
 
-    d "You're going to pick a hobby over us?"
+        "Even now, his reaction is endearing."
 
-    s "It's not just a hobby. I make money, David. If you... if you..."
+        s "Because we can't communicate. Not even on a basic level. And you don't trust me."
 
-    "Breathe. Just say it."
+        "Jesus Christ, self, could you let him down a little easier?"
 
-    s "If you love me and care about me you wouldn't ask me to give up something I love doing."
+        d 1g "I know sometimes I misinterpret what you're saying-"
 
-    "He's quiet now. Shocked silent, I guess. There're a couple of door guards watching us now."
+        s "All the time, David. All the time, every time. It doesn't matter what I say."
 
-    "One of them, a short-haired woman in a vest and polo, wears a pained expression. I guess her hearing's pretty good."
+        "Of course it matters. Hyperbole is just... easier."
 
-    d 1b "So that's it then."
+        d 1b "I don't know what to say."
 
-    s "That's what?"
+        "Neither do I."
 
-    d "We.... I guess we break up now, right?"
+        "There's a woman moving among tables, coiffed and exotic, speaking briefly with each table. Must be the manager. A thick, musical accent."
 
-    s "Why?"
+        "That's something else I haven't told him."
 
-    "Shit."
+        d 1g "Say something."
 
-    d 1s "What do you mean, why?"
+        s "I'm not giving up my work. You're already too jealous about it and I love doing it so-"
 
-    s "Just because we disagree here doesn't mean we have to end it. We can compromise. I just don't want to sign a contract while -"
+        d "You love people online that call you a whore and wish you would die of space herpes? Seriously?"
 
-    d 1g "You see us getting married as a legal issue?"
+        "He's getting angry. I understand, so I'm going to forgive some of the brunt of this."
 
-    "There it is again. That's not what I meant."
+        s "You take the good with the bad."
 
-    s "David, I don't mean anything legal, I just mean... I don't know."
+        d "You're going to pick a hobby over us?"
 
-    "But maybe we should? Just... end it. I can free him, right now. He's young enough that he could find someone else."
+        s "It's not just a hobby. I make money, David. If you... if you..."
 
-    d 1b "It's pretty hypocritical of you to be worried about things being legal."
+        "Breathe. Just say it."
 
-    s "David. Don't."
+        s "If you love me and care about me you wouldn't ask me to give up something I love doing."
 
-    d 1b "I never, ever saw you as a burden or an obstacle. Ever. I just worry-"
+        "He's quiet now. Shocked silent, I guess. There're a couple of door guards watching us now."
 
-    s "That I'll cheat on you with some Internet teenager?"
+        "One of them, a short-haired woman in a vest and polo, wears a pained expression. I guess her hearing's pretty good."
 
-    d 1g "- that someone will find you some day, Sophie!"
+        d 1b "So that's it then."
 
-    s "I can take care of myself!"
+        s "That's what?"
 
-    "We're shouting now. Good times. Great times. The bouncer is heading over. It wasn't supposed to-"
+        d "We.... I guess we break up now, right?"
 
-    d 1b "I know that, but these guys -"
+        s "Why?"
 
-    s "They're not all guys, you know."
+        "Shit."
 
-    pause 1.0
+        d 1s "What do you mean, why?"
 
-    "Quietly, before I could stop them, those words tumble out."
+        s "Just because we disagree here doesn't mean we have to end it. We can compromise. I just don't want to sign a contract while -"
 
-    d "So you're gay now?"
+        d 1g "You see us getting married as a legal issue?"
 
-    "He's angry. Forgive him. Shouldn't have been a smartass."
+        "There it is again. That's not what I meant."
 
-    s "David-"
+        s "David, I don't mean anything legal, I just mean... I don't know."
 
-    d 1g "You know what? Fine."
+        "But maybe we should? Just... end it. I can free him, right now. He's young enough that he could find someone else."
 
-    stop music fadeout 3.0
+        d 1b "It's pretty hypocritical of you to be worried about things being legal."
 
-    d "Be a her in a d ct. Go righ ba k. I'm go na m v   t  f th hous  . You'll n  er have to wo  y ab  t    again."
+        s "David. Don't."
 
-    # she has a seizure
-    # VFX
+        d 1b "I never, ever saw you as a burden or an obstacle. Ever. I just worry-"
 
-    "Oh. Oh no. No no no no no not now."
+        s "That I'll cheat on you with some Internet teenager?"
 
-    hide d at f12
+        d 1g "- that someone will find you some day, Sophie!"
 
-    "My arms pin themselves to my sides as my leg muscles lose all semblance of tension. There’s a sensation of impact when I hit the ground, but no accompanying pain."
+        s "I can take care of myself!"
 
-    "Warmth blooms on my tongue and lips."
+        "We're shouting now. Good times. Great times. The bouncer is heading over. It wasn't supposed to-"
 
-    "Vaguely, I hear voices around me. Something moves me. It’s always the same. I’m falling. Falling, and falling, while the ghosts of whatever was around me slide from side to side."
+        d 1b "I know that, but these guys -"
 
-    "He’s not there for me this time. He’s not there to tell everyone what’s happening, to tell them not to crowd me, that the seizure will stop on its own."
+        s "They're not all guys, you know."
 
-    "He’s not there to tell me how long I lay writhing on the floor, how much time was stolen."
+        pause 1.0
 
-    "He’s not there."
+        "Quietly, before I could stop them, those words tumble out."
 
-    "It's my fault."
+        d "So you're gay now?"
 
-    "I should've tried harder."
+        "He's angry. Forgive him. Shouldn't have been a smartass."
 
-    scene bg black
-    with longFade
+        s "David-"
 
-    pause 2.0
+        d 1g "You know what? Fine."
 
-    jump common1
+        stop music fadeout 3.0
+
+        d "Be a her in a d ct. Go righ ba k. I'm go na m v   t  f th hous  . You'll n  er have to wo  y ab  t    again."
+
+        # she has a seizure
+        # VFX
+
+        "Oh. Oh no. No no no no no not now."
+
+        hide d at f12
+
+        "My arms pin themselves to my sides as my leg muscles lose all semblance of tension. There’s a sensation of impact when I hit the ground, but no accompanying pain."
+
+        "Warmth blooms on my tongue and lips."
+
+        "Vaguely, I hear voices around me. Something moves me. It’s always the same. I’m falling. Falling, and falling, while the ghosts of whatever was around me slide from side to side."
+
+        "He’s not there for me this time. He’s not there to tell everyone what’s happening, to tell them not to crowd me, that the seizure will stop on its own."
+
+        "He’s not there to tell me how long I lay writhing on the floor, how much time was stolen."
+
+        "He’s not there."
+
+        "It's my fault."
+
+        "I should've tried harder."
+
+        scene bg black
+        with longFade
+
+        pause 2.0
+
+        jump common1

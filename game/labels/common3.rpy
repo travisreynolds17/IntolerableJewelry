@@ -158,7 +158,7 @@ label common3:
 
     $chat.addmessage(fizz, "Hey TwixtBar, you're right.")
 
-    t 1o "Every woman involved in this show is, of course, 20 years old or older -- but not much older, right? -- and each has consented to the format. We're looking for love here, people!"
+    t 1o "Every woman involved in this show is, of course, 21 years old or older -- but not much older, right? -- and each has consented to the format. We're looking for love here, people!"
 
     $chat.addmessage(elsa, "Hey! Robin's 19. Tania should know that if they were friends.")
 
@@ -542,8 +542,6 @@ label common3:
 
     ki "The dressing room is clean and simple. I'd like to stretch out for a nap, actually. The nerves have taken it out of me."
 
-    #enable severance
-    $severToggle()
 
     $chat.addmessage(cake, "pity that bed's for sleepin")
 
@@ -568,9 +566,6 @@ label common3:
     s 1a "Oh, okay! Jeez, I wish they'd warned me a little bit. I just about said to hell with it and called it a night."
 
     s 1m "What a surprise! Ha!"
-
-    #disable severance
-    $severToggle()
 
     scene bg black with dissolve
 

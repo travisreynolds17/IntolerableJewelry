@@ -375,7 +375,7 @@ label endingSophie:
 
         pause 1.0
 
-        "... her goes."
+        "... here goes."
 
         s "I care about you."
 
@@ -437,7 +437,10 @@ label endingSophie:
 
         pause 1.0
 
-        l 1b "Death walks behind you, babe. Louisa. Cassandra."
+        if cassBio.severViewed:
+            l 1b "Death walks behind you, babe."
+        else:
+            l 1b "Death walks behind you, babe. Louisa. Cassandra."
 
         l 1c "People I cared about are in the damn ground because of you."
 
@@ -501,11 +504,13 @@ label endingSophie:
 
     pause 5.0
 
-    call sophieEndExtend
+    call sophieEndExtend from _call_sophieEndExtend
 
     stop music fadeout 5.0
-
+    scene bg black with longFade
     "End: Free from Myself ..."
+
+    
 
     pause 5.0
 
@@ -562,3 +567,7 @@ label endingSophie:
     scene bg black with longestFade
 
     pause 2.0
+
+    stop music fadeout 7.0
+
+    jump endCredits

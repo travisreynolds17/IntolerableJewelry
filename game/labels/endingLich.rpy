@@ -9,6 +9,8 @@ label endingLich:
 
     show l 1j at fr12
 
+    play music lichelle
+
     l "There you are."
 
     l 1m "Grab a water bottle and let's get stretched."
@@ -43,7 +45,7 @@ label endingLich:
 
     s "So you could pretty much break my arm any time you want."
 
-    l "Maybe. Jujitsu's not about that though. It's about humility."
+    l "Maybe. Jiu jitsu's not about that though. It's about humility."
 
     l 1a "I'm a black belt, but there are tons of people out there who could tie me in knots."
 
@@ -515,6 +517,7 @@ label endingLich:
         
     if lichBio.severViewed == False:
         l "Oh. First?"
+        stop music
         s "Wha-mmmmphhpp!"
 
         show image splashEKGFull at summonEKG
@@ -535,6 +538,7 @@ label endingLich:
 
         show image splashEKGFull at summonEKG
         pause 0.3
+        play music fountainWater
         l "So, I really appreciate you coming down here."
         l "You're a good sport."
         l "But you tried to end me, sweety pie. ;)"
@@ -569,6 +573,7 @@ label endingLich:
 
         # finish her        
     
+    stop music fadeout 3.0
     scene bg black with fade
 
     return

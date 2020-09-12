@@ -323,7 +323,7 @@ label robinDate2:
     scene bg story-10 with fade
     pause 2.0
     pause
-    scene bg playhouse
+    scene bg playhouse far
     $showGui()
     pause 0.5
 
@@ -652,7 +652,7 @@ label robinDate2:
 
     show r 2b
 
-    r "I remembered your favorite Because we've been friends for so long, papillon." 
+    r "I remembered your favorite because we've been friends for so long, papillon." 
     
     $chat.addmessage(fizz,"I loved her. I STILL love her.")
 
@@ -714,7 +714,7 @@ label robinDate2:
 
     pause 0.3
 
-    $chat.addmessage(sophie, "Chat temporarily cooked into liquid and injected intravenously with the dark-eyed girl who let me kiss her by the fountain")
+    $chat.addmessage(sophie, "Chat temporarily cooked into liquid and injected intravenously with the phantasmal girl who let me kiss her by the fountain")
 
     ki "... and I remember the girl. Dressed in sheer black, wandering the floors with frozen eyes."
 
@@ -768,7 +768,7 @@ label robinDate2:
 
     $chat.addLinearMessage(egg, temp, 0, 3)
 
-    scene bg playhouse with fade
+    scene bg playhouse far with fade
 
     play music robin
 
@@ -1559,7 +1559,8 @@ label robinDate2:
 
             "Make a move":
                 k "Lichelle. What if we ended the show right now?"
-                #sfx static
+                play audio heart noloop
+                show image glitchGui at frameGlitch
                 k "Mm... nothing. It's nothing."
                 l 1g "Cool."
             "Don't make a move":

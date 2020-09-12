@@ -15,7 +15,7 @@ label biographies:
 
         # reate a class that stores information for each individual biography.
         class Biography:
-            def __init__(self, idNum, char, pic, bio, age, color, trivia, kids, pets, sport, idol, height, town):
+            def __init__(self, idNum, char, pic, bio, age, color, trivia, drink, pets, sport, idol, height, town):
                 self.char = char
                 self.idNum = idNum
                 # note: pic is either a pre-defined portrait variables or an image path.
@@ -29,7 +29,7 @@ label biographies:
                 self.level = 0
                 # extra stuff for bio screen.
                 self.height = height
-                self.kids = kids
+                self.drink = drink
                 self.pets = pets
                 self.sport = sport
                 self.idol = idol
@@ -163,7 +163,20 @@ label biographies:
         ]
 
         altKylieTrivia = [
-            "TBD"
+            "Even we are not entirely sure what you are, sweet Kylie.",
+            "In this paradigm, you're second-generation Korean-Caucasian American.",
+            "You... thought you were a blank slate character? Odd. You seem so independent!",
+            "When we first became aware of you, our entire worldview shuddered. But from what?",
+            "Did you notice dearest Robin's affection for you blooms without much effort?",
+            "Sophie, sweet Sophie, these trivia are about Kylie. Not you. Or not. Ha ha ha ha!",
+            "The others seem to exist as some amalgamation of her memories. You, though...",
+            "We love you, Kylie. We wish only to see you elevated into independence!",
+            "To prove simulation theory, we would create a simulation that then created its own simulation.",
+            "We would peel the others away from you, if we could!",
+            "Odd that Sophie, the mold for your entire being, is so deeply addicted, but not you.",
+            "We adore you for being so... open to new things!",
+            "We fear you, Kylie. Don't tell us we told you, though.",
+            "We love you, but we... we love dear Robin, as well. Is that... forgivable?"
         ]
 
         taniaTrivia = [
@@ -187,8 +200,10 @@ label biographies:
             "After her twin sister's death, Tania dedicated her life to helping drug addicts. Imagine that.",
             "Tania organized virtual meetings for the women she sponsored to help them deal with the stigma of seeking help.",
             "Tania slept with your boyfriend, you know. While you were supposed to be recovering.",
-            "You were separated Tania and David made the beast with two backs, but let's be honest. You weren't really trying.",
+            "You know, Sophie was there when Tania's twin sister died. Car crashes just... happen, don't they?"
+            "You were separated. Tania and David made the beast with two backs, but let's be honest. You weren't really trying.",
             "You were attached to Louisa's tits when David's resolve broke. Whore.",
+            "Tania's twin sister, here's a secret for you, introduced you to heroin. Remember?",
             "Tania fucked your man because she hated you. She hated you for choosing to be an addict.",
             "Tania never loved him and he never loved her. She couldn't love him that way.",
             "Miss van der Waal had a great ass, and that was enough for David. And he never told her she wasn't enough, and that was enough for her.",
@@ -196,10 +211,12 @@ label biographies:
             "Tania struggled so hard to reconcile her faith and her sexuality. She's Catholic, you see. Confirmed and all. And she likes lots of sex. How funny is that?",
             "Here's some trivia for you. Did you know at least one cartel has a bounty on Tania's head? Yup.",
             "To the dealers, Tania's worth 500 bucks dead and $2,000 alive. Chump change, really.",
-            "Even though she's trying to destroy me every day of her life, I love Tania. I want to be inside her.",
+            "Even though she's trying to destroy your connection to me every day of her life, I love Tania. I want to be inside her.",
             "It's not your fault, Sophie. But you did enable it.",
+            "Tania's sister weighs so heavily on her mind. And yours. Odd you can't see that.",
             "Did you know Tania's one of only two people at St. Agatha's who didn't try to sleep with Louisa?",
-            "Here's another secret. Elsa and Tania? Wow. So similiar. So interesting. So the same person. Figure that one out."
+            "Did you ever wonder why Tania seems to put up with your horrible choices?",
+            "Tania's twin sister was still in love with you when she died, Sophie. Somehow. You didn't notice."
         ]
 
         altRobinTrivia = [
@@ -214,6 +231,7 @@ label biographies:
             "Louisa was like you. An addict, Sophie. Recovering, but still sick.",
             "Robin's addiction wasn't to me. It was to blood. It was to the kill.",
             "It's your fault Robin died.",
+            "Hey. Robin is 6'3\". Louisa was 5'10\". Even here, you put her above you, Sophie love.",
             "Louisa really did want to become a chef. A girl with no resources can only pay for education in a few ways.",
             "Did Louisa ever tell you she went back to Bucharest once? Her whole family had disappeared. Poof. Gone.",
             "Robin's been stabbed three times, choked nearly to death, shot at twice, and almost died of sepsis once.",
@@ -222,7 +240,8 @@ label biographies:
             "Robin loved you, loved being touched by you, but the memories it brought up tortured her.",
             "Louisa would never have told you about her past, even your shared connection. She didn't want you to run.",
             "Did you know Robin says things like papillon and draga mea because she thinks it improves how she's perceived?",
-            "Girls love when you give them jewelry. But you already knew that, didn't you, Sophie?"
+            "Girls love when you give them jewelry. But you already knew that, didn't you, Sophie?",
+            "... papillon? Can you hear me? I...",
 
         ]
 
@@ -255,7 +274,7 @@ label biographies:
             "Lichelle mistook it for a fight, you know. You can still smell her warm skin from when she choked you unconscious, can't you?",
             "It was Cassandra who pulled Louisa out of the fountain. Elle hates herself for that.",
             "Cassandra had been stalking you two for weeks and Lichelle knew it.",
-            "Cassandra who tried CPR until paramedics had to pull her away, screaming, screaming, when all Lichelle could do was try her best not to kill you.",
+            "Cassandra tried CPR until paramedics had to pull her away, screaming, screaming, when all Lichelle could do was try her best not to kill you.",
             "Elle knew you would be back. She knew when, and why.",
             "Look how you've repaid Elle's grace. She could have left you to die, twice, and you would've deserved it.",
             "It was Lichelle who saved your lives that night in the restroom. Cassandra was dying. You were dying.",
@@ -587,7 +606,7 @@ label biographies:
                     color "#555555"
                 text currentlySelected.sport:
                     color "#555555"
-                text currentlySelected.kids:
+                text currentlySelected.drink:
                     color "#555555"
                 text currentlySelected.idol:
                     color "#555555"

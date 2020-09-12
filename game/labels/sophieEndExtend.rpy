@@ -46,6 +46,8 @@ label sophieEndExtend:
         "She doesn't trust me. I get that."
         "I've earned that."
 
+    scene bg ganymead-out with fade
+
     s "... it feels like I was just here."
 
     show l 2o at f12
@@ -324,6 +326,8 @@ label sophieEndExtend:
 
     "I get that, too."
 
+    $sophieEndingViewed = True
+
     pause 1.0
 
     hide f with dissolve
@@ -530,4 +534,15 @@ label sophieEndExtend:
             "Robin."
             "Tania."
             "But it's fine."
+
+    else:
+        l "Uh-uh. I'm going after those two."
+        hide l with dissolve
+        "..."
+        "... I wish you were here."
+        "Cassandra."
+        "Louisa."
+        "Robin."
+        "Tania."
+        "But it's fine."
             

@@ -29,4 +29,9 @@ label music:
     define audio.ecg = ("music/ecg.ogg")
     define audio.flatline = ("music/fountainWater.ogg")
     define audio.beep = ("music/beep.ogg")
+    define audio.robinReverse = ("music/robinReverse.ogg")
+    define audio.tensionReverse = ("music/tensionReverse.ogg")
+    define audio.fountainWaterReverse = ("music/fountainWaterReverse.ogg")
+    define audio.heart = ("music/heartbeat.ogg")
+    define audio.knock = ("music/doorKnock.ogg")
 

@@ -32,7 +32,7 @@ call leftbtnwindow from _call_leftbtnwindow
 label start:
     
   # just to whatever we're testing currently
-    jump opening
+    jump opening2
 
     # This ends the game.
 

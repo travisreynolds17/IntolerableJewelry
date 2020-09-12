@@ -288,7 +288,7 @@ label severTania:
 
     d "..."
 
-    t 2b "Well. You rememember."
+    t 2b "Well. You remember."
 
     d "Yeah."
 

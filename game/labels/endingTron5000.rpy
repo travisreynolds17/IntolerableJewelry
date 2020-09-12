@@ -39,30 +39,72 @@ label endingTron5000:
     o "We are curious. Did you... truly come to love any of them?"
 
     pause 1.0
-
-    menu:
-        "Cassandra" if cassBio.love >= 4:
-            $loveConfession = "Cassandra"
-            c 2b "Kylie..."
-            o 1a "Isn't that interesting... and yet, only we love you best."
-        "Lichelle" if lichBio.love >= 4:
-            $loveConfession = "Lichelle"
-            l "Babe..."
-            o 1a "Isn't that interesting... she seemed so untouchable at first."
-        "Robin" if robinBio.love >= 4:
-            $loveConfession = "Robin"
-            o 1a "we loved her, as well. Such a pity. So sad."
-        "Tania" if taniaBio.love >= 4:
-            $loveConfession = "Tania"
-            t "I'm... not worth your affection, Kyles."
-            o 1a "Isn't that interesting... Tania, we love you, too!."
-        "You, Fontaine" if fontBio.love >= 4:
-            o 1n "We love you so dearly! How absurd!"
-            $loveConfession = "Fontaine"
-        "No. No, I didn't.":
-            k "I'm... it wasn't enough time. I care about you all, even now, but..."
-            o 1n "But real love blooms, it doesn't burn, does it? Your restraint is so impressive!"
-            $loveConfession = "None"
+    $temp = True
+    while temp:
+        menu:
+            "Cassandra" if cassBio.love >= 4:
+                $loveConfession = "Cassandra"
+                c 2b "Kylie..."
+                o 1a "Isn't that interesting... and yet, only we love you best."
+                $temp = False
+            "Lichelle" if lichBio.love >= 4:
+                $loveConfession = "Lichelle"
+                l "Babe..."
+                o 1a "Isn't that interesting... she seemed so untouchable at first."
+                $temp = False
+            "Robin" if robinBio.love >= 4:
+                $loveConfession = "Robin"
+                o 1a "we loved her, as well. Such a pity. So sad."
+                k "... Fontaine. Is that true?"
+                pause 1.0
+                o 1c "Yes."
+                k "..."
+                o 1n "We loved her with all of our hearts!"
+                $persistent.loveRobin = True
+                $temp = False
+            "Tania" if taniaBio.love >= 4:
+                $loveConfession = "Tania"
+                t "I'm... not worth your affection, Kyles."
+                o 1a "Isn't that interesting... Tania, we love you, too!."
+                $temp = False
+            "You, Fontaine" if fontBio.love >= 4 and loveConfession != "Fontaine":
+                play audio heart noloop
+                pause 1.0
+                o 1k "Huh?"
+                l "The hell, Kylie?"
+                t "... I was afraid of that."
+                c "..."
+                pause 1.0
+                o "We..."
+                o "You think you... well. We, no, no, and no."
+                k "... I can't even comprehend you."
+                o 1m "True! We—"
+                k "I'm coming apart even thinking about what you might be."
+                k "... it's..."
+                play audio heart noloop
+                k "It's exhilarating..."
+                t 1b "... come back, Kylie."
+                o 1o "..."
+                c 1b "Don't let her sway you!"
+                l 1c "Fight back, babe."
+                o 1c "... we are beyond such things."
+                play audio heart noloop
+                k "I don't believe that. You created an entire world for us."
+                k "Even if it doesn't make sense, even if it's some senseless theatrical production."
+                o 1d "Fool."
+                show f 1t
+                k "Don't 'fool' me!"
+                k "I see through you. You resort to clichès when you're caught off guard. You—"
+                play audio heart noloop
+                o 1n "We love you so dearly! How absurd!"
+                o 1d "CHOOSE SOMEONE ELSE."
+                $persistent.loveFont = True
+                $loveConfession = "Fontaine"
+            "No. No, I didn't.":
+                k "I'm... it wasn't enough time. I care about you all, even now, but..."
+                o 1n "Real love blooms, it doesn't burn, does it? Your restraint is so impressive!"
+                $loveConfession = "None"
+                $temp = False
 
     k "..."
 

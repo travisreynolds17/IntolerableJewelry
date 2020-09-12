@@ -178,5 +178,3 @@ label endingGaveUp:
                 "End: Birth of a Neurochemical God"
 
             jump endCredits
-
-    return

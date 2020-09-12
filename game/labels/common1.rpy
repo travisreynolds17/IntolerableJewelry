@@ -435,7 +435,7 @@ label common1:
 
     stop music fadeout 2.0
 
-    t "I see. Well, one thing that isn't a secret is our last Suitor's black belt. Everyone, give a warm welcome to MMA flyweight Lichelle Carpenter!"
+    t "I see. Well, one thing that isn't a secret is our last Suitor's black belt. Everyone, give a warm welcome to MMA flyweight, and my best friend, Lichelle Carpenter!"
 
     hide t at f13
 
@@ -444,9 +444,9 @@ label common1:
     show l 1o at fr13
     pause 1.0
 
-    $chat.addmessage(bong, "ooh chocolate")
+    $chat.addmessage(bong, "ooh what a cutie")
 
-    l "Hey crew! How are good god you're tall."
+    l "Hey y'all! How are good god you're tall."
 
     play music lichelle
 
@@ -481,10 +481,34 @@ label common1:
 
     $chat.addmessage(bar, "Fontaine, you like everybody.")
 
-    l "I'm just living life. I'm not in a training camp right now so I can eat what I want and make time to visit a TV show or two."
+    l "I'm just living life. I'm not in training so I get to come see my best girl on her TV show."
 
     $chat.addmessage(fizz, "A cutwoman or a cutman is there to stop a pro fighter's bleeding between rounds.")
+    
+
+    r 2q "You cut quite the impressive figure, darling."
+
+    "Robin's tone doesn't lack for admiration, but it's got just the slightest edge to it."
+
+    l 2m "Thanks, I think? It's nice to finally meet you two."
+
     $chat.addmessage(fon, "I love them. Wow, Fizz! Smarty smart. Handsome too?")
+
+    c 2m "..."
+
+    r 2a "... I would swear we had met already, darling. You have such a charming smile."
+
+    pause 1.0
+
+    l 1m "I think I'd remember meeting women like you two." 
+    
+    $chat.addmessage(fizz,"No kidding")
+
+    "It's interesting that even though Robin's addressing Lichelle directly, Lichelle answers by addressing both Cassandra and Robin."
+
+    "I wonder if that's a competitive streak thing?"
+
+    pause 1.0
 
     show l at justFade
     show c at justFade
@@ -492,7 +516,9 @@ label common1:
     stop music fadeout 2.0
     pause 1.0
 
-    t "Well, we're happy to have you here on One-Week Waifu. Now, before we meet our eligible bachelorette, I'd like each of you to let us know what being here means to you. And be honest!"
+    t "I'm glad everyone seems to be getting along right out of the gate!"
+
+    t "We're happy to have you all here on One-Week Waifu. Now, before we meet our eligible bachelorette, I'd like each of you to let us know what being here means to you. And be honest!"
 
     play music cheerfulGuitar fadein 0.5
 
@@ -514,6 +540,8 @@ label common1:
 
     r "Cassandra says, to be honest, she's here to promote her new album."
 
+    r 2m "She also says... oh, my. She finds Lichelle captivating. I concur, dears."
+
     hide r at fl11
 
     $chat.addmessage(egg, "She can't talk, could still be a mumble rapper.")
@@ -526,13 +554,29 @@ label common1:
 
     show l 1l at fr12
 
-    l "I'm here because Tania's my girl and she asked me to. She keeps trying to set me up on dates anyway, so I might as well be on TV for it."
+    l "I'm here because Tania's my girl and I'd do anything for her."
 
-    s "I admire their honesty if nothing else."
+    l 2l "Plus... I put my career first. Always. And that's great. It took me to the top."
+
+    pause 1.0
+
+    l 2a "... being at the top doesn't mean sh——t if I don't have someone up there with me." 
+    
+    $chat.addmessage(egg,"lol beep")
+
+    t 2i "Uh, Elle? We're on TV, hon."
+
+    l 2m "Oops. Doesn't mean stuff, then. Sorry, babe." 
+    
+    $chat.addmessage(elsa,"Tania and Elle seem awfully close.")
+
+    s "I admire their honesty if nothing else." 
+    
+    $chat.addmessage(bong,"Fontaine trying to get beeped lol")
 
     s 1g "Hey Bong, be nice."
 
-    $chat.addmessage(bong, "sorry Fontaine")
+    $chat.addmessage(bong, "sorry Fontaine, sorry Sophie, just playin")
     $chat.addmessage(fon, "Nothing to forgive. I'll prove I'm not catfishing. Check private chat.")
 
     hide l at fr12
@@ -745,7 +789,7 @@ label common1:
     show t 1a at f12
     t "So let's talk a little bit about how this show works!"
 
-    t "Every woman involved in this show is, of course, 20 years old or older -- but not much older, right? -- and each has consented to the format. We're looking for love here, people!"
+    t "Every woman involved in this show is, of course, 21 years old or older -- but not much older, right? -- and each has consented to the format. We're looking for love here, people!"
 
     $chat.addmessage(elsa, "Me too, Tania, me too. Preach girl.")
 
@@ -1058,7 +1102,8 @@ label common1:
             
             $chat.addmessage(bong,"FEK a tutorial anyway")
 
-
+    $guiButtonsEnabled = True
+    
     $chat.addmessage(unkn, "R/BG13:14-15")
 
     s "Tania's nice. I bet the real hosts of these shows are nothing like her." 

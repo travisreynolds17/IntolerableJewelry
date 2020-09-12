@@ -492,7 +492,7 @@
     show t with dissolve
     t "So let's talk a little bit about how this show works!"
 
-    t "Every woman involved in this show is, of course, 20 years old or older -- but not much older, right? -- and each has consented to the format. We're looking for love here, people!"
+    t "Every woman involved in this show is, of course, 21 years old or older -- but not much older, right? -- and each has consented to the format. We're looking for love here, people!"
 
     $soph.addmessage(sophie,"Love, huh? Well... not me. But maybe.")
 

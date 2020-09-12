@@ -2,21 +2,21 @@
         # attempt to create default bios.
 
         default cassBio = Biography(0, "Cassandra Sanna", bioCass,
-                                cassBioText, "22", "Ultramarine", cassTrivia, "No", "Vox the Python", "Pro Wrestling", "Britomart", "62 inches", "Charlotte, N.C.")
+                                cassBioText, "22", "Ultramarine", cassTrivia, "White Russian", "Vox the Python", "Pro Wrestling", "Britomart", "5'2\"", "Charlotte, North Carolina")
         default lichBio = Biography(1, "Lichelle Carpenter", bioLich,
-                            lichBioText, "25", "Carmine Red", lichTrivia, "Hell no", "Nope", "MMA", "My dad", "66 inches", "Baltimore, Md.")
+                            lichBioText, "25", "Carmine Red", lichTrivia, "Water on the Rocks", "Nope", "MMA", "My dad", "5'6\"", "Baltimore, Maryland")
         default robinBio = Biography(2, "Robin Godfrey", bioRobin, robinBioText, "24",
-                            "Royal Purple", robinTrivia, "Not yet", "Innumerable", "None", "You", "73 inches", "Bucharest, Romania")
-        default fontBio = Biography(5, "Fontaine", bioFont, fontBioText, "R/BG13:14-15", "China White", fontTrivia, "I can't have kids. Comfort me?",
+                            "Royal Purple", robinTrivia, "Not yet", "Innumerable", "Left Hand", "You", "6'\"3", "Bucharest, Romania")
+        default fontBio = Biography(5, "Fontaine", bioFont, fontBioText, "R/BG13:14-15", "China White", fontTrivia, "Speedball",
                             "I love animals!", "I don't understand sports", "Sophie ;)", "All of them, if I want", "Everywhere!")
 
         default taniaBio = Biography(3, "Tania van der Waal", bioTania,
-                            taniaBioText, "26", "Tuscan Sun", taniaTrivia, "No", "Cats: Ferg, Della, Kana",  "Gymnastics", "R/BG13:14-15 Langford", "65 inches", "Centralia, Penn.")
-        default kylieBio = Biography(4, "Kylie", bioKylie, kylieBioText, "23", "Golden Poppy", kylieTrivia, "Someday", "Someday I'll have a dog", "Basketball, I guess", "Elizabeth Bathory, jk", "66 inches", "Sobredosis, Nevada")
+                            taniaBioText, "26", "Tuscan Sun", taniaTrivia, "Irish Coffee", "Cats: Ferg, Della, Kana",  "Gymnastics", "R/BG13:14-15 Langford", "5'5\"", "Charlotte, North Carolina")
+        default kylieBio = Biography(4, "Kylie", bioKylie, kylieBioText, "23", "Golden Poppy", kylieTrivia, "Negroni", "Someday I'll have a dog", "Basketball, I guess", "My sister :(", "5'6\"", "Providence, Rhode Island")
 
         # append Fontaine in common4 after change
         default allBios = [cassBio, lichBio, robinBio, taniaBio, kylieBio]
-        default allStats = ["Height:", "Hometown:", "Pets:", "Age:", "Fav. Color:", "Fav. Sport:", "Kids:", "Idol:"]
+        default allStats = ["Height:", "Hometown:", "Pets:", "Age:", "Fav. Color:", "Fav. Sport:", "Cocktail:", "Idol:"]
 
         # name plates.
         default bioEyesCass = Image("img/bioEyesCass.png")
@@ -27,6 +27,9 @@
         default bioEyesFont = Image("img/bioEyesFont.png")
 
         default allPlates = [bioEyesCass, bioEyesLich, bioEyesRobin, bioEyesTania, bioEyesKylie]
+
+        default persistent.playthrough = 0
+        default guiButtonsEnabled = False
 
         # chat history variables
     init -1:
@@ -67,6 +70,8 @@
         picTania = "img/pic-Kylie.png"
         picEntity = "img/pic-Kylie.png"
         picKylie = "img/pic-Kylie.png"
+
+        
 
         
 
@@ -172,6 +177,9 @@
                     renpy.show("m", at_list = [speakNormal])
 
     define s = Character("Sophie", image="s", who_color="#c5859d", who_font="fonts/Roboto-Black.ttf", what_color=colorKylie, what_font=fontKylie)
+    # sophie without side image
+    define ss = Character("Sophie", image="ss", who_color="#c5859d", who_font="fonts/Roboto-Black.ttf", what_color=colorKylie, what_font=fontKylie)
+
     # skin tone #c58c85
     # hair tone / name tone #c5859d
     define r = Character("Robin", image="r", who_color="#bcb4ec", who_font="fonts/Parisienne-Regular.ttf")
@@ -209,6 +217,8 @@
 
     define m = Character("Mortimer", image="m")
     define o = Character("Fontaine", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf", image="f")
+    #for second route
+    define ff = Character("Fontaine", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf", image="f")
     define girls = Character("Cass, Lichelle & Tania")
 
     define narr = Character(None, kind=nvl)
@@ -391,6 +401,8 @@
         $severInput = "unknown"
         $entityName = "Fontaine"
         default entityForgiven = False
+        
+
 
         # keep count of times said I'm not ready
         default notReady = 0
@@ -411,6 +423,22 @@
         $taniaEnd = 0  # if we've seen the joke ending
         $currentEnding = ""
         $badEndings = []  # holds which characters are getting a non-severed or bad ending. Bad ending label will check for each and display approprite clips
+
+
+        # second route  : Naming convection. fontRouteSectionScene. 11 is section one, scene one
+        # variables refer to whether route has been completed.
+        default fontRoute11 = False #lichRob
+        default fontRoute12 = False #sophTani
+        default fontRoute13 = False #cassRob
+        # fontaine meets Robin. Cares for her. leads into common1 of real game.
+        default fontRoute21 = False #lichRob
+        default fontRoute22 = False #sophTania
+        default fontRoute23 = False #cassLich
+        # fontaine meets Robin again. Robin tells her she's here for someone else. Fontaine doesn't understand. But she'll help. Agrees to make the stage lights thing happen.
+
+
+
+
 
     # note. The following variables are in python form because I'm an idiot and didn't do the others that way.
 

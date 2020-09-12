@@ -85,7 +85,7 @@ label lichDate:
 
     # jump over to scene with Lichelle and Tania. come back after Kylie decides to have a nap.
 
-    call lichDateTania
+    call lichDateTania from _call_lichDateTania
 
     # SFX knock knock
 

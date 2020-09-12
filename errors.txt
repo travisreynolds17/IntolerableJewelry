@@ -2,18 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/labels/ending-kylie.rpy", line 519: invalid syntax
-    $chat.bulkMessage(newComments,0.7)
-     ^
-    
-
-File "game/labels/sophieEndExtend.rpy", line 500: end of line expected.
-    c "< It, what?">
-                   ^
-
-File "game/labels/sophieEndExtend.rpy", line 514: expected 'image_name_component' not found.
-    hide with dissolve
-        ^
+File "game/labels/Second route/opening2.rpy", line 287: while statement expects a non-empty block.
+    while temp == False:
+                        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Sep 03 00:14:04 2020
+Thu Sep 10 21:32:18 2020

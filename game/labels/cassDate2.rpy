@@ -895,7 +895,7 @@ label cassDate2:
         linear 0.5 alpha 0
         repeat
 
-    l "Hey hey hey, welcome back."
+    l "Hey girl, welcome back."
 
     l 1q "I am so, so sorry for that! I really thought you had it, babe."
 

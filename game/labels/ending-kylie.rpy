@@ -204,7 +204,7 @@ label endingKylie:
 
     o 2b "Sophie, I'm not sure what you think I've done to you but I hope I can erase that perception in time."
 
-    s "stay away, please stay away, please, please-"
+    s "Stay away, please stay away, please, please-"
 
     o 2a "I'm going. David, if you please?"
 

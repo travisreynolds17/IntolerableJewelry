@@ -4,9 +4,7 @@ label endCredits:
     $hideChat()
     scene bg black with fade
 
-    # secret Kylie ending. Only achievable if love confession is Robin's, all severs are viewed, Kylie is severed, and Fontaine is forgiven.
-    if kylieSevered and entityForgiven and fontBio.severViewed and lichBio.severViewed and robinBio.severViewed and cassBio.severViewed and taniaBio.severviewed:
-        call secretKylie
+    
 
     show image credits1 with fade
     pause
@@ -20,5 +18,11 @@ label endCredits:
     pause
     scene bg black with longFade
     pause 
+    
 
 
+    # secret Kylie ending. Only achievable if love confession is Robin's, all severs are viewed, Kylie is severed, and Fontaine is forgiven. Also requires you to have picked Fontaine as a love interest.
+    if kylieSevered and entityForgiven and fontBio.severViewed and robinBio.severViewed and persistent.loveRobin and persistent.loveFontaine and sophieEndingViewed:
+        call secretKylie from _call_secretKylie
+
+    jump newGamePlus

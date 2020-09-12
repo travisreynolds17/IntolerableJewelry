@@ -72,7 +72,7 @@ label severRobin:
 
     t "Why did you have to go and die like that?"
 
-    t "You should have came to me."
+    t "You should have come to me."
 
     r "I should have."
 
@@ -86,13 +86,13 @@ label severRobin:
 
     rr "..."
 
-    t "You aren't some demure little submissive toy."
+    t "You aren't some submissive hanger-on."
 
     rr "... I am not."
 
     rr "I traveled the world to find her again."
 
-    rr "What if I had refused? With my own eyes I saw her cast David aside for asking her to put her jewelry aside."
+    rr "What if I had refused? With my own eyes I saw her cast David aside for asking her to put her jewelry away."
 
     t "Can I tell you something?"
 
@@ -171,7 +171,7 @@ label severRobin:
 
     rr "That night, I sat as I always did. I learned early that the stone rim of that deplorable fountain would freeze me to the core."
 
-    rr "So learned to place a cushion there."
+    rr "So I would place a cushion there."
 
     t "Everyone talks about that."
 

@@ -17,7 +17,7 @@ label endingTania:
 
     "I guess we can only see."
 
-    scene bg gates with fade
+    scene bg gate with fade
 
     show d 1a at f12
 
@@ -541,7 +541,7 @@ label endingTania:
 
     t "I've done nothing immoral or unjust. I just put resources into places that would let me reach this point and... well. There I am."
 
-    s "... it's like I, Robot."
+    s "... it's like Asimov."
 
     t "Sort of. I'm not bound by any robotic laws, but I'm still a human mind, Sophie."
 
@@ -595,7 +595,7 @@ label endingTania:
 
         stop music2
         stop music
-        #sfx
+        
         play audio beep noloop
         hide image splashEKGFull at summonEKG
         show image splashEKGFull at summonEKG

@@ -177,11 +177,11 @@ label realWorld3:
 
     "Okay."
 
-    #sfx knock
+    play audio doorKnock noloop
 
     "Oh. No."
 
-    #knock
+    play audio doorKnock noloop
 
     "Someone's at the door."
 
@@ -195,7 +195,7 @@ label realWorld3:
 
     "No. But I want want you to know something."
 
-    #knock harder
+    play audio doorKnock noloop
 
     "I..."
 
@@ -207,9 +207,9 @@ label realWorld3:
             s "But... I forgive you."
             un "... dammit. Why are you making this so hard?"
             un "Why couldn't you just die?"
-            # sfx knock
+            play audio doorKnock noloop
             pause 1.5
-            # sfx door opening
+            
             l "Oh god. Elsa, they're in here!"
             $cassBio.stringSever()
 
@@ -218,10 +218,10 @@ label realWorld3:
             s "I'm not... stupid."
             un "... why didn't you stop me?"
             un "Why couldn't you just die?"
-            # sfx knock
+            play audio doorKnock noloop
             pause 1.5
             s "... I deserve to die."
-            # sfx door opening
+            
             l "Oh god. Elsa, they're in here!"
 
     stop music fadeout 5.0

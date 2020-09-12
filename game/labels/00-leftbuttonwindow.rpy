@@ -73,14 +73,14 @@ label leftbuttonwindow:
             xysize(lbtnWidth, lbtnHeight)
             hbox:
                 # ask tania is where in-game help menus, as well as character bios, can be found. Maybe put settings here, too? 
-                if fontaineRevealed:
+                if fontaineRevealed and guiButtonsEnabled:
                     button: 
                         background btnAskFont
                         hover_background btnAskFont2
                         xysize(lbtnWidth/2, lbtnHeight)
                         action Function(showAskTania)
                 
-                else:
+                elif guiButtonsEnabled:
                     button: 
                         background btnAskTania
                         hover_background btnAskTania2
@@ -92,10 +92,11 @@ label leftbuttonwindow:
 
                 button:
                     #chatHistory
-                    background btnChatHistory
-                    hover_background btnChatHistory2
-                    xysize(lbtnWidth/2, lbtnHeight)
-                    action Function(showChatHistory)
+                    if guiButtonsEnabled:
+                        background btnChatHistory
+                        hover_background btnChatHistory2
+                        xysize(lbtnWidth/2, lbtnHeight)
+                        action Function(showChatHistory)
 
 
     #transform functions

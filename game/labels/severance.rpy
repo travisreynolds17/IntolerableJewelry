@@ -299,9 +299,9 @@ transform severButton:
     xpos - 20 ypos 5
 
     on show:
-        easein 1.0 xpos 10
+        easein 3.0 xpos 450 ypos 11
     on hide:
-        easein 1.0 xpos - 200
+        easein 1.0 xpos - 200 ypos 5
 
 screen severButton:
     modal False

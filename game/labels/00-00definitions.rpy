@@ -110,9 +110,7 @@ label definitions:
         easein 0.5 zoom 1.0 
 
     init python:
-
-        
-
+    
         spriteXLeft = 225
         spriteXCenter = 550
         spriteXRight = 825
@@ -296,6 +294,30 @@ label definitions:
     image side s 1u = Image("chars/scu.png")
     image side s 1v = Image("chars/scv.png")
 
+# TEST Fontaine IMAGES
+
+    image side f 1a = Image("chars/fca.png")
+    image side f 1b = Image("chars/fcb.png")
+    image side f 1c = Image("chars/fcc.png")
+    image side f 1d = Image("chars/fcd.png")
+    image side f 1e = Image("chars/fce.png")
+    image side f 1f = Image("chars/fcf.png")
+    image side f 1g = Image("chars/fcg.png")
+    image side f 1h = Image("chars/fch.png")
+    image side f 1i = Image("chars/fci.png")
+    image side f 1j = Image("chars/fcj.png")
+    image side f 1k = Image("chars/fck.png")
+    image side f 1l = Image("chars/fcl.png")
+    image side f 1m = Image("chars/fcm.png")
+    image side f 1n = Image("chars/fcn.png")
+    image side f 1o = Image("chars/fco.png")
+    image side f 1p = Image("chars/fcp.png")
+    image side f 1q = Image("chars/fcq.png")
+    image side f 1r = Image("chars/fcr.png")
+    image side f 1s = Image("chars/fcs.png")
+    image side f 1t = Image("chars/fct.png")
+    image side f 1u = Image("chars/fcu.png")
+
 
 #cassandra composite images
 
@@ -460,6 +482,28 @@ label definitions:
     image e 1t = im.Composite((371, 1004), (0, 250), "chars/tc1.png", (82, 358), "chars/ect.png")
     image e 1u = im.Composite((371, 1004), (0, 250), "chars/tc1.png", (82, 358), "chars/ecu.png")
 
+    image e 2a = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/eca.png")
+    image e 2b = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecb.png")
+    image e 2c = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecc.png")
+    image e 2d = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecd.png")
+    image e 2e = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ece.png")
+    image e 2f = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecf.png")
+    image e 2g = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecg.png")
+    image e 2h = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ech.png")
+    image e 2i = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/eci.png")
+    image e 2j = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecj.png")
+    image e 2k = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/eck.png")
+    image e 2l = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecl.png")
+    image e 2m = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecm.png")
+    image e 2n = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecn.png")
+    image e 2o = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/eco.png")
+    image e 2p = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecp.png")
+    image e 2q = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecq.png")
+    image e 2r = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecr.png")
+    image e 2s = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecs.png")
+    image e 2t = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ect.png")
+    image e 2u = im.Composite((371, 1004), (0, 250), "chars/tc2.png", (82, 358), "chars/ecu.png")
+    
 # tania
 
     image t 1a = im.Composite((371, 1004), (0, 250), "chars/tc1.png", (82, 358), "chars/tca.png")
@@ -655,6 +699,31 @@ label definitions:
     image k 1u = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/kcu.png")
     image k 1v = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/kcv.png")
 
+# sophie composite images
+
+    image ss 1a = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/sca.png")
+    image ss 1b = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scb.png")
+    image ss 1c = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scc.png")
+    image ss 1d = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scd.png")
+    image ss 1e = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/sce.png")
+    image ss 1f = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scf.png")
+    image ss 1g = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scg.png")
+    image ss 1h = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/sch.png")
+    image ss 1i = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/sci.png")
+    image ss 1j = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scj.png")
+    image ss 1k = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/sck.png")
+    image ss 1l = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scl.png")
+    image ss 1m = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scm.png")
+    image ss 1n = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scn.png")
+    image ss 1o = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/sco.png")
+    image ss 1p = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scp.png")
+    image ss 1q = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scq.png")
+    image ss 1r = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scr.png")
+    image ss 1s = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scs.png")
+    image ss 1t = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/sct.png")
+    image ss 1u = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scu.png")
+    image ss 1v = im.Composite((371, 1004), (0, 240), "chars/kc1.png", (86, 394), "chars/scv.png")
+
 #david composite images
 
     image d 1a = im.Composite((371, 1004), (0, 260), "chars/d1.png", (112, 297), "chars/da.png")
@@ -710,6 +779,21 @@ label definitions:
     image m 2font = im.Composite((260, 1004), (0, 350), "chars/mFont.png")
 
 # second poses
+
+    # robin and Fontaine
+    image rf 1a = im.Composite((346, 934), (0, 220), "chars/frob1a.png")
+    image rf 1b = im.Composite((346, 934), (0, 220), "chars/frob1b.png")
+    image rf 1c = im.Composite((346, 934), (0, 220), "chars/frob1c.png")
+    image rf 1f = im.Composite((346, 934), (0, 220), "chars/frob1f.png")
+    image rf 1i = im.Composite((346, 934), (0, 220), "chars/frob1i.png")
+    image rf 1q = im.Composite((346, 934), (0, 220), "chars/frob1q.png")
+
+    image rf 2a = im.Composite((346, 934), (0, 220), "chars/frob2a.png")
+    image rf 2b = im.Composite((346, 934), (0, 220), "chars/frob2b.png")
+    image rf 2c = im.Composite((346, 934), (0, 220), "chars/frob2c.png")
+    image rf 2f = im.Composite((346, 934), (0, 220), "chars/frob2f.png")
+    image rf 2i = im.Composite((346, 934), (0, 220), "chars/frob2i.png")
+    image rf 2q = im.Composite((346, 934), (0, 220), "chars/frob2q.png")
 
     #cassandra splash images
 

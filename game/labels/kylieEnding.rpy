@@ -15,22 +15,22 @@ label kylieEnding:
 
     k "it hurts"
 
-    # sfx
+    play audio heart noloop
     show image screenCrack
 
     k "why"
 
-    # sfx
+    play audio heart noloop
     show image screenCrack2
 
     k "somebody"
 
-    # sfx
+    play audio heart noloop
     show image screenCrack3
 
     k "h... h...hel..."
 
-    # sfx
+    play audio heart noloop
     show image screenCrack4 with dissolve
 
     # some quote about there's no using burning the boats while you're still on them

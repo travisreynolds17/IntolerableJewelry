@@ -122,9 +122,10 @@ label endingCass:
         "Death. Just... death."
         "I'm sorry Cass. I failed you before I even knew you."
         "And again, when I did."
-
-    pause 1.0
-    "End: Sobredosis"
+        pause 1.0
+        "End: Sobredosis"
+    stop music fadeout 4.0
+    
     return
 
     #end. To next ending (Lichelle) by way of EndingTron
