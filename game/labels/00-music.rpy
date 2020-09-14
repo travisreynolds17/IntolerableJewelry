@@ -33,5 +33,6 @@ label music:
     define audio.tensionReverse = ("music/tensionReverse.ogg")
     define audio.fountainWaterReverse = ("music/fountainWaterReverse.ogg")
     define audio.heart = ("music/heartbeat.ogg")
-    define audio.knock = ("music/doorKnock.ogg")
+    define audio.doorKnock = ("music/doorKnock.ogg")
+    define audio.wreckagenesis = ("music/wreckagenesis.ogg")
 

@@ -95,10 +95,41 @@ label definitions:
     transform justFade():
         linear 0.8 alpha 0.00
 
-    transform foreverFade(x = 640):
+    transform foreverFade(x = 640, t = 1.0):
         on show:
             alpha 0.0 xcenter x yoffset 0 yanchor 1.0 ypos 1.00 subpixel True
-            linear 100.0 alpha 0.6
+            linear t * 100.0 alpha 0.6
+    
+    transform foreverFade2(x = 640):
+        on show:
+            alpha 0.0 xcenter x yoffset 0 yanchor 1.0 ypos 1.00 subpixel True
+            linear 100.0 alpha 1.0
+
+    transform foreverFade3(x = 640):
+        on show:
+            alpha 0.0 xcenter x yoffset 0 yanchor 1.0 ypos 1.00 subpixel True
+            linear 15.0 alpha 1.0
+
+    # an alpha fade at x, to z alpha level, with time taken to fade in, and then to fade out
+    transform flickerFade(x = 640, z = 1.0, time = 1.0, out = 1.0, y = 360):
+        on show:
+            alpha 0.0 xcenter x ycenter y yoffset 0 yanchor 1.0 ypos 1.00 subpixel True
+            linear time*1.0 alpha z*1.0
+            easein out * 1.0 alpha 0.0
+
+
+    
+
+
+
+    transform zoomStab(x = 640):
+        on show:
+            xcenter x yoffset 0 yanchor 1.0 ypos 1.00 subpixel True
+            linear 2.0 zoom 3.0 ypos 0.5
+
+    # screen flash effect for zoomStab
+
+    define stabFlash = Fade(.25, 0, .75, color="#f22")
             
 
     # quick zooms for speaking callbacks
@@ -233,7 +264,6 @@ label definitions:
         tzoom(spriteBRight)
 
     
-    
 
 
 
@@ -296,27 +326,27 @@ label definitions:
 
 # TEST Fontaine IMAGES
 
-    image side f 1a = Image("chars/fca.png")
-    image side f 1b = Image("chars/fcb.png")
-    image side f 1c = Image("chars/fcc.png")
-    image side f 1d = Image("chars/fcd.png")
-    image side f 1e = Image("chars/fce.png")
-    image side f 1f = Image("chars/fcf.png")
-    image side f 1g = Image("chars/fcg.png")
-    image side f 1h = Image("chars/fch.png")
-    image side f 1i = Image("chars/fci.png")
-    image side f 1j = Image("chars/fcj.png")
-    image side f 1k = Image("chars/fck.png")
-    image side f 1l = Image("chars/fcl.png")
-    image side f 1m = Image("chars/fcm.png")
-    image side f 1n = Image("chars/fcn.png")
-    image side f 1o = Image("chars/fco.png")
-    image side f 1p = Image("chars/fcp.png")
-    image side f 1q = Image("chars/fcq.png")
-    image side f 1r = Image("chars/fcr.png")
-    image side f 1s = Image("chars/fcs.png")
-    image side f 1t = Image("chars/fct.png")
-    image side f 1u = Image("chars/fcu.png")
+    image side ff 1a = Image("chars/fca.png")
+    image side ff 1b = Image("chars/fcb.png")
+    image side ff 1c = Image("chars/fcc.png")
+    image side ff 1d = Image("chars/fcd.png")
+    image side ff 1e = Image("chars/fce.png")
+    image side ff 1f = Image("chars/fcf.png")
+    image side ff 1g = Image("chars/fcg.png")
+    image side ff 1h = Image("chars/fch.png")
+    image side ff 1i = Image("chars/fci.png")
+    image side ff 1j = Image("chars/fcj.png")
+    image side ff 1k = Image("chars/fck.png")
+    image side ff 1l = Image("chars/fcl.png")
+    image side ff 1m = Image("chars/fcm.png")
+    image side ff 1n = Image("chars/fcn.png")
+    image side ff 1o = Image("chars/fco.png")
+    image side ff 1p = Image("chars/fcp.png")
+    image side ff 1q = Image("chars/fcq.png")
+    image side ff 1r = Image("chars/fcr.png")
+    image side ff 1s = Image("chars/fcs.png")
+    image side ff 1t = Image("chars/fct.png")
+    image side ff 1u = Image("chars/fcu.png")
 
 
 #cassandra composite images
@@ -624,7 +654,11 @@ label definitions:
     image r 2t = im.Composite((346, 934), (0, 220), "chars/rc2.png", (130, 281), "chars/rct.png")
     image r 2u = im.Composite((346, 934), (0, 220), "chars/rc2.png", (130, 281), "chars/rcu.png")
 
+    #robin special images
 
+    image r knife = im.Composite((346, 934), (0, 220), "chars/rcknife.png", (130, 281), "chars/rca.png")
+    image r knife2 = im.Composite((346, 934), (0, 220), "chars/rcknife.png", (130, 281), "chars/rce.png")
+    image robinEyes = im.Composite((346, 934), (0, 220), "img/robinScaryEyes.png")
 # fontaine composite images
 
     image f 1a = im.Composite((371, 1004), (0, 310), "chars/fc1.png")
@@ -905,3 +939,6 @@ label definitions:
     #Tania In Bed
     define splashWired = Image("img/splashWired.png")
     define splashWiredOpen = Image("img/taniaWiredOpen.png")
+
+    #second route pictures
+    define crashTania = Image("img/crashTania.png")

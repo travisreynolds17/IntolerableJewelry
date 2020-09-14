@@ -6,7 +6,7 @@ label fontRoute11:
 
     "We touch the tourmaline sliver of tourmaline Sophie's mind."
 
-    scene bg ganymoud-out with longFade
+    scene bg ganymoud out with longFade
 
     "Oh! What a magnificent architecture."
 

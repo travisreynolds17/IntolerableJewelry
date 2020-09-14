@@ -438,7 +438,7 @@ label common4:
 
     k "That's not my name. Who...?"
 
-    show f 1a
+    show f 1h
 
     un "I guess technically you're both Sophie."
 
@@ -579,7 +579,7 @@ label common4:
 
     $chat.addmessage(crab, "oh? think you could get past her to do it?")
 
-    o 1a "Even as you are, anchored to your psychotropic delusions."
+    o 1b "Even as you are, anchored to your psychotropic delusions."
 
     $chat.addmessage(shub, "not if she asked me not to.")
 
@@ -641,7 +641,7 @@ label common4:
 
     $chat.addmessage(elsa, "Oh, looks like I leveled up :p")
 
-    o 1a "Yes, look at dear Cassandra, so lovely, so talented."
+    o 1l "Yes, look at dear Cassandra, so lovely, so talented."
 
     o 1m "Yes, recall the sheer, dark opulence that is our Robin, our somber princess."
 
@@ -651,7 +651,7 @@ label common4:
 
     o 1j "And Lichelle, so powerful! Nobody fought our assimilation harder than Lichelle."
 
-    o 1a "... even Sophie served her purpose."
+    o 1l "... even Sophie served her purpose."
 
     $chat.addmessage(bar, "Tania has the best thighs out of all of them.")
 

@@ -237,6 +237,12 @@ label fontRoute12:
 
     ff 1b "The vehicle has crumpled and splintered into a withered shell."
 
+    "..."
+
+    ss 1f "T... Tania...?"
+
+    pause 1.0
+
     ff "We have observed fear. Longing! We have observed... trauma."
 
     ff 1f "... ocular. Facial. Cardiovascular. Skeletal. Muscular. Neural. Spinal. Absolute."

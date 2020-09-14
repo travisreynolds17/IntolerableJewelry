@@ -218,7 +218,7 @@
     define m = Character("Mortimer", image="m")
     define o = Character("Fontaine", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf", image="f")
     #for second route
-    define ff = Character("Fontaine", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf", image="f")
+    define ff = Character("Fontaine", who_color="#c5859d", who_font="fonts/EncodeSans-Black.ttf", image="ff")
     define girls = Character("Cass, Lichelle & Tania")
 
     define narr = Character(None, kind=nvl)
@@ -240,6 +240,7 @@
     define splashChoice = Image("img/splashWrongChoice.png")
     define story7Edit = Image("img/bg story-7-edit.png")
     define story9Edit = Image("img/bg story-9-edit.png")
+    define robinScaryEyes = Image("img/robinScaryEyes.png")
 
     #showNotes
     define showNotes1 = Image("img/showNotes1.png")
@@ -255,6 +256,53 @@
     define credits3 = Image("img/endCredits3.png")
     define credits4 = Image("img/endCredits4.png")
     define credits5 = Image("img/endCredits5.png")
+
+    #storybook flashers
+    define storyBook1 = Image("img/storyBook1.png")
+    define storyBook2 = Image("img/storyBook2.png")
+    define storyBook3 = Image("img/storyBook3.png")
+    define storyBook4 = Image("img/storyBook4.png")
+    define storyBook5 = Image("img/storyBook5.png")
+    define storyBook6 = Image("img/storyBook6.png")
+    define storyBook7 = Image("img/storyBook7.png")
+    define storyBook8 = Image("img/storyBook8.png")
+    define storyBook9 = Image("img/storyBook9.png")
+    define storyBookA = Image("img/storyBookA.png")
+    define storyBookB = Image("img/storyBookB.png")
+    define storyBookC = Image("img/storyBookC.png")
+    define storyBookD = Image("img/storyBookD.png")
+    define storyBookE = Image("img/storyBookE.png")
+
+    image flipBook:
+        storyBook1 with dissolve
+        pause 0.3
+        storyBook2 with dissolve
+        pause 0.3
+        storyBook3 with dissolve
+        pause 0.3
+        storyBook4 with dissolve
+        pause 0.3
+        storyBook5 with dissolve
+        pause 0.3
+        storyBook6 with dissolve
+        pause 0.3
+        storyBook7 with dissolve
+        pause 0.3
+        storyBook8 with dissolve
+        pause 0.3
+        storyBook9 with dissolve
+        pause 0.3
+        storyBookA with dissolve
+        pause 0.3
+        storyBookB with dissolve
+        pause 0.3
+        storyBookC with dissolve
+        pause 0.3
+        storyBookD with dissolve
+        pause 0.3
+        storyBookE with dissolve
+        pause 0.3
+        repeat
 
     define glitchGui = Image("img/glitchGUI.png")
     default doneSevering = False
@@ -436,6 +484,10 @@
         default fontRoute23 = False #cassLich
         # fontaine meets Robin again. Robin tells her she's here for someone else. Fontaine doesn't understand. But she'll help. Agrees to make the stage lights thing happen.
 
+        # this is for when fontaine is pondering existence behind the stage curtain in fontCommon1
+        default fontCommon1Choice = [False, False, False, False]
+
+        
 
 
 

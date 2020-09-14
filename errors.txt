@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/labels/Second route/opening2.rpy", line 287: while statement expects a non-empty block.
-    while temp == False:
-                        ^
+File "game/labels/Second route/fontRoute21.rpy", line 334: expected statement.
+    bg ganymead-out with fade
+                    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Sep 10 21:32:18 2020
+Mon Sep 14 00:29:36 2020

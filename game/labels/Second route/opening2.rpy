@@ -297,12 +297,17 @@ label opening2:
     
 
     # all this should be arranged similar to the dates. Two sets of three scenes. scene between. Fontaine meets Robin. 
-
-    while temp == False:
+    default fontRouteOpening = False
+    while fontRouteOpening == False:
 
         ff 1g "... should we pick up a shard?"
         if fontRoute11 and fontRoute12 and fontRoute13:
-            $temp = True
+            menu:
+                "Oh? What's this one?"
+                "On Stage At... Ganymead?":
+                    $fontRouteOpening = True
+                    jump fontCommon1
+            $fontRouteOpening = True
         else:
             menu:
                 "They each display some scene."
@@ -321,4 +326,3 @@ label opening2:
                     call fontRoute13 from _call_fontRoute13
         # end of first three routes If statement
 
-    jump fontCommon1

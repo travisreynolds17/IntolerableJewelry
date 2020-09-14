@@ -5,7 +5,7 @@ label endingTron5000:
 
     # show oblivion
     play music fountainWater
-    show f 1a at f12
+    show f 1l at f12
     o "Ladies."
 
     show l 1d at fr13
